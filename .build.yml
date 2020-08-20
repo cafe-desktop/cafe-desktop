@@ -14,7 +14,6 @@ requires:
     - iso-codes
     - meson
     - make
-    - cafe-common
     - startup-notification
     - which
 
@@ -40,7 +39,6 @@ requires:
     - libx11-dev
     - libxml2-dev
     - libxrandr-dev
-    - cafe-common
     - meson
 
   fedora:
@@ -58,7 +56,6 @@ requires:
     - iso-codes-devel
     - itstool
     - make
-    - cafe-common
     - meson
     - redhat-rpm-config
     - startup-notification-devel
@@ -82,7 +79,6 @@ requires:
     - libx11-dev
     - libxml2-dev
     - libxrandr-dev
-    - cafe-common
     - meson
 
 variables:
@@ -104,10 +100,11 @@ variables:
     -enable-checker security.insecureAPI.strcpy"'
 
 before_scripts:
+  # Install cafe-common from master branch
   - cd ${START_DIR}
-  - '[ -f cafe-common-1.24.1.tar.xz ] || curl -Ls -o cafe-common-1.24.1.tar.xz https://github.com/cafe-desktop/cafe-common/releases/download/v1.24.1/cafe-common-1.24.1.tar.xz'
-  - tar xf cafe-common-1.24.1.tar.xz
-  - cd cafe-common-1.24.1
+  - git clone --depth 1  https://github.com/cafe-desktop/cafe-common.git -b master cafe-common-master
+  - cd cafe-common-master
+  - ./autogen.sh
   - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
   -     ./configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
   - else
