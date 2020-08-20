@@ -21,6 +21,7 @@ requires:
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-cafe-team/cafe-desktop
+    - autoconf-archive
     - autopoint
     - clang
     - clang-tools
@@ -64,6 +65,7 @@ requires:
     - startup-notification-devel
 
   ubuntu:
+    - autoconf-archive
     - autopoint
     - clang
     - clang-tools
