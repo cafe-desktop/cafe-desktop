@@ -17,7 +17,7 @@
 
 #include <stdio.h>
 #include <locale.h>
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include "mate-languages.h"
 
 void test_one_locale(const gchar *locale);

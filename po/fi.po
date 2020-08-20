@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -37,12 +37,12 @@ msgstr ""
 "Johanna Makkonen, 2003"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "Tietoja MATEsta"
+msgid "About CAFE"
+msgstr "Tietoja CAFEsta"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Opi lisää MATEsta"
+msgid "Learn more about CAFE"
+msgstr "Opi lisää CAFEsta"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -51,52 +51,52 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
-msgstr "MATE-työpöytäympäristö"
+msgid "CAFE Desktop Environment"
+msgstr "CAFE-työpöytäympäristö"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 "Tekijänoikeus © 1997-2011 GNOME kehittäjät\n"
 "Tekijänoikeus © 2011 Perberos\n"
-"Tekijänoikeus © 2012-2020 MATE kehittäjät"
+"Tekijänoikeus © 2012-2020 CAFE kehittäjät"
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE tarjoaa intuitiivisen ja viehättävän työpöydän Linux-käyttäjille "
+"CAFE tarjoaa intuitiivisen ja viehättävän työpöydän Linux-käyttäjille "
 "käyttäen perinteisiä malleja."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE sisältää suurimman osan mitä näet tietokoneellasi, mukaan lukien "
+"CAFE sisältää suurimman osan mitä näet tietokoneellasi, mukaan lukien "
 "tiedostonhallinnan, asiakirjakatselimen, kuvakatselimen, valikot ja monia "
 "sovelluksia."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE on Ilmainen, käyttökelpoinen, vakaa, helposti lähestyttävä "
+"CAFE on Ilmainen, käyttökelpoinen, vakaa, helposti lähestyttävä "
 "työpöytäympäristö Unixin kaltaisten käyttöjärjestelmien perheelle."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE on jatkoa GNOME 2:lle. Sadat ihmiset ovat lahjoittaneet koodia "
+"CAFE on jatkoa GNOME 2:lle. Sadat ihmiset ovat lahjoittaneet koodia "
 "GNOME:lle jo sen alusta alkaen vuodesta 1997; yhä useammat ovat "
 "osallistuneet monilla muilla tärkeillä tavoilla, mukaan lukien käännökset, "
 "dokumentointi ja laadunvarmistus."
@@ -104,18 +104,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
-"GNOME 2 oli suosituin Linux-työpöytä, mutta se ei ole enää saatavana... MATE"
+"GNOME 2 oli suosituin Linux-työpöytä, mutta se ei ole enää saatavana... CAFE"
 " on täällä tarjotakseen sen saman työpöydän sinulle!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"MATE-nimi tulee yerba matésta, subtrooppisessa Etelä-Amerikassa luontaisesti"
+"CAFE-nimi tulee yerba matésta, subtrooppisessa Etelä-Amerikassa luontaisesti"
 " kasvavasta orjanlaakerista. Sen lehdet sisältävät kofeiiniä ja niitä "
 "käytetään uutteisiin ja juomaan nimeltä mate."
 
@@ -647,7 +647,7 @@ msgstr "Käynnistettävät esteettömyysohjelmat"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr "Luettelo sisäänkirjauduttaessa käynnistyvistä esteettömyysohjelmista."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
@@ -668,7 +668,7 @@ msgstr "Käynnistä ensisijainen liikuntarajoitteisten esteettömyyssovellus"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
 "Mate käynnistää ensisijaisen liikuntarajoitteisten esteettömyyssovelluksen "
@@ -692,7 +692,7 @@ msgstr "Käynnistä ensisijainen näkörajoitteisten esteettömyyssovellus"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
 "Mate käynnistää ensisijaisen näkörajoitteisten esteettömyyssovelluksen "
@@ -800,7 +800,7 @@ msgid "Draw Desktop Background"
 msgstr "Piirrä työpöydän tausta"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
+msgid "Have CAFE draw the desktop background."
 msgstr "Anna Maten piirtää työpöydän tausta."
 
 #: schemas/org.mate.background.gschema.xml.in:23
@@ -808,8 +808,8 @@ msgid "Show Desktop Icons"
 msgstr "Näytä Työpöydän Kuvakkeet"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "Pyydä MATE tiedostohallintaa (Caja) piirtämään työpöydän kuvakkeet."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgstr "Pyydä CAFE tiedostohallintaa (Caja) piirtämään työpöydän kuvakkeet."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -817,10 +817,10 @@ msgstr "Taustan häivyttäminen muutoksen perusteella"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Jos asetus on totta, MATE muuttaa työpöydän taustaa häipyvällä efektillä."
+"Jos asetus on totta, CAFE muuttaa työpöydän taustaa häipyvällä efektillä."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -1245,12 +1245,12 @@ msgstr "QT-sovellusten skaalauskerroin"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Tämä asetus määrittää, ohjaako MATE QT-sovellusten skaalauskerrointa. Ota "
+"Tämä asetus määrittää, ohjaako CAFE QT-sovellusten skaalauskerrointa. Ota "
 "synkronointi käyttöön GTK:n alla, kun istunto alustetaan, poista tämä arvo "
 "käytöstä muualla. Edellyttää istunnon käynnistämistä uudelleen."
 
@@ -1482,8 +1482,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Lukkiutuuko näppäimistö."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "MATE Värivalinta"
+msgid "CAFE Color Selection"
+msgstr "CAFE Värivalinta"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1502,6 +1502,6 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
-"MATE;color;chooser;pick;palette;screen;selection;väri;valitsin;paletti;ruutu;valinta;"
+"CAFE;color;chooser;pick;palette;screen;selection;väri;valitsin;paletti;ruutu;valinta;"

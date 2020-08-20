@@ -179,7 +179,7 @@
     <key name="window-scaling-factor-qt-sync" type="b">
       <default>true</default>
       <summary>Scaling Factor for QT appllications</summary>
-      <description>This setting determines whether MATE controls the scale factor for QT applications. Enable to synchronize with the GTK scale factor when initializing the session, disable to control this value elsewhere. Requires restarting your session.</description>
+      <description>This setting determines whether CAFE controls the scale factor for QT applications. Enable to synchronize with the GTK scale factor when initializing the session, disable to control this value elsewhere. Requires restarting your session.</description>
     </key>
     <key name="gtk-enable-primary-paste" type="b">
       <default>true</default>

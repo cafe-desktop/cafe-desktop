@@ -3,7 +3,7 @@
     <key name="exec-ats" type="as">
       <default>[]</default>
       <summary>Startup Assistive Technology Applications</summary>
-      <description>List of assistive technology applications to start when logging into the MATE desktop.</description>
+      <description>List of assistive technology applications to start when logging into the CAFE desktop.</description>
     </key>
   </schema>
 </schemalist>

@@ -61,7 +61,7 @@ else
 endif
 
 cflags = [
-  '-DMATELOCALEDIR="@0@"'.format(matedt_localedir),
+  '-DCAFELOCALEDIR="@0@"'.format(matedt_localedir),
   '-DG_LOG_DOMAIN="MateDesktop"',
   '-DISO_CODES_PREFIX="@0@"'.format(iso_codes_prefix),
   '-DPNP_IDS="@0@"'.format(pnp_ids_path),
@@ -121,7 +121,7 @@ if enable_gir
   gir_extra_args = [
     '--warn-all',
     '--add-include-path=@0@'.format(meson.current_source_dir()),
-    '-DMATE_DESKTOP_USE_UNSTABLE_API',
+    '-DCAFE_DESKTOP_USE_UNSTABLE_API',
   ]
 
   gir_dir = join_paths(matedt_datadir, 'gir-1.0')

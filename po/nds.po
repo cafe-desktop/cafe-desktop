@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -31,12 +31,12 @@ msgstr ""
 "  Valmantas Palikša https://launchpad.net/~walmis"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "Över MATE"
+msgid "About CAFE"
+msgstr "Över CAFE"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Mehr över MATE rutkriegen"
+msgid "Learn more about CAFE"
+msgstr "Mehr över CAFE rutkriegen"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -45,49 +45,49 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
-msgstr "MATE-Schrievdisk"
+msgid "CAFE Desktop Environment"
+msgstr "CAFE-Schrievdisk"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE stellt för Linux-Brukers eenen licht to bruken un mojen Schrievdisk mit"
+"CAFE stellt för Linux-Brukers eenen licht to bruken un mojen Schrievdisk mit"
 " wennten Metaphers paraat."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE umfaat dat Meeste vun dat, wat du up dienem Reekner süchst, ok de "
+"CAFE umfaat dat Meeste vun dat, wat du up dienem Reekner süchst, ok de "
 "Datei-Uppasser, Dokumenten-Ankieker, Biller-Ankieker, Menüs un völe annere "
 "Programmen."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE is eene freje, bruukbaare, stevige, togangelke Schrievdisk-Umgeven för "
+"CAFE is eene freje, bruukbaare, stevige, togangelke Schrievdisk-Umgeven för "
 "de Famielje vun Unix-aardigen Bedrievssystemen."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE is dat Wiederföhren vun GNOME 2. Hunnerte Lüde hebben Quelltexten to "
+"CAFE is dat Wiederföhren vun GNOME 2. Hunnerte Lüde hebben Quelltexten to "
 "GNOME bidragen, siet 't 1997 begünnen wurr; völe annere hebben daar up anner"
 " wichtige Aarden to bidragen, to'n Bispööl mit Översettens, Hülptexten un "
 "Qualität-Naprüfen."
@@ -95,18 +95,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 weer de believteste Linux-Schrievdisk, aver dat gifft 't nich mehr …"
-" MATE is daarför daar, dat du de sülven Schrievdisk kriegen kannst!"
+" CAFE is daarför daar, dat du de sülven Schrievdisk kriegen kannst!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"De Naam »MATE« kummt vun Yerba maté, eener Steekpalm-Aard, wat im "
+"De Naam »CAFE« kummt vun Yerba maté, eener Steekpalm-Aard, wat im "
 "subtropisken Süüdamerika wasst. Siene Bladden enthollen Koffein un man maakt"
 " daar Tee un een Drank mit de Naam Mate ut."
 
@@ -643,9 +643,9 @@ msgstr "Hülp-Technik-Programmen bi'm Start"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
-"List vun Hülp-Technik-Programmen, wat bi'm Anmellen an de MATE-Schrievdisk "
+"List vun Hülp-Technik-Programmen, wat bi'm Anmellen an de CAFE-Schrievdisk "
 "start worden sallen."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
@@ -666,10 +666,10 @@ msgstr "Leevstes Bewegelheids-Hülp-Technik-Programm starten"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATE start dat leevste Bewegelheids-Hülp-Technik-Programm bi'm Anmellen."
+"CAFE start dat leevste Bewegelheids-Hülp-Technik-Programm bi'm Anmellen."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -689,9 +689,9 @@ msgstr "Leevstes Sicht-Hülp-Technik-Programm starten"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
-msgstr "MATE start dat leevste Sicht-Hülp-Technik-Programm bi'm Anmellen."
+msgstr "CAFE start dat leevste Sicht-Hülp-Technik-Programm bi'm Anmellen."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -792,16 +792,16 @@ msgid "Draw Desktop Background"
 msgstr "Schrievdiskachtergrund malen"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "MATE de Schrievdiskachtergrund malen laten."
+msgid "Have CAFE draw the desktop background."
+msgstr "CAFE de Schrievdiskachtergrund malen laten."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Wies Schrievdisk-Tekens"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "De MATE-Dateiuppasser (Caja) sall de Schrievdisk-Tekens teken."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgstr "De CAFE-Dateiuppasser (Caja) sall de Schrievdisk-Tekens teken."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -809,10 +809,10 @@ msgstr "Achtergrund bi'm Ännern verbleken laten"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Wenn jau, ännert MATE de Schrievdisk-Achtergrund mit eenem Verbleken-Effekt."
+"Wenn jau, ännert CAFE de Schrievdisk-Achtergrund mit eenem Verbleken-Effekt."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -1225,7 +1225,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1438,8 +1438,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr ""
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "MATE Farv-Utkören"
+msgid "CAFE Color Selection"
+msgstr "CAFE Farv-Utkören"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1458,5 +1458,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

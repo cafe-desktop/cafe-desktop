@@ -1,11 +1,11 @@
 bin_PROGRAMS = mate-about
 mate_about_SOURCES = mate-about.c mate-about.h
-mate_about_CFLAGS = $(WARN_CFLAGS) $(MATE_ABOUT_CFLAGS)
-mate_about_LDADD = $(MATE_ABOUT_LIBS)
+mate_about_CFLAGS = $(WARN_CFLAGS) $(CAFE_ABOUT_CFLAGS)
+mate_about_LDADD = $(CAFE_ABOUT_LIBS)
 
 AM_CPPFLAGS = \
 	-I$(top_srcdir) \
-	$(MATE_ABOUT_CFLAGS) \
+	$(CAFE_ABOUT_CFLAGS) \
 	-DLOCALE_DIR=\"$(datadir)/locale\" \
 	-DPIXMAPS_DIR=\"$(datadir)/pixmaps/\"
 

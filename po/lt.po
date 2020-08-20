@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -41,12 +41,12 @@ msgstr ""
 "Moo"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "Apie MATE"
+msgid "About CAFE"
+msgstr "Apie CAFE"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Sužinokite daugiau apie MATE"
+msgid "Learn more about CAFE"
+msgstr "Sužinokite daugiau apie CAFE"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -55,70 +55,70 @@ msgid "mate-desktop"
 msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
-msgstr "MATE darbalaukio aplinka"
+msgid "CAFE Desktop Environment"
+msgstr "CAFE darbalaukio aplinka"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 "Autorių teisės © 1997-2011 GNOME kūrėjai\n"
 "Autorių teisės © 2011 Perberos\n"
-"Autorių teisės © 2012-2020 MATE kūrėjai"
+"Autorių teisės © 2012-2020 CAFE kūrėjai"
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE suteikia „Linux“ naudotojams patrauklią ir nuoseklią tradicinę darbo "
+"CAFE suteikia „Linux“ naudotojams patrauklią ir nuoseklią tradicinę darbo "
 "aplinką."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE yra didžioji dalis to, ką matote kompiuteryje – failų tvarkytuvė, "
+"CAFE yra didžioji dalis to, ką matote kompiuteryje – failų tvarkytuvė, "
 "dokumentų žiūryklė, paveikslų žiūryklė, meniu punktai ir gausybė kitų "
 "programų."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE – laisva, patogi ir stabili darbalaukio aplinka UNIX giminiškų "
+"CAFE – laisva, patogi ir stabili darbalaukio aplinka UNIX giminiškų "
 "operacinių sistemų grupei. "
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE yra GNOME 2 tęsinys. Šimtai žmonių prisidėjo prie GNOME kodo, pradėto "
+"CAFE yra GNOME 2 tęsinys. Šimtai žmonių prisidėjo prie GNOME kodo, pradėto "
 "1997; dar daugiau prisidėjo kitokiais būdais – vertimais, dokumentacija ir "
 "kokybės priežiūra."
 
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 buvo populiariausia „Linux“ darbalaukio aplinka, tačiau "
-"nebeprieinama... MATE Jums suteiks tą patį!"
+"nebeprieinama... CAFE Jums suteiks tą patį!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"MATE pavadinimas kilęs nuo iš paragvajinio bugienio gaminamos arbatos matės "
+"CAFE pavadinimas kilęs nuo iš paragvajinio bugienio gaminamos arbatos matės "
 "pavadinimo."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
@@ -644,10 +644,10 @@ msgstr "Paleisti pagalbinių technologijų programas"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 "Pagalbinių technologijų programų, kurios yra paleidžiamos pradedant darbą "
-"MATE aplinkoje, sąrašas."
+"CAFE aplinkoje, sąrašas."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -667,10 +667,10 @@ msgstr "Paleisti pageidaujamą Mobility pagalbinių technologijų programą"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATE paleidžia Mobility pagalbinių technologijų programą prisijungimo metu."
+"CAFE paleidžia Mobility pagalbinių technologijų programą prisijungimo metu."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -690,10 +690,10 @@ msgstr "Paleisti pageidaujamą vizualinių pagalbinių technologijų programą"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"MATE paleidžia vizualių pagalbinių technologijų programą prisijungimo metu."
+"CAFE paleidžia vizualių pagalbinių technologijų programą prisijungimo metu."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -799,16 +799,16 @@ msgid "Draw Desktop Background"
 msgstr "Piešti darbalaukio foną"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "Ar MATE turi piešti darbalaukio foną."
+msgid "Have CAFE draw the desktop background."
+msgstr "Ar CAFE turi piešti darbalaukio foną."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Rodyti darbalaukio piktogramas"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "Ar MATE failų tvarkytuvė (Caja) turi piešti darbalaukio piktogramas."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgstr "Ar CAFE failų tvarkytuvė (Caja) turi piešti darbalaukio piktogramas."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -816,9 +816,9 @@ msgstr "Išblukinti foną, keičiant"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
-msgstr "Jeigu įjungta, MATE pakeis ekrano foną su stelbimo efektu."
+msgstr "Jeigu įjungta, CAFE pakeis ekrano foną su stelbimo efektu."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -1250,12 +1250,12 @@ msgstr "QT programų mastelio koeficientas"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Šis nustatymas nustato ar MATE valdys QT programų mastelio koeficientą. "
+"Šis nustatymas nustato ar CAFE valdys QT programų mastelio koeficientą. "
 "Įjunkite, norėdami inicijuojant seansą sinchronizuoti su GTK mastelio "
 "faktoriumi, išjunkite, norėdami valdyti šią reikšmę kitur. Reikalauja "
 "paleisti seansą iš naujo."
@@ -1491,8 +1491,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Ar naudojamas klaviatūros blokavimas."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "MATE spalvų pasirinkimas"
+msgid "CAFE Color Selection"
+msgstr "CAFE spalvų pasirinkimas"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1511,6 +1511,6 @@ msgstr "gtk-select-color"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
-"MATE;spalva;spalvos;spalvų;parinkiklis;parinkti;paletė;ekranas;pasirinkimas;"
+"CAFE;spalva;spalvos;spalvų;parinkiklis;parinkti;paletė;ekranas;pasirinkimas;"

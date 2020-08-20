@@ -21,11 +21,11 @@
  *
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
-#ifndef MATE_RR_H
-#define MATE_RR_H
+#ifndef CAFE_RR_H
+#define CAFE_RR_H
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error    MateRR is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including materr.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error    MateRR is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including materr.h
 #endif
 
 #include <glib.h>
@@ -50,41 +50,41 @@ typedef struct {
 
 typedef enum
 {
-    MATE_RR_ROTATION_0 =	(1 << 0),
-    MATE_RR_ROTATION_90 =	(1 << 1),
-    MATE_RR_ROTATION_180 =	(1 << 2),
-    MATE_RR_ROTATION_270 =	(1 << 3),
-    MATE_RR_REFLECT_X =	(1 << 4),
-    MATE_RR_REFLECT_Y =	(1 << 5)
+    CAFE_RR_ROTATION_0 =	(1 << 0),
+    CAFE_RR_ROTATION_90 =	(1 << 1),
+    CAFE_RR_ROTATION_180 =	(1 << 2),
+    CAFE_RR_ROTATION_270 =	(1 << 3),
+    CAFE_RR_REFLECT_X =	(1 << 4),
+    CAFE_RR_REFLECT_Y =	(1 << 5)
 } MateRRRotation;
 
 /* Error codes */
 
-#define MATE_RR_ERROR (mate_rr_error_quark ())
+#define CAFE_RR_ERROR (mate_rr_error_quark ())
 
 GQuark mate_rr_error_quark (void);
 
 typedef enum {
-    MATE_RR_ERROR_UNKNOWN,		/* generic "fail" */
-    MATE_RR_ERROR_NO_RANDR_EXTENSION,	/* RANDR extension is not present */
-    MATE_RR_ERROR_RANDR_ERROR,		/* generic/undescribed error from the underlying XRR API */
-    MATE_RR_ERROR_BOUNDS_ERROR,	/* requested bounds of a CRTC are outside the maximum size */
-    MATE_RR_ERROR_CRTC_ASSIGNMENT,	/* could not assign CRTCs to outputs */
-    MATE_RR_ERROR_NO_MATCHING_CONFIG,	/* none of the saved configurations matched the current configuration */
+    CAFE_RR_ERROR_UNKNOWN,		/* generic "fail" */
+    CAFE_RR_ERROR_NO_RANDR_EXTENSION,	/* RANDR extension is not present */
+    CAFE_RR_ERROR_RANDR_ERROR,		/* generic/undescribed error from the underlying XRR API */
+    CAFE_RR_ERROR_BOUNDS_ERROR,	/* requested bounds of a CRTC are outside the maximum size */
+    CAFE_RR_ERROR_CRTC_ASSIGNMENT,	/* could not assign CRTCs to outputs */
+    CAFE_RR_ERROR_NO_MATCHING_CONFIG,	/* none of the saved configurations matched the current configuration */
 } MateRRError;
 
-#define MATE_RR_CONNECTOR_TYPE_PANEL "Panel"  /* This is a laptop's built-in LCD */
+#define CAFE_RR_CONNECTOR_TYPE_PANEL "Panel"  /* This is a laptop's built-in LCD */
 
-#define MATE_TYPE_RR_SCREEN                  (mate_rr_screen_get_type())
-#define MATE_RR_SCREEN(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_SCREEN, MateRRScreen))
-#define MATE_IS_RR_SCREEN(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_SCREEN))
-#define MATE_RR_SCREEN_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_RR_SCREEN, MateRRScreenClass))
-#define MATE_IS_RR_SCREEN_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_RR_SCREEN))
-#define MATE_RR_SCREEN_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_RR_SCREEN, MateRRScreenClass))
+#define CAFE_TYPE_RR_SCREEN                  (mate_rr_screen_get_type())
+#define CAFE_RR_SCREEN(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_SCREEN, MateRRScreen))
+#define CAFE_IS_RR_SCREEN(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_SCREEN))
+#define CAFE_RR_SCREEN_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_RR_SCREEN, MateRRScreenClass))
+#define CAFE_IS_RR_SCREEN_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_RR_SCREEN))
+#define CAFE_RR_SCREEN_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_RR_SCREEN, MateRRScreenClass))
 
-#define MATE_TYPE_RR_OUTPUT (mate_rr_output_get_type())
-#define MATE_TYPE_RR_CRTC   (mate_rr_crtc_get_type())
-#define MATE_TYPE_RR_MODE   (mate_rr_mode_get_type())
+#define CAFE_TYPE_RR_OUTPUT (mate_rr_output_get_type())
+#define CAFE_TYPE_RR_CRTC   (mate_rr_crtc_get_type())
+#define CAFE_TYPE_RR_MODE   (mate_rr_mode_get_type())
 
 GType mate_rr_screen_get_type (void);
 GType mate_rr_output_get_type (void);
@@ -156,7 +156,7 @@ int             mate_rr_mode_get_freq             (MateRRMode           *mode);
 /* MateRRCrtc */
 guint32         mate_rr_crtc_get_id               (MateRRCrtc           *crtc);
 
-#ifndef MATE_DISABLE_DEPRECATED
+#ifndef CAFE_DISABLE_DEPRECATED
 gboolean        mate_rr_crtc_set_config           (MateRRCrtc           *crtc,
 						    int                    x,
 						    int                    y,
@@ -197,4 +197,4 @@ void            mate_rr_crtc_set_gamma            (MateRRCrtc           *crtc,
 						    unsigned short        *red,
 						    unsigned short        *green,
 						    unsigned short        *blue);
-#endif /* MATE_RR_H */
+#endif /* CAFE_RR_H */

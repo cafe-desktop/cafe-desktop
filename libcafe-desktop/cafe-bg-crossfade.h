@@ -22,11 +22,11 @@
    Author: Ray Strode <rstrode@redhat.com>
 */
 
-#ifndef __MATE_BG_CROSSFADE_H__
-#define __MATE_BG_CROSSFADE_H__
+#ifndef __CAFE_BG_CROSSFADE_H__
+#define __CAFE_BG_CROSSFADE_H__
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error    MateBGCrossfade is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-bg-crossfade.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error    MateBGCrossfade is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-bg-crossfade.h
 #endif
 
 #include <glib.h>
@@ -35,12 +35,12 @@
 
 G_BEGIN_DECLS
 
-#define MATE_TYPE_BG_CROSSFADE            (mate_bg_crossfade_get_type ())
-#define MATE_BG_CROSSFADE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_BG_CROSSFADE, MateBGCrossfade))
-#define MATE_BG_CROSSFADE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  MATE_TYPE_BG_CROSSFADE, MateBGCrossfadeClass))
-#define MATE_IS_BG_CROSSFADE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_BG_CROSSFADE))
-#define MATE_IS_BG_CROSSFADE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  MATE_TYPE_BG_CROSSFADE))
-#define MATE_BG_CROSSFADE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  MATE_TYPE_BG_CROSSFADE, MateBGCrossfadeClass))
+#define CAFE_TYPE_BG_CROSSFADE            (mate_bg_crossfade_get_type ())
+#define CAFE_BG_CROSSFADE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_BG_CROSSFADE, MateBGCrossfade))
+#define CAFE_BG_CROSSFADE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_BG_CROSSFADE, MateBGCrossfadeClass))
+#define CAFE_IS_BG_CROSSFADE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_BG_CROSSFADE))
+#define CAFE_IS_BG_CROSSFADE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  CAFE_TYPE_BG_CROSSFADE))
+#define CAFE_BG_CROSSFADE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  CAFE_TYPE_BG_CROSSFADE, MateBGCrossfadeClass))
 
 typedef struct _MateBGCrossfadePrivate MateBGCrossfadePrivate;
 typedef struct _MateBGCrossfade MateBGCrossfade;

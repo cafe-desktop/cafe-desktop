@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -29,12 +29,12 @@ msgid "translator-credits"
 msgstr "Troet eo bet gant"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "Diwar-benn MATE"
+msgid "About CAFE"
+msgstr "Diwar-benn CAFE"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Gouzout hiroc'h diwar-benn MATE"
+msgid "Learn more about CAFE"
+msgstr "Gouzout hiroc'h diwar-benn CAFE"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -43,49 +43,49 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
+msgid "CAFE Desktop Environment"
 msgstr ""
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE a bourchas un amva burev plijus hag nadek da arveriaded Linux en ur "
+"CAFE a bourchas un amva burev plijus hag nadek da arveriaded Linux en ur "
 "ober gant al leterc'hadoù boaz."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"E-kreiz MATE e kavot an darn vrasañ eus ar pezh a welot gant hoc'h "
+"E-kreiz CAFE e kavot an darn vrasañ eus ar pezh a welot gant hoc'h "
 "urzhiataer, en o zouez un ardoer restroù, ur welerez teuliadoù hag unan evit"
 " ar skeudennoù ha kalz arloadoù."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE a dalv d'un amva burev digor, stabil, digoust, aes da arverañ evit ar "
+"CAFE a dalv d'un amva burev digor, stabil, digoust, aes da arverañ evit ar "
 "reizhiadoù korvoiñ heñvel ouzh Unix."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE a zeu diouzh GNOME2. Kantadoù a dud o deus kemeret perzh e boneg GNOME "
+"CAFE a zeu diouzh GNOME2. Kantadoù a dud o deus kemeret perzh e boneg GNOME "
 "abaoe ma'z eo bet lañset e 1997 ; kalz muioc'h a dud c'hoazh o deus labouret"
 " evitañ dre doareoù pouezhus all, en o zouez an treiñ, ar sevel "
 "kelennskridoù ha teurel evezh ouzh ar berzhded."
@@ -93,18 +93,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
-"Ar burev anvekañ evit Linux e oa GNOME 2, n'eo ket mui hegerz avat... MATE "
+"Ar burev anvekañ evit Linux e oa GNOME 2, n'eo ket mui hegerz avat... CAFE "
 "zo bet krouet evit kinnig an hevelep burev deoc'h ! "
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"Eus \" yerba maté\" e teu an anv MATE, ur spesad kelenn bet ganet e Amerika "
+"Eus \" yerba maté\" e teu an anv CAFE, ur spesad kelenn bet ganet e Amerika "
 "ar Su goudrovanel. Kafein ez eus en he deil ha graet e vez gante evit "
 "prientiñ bervadurioù hag un died anvet mate."
 
@@ -633,10 +633,10 @@ msgstr "Loc'hañ an arloadoù dre galvezouriezh ameilañ"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 "Roll an arloadoù dre galvezouriezh ameilañ da loc'hañ pa vez kennasket ouzh "
-"burev MATE"
+"burev CAFE"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -659,10 +659,10 @@ msgstr ""
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder "
+"CAFE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder "
 "e-pad ar c'hennaskañ."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
@@ -684,10 +684,10 @@ msgstr ""
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"MATE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit ar gweled e-pad "
+"CAFE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit ar gweled e-pad "
 "ar c'hennaskañ."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
@@ -789,17 +789,17 @@ msgid "Draw Desktop Background"
 msgstr "Kempenn drekleur ar burev"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "Lakaat MATE da gempenn drekleur ar burev."
+msgid "Have CAFE draw the desktop background."
+msgstr "Lakaat CAFE da gempenn drekleur ar burev."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Diskouez arlunioù ar burev"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
-"Lakaet eo bet ardoer restroù MATE (Caja) da gempenn arlunioù ar burev."
+"Lakaet eo bet ardoer restroù CAFE (Caja) da gempenn arlunioù ar burev."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -807,10 +807,10 @@ msgstr "Lakaat arveuz gant kemm an drekleur"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Mar erspizet da wir e vo lakaet un arveuz gant MATE pa vo kemmet drekleur ar"
+"Mar erspizet da wir e vo lakaet un arveuz gant CAFE pa vo kemmet drekleur ar"
 " burev."
 
 #: schemas/org.mate.background.gschema.xml.in:33
@@ -1236,7 +1236,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1477,8 +1477,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Hag-eñ e vo gweredekaet pe get prennañ ar c'hlavier."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "Diuzadur livioù MATE"
+msgid "CAFE Color Selection"
+msgstr "Diuzadur livioù CAFE"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1497,5 +1497,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

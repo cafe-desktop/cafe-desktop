@@ -1,5 +1,5 @@
 /* -*- Mode: C; c-set-style: linux indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
-/* mate-desktop-item.c - MATE Desktop File Representation
+/* mate-desktop-item.c - CAFE Desktop File Representation
 
    Copyright (C) 1999, 2000 Red Hat Inc.
    Copyright (C) 2001 Sid Vicious
@@ -54,8 +54,8 @@
 
 #define sure_string(s) ((s)!=NULL?(s):"")
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
-#undef MATE_DISABLE_DEPRECATED
+#define CAFE_DESKTOP_USE_UNSTABLE_API
+#undef CAFE_DISABLE_DEPRECATED
 #include <mate-desktop-item.h>
 #include <mate-desktop-utils.h>
 
@@ -215,8 +215,8 @@ readbuf_open (GFile *file, GError **error)
 	if (stream == NULL) {
 		g_set_error (error,
 			     /* FIXME: better errors */
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_CANNOT_OPEN,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_CANNOT_OPEN,
 			     _("Error reading file '%s': %s"),
 			     uri, local_error->message);
 		g_error_free (local_error);
@@ -283,8 +283,8 @@ readbuf_rewind (ReadBuf *rb, GError **error)
 
 	if (rb->stream == NULL) {
 		g_set_error (
-			error, MATE_DESKTOP_ITEM_ERROR,
-			MATE_DESKTOP_ITEM_ERROR_CANNOT_OPEN,
+			error, CAFE_DESKTOP_ITEM_ERROR,
+			CAFE_DESKTOP_ITEM_ERROR_CANNOT_OPEN,
 			_("Error rewinding file '%s': %s"),
 			rb->uri, local_error->message);
 		g_error_free (local_error);
@@ -312,41 +312,41 @@ static MateDesktopItemType
 type_from_string (const char *type)
 {
 	if (!type)
-		return MATE_DESKTOP_ITEM_TYPE_NULL;
+		return CAFE_DESKTOP_ITEM_TYPE_NULL;
 
 	switch (type [0]) {
 	case 'A':
 		if (!strcmp (type, "Application"))
-			return MATE_DESKTOP_ITEM_TYPE_APPLICATION;
+			return CAFE_DESKTOP_ITEM_TYPE_APPLICATION;
 		break;
 	case 'L':
 		if (!strcmp (type, "Link"))
-			return MATE_DESKTOP_ITEM_TYPE_LINK;
+			return CAFE_DESKTOP_ITEM_TYPE_LINK;
 		break;
 	case 'F':
 		if (!strcmp (type, "FSDevice"))
-			return MATE_DESKTOP_ITEM_TYPE_FSDEVICE;
+			return CAFE_DESKTOP_ITEM_TYPE_FSDEVICE;
 		break;
 	case 'M':
 		if (!strcmp (type, "MimeType"))
-			return MATE_DESKTOP_ITEM_TYPE_MIME_TYPE;
+			return CAFE_DESKTOP_ITEM_TYPE_MIME_TYPE;
 		break;
 	case 'D':
 		if (!strcmp (type, "Directory"))
-			return MATE_DESKTOP_ITEM_TYPE_DIRECTORY;
+			return CAFE_DESKTOP_ITEM_TYPE_DIRECTORY;
 		break;
 	case 'S':
 		if (!strcmp (type, "Service"))
-			return MATE_DESKTOP_ITEM_TYPE_SERVICE;
+			return CAFE_DESKTOP_ITEM_TYPE_SERVICE;
 
 		else if (!strcmp (type, "ServiceType"))
-			return MATE_DESKTOP_ITEM_TYPE_SERVICE_TYPE;
+			return CAFE_DESKTOP_ITEM_TYPE_SERVICE_TYPE;
 		break;
 	default:
 		break;
 	}
 
-	return MATE_DESKTOP_ITEM_TYPE_OTHER;
+	return CAFE_DESKTOP_ITEM_TYPE_OTHER;
 }
 
 /**
@@ -373,16 +373,16 @@ mate_desktop_item_new (void)
 
 	/* These are guaranteed to be set */
 	mate_desktop_item_set_string (retval,
-				       MATE_DESKTOP_ITEM_NAME,
+				       CAFE_DESKTOP_ITEM_NAME,
 				       /* Translators: the "name" mentioned
 					* here is the name of an application or
 					* a document */
 				       _("No name"));
 	mate_desktop_item_set_string (retval,
-				       MATE_DESKTOP_ITEM_ENCODING,
+				       CAFE_DESKTOP_ITEM_ENCODING,
 				       "UTF-8");
 	mate_desktop_item_set_string (retval,
-				       MATE_DESKTOP_ITEM_VERSION,
+				       CAFE_DESKTOP_ITEM_VERSION,
 				       "1.0");
 
 	retval->launch_time = 0;
@@ -493,7 +493,7 @@ read_sort_order (MateDesktopItem *item, GFile *dir)
 	}
 	readbuf_close (rb);
 	if (str != NULL) {
-		mate_desktop_item_set_string (item, MATE_DESKTOP_ITEM_SORT_ORDER,
+		mate_desktop_item_set_string (item, CAFE_DESKTOP_ITEM_SORT_ORDER,
 					       str->str);
 		g_string_free (str, TRUE);
 	}
@@ -507,7 +507,7 @@ make_fake_directory (GFile *dir)
 
 	item = mate_desktop_item_new ();
 	mate_desktop_item_set_entry_type (item,
-					   MATE_DESKTOP_ITEM_TYPE_DIRECTORY);
+					   CAFE_DESKTOP_ITEM_TYPE_DIRECTORY);
 
 
 	item->mtime = DONT_UPDATE_MTIME; /* it doesn't exist, we know that */
@@ -602,8 +602,8 @@ mate_desktop_item_new_from_gfile (GFile *file,
 		uri = g_file_get_uri (file);
 		g_set_error (error,
 			     /* FIXME: better errors */
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_INVALID_TYPE,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_INVALID_TYPE,
 			     _("File '%s' is not a regular file or directory."),
 			     uri);
 
@@ -631,7 +631,7 @@ mate_desktop_item_new_from_gfile (GFile *file,
 		if (child_info == NULL) {
 			g_object_unref (child);
 
-			if (flags & MATE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS) {
+			if (flags & CAFE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS) {
 				return NULL;
 			} else {
 				return make_fake_directory (file);
@@ -655,7 +655,7 @@ mate_desktop_item_new_from_gfile (GFile *file,
 	}
 
 	retval = ditem_load (rb,
-			     (flags & MATE_DESKTOP_ITEM_LOAD_NO_TRANSLATIONS) != 0,
+			     (flags & CAFE_DESKTOP_ITEM_LOAD_NO_TRANSLATIONS) != 0,
 			     error);
 
 	if (retval == NULL) {
@@ -663,7 +663,7 @@ mate_desktop_item_new_from_gfile (GFile *file,
 		return NULL;
 	}
 
-	if (flags & MATE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS &&
+	if (flags & CAFE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS &&
 	    ! mate_desktop_item_exists (retval)) {
 		mate_desktop_item_unref (retval);
 		g_object_unref (subfn);
@@ -716,7 +716,7 @@ mate_desktop_item_new_from_string (const char *uri,
 	rb = readbuf_new_from_string (uri, string, length);
 
 	retval = ditem_load (rb,
-			     (flags & MATE_DESKTOP_ITEM_LOAD_NO_TRANSLATIONS) != 0,
+			     (flags & CAFE_DESKTOP_ITEM_LOAD_NO_TRANSLATIONS) != 0,
 			     error);
 
 	if (retval == NULL) {
@@ -786,8 +786,8 @@ mate_desktop_item_new_from_basename (const char *basename,
 
 	if (!(file = file_from_basename (basename))) {
 		g_set_error (error,
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_CANNOT_OPEN,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_CANNOT_OPEN,
 			     _("Cannot find file '%s'"),
 			     basename);
 		return NULL;
@@ -832,8 +832,8 @@ mate_desktop_item_save (MateDesktopItem *item,
 
 	if (uri == NULL) {
 		g_set_error (error,
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_NO_FILENAME,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_NO_FILENAME,
 			     _("No filename to save to"));
 		return FALSE;
 	}
@@ -1370,7 +1370,7 @@ do_percent_subst (const MateDesktopItem  *item,
 	case 'm':
 		/* Note: v0.9.4 of the spec says this is deprecated
 		 * and replace with --miniicon iconname */
-		cs = mate_desktop_item_get_string (item, MATE_DESKTOP_ITEM_MINI_ICON);
+		cs = mate_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_MINI_ICON);
 		if (cs != NULL) {
 			g_string_append (str, "--miniicon=");
 			esc = escape_single_quotes (cs, in_single_quotes, in_double_quotes);
@@ -1379,7 +1379,7 @@ do_percent_subst (const MateDesktopItem  *item,
 		break;
 	case 'i':
 		/* Note: v0.9.4 of the spec says replace with --icon iconname */
-		cs = mate_desktop_item_get_string (item, MATE_DESKTOP_ITEM_ICON);
+		cs = mate_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_ICON);
 		if (cs != NULL) {
 			g_string_append (str, "--icon=");
 			esc = escape_single_quotes (cs, in_single_quotes, in_double_quotes);
@@ -1387,7 +1387,7 @@ do_percent_subst (const MateDesktopItem  *item,
 		}
 		break;
 	case 'c':
-		cs = mate_desktop_item_get_localestring (item, MATE_DESKTOP_ITEM_NAME);
+		cs = mate_desktop_item_get_localestring (item, CAFE_DESKTOP_ITEM_NAME);
 		if (cs != NULL) {
 			esc = escape_single_quotes (cs, in_single_quotes, in_double_quotes);
 			g_string_append (str, esc);
@@ -1402,7 +1402,7 @@ do_percent_subst (const MateDesktopItem  *item,
 		}
 		break;
 	case 'v':
-		cs = mate_desktop_item_get_localestring (item, MATE_DESKTOP_ITEM_DEV);
+		cs = mate_desktop_item_get_localestring (item, CAFE_DESKTOP_ITEM_DEV);
 		if (cs != NULL) {
 			esc = escape_single_quotes (cs, in_single_quotes, in_double_quotes);
 			g_string_append (str, esc);
@@ -1793,8 +1793,8 @@ ditem_execute (const MateDesktopItem *item,
 
 	g_return_val_if_fail (item, -1);
 
-	if (item->type == MATE_DESKTOP_ITEM_TYPE_APPLICATION) {
-		working_dir = mate_desktop_item_get_string (item, MATE_DESKTOP_ITEM_PATH);
+	if (item->type == CAFE_DESKTOP_ITEM_TYPE_APPLICATION) {
+		working_dir = mate_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_PATH);
 		if (working_dir &&
 		    !g_file_test (working_dir, G_FILE_TEST_IS_DIR))
 			working_dir = NULL;
@@ -1803,9 +1803,9 @@ ditem_execute (const MateDesktopItem *item,
 	if (working_dir == NULL && !use_current_dir)
 		working_dir = g_get_home_dir ();
 
-	if (mate_desktop_item_get_boolean (item, MATE_DESKTOP_ITEM_TERMINAL)) {
+	if (mate_desktop_item_get_boolean (item, CAFE_DESKTOP_ITEM_TERMINAL)) {
 		const char *options =
-			mate_desktop_item_get_string (item, MATE_DESKTOP_ITEM_TERMINAL_OPTIONS);
+			mate_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_TERMINAL_OPTIONS);
 
 		if (options != NULL) {
 			g_shell_parse_argv (options,
@@ -1849,11 +1849,11 @@ ditem_execute (const MateDesktopItem *item,
 						      DefaultScreen (GDK_DISPLAY_XDISPLAY (gdkdisplay)));
 
 		name = mate_desktop_item_get_localestring (item,
-							    MATE_DESKTOP_ITEM_NAME);
+							    CAFE_DESKTOP_ITEM_NAME);
 
 		if (name == NULL)
 			name = mate_desktop_item_get_localestring (item,
-								    MATE_DESKTOP_ITEM_GENERIC_NAME);
+								    CAFE_DESKTOP_ITEM_GENERIC_NAME);
 
 		if (name != NULL) {
 			char *description;
@@ -1868,7 +1868,7 @@ ditem_execute (const MateDesktopItem *item,
 		}
 
 		icon = mate_desktop_item_get_string (item,
-						      MATE_DESKTOP_ITEM_ICON);
+						      CAFE_DESKTOP_ITEM_ICON);
 
 		if (icon != NULL)
 			sn_launcher_context_set_icon_name (sn_context, icon);
@@ -2082,21 +2082,21 @@ mate_desktop_item_launch_on_screen_with_env (
 	char *the_exec;
 	int ret;
 
-	exec = mate_desktop_item_get_string (item, MATE_DESKTOP_ITEM_EXEC);
+	exec = mate_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_EXEC);
 	/* This is a URL, so launch it as a url */
-	if (item->type == MATE_DESKTOP_ITEM_TYPE_LINK) {
+	if (item->type == CAFE_DESKTOP_ITEM_TYPE_LINK) {
 		const char *url;
 		gboolean    retval;
 
-		url = mate_desktop_item_get_string (item, MATE_DESKTOP_ITEM_URL);
+		url = mate_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_URL);
 		/* Mate panel used to put this in Exec */
 		if (!(url && url[0] != '\0'))
 			url = exec;
 
 		if (!(url && url[0] != '\0')) {
 			g_set_error (error,
-				     MATE_DESKTOP_ITEM_ERROR,
-				     MATE_DESKTOP_ITEM_ERROR_NO_URL,
+				     CAFE_DESKTOP_ITEM_ERROR,
+				     CAFE_DESKTOP_ITEM_ERROR_NO_URL,
 				     _("No URL to launch"));
 			return -1;
 		}
@@ -2109,10 +2109,10 @@ mate_desktop_item_launch_on_screen_with_env (
 	}
 
 	/* check the type, if there is one set */
-	if (item->type != MATE_DESKTOP_ITEM_TYPE_APPLICATION) {
+	if (item->type != CAFE_DESKTOP_ITEM_TYPE_APPLICATION) {
 		g_set_error (error,
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_NOT_LAUNCHABLE,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_NOT_LAUNCHABLE,
 			     _("Not a launchable item"));
 		return -1;
 	}
@@ -2121,8 +2121,8 @@ mate_desktop_item_launch_on_screen_with_env (
 	if (exec == NULL ||
 	    exec[0] == '\0') {
 		g_set_error (error,
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_NO_EXEC_STRING,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_NO_EXEC_STRING,
 			     _("No command (Exec) to launch"));
 		return -1;
 	}
@@ -2134,18 +2134,18 @@ mate_desktop_item_launch_on_screen_with_env (
 
 	if ( ! strip_the_amp (the_exec)) {
 		g_set_error (error,
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_BAD_EXEC_STRING,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_BAD_EXEC_STRING,
 			     _("Bad command (Exec) to launch"));
 		return -1;
 	}
 
 	ret = ditem_execute (item, the_exec, file_list, screen, workspace, envp,
-			     (flags & MATE_DESKTOP_ITEM_LAUNCH_ONLY_ONE),
-			     (flags & MATE_DESKTOP_ITEM_LAUNCH_USE_CURRENT_DIR),
-			     (flags & MATE_DESKTOP_ITEM_LAUNCH_APPEND_URIS),
-			     (flags & MATE_DESKTOP_ITEM_LAUNCH_APPEND_PATHS),
-			     (flags & MATE_DESKTOP_ITEM_LAUNCH_DO_NOT_REAP_CHILD),
+			     (flags & CAFE_DESKTOP_ITEM_LAUNCH_ONLY_ONE),
+			     (flags & CAFE_DESKTOP_ITEM_LAUNCH_USE_CURRENT_DIR),
+			     (flags & CAFE_DESKTOP_ITEM_LAUNCH_APPEND_URIS),
+			     (flags & CAFE_DESKTOP_ITEM_LAUNCH_APPEND_PATHS),
+			     (flags & CAFE_DESKTOP_ITEM_LAUNCH_DO_NOT_REAP_CHILD),
 			     error);
 
 	return ret;
@@ -2347,19 +2347,19 @@ mate_desktop_item_exists (const MateDesktopItem *item)
 
 	g_return_val_if_fail (item != NULL, FALSE);
 
-	try_exec = lookup (item, MATE_DESKTOP_ITEM_TRY_EXEC);
+	try_exec = lookup (item, CAFE_DESKTOP_ITEM_TRY_EXEC);
 
 	if (try_exec != NULL &&
 	    ! exec_exists (try_exec)) {
 		return FALSE;
 	}
 
-	if (item->type == MATE_DESKTOP_ITEM_TYPE_APPLICATION) {
+	if (item->type == CAFE_DESKTOP_ITEM_TYPE_APPLICATION) {
 		int argc;
 		char **argv;
 		const char *exe;
 
-		exec = lookup (item, MATE_DESKTOP_ITEM_EXEC);
+		exec = lookup (item, CAFE_DESKTOP_ITEM_EXEC);
 		if (exec == NULL)
 			return FALSE;
 
@@ -2415,29 +2415,29 @@ mate_desktop_item_set_entry_type (MateDesktopItem *item,
 	item->type = type;
 
 	switch (type) {
-	case MATE_DESKTOP_ITEM_TYPE_NULL:
-		set (item, MATE_DESKTOP_ITEM_TYPE, NULL);
+	case CAFE_DESKTOP_ITEM_TYPE_NULL:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, NULL);
 		break;
-	case MATE_DESKTOP_ITEM_TYPE_APPLICATION:
-		set (item, MATE_DESKTOP_ITEM_TYPE, "Application");
+	case CAFE_DESKTOP_ITEM_TYPE_APPLICATION:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "Application");
 		break;
-	case MATE_DESKTOP_ITEM_TYPE_LINK:
-		set (item, MATE_DESKTOP_ITEM_TYPE, "Link");
+	case CAFE_DESKTOP_ITEM_TYPE_LINK:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "Link");
 		break;
-	case MATE_DESKTOP_ITEM_TYPE_FSDEVICE:
-		set (item, MATE_DESKTOP_ITEM_TYPE, "FSDevice");
+	case CAFE_DESKTOP_ITEM_TYPE_FSDEVICE:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "FSDevice");
 		break;
-	case MATE_DESKTOP_ITEM_TYPE_MIME_TYPE:
-		set (item, MATE_DESKTOP_ITEM_TYPE, "MimeType");
+	case CAFE_DESKTOP_ITEM_TYPE_MIME_TYPE:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "MimeType");
 		break;
-	case MATE_DESKTOP_ITEM_TYPE_DIRECTORY:
-		set (item, MATE_DESKTOP_ITEM_TYPE, "Directory");
+	case CAFE_DESKTOP_ITEM_TYPE_DIRECTORY:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "Directory");
 		break;
-	case MATE_DESKTOP_ITEM_TYPE_SERVICE:
-		set (item, MATE_DESKTOP_ITEM_TYPE, "Service");
+	case CAFE_DESKTOP_ITEM_TYPE_SERVICE:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "Service");
 		break;
-	case MATE_DESKTOP_ITEM_TYPE_SERVICE_TYPE:
-		set (item, MATE_DESKTOP_ITEM_TYPE, "ServiceType");
+	case CAFE_DESKTOP_ITEM_TYPE_SERVICE_TYPE:
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "ServiceType");
 		break;
 	default:
 		break;
@@ -2462,22 +2462,22 @@ mate_desktop_item_get_file_status (const MateDesktopItem *item)
 	GFile *file;
 	GFileInfo *info;
 
-	g_return_val_if_fail (item != NULL, MATE_DESKTOP_ITEM_DISAPPEARED);
-	g_return_val_if_fail (item->refcount > 0, MATE_DESKTOP_ITEM_DISAPPEARED);
+	g_return_val_if_fail (item != NULL, CAFE_DESKTOP_ITEM_DISAPPEARED);
+	g_return_val_if_fail (item->refcount > 0, CAFE_DESKTOP_ITEM_DISAPPEARED);
 
 	if (item->location == NULL)
-		return MATE_DESKTOP_ITEM_DISAPPEARED;
+		return CAFE_DESKTOP_ITEM_DISAPPEARED;
 
 	file = g_file_new_for_uri (item->location);
 	info = g_file_query_info (file, G_FILE_ATTRIBUTE_TIME_MODIFIED,
 				  G_FILE_QUERY_INFO_NONE, NULL, NULL);
 
-	retval = MATE_DESKTOP_ITEM_UNCHANGED;
+	retval = CAFE_DESKTOP_ITEM_UNCHANGED;
 
 	if (!g_file_info_has_attribute (info, G_FILE_ATTRIBUTE_TIME_MODIFIED))
-		retval = MATE_DESKTOP_ITEM_DISAPPEARED;
+		retval = CAFE_DESKTOP_ITEM_DISAPPEARED;
 	else if (item->mtime < g_file_info_get_attribute_uint64 (info, G_FILE_ATTRIBUTE_TIME_MODIFIED))
-		retval = MATE_DESKTOP_ITEM_CHANGED;
+		retval = CAFE_DESKTOP_ITEM_CHANGED;
 
 	g_object_unref (info);
 	g_object_unref (file);
@@ -2574,7 +2574,7 @@ mate_desktop_item_get_icon (const MateDesktopItem *item,
 	g_return_val_if_fail (item != NULL, NULL);
 	g_return_val_if_fail (item->refcount > 0, NULL);
 
-	icon = mate_desktop_item_get_string (item, MATE_DESKTOP_ITEM_ICON);
+	icon = mate_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_ICON);
 
 	return mate_desktop_item_find_icon (icon_theme, icon,
 					     48 /* desired_size */,
@@ -2728,7 +2728,7 @@ mate_desktop_item_set_string (MateDesktopItem *item,
 
 	set (item, attr, value);
 
-	if (strcmp (attr, MATE_DESKTOP_ITEM_TYPE) == 0)
+	if (strcmp (attr, CAFE_DESKTOP_ITEM_TYPE) == 0)
 		item->type = type_from_string (value);
 }
 
@@ -3001,17 +3001,17 @@ standard_is_boolean (const char * key)
 	if (bools == NULL) {
 		bools = g_hash_table_new (g_str_hash, g_str_equal);
 		g_hash_table_insert (bools,
-				     MATE_DESKTOP_ITEM_NO_DISPLAY,
-				     MATE_DESKTOP_ITEM_NO_DISPLAY);
+				     CAFE_DESKTOP_ITEM_NO_DISPLAY,
+				     CAFE_DESKTOP_ITEM_NO_DISPLAY);
 		g_hash_table_insert (bools,
-				     MATE_DESKTOP_ITEM_HIDDEN,
-				     MATE_DESKTOP_ITEM_HIDDEN);
+				     CAFE_DESKTOP_ITEM_HIDDEN,
+				     CAFE_DESKTOP_ITEM_HIDDEN);
 		g_hash_table_insert (bools,
-				     MATE_DESKTOP_ITEM_TERMINAL,
-				     MATE_DESKTOP_ITEM_TERMINAL);
+				     CAFE_DESKTOP_ITEM_TERMINAL,
+				     CAFE_DESKTOP_ITEM_TERMINAL);
 		g_hash_table_insert (bools,
-				     MATE_DESKTOP_ITEM_READ_ONLY,
-				     MATE_DESKTOP_ITEM_READ_ONLY);
+				     CAFE_DESKTOP_ITEM_READ_ONLY,
+				     CAFE_DESKTOP_ITEM_READ_ONLY);
 	}
 
 	return g_hash_table_lookup (bools, key) != NULL;
@@ -3025,20 +3025,20 @@ standard_is_strings (const char *key)
 	if (strings == NULL) {
 		strings = g_hash_table_new (g_str_hash, g_str_equal);
 		g_hash_table_insert (strings,
-				     MATE_DESKTOP_ITEM_FILE_PATTERN,
-				     MATE_DESKTOP_ITEM_FILE_PATTERN);
+				     CAFE_DESKTOP_ITEM_FILE_PATTERN,
+				     CAFE_DESKTOP_ITEM_FILE_PATTERN);
 		g_hash_table_insert (strings,
-				     MATE_DESKTOP_ITEM_ACTIONS,
-				     MATE_DESKTOP_ITEM_ACTIONS);
+				     CAFE_DESKTOP_ITEM_ACTIONS,
+				     CAFE_DESKTOP_ITEM_ACTIONS);
 		g_hash_table_insert (strings,
-				     MATE_DESKTOP_ITEM_MIME_TYPE,
-				     MATE_DESKTOP_ITEM_MIME_TYPE);
+				     CAFE_DESKTOP_ITEM_MIME_TYPE,
+				     CAFE_DESKTOP_ITEM_MIME_TYPE);
 		g_hash_table_insert (strings,
-				     MATE_DESKTOP_ITEM_PATTERNS,
-				     MATE_DESKTOP_ITEM_PATTERNS);
+				     CAFE_DESKTOP_ITEM_PATTERNS,
+				     CAFE_DESKTOP_ITEM_PATTERNS);
 		g_hash_table_insert (strings,
-				     MATE_DESKTOP_ITEM_SORT_ORDER,
-				     MATE_DESKTOP_ITEM_SORT_ORDER);
+				     CAFE_DESKTOP_ITEM_SORT_ORDER,
+				     CAFE_DESKTOP_ITEM_SORT_ORDER);
 	}
 
 	return g_hash_table_lookup (strings, key) != NULL;
@@ -3258,10 +3258,10 @@ get_encoding (ReadBuf *rb)
 	gboolean all_valid_utf8 = TRUE;
 
 	while (readbuf_gets (buf, sizeof (buf), rb) != NULL) {
-		if (strncmp (MATE_DESKTOP_ITEM_ENCODING,
+		if (strncmp (CAFE_DESKTOP_ITEM_ENCODING,
 			     buf,
-			     strlen (MATE_DESKTOP_ITEM_ENCODING)) == 0) {
-			char *p = &buf[strlen (MATE_DESKTOP_ITEM_ENCODING)];
+			     strlen (CAFE_DESKTOP_ITEM_ENCODING)) == 0) {
+			char *p = &buf[strlen (CAFE_DESKTOP_ITEM_ENCODING)];
 			if (*p == ' ')
 				p++;
 			if (*p != '=')
@@ -3377,7 +3377,7 @@ insert_key (MateDesktopItem *item,
 	char *val;
 	/* we always store everything in UTF-8 */
 	if (cur_section == NULL &&
-	    strcmp (key, MATE_DESKTOP_ITEM_ENCODING) == 0) {
+	    strcmp (key, CAFE_DESKTOP_ITEM_ENCODING) == 0) {
 		k = g_strdup (key);
 		val = g_strdup ("UTF-8");
 	} else {
@@ -3401,7 +3401,7 @@ insert_key (MateDesktopItem *item,
 		 * on sort order, so convert to semicolons */
 		if (old_kde &&
 		    cur_section == NULL &&
-		    strcmp (key, MATE_DESKTOP_ITEM_SORT_ORDER) == 0 &&
+		    strcmp (key, CAFE_DESKTOP_ITEM_SORT_ORDER) == 0 &&
 		    strchr (val, ';') == NULL) {
 			int i;
 			for (i = 0; val[i] != '\0'; i++) {
@@ -3484,20 +3484,20 @@ static void
 setup_type (MateDesktopItem *item, const char *uri)
 {
 	const char *type = g_hash_table_lookup (item->main_hash,
-						MATE_DESKTOP_ITEM_TYPE);
+						CAFE_DESKTOP_ITEM_TYPE);
 	if (type == NULL && uri != NULL) {
 		char *base = g_path_get_basename (uri);
 		if (base != NULL &&
 		    strcmp (base, ".directory") == 0) {
 			/* This gotta be a directory */
 			g_hash_table_replace (item->main_hash,
-					      g_strdup (MATE_DESKTOP_ITEM_TYPE),
+					      g_strdup (CAFE_DESKTOP_ITEM_TYPE),
 					      g_strdup ("Directory"));
 			item->keys = g_list_prepend
-				(item->keys, g_strdup (MATE_DESKTOP_ITEM_TYPE));
-			item->type = MATE_DESKTOP_ITEM_TYPE_DIRECTORY;
+				(item->keys, g_strdup (CAFE_DESKTOP_ITEM_TYPE));
+			item->type = CAFE_DESKTOP_ITEM_TYPE_DIRECTORY;
 		} else {
-			item->type = MATE_DESKTOP_ITEM_TYPE_NULL;
+			item->type = CAFE_DESKTOP_ITEM_TYPE_NULL;
 		}
 		g_free (base);
 	} else {
@@ -3535,22 +3535,22 @@ sanitize (MateDesktopItem *item, const char *uri)
 {
 	const char *type;
 
-	type = lookup (item, MATE_DESKTOP_ITEM_TYPE);
+	type = lookup (item, CAFE_DESKTOP_ITEM_TYPE);
 
 	/* understand old mate style url exec thingies */
 	if (type != NULL && strcmp (type, "URL") == 0) {
-		const char *exec = lookup (item, MATE_DESKTOP_ITEM_EXEC);
-		set (item, MATE_DESKTOP_ITEM_TYPE, "Link");
+		const char *exec = lookup (item, CAFE_DESKTOP_ITEM_EXEC);
+		set (item, CAFE_DESKTOP_ITEM_TYPE, "Link");
 		if (exec != NULL) {
 			/* Note, this must be in this order */
-			set (item, MATE_DESKTOP_ITEM_URL, exec);
-			set (item, MATE_DESKTOP_ITEM_EXEC, NULL);
+			set (item, CAFE_DESKTOP_ITEM_URL, exec);
+			set (item, CAFE_DESKTOP_ITEM_EXEC, NULL);
 		}
 	}
 
 	/* we make sure we have Name, Encoding and Version */
-	if (lookup (item, MATE_DESKTOP_ITEM_NAME) == NULL) {
-		char *name = try_english_key (item, MATE_DESKTOP_ITEM_NAME);
+	if (lookup (item, CAFE_DESKTOP_ITEM_NAME) == NULL) {
+		char *name = try_english_key (item, CAFE_DESKTOP_ITEM_NAME);
 		/* If no name, use the basename */
 		if (name == NULL && uri != NULL)
 			name = g_path_get_basename (uri);
@@ -3561,26 +3561,26 @@ sanitize (MateDesktopItem *item, const char *uri)
 			name = g_strdup (_("No name"));
 		}
 		g_hash_table_replace (item->main_hash,
-				      g_strdup (MATE_DESKTOP_ITEM_NAME),
+				      g_strdup (CAFE_DESKTOP_ITEM_NAME),
 				      name);
 		item->keys = g_list_prepend
-			(item->keys, g_strdup (MATE_DESKTOP_ITEM_NAME));
+			(item->keys, g_strdup (CAFE_DESKTOP_ITEM_NAME));
 	}
-	if (lookup (item, MATE_DESKTOP_ITEM_ENCODING) == NULL) {
+	if (lookup (item, CAFE_DESKTOP_ITEM_ENCODING) == NULL) {
 		/* We store everything in UTF-8 so write that down */
 		g_hash_table_replace (item->main_hash,
-				      g_strdup (MATE_DESKTOP_ITEM_ENCODING),
+				      g_strdup (CAFE_DESKTOP_ITEM_ENCODING),
 				      g_strdup ("UTF-8"));
 		item->keys = g_list_prepend
-			(item->keys, g_strdup (MATE_DESKTOP_ITEM_ENCODING));
+			(item->keys, g_strdup (CAFE_DESKTOP_ITEM_ENCODING));
 	}
-	if (lookup (item, MATE_DESKTOP_ITEM_VERSION) == NULL) {
+	if (lookup (item, CAFE_DESKTOP_ITEM_VERSION) == NULL) {
 		/* this is the version that we follow, so write it down */
 		g_hash_table_replace (item->main_hash,
-				      g_strdup (MATE_DESKTOP_ITEM_VERSION),
+				      g_strdup (CAFE_DESKTOP_ITEM_VERSION),
 				      g_strdup ("1.0"));
 		item->keys = g_list_prepend
-			(item->keys, g_strdup (MATE_DESKTOP_ITEM_VERSION));
+			(item->keys, g_strdup (CAFE_DESKTOP_ITEM_VERSION));
 	}
 }
 
@@ -3613,8 +3613,8 @@ ditem_load (ReadBuf *rb,
 	if (encoding == ENCODING_UNKNOWN) {
 		/* spec says, don't read this file */
 		g_set_error (error,
-			     MATE_DESKTOP_ITEM_ERROR,
-			     MATE_DESKTOP_ITEM_ERROR_UNKNOWN_ENCODING,
+			     CAFE_DESKTOP_ITEM_ERROR,
+			     CAFE_DESKTOP_ITEM_ERROR_UNKNOWN_ENCODING,
 			     _("Unknown encoding of: %s"),
 			     rb->uri);
 		readbuf_close (rb);

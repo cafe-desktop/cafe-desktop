@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -41,11 +41,11 @@ msgstr ""
 "لينيكس العرب linuxarabia.co"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
+msgid "About CAFE"
 msgstr "عنْ متّة"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
+msgid "Learn more about CAFE"
 msgstr "اعلم المزيد عن متّة"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
@@ -55,26 +55,26 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
+msgid "CAFE Desktop Environment"
 msgstr ""
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
 "يقدّم متّة سطح مكتبٍ بديهي و جذاب لمستخدمي لينكس ذوو المشاعر التقليدية."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 "متّة تحتوي على أغلب ما تريد أن تراه على حاسوبك ، تشمل مدير الملفات ، عارض "
@@ -82,7 +82,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
 "متّة بيئة سطح مكتب حرة ، مجانية ، سهلة و مستقرة لعائلة أنظمة التشغيل الشبيهة"
@@ -90,7 +90,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
@@ -102,14 +102,14 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "سطح مكتب غنوم 2 كان سطح المكتب الأكثر شعبية في لينكس لكنه لم يعد "
 "متوفرا...متّة هنا لتوفّر لكم سطح المكتب نفسه!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
@@ -634,8 +634,8 @@ msgstr "تطبيقات التقانة المعينة عند بدء التشغي�
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
-msgstr "قائمة بتطبيقات تقنية تساعدك لتبدأ عند الولوج إلى سطح مكتب MATE"
+"CAFE desktop."
+msgstr "قائمة بتطبيقات تقنية تساعدك لتبدأ عند الولوج إلى سطح مكتب CAFE"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -655,9 +655,9 @@ msgstr "ابدأ تطبيق تقانة إعانة التنقل المفضل"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "MATE لتبدأ تطبيق تقانة إعانة الحركة المفضل أثناء تسجيل الدخول"
+msgstr "CAFE لتبدأ تطبيق تقانة إعانة الحركة المفضل أثناء تسجيل الدخول"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -677,7 +677,7 @@ msgstr "ابدأ تطبيق تقانة إعانة الرؤية المفضّل"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr "ستبدأ متّة تطبيق تقانة إعانة الرؤية المفضّل أثناء الولوج."
 
@@ -777,7 +777,7 @@ msgid "Draw Desktop Background"
 msgstr "ارسم خلفية سطح المكتب"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
+msgid "Have CAFE draw the desktop background."
 msgstr "اترك متّة يرسم خلفية سطح المكتب."
 
 #: schemas/org.mate.background.gschema.xml.in:23
@@ -785,7 +785,7 @@ msgid "Show Desktop Icons"
 msgstr "إظهار أيقونات سطح المكتب"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr "اترك كاجا ليرسم رموز سطح المكتب."
 
 #: schemas/org.mate.background.gschema.xml.in:28
@@ -794,10 +794,10 @@ msgstr "تتضاءل الخلفية لما نغير"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"إذا جعلنا ص،  بعدها MATE سيغير خلفية سطح المكتب مع وجود تأثير التلاشي."
+"إذا جعلنا ص،  بعدها CAFE سيغير خلفية سطح المكتب مع وجود تأثير التلاشي."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -1196,7 +1196,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1426,7 +1426,7 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "فيما إذا كان قفل لوحة المفاتيح مفعّلا أم لا."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
+msgid "CAFE Color Selection"
 msgstr "تحديد لون متّة"
 
 #: tools/mate-color-select.desktop.in:4
@@ -1446,5 +1446,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

@@ -258,7 +258,7 @@ draw (GtkWidget      *widget,
       cairo_t        *cr,
       gpointer        data)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (data);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (data);
   cairo_pattern_t *checkered;
 
   if (mate_color_button_has_alpha (color_button))
@@ -465,7 +465,7 @@ mate_color_button_init (MateColorButton *color_button)
 static void
 mate_color_button_finalize (GObject *object)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (object);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (object);
 
   if (color_button->priv->cs_dialog != NULL)
     gtk_widget_destroy (color_button->priv->cs_dialog);
@@ -494,7 +494,7 @@ mate_color_button_finalize (GObject *object)
 GtkWidget *
 mate_color_button_new (void)
 {
-  return g_object_new (MATE_TYPE_COLOR_BUTTON, NULL);
+  return g_object_new (CAFE_TYPE_COLOR_BUTTON, NULL);
 }
 
 /**
@@ -510,17 +510,17 @@ mate_color_button_new (void)
 GtkWidget *
 mate_color_button_new_with_color (const GdkColor *color)
 {
-  return g_object_new (MATE_TYPE_COLOR_BUTTON, "color", color, NULL);
+  return g_object_new (CAFE_TYPE_COLOR_BUTTON, "color", color, NULL);
 }
 
 static void
 dialog_ok_clicked (GtkWidget *widget,
 		   gpointer   data)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (data);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (data);
   MateColorSelection *color_selection;
 
-  color_selection = MATE_COLOR_SELECTION (MATE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog)->colorsel);
+  color_selection = CAFE_COLOR_SELECTION (CAFE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog)->colorsel);
 
   mate_color_selection_get_current_color (color_selection, &color_button->priv->color);
   color_button->priv->alpha = mate_color_selection_get_current_alpha (color_selection);
@@ -541,7 +541,7 @@ static gboolean
 dialog_destroy (GtkWidget *widget,
 		gpointer   data)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (data);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (data);
 
   color_button->priv->cs_dialog = NULL;
 
@@ -552,7 +552,7 @@ static void
 dialog_cancel_clicked (GtkWidget *widget,
 		       gpointer   data)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (data);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (data);
 
   gtk_widget_hide (color_button->priv->cs_dialog);
 }
@@ -560,7 +560,7 @@ dialog_cancel_clicked (GtkWidget *widget,
 static void
 mate_color_button_clicked (GtkButton *button)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (button);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (button);
   MateColorSelectionDialog *color_dialog;
 
   /* if dialog already exists, make sure it's shown and raised */
@@ -573,7 +573,7 @@ mate_color_button_clicked (GtkButton *button)
 
       color_button->priv->cs_dialog = mate_color_selection_dialog_new (color_button->priv->title);
 
-      color_dialog = MATE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog);
+      color_dialog = CAFE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog);
 
       if (gtk_widget_is_toplevel (parent) && GTK_IS_WINDOW (parent))
         {
@@ -592,21 +592,21 @@ mate_color_button_clicked (GtkButton *button)
                         G_CALLBACK (dialog_destroy), color_button);
     }
 
-  color_dialog = MATE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog);
+  color_dialog = CAFE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog);
 
-  mate_color_selection_set_has_opacity_control (MATE_COLOR_SELECTION (color_dialog->colorsel),
+  mate_color_selection_set_has_opacity_control (CAFE_COLOR_SELECTION (color_dialog->colorsel),
                                                color_button->priv->use_alpha);
 
-  mate_color_selection_set_has_palette (MATE_COLOR_SELECTION (color_dialog->colorsel), TRUE);
+  mate_color_selection_set_has_palette (CAFE_COLOR_SELECTION (color_dialog->colorsel), TRUE);
 
-  mate_color_selection_set_previous_color (MATE_COLOR_SELECTION (color_dialog->colorsel),
+  mate_color_selection_set_previous_color (CAFE_COLOR_SELECTION (color_dialog->colorsel),
 					  &color_button->priv->color);
-  mate_color_selection_set_previous_alpha (MATE_COLOR_SELECTION (color_dialog->colorsel),
+  mate_color_selection_set_previous_alpha (CAFE_COLOR_SELECTION (color_dialog->colorsel),
 					  color_button->priv->alpha);
 
-  mate_color_selection_set_current_color (MATE_COLOR_SELECTION (color_dialog->colorsel),
+  mate_color_selection_set_current_color (CAFE_COLOR_SELECTION (color_dialog->colorsel),
 					 &color_button->priv->color);
-  mate_color_selection_set_current_alpha (MATE_COLOR_SELECTION (color_dialog->colorsel),
+  mate_color_selection_set_current_alpha (CAFE_COLOR_SELECTION (color_dialog->colorsel),
 					 color_button->priv->alpha);
 
   gtk_window_present (GTK_WINDOW (color_button->priv->cs_dialog));
@@ -625,7 +625,7 @@ void
 mate_color_button_set_color (MateColorButton *color_button,
 			    const GdkColor *color)
 {
-  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
   g_return_if_fail (color != NULL);
 
   color_button->priv->color.red = color->red;
@@ -650,7 +650,7 @@ void
 mate_color_button_set_rgba (MateColorButton *color_button,
 			    const GdkRGBA *color)
 {
-  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
   g_return_if_fail (color != NULL);
 
   color_button->priv->color.red = color->red * 65535;
@@ -676,7 +676,7 @@ void
 mate_color_button_set_alpha (MateColorButton *color_button,
 			    guint16         alpha)
 {
-  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
 
   color_button->priv->alpha = alpha;
 
@@ -698,7 +698,7 @@ void
 mate_color_button_get_color (MateColorButton *color_button,
 			    GdkColor       *color)
 {
-  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
 
   color->red = color_button->priv->color.red;
   color->green = color_button->priv->color.green;
@@ -718,7 +718,7 @@ void
 mate_color_button_get_rgba (MateColorButton *color_button,
 			                      GdkRGBA         *color)
 {
-  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
 
   color->red = color_button->priv->color.red / 65535.;
   color->green = color_button->priv->color.green / 65535.;
@@ -739,7 +739,7 @@ mate_color_button_get_rgba (MateColorButton *color_button,
 guint16
 mate_color_button_get_alpha (MateColorButton *color_button)
 {
-  g_return_val_if_fail (MATE_IS_COLOR_BUTTON (color_button), 0);
+  g_return_val_if_fail (CAFE_IS_COLOR_BUTTON (color_button), 0);
 
   return color_button->priv->alpha;
 }
@@ -757,7 +757,7 @@ void
 mate_color_button_set_use_alpha (MateColorButton *color_button,
 				gboolean        use_alpha)
 {
-  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
 
   use_alpha = (use_alpha != FALSE);
 
@@ -784,7 +784,7 @@ mate_color_button_set_use_alpha (MateColorButton *color_button,
 gboolean
 mate_color_button_get_use_alpha (MateColorButton *color_button)
 {
-  g_return_val_if_fail (MATE_IS_COLOR_BUTTON (color_button), FALSE);
+  g_return_val_if_fail (CAFE_IS_COLOR_BUTTON (color_button), FALSE);
 
   return color_button->priv->use_alpha;
 }
@@ -805,7 +805,7 @@ mate_color_button_set_title (MateColorButton *color_button,
 {
   gchar *old_title;
 
-  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
 
   old_title = color_button->priv->title;
   color_button->priv->title = g_strdup (title);
@@ -831,7 +831,7 @@ mate_color_button_set_title (MateColorButton *color_button,
 const gchar *
 mate_color_button_get_title (MateColorButton *color_button)
 {
-  g_return_val_if_fail (MATE_IS_COLOR_BUTTON (color_button), NULL);
+  g_return_val_if_fail (CAFE_IS_COLOR_BUTTON (color_button), NULL);
 
   return color_button->priv->title;
 }
@@ -842,7 +842,7 @@ mate_color_button_set_property (GObject      *object,
 			       const GValue *value,
 			       GParamSpec   *pspec)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (object);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (object);
 
   switch (param_id)
     {
@@ -870,7 +870,7 @@ mate_color_button_get_property (GObject    *object,
 			       GValue     *value,
 			       GParamSpec *pspec)
 {
-  MateColorButton *color_button = MATE_COLOR_BUTTON (object);
+  MateColorButton *color_button = CAFE_COLOR_BUTTON (object);
   GdkColor color;
 
   switch (param_id)

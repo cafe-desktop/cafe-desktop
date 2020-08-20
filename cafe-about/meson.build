@@ -9,12 +9,12 @@ mate_year = run_command(date_exe, '-u', '-d', '@' + source_date_epoch, '+%Y').st
 
 mate_data = configuration_data()
 
-mate_data.set('MATE_DATE', mate_date)
-mate_data.set('MATE_DATE_COMMENT_START', '<!--')
-mate_data.set('MATE_DATE_COMMENT_END', '-->')
-mate_data.set('MATE_PLATFORM', mate_platform)
-mate_data.set('MATE_MINOR', mate_minor)
-mate_data.set('MATE_MICRO', mate_micro)
+mate_data.set('CAFE_DATE', mate_date)
+mate_data.set('CAFE_DATE_COMMENT_START', '<!--')
+mate_data.set('CAFE_DATE_COMMENT_END', '-->')
+mate_data.set('CAFE_PLATFORM', mate_platform)
+mate_data.set('CAFE_MINOR', mate_minor)
+mate_data.set('CAFE_MICRO', mate_micro)
 
 mate_about_data = configuration_data()
 mate_about_data.set('RELEASE_YEAR', mate_year)

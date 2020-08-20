@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -28,11 +28,11 @@ msgid "translator-credits"
 msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
+msgid "About CAFE"
 msgstr "О Мејту"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
+msgid "Learn more about CAFE"
 msgstr "Сазнајте више о Мејту"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
@@ -42,14 +42,14 @@ msgid "mate-desktop"
 msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
+msgid "CAFE Desktop Environment"
 msgstr "Мејт окружење радне површи"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 "Ауторска права © 1997-2011 Програмери Гнома\n"
 "Ауторска права © 2011 Перберос\n"
@@ -57,7 +57,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
 "Мејт обезбеђује докучиву и привлачну радну површ за кориснике Линукса "
@@ -65,7 +65,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 "Мејт садржи много тога што видите на вашем рачунару, укључујући управника "
@@ -74,7 +74,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
 "Мејт је слободно, употребљиво, стабилно окружење радне површи за Уникслолику"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
@@ -94,18 +94,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "Гном 2 је била најпопуларнија радна површ Линукса али сада више није "
 "доступна... Мејт је ту да вам обезбеди ту исту радну површ!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"Назив „MATE“ (Мејт) долази од „yerba maté“, врсте зеленике пореклом из "
+"Назив „CAFE“ (Мејт) долази од „yerba maté“, врсте зеленике пореклом из "
 "суптропске Јужне Америке. Њено лишће садржи кафеин и користи се за справљање"
 " инфузија и напитка званог мејт."
 
@@ -641,7 +641,7 @@ msgstr "Подршка технологијама за испомоћ"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 "Списак програма технологија испомоћи за покретање приликом пријављивања на "
 "Мејтову радну површ."
@@ -664,7 +664,7 @@ msgstr "Покреће омиљени програм покретљивости 
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
 "Мејта да покрене омиљени програм покретљивости технологија испомоћи за време"
@@ -688,7 +688,7 @@ msgstr "Покреће жељени програм визуелне технол
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
 "Мејт да покрене жељени програм визуелне технологије испомоћи за време "
@@ -798,7 +798,7 @@ msgid "Draw Desktop Background"
 msgstr "Исцртава позадину радне површи"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
+msgid "Have CAFE draw the desktop background."
 msgstr "Да ли Мејт исцртава позадину радне површи."
 
 #: schemas/org.mate.background.gschema.xml.in:23
@@ -806,7 +806,7 @@ msgid "Show Desktop Icons"
 msgstr "Прикажи иконице радне површи"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr "Да ли Мејтов управник датотека (Цаја) исцртава иконице радне површи."
 
 #: schemas/org.mate.background.gschema.xml.in:28
@@ -815,7 +815,7 @@ msgstr "Ишчезава позадину приликом измене"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
 "Уколико је изабрано, Мејт ће изменити позадину радне површи уз дејство "
@@ -1252,7 +1252,7 @@ msgstr "Чинилац размере за КуТ програме"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1490,7 +1490,7 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Да ли је укључено закључавање тастатуре."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
+msgid "CAFE Color Selection"
 msgstr "Мејтов избор боје"
 
 #: tools/mate-color-select.desktop.in:4
@@ -1510,5 +1510,5 @@ msgstr "gtk-select-color"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr "Мејт;боја;избирач;изабери;палета;екран;избор;"

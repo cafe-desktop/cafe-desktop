@@ -1,6 +1,6 @@
 SUBDIRS = libmate-desktop man docs schemas tools icons po
 
-if MATE_ABOUT_ENABLED
+if CAFE_ABOUT_ENABLED
 SUBDIRS += mate-about
 endif
 

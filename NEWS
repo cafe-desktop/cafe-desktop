@@ -2,7 +2,7 @@
 
   * Translations update
   * build: silent build warnings for distcheck
-  * build: use MATE_COMPILE_WARNINGS = yes as default
+  * build: use CAFE_COMPILE_WARNINGS = yes as default
   * mate-about.desktop: Do not collect the translation for Icon
   * mate-about: remove unused variable ‘window’
   * Remove GTimeVal deprecation warning for GLib 2.61.2+
@@ -81,7 +81,7 @@
   * enable meson build on travis
   * Use mate-desktop icon instead of mate for mate-about
   * Simplify icons/Makefile.am
-  * Use radial gradient (Blur 13.9%, Opacity 73.4%) for MATE logo shadow
+  * Use radial gradient (Blur 13.9%, Opacity 73.4%) for CAFE logo shadow
   * i18n: port from intltool to gettext
   * mate-about: subdir mate-version.xml.in.in
   * configure.ac: subdir some of the build cruft
@@ -285,8 +285,8 @@
 
   * Added helpers for dconf and GSettings
   * Fix build with GTK3
-  * Added MATE user guide
-  * Added MATE_DESKTOP_CHECK_VERSION function
+  * Added CAFE user guide
+  * Added CAFE_DESKTOP_CHECK_VERSION function
   * Added mpaste tool
   * Added replacement for gdk_spawn_command_line_on_screen in GTK3
 

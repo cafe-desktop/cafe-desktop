@@ -22,8 +22,8 @@
    Author: Vincent Untz <vuntz@gnome.org>
 */
 
-#ifndef __MATE_DESKTOP_PRIVATE_H__
-#define __MATE_DESKTOP_PRIVATE_H__
+#ifndef __CAFE_DESKTOP_PRIVATE_H__
+#define __CAFE_DESKTOP_PRIVATE_H__
 
 #include <glib.h>
 

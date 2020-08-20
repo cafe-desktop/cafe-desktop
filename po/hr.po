@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -54,12 +54,12 @@ msgstr ""
 "  young https://launchpad.net/~davorin-sego"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "O MATE-u"
+msgid "About CAFE"
+msgstr "O CAFE-u"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Saznaj više o MATE-u"
+msgid "Learn more about CAFE"
+msgstr "Saznaj više o CAFE-u"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -68,49 +68,49 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
-msgstr "MATE radno okruženje"
+msgid "CAFE Desktop Environment"
+msgstr "CAFE radno okruženje"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE pruža korisnicima Linuxa shvatljivo i privlačno radno okruženje "
+"CAFE pruža korisnicima Linuxa shvatljivo i privlačno radno okruženje "
 "koristeći uobičajena značenja."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE uključuje većinu onoga što vidiš na vlastitom računalu, uključujući "
+"CAFE uključuje većinu onoga što vidiš na vlastitom računalu, uključujući "
 "datotečnog upravitelja, prikaznike zapisa i slika, izbornike i niz drugih "
 "aplikacija."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE je slobodno, uporabljivo, postojano i pristupačno radno okruženje za "
+"CAFE je slobodno, uporabljivo, postojano i pristupačno radno okruženje za "
 "obitelj operativnih sustava srodnih Unixu."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE je nastavak GNOME-a 2. Stotine ljudi su kodom pridonijeli radnom "
+"CAFE je nastavak GNOME-a 2. Stotine ljudi su kodom pridonijeli radnom "
 "okruženju GNOME otkad je ono započeto 1997. godine; mnogi drugi pridonijeli "
 "su na druge važne načine, uključujući prijevode, dokumentaciju i "
 "osiguravanje kakvoće."
@@ -118,18 +118,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 bilo je najpopularnije Linuxovo radno okruženje, ali više nije "
-"dostupno... MATE je tu da ti omogući isto takvo radno okruženje!"
+"dostupno... CAFE je tu da ti omogući isto takvo radno okruženje!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"Naziv “MATE” dolazi od yerba maté, vrste božikovine koja raste u suptropskoj"
+"Naziv “CAFE” dolazi od yerba maté, vrste božikovine koja raste u suptropskoj"
 " Južnoj Americi. Njeni listovi sadrže kofein te se koriste za proizvodnju "
 "primjesa i napitka zvanog 'mate'."
 
@@ -665,10 +665,10 @@ msgstr "Početne aplikacije pomoćnih tehnologija"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 "Popis aplikacija pomoćnih tehnologija za pokretanje pri prijavi u radno "
-"okruženje MATE."
+"okruženje CAFE."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -688,10 +688,10 @@ msgstr "Pokreni prvenstvenu aplikaciju pomoćne tehnologije pokretljivosti"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATE ima pokrenuti prvenstvenu aplikaciju pomoćne tehnologije pokretljivosti"
+"CAFE ima pokrenuti prvenstvenu aplikaciju pomoćne tehnologije pokretljivosti"
 " tijekom prijave."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
@@ -712,10 +712,10 @@ msgstr "Pokreni prvenstvenu aplikaciju pomoćne tehnologije čitljivosti"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"MATE ima pokrenuti prvenstvenu aplikaciju pomoćne tehnologije čitljivosti "
+"CAFE ima pokrenuti prvenstvenu aplikaciju pomoćne tehnologije čitljivosti "
 "tijekom prijave."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
@@ -820,17 +820,17 @@ msgid "Draw Desktop Background"
 msgstr "Iscrtaj pozadinu radne površine"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "Neka MATE iscrta pozadinu radne površine."
+msgid "Have CAFE draw the desktop background."
+msgstr "Neka CAFE iscrta pozadinu radne površine."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Prikaži sličice na radnoj površini"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
-"Neka datotečni upravitelj MATE-a (Caja) iscrta sličice radne površine."
+"Neka datotečni upravitelj CAFE-a (Caja) iscrta sličice radne površine."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -838,10 +838,10 @@ msgstr "Izblijedi pozadinu pri promjeni"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Ako je postavljeno na istinito, tada će MATE promijeniti pozadinu radne "
+"Ako je postavljeno na istinito, tada će CAFE promijeniti pozadinu radne "
 "površine uz dojam izbljeđivanja"
 
 #: schemas/org.mate.background.gschema.xml.in:33
@@ -1263,7 +1263,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1498,8 +1498,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Je li ili nije omogućeno zaključavanje tipkovnice."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "Odabir boje MATE-a"
+msgid "CAFE Color Selection"
+msgstr "Odabir boje CAFE-a"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1518,5 +1518,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

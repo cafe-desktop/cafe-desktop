@@ -29,8 +29,8 @@
  * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
  */
 
-#ifndef __MATE_COLOR_BUTTON_H__
-#define __MATE_COLOR_BUTTON_H__
+#ifndef __CAFE_COLOR_BUTTON_H__
+#define __CAFE_COLOR_BUTTON_H__
 
 #include <glib.h>
 #include <gtk/gtk.h>
@@ -44,12 +44,12 @@ G_BEGIN_DECLS
  * The color picker emits the "color_set" signal when the color is set.
  */
 
-#define MATE_TYPE_COLOR_BUTTON             (mate_color_button_get_type ())
-#define MATE_COLOR_BUTTON(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_COLOR_BUTTON, MateColorButton))
-#define MATE_COLOR_BUTTON_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_COLOR_BUTTON, MateColorButtonClass))
-#define MATE_IS_COLOR_BUTTON(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_COLOR_BUTTON))
-#define MATE_IS_COLOR_BUTTON_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_COLOR_BUTTON))
-#define MATE_COLOR_BUTTON_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_COLOR_BUTTON, MateColorButtonClass))
+#define CAFE_TYPE_COLOR_BUTTON             (mate_color_button_get_type ())
+#define CAFE_COLOR_BUTTON(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_BUTTON, MateColorButton))
+#define CAFE_COLOR_BUTTON_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_BUTTON, MateColorButtonClass))
+#define CAFE_IS_COLOR_BUTTON(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_BUTTON))
+#define CAFE_IS_COLOR_BUTTON_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_COLOR_BUTTON))
+#define CAFE_COLOR_BUTTON_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_COLOR_BUTTON, MateColorButtonClass))
 
 typedef struct _MateColorButton          MateColorButton;
 typedef struct _MateColorButtonClass     MateColorButtonClass;
@@ -100,4 +100,4 @@ const gchar *mate_color_button_get_title (MateColorButton *color_button);
 
 G_END_DECLS
 
-#endif  /* __MATE_COLOR_BUTTON_H__ */
+#endif  /* __CAFE_COLOR_BUTTON_H__ */

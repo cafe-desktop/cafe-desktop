@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -30,12 +30,12 @@ msgstr ""
 "趙惟倫 <bluebat@member.fsf.org>, 2013"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "關於 MATE"
+msgid "About CAFE"
+msgstr "關於 CAFE"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "獲取更多有關 MATE 的資訊"
+msgid "Learn more about CAFE"
+msgstr "獲取更多有關 CAFE 的資訊"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -44,37 +44,37 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
+msgid "CAFE Desktop Environment"
 msgstr ""
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
-msgstr "MATE 使用傳統形式提供 Linux 使用者直觀與吸引人的桌面。"
+msgstr "CAFE 使用傳統形式提供 Linux 使用者直觀與吸引人的桌面。"
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr "MATE 包含大部分您的電腦上會出現的東西，包含檔案管理員、文件檢視器、圖像檢視器、選單，以及許多應用程式。"
+msgstr "CAFE 包含大部分您的電腦上會出現的東西，包含檔案管理員、文件檢視器、圖像檢視器、選單，以及許多應用程式。"
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr "MATE 是自由、可用、穩定、用於 Unix 家族之類作業系統的可存取桌面環境。"
+msgstr "CAFE 是自由、可用、穩定、用於 Unix 家族之類作業系統的可存取桌面環境。"
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
@@ -83,16 +83,16 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
-msgstr "GNOME 2 是最常用的 Linux 桌面，但是它已不再被維護…。MATE 在此可以提供相同的桌面給您！"
+"CAFE is here to provide that same desktop to you!"
+msgstr "GNOME 2 是最常用的 Linux 桌面，但是它已不再被維護…。CAFE 在此可以提供相同的桌面給您！"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"名稱“MATE”來自 yerba maté，是一種原生於亞熱帶南美的冬青樹。它的樹葉包含咖啡因而被用來製作點滴和一種稱之為 mate 的飲料。"
+"名稱“CAFE”來自 yerba maté，是一種原生於亞熱帶南美的冬青樹。它的樹葉包含咖啡因而被用來製作點滴和一種稱之為 mate 的飲料。"
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -594,8 +594,8 @@ msgstr "啟動輔具應用程式"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
-msgstr "登入 MATE 桌面時啟動的輔具應用程式列表。"
+"CAFE desktop."
+msgstr "登入 CAFE 桌面時啟動的輔具應用程式列表。"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -613,9 +613,9 @@ msgstr "啟動首選的行動輔具應用程式"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "MATE 在登入期間啟動的首選行動輔具應用程式。"
+msgstr "CAFE 在登入期間啟動的首選行動輔具應用程式。"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -633,9 +633,9 @@ msgstr "啟動首選的視覺輔具應用程式"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
-msgstr "MATE 在登入期間啟動的首選視覺輔具應用程式。"
+msgstr "CAFE 在登入期間啟動的首選視覺輔具應用程式。"
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -733,15 +733,15 @@ msgid "Draw Desktop Background"
 msgstr "繪製桌面背景"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "讓 MATE 繪製桌面背景。"
+msgid "Have CAFE draw the desktop background."
+msgstr "讓 CAFE 繪製桌面背景。"
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:28
@@ -750,7 +750,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
 
@@ -1133,7 +1133,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1346,7 +1346,7 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "是否鍵盤鎖定已啟用。"
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
+msgid "CAFE Color Selection"
 msgstr ""
 
 #: tools/mate-color-select.desktop.in:4
@@ -1366,5 +1366,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

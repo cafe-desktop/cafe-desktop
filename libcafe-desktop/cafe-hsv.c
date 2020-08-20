@@ -139,7 +139,7 @@ mate_hsv_class_init (MateHSVClass *class)
 
   gobject_class = (GObjectClass *) class;
   widget_class = (GtkWidgetClass *) class;
-  hsv_class = MATE_HSV_CLASS (class);
+  hsv_class = CAFE_HSV_CLASS (class);
 
   widget_class->destroy = mate_hsv_destroy;
   widget_class->realize = mate_hsv_realize;
@@ -233,7 +233,7 @@ mate_hsv_destroy (GtkWidget *widget)
 static void
 mate_hsv_realize (GtkWidget *widget)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
   GtkAllocation allocation;
   GdkWindow *parent_window;
@@ -271,7 +271,7 @@ mate_hsv_realize (GtkWidget *widget)
 static void
 mate_hsv_unrealize (GtkWidget *widget)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
 
   gdk_window_set_user_data (priv->window, NULL);
@@ -286,7 +286,7 @@ mate_hsv_get_preferred_width (GtkWidget *widget,
                               gint      *minimum,
                               gint      *natural)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
   gint focus_width;
   gint focus_pad;
@@ -305,7 +305,7 @@ mate_hsv_get_preferred_height (GtkWidget *widget,
                                gint      *minimum,
                                gint      *natural)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
   gint focus_width;
   gint focus_pad;
@@ -323,7 +323,7 @@ static void
 mate_hsv_size_allocate (GtkWidget     *widget,
                         GtkAllocation *allocation)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
 
   gtk_widget_set_allocation (widget, allocation);
@@ -627,7 +627,7 @@ static gboolean
 mate_hsv_grab_broken (GtkWidget          *widget,
                       GdkEventGrabBroken *event)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
 
   priv->mode = DRAG_NONE;
@@ -639,7 +639,7 @@ static gint
 mate_hsv_button_press (GtkWidget      *widget,
                        GdkEventButton *event)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
   double x, y;
 
@@ -688,7 +688,7 @@ static gint
 mate_hsv_button_release (GtkWidget      *widget,
                          GdkEventButton *event)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
   DragMode mode;
   gdouble x, y;
@@ -730,7 +730,7 @@ static gint
 mate_hsv_motion (GtkWidget      *widget,
                  GdkEventMotion *event)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
   gdouble x, y;
 
@@ -1117,7 +1117,7 @@ static gboolean
 mate_hsv_draw (GtkWidget *widget,
                cairo_t   *cr)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
   gboolean draw_focus;
 
@@ -1145,7 +1145,7 @@ static gboolean
 mate_hsv_focus (GtkWidget       *widget,
                 GtkDirectionType dir)
 {
-  MateHSV *hsv = MATE_HSV (widget);
+  MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
 
   if (!gtk_widget_has_focus (widget))
@@ -1207,7 +1207,7 @@ mate_hsv_focus (GtkWidget       *widget,
 GtkWidget*
 mate_hsv_new (void)
 {
-  return g_object_new (MATE_TYPE_HSV, NULL);
+  return g_object_new (CAFE_TYPE_HSV, NULL);
 }
 
 /**
@@ -1228,7 +1228,7 @@ mate_hsv_set_color (MateHSV *hsv,
 {
   MateHSVPrivate *priv;
 
-  g_return_if_fail (MATE_IS_HSV (hsv));
+  g_return_if_fail (CAFE_IS_HSV (hsv));
   g_return_if_fail (h >= 0.0 && h <= 1.0);
   g_return_if_fail (s >= 0.0 && s <= 1.0);
   g_return_if_fail (v >= 0.0 && v <= 1.0);
@@ -1262,7 +1262,7 @@ mate_hsv_get_color (MateHSV *hsv,
 {
   MateHSVPrivate *priv;
 
-  g_return_if_fail (MATE_IS_HSV (hsv));
+  g_return_if_fail (CAFE_IS_HSV (hsv));
 
   priv = hsv->priv;
 
@@ -1292,7 +1292,7 @@ mate_hsv_set_metrics (MateHSV *hsv,
   MateHSVPrivate *priv;
   int same_size;
 
-  g_return_if_fail (MATE_IS_HSV (hsv));
+  g_return_if_fail (CAFE_IS_HSV (hsv));
   g_return_if_fail (size > 0);
   g_return_if_fail (ring_width > 0);
   g_return_if_fail (2 * ring_width + 1 <= size);
@@ -1325,7 +1325,7 @@ mate_hsv_get_metrics (MateHSV *hsv,
 {
   MateHSVPrivate *priv;
 
-  g_return_if_fail (MATE_IS_HSV (hsv));
+  g_return_if_fail (CAFE_IS_HSV (hsv));
 
   priv = hsv->priv;
 
@@ -1354,7 +1354,7 @@ mate_hsv_is_adjusting (MateHSV *hsv)
 {
   MateHSVPrivate *priv;
 
-  g_return_val_if_fail (MATE_IS_HSV (hsv), FALSE);
+  g_return_val_if_fail (CAFE_IS_HSV (hsv), FALSE);
 
   priv = hsv->priv;
 

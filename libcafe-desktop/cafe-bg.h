@@ -24,11 +24,11 @@
 	    Jasmine Hassan <jasmine.aura@gmail.com>
 */
 
-#ifndef __MATE_BG_H__
-#define __MATE_BG_H__
+#ifndef __CAFE_BG_H__
+#define __CAFE_BG_H__
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error    MateBG is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-bg.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error    MateBG is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-bg.h
 #endif
 
 #include <glib.h>
@@ -39,47 +39,47 @@
 
 G_BEGIN_DECLS
 
-#define MATE_TYPE_BG            (mate_bg_get_type ())
-#define MATE_BG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_BG, MateBG))
-#define MATE_BG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  MATE_TYPE_BG, MateBGClass))
-#define MATE_IS_BG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_BG))
-#define MATE_IS_BG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  MATE_TYPE_BG))
-#define MATE_BG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  MATE_TYPE_BG, MateBGClass))
+#define CAFE_TYPE_BG            (mate_bg_get_type ())
+#define CAFE_BG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_BG, MateBG))
+#define CAFE_BG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_BG, MateBGClass))
+#define CAFE_IS_BG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_BG))
+#define CAFE_IS_BG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  CAFE_TYPE_BG))
+#define CAFE_BG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  CAFE_TYPE_BG, MateBGClass))
 
-#define MATE_BG_SCHEMA "org.mate.background"
+#define CAFE_BG_SCHEMA "org.mate.background"
 
 /* whether to draw the desktop bg */
-#define MATE_BG_KEY_DRAW_BACKGROUND	"draw-background"
+#define CAFE_BG_KEY_DRAW_BACKGROUND	"draw-background"
 
 /* whether Caja or mate-settings-daemon draw the desktop */
-#define MATE_BG_KEY_SHOW_DESKTOP	"show-desktop-icons"
+#define CAFE_BG_KEY_SHOW_DESKTOP	"show-desktop-icons"
 
 /* whether to fade when changing background (By Caja/m-s-d) */
-#define MATE_BG_KEY_BACKGROUND_FADE	"background-fade"
+#define CAFE_BG_KEY_BACKGROUND_FADE	"background-fade"
 
-#define MATE_BG_KEY_PRIMARY_COLOR	"primary-color"
-#define MATE_BG_KEY_SECONDARY_COLOR	"secondary-color"
-#define MATE_BG_KEY_COLOR_TYPE		"color-shading-type"
-#define MATE_BG_KEY_PICTURE_PLACEMENT	"picture-options"
-#define MATE_BG_KEY_PICTURE_OPACITY	"picture-opacity"
-#define MATE_BG_KEY_PICTURE_FILENAME	"picture-filename"
+#define CAFE_BG_KEY_PRIMARY_COLOR	"primary-color"
+#define CAFE_BG_KEY_SECONDARY_COLOR	"secondary-color"
+#define CAFE_BG_KEY_COLOR_TYPE		"color-shading-type"
+#define CAFE_BG_KEY_PICTURE_PLACEMENT	"picture-options"
+#define CAFE_BG_KEY_PICTURE_OPACITY	"picture-opacity"
+#define CAFE_BG_KEY_PICTURE_FILENAME	"picture-filename"
 
 typedef struct _MateBG MateBG;
 typedef struct _MateBGClass MateBGClass;
 
 typedef enum {
-	MATE_BG_COLOR_SOLID,
-	MATE_BG_COLOR_H_GRADIENT,
-	MATE_BG_COLOR_V_GRADIENT
+	CAFE_BG_COLOR_SOLID,
+	CAFE_BG_COLOR_H_GRADIENT,
+	CAFE_BG_COLOR_V_GRADIENT
 } MateBGColorType;
 
 typedef enum {
-	MATE_BG_PLACEMENT_TILED,
-	MATE_BG_PLACEMENT_ZOOMED,
-	MATE_BG_PLACEMENT_CENTERED,
-	MATE_BG_PLACEMENT_SCALED,
-	MATE_BG_PLACEMENT_FILL_SCREEN,
-	MATE_BG_PLACEMENT_SPANNED
+	CAFE_BG_PLACEMENT_TILED,
+	CAFE_BG_PLACEMENT_ZOOMED,
+	CAFE_BG_PLACEMENT_CENTERED,
+	CAFE_BG_PLACEMENT_SCALED,
+	CAFE_BG_PLACEMENT_FILL_SCREEN,
+	CAFE_BG_PLACEMENT_SPANNED
 } MateBGPlacement;
 
 GType            mate_bg_get_type              (void);

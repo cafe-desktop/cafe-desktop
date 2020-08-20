@@ -35,7 +35,7 @@ test_ditem (const char *file)
 	char path[256];
 
 	ditem = mate_desktop_item_new_from_file (file,
-						  MATE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS,
+						  CAFE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS,
 						  NULL);
 	if (ditem == NULL) {
 		g_print ("File %s is not an existing ditem\n", file);
@@ -49,45 +49,45 @@ test_ditem (const char *file)
 	g_print ("TYPE: |%u|\n", type);
 
 	text = mate_desktop_item_get_string
-		(ditem, MATE_DESKTOP_ITEM_TYPE);
+		(ditem, CAFE_DESKTOP_ITEM_TYPE);
 	g_print ("TYPE(string): |%s|\n", text);
 
 	text = mate_desktop_item_get_string
-		(ditem, MATE_DESKTOP_ITEM_EXEC);
+		(ditem, CAFE_DESKTOP_ITEM_EXEC);
 	g_print ("EXEC: |%s|\n", text);
 
 	text = mate_desktop_item_get_string
-		(ditem, MATE_DESKTOP_ITEM_ICON);
+		(ditem, CAFE_DESKTOP_ITEM_ICON);
 	g_print ("ICON: |%s|\n", text);
 
 	text = mate_desktop_item_get_localestring
-		(ditem, MATE_DESKTOP_ITEM_NAME);
+		(ditem, CAFE_DESKTOP_ITEM_NAME);
 	g_print ("NAME: |%s|\n", text);
 
 	text = mate_desktop_item_get_localestring_lang
-		(ditem, MATE_DESKTOP_ITEM_NAME,
+		(ditem, CAFE_DESKTOP_ITEM_NAME,
 		 "cs_CZ");
 	g_print ("NAME(lang=cs_CZ): |%s|\n", text);
 
 	text = mate_desktop_item_get_localestring_lang
-		(ditem, MATE_DESKTOP_ITEM_NAME,
+		(ditem, CAFE_DESKTOP_ITEM_NAME,
 		 "de");
 	g_print ("NAME(lang=de): |%s|\n", text);
 
 
 	text = mate_desktop_item_get_localestring_lang
-		(ditem, MATE_DESKTOP_ITEM_NAME,
+		(ditem, CAFE_DESKTOP_ITEM_NAME,
 		 NULL);
 	g_print ("NAME(lang=null): |%s|\n", text);
 
 	text = mate_desktop_item_get_localestring
-		(ditem, MATE_DESKTOP_ITEM_COMMENT);
+		(ditem, CAFE_DESKTOP_ITEM_COMMENT);
 	g_print ("COMMENT: |%s|\n", text);
 
 	g_print ("Setting Name[de]=Neu gestzt! (I have no idea what that means)\n");
 	mate_desktop_item_set_localestring
 		(ditem,
-		 MATE_DESKTOP_ITEM_NAME,
+		 CAFE_DESKTOP_ITEM_NAME,
 		 "Neu gesetzt!");
 
 	getcwd (path, 255 - strlen ("/foo.desktop"));
@@ -108,7 +108,7 @@ launch_item (const char *file)
 	int ret;
 
 	ditem = mate_desktop_item_new_from_file (file,
-						  MATE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS,
+						  CAFE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS,
 						  NULL);
 	if (ditem == NULL) {
 		g_print ("File %s is not an existing ditem\n", file);

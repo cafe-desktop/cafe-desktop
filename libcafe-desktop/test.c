@@ -38,7 +38,7 @@ main (int argc, char **argv)
     /* create window */
     window = GTK_WINDOW (gtk_window_new (GTK_WINDOW_TOPLEVEL));
 
-    gtk_window_set_title (window, "MATE Desktop Test");
+    gtk_window_set_title (window, "CAFE Desktop Test");
 
     /* create a MateColorButton */
     widget = mate_color_button_new ();

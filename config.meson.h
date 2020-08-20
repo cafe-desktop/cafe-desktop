@@ -11,16 +11,16 @@
 #mesondefine HAVE_STARTUP_NOTIFICATION
 
 /* Enable additional debugging at the expense of performance and size */
-#mesondefine MATE_ENABLE_DEBUG
+#mesondefine CAFE_ENABLE_DEBUG
 
 /* Define to the major version */
-#mesondefine MATE_MAJOR
+#mesondefine CAFE_MAJOR
 
 /* Define to the minor version */
-#mesondefine MATE_MINOR
+#mesondefine CAFE_MINOR
 
 /* Define to the micro version */
-#mesondefine MATE_MICRO
+#mesondefine CAFE_MICRO
 
 /* Name of package */
 #mesondefine PACKAGE

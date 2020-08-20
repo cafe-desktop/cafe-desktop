@@ -1,5 +1,5 @@
 /* -*- Mode: C; c-set-style: linux indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
-/* mate-desktop-utils.c - Utilities for the MATE Desktop
+/* mate-desktop-utils.c - Utilities for the CAFE Desktop
 
    Copyright (C) 1998 Tom Tromey
    All rights reserved.
@@ -31,7 +31,7 @@
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include <mate-desktop-utils.h>
 
 #include "private.h"
@@ -57,10 +57,10 @@ hls_to_rgb (gdouble *h,
  * @argv: a pointer to the vector
  *
  * Prepends a terminal (either the one configured as default in the user's
- * MATE setup, or one of the common xterm emulators) to the passed in vector,
+ * CAFE setup, or one of the common xterm emulators) to the passed in vector,
  * modifying it in the process.  The vector should be allocated with #g_malloc,
  * as this will #g_free the original vector.  Also all elements must have been
- * allocated separately.  That is the standard glib/MATE way of doing vectors
+ * allocated separately.  That is the standard glib/CAFE way of doing vectors
  * however.  If the integer that @argc points to is negative, the size will
  * first be computed.  Also note that passing in pointers to a vector that is
  * empty, will just create a new vector for you.
@@ -220,7 +220,7 @@ _mate_desktop_init_i18n (void) {
 	static gboolean initialized = FALSE;
 
 	if (!initialized) {
-		bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
+		bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
 #ifdef HAVE_BIND_TEXTDOMAIN_CODESET
 		bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 #endif

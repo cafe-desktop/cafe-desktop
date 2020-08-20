@@ -10,11 +10,11 @@ mate_color_select_SOURCES = \
 mate_color_select_CFLAGS = \
 	-DLOCALE_DIR=\"$(datadir)/locale\" \
 	$(WARN_CFLAGS) \
-	$(MATE_DESKTOP_CFLAGS)
+	$(CAFE_DESKTOP_CFLAGS)
 
 mate_color_select_LDADD = \
 	$(top_builddir)/libmate-desktop/libmate-desktop-2.la \
-	$(MATE_DESKTOP_LIBS)
+	$(CAFE_DESKTOP_LIBS)
 
 desktopdir = $(datadir)/applications
 desktop_in_files = mate-color-select.desktop.in

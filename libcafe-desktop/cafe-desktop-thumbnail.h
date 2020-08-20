@@ -23,11 +23,11 @@
  * Author: Alexander Larsson <alexl@redhat.com>
  */
 
-#ifndef MATE_DESKTOP_THUMBNAIL_H
-#define MATE_DESKTOP_THUMBNAIL_H
+#ifndef CAFE_DESKTOP_THUMBNAIL_H
+#define CAFE_DESKTOP_THUMBNAIL_H
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error    MateDesktopThumbnail is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-desktop-thumbnail.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error    MateDesktopThumbnail is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-desktop-thumbnail.h
 #endif
 
 #include <glib.h>
@@ -38,15 +38,15 @@
 G_BEGIN_DECLS
 
 typedef enum {
-  MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL,
-  MATE_DESKTOP_THUMBNAIL_SIZE_LARGE
+  CAFE_DESKTOP_THUMBNAIL_SIZE_NORMAL,
+  CAFE_DESKTOP_THUMBNAIL_SIZE_LARGE
 } MateDesktopThumbnailSize;
 
-#define MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY    (mate_desktop_thumbnail_factory_get_type ())
-#define MATE_DESKTOP_THUMBNAIL_FACTORY(obj)    (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactory))
-#define MATE_DESKTOP_THUMBNAIL_FACTORY_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryClass))
-#define MATE_DESKTOP_IS_THUMBNAIL_FACTORY(obj)    (G_TYPE_INSTANCE_CHECK_TYPE ((obj), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
-#define MATE_DESKTOP_IS_THUMBNAIL_FACTORY_CLASS(klass)    (G_TYPE_CLASS_CHECK_CLASS_TYPE ((klass), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
+#define CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY    (mate_desktop_thumbnail_factory_get_type ())
+#define CAFE_DESKTOP_THUMBNAIL_FACTORY(obj)    (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactory))
+#define CAFE_DESKTOP_THUMBNAIL_FACTORY_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryClass))
+#define CAFE_DESKTOP_IS_THUMBNAIL_FACTORY(obj)    (G_TYPE_INSTANCE_CHECK_TYPE ((obj), CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
+#define CAFE_DESKTOP_IS_THUMBNAIL_FACTORY_CLASS(klass)    (G_TYPE_CLASS_CHECK_CLASS_TYPE ((klass), CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
 
 typedef struct _MateDesktopThumbnailFactory        MateDesktopThumbnailFactory;
 typedef struct _MateDesktopThumbnailFactoryClass   MateDesktopThumbnailFactoryClass;
@@ -99,4 +99,4 @@ char *     mate_desktop_thumbnail_path_for_uri      (const char         *uri,
 
 G_END_DECLS
 
-#endif /* MATE_DESKTOP_THUMBNAIL_H */
+#endif /* CAFE_DESKTOP_THUMBNAIL_H */

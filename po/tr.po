@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -39,19 +39,19 @@ msgstr ""
 "Görkem Çetin <gorkem@gelecek.com.tr>, 2002/2003.\n"
 "Barış Çicek <baris@teamforce.name.tr>, 2004, 2008, 2009.\n"
 "Muhammet Kara <muhammet.k@gmail.com>, 2011.\n"
-"MATE projesine katkıda bulunanlar:\n"
+"CAFE projesine katkıda bulunanlar:\n"
 "hsngrms <dead-bodies-everywhere@hotmail.com>, 2012\n"
 "mauron, 2012, 2013, 2014, 2015, 2016, 2017, 2018\n"
 "Atilla Öntaş <tarakbumba@gmail.com>, 2014\n"
 "Emre FIRAT <emrefirat93@gmail.com>, 2013, 2014, 2015"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "MATE Hakkında"
+msgid "About CAFE"
+msgstr "CAFE Hakkında"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "MATE hakkında daha fazla şey öğrenin"
+msgid "Learn more about CAFE"
+msgstr "CAFE hakkında daha fazla şey öğrenin"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -60,49 +60,49 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
-msgstr "MATE Masaüstü Ortamı"
+msgid "CAFE Desktop Environment"
+msgstr "CAFE Masaüstü Ortamı"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE, geleneksel metaforları tercih eden GNU/Linux kullanıcılarına çekici ve"
+"CAFE, geleneksel metaforları tercih eden GNU/Linux kullanıcılarına çekici ve"
 " sezgisel bir masaüstü sağlar."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE, dosya yöneticisi, belge ve resim görüntüleyicisi, menüler ve birçok "
+"CAFE, dosya yöneticisi, belge ve resim görüntüleyicisi, menüler ve birçok "
 "uygulama da dahil olmak üzere, bilgisayarınızda gördüğünüz unsurların çoğunu"
 " içerir."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE, Unix benzeri işletim sistemleri ailesi için özgür, kullanışlı, "
+"CAFE, Unix benzeri işletim sistemleri ailesi için özgür, kullanışlı, "
 "kararlı, erişimi kolay bir masaüstü ortamıdır."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE, GNOME 2 Masaüstü'nün devamıdır. GNOME 1997 yılında başladığından beri "
+"CAFE, GNOME 2 Masaüstü'nün devamıdır. GNOME 1997 yılında başladığından beri "
 "yüzlerce kişi kodlamaya katkıda bulunmuştur. Çevirmenler, belgelendirme "
 "yapanlar ve kalite denetimi yapanlar da dahil olmak üzere, bir çoğu başka "
 "önemli şekillerde katkıda bulunmuştur."
@@ -110,18 +110,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
-"GNOME 2 en popüler GNU/Linux masaüstüydü ancak artık yayınlanmıyor… MATE "
+"GNOME 2 en popüler GNU/Linux masaüstüydü ancak artık yayınlanmıyor… CAFE "
 "size aynı masaüstünü sağlar!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"“MATE” ismini yerba maté adlı Güney Amerika'ya özgü astropikal çobanpüskülü "
+"“CAFE” ismini yerba maté adlı Güney Amerika'ya özgü astropikal çobanpüskülü "
 "cinsinden alır. Bu bitkinin yaprakları kafein içerir ve demlendikten sonra "
 "mate adı verilen içecek elde edilir."
 
@@ -651,9 +651,9 @@ msgstr "Başlangıç Yardımcı Teknoloji Uygulamaları"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
-"MATE masaüstü oturumu açıldığında başlatılacak yardımcı teknoloji "
+"CAFE masaüstü oturumu açıldığında başlatılacak yardımcı teknoloji "
 "uygulamalarının listesi."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
@@ -674,10 +674,10 @@ msgstr "Tercih edilen Taşınabilirlik yardımcı teknoloji uygulamasını başl
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATE'nin tercih edilen Taşınabilirlik yardımcı teknoloji uygulamasını oturum"
+"CAFE'nin tercih edilen Taşınabilirlik yardımcı teknoloji uygulamasını oturum"
 " açıldığında başlatmasını sağlar."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
@@ -698,10 +698,10 @@ msgstr "Tercih edilen Görsel yardımcı teknoloji uygulamasını başlat"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"MATE'nin tercih edilen Görsel yardımcı teknoloji uygulamasını oturum "
+"CAFE'nin tercih edilen Görsel yardımcı teknoloji uygulamasını oturum "
 "açıldığında başlatmasını sağlar."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
@@ -810,17 +810,17 @@ msgid "Draw Desktop Background"
 msgstr "Masaüstü Arkaplanını Çiz"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "MATE'in masaüstü arkaplanını çizmesini sağlar."
+msgid "Have CAFE draw the desktop background."
+msgstr "CAFE'in masaüstü arkaplanını çizmesini sağlar."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Masaüstü Simgelerini Göster"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
-"MATE dosya yöneticisinin (Caja) masaüstü simgelerini çizmesini belirler."
+"CAFE dosya yöneticisinin (Caja) masaüstü simgelerini çizmesini belirler."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -828,10 +828,10 @@ msgstr "Değiştirirken arkaplanı karart"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Doğru olarak ayarlanırsa, MATE masaüstü arka planını solma etkisi ile "
+"Doğru olarak ayarlanırsa, CAFE masaüstü arka planını solma etkisi ile "
 "değiştirecektir."
 
 #: schemas/org.mate.background.gschema.xml.in:33
@@ -1264,12 +1264,12 @@ msgstr "QT uygulamaları için Ölçeklendirme Faktörü"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Bu ayar, MATE'nin QT uygulamaları için ölçek faktörünü kontrol edip "
+"Bu ayar, CAFE'nin QT uygulamaları için ölçek faktörünü kontrol edip "
 "etmediğini belirler. Oturumu başlatırken GTK ölçek faktörü ile senkronize "
 "etmeyi etkinleştir, bu değeri başka bir yerde kontrol etmek için devre dışı "
 "bırakın. Oturumunuzu yeniden başlatmayı gerektirir."
@@ -1508,8 +1508,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Klavye kilitinin etkinleştirilip etkinleştirilmediğini belirler."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "MATE Renk Seçimi"
+msgid "CAFE Color Selection"
+msgstr "CAFE Renk Seçimi"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1528,5 +1528,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

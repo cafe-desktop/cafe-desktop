@@ -23,21 +23,21 @@
  * Author: Federico Mena-Quintero <federico@novell.com>
  */
 
-#ifndef MATE_RR_LABELER_H
-#define MATE_RR_LABELER_H
+#ifndef CAFE_RR_LABELER_H
+#define CAFE_RR_LABELER_H
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error    MateRR is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including materr.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error    MateRR is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including materr.h
 #endif
 
 #include "mate-rr-config.h"
 
-#define MATE_TYPE_RR_LABELER            (mate_rr_labeler_get_type ())
-#define MATE_RR_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_LABELER, MateRRLabeler))
-#define MATE_RR_LABELER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  MATE_TYPE_RR_LABELER, MateRRLabelerClass))
-#define MATE_IS_RR_LABELER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_LABELER))
-#define MATE_IS_RR_LABELER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  MATE_TYPE_RR_LABELER))
-#define MATE_RR_LABELER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  MATE_TYPE_RR_LABELER, MateRRLabelerClass))
+#define CAFE_TYPE_RR_LABELER            (mate_rr_labeler_get_type ())
+#define CAFE_RR_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_LABELER, MateRRLabeler))
+#define CAFE_RR_LABELER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_RR_LABELER, MateRRLabelerClass))
+#define CAFE_IS_RR_LABELER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_LABELER))
+#define CAFE_IS_RR_LABELER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  CAFE_TYPE_RR_LABELER))
+#define CAFE_RR_LABELER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  CAFE_TYPE_RR_LABELER, MateRRLabelerClass))
 
 typedef struct _MateRRLabeler MateRRLabeler;
 typedef struct _MateRRLabelerClass MateRRLabelerClass;

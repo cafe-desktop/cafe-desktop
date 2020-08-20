@@ -21,7 +21,7 @@
  * Authors: Bastien Nocera <hadess@hadess.net>
 + */
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include "mate-desktop-thumbnail.h"
 #include <gtk/gtk.h>
 
@@ -40,7 +40,7 @@ int main (int argc, char **argv)
     }
 
     content_type = g_content_type_guess (argv[1], NULL, 0, NULL);
-    factory = mate_desktop_thumbnail_factory_new (MATE_DESKTOP_THUMBNAIL_SIZE_LARGE);
+    factory = mate_desktop_thumbnail_factory_new (CAFE_DESKTOP_THUMBNAIL_SIZE_LARGE);
     pixbuf = mate_desktop_thumbnail_factory_generate_thumbnail (factory, argv[1], content_type);
     g_free (content_type);
     g_object_unref (factory);

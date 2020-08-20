@@ -29,19 +29,19 @@
  * Modified to work internally in mate-desktop by Pablo Barciela 2019
  */
 
-#ifndef __MATE_HSV_H__
-#define __MATE_HSV_H__
+#ifndef __CAFE_HSV_H__
+#define __CAFE_HSV_H__
 
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-#define MATE_TYPE_HSV            (mate_hsv_get_type ())
-#define MATE_HSV(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_HSV, MateHSV))
-#define MATE_HSV_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_HSV, MateHSVClass))
-#define MATE_IS_HSV(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_HSV))
-#define MATE_IS_HSV_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_HSV))
-#define MATE_HSV_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_HSV, MateHSVClass))
+#define CAFE_TYPE_HSV            (mate_hsv_get_type ())
+#define CAFE_HSV(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_HSV, MateHSV))
+#define CAFE_HSV_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_HSV, MateHSVClass))
+#define CAFE_IS_HSV(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_HSV))
+#define CAFE_IS_HSV_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_HSV))
+#define CAFE_HSV_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_HSV, MateHSVClass))
 
 
 typedef struct _MateHSV              MateHSV;
@@ -95,5 +95,5 @@ gboolean   mate_hsv_is_adjusting (MateHSV    *hsv);
 
 G_END_DECLS
 
-#endif /* __MATE_HSV_H__ */
+#endif /* __CAFE_HSV_H__ */
 

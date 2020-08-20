@@ -21,7 +21,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 
 #include <config.h>
 
@@ -45,7 +45,7 @@ mate_rr_output_info_init (MateRROutputInfo *self)
 static void
 mate_rr_output_info_finalize (GObject *gobject)
 {
-    MateRROutputInfo *self = MATE_RR_OUTPUT_INFO (gobject);
+    MateRROutputInfo *self = CAFE_RR_OUTPUT_INFO (gobject);
 
     g_free (self->priv->name);
     g_free (self->priv->display_name);
@@ -68,7 +68,7 @@ mate_rr_output_info_class_init (MateRROutputInfoClass *klass)
  */
 char *mate_rr_output_info_get_name (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), NULL);
 
     return self->priv->name;
 }
@@ -80,14 +80,14 @@ char *mate_rr_output_info_get_name (MateRROutputInfo *self)
  */
 gboolean mate_rr_output_info_is_active (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), FALSE);
 
     return self->priv->on;
 }
 
 void mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active)
 {
-    g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));
+    g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     self->priv->on = active;
 }
@@ -102,7 +102,7 @@ void mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active)
  */
 void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, int *width, int *height)
 {
-    g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));
+    g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     if (x)
 	*x = self->priv->x;
@@ -126,7 +126,7 @@ void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, i
  */
 void mate_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, int  width, int  height)
 {
-    g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));
+    g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     self->priv->x = x;
     self->priv->y = y;
@@ -136,28 +136,28 @@ void mate_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, i
 
 int mate_rr_output_info_get_refresh_rate (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), 0);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->rate;
 }
 
 void mate_rr_output_info_set_refresh_rate (MateRROutputInfo *self, int rate)
 {
-    g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));
+    g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     self->priv->rate = rate;
 }
 
 MateRRRotation mate_rr_output_info_get_rotation (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), MATE_RR_ROTATION_0);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), CAFE_RR_ROTATION_0);
 
     return self->priv->rotation;
 }
 
 void mate_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation rotation)
 {
-    g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));
+    g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     self->priv->rotation = rotation;
 }
@@ -169,7 +169,7 @@ void mate_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation ro
  */
 gboolean mate_rr_output_info_is_connected (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), FALSE);
 
     return self->priv->connected;
 }
@@ -181,7 +181,7 @@ gboolean mate_rr_output_info_is_connected (MateRROutputInfo *self)
  */
 void mate_rr_output_info_get_vendor (MateRROutputInfo *self, gchar* vendor)
 {
-    g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));
+    g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
     g_return_if_fail (vendor != NULL);
 
     vendor[0] = self->priv->vendor[0];
@@ -192,21 +192,21 @@ void mate_rr_output_info_get_vendor (MateRROutputInfo *self, gchar* vendor)
 
 guint mate_rr_output_info_get_product (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), 0);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->product;
 }
 
 guint mate_rr_output_info_get_serial (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), 0);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->serial;
 }
 
 double mate_rr_output_info_get_aspect_ratio (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), 0);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->aspect;
 }
@@ -218,35 +218,35 @@ double mate_rr_output_info_get_aspect_ratio (MateRROutputInfo *self)
  */
 char *mate_rr_output_info_get_display_name (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), NULL);
 
     return self->priv->display_name;
 }
 
 gboolean mate_rr_output_info_get_primary (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), FALSE);
 
     return self->priv->primary;
 }
 
 void mate_rr_output_info_set_primary (MateRROutputInfo *self, gboolean primary)
 {
-    g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));
+    g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     self->priv->primary = primary;
 }
 
 int mate_rr_output_info_get_preferred_width (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), 0);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->pref_width;
 }
 
 int mate_rr_output_info_get_preferred_height (MateRROutputInfo *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), 0);
+    g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->pref_height;
 }

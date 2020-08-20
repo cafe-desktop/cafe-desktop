@@ -31,37 +31,37 @@ AC_SUBST(LT_VERSION)
 
 AM_MAINTAINER_MODE
 
-MATE_COMMON_INIT
-MATE_DEBUG_CHECK
-MATE_COMPILE_WARNINGS
-MATE_MAINTAINER_MODE_DEFINES
+CAFE_COMMON_INIT
+CAFE_DEBUG_CHECK
+CAFE_COMPILE_WARNINGS
+CAFE_MAINTAINER_MODE_DEFINES
 
 AC_PROG_CC
 AC_STDC_HEADERS
 AC_PROG_LIBTOOL
 PKG_PROG_PKG_CONFIG
 
-MATE_PLATFORM=mate_platform
-MATE_MINOR=mate_minor
-MATE_MICRO=mate_micro
-MATE_DATE=`date +"%Y-%m-%d"`
+CAFE_PLATFORM=mate_platform
+CAFE_MINOR=mate_minor
+CAFE_MICRO=mate_micro
+CAFE_DATE=`date +"%Y-%m-%d"`
 if test "x$SOURCE_DATE_EPOCH" != "x"; then
-	MATE_DATE=`date -u -d "@$SOURCE_DATE_EPOCH" +%Y-%m-%d`
+	CAFE_DATE=`date -u -d "@$SOURCE_DATE_EPOCH" +%Y-%m-%d`
 fi
 
-MATE_DATE_COMMENT_START="<!--"
-MATE_DATE_COMMENT_END="-->"
+CAFE_DATE_COMMENT_START="<!--"
+CAFE_DATE_COMMENT_END="-->"
 
-AC_SUBST(MATE_PLATFORM)
-AC_SUBST(MATE_MINOR)
-AC_SUBST(MATE_MICRO)
-AC_SUBST(MATE_DATE)
-AC_SUBST(MATE_DATE_COMMENT_START)
-AC_SUBST(MATE_DATE_COMMENT_END)
+AC_SUBST(CAFE_PLATFORM)
+AC_SUBST(CAFE_MINOR)
+AC_SUBST(CAFE_MICRO)
+AC_SUBST(CAFE_DATE)
+AC_SUBST(CAFE_DATE_COMMENT_START)
+AC_SUBST(CAFE_DATE_COMMENT_END)
 
-AC_DEFINE(MATE_MAJOR, [mate_platform], [Define to the major version])
-AC_DEFINE(MATE_MINOR, [mate_minor], [Define to the minor version])
-AC_DEFINE(MATE_MICRO, [mate_micro], [Define to the micro version])
+AC_DEFINE(CAFE_MAJOR, [mate_platform], [Define to the major version])
+AC_DEFINE(CAFE_MINOR, [mate_minor], [Define to the minor version])
+AC_DEFINE(CAFE_MICRO, [mate_micro], [Define to the micro version])
 
 RELEASE_YEAR=`date +%Y`
 if test "x$SOURCE_DATE_EPOCH" != "x"; then
@@ -83,7 +83,7 @@ fi
 AC_ARG_ENABLE([mate-about],
 	[AS_HELP_STRING([--disable-mate-about],[do not build mate-about])],,
 	[enable_mate_about=yes])
-AM_CONDITIONAL(MATE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
+AM_CONDITIONAL(CAFE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
 
 
 # Path to the pnp.ids file -- to know if we use one shipped with another
@@ -195,14 +195,14 @@ AC_SUBST(RANDR_PACKAGE)
 
 dnl pkg-config dependency checks
 
-PKG_CHECK_MODULES(MATE_DESKTOP, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED gtk+-3.0 >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GIO_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE iso-codes)
+PKG_CHECK_MODULES(CAFE_DESKTOP, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED gtk+-3.0 >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GIO_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE iso-codes)
 
 ISO_CODES_PREFIX=$($PKG_CONFIG --variable prefix iso-codes)
 AC_SUBST(ISO_CODES_PREFIX)
 
-PKG_CHECK_MODULES(MATE_ABOUT, gtk+-3.0 >= $GTK_REQUIRED)
-AC_SUBST(MATE_ABOUT_CFLAGS)
-AC_SUBST(MATE_ABOUT_LIBS)
+PKG_CHECK_MODULES(CAFE_ABOUT, gtk+-3.0 >= $GTK_REQUIRED)
+AC_SUBST(CAFE_ABOUT_CFLAGS)
+AC_SUBST(CAFE_ABOUT_LIBS)
 
 dnl Language Support
 AM_GNU_GETTEXT([external])

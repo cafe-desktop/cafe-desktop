@@ -25,7 +25,7 @@
  * Author: Federico Mena-Quintero <federico@novell.com>
  */
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
@@ -202,11 +202,11 @@ mate_rr_labeler_init (MateRRLabeler *labeler)
 static void
 mate_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *param_spec)
 {
-	MateRRLabeler *self = MATE_RR_LABELER (gobject);
+	MateRRLabeler *self = CAFE_RR_LABELER (gobject);
 
 	switch (property_id) {
 	case PROP_CONFIG:
-		self->priv->config = MATE_RR_CONFIG (g_value_dup_object (value));
+		self->priv->config = CAFE_RR_CONFIG (g_value_dup_object (value));
 		return;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (gobject, property_id, param_spec);
@@ -237,7 +237,7 @@ mate_rr_labeler_class_init (MateRRLabelerClass *klass)
 	g_object_class_install_property (object_class, PROP_CONFIG, g_param_spec_object ("config",
 											 "Configuration",
 											 "RandR configuration to label",
-											 MATE_TYPE_RR_CONFIG,
+											 CAFE_TYPE_RR_CONFIG,
 											 G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY |
 											 G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
 }
@@ -248,7 +248,7 @@ mate_rr_labeler_finalize (GObject *object)
 	MateRRLabeler *labeler;
 	GdkWindow      *gdkwindow;
 
-	labeler = MATE_RR_LABELER (object);
+	labeler = CAFE_RR_LABELER (object);
 
 	gdkwindow = gdk_screen_get_root_window (labeler->priv->screen);
 	gdk_window_remove_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
@@ -480,9 +480,9 @@ setup_from_config (MateRRLabeler *labeler)
 MateRRLabeler *
 mate_rr_labeler_new (MateRRConfig *config)
 {
-	g_return_val_if_fail (MATE_IS_RR_CONFIG (config), NULL);
+	g_return_val_if_fail (CAFE_IS_RR_CONFIG (config), NULL);
 
-	return g_object_new (MATE_TYPE_RR_LABELER, "config", config, NULL);
+	return g_object_new (CAFE_TYPE_RR_LABELER, "config", config, NULL);
 }
 
 /**
@@ -497,7 +497,7 @@ mate_rr_labeler_hide (MateRRLabeler *labeler)
 	int i;
 	MateRRLabelerPrivate *priv;
 
-	g_return_if_fail (MATE_IS_RR_LABELER (labeler));
+	g_return_if_fail (CAFE_IS_RR_LABELER (labeler));
 
 	priv = labeler->priv;
 
@@ -527,8 +527,8 @@ mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *o
 	int i;
 	MateRROutputInfo **outputs;
 
-	g_return_if_fail (MATE_IS_RR_LABELER (labeler));
-	g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (output));
+	g_return_if_fail (CAFE_IS_RR_LABELER (labeler));
+	g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (output));
 	g_return_if_fail (color_out != NULL);
 
 	outputs = mate_rr_config_get_outputs (labeler->priv->config);

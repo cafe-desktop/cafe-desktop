@@ -1,6 +1,6 @@
 man_MANS = mate-color-select.1
 
-if MATE_ABOUT_ENABLED
+if CAFE_ABOUT_ENABLED
 man_MANS += mate-about.1
 endif
 

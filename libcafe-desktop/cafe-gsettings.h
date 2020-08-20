@@ -22,8 +22,8 @@
  *  Stefano Karapetsas <stefano@karapetsas.com>
  */
 
-#ifndef __MATE_GSETTINGS_H__
-#define __MATE_GSETTINGS_H__
+#ifndef __CAFE_GSETTINGS_H__
+#define __CAFE_GSETTINGS_H__
 
 #include <glib.h>
 #include <gio/gio.h>
@@ -47,4 +47,4 @@ GSList*  mate_gsettings_strv_to_gslist (const gchar *const *array);
 
 G_END_DECLS
 
-#endif /* __MATE_GSETTINGS_H__ */
+#endif /* __CAFE_GSETTINGS_H__ */

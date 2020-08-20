@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -28,12 +28,12 @@ msgid "translator-credits"
 msgstr "Abuyop"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "Perihal MATE"
+msgid "About CAFE"
+msgstr "Perihal CAFE"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Ketahui lebih lanjut mengenai MATE"
+msgid "Learn more about CAFE"
+msgstr "Ketahui lebih lanjut mengenai CAFE"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -42,52 +42,52 @@ msgid "mate-desktop"
 msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
-msgstr "Persekitaran Desktop MATE"
+msgid "CAFE Desktop Environment"
+msgstr "Persekitaran Desktop CAFE"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 "Hak Cipta © 1997-2011 Pembangun GNOME\n"
 "Hak Cipta © 2011 Perberos\n"
-"Hak Cipta © 2012-2020 Pembangun MATE"
+"Hak Cipta © 2012-2020 Pembangun CAFE"
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE menyediakan desktop yang intuitif dan menarik pada pengguna Linux "
+"CAFE menyediakan desktop yang intuitif dan menarik pada pengguna Linux "
 "menggunakan metafor tradisional."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE termasuklah apa yang anda lihat pada komputer anda, termasuklah "
+"CAFE termasuklah apa yang anda lihat pada komputer anda, termasuklah "
 "pengurus fail, pelihat dokumen, pelihat imej, menu, dan banyak aplikasi "
 "lain."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE adalah persekitaran desktop yang bebas, berguna, stabil dan boleh "
+"CAFE adalah persekitaran desktop yang bebas, berguna, stabil dan boleh "
 "dicapai untuk keluarga sistem pengoperasian seakan-Unix."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE merupakan kesinambungan GNOME 2. Beratus-ratus individu telah memberi "
+"CAFE merupakan kesinambungan GNOME 2. Beratus-ratus individu telah memberi "
 "sumbangan kod pada GNOME semenjak ia dimulakan pada tahun 1997; selain itu "
 "terdapat juga sumbangan dalam bentuk penterjemahan, dokumentasi, dan jaminan"
 " kualitit."
@@ -95,18 +95,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 merupakan desktop Linux yang popular tetapi ia sudah dijumudkan... "
-"oleh itu MATE disini menyediakan dekstop yang serupa untuk anda!"
+"oleh itu CAFE disini menyediakan dekstop yang serupa untuk anda!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"Nama \"MATE\" berasal dari perkataan yerba maté, merupakan sejenis spesis "
+"Nama \"CAFE\" berasal dari perkataan yerba maté, merupakan sejenis spesis "
 "holi dari subtropikal Amerika Selatan. Daunnya mengandungi kafein dan "
 "digunakan untuk membuat penyeduhan dan minuman yang dikenali sebagai mate."
 
@@ -643,10 +643,10 @@ msgstr "Mulakan Aplikasi Teknologi Penolong"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 "Senarai aplikasi teknologi penolong untuk dimulakan bila mendaftar masuk ke "
-"desktop MATE."
+"desktop CAFE."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -666,10 +666,10 @@ msgstr "Mulakan aplikasi teknologi pembantu Mobiliti dikehendaki"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATE memulakan aplikasi teknologi pembantu Mobiliti dikehendaki semasa "
+"CAFE memulakan aplikasi teknologi pembantu Mobiliti dikehendaki semasa "
 "daftar masuk."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
@@ -690,10 +690,10 @@ msgstr "Mulakan aplikasi teknologi pembantu Visual dikehendaki"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"MATE memulakan aplikasi teknologi pembantu Visual dikehendaki semasa daftar "
+"CAFE memulakan aplikasi teknologi pembantu Visual dikehendaki semasa daftar "
 "masuk."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
@@ -797,15 +797,15 @@ msgid "Draw Desktop Background"
 msgstr "Lukis Latar Belakang Desktop"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "Biarkan MATE melukis latar belakang dektop."
+msgid "Have CAFE draw the desktop background."
+msgstr "Biarkan CAFE melukis latar belakang dektop."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Tunjuk Ikon Desktop"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr "Biarkan pengurus fail (Caja) melukis ikon dektop."
 
 #: schemas/org.mate.background.gschema.xml.in:28
@@ -814,10 +814,10 @@ msgstr "Lenyapkan latar belakang bila berubah"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Jika ditetapkan ke benar, maka MATE akan menukar latar belakang desktop "
+"Jika ditetapkan ke benar, maka CAFE akan menukar latar belakang desktop "
 "dengan kesan lenyap."
 
 #: schemas/org.mate.background.gschema.xml.in:33
@@ -1248,12 +1248,12 @@ msgstr "Faktor Penskalaan untuk aplikasi QT"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Tetapan ini menentukan sama ada MATE mengawal faktor skala untuk aplikasi "
+"Tetapan ini menentukan sama ada CAFE mengawal faktor skala untuk aplikasi "
 "QT. Benarkan untuk disegerakkan dengan faktor skala GTK ketika mengawalkan "
 "sesi, lumpuhkan untuk kawal nilai ini di tempat lain. Perlu memulakan semula"
 " sesi anda."
@@ -1486,8 +1486,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Sama ada ia atau tidak penguncian papan kekunci dibenarkan."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "Pemilihan Warna MATE"
+msgid "CAFE Color Selection"
+msgstr "Pemilihan Warna CAFE"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1506,5 +1506,5 @@ msgstr "gtk-select-color"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr "MATE;warna;pemilih;pilih;palet;skrin;pemilihan;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
+msgstr "CAFE;warna;pemilih;pilih;palet;skrin;pemilihan;"

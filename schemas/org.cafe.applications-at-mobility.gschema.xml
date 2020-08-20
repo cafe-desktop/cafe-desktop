@@ -8,7 +8,7 @@
     <key name="startup" type="b">
       <default>false</default>
       <summary>Start preferred Mobility assistive technology application</summary>
-      <description>MATE to start preferred Mobility assistive technology application during login.</description>
+      <description>CAFE to start preferred Mobility assistive technology application during login.</description>
     </key>
   </schema>
 </schemalist>

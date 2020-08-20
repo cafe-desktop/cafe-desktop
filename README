@@ -10,7 +10,7 @@ reasons. There is no API or ABI guarantee, although we are doing our
 best to provide stability. Documentation for the API is available with
 gtk-doc.
 
-The mate-about program helps find which version of MATE is installed.
+The mate-about program helps find which version of CAFE is installed.
 
 You may download updates to the package from:
 
@@ -28,7 +28,7 @@ if you checked out the code from git), you first need to run
 How to report bugs
 ==================
 
-Bugs should be reported to the MATE bug tracking system:
+Bugs should be reported to the CAFE bug tracking system:
 
    https://github.com/mate-desktop/mate-desktop/issues
 

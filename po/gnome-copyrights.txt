@@ -246,7 +246,7 @@
 
 
 ========== de.po ==========
-# German MATE Desktop translation.
+# German CAFE Desktop translation.
 # Copyright (C) 1998-2003 Free Software Foundation, Inc.
 # Carsten Schaar <nhadcasc@fs-maphy.uni-hannover.de>, 1998.
 # Matthias Warkus <mawa@iname.com>, 1999-2001.
@@ -320,7 +320,7 @@
 
 ========== en_CA.po ==========
 # Canadian English translation of mate-desktop
-# Copyright (C) 2004 Adam Weinberger and the MATE Foundation
+# Copyright (C) 2004 Adam Weinberger and the CAFE Foundation
 # This file is distributed under the same licence as the mate-desktop package.
 # Alexander Winston <alexander.winston@comcast.net>, 2004.
 # Adam Weinberger <adamw@gnome.org>, 2004.
@@ -370,11 +370,11 @@
 
 
 ========== et.po ==========
-# MATE-desktop'i eesti keele tõlge.
-# Estonian translation of MATE-desktop.
+# CAFE-desktop'i eesti keele tõlge.
+# Estonian translation of CAFE-desktop.
 #
 # Copyright (C) 1999-2006 Free Software Foundation, Inc.
-# Copyright (C) 2007-2010 The MATE Project.
+# Copyright (C) 2007-2010 The CAFE Project.
 # This file is distributed under the same license as the mate-desktop package.
 #
 # Lauris Kaplinski <lauris@ariman.ee>, 1999.
@@ -738,7 +738,7 @@
 # translation of mate-desktop.master.mai.po to Hindi
 # BOSS GNU/Linux <bosslinux@cdac.in>, 2008.
 # Rajesh Ranjan <rajesh672@gmail.com>, 2009.
-# Copyright (C) 2006 The MATE Foundation
+# Copyright (C) 2006 The CAFE Foundation
 # This file is distributed under the same license as the PACKAGE package.
 
 
@@ -1253,8 +1253,8 @@
 
 
 ========== vi.po ==========
-# Vietnamese translation for MATE Desktop.
-# Copyright © 2009 MATE i18n Project for Vietnamese
+# Vietnamese translation for CAFE Desktop.
+# Copyright © 2009 CAFE i18n Project for Vietnamese
 # This file is distributed under the same license as the mate-desktop package.
 # Trinh Minh Thanh <tmthanhmd@fptnet.com>, 2002.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2004, 2007.

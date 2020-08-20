@@ -24,20 +24,20 @@
  * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
  */
 
-#ifndef __MATE_COLOR_SELECTION_DIALOG_H__
-#define __MATE_COLOR_SELECTION_DIALOG_H__
+#ifndef __CAFE_COLOR_SELECTION_DIALOG_H__
+#define __CAFE_COLOR_SELECTION_DIALOG_H__
 
 #include <glib.h>
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-#define MATE_TYPE_COLOR_SELECTION_DIALOG            (mate_color_selection_dialog_get_type ())
-#define MATE_COLOR_SELECTION_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialog))
-#define MATE_COLOR_SELECTION_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
-#define MATE_IS_COLOR_SELECTION_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_COLOR_SELECTION_DIALOG))
-#define MATE_IS_COLOR_SELECTION_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_COLOR_SELECTION_DIALOG))
-#define MATE_COLOR_SELECTION_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
+#define CAFE_TYPE_COLOR_SELECTION_DIALOG            (mate_color_selection_dialog_get_type ())
+#define CAFE_COLOR_SELECTION_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialog))
+#define CAFE_COLOR_SELECTION_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
+#define CAFE_IS_COLOR_SELECTION_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG))
+#define CAFE_IS_COLOR_SELECTION_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_COLOR_SELECTION_DIALOG))
+#define CAFE_COLOR_SELECTION_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
 
 
 typedef struct _MateColorSelectionDialog       MateColorSelectionDialog;
@@ -74,4 +74,4 @@ GtkWidget* mate_color_selection_dialog_get_color_selection (MateColorSelectionDi
 
 G_END_DECLS
 
-#endif /* __MATE_COLOR_SELECTION_DIALOG_H__ */
+#endif /* __CAFE_COLOR_SELECTION_DIALOG_H__ */

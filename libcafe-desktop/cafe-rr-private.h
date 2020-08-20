@@ -1,5 +1,5 @@
-#ifndef MATE_RR_PRIVATE_H
-#define MATE_RR_PRIVATE_H
+#ifndef CAFE_RR_PRIVATE_H
+#define CAFE_RR_PRIVATE_H
 
 #include <X11/Xlib.h>
 

@@ -16,17 +16,17 @@
     <key name="draw-background" type="b">
       <default>true</default>
       <summary>Draw Desktop Background</summary>
-      <description>Have MATE draw the desktop background.</description>
+      <description>Have CAFE draw the desktop background.</description>
     </key>
     <key name="show-desktop-icons" type="b">
       <default>true</default>
       <summary>Show Desktop Icons</summary>
-      <description>Have MATE file manager (Caja) draw the desktop icons.</description>
+      <description>Have CAFE file manager (Caja) draw the desktop icons.</description>
     </key>
     <key name="background-fade" type="b">
       <default>true</default>
       <summary>Fade the background on change</summary>
-      <description>If set to true, then MATE will change the desktop background with a fading effect.</description>
+      <description>If set to true, then CAFE will change the desktop background with a fading effect.</description>
     </key>
     <key name="picture-options" enum="org.mate.background.picture-options-enum">
       <default>'zoom'</default>

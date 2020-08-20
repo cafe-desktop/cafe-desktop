@@ -32,7 +32,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include "mate-desktop-thumbnail.h"
 
 static void
@@ -553,7 +553,7 @@ mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
 
   priv = factory->priv;
 
-  priv->size = MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL;
+  priv->size = CAFE_DESKTOP_THUMBNAIL_SIZE_NORMAL;
 
   priv->mime_types_map = g_hash_table_new_full (g_str_hash,
                                                 g_str_equal,
@@ -586,7 +586,7 @@ mate_desktop_thumbnail_factory_finalize (GObject *object)
   MateDesktopThumbnailFactory *factory;
   MateDesktopThumbnailFactoryPrivate *priv;
   
-  factory = MATE_DESKTOP_THUMBNAIL_FACTORY (object);
+  factory = CAFE_DESKTOP_THUMBNAIL_FACTORY (object);
 
   priv = factory->priv;
 
@@ -650,7 +650,7 @@ mate_desktop_thumbnail_factory_new (MateDesktopThumbnailSize size)
 {
   MateDesktopThumbnailFactory *factory;
 
-  factory = g_object_new (MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, NULL);
+  factory = g_object_new (CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY, NULL);
 
   factory->priv->size = size;
 
@@ -687,7 +687,7 @@ thumbnail_path (const char               *uri,
   file = thumbnail_filename (uri);
   path = g_build_filename (g_get_user_cache_dir (),
                            "thumbnails",
-                           size == MATE_DESKTOP_THUMBNAIL_SIZE_LARGE ? "large" : "normal",
+                           size == CAFE_DESKTOP_THUMBNAIL_SIZE_LARGE ? "large" : "normal",
                            file,
                            NULL);
   g_free (file);
@@ -1067,7 +1067,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
   /* Doesn't access any volatile fields in factory, so it's threadsafe */
 
   size = 128;
-  if (factory->priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_LARGE)
+  if (factory->priv->size == CAFE_DESKTOP_THUMBNAIL_SIZE_LARGE)
     size = 256;
 
   pixbuf = NULL;
@@ -1172,7 +1172,7 @@ save_thumbnail (GdkPixbuf  *pixbuf,
                            "tEXt::Thumb::Image::Height", height,
                            "tEXt::Thumb::URI", uri,
                            "tEXt::Thumb::MTime", mtime_str,
-                           "tEXt::Software", "MATE::ThumbnailFactory",
+                           "tEXt::Software", "CAFE::ThumbnailFactory",
                            NULL);
   else
     ret = gdk_pixbuf_save (pixbuf,
@@ -1180,7 +1180,7 @@ save_thumbnail (GdkPixbuf  *pixbuf,
                            "png", &error,
                            "tEXt::Thumb::URI", uri,
                            "tEXt::Thumb::MTime", mtime_str,
-                           "tEXt::Software", "MATE::ThumbnailFactory",
+                           "tEXt::Software", "CAFE::ThumbnailFactory",
                            NULL);
   g_free (mtime_str);
 

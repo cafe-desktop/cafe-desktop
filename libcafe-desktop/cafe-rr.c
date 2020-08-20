@@ -22,7 +22,7 @@
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
@@ -37,7 +37,7 @@
 #include <gdk/gdkx.h>
 #include <X11/Xatom.h>
 
-#undef MATE_DISABLE_DEPRECATED
+#undef CAFE_DISABLE_DEPRECATED
 #include "mate-rr.h"
 #include "mate-rr-config.h"
 
@@ -457,7 +457,7 @@ fill_out_screen_info (Display *xdisplay,
     }
     else
     {
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_RANDR_ERROR,
+	g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_RANDR_ERROR,
 		     /* Translators: a CRTC is a CRT Controller (this is X terminology). */
 		     _("could not get the screen resources (CRTCs, outputs, modes)"));
 	return FALSE;
@@ -479,13 +479,13 @@ fill_out_screen_info (Display *xdisplay,
 					 &(info->max_height));
 	gdk_display_flush (display);
 	if (gdk_x11_display_error_trap_pop (display)) {
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_UNKNOWN,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_UNKNOWN,
 			 _("unhandled X error while getting the range of screen sizes"));
 	    return FALSE;
 	}
 
 	if (!success) {
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_RANDR_ERROR,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_RANDR_ERROR,
 			 _("could not get the range of screen sizes"));
             return FALSE;
         }
@@ -665,7 +665,7 @@ static gboolean
 mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **error)
 
 {
-    MateRRScreen *self = MATE_RR_SCREEN (initable);
+    MateRRScreen *self = CAFE_RR_SCREEN (initable);
     MateRRScreenPrivate *priv = self->priv;
     Display *dpy = GDK_SCREEN_XDISPLAY (self->priv->gdk_screen);
     int event_base;
@@ -680,7 +680,7 @@ mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
 
         XRRQueryVersion (dpy, &priv->rr_major_version, &priv->rr_minor_version);
         if (priv->rr_major_version < 1 || (priv->rr_major_version == 1 && priv->rr_minor_version < 3)) {
-            g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
+            g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_NO_RANDR_EXTENSION,
                 "RANDR extension is too old (must be at least 1.3)");
             return FALSE;
         }
@@ -704,7 +704,7 @@ mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
     else
     {
 #endif /* HAVE_RANDR */
-    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
+    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_NO_RANDR_EXTENSION,
         _("RANDR extension is not present"));
 
     return FALSE;
@@ -723,7 +723,7 @@ mate_rr_screen_initable_iface_init (GInitableIface *iface)
 void
     mate_rr_screen_finalize (GObject *gobject)
 {
-    MateRRScreen *screen = MATE_RR_SCREEN (gobject);
+    MateRRScreen *screen = CAFE_RR_SCREEN (gobject);
 
     gdk_window_remove_filter (screen->priv->gdk_root, screen_on_event, screen);
 
@@ -736,7 +736,7 @@ void
 void
 mate_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *property)
 {
-    MateRRScreen *self = MATE_RR_SCREEN (gobject);
+    MateRRScreen *self = CAFE_RR_SCREEN (gobject);
     MateRRScreenPrivate *priv = self->priv;
 
     switch (property_id)
@@ -757,7 +757,7 @@ mate_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *
 void
 mate_rr_screen_get_property (GObject *gobject, guint property_id, GValue *value, GParamSpec *property)
 {
-    MateRRScreen *self = MATE_RR_SCREEN (gobject);
+    MateRRScreen *self = CAFE_RR_SCREEN (gobject);
     MateRRScreenPrivate *priv = self->priv;
 
     switch (property_id)
@@ -833,7 +833,7 @@ mate_rr_screen_new (GdkScreen *screen,
                     GError **error)
 {
     _mate_desktop_init_i18n ();
-    return g_initable_new (MATE_TYPE_RR_SCREEN, NULL, error, "gdk-screen", screen, NULL);
+    return g_initable_new (CAFE_TYPE_RR_SCREEN, NULL, error, "gdk-screen", screen, NULL);
 }
 
 void
@@ -843,7 +843,7 @@ mate_rr_screen_set_size (MateRRScreen *screen,
 			  int       mm_width,
 			  int       mm_height)
 {
-    g_return_if_fail (MATE_IS_RR_SCREEN (screen));
+    g_return_if_fail (CAFE_IS_RR_SCREEN (screen));
 
 #ifdef HAVE_RANDR
 	GdkDisplay *display;
@@ -875,7 +875,7 @@ mate_rr_screen_get_ranges (MateRRScreen *screen,
 {
     MateRRScreenPrivate *priv;
 
-    g_return_if_fail (MATE_IS_RR_SCREEN (screen));
+    g_return_if_fail (CAFE_IS_RR_SCREEN (screen));
 
     priv = screen->priv;
 
@@ -911,7 +911,7 @@ mate_rr_screen_get_timestamps (MateRRScreen *screen,
 {
     MateRRScreenPrivate *priv;
 
-    g_return_if_fail (MATE_IS_RR_SCREEN (screen));
+    g_return_if_fail (CAFE_IS_RR_SCREEN (screen));
 
     priv = screen->priv;
 
@@ -1018,7 +1018,7 @@ mate_rr_screen_refresh (MateRRScreen *screen,
 MateRRMode **
 mate_rr_screen_list_modes (MateRRScreen *screen)
 {
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     return screen->priv->info->modes;
@@ -1034,7 +1034,7 @@ mate_rr_screen_list_modes (MateRRScreen *screen)
 MateRRMode **
 mate_rr_screen_list_clone_modes   (MateRRScreen *screen)
 {
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     return screen->priv->info->clone_modes;
@@ -1050,7 +1050,7 @@ mate_rr_screen_list_clone_modes   (MateRRScreen *screen)
 MateRRCrtc **
 mate_rr_screen_list_crtcs (MateRRScreen *screen)
 {
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     return screen->priv->info->crtcs;
@@ -1066,7 +1066,7 @@ mate_rr_screen_list_crtcs (MateRRScreen *screen)
 MateRROutput **
 mate_rr_screen_list_outputs (MateRRScreen *screen)
 {
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     return screen->priv->info->outputs;
@@ -1084,7 +1084,7 @@ mate_rr_screen_get_crtc_by_id (MateRRScreen *screen,
     MateRRCrtc **crtcs;
     int i;
 
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     crtcs = screen->priv->info->crtcs;
@@ -1110,7 +1110,7 @@ mate_rr_screen_get_output_by_id (MateRRScreen *screen,
     MateRROutput **outputs;
     int i;
 
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     outputs = screen->priv->info->outputs;
@@ -1261,7 +1261,7 @@ output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error
     {
 	/* FIXME: see the comment in crtc_initialize() */
 	/* Translators: here, an "output" is a video output */
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_RANDR_ERROR,
+	g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_RANDR_ERROR,
 		     _("could not get information about output %d"),
 		     (int) output->id);
 	return FALSE;
@@ -1407,7 +1407,7 @@ mate_rr_screen_get_output_by_name (MateRRScreen *screen,
 {
     int i;
 
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     for (i = 0; screen->priv->info->outputs[i] != NULL; ++i)
@@ -1480,7 +1480,7 @@ mate_rr_output_is_laptop (MateRROutput *output)
     if (!output->connected)
         return FALSE;
 
-    if (g_strcmp0 (output->connector_type, MATE_RR_CONNECTOR_TYPE_PANEL) == 0)
+    if (g_strcmp0 (output->connector_type, CAFE_RR_CONNECTOR_TYPE_PANEL) == 0)
         return TRUE;
 
     /* Fallback (see https://bugs.freedesktop.org/show_bug.cgi?id=26736) */
@@ -1633,7 +1633,7 @@ mate_rr_screen_set_primary_output (MateRRScreen *screen,
 #ifdef HAVE_RANDR
     MateRRScreenPrivate *priv;
 
-    g_return_if_fail (MATE_IS_RR_SCREEN (screen));
+    g_return_if_fail (CAFE_IS_RR_SCREEN (screen));
 
     priv = screen->priv;
 
@@ -1657,12 +1657,12 @@ typedef struct
 
 static const RotationMap rotation_map[] =
 {
-    { RR_Rotate_0, MATE_RR_ROTATION_0 },
-    { RR_Rotate_90, MATE_RR_ROTATION_90 },
-    { RR_Rotate_180, MATE_RR_ROTATION_180 },
-    { RR_Rotate_270, MATE_RR_ROTATION_270 },
-    { RR_Reflect_X, MATE_RR_REFLECT_X },
-    { RR_Reflect_Y, MATE_RR_REFLECT_Y },
+    { RR_Rotate_0, CAFE_RR_ROTATION_0 },
+    { RR_Rotate_90, CAFE_RR_ROTATION_90 },
+    { RR_Rotate_180, CAFE_RR_ROTATION_180 },
+    { RR_Rotate_270, CAFE_RR_ROTATION_270 },
+    { RR_Reflect_X, CAFE_RR_REFLECT_X },
+    { RR_Reflect_Y, CAFE_RR_REFLECT_Y },
 };
 
 static MateRRRotation
@@ -1695,7 +1695,7 @@ xrotation_from_rotation (MateRRRotation r)
     return result;
 }
 
-#ifndef MATE_DISABLE_DEPRECATED_SOURCE
+#ifndef CAFE_DISABLE_DEPRECATED_SOURCE
 gboolean
 mate_rr_crtc_set_config (MateRRCrtc      *crtc,
 			  int               x,
@@ -1740,7 +1740,7 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 	if (x + mode->width > info->max_width
 	    || y + mode->height > info->max_height)
 	{
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_BOUNDS_ERROR,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_BOUNDS_ERROR,
 			 /* Translators: the "position", "size", and "maximum"
 			  * words here are not keywords; please translate them
 			  * as usual.  A CRTC is a CRT Controller (this is X terminology) */
@@ -1778,7 +1778,7 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
         /* Translators: CRTC is a CRT Controller (this is X terminology).
          * It is *very* unlikely that you'll ever get this error, so it is
          * only listed for completeness. */
-        g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_RANDR_ERROR,
+        g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_RANDR_ERROR,
                      _("could not set the configuration for CRTC %d"),
                      (int) crtc->id);
         return FALSE;
@@ -1942,7 +1942,7 @@ crtc_initialize (MateRRCrtc        *crtc,
 	/* Translators: CRTC is a CRT Controller (this is X terminology).
 	 * It is *very* unlikely that you'll ever get this error, so it is
 	 * only listed for completeness. */
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_RANDR_ERROR,
+	g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_RANDR_ERROR,
 		     _("could not get information about CRTC %d"),
 		     (int) crtc->id);
 	return FALSE;

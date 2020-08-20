@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
  
-[MATE.1-24--mate-desktop]
+[CAFE.1-24--mate-desktop]
 file_filter = po/<lang>.po
 source_file = mate-desktop.pot
 source_lang = en

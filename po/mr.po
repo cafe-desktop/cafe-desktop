@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -28,12 +28,12 @@ msgid "translator-credits"
 msgstr "भाषांतराचे श्रेय Vaibhav Dalvi<vaibhav.dlv@gmail.com> 2014"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "MATE विषयी"
+msgid "About CAFE"
+msgstr "CAFE विषयी"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "MATE विषयी अधिक शिका"
+msgid "Learn more about CAFE"
+msgstr "CAFE विषयी अधिक शिका"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -42,19 +42,19 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
+msgid "CAFE Desktop Environment"
 msgstr ""
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
 "पारंपारिक रूपके वापरणाऱ्या लिनक्स वापरकर्त्यांना मेट एक अंतर्द्यानी आणि "
@@ -62,7 +62,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 "मेटमध्ये तुम्ही संगणकावर पाहता ते फाईल व्यवस्थापक, कागदपत्र दर्शक, प्रतिमा "
@@ -70,13 +70,13 @@ msgstr ""
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
@@ -85,14 +85,14 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "ग्नोम 2 हा सर्वात प्रसिद्ध डेस्कटाॅप होता, पण तो आता उपलब्ध नाहीये… मेट इथे "
 "तुम्हाला तसाच डेस्कटाॅप देतोय!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
@@ -605,8 +605,8 @@ msgstr "सुरूवातीचे संयुक्त तंत्रज�
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
-msgstr "MATE डेस्कटॉपवर दाखलन करतेवेळी संयुक्त तंत्रज्ञाण अनुप्रयोगांची यादी."
+"CAFE desktop."
+msgstr "CAFE डेस्कटॉपवर दाखलन करतेवेळी संयुक्त तंत्रज्ञाण अनुप्रयोगांची यादी."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -626,10 +626,10 @@ msgstr "अधिमान्यता चलनशीलता संयुक�
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATE दाखलन करतेवेळी अधिमान्यता चलनशीलता तंत्रज्ञाण अनुप्रयोग सुरू करणार आहे."
+"CAFE दाखलन करतेवेळी अधिमान्यता चलनशीलता तंत्रज्ञाण अनुप्रयोग सुरू करणार आहे."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -647,10 +647,10 @@ msgstr "अधिमान्यता दृश्य संयुक्त त
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"MATE अधिमान्यता दृश्य संयुक्त तंत्रज्ञाण अनुप्रयोग दाखलनवेळी सुरू करणार आहे."
+"CAFE अधिमान्यता दृश्य संयुक्त तंत्रज्ञाण अनुप्रयोग दाखलनवेळी सुरू करणार आहे."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -750,15 +750,15 @@ msgid "Draw Desktop Background"
 msgstr "डेस्कटॉपची पार्श्वभूमी तयार करा"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "MATE ला डेस्कटॉप पार्श्वभूमी रेखाटू द्या."
+msgid "Have CAFE draw the desktop background."
+msgstr "CAFE ला डेस्कटॉप पार्श्वभूमी रेखाटू द्या."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "डेस्कटॉप बटण दाखवा"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr "मेट फ़ाइल व्यवस्थापक(Caja) ला डेस्कटॉप पार्श्वभूमी रेखाटू द्या."
 
 #: schemas/org.mate.background.gschema.xml.in:28
@@ -767,7 +767,7 @@ msgstr "पार्श्वभूमी बदलताना हळूहळ�
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr "जर खरे केल्यास, मेट पार्श्वभूमी बदलताना हळूहळू दिसेनाशी करेल"
 
@@ -1161,7 +1161,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1389,7 +1389,7 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "कळफलक कुलुप बंद करण्याची सुविधा उपलब्ध आहे का."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
+msgid "CAFE Color Selection"
 msgstr ""
 
 #: tools/mate-color-select.desktop.in:4
@@ -1409,5 +1409,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

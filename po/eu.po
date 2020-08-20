@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -31,12 +31,12 @@ msgstr ""
 "Aritz Jorge Sánchez"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "MATEri buruz"
+msgid "About CAFE"
+msgstr "CAFEri buruz"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Ikasi gehiago MATEri buruz"
+msgid "Learn more about CAFE"
+msgstr "Ikasi gehiago CAFEri buruz"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -45,49 +45,49 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
+msgid "CAFE Desktop Environment"
 msgstr ""
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATEk mahaigain intuitibo eta erakargarri bat eskaintzen die Linux "
+"CAFEk mahaigain intuitibo eta erakargarri bat eskaintzen die Linux "
 "erabiltzaileei metafora tradizionalak erabiliz"
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE ordenagailuan ikusten duzun ia guztia da, hala nola, fitxategi-"
+"CAFE ordenagailuan ikusten duzun ia guztia da, hala nola, fitxategi-"
 "kudeatzailea, dokumentu-ikustailea, irudi-ikustailea, menuak eta hainbat "
 "aplikazio."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE Unix-moduko sistema-eragile familiarentzako mahaigain-ingurune libre, "
+"CAFE Unix-moduko sistema-eragile familiarentzako mahaigain-ingurune libre, "
 "erabilgarri eta egonkorra da."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE GNOME 2ren jarraipena da. Ehunka pertsonak parte hartu dute GNOMEren "
+"CAFE GNOME 2ren jarraipena da. Ehunka pertsonak parte hartu dute GNOMEren "
 "kodean 1997tik hona; beste hainbat pertsonak ere parte hartu dute "
 "itzulpenak, dokumentazioa eta kalitate-bermatzea bezalako lan garrantzitsuak"
 " eginez."
@@ -95,18 +95,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 Linux mahaigain ezagunena zen baina jada ez dago eskuragarri... "
-"baina hemen dago MATE mahaigain bera eskaintzeko!"
+"baina hemen dago CAFE mahaigain bera eskaintzeko!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"MATE izena mate landaretik dator. Espezie honek Hego Amerika subtropikalean "
+"CAFE izena mate landaretik dator. Espezie honek Hego Amerika subtropikalean "
 "du jatorria. Kafeina dauka eta infusioak eta mate deituriko edaria egiteko "
 "erabiltzen da."
 
@@ -633,9 +633,9 @@ msgstr "Laguntza-teknologien aplikazioen abioa"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
-"MATEren mahaigainean saioa hastean abiarazi beharreko laguntza-teknologien "
+"CAFEren mahaigainean saioa hastean abiarazi beharreko laguntza-teknologien "
 "aplikazio-zerrenda."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
@@ -656,10 +656,10 @@ msgstr "Abiarazi laguntza-teknologien aplikazio hobetsia"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"MATEk abiaraziko duen laguntza-teknologien aplikazio hobetsia saio-hasieran."
+"CAFEk abiaraziko duen laguntza-teknologien aplikazio hobetsia saio-hasieran."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -677,10 +677,10 @@ msgstr "Abiarazi laguntza-teknologia bisualen aplikazio hobetsia"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"MATEk abiaraziko duen laguntza-teknologia bisualen aplikazio hobetsia saio-"
+"CAFEk abiaraziko duen laguntza-teknologia bisualen aplikazio hobetsia saio-"
 "hasieran."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
@@ -788,17 +788,17 @@ msgid "Draw Desktop Background"
 msgstr "Marraztu mahaigainaren atzeko planoa"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "MATEk marraztu behar du mahaigainaren atzeko planoa."
+msgid "Have CAFE draw the desktop background."
+msgstr "CAFEk marraztu behar du mahaigainaren atzeko planoa."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Erakutsi mahaigaineko ikonoak"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
-"MATEren fitxategi-kudeatzaileak (Caja) marraztu behar ditu mahaigaineko "
+"CAFEren fitxategi-kudeatzaileak (Caja) marraztu behar ditu mahaigaineko "
 "ikonoak."
 
 #: schemas/org.mate.background.gschema.xml.in:28
@@ -807,7 +807,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
 
@@ -1229,7 +1229,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1466,8 +1466,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Teklatuaren blokeoa gaituta dagoen ala ez adierazten du."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "MATE kolore-hautapena"
+msgid "CAFE Color Selection"
+msgstr "CAFE kolore-hautapena"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1486,5 +1486,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

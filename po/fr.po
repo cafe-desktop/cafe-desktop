@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -38,7 +38,7 @@ msgstr ""
 #: mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr ""
-"Contributeurs au projet MATE :\n"
+"Contributeurs au projet CAFE :\n"
 "Voir https://www.transifex.com/mate/teams/13566/fr/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"
@@ -54,12 +54,12 @@ msgstr ""
 "Gérard Baylard <gerard dot b at bbox dot fr>, 2010"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "À propos de MATE"
+msgid "About CAFE"
+msgstr "À propos de CAFE"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "En savoir plus sur MATE"
+msgid "Learn more about CAFE"
+msgstr "En savoir plus sur CAFE"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -68,52 +68,52 @@ msgid "mate-desktop"
 msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
-msgstr "Environnement de bureau MATE"
+msgid "CAFE Desktop Environment"
+msgstr "Environnement de bureau CAFE"
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 Les développeurs de MATE"
+"Copyright © 2012-2020 Les développeurs de CAFE"
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE offre un bureau intuitif et attractif aux utilisateurs de GNU/Linux qui"
+"CAFE offre un bureau intuitif et attractif aux utilisateurs de GNU/Linux qui"
 " préfèrent les métaphores traditionnelles."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE comprend la plupart des éléments que vous voyez sur votre ordinateur, "
+"CAFE comprend la plupart des éléments que vous voyez sur votre ordinateur, "
 "incluant le gestionnaire de fichiers, les visionneuses de documents et "
 "d'images, les menus ainsi que de nombreuses applications."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE est un environnement de bureau libre, stable et cohérent pour les "
+"CAFE est un environnement de bureau libre, stable et cohérent pour les "
 "systèmes d'exploitation de la famille Unix."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE est la continuation de GNOME 2. Des centaines de personnes ont "
+"CAFE est la continuation de GNOME 2. Des centaines de personnes ont "
 "contribué au code de GNOME depuis son début en 1997; et bien plus ont "
 "contribué de façon tout aussi importante aux traductions, à la documentation"
 " et à l'assurance qualité."
@@ -121,18 +121,18 @@ msgstr ""
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 était le bureau GNU/Linux le plus populaire mais n'est plus "
-"disponible... MATE est là pour vous offrir le même bureau !"
+"disponible... CAFE est là pour vous offrir le même bureau !"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"Le nom « MATE » vient de yerba maté, espèce sud-américaine subtropicale du "
+"Le nom « CAFE » vient de yerba maté, espèce sud-américaine subtropicale du "
 "genre Ilex (comme les houx). Ses feuilles contiennent de la caféine, et, "
 "infusées, fournissent la boisson appelée mate."
 
@@ -677,10 +677,10 @@ msgstr "Applications d'aide technique à lancer à l'ouverture de session"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 "Liste des applications d'aide technique à lancer lors de l'ouverture d'une "
-"session de bureau MATE. "
+"session de bureau CAFE. "
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -700,10 +700,10 @@ msgstr "Démarrer l'application d'aide technique de mobilité préférée"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"Indique si MATE doit démarrer l'application d'aide technique  pour la "
+"Indique si CAFE doit démarrer l'application d'aide technique  pour la "
 "mobilité préférée à l'ouverture d'une session."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
@@ -724,10 +724,10 @@ msgstr "Démarrer l'application d'aide technique visuelle préférée"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"Indique si MATE doit démarrer l'application d'aide technique visuelle "
+"Indique si CAFE doit démarrer l'application d'aide technique visuelle "
 "préférée à l'ouverture d'une session."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
@@ -840,9 +840,9 @@ msgid "Draw Desktop Background"
 msgstr "Dessiner l'arrière-plan du bureau"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
+msgid "Have CAFE draw the desktop background."
 msgstr ""
-"Indique que MATE doit prendre en charge l'affichage de l'arrière-plan du "
+"Indique que CAFE doit prendre en charge l'affichage de l'arrière-plan du "
 "bureau."
 
 #: schemas/org.mate.background.gschema.xml.in:23
@@ -850,9 +850,9 @@ msgid "Show Desktop Icons"
 msgstr "Afficher les icônes du bureau"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
-"Indique que le gestionnaire de fichiers de MATE (Caja) doit prendre en "
+"Indique que le gestionnaire de fichiers de CAFE (Caja) doit prendre en "
 "charge l'affichage des icônes du bureau."
 
 #: schemas/org.mate.background.gschema.xml.in:28
@@ -861,10 +861,10 @@ msgstr "Effet de fondu lors d'un changement"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Si l'option est sélectionnée, MATE changera le fond d'écran avec un effet de"
+"Si l'option est sélectionnée, CAFE changera le fond d'écran avec un effet de"
 " fondu."
 
 #: schemas/org.mate.background.gschema.xml.in:33
@@ -1320,12 +1320,12 @@ msgstr "Facteur d’échelle pour les applications QT"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Ce paramètre détermine si MATE contrôle le facteur d’échelle pour les "
+"Ce paramètre détermine si CAFE contrôle le facteur d’échelle pour les "
 "applications QT.  Activer pour synchroniser avec le facteur d’échelle GTK "
 "lors de l’initialisation de la session, désactiver pour contrôler cette "
 "valeur ailleurs. Nécessite le redémarrage de votre session."
@@ -1566,8 +1566,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Indique si le verrouillage du clavier est activé ou non."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "Sélection de couleur MATE"
+msgid "CAFE Color Selection"
+msgstr "Sélection de couleur CAFE"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1586,5 +1586,5 @@ msgstr "gtk-select-color"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

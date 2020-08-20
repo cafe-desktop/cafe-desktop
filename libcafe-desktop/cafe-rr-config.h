@@ -23,11 +23,11 @@
  *
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
-#ifndef MATE_RR_CONFIG_H
-#define MATE_RR_CONFIG_H
+#ifndef CAFE_RR_CONFIG_H
+#define CAFE_RR_CONFIG_H
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error   mate-rr-config.h is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-rr-config.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error   mate-rr-config.h is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-rr-config.h
 #endif
 
 #include "mate-rr.h"
@@ -50,12 +50,12 @@ typedef struct
     GObjectClass parent_class;
 } MateRROutputInfoClass;
 
-#define MATE_TYPE_RR_OUTPUT_INFO                  (mate_rr_output_info_get_type())
-#define MATE_RR_OUTPUT_INFO(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_OUTPUT_INFO, MateRROutputInfo))
-#define MATE_IS_RR_OUTPUT_INFO(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_OUTPUT_INFO))
-#define MATE_RR_OUTPUT_INFO_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))
-#define MATE_IS_RR_OUTPUT_INFO_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_RR_OUTPUT_INFO))
-#define MATE_RR_OUTPUT_INFO_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))
+#define CAFE_TYPE_RR_OUTPUT_INFO                  (mate_rr_output_info_get_type())
+#define CAFE_RR_OUTPUT_INFO(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_OUTPUT_INFO, MateRROutputInfo))
+#define CAFE_IS_RR_OUTPUT_INFO(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_OUTPUT_INFO))
+#define CAFE_RR_OUTPUT_INFO_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))
+#define CAFE_IS_RR_OUTPUT_INFO_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_RR_OUTPUT_INFO))
+#define CAFE_RR_OUTPUT_INFO_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))
 
 GType mate_rr_output_info_get_type (void);
 
@@ -100,12 +100,12 @@ typedef struct
     GObjectClass parent_class;
 } MateRRConfigClass;
 
-#define MATE_TYPE_RR_CONFIG                  (mate_rr_config_get_type())
-#define MATE_RR_CONFIG(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_CONFIG, MateRRConfig))
-#define MATE_IS_RR_CONFIG(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_CONFIG))
-#define MATE_RR_CONFIG_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_RR_CONFIG, MateRRConfigClass))
-#define MATE_IS_RR_CONFIG_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_RR_CONFIG))
-#define MATE_RR_CONFIG_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_RR_CONFIG, MateRRConfigClass))
+#define CAFE_TYPE_RR_CONFIG                  (mate_rr_config_get_type())
+#define CAFE_RR_CONFIG(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_CONFIG, MateRRConfig))
+#define CAFE_IS_RR_CONFIG(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_CONFIG))
+#define CAFE_RR_CONFIG_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_RR_CONFIG, MateRRConfigClass))
+#define CAFE_IS_RR_CONFIG_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_RR_CONFIG))
+#define CAFE_RR_CONFIG_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_RR_CONFIG, MateRRConfigClass))
 
 GType               mate_rr_config_get_type     (void);
 

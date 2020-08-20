@@ -1,5 +1,5 @@
 /* -*- Mode: C; c-set-style: linux indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
-/* mate-ditem.h - Utilities for the MATE Desktop
+/* mate-ditem.h - Utilities for the CAFE Desktop
 
    Copyright (C) 1998 Tom Tromey
    All rights reserved.
@@ -24,11 +24,11 @@
   @NOTATION@
  */
 
-#ifndef MATE_DESKTOP_UTILS_H
-#define MATE_DESKTOP_UTILS_H
+#ifndef CAFE_DESKTOP_UTILS_H
+#define CAFE_DESKTOP_UTILS_H
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error    mate-desktop-utils is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-desktop-utils.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error    mate-desktop-utils is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-desktop-utils.h
 #endif
 
 #include <glib.h>
@@ -55,4 +55,4 @@ mate_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
 
 G_END_DECLS
 
-#endif /* MATE_DESKTOP_UTILS_H */
+#endif /* CAFE_DESKTOP_UTILS_H */

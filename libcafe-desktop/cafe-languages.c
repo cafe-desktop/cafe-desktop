@@ -36,7 +36,7 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include "mate-languages.h"
 
 #include <langinfo.h>
@@ -373,7 +373,7 @@ mate_language_has_translations (const char *code)
         gboolean     has_translations;
         gchar *path = NULL;
 
-        path = g_build_filename (MATELOCALEDIR, code, "LC_MESSAGES", NULL);
+        path = g_build_filename (CAFELOCALEDIR, code, "LC_MESSAGES", NULL);
         has_translations = locale_dir_has_mo_files (path);
 
         if (!has_translations) {
@@ -486,7 +486,7 @@ select_dirs (const struct dirent *dirent)
                                 struct stat st;
                                 g_autofree char *path = NULL;
 
-                                path = g_build_filename (MATELOCALEDIR, dirent->d_name, NULL);
+                                path = g_build_filename (CAFELOCALEDIR, dirent->d_name, NULL);
                                 if (g_stat (path, &st) == 0) {
                                         mode = st.st_mode;
                                 }
@@ -506,7 +506,7 @@ collect_locales_from_directory (void)
         int             ndirents;
         int             cnt;
 
-        ndirents = scandir (MATELOCALEDIR, &dirents, select_dirs, alphasort);
+        ndirents = scandir (CAFELOCALEDIR, &dirents, select_dirs, alphasort);
 
         for (cnt = 0; cnt < ndirents; ++cnt) {
                 if (add_locale (dirents[cnt]->d_name, TRUE))

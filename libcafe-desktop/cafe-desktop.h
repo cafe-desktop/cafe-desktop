@@ -22,8 +22,8 @@
  *  Stefano Karapetsas <stefano@karapetsas.com>
  */
 
-#ifndef __MATE_DESKTOP_H__
-#define __MATE_DESKTOP_H__
+#ifndef __CAFE_DESKTOP_H__
+#define __CAFE_DESKTOP_H__
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
@@ -33,12 +33,12 @@
 
 G_BEGIN_DECLS
 
-#define MATE_DESKTOP_CHECK_VERSION(major,minor,micro) \
-        (MATE_MAJOR > (major) || \
-        (MATE_MAJOR == (major) && MATE_MINOR > (minor)) || \
-        (MATE_MAJOR == (major) && MATE_MINOR == (minor) && \
-        MATE_MICRO >= (micro)))
+#define CAFE_DESKTOP_CHECK_VERSION(major,minor,micro) \
+        (CAFE_MAJOR > (major) || \
+        (CAFE_MAJOR == (major) && CAFE_MINOR > (minor)) || \
+        (CAFE_MAJOR == (major) && CAFE_MINOR == (minor) && \
+        CAFE_MICRO >= (micro)))
 
 G_END_DECLS
 
-#endif /* __MATE_DESKTOP_H__ */
+#endif /* __CAFE_DESKTOP_H__ */

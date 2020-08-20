@@ -43,13 +43,13 @@ Authors: Soren Sandmann <sandmann@redhat.com>
 
 #include <cairo.h>
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include <mate-bg.h>
 #include <mate-bg-crossfade.h>
 
 # include <cairo-xlib.h>
 
-#define MATE_BG_CACHE_DIR "mate/background"
+#define CAFE_BG_CACHE_DIR "mate/background"
 
 /* We keep the large pixbufs around if the next update
    in the slideshow is less than 60 seconds away */
@@ -273,7 +273,7 @@ void
 mate_bg_load_from_preferences (MateBG *bg)
 {
 	GSettings *settings;
-	settings = g_settings_new (MATE_BG_SCHEMA);
+	settings = g_settings_new (CAFE_BG_SCHEMA);
 
 	mate_bg_load_from_gsettings (bg, settings);
 	g_object_unref (settings);
@@ -292,7 +292,7 @@ mate_bg_load_from_system_preferences (MateBG *bg)
 	* that's currently impossible, not implemented yet.
 	* Hence, reset to system default values.
 	*/
-	settings = g_settings_new (MATE_BG_SCHEMA);
+	settings = g_settings_new (CAFE_BG_SCHEMA);
 
 	mate_bg_load_from_system_gsettings (bg, settings, FALSE);
 
@@ -309,7 +309,7 @@ mate_bg_load_from_system_gsettings (MateBG    *bg,
 	gchar **keys;
 	gchar **k;
 
-	g_return_if_fail (MATE_IS_BG (bg));
+	g_return_if_fail (CAFE_IS_BG (bg));
 	g_return_if_fail (G_IS_SETTINGS (settings));
 
 	g_settings_delay (settings);
@@ -342,14 +342,14 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	GdkRGBA c1, c2;
 	MateBGPlacement placement;
 
-	g_return_if_fail (MATE_IS_BG (bg));
+	g_return_if_fail (CAFE_IS_BG (bg));
 	g_return_if_fail (G_IS_SETTINGS (settings));
 
-	bg->is_enabled = g_settings_get_boolean (settings, MATE_BG_KEY_DRAW_BACKGROUND);
+	bg->is_enabled = g_settings_get_boolean (settings, CAFE_BG_KEY_DRAW_BACKGROUND);
 
 	/* Filename */
 	filename = NULL;
-	tmp = g_settings_get_string (settings, MATE_BG_KEY_PICTURE_FILENAME);
+	tmp = g_settings_get_string (settings, CAFE_BG_KEY_PICTURE_FILENAME);
 	if (tmp && *tmp != '\0') {
 		/* FIXME: UTF-8 checks should go away.
 		 * picture-filename is of type string, which can only be used for
@@ -371,8 +371,8 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 			g_free (filename);
 
 			g_settings_delay (settings);
-			g_settings_reset (settings, MATE_BG_KEY_PICTURE_FILENAME);
-			filename = g_settings_get_string (settings, MATE_BG_KEY_PICTURE_FILENAME);
+			g_settings_reset (settings, CAFE_BG_KEY_PICTURE_FILENAME);
+			filename = g_settings_get_string (settings, CAFE_BG_KEY_PICTURE_FILENAME);
 			g_settings_revert (settings);
 
 			//* Check if default background exists, also */
@@ -385,19 +385,19 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	g_free (tmp);
 
 	/* Colors */
-	tmp = g_settings_get_string (settings, MATE_BG_KEY_PRIMARY_COLOR);
+	tmp = g_settings_get_string (settings, CAFE_BG_KEY_PRIMARY_COLOR);
 	color_from_string (tmp, &c1);
 	g_free (tmp);
 
-	tmp = g_settings_get_string (settings, MATE_BG_KEY_SECONDARY_COLOR);
+	tmp = g_settings_get_string (settings, CAFE_BG_KEY_SECONDARY_COLOR);
 	color_from_string (tmp, &c2);
 	g_free (tmp);
 
 	/* Color type */
-	ctype = g_settings_get_enum (settings, MATE_BG_KEY_COLOR_TYPE);
+	ctype = g_settings_get_enum (settings, CAFE_BG_KEY_COLOR_TYPE);
 
 	/* Placement */
-	placement = g_settings_get_enum (settings, MATE_BG_KEY_PICTURE_PLACEMENT);
+	placement = g_settings_get_enum (settings, CAFE_BG_KEY_PICTURE_PLACEMENT);
 
 	mate_bg_set_color (bg, ctype, &c1, &c2);
 	mate_bg_set_placement (bg, placement);
@@ -411,7 +411,7 @@ void
 mate_bg_save_to_preferences (MateBG *bg)
 {
 	GSettings *settings;
-	settings = g_settings_new (MATE_BG_SCHEMA);
+	settings = g_settings_new (CAFE_BG_SCHEMA);
 
 	mate_bg_save_to_gsettings (bg, settings);
 	g_object_unref (settings);
@@ -424,7 +424,7 @@ mate_bg_save_to_gsettings (MateBG    *bg,
 	gchar *primary;
 	gchar *secondary;
 
-	g_return_if_fail (MATE_IS_BG (bg));
+	g_return_if_fail (CAFE_IS_BG (bg));
 	g_return_if_fail (G_IS_SETTINGS (settings));
 
 	primary = color_to_string (&bg->primary);
@@ -432,12 +432,12 @@ mate_bg_save_to_gsettings (MateBG    *bg,
 
 	g_settings_delay (settings);
 
-	g_settings_set_boolean (settings, MATE_BG_KEY_DRAW_BACKGROUND, bg->is_enabled);
-	g_settings_set_string (settings, MATE_BG_KEY_PICTURE_FILENAME, bg->filename);
-	g_settings_set_enum (settings, MATE_BG_KEY_PICTURE_PLACEMENT, bg->placement);
-	g_settings_set_string (settings, MATE_BG_KEY_PRIMARY_COLOR, primary);
-	g_settings_set_string (settings, MATE_BG_KEY_SECONDARY_COLOR, secondary);
-	g_settings_set_enum (settings, MATE_BG_KEY_COLOR_TYPE, bg->color_type);
+	g_settings_set_boolean (settings, CAFE_BG_KEY_DRAW_BACKGROUND, bg->is_enabled);
+	g_settings_set_string (settings, CAFE_BG_KEY_PICTURE_FILENAME, bg->filename);
+	g_settings_set_enum (settings, CAFE_BG_KEY_PICTURE_PLACEMENT, bg->placement);
+	g_settings_set_string (settings, CAFE_BG_KEY_PRIMARY_COLOR, primary);
+	g_settings_set_string (settings, CAFE_BG_KEY_SECONDARY_COLOR, secondary);
+	g_settings_set_enum (settings, CAFE_BG_KEY_COLOR_TYPE, bg->color_type);
 
 	/* Apply changes atomically. */
 	g_settings_apply (settings);
@@ -455,7 +455,7 @@ mate_bg_init (MateBG *bg)
 static void
 mate_bg_dispose (GObject *object)
 {
-	MateBG *bg = MATE_BG (object);
+	MateBG *bg = CAFE_BG (object);
 
 	if (bg->file_monitor) {
 		g_object_unref (bg->file_monitor);
@@ -470,7 +470,7 @@ mate_bg_dispose (GObject *object)
 static void
 mate_bg_finalize (GObject *object)
 {
-	MateBG *bg = MATE_BG (object);
+	MateBG *bg = CAFE_BG (object);
 
 	if (bg->changed_id != 0) {
 		g_source_remove (bg->changed_id);
@@ -521,7 +521,7 @@ mate_bg_class_init (MateBGClass *klass)
 MateBG *
 mate_bg_new (void)
 {
-	return g_object_new (MATE_TYPE_BG, NULL);
+	return g_object_new (CAFE_TYPE_BG, NULL);
 }
 
 void
@@ -617,7 +617,7 @@ mate_bg_get_filename (MateBG *bg)
 static inline gchar *
 get_wallpaper_cache_dir ()
 {
-	return g_build_filename (g_get_user_cache_dir(), MATE_BG_CACHE_DIR, NULL);
+	return g_build_filename (g_get_user_cache_dir(), CAFE_BG_CACHE_DIR, NULL);
 }
 
 static inline gchar *
@@ -756,7 +756,7 @@ file_changed (GFileMonitor     *file_monitor,
 	      GFileMonitorEvent event_type,
 	      gpointer          user_data)
 {
-	MateBG *bg = MATE_BG (user_data);
+	MateBG *bg = CAFE_BG (user_data);
 
 	clear_cache (bg);
 	queue_changed (bg);
@@ -811,7 +811,7 @@ draw_color_area (MateBG       *bg,
 	gdk_rectangle_intersect (rect, &extent, rect);
 
 	switch (bg->color_type) {
-	case MATE_BG_COLOR_SOLID:
+	case CAFE_BG_COLOR_SOLID:
 		/* not really a big deal to ignore the area of interest */
 		pixel = ((guint) (bg->primary.red * 0xff) << 24)   |
 			((guint) (bg->primary.green * 0xff) << 16) |
@@ -821,11 +821,11 @@ draw_color_area (MateBG       *bg,
 		gdk_pixbuf_fill (dest, pixel);
 		break;
 
-	case MATE_BG_COLOR_H_GRADIENT:
+	case CAFE_BG_COLOR_H_GRADIENT:
 		pixbuf_draw_gradient (dest, TRUE, &(bg->primary), &(bg->secondary), rect);
 		break;
 
-	case MATE_BG_COLOR_V_GRADIENT:
+	case CAFE_BG_COLOR_V_GRADIENT:
 		pixbuf_draw_gradient (dest, FALSE, &(bg->primary), &(bg->secondary), rect);
 		break;
 
@@ -914,24 +914,24 @@ get_scaled_pixbuf (MateBGPlacement  placement,
 #endif
 
 	switch (placement) {
-	case MATE_BG_PLACEMENT_SPANNED:
+	case CAFE_BG_PLACEMENT_SPANNED:
                 new = pixbuf_scale_to_fit (pixbuf, width, height);
 		break;
-	case MATE_BG_PLACEMENT_ZOOMED:
+	case CAFE_BG_PLACEMENT_ZOOMED:
 		new = pixbuf_scale_to_min (pixbuf, width, height);
 		break;
 
-	case MATE_BG_PLACEMENT_FILL_SCREEN:
+	case CAFE_BG_PLACEMENT_FILL_SCREEN:
 		new = gdk_pixbuf_scale_simple (pixbuf, width, height,
 					       GDK_INTERP_BILINEAR);
 		break;
 
-	case MATE_BG_PLACEMENT_SCALED:
+	case CAFE_BG_PLACEMENT_SCALED:
 		new = pixbuf_scale_to_fit (pixbuf, width, height);
 		break;
 
-	case MATE_BG_PLACEMENT_CENTERED:
-	case MATE_BG_PLACEMENT_TILED:
+	case CAFE_BG_PLACEMENT_CENTERED:
+	case CAFE_BG_PLACEMENT_TILED:
 	default:
 		new = pixbuf_clip_to_fit (pixbuf, width, height);
 		break;
@@ -964,16 +964,16 @@ draw_image_area (MateBG        *bg,
 	scaled = get_scaled_pixbuf (bg->placement, pixbuf, dest_width, dest_height, &x, &y, &w, &h);
 
 	switch (bg->placement) {
-	case MATE_BG_PLACEMENT_TILED:
+	case CAFE_BG_PLACEMENT_TILED:
 		pixbuf_tile (scaled, dest);
 		break;
-	case MATE_BG_PLACEMENT_ZOOMED:
-	case MATE_BG_PLACEMENT_CENTERED:
-	case MATE_BG_PLACEMENT_FILL_SCREEN:
-	case MATE_BG_PLACEMENT_SCALED:
+	case CAFE_BG_PLACEMENT_ZOOMED:
+	case CAFE_BG_PLACEMENT_CENTERED:
+	case CAFE_BG_PLACEMENT_FILL_SCREEN:
+	case CAFE_BG_PLACEMENT_SCALED:
 		pixbuf_blend (scaled, dest, 0, 0, w, h, x + area->x, y + area->y, 1.0);
 		break;
-	case MATE_BG_PLACEMENT_SPANNED:
+	case CAFE_BG_PLACEMENT_SPANNED:
 		pixbuf_blend (scaled, dest, 0, 0, w, h, x, y, 1.0);
 		break;
 	default:
@@ -1061,7 +1061,7 @@ mate_bg_draw (MateBG     *bg,
 	if (!bg)
 		return;
 
-	if (is_root && (bg->placement != MATE_BG_PLACEMENT_SPANNED)) {
+	if (is_root && (bg->placement != CAFE_BG_PLACEMENT_SPANNED)) {
 		draw_color_each_monitor (bg, dest, screen);
 		if (bg->filename) {
 			draw_each_monitor (bg, dest, screen);
@@ -1112,13 +1112,13 @@ mate_bg_get_pixmap_size (MateBG   *bg,
 
 	if (!bg->filename) {
 		switch (bg->color_type) {
-		case MATE_BG_COLOR_SOLID:
+		case CAFE_BG_COLOR_SOLID:
 			*pixmap_width = 1;
 			*pixmap_height = 1;
 			break;
 
-		case MATE_BG_COLOR_H_GRADIENT:
-		case MATE_BG_COLOR_V_GRADIENT:
+		case CAFE_BG_COLOR_H_GRADIENT:
+		case CAFE_BG_COLOR_V_GRADIENT:
 			break;
 		}
 
@@ -1207,7 +1207,7 @@ mate_bg_create_surface_scale (MateBG      *bg,
 	cr = cairo_create (surface);
 	cairo_scale (cr, (double)scale, (double)scale);
 
-	if (!bg->filename && bg->color_type == MATE_BG_COLOR_SOLID) {
+	if (!bg->filename && bg->color_type == CAFE_BG_COLOR_SOLID) {
 		gdk_cairo_set_source_rgba (cr, &(bg->primary));
 	}
 	else
@@ -1243,7 +1243,7 @@ mate_bg_is_dark (MateBG *bg,
 
 	g_return_val_if_fail (bg != NULL, FALSE);
 
-	if (bg->color_type == MATE_BG_COLOR_SOLID) {
+	if (bg->color_type == CAFE_BG_COLOR_SOLID) {
 		color = bg->primary;
 	} else {
 		color.red = (bg->primary.red + bg->secondary.red) / 2;
@@ -1957,9 +1957,9 @@ get_as_pixbuf_for_size (MateBG    *bg,
 
 			if (g_strcmp0 (tmp, "svg") == 0 &&
 			    (best_width > 0 && best_height > 0) &&
-			    (bg->placement == MATE_BG_PLACEMENT_FILL_SCREEN ||
-			     bg->placement == MATE_BG_PLACEMENT_SCALED ||
-			     bg->placement == MATE_BG_PLACEMENT_ZOOMED))
+			    (bg->placement == CAFE_BG_PLACEMENT_FILL_SCREEN ||
+			     bg->placement == CAFE_BG_PLACEMENT_SCALED ||
+			     bg->placement == CAFE_BG_PLACEMENT_ZOOMED))
 			{
 				pixbuf = gdk_pixbuf_new_from_file_at_size (filename,
 									   best_width,
@@ -2144,8 +2144,8 @@ scale_thumbnail (MateBGPlacement placement,
 	int o_width;
 	int o_height;
 
-	if (placement != MATE_BG_PLACEMENT_TILED &&
-	    placement != MATE_BG_PLACEMENT_CENTERED) {
+	if (placement != CAFE_BG_PLACEMENT_TILED &&
+	    placement != CAFE_BG_PLACEMENT_CENTERED) {
 
 		/* In this case, the pixbuf will be scaled to fit the screen anyway,
 		 * so just return the pixbuf here
@@ -2170,7 +2170,7 @@ scale_thumbnail (MateBGPlacement placement,
 		new_width = floor (thumb_width * f + 0.5);
 		new_height = floor (thumb_height * f + 0.5);
 
-		if (placement == MATE_BG_PLACEMENT_TILED) {
+		if (placement == CAFE_BG_PLACEMENT_TILED) {
 			/* Heuristic to make sure tiles don't become so small that
 			 * they turn into a blur.
 			 *

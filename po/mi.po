@@ -6,12 +6,12 @@
 # Dorien Takeshi <dorien@takeshi.co.nz>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: CAFE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-09 21:49+0300\n"
 "PO-Revision-Date: 2018-01-09 18:50+0000\n"
 "Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Maori (http://www.transifex.com/mate/MATE/language/mi/)\n"
+"Language-Team: Maori (http://www.transifex.com/mate/CAFE/language/mi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,34 +25,34 @@ msgid "translator-credits"
 msgstr ""
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-msgid "About MATE"
-msgstr "Mo MATE"
+msgid "About CAFE"
+msgstr "Mo CAFE"
 
 #: ../mate-about/mate-about.desktop.in.in.h:2
-msgid "Learn more about MATE"
+msgid "Learn more about CAFE"
 msgstr ""
 
 #: ../mate-about/mate-about.h:43
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
 
 #: ../mate-about/mate-about.h:46
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 
 #: ../mate-about/mate-about.h:49
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
 
 #: ../mate-about/mate-about.h:52
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
@@ -61,12 +61,12 @@ msgstr ""
 #: ../mate-about/mate-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 
 #: ../mate-about/mate-about.h:59
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
@@ -567,7 +567,7 @@ msgstr ""
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
@@ -586,7 +586,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
 
@@ -606,7 +606,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
 
@@ -688,7 +688,7 @@ msgid "Draw Desktop Background"
 msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
-msgid "Have MATE draw the desktop background."
+msgid "Have CAFE draw the desktop background."
 msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
@@ -696,7 +696,7 @@ msgid "Show Desktop Icons"
 msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
@@ -705,7 +705,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
 
@@ -1168,7 +1168,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
+"When set to true, CAFE will remember the state of the NumLock LED between "
 "sessions."
 msgstr ""
 
@@ -1375,7 +1375,7 @@ msgstr ""
 
 #: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1
-msgid "MATE Color Selection"
+msgid "CAFE Color Selection"
 msgstr ""
 
 #: ../tools/mate-color-select.desktop.in.in.h:2

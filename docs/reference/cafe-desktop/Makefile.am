@@ -25,7 +25,7 @@ SCANGOBJ_OPTIONS=
 
 # Extra options to supply to gtkdoc-scan.
 # e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED" 
-SCAN_OPTIONS=--deprecated-guards="MATE_DISABLE_DEPRECATED"
+SCAN_OPTIONS=--deprecated-guards="CAFE_DISABLE_DEPRECATED"
 
 # Extra options to supply to gtkdoc-mkdb.
 # e.g. MKDB_OPTIONS=--sgml-mode --output-format=xml
@@ -67,8 +67,8 @@ expand_content_files=
 # signals and properties.
 # e.g. AM_CPPFLAGS=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
 # e.g. GTKDOC_LIBS=$(top_builddir)/gtk/$(gtktargetlib)
-AM_CPPFLAGS=$(MATE_DESKTOP_CFLAGS) -I$(top_srcdir)/libmate-desktop -DMATE_DESKTOP_USE_UNSTABLE_API
-GTKDOC_LIBS=$(MATE_DESKTOP_LIBS) $(top_builddir)/libmate-desktop/libmate-desktop-2.la
+AM_CPPFLAGS=$(CAFE_DESKTOP_CFLAGS) -I$(top_srcdir)/libmate-desktop -DCAFE_DESKTOP_USE_UNSTABLE_API
+GTKDOC_LIBS=$(CAFE_DESKTOP_LIBS) $(top_builddir)/libmate-desktop/libmate-desktop-2.la
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make

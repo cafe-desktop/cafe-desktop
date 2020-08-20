@@ -24,7 +24,7 @@
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
@@ -176,7 +176,7 @@ handle_start_element (GMarkupParseContext *context,
 	int i;
 	g_assert (parser->output == NULL);
 
-	parser->output = g_object_new (MATE_TYPE_RR_OUTPUT_INFO, NULL);
+	parser->output = g_object_new (CAFE_TYPE_RR_OUTPUT_INFO, NULL);
 	parser->output->priv->rotation = 0;
 
 	for (i = 0; attr_names[i] != NULL; ++i)
@@ -205,7 +205,7 @@ handle_start_element (GMarkupParseContext *context,
     {
 	g_assert (parser->configuration == NULL);
 
-	parser->configuration = g_object_new (MATE_TYPE_RR_CONFIG, NULL);
+	parser->configuration = g_object_new (CAFE_TYPE_RR_CONFIG, NULL);
 	parser->configuration->priv->clone = FALSE;
 	parser->configuration->priv->outputs = NULL;
     }
@@ -236,9 +236,9 @@ handle_end_element (GMarkupParseContext *context,
 
     if (strcmp (name, "output") == 0)
     {
-	/* If no rotation properties were set, just use MATE_RR_ROTATION_0 */
+	/* If no rotation properties were set, just use CAFE_RR_ROTATION_0 */
 	if (parser->output->priv->rotation == 0)
-	    parser->output->priv->rotation = MATE_RR_ROTATION_0;
+	    parser->output->priv->rotation = CAFE_RR_ROTATION_0;
 
 	g_ptr_array_add (parser->outputs, parser->output);
 
@@ -326,33 +326,33 @@ handle_text (GMarkupParseContext *context,
     {
 	if (strcmp (text, "normal") == 0)
 	{
-	    parser->output->priv->rotation |= MATE_RR_ROTATION_0;
+	    parser->output->priv->rotation |= CAFE_RR_ROTATION_0;
 	}
 	else if (strcmp (text, "left") == 0)
 	{
-	    parser->output->priv->rotation |= MATE_RR_ROTATION_90;
+	    parser->output->priv->rotation |= CAFE_RR_ROTATION_90;
 	}
 	else if (strcmp (text, "upside_down") == 0)
 	{
-	    parser->output->priv->rotation |= MATE_RR_ROTATION_180;
+	    parser->output->priv->rotation |= CAFE_RR_ROTATION_180;
 	}
 	else if (strcmp (text, "right") == 0)
 	{
-	    parser->output->priv->rotation |= MATE_RR_ROTATION_270;
+	    parser->output->priv->rotation |= CAFE_RR_ROTATION_270;
 	}
     }
     else if (stack_is (parser, "reflect_x", "output", "configuration", TOPLEVEL_ELEMENT, NULL))
     {
 	if (strcmp (text, "yes") == 0)
 	{
-	    parser->output->priv->rotation |= MATE_RR_REFLECT_X;
+	    parser->output->priv->rotation |= CAFE_RR_REFLECT_X;
 	}
     }
     else if (stack_is (parser, "reflect_y", "output", "configuration", TOPLEVEL_ELEMENT, NULL))
     {
 	if (strcmp (text, "yes") == 0)
 	{
-	    parser->output->priv->rotation |= MATE_RR_REFLECT_Y;
+	    parser->output->priv->rotation |= CAFE_RR_REFLECT_Y;
 	}
     }
     else if (stack_is (parser, "primary", "output", "configuration", TOPLEVEL_ELEMENT, NULL))
@@ -459,7 +459,7 @@ mate_rr_config_init (MateRRConfig *self)
 static void
 mate_rr_config_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *property)
 {
-    MateRRConfig *self = MATE_RR_CONFIG (gobject);
+    MateRRConfig *self = CAFE_RR_CONFIG (gobject);
 
     switch (property_id) {
 	case PROP_SCREEN:
@@ -473,7 +473,7 @@ mate_rr_config_set_property (GObject *gobject, guint property_id, const GValue *
 static void
 mate_rr_config_finalize (GObject *gobject)
 {
-    MateRRConfig *self = MATE_RR_CONFIG (gobject);
+    MateRRConfig *self = CAFE_RR_CONFIG (gobject);
 
     if (self->priv->screen)
 	g_object_unref (self->priv->screen);
@@ -501,7 +501,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
     int clone_height = -1;
     int last_x;
 
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (config), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (config), FALSE);
 
     a = g_ptr_array_new ();
     rr_outputs = mate_rr_screen_list_outputs (config->priv->screen);
@@ -511,7 +511,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
     for (i = 0; rr_outputs[i] != NULL; ++i)
     {
 	MateRROutput *rr_output = rr_outputs[i];
-	MateRROutputInfo *output = g_object_new (MATE_TYPE_RR_OUTPUT_INFO, NULL);
+	MateRROutputInfo *output = g_object_new (CAFE_TYPE_RR_OUTPUT_INFO, NULL);
 	MateRRMode *mode = NULL;
 	const guint8 *edid_data = mate_rr_output_get_edid_data (rr_output);
 	MateRRCrtc *crtc;
@@ -526,7 +526,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 	    output->priv->width = -1;
 	    output->priv->height = -1;
 	    output->priv->rate = -1;
-	    output->priv->rotation = MATE_RR_ROTATION_0;
+	    output->priv->rotation = CAFE_RR_ROTATION_0;
 	}
 	else
 	{
@@ -670,7 +670,7 @@ mate_rr_config_load_filename (MateRRConfig *result, const char *filename, GError
     MateRRConfig **configs;
     gboolean found = FALSE;
 
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (result), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (result), FALSE);
     g_return_val_if_fail (filename != NULL, FALSE);
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
@@ -709,7 +709,7 @@ mate_rr_config_load_filename (MateRRConfig *result, const char *filename, GError
 	g_free (configs);
 
 	if (!found)
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_MATCHING_CONFIG,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_NO_MATCHING_CONFIG,
 			 _("none of the saved display configurations matched the active configuration"));
     }
 
@@ -726,14 +726,14 @@ mate_rr_config_class_init (MateRRConfigClass *klass)
     gobject_class->finalize = mate_rr_config_finalize;
 
     g_object_class_install_property (gobject_class, PROP_SCREEN,
-				     g_param_spec_object ("screen", "Screen", "The MateRRScreen this config applies to", MATE_TYPE_RR_SCREEN,
+				     g_param_spec_object ("screen", "Screen", "The MateRRScreen this config applies to", CAFE_TYPE_RR_SCREEN,
 							  G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
 }
 
 MateRRConfig *
 mate_rr_config_new_current (MateRRScreen *screen, GError **error)
 {
-    MateRRConfig *self = g_object_new (MATE_TYPE_RR_CONFIG, "screen", screen, NULL);
+    MateRRConfig *self = g_object_new (CAFE_TYPE_RR_CONFIG, "screen", screen, NULL);
 
     if (mate_rr_config_load_current (self, error))
       return self;
@@ -747,7 +747,7 @@ mate_rr_config_new_current (MateRRScreen *screen, GError **error)
 MateRRConfig *
 mate_rr_config_new_stored (MateRRScreen *screen, GError **error)
 {
-    MateRRConfig *self = g_object_new (MATE_TYPE_RR_CONFIG, "screen", screen, NULL);
+    MateRRConfig *self = g_object_new (CAFE_TYPE_RR_CONFIG, "screen", screen, NULL);
     char *filename;
     gboolean success;
 
@@ -810,8 +810,8 @@ out:
 static gboolean
 output_match (MateRROutputInfo *output1, MateRROutputInfo *output2)
 {
-    g_assert (MATE_IS_RR_OUTPUT_INFO (output1));
-    g_assert (MATE_IS_RR_OUTPUT_INFO (output2));
+    g_assert (CAFE_IS_RR_OUTPUT_INFO (output1));
+    g_assert (CAFE_IS_RR_OUTPUT_INFO (output2));
 
     if (strcmp (output1->priv->name, output2->priv->name) != 0)
 	return FALSE;
@@ -834,8 +834,8 @@ output_match (MateRROutputInfo *output1, MateRROutputInfo *output2)
 static gboolean
 output_equal (MateRROutputInfo *output1, MateRROutputInfo *output2)
 {
-    g_assert (MATE_IS_RR_OUTPUT_INFO (output1));
-    g_assert (MATE_IS_RR_OUTPUT_INFO (output2));
+    g_assert (CAFE_IS_RR_OUTPUT_INFO (output1));
+    g_assert (CAFE_IS_RR_OUTPUT_INFO (output2));
 
     if (!output_match (output1, output2))
 	return FALSE;
@@ -890,8 +890,8 @@ gboolean
 mate_rr_config_match (MateRRConfig *c1, MateRRConfig *c2)
 {
     int i;
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (c1), FALSE);
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (c2), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (c1), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (c2), FALSE);
 
     for (i = 0; c1->priv->outputs[i] != NULL; ++i)
     {
@@ -914,8 +914,8 @@ mate_rr_config_equal (MateRRConfig  *c1,
 		       MateRRConfig  *c2)
 {
     int i;
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (c1), FALSE);
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (c2), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (c1), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (c2), FALSE);
 
     for (i = 0; c1->priv->outputs[i] != NULL; ++i)
     {
@@ -944,7 +944,7 @@ make_outputs (MateRRConfig *config)
     for (i = 0; config->priv->outputs[i] != NULL; ++i)
     {
 	MateRROutputInfo *old = config->priv->outputs[i];
-	MateRROutputInfo *new = g_object_new (MATE_TYPE_RR_OUTPUT_INFO, NULL);
+	MateRROutputInfo *new = g_object_new (CAFE_TYPE_RR_OUTPUT_INFO, NULL);
 	*(new->priv) = *(old->priv);
 	if (old->priv->name)
 	    new->priv->name = g_strdup (old->priv->name);
@@ -983,8 +983,8 @@ mate_rr_config_applicable (MateRRConfig  *configuration,
     gboolean result;
     int i;
 
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (configuration), FALSE);
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (configuration), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), FALSE);
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
     outputs = make_outputs (configuration);
@@ -1032,13 +1032,13 @@ mate_rr_config_get_intended_filename (void)
 static const char *
 get_rotation_name (MateRRRotation r)
 {
-    if (r & MATE_RR_ROTATION_0)
+    if (r & CAFE_RR_ROTATION_0)
 	return "normal";
-    if (r & MATE_RR_ROTATION_90)
+    if (r & CAFE_RR_ROTATION_90)
 	return "left";
-    if (r & MATE_RR_ROTATION_180)
+    if (r & CAFE_RR_ROTATION_180)
 	return "upside_down";
-    if (r & MATE_RR_ROTATION_270)
+    if (r & CAFE_RR_ROTATION_270)
 	return "right";
 
     return "normal";
@@ -1053,13 +1053,13 @@ yes_no (int x)
 static const char *
 get_reflect_x (MateRRRotation r)
 {
-    return yes_no (r & MATE_RR_REFLECT_X);
+    return yes_no (r & CAFE_RR_REFLECT_X);
 }
 
 static const char *
 get_reflect_y (MateRRRotation r)
 {
-    return yes_no (r & MATE_RR_REFLECT_Y);
+    return yes_no (r & CAFE_RR_REFLECT_Y);
 }
 
 static void
@@ -1178,7 +1178,7 @@ mate_rr_config_ensure_primary (MateRRConfig *configuration)
         gboolean        found;
         MateRRConfigPrivate *priv;
 
-        g_return_val_if_fail (MATE_IS_RR_CONFIG (configuration), FALSE);
+        g_return_val_if_fail (CAFE_IS_RR_CONFIG (configuration), FALSE);
 
         laptop = NULL;
         top_left = NULL;
@@ -1235,7 +1235,7 @@ mate_rr_config_save (MateRRConfig *configuration, GError **error)
     gchar *backup_filename;
     gboolean result;
 
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (configuration), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (configuration), FALSE);
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
     output = g_string_new ("");
@@ -1290,8 +1290,8 @@ mate_rr_config_apply_with_time (MateRRConfig *config,
     int i;
     GdkDisplay *display;
 
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (config), FALSE);
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (config), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), FALSE);
 
     outputs = make_outputs (config);
 
@@ -1334,11 +1334,11 @@ mate_rr_config_apply_with_time (MateRRConfig *config,
  * $(XDG_CONFIG_HOME)/monitors.xml, or FALSE otherwise:
  *
  * If the current RANDR configuration could not be refreshed, the @error will
- * have a domain of #MATE_RR_ERROR and a corresponding error code.
+ * have a domain of #CAFE_RR_ERROR and a corresponding error code.
  *
  * If the file in question is loaded successfully but the configuration cannot
- * be applied, the @error will have a domain of #MATE_RR_ERROR.  Note that an
- * error code of #MATE_RR_ERROR_NO_MATCHING_CONFIG is not a real error; it
+ * be applied, the @error will have a domain of #CAFE_RR_ERROR.  Note that an
+ * error code of #CAFE_RR_ERROR_NO_MATCHING_CONFIG is not a real error; it
  * simply means that there were no stored configurations that match the current
  * set of RANDR outputs.
  *
@@ -1353,7 +1353,7 @@ mate_rr_config_apply_from_filename_with_time (MateRRScreen *screen, const char *
     MateRRConfig *stored;
     GError *my_error;
 
-    g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), FALSE);
     g_return_val_if_fail (filename != NULL, FALSE);
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
@@ -1367,7 +1367,7 @@ mate_rr_config_apply_from_filename_with_time (MateRRScreen *screen, const char *
 	    /* This means the screen didn't change, so just proceed */
     }
 
-    stored = g_object_new (MATE_TYPE_RR_CONFIG, "screen", screen, NULL);
+    stored = g_object_new (CAFE_TYPE_RR_CONFIG, "screen", screen, NULL);
 
     if (mate_rr_config_load_filename (stored, filename, error))
     {
@@ -1395,7 +1395,7 @@ mate_rr_config_apply_from_filename_with_time (MateRRScreen *screen, const char *
 MateRROutputInfo **
 mate_rr_config_get_outputs (MateRRConfig *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (self), NULL);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (self), NULL);
 
     return self->priv->outputs;
 }
@@ -1410,7 +1410,7 @@ mate_rr_config_get_outputs (MateRRConfig *self)
 gboolean
 mate_rr_config_get_clone (MateRRConfig *self)
 {
-    g_return_val_if_fail (MATE_IS_RR_CONFIG (self), FALSE);
+    g_return_val_if_fail (CAFE_IS_RR_CONFIG (self), FALSE);
 
     return self->priv->clone;
 }
@@ -1418,7 +1418,7 @@ mate_rr_config_get_clone (MateRRConfig *self)
 void
 mate_rr_config_set_clone (MateRRConfig *self, gboolean clone)
 {
-    g_return_if_fail (MATE_IS_RR_CONFIG (self));
+    g_return_if_fail (CAFE_IS_RR_CONFIG (self));
 
     self->priv->clone = clone;
 }
@@ -1482,14 +1482,14 @@ crtc_assignment_assign (CrtcAssignment   *assign,
 
     if (!mate_rr_crtc_can_drive_output (crtc, output))
     {
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_CRTC_ASSIGNMENT,
+	g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_CRTC_ASSIGNMENT,
 		     _("CRTC %d cannot drive output %s"), crtc_id, output_name);
 	return FALSE;
     }
 
     if (!mate_rr_output_supports_mode (output, mode))
     {
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_CRTC_ASSIGNMENT,
+	g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_CRTC_ASSIGNMENT,
 		     _("output %s does not support mode %dx%d@%dHz"),
 		     output_name,
 		     mate_rr_mode_get_width (mode),
@@ -1500,7 +1500,7 @@ crtc_assignment_assign (CrtcAssignment   *assign,
 
     if (!mate_rr_crtc_supports_rotation (crtc, rotation))
     {
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_CRTC_ASSIGNMENT,
+	g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_CRTC_ASSIGNMENT,
 		     _("CRTC %d does not support rotation=%s"),
 		     crtc_id,
 		     get_rotation_name (rotation));
@@ -1514,7 +1514,7 @@ crtc_assignment_assign (CrtcAssignment   *assign,
 	      info->y == y		&&
 	      info->rotation == rotation))
 	{
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_CRTC_ASSIGNMENT,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_CRTC_ASSIGNMENT,
 			 _("output %s does not have the same parameters as another cloned output:\n"
 			   "existing mode = %d, new mode = %d\n"
 			   "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
@@ -1529,7 +1529,7 @@ crtc_assignment_assign (CrtcAssignment   *assign,
 
 	if (!can_clone (info, output))
 	{
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_CRTC_ASSIGNMENT,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_CRTC_ASSIGNMENT,
 			 _("cannot clone to output %s"),
 			 output_name);
 	    return FALSE;
@@ -1628,8 +1628,8 @@ configure_crtc (gpointer key,
 static gboolean
 mode_is_rotated (CrtcInfo *info)
 {
-    if ((info->rotation & MATE_RR_ROTATION_270)		||
-	(info->rotation & MATE_RR_ROTATION_90))
+    if ((info->rotation & CAFE_RR_ROTATION_270)		||
+	(info->rotation & CAFE_RR_ROTATION_90))
     {
 	return TRUE;
     }
@@ -1641,8 +1641,8 @@ crtc_is_rotated (MateRRCrtc *crtc)
 {
     MateRRRotation r = mate_rr_crtc_get_current_rotation (crtc);
 
-    if ((r & MATE_RR_ROTATION_270)		||
-	(r & MATE_RR_ROTATION_90))
+    if ((r & CAFE_RR_ROTATION_270)		||
+	(r & CAFE_RR_ROTATION_90))
     {
 	return TRUE;
     }
@@ -1769,11 +1769,11 @@ out:
 	str = g_string_free (accumulated_error, FALSE);
 
 	if (tried_mode)
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_CRTC_ASSIGNMENT,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_CRTC_ASSIGNMENT,
 			 _("could not assign CRTCs to outputs:\n%s"),
 			 str);
 	else
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_CRTC_ASSIGNMENT,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_CRTC_ASSIGNMENT,
 			 _("none of the selected modes were compatible with the possible modes:\n%s"),
 			 str);
 
@@ -1852,7 +1852,7 @@ crtc_assignment_new (MateRRScreen *screen, MateRROutputInfo **outputs, GError **
 
 	if (required_pixels < min_pixels || required_pixels > max_pixels)
 	{
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_BOUNDS_ERROR,
+	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_BOUNDS_ERROR,
 			 /* Translators: the "requested", "minimum", and
 			  * "maximum" words here are not keywords; please
 			  * translate them as usual. */
@@ -1934,7 +1934,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
 
 	    if (x + w > width || y + h > height || !g_hash_table_lookup (assign->info, crtc))
 	    {
-		if (!mate_rr_crtc_set_config_with_time (crtc, timestamp, 0, 0, NULL, MATE_RR_ROTATION_0, NULL, 0, error))
+		if (!mate_rr_crtc_set_config_with_time (crtc, timestamp, 0, 0, NULL, CAFE_RR_ROTATION_0, NULL, 0, error))
 		{
 		    success = FALSE;
 		    break;

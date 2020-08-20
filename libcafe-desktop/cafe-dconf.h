@@ -24,8 +24,8 @@
  *  Stefano Karapetsas <stefano@karapetsas.com>
  */
 
-#ifndef __MATE_DCONF_H__
-#define __MATE_DCONF_H__
+#ifndef __CAFE_DCONF_H__
+#define __CAFE_DCONF_H__
 
 #include <glib.h>
 
@@ -45,4 +45,4 @@ void mate_dconf_sync (void);
 
 G_END_DECLS
 
-#endif /* __MATE_DCONF_H__ */
+#endif /* __CAFE_DCONF_H__ */

@@ -20,11 +20,11 @@
  *             William Jon McCann
  */
 
-#ifndef __MATE_LANGUAGES_H
-#define __MATE_LANGUAGES_H
+#ifndef __CAFE_LANGUAGES_H
+#define __CAFE_LANGUAGES_H
 
-#ifndef MATE_DESKTOP_USE_UNSTABLE_API
-#error    This is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-languages.h
+#ifndef CAFE_DESKTOP_USE_UNSTABLE_API
+#error    This is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-languages.h
 #endif
 
 #include <glib.h>
@@ -50,4 +50,4 @@ char *        mate_get_country_from_code       (const char *code,
 
 G_END_DECLS
 
-#endif /* __MATE_LANGUAGES_H */
+#endif /* __CAFE_LANGUAGES_H */

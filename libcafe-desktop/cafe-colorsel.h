@@ -25,20 +25,20 @@
  * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
  */
 
-#ifndef __MATE_COLOR_SELECTION_H__
-#define __MATE_COLOR_SELECTION_H__
+#ifndef __CAFE_COLOR_SELECTION_H__
+#define __CAFE_COLOR_SELECTION_H__
 
 #include <glib.h>
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-#define MATE_TYPE_COLOR_SELECTION			(mate_color_selection_get_type ())
-#define MATE_COLOR_SELECTION(obj)			(G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_COLOR_SELECTION, MateColorSelection))
-#define MATE_COLOR_SELECTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_COLOR_SELECTION, MateColorSelectionClass))
-#define MATE_IS_COLOR_SELECTION(obj)			(G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_COLOR_SELECTION))
-#define MATE_IS_COLOR_SELECTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_COLOR_SELECTION))
-#define MATE_COLOR_SELECTION_GET_CLASS(obj)              (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_COLOR_SELECTION, MateColorSelectionClass))
+#define CAFE_TYPE_COLOR_SELECTION			(mate_color_selection_get_type ())
+#define CAFE_COLOR_SELECTION(obj)			(G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_SELECTION, MateColorSelection))
+#define CAFE_COLOR_SELECTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_SELECTION, MateColorSelectionClass))
+#define CAFE_IS_COLOR_SELECTION(obj)			(G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_SELECTION))
+#define CAFE_IS_COLOR_SELECTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_COLOR_SELECTION))
+#define CAFE_COLOR_SELECTION_GET_CLASS(obj)              (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_COLOR_SELECTION, MateColorSelectionClass))
 
 
 typedef struct _MateColorSelection       MateColorSelection;
@@ -127,4 +127,4 @@ void mate_color_selection_get_color         (MateColorSelection *colorsel,
 
 G_END_DECLS
 
-#endif /* __MATE_COLOR_SELECTION_H__ */
+#endif /* __CAFE_COLOR_SELECTION_H__ */

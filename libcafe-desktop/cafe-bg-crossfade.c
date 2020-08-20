@@ -34,7 +34,7 @@
 #include <cairo.h>
 #include <cairo-xlib.h>
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include <mate-bg.h>
 #include "mate-bg-crossfade.h"
 
@@ -76,9 +76,9 @@ mate_bg_crossfade_set_property (GObject      *object,
 {
     MateBGCrossfade *fade;
 
-    g_assert (MATE_IS_BG_CROSSFADE (object));
+    g_assert (CAFE_IS_BG_CROSSFADE (object));
 
-    fade = MATE_BG_CROSSFADE (object);
+    fade = CAFE_BG_CROSSFADE (object);
 
     switch (property_id)
     {
@@ -102,9 +102,9 @@ mate_bg_crossfade_get_property (GObject    *object,
 {
     MateBGCrossfade *fade;
 
-    g_assert (MATE_IS_BG_CROSSFADE (object));
+    g_assert (CAFE_IS_BG_CROSSFADE (object));
 
-    fade = MATE_BG_CROSSFADE (object);
+    fade = CAFE_BG_CROSSFADE (object);
 
     switch (property_id)
     {
@@ -126,7 +126,7 @@ mate_bg_crossfade_finalize (GObject *object)
 {
     MateBGCrossfade *fade;
 
-    fade = MATE_BG_CROSSFADE (object);
+    fade = CAFE_BG_CROSSFADE (object);
 
     mate_bg_crossfade_stop (fade);
 
@@ -227,7 +227,7 @@ MateBGCrossfade* mate_bg_crossfade_new (int width, int height)
 {
     GObject* object;
 
-    object = g_object_new(MATE_TYPE_BG_CROSSFADE,
+    object = g_object_new(CAFE_TYPE_BG_CROSSFADE,
                           "width", width,
                           "height", height,
                           NULL);
@@ -311,7 +311,7 @@ tile_surface (cairo_surface_t *surface,
 gboolean
 mate_bg_crossfade_set_start_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
 {
-    g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
+    g_return_val_if_fail (CAFE_IS_BG_CROSSFADE (fade), FALSE);
 
     if (fade->priv->start_surface != NULL)
     {
@@ -369,7 +369,7 @@ get_current_time (void)
 gboolean
 mate_bg_crossfade_set_end_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
 {
-    g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
+    g_return_val_if_fail (CAFE_IS_BG_CROSSFADE (fade), FALSE);
 
     if (fade->priv->end_surface != NULL) {
         cairo_surface_destroy (fade->priv->end_surface);
@@ -472,7 +472,7 @@ on_tick (MateBGCrossfade *fade)
     cairo_t *cr;
     cairo_status_t status;
 
-    g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
+    g_return_val_if_fail (CAFE_IS_BG_CROSSFADE (fade), FALSE);
 
     now = get_current_time ();
 
@@ -640,7 +640,7 @@ mate_bg_crossfade_start (MateBGCrossfade *fade,
     GSource *source;
     GMainContext *context;
 
-    g_return_if_fail (MATE_IS_BG_CROSSFADE (fade));
+    g_return_if_fail (CAFE_IS_BG_CROSSFADE (fade));
     g_return_if_fail (window != NULL);
     g_return_if_fail (fade->priv->start_surface != NULL);
     g_return_if_fail (fade->priv->end_surface != NULL);
@@ -716,7 +716,7 @@ mate_bg_crossfade_start_widget (MateBGCrossfade *fade,
 {
     GdkWindow *window;
 
-    g_return_if_fail (MATE_IS_BG_CROSSFADE (fade));
+    g_return_if_fail (CAFE_IS_BG_CROSSFADE (fade));
     g_return_if_fail (widget != NULL);
 
     fade->priv->widget = widget;
@@ -739,7 +739,7 @@ mate_bg_crossfade_start_widget (MateBGCrossfade *fade,
 gboolean
 mate_bg_crossfade_is_started (MateBGCrossfade *fade)
 {
-    g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
+    g_return_val_if_fail (CAFE_IS_BG_CROSSFADE (fade), FALSE);
 
     return fade->priv->timeout_id != 0;
 }
@@ -755,7 +755,7 @@ mate_bg_crossfade_is_started (MateBGCrossfade *fade)
 void
 mate_bg_crossfade_stop (MateBGCrossfade *fade)
 {
-    g_return_if_fail (MATE_IS_BG_CROSSFADE (fade));
+    g_return_if_fail (CAFE_IS_BG_CROSSFADE (fade));
 
     if (!mate_bg_crossfade_is_started (fade))
         return;

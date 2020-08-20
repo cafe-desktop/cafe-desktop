@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Developers
+# Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -31,12 +31,12 @@ msgid "translator-credits"
 msgstr "Daniel Alămiță <danny3@tutanota.com>"
 
 #: mate-about/mate-about.desktop.in:3
-msgid "About MATE"
-msgstr "Despre MATE"
+msgid "About CAFE"
+msgstr "Despre CAFE"
 
 #: mate-about/mate-about.desktop.in:4
-msgid "Learn more about MATE"
-msgstr "Aflați mai multe despre MATE"
+msgid "Learn more about CAFE"
+msgstr "Aflați mai multe despre CAFE"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -45,67 +45,67 @@ msgid "mate-desktop"
 msgstr ""
 
 #: mate-about/mate-about.h:29
-msgid "MATE Desktop Environment"
+msgid "CAFE Desktop Environment"
 msgstr ""
 
 #: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2020 CAFE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
 msgid ""
-"MATE provides an intuitive and attractive desktop to Linux users using "
+"CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE oferă un desktop intuitiv și atractiv utilizatorilor de Linux care "
+"CAFE oferă un desktop intuitiv și atractiv utilizatorilor de Linux care "
 "folosesc metafore tradiționale."
 
 #: mate-about/mate-about.h:45
 msgid ""
-"MATE includes most of what you see on your computer, including the file "
+"CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE include cea mai mare parte din ce vedeți pe calculator, inclusiv un "
+"CAFE include cea mai mare parte din ce vedeți pe calculator, inclusiv un "
 "administrator de fișiere, vizualizator de documente, vizualizator de "
 "imagini, meniuri și multe aplicații."
 
 #: mate-about/mate-about.h:48
 msgid ""
-"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE este un mediu desktop liber, ușor de utilizat, stabil și accesibil "
+"CAFE este un mediu desktop liber, ușor de utilizat, stabil și accesibil "
 "pentru familia de sisteme de operare asemănătoare cu Unix."
 
 #: mate-about/mate-about.h:51
 msgid ""
-"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE este continuarea lui GNOME 2. Sute de oameni au contribuit cod la GNOME"
+"CAFE este continuarea lui GNOME 2. Sute de oameni au contribuit cod la GNOME"
 " de când a început în 1997; mulți mai mulți au contribuit pe alte căi "
 "importante, incluzând traduceri, documentație și asigurarea calității."
 
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
-"MATE is here to provide that same desktop to you!"
+"CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 a fost cea mai populară interfață pentru Linux, dar nu mai este "
-"disponibilă... MATE este aici să vă ofere aceeași interfață!"
+"disponibilă... CAFE este aici să vă ofere aceeași interfață!"
 
 #: mate-about/mate-about.h:58
 msgid ""
-"The name “MATE” comes from yerba maté, a species of holly native to "
+"The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"Numele „MATE” vine de la yerba maté, o specie de plantă nativă în America de"
+"Numele „CAFE” vine de la yerba maté, o specie de plantă nativă în America de"
 " Sud subtropicală. Frunzele ei conțin cafeină și sunt folosite pentru a face"
 " infuzii și o băutură numită mate."
 
@@ -644,10 +644,10 @@ msgstr "Pornire aplicații tehnologice de asistență"
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
-"MATE desktop."
+"CAFE desktop."
 msgstr ""
 "Lista aplicațiilor tehnologice de asistență ce pornesc automat la "
-"autentificarea în mediul MATE."
+"autentificarea în mediul CAFE."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
@@ -667,7 +667,7 @@ msgstr "Pornește aplicația tehnologie de asistență mobilitate preferată"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
-"MATE to start preferred Mobility assistive technology application during "
+"CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
 "Pornește aplicația tehnologie de asistență mobilitate preferată în timpul "
@@ -691,7 +691,7 @@ msgstr "Pornește aplicația tehnologie de asistență vizuală preferată"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
-"MATE to start preferred Visual assistive technology application during "
+"CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
 "Pornește aplicația tehnologie de asistență vizuală preferată în timpul "
@@ -802,15 +802,15 @@ msgid "Draw Desktop Background"
 msgstr "Desenează fundal desktop"
 
 #: schemas/org.mate.background.gschema.xml.in:19
-msgid "Have MATE draw the desktop background."
-msgstr "Mediul MATE gestionează fundalul desktopului."
+msgid "Have CAFE draw the desktop background."
+msgstr "Mediul CAFE gestionează fundalul desktopului."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Arată pictograme desktop"
 
 #: schemas/org.mate.background.gschema.xml.in:24
-msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Caja) draw the desktop icons."
 msgstr ""
 "Permite ca administratorul de fișiere (Caja) să deseneze pictogramele de pe "
 "desktop."
@@ -821,10 +821,10 @@ msgstr "Aplică transluciditate fundalului la schimbare"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
-"If set to true, then MATE will change the desktop background with a fading "
+"If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Dacă este adevărată, atunci MATE va schimba fundalul desktopului aplicând un"
+"Dacă este adevărată, atunci CAFE va schimba fundalul desktopului aplicând un"
 " efect de transluciditate."
 
 #: schemas/org.mate.background.gschema.xml.in:33
@@ -1239,7 +1239,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
-"This setting determines whether MATE controls the scale factor for QT "
+"This setting determines whether CAFE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
@@ -1477,8 +1477,8 @@ msgid "Whether or not keyboard locking is enabled."
 msgstr "Specifică dacă blocarea tastaturii este activată sau nu."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
-msgid "MATE Color Selection"
-msgstr "Selecție culoare MATE"
+msgid "CAFE Color Selection"
+msgstr "Selecție culoare CAFE"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
@@ -1497,5 +1497,5 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
-msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
