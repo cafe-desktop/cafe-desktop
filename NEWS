@@ -1,0 +1,301 @@
+### mate-desktop 1.24.1
+
+  * Translations update
+  * build: silent build warnings for distcheck
+  * build: use MATE_COMPILE_WARNINGS = yes as default
+  * mate-about.desktop: Do not collect the translation for Icon
+  * mate-about: remove unused variable ‘window’
+  * Remove GTimeVal deprecation warning for GLib 2.61.2+
+  * Make the build reproducible
+  * build: add meson config files to EXTRA_DIST
+
+### mate-desktop 1.24.0
+
+  * Translations update
+  * build: show warning flags on configure summary
+  * build: use warning flags
+  * autoconf: AC_PROG_CC was called before AX_CHECK_ENABLE_DEBUG
+
+### mate-desktop 1.23.3
+
+  * Translations update
+  * thumbnail: Remove obsolete mate_desktop_thumbnail_md5()
+  * thumbnail: Remove obsolete pixbuf helper
+  * thumbnail: Use an array to store the thumbnailer's cmdline
+  * thumbnail: Use g_strcmp0() and remove a NULL check
+  * thumbnail: Simplify system includes
+  * thumbnail: Fix typo in optional
+  * thumbnail: Remove unused constant SECONDS_BETWEEN_STATS
+  * thumbnail: Remove unused #define GDK_PIXBUF_ENABLE_BACKEND
+  * thumbnail: Remove reference to MateIconFactory
+  * thumbnail: Simplify init_thumbnailers_dirs()
+  * thumbnail: some code-styling fixes
+  * Deprecate mate_desktop_thumbnail_scale_down_pixbuf()
+  * thumbnailer: Always prefer the backend provided preview
+  * thumbnail: Always use external gdk-pixbuf thumbnailer
+  * thumbnail: Demote a log message from WARNING to DEBUG
+  * thumbnail factory: Disconnect signal handlers in finalize
+  * thumbnail: Move thumbnail generation/saving to a few helper functions
+  * thumbnail: Clean up path generation code
+  * thumbnailer: Try harder to create a failed thumbnail
+  * Add missing cases to switch statement
+  * lib: Add thumbnail test application
+  * Increase the size of thumbnails to 256
+  * avoid redundant redeclarations
+  * desktop file: add missing hints for translators
+  * Treat time_t as gint64 to convert from/to string
+  * build: introduce RELEASE_YEAR variable for mate-about dialog
+
+### mate-desktop 1.23.2
+
+  * Translations update
+  * Move remaining peripheral schemas to mate-settings-daemon
+  * schema: Move mouse schemas to mate-settings-daemon
+  * Replace deprecated gtk_css_provider_get_default
+  * mate-bg-crossfade: replace tabs with spaces
+  * make 'rsvg-convert' optional
+  * mate-colorsel: avoid deprecated 'gtk_hscale_new'
+  * gettext needs .gmo files to install .mo locale
+  * Remove trailing whitespaces
+  * CI: fix make distcheck to remove .gmo files
+  * CI: use autotoools for creating the tarball again
+  * CI: fix meson distcheck
+
+### mate-desktop 1.23.1
+
+  * Translations update
+  * schemas: Define schema for a default messenger
+  * check both {$prefix,/usr}/share/locale dirs for translation
+  * Add test code for mate-languages.
+  * Change url project's website
+  * configure: drop check for itstool
+  * Create FUNDING.yml
+  * build: use localedir instead of DATADIRNAME
+  * add abi check
+  * treewide: add meson build
+
+### mate-desktop 1.23.0
+
+  * Translations update
+  * [ci] run after_script when use autotools
+  * enable meson build on travis
+  * Use mate-desktop icon instead of mate for mate-about
+  * Simplify icons/Makefile.am
+  * Use radial gradient (Blur 13.9%, Opacity 73.4%) for MATE logo shadow
+  * i18n: port from intltool to gettext
+  * mate-about: subdir mate-version.xml.in.in
+  * configure.ac: subdir some of the build cruft
+  * mate-desktop-thumbnail: avoid 'NULL' parameter
+  * mate-thumbnail-pixbuf-utils: Fix division by zero
+  * mate-bg: Fix memory leak
+  * Make translatable the program name in mate about dialog
+  * Make translatable the copyright info in mate about dialog
+  * GEN png icons from hicolor_apps_scalable_mate.svg
+  * [Security] Use 'g_strlcpy' instead of 'strcpy'
+  * [Security] test-ditem: Use 'g_strlcat' instead of 'strcat'
+  * mate-hsv: avoid duplicate initialization in variable
+  * [ci] Enable Clang Static Analyzer
+  * mate-hsv: avoid deprecated 'gdk_device_grab/ungrab'
+  * mate-colorsel: avoid deprecated 'GtkHSV', use 'MateHSV' instead
+  * MateHSV implementation (GtkHSV fork)
+
+
+### mate-desktop 1.22.0
+
+  * Translations update
+  * Fixed make distcheck fail on debian.
+  * mate-colorsel: avoid deprecated 'gtk_widget_modify_bg'
+  * Initialize travis support
+  * [mate-rr] Avoid deprecated g_type_class_add_private
+  * Avoid deprecated g_type_class_add_private
+  * [mate-colorsel] Avoid deprecated g_type_class_add_private
+  * mate-bg: avoid deprecated 'g_settings_list_keys'
+  * update copyright  to 2019
+  * disable deprecation warnings for distcheck
+  * mate-bg: Corrected some comments
+  * schemas: Define schema for a default calculator
+
+### mate-desktop 1.21.2
+
+  * Translations update
+  * Add new setting to control XKB modifier latching
+
+### mate-desktop 1.21.1
+
+  * Translations update
+  * interface: add key to enable/disable primary paste from middlemouse
+  * mate-desktop-item: replace deprecated gdk_error_trap_push/pop
+  * mate-rr-config: replace deprecated gdk_flush
+  * mate-rr: replace deprecated Gdk functions
+  * mate-bg-crossfade: replace deprecated gdk_error_trap_push/pop
+  * mate-bg: replace deprecated gdk_error_trap_push/pop
+  * fix distcheck
+  * add mate-language apis
+
+### mate-desktop 1.21.0
+
+  * Translations update
+  * drop ancient and unused acinclude.m4
+  * Add toggle for synchronizing QT_SCALE_FACTOR to GDK_SCALE_FACTOR
+  * Change default cursor-size to 24px
+  * Support background fallback on HiDPI
+  * mate-rr-labeler: fix font-color for dark themes
+
+### mate-desktop 1.20.0
+
+  * Add gsettings for window scaling factor
+  * drop additional checks for min GLib version
+  * building: bump required glib version to 2.50.0
+  * remove < gtk+-3.22 bits and bump required gtk+ version
+
+### mate-desktop 1.19.3
+
+  * Translations update
+  * update copyright year to 2018
+  * schema: drop can-change-accels key, won't work with GTK+3
+
+### mate-desktop 1.19.2
+
+  * Translations update
+  * WidthOfScreen and HeightOfScreen implementation
+
+### mate-desktop 1.19.1
+
+  * Translations update
+  * drop MateAboutDialog
+  * mate-about: remove remains of libunique references
+  * mate-about: switch to GtkAboutDialog
+  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+
+### mate-desktop 1.19.0
+
+  * Translations update
+  * avoid deprecated gdk_screen_get_width/height
+  * mate-desktop-item: mate-about: avoid deprecated gtk_show_uri
+  * mate-about: avoid deprecated gtk_show_uri
+  * avoid deprecated gdk_screen_get_n_monitors
+  * avoid deprecated gdk_screen_make_display_name
+  * avoid deprecated gdk_screen_get_number
+  * Correct little imprecision in man mate-about
+  * Restore Polish translation credits from GNOME
+  * Fix broken fallback cursor in mate-colorsel.c
+  * mate-colorsel: don't use deprecated GTK_STOCK_COLOR_PICKER
+  * Add Global Menu support
+
+### mate-desktop 1.18.0
+
+  * NEWS: use consistent, project wide, markdown-like formatting to make
+    generating release announcements easier
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-gtk
+    build option
+  * Drop mpaste tool (won't work without the website anyway)
+  * Background: fix crossfade issues with recent GTK+ versions
+  * Background: fix more graphics issues to allow Caja to use background
+    for directory windows
+  * Background: fix memleaks and other misc issues
+  * Color select: fix some GTK+ deprecations
+  * Schemas: some fixes and cleanups
+  * mate-about: update copyright year
+  * mate-about: fix URL centering
+  * Translations update
+
+### mate-desktop 1.16.1
+
+  * mate-bg: fix regression that caused font color in Caja to be
+    always black (even on dark backgrounds)
+  * Translations update
+
+### mate-desktop 1.16.0
+
+  * mate-bg: remove unneeded ignore-pending-change property
+    (not needed anymore since font color fix in Caja 1.14)
+  * GTK+3: fix various deprecations
+  * distcheck: explicitly use currently selected GTK+ version
+  * Some minor cleanups
+  * Translations update
+
+### mate-desktop 1.14.1
+
+  * Translations update
+  * Backgrounds: Take EXIF rotation tags into consideration
+  * enable installation of mate.svg
+
+### mate-desktop 1.14.0
+
+  * Drop MateConf migration script and ancient mate-conf-import tool
+  * Fix deprecated usage of GtkHBox and GtkVBox in GTK+3 build
+  * Translations update
+  * Fix Changelog generation
+
+### mate-desktop 1.12.1
+
+  * RR: fix crash
+  * Fix color select in GTK+3
+  * Translations update
+
+### mate-desktop 1.12.0
+
+  * Require dconf 0.13.4
+  * Require xrandr 1.3
+  * Add gsettings key to toggle overlay scrolling in GTK+3
+  * Add some icons to fix missing icons in GTK+3 with custom icon theme
+  * Mouse schema: enable middle-click emulation by default
+  * RR: implement missing mate_rr_output_get_possible_crtcs function
+  * RR: fix laptop identification by output name
+  * RR: show output name in addition to display name
+  * Retrieve strings directly from gschema (requires intltool 0.50.1)
+  * Moved docbook user guide to a separate project
+  * Dropped dependency on yelp (not needed after moving user guide)
+  * Several fixes
+
+### mate-desktop 1.10.2
+
+  * Check for NULL pointers in slideshow
+  * Fix crash when system date is earlier than start date
+  * Fix crash when XRRSetCrtcConfig fails
+  * Drop non-existent mate_rr_screen_create_clone_modes from headers
+  * Embedded Display Port outputs are considered a laptop built-in
+    display
+  * Add annotations and fix documentation syntax warnings
+  * Update translations
+
+### mate-desktop 1.10.1
+
+  * Restore docbook user-guide
+
+### mate-desktop 1.10.0
+
+  * Turn MateRRScreen, GnomeRRConfig and GnomeOutputInfo into a GObject.
+    Thanks to monsta for helping to test this.
+  * Add gobject introspection
+  * Many RANDR fixes
+  * interface: add automatic-mnemonics key for Gtk xsetting
+  * use GDK_WINDOW_XID for inter-GTK compatibility
+  * Updated mpaste for website change
+  * Added org.mate.debug GSettings schema
+  * Added MateColorButton class to have traditional color selection
+    dialog with GTK3
+  * Removed desktop-docs
+  * Removed user guide
+  * Removed libunique optional dependency
+  * Added MateAboutDialog class to have traditional about dialog with
+    GTK3 too
+
+### mate-desktop 1.8.0
+
+  * Added helpers for dconf and GSettings
+  * Fix build with GTK3
+  * Added MATE user guide
+  * Added MATE_DESKTOP_CHECK_VERSION function
+  * Added mpaste tool
+  * Added replacement for gdk_spawn_command_line_on_screen in GTK3
+
+### mate-desktop 1.6.1
+
+  * Tarball built with 'make dist'
+  * Added tool to migrate 1.4 settings (mate-conf-import)
+
+### mate-desktop 1.6.0
+
+  * Port to new thumbnail spec (code from gnome-desktop 3.x)
+  * Added gsettings schemas from now deprecated libmate
