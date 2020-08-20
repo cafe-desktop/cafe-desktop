@@ -1,5 +1,5 @@
 /* -*- Mode: C; c-set-style: linux indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
-/* mate-ditem.h - Utilities for the CAFE Desktop
+/* cafe-ditem.h - Utilities for the CAFE Desktop
 
    Copyright (C) 1998 Tom Tromey
    All rights reserved.
@@ -28,7 +28,7 @@
 #define CAFE_DESKTOP_UTILS_H
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error    mate-desktop-utils is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-desktop-utils.h
+#error    cafe-desktop-utils is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including cafe-desktop-utils.h
 #endif
 
 #include <glib.h>
@@ -38,18 +38,18 @@
 G_BEGIN_DECLS
 
 /* prepend the terminal command to a vector */
-void mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
+void cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
 
 /* replace gdk_spawn_command_line_on_screen, not available in GTK3 */
-gboolean mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
+gboolean cafe_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
 
 void
-mate_desktop_gtk_style_get_light_color (GtkStyleContext *style,
+cafe_desktop_gtk_style_get_light_color (GtkStyleContext *style,
                                         GtkStateFlags    state,
                                         GdkRGBA         *color);
 
 void
-mate_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
+cafe_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
                                        GtkStateFlags    state,
                                        GdkRGBA         *color);
 

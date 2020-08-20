@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.lockdown" path="/org/mate/desktop/lockdown/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.lockdown" path="/org/cafe/desktop/lockdown/">
     <key name="disable-command-line" type="b">
       <default>false</default>
       <summary>Disable command line</summary>

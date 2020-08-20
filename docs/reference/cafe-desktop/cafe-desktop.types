@@ -1,9 +1,9 @@
-#include <mate-desktop-item.h>
-#include <mate-bg.h>
-#include <mate-desktop-thumbnail.h>
-#include <mate-rr-labeler.h>
+#include <cafe-desktop-item.h>
+#include <cafe-bg.h>
+#include <cafe-desktop-thumbnail.h>
+#include <cafe-rr-labeler.h>
 
-mate_desktop_item_get_type
-mate_bg_get_type
-mate_desktop_thumbnail_factory_get_type
-mate_rr_labeler_get_type
+cafe_desktop_item_get_type
+cafe_bg_get_type
+cafe_desktop_thumbnail_factory_get_type
+cafe_rr_labeler_get_type

@@ -22,7 +22,7 @@
 + */
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
-#include "mate-desktop-thumbnail.h"
+#include "cafe-desktop-thumbnail.h"
 #include <gtk/gtk.h>
 
 int main (int argc, char **argv)
@@ -40,13 +40,13 @@ int main (int argc, char **argv)
     }
 
     content_type = g_content_type_guess (argv[1], NULL, 0, NULL);
-    factory = mate_desktop_thumbnail_factory_new (CAFE_DESKTOP_THUMBNAIL_SIZE_LARGE);
-    pixbuf = mate_desktop_thumbnail_factory_generate_thumbnail (factory, argv[1], content_type);
+    factory = cafe_desktop_thumbnail_factory_new (CAFE_DESKTOP_THUMBNAIL_SIZE_LARGE);
+    pixbuf = cafe_desktop_thumbnail_factory_generate_thumbnail (factory, argv[1], content_type);
     g_free (content_type);
     g_object_unref (factory);
 
     if (pixbuf == NULL) {
-        g_warning ("mate_desktop_thumbnail_factory_generate_thumbnail() failed to generate a thumbnail for %s", argv[1]);
+        g_warning ("cafe_desktop_thumbnail_factory_generate_thumbnail() failed to generate a thumbnail for %s", argv[1]);
         return 1;
     }
 

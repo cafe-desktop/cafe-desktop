@@ -1,4 +1,4 @@
-/* mate-bg-crossfade.h - fade window background between two pixmaps
+/* cafe-bg-crossfade.h - fade window background between two pixmaps
 
    Copyright 2008, Red Hat, Inc.
 
@@ -26,7 +26,7 @@
 #define __CAFE_BG_CROSSFADE_H__
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error    MateBGCrossfade is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-bg-crossfade.h
+#error    MateBGCrossfade is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including cafe-bg-crossfade.h
 #endif
 
 #include <glib.h>
@@ -35,7 +35,7 @@
 
 G_BEGIN_DECLS
 
-#define CAFE_TYPE_BG_CROSSFADE            (mate_bg_crossfade_get_type ())
+#define CAFE_TYPE_BG_CROSSFADE            (cafe_bg_crossfade_get_type ())
 #define CAFE_BG_CROSSFADE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_BG_CROSSFADE, MateBGCrossfade))
 #define CAFE_BG_CROSSFADE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_BG_CROSSFADE, MateBGCrossfadeClass))
 #define CAFE_IS_BG_CROSSFADE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_BG_CROSSFADE))
@@ -60,20 +60,20 @@ struct _MateBGCrossfadeClass
     void (* finished) (MateBGCrossfade *fade, GdkWindow *window);
 };
 
-GType             mate_bg_crossfade_get_type (void);
-MateBGCrossfade   *mate_bg_crossfade_new (int width, int height);
+GType             cafe_bg_crossfade_get_type (void);
+MateBGCrossfade   *cafe_bg_crossfade_new (int width, int height);
 
-gboolean          mate_bg_crossfade_set_start_surface (MateBGCrossfade *fade,
+gboolean          cafe_bg_crossfade_set_start_surface (MateBGCrossfade *fade,
                                                        cairo_surface_t *surface);
-gboolean          mate_bg_crossfade_set_end_surface (MateBGCrossfade *fade,
+gboolean          cafe_bg_crossfade_set_end_surface (MateBGCrossfade *fade,
                                                      cairo_surface_t *surface);
 
-void              mate_bg_crossfade_start (MateBGCrossfade *fade,
+void              cafe_bg_crossfade_start (MateBGCrossfade *fade,
                                            GdkWindow        *window);
-void              mate_bg_crossfade_start_widget (MateBGCrossfade *fade,
+void              cafe_bg_crossfade_start_widget (MateBGCrossfade *fade,
                                                   GtkWidget       *widget);
-gboolean          mate_bg_crossfade_is_started (MateBGCrossfade *fade);
-void              mate_bg_crossfade_stop (MateBGCrossfade *fade);
+gboolean          cafe_bg_crossfade_is_started (MateBGCrossfade *fade);
+void              cafe_bg_crossfade_stop (MateBGCrossfade *fade);
 
 G_END_DECLS
 

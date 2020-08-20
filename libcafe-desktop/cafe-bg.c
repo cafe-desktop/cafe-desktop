@@ -1,6 +1,6 @@
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*-
 
-matebg.c: Object for the desktop background.
+cafebg.c: Object for the desktop background.
 
 Copyright (C) 2000 Eazel, Inc.
 Copyright (C) 2007-2008 Red Hat, Inc.
@@ -44,12 +44,12 @@ Authors: Soren Sandmann <sandmann@redhat.com>
 #include <cairo.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
-#include <mate-bg.h>
-#include <mate-bg-crossfade.h>
+#include <cafe-bg.h>
+#include <cafe-bg-crossfade.h>
 
 # include <cairo-xlib.h>
 
-#define CAFE_BG_CACHE_DIR "mate/background"
+#define CAFE_BG_CACHE_DIR "cafe/background"
 
 /* We keep the large pixbufs around if the next update
    in the slideshow is less than 60 seconds away */
@@ -122,7 +122,7 @@ enum {
 
 static guint signals[N_SIGNALS] = {0};
 
-G_DEFINE_TYPE(MateBG, mate_bg, G_TYPE_OBJECT)
+G_DEFINE_TYPE(MateBG, cafe_bg, G_TYPE_OBJECT)
 
 static cairo_surface_t *make_root_pixmap     (GdkWindow  *window,
                                               gint        width,
@@ -270,12 +270,12 @@ queue_transitioned (MateBG *bg)
 
 /* This function loads the user's preferences */
 void
-mate_bg_load_from_preferences (MateBG *bg)
+cafe_bg_load_from_preferences (MateBG *bg)
 {
 	GSettings *settings;
 	settings = g_settings_new (CAFE_BG_SCHEMA);
 
-	mate_bg_load_from_gsettings (bg, settings);
+	cafe_bg_load_from_gsettings (bg, settings);
 	g_object_unref (settings);
 
 	/* Queue change to force background redraw */
@@ -284,7 +284,7 @@ mate_bg_load_from_preferences (MateBG *bg)
 
 /* This function loads default system settings */
 void
-mate_bg_load_from_system_preferences (MateBG *bg)
+cafe_bg_load_from_system_preferences (MateBG *bg)
 {
 	GSettings *settings;
 
@@ -294,14 +294,14 @@ mate_bg_load_from_system_preferences (MateBG *bg)
 	*/
 	settings = g_settings_new (CAFE_BG_SCHEMA);
 
-	mate_bg_load_from_system_gsettings (bg, settings, FALSE);
+	cafe_bg_load_from_system_gsettings (bg, settings, FALSE);
 
 	g_object_unref (settings);
 }
 
 /* This function loads (and optionally resets to) default system settings */
 void
-mate_bg_load_from_system_gsettings (MateBG    *bg,
+cafe_bg_load_from_system_gsettings (MateBG    *bg,
 				    GSettings *settings,
 				    gboolean   reset_apply)
 {
@@ -327,13 +327,13 @@ mate_bg_load_from_system_gsettings (MateBG    *bg,
 		/* Apply changes atomically. */
 		g_settings_apply (settings);
 	} else {
-		mate_bg_load_from_gsettings (bg, settings);
+		cafe_bg_load_from_gsettings (bg, settings);
 		g_settings_revert (settings);
 	}
 }
 
 void
-mate_bg_load_from_gsettings (MateBG    *bg,
+cafe_bg_load_from_gsettings (MateBG    *bg,
 			     GSettings *settings)
 {
 	char    *tmp;
@@ -399,26 +399,26 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	/* Placement */
 	placement = g_settings_get_enum (settings, CAFE_BG_KEY_PICTURE_PLACEMENT);
 
-	mate_bg_set_color (bg, ctype, &c1, &c2);
-	mate_bg_set_placement (bg, placement);
-	mate_bg_set_filename (bg, filename);
+	cafe_bg_set_color (bg, ctype, &c1, &c2);
+	cafe_bg_set_placement (bg, placement);
+	cafe_bg_set_filename (bg, filename);
 
 	if (filename != NULL)
 		g_free (filename);
 }
 
 void
-mate_bg_save_to_preferences (MateBG *bg)
+cafe_bg_save_to_preferences (MateBG *bg)
 {
 	GSettings *settings;
 	settings = g_settings_new (CAFE_BG_SCHEMA);
 
-	mate_bg_save_to_gsettings (bg, settings);
+	cafe_bg_save_to_gsettings (bg, settings);
 	g_object_unref (settings);
 }
 
 void
-mate_bg_save_to_gsettings (MateBG    *bg,
+cafe_bg_save_to_gsettings (MateBG    *bg,
 			   GSettings *settings)
 {
 	gchar *primary;
@@ -448,12 +448,12 @@ mate_bg_save_to_gsettings (MateBG    *bg,
 
 
 static void
-mate_bg_init (MateBG *bg)
+cafe_bg_init (MateBG *bg)
 {
 }
 
 static void
-mate_bg_dispose (GObject *object)
+cafe_bg_dispose (GObject *object)
 {
 	MateBG *bg = CAFE_BG (object);
 
@@ -464,11 +464,11 @@ mate_bg_dispose (GObject *object)
 
 	clear_cache (bg);
 
-	G_OBJECT_CLASS (mate_bg_parent_class)->dispose (object);
+	G_OBJECT_CLASS (cafe_bg_parent_class)->dispose (object);
 }
 
 static void
-mate_bg_finalize (GObject *object)
+cafe_bg_finalize (GObject *object)
 {
 	MateBG *bg = CAFE_BG (object);
 
@@ -490,16 +490,16 @@ mate_bg_finalize (GObject *object)
 	g_free (bg->filename);
 	bg->filename = NULL;
 
-	G_OBJECT_CLASS (mate_bg_parent_class)->finalize (object);
+	G_OBJECT_CLASS (cafe_bg_parent_class)->finalize (object);
 }
 
 static void
-mate_bg_class_init (MateBGClass *klass)
+cafe_bg_class_init (MateBGClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->dispose = mate_bg_dispose;
-	object_class->finalize = mate_bg_finalize;
+	object_class->dispose = cafe_bg_dispose;
+	object_class->finalize = cafe_bg_finalize;
 
 	signals[CHANGED] = g_signal_new ("changed",
 					 G_OBJECT_CLASS_TYPE (object_class),
@@ -519,13 +519,13 @@ mate_bg_class_init (MateBGClass *klass)
 }
 
 MateBG *
-mate_bg_new (void)
+cafe_bg_new (void)
 {
 	return g_object_new (CAFE_TYPE_BG, NULL);
 }
 
 void
-mate_bg_set_color (MateBG *bg,
+cafe_bg_set_color (MateBG *bg,
 		    MateBGColorType type,
 		    GdkRGBA *primary,
 		    GdkRGBA *secondary)
@@ -547,7 +547,7 @@ mate_bg_set_color (MateBG *bg,
 }
 
 void
-mate_bg_set_placement (MateBG		*bg,
+cafe_bg_set_placement (MateBG		*bg,
 		       MateBGPlacement	 placement)
 {
 	g_return_if_fail (bg != NULL);
@@ -560,7 +560,7 @@ mate_bg_set_placement (MateBG		*bg,
 }
 
 MateBGPlacement
-mate_bg_get_placement (MateBG *bg)
+cafe_bg_get_placement (MateBG *bg)
 {
 	g_return_val_if_fail (bg != NULL, -1);
 
@@ -568,7 +568,7 @@ mate_bg_get_placement (MateBG *bg)
 }
 
 void
-mate_bg_get_color (MateBG		*bg,
+cafe_bg_get_color (MateBG		*bg,
 		   MateBGColorType	*type,
 		   GdkRGBA		*primary,
 		   GdkRGBA		*secondary)
@@ -586,7 +586,7 @@ mate_bg_get_color (MateBG		*bg,
 }
 
 void
-mate_bg_set_draw_background (MateBG	*bg,
+cafe_bg_set_draw_background (MateBG	*bg,
 			     gboolean	 draw_background)
 {
 	g_return_if_fail (bg != NULL);
@@ -599,7 +599,7 @@ mate_bg_set_draw_background (MateBG	*bg,
 }
 
 gboolean
-mate_bg_get_draw_background (MateBG *bg)
+cafe_bg_get_draw_background (MateBG *bg)
 {
 	g_return_val_if_fail (bg != NULL, FALSE);
 
@@ -607,7 +607,7 @@ mate_bg_get_draw_background (MateBG *bg)
 }
 
 const gchar *
-mate_bg_get_filename (MateBG *bg)
+cafe_bg_get_filename (MateBG *bg)
 {
 	g_return_val_if_fail (bg != NULL, NULL);
 
@@ -763,7 +763,7 @@ file_changed (GFileMonitor     *file_monitor,
 }
 
 void
-mate_bg_set_filename (MateBG	 *bg,
+cafe_bg_set_filename (MateBG	 *bg,
 		      const char *filename)
 {
 	g_return_if_fail (bg != NULL);
@@ -1053,7 +1053,7 @@ draw_each_monitor (MateBG    *bg,
 }
 
 void
-mate_bg_draw (MateBG     *bg,
+cafe_bg_draw (MateBG     *bg,
 	       GdkPixbuf *dest,
 	       GdkScreen *screen,
 	       gboolean   is_root)
@@ -1075,7 +1075,7 @@ mate_bg_draw (MateBG     *bg,
 }
 
 gboolean
-mate_bg_has_multiple_sizes (MateBG *bg)
+cafe_bg_has_multiple_sizes (MateBG *bg)
 {
 	SlideShow *show;
 	gboolean ret;
@@ -1094,7 +1094,7 @@ mate_bg_has_multiple_sizes (MateBG *bg)
 }
 
 static void
-mate_bg_get_pixmap_size (MateBG   *bg,
+cafe_bg_get_pixmap_size (MateBG   *bg,
 			  int        width,
 			  int        height,
 			  int       *pixmap_width,
@@ -1127,7 +1127,7 @@ mate_bg_get_pixmap_size (MateBG   *bg,
 }
 
 /**
- * mate_bg_create_surface:
+ * cafe_bg_create_surface:
  * @bg: MateBG
  * @window:
  * @width:
@@ -1140,13 +1140,13 @@ mate_bg_get_pixmap_size (MateBG   *bg,
  * who created it.
  **/
 cairo_surface_t *
-mate_bg_create_surface (MateBG      *bg,
+cafe_bg_create_surface (MateBG      *bg,
 		 	GdkWindow   *window,
 			int	     width,
 			int	     height,
 			gboolean     root)
 {
-	return mate_bg_create_surface_scale (bg,
+	return cafe_bg_create_surface_scale (bg,
 					     window,
 					     width,
 					     height,
@@ -1155,7 +1155,7 @@ mate_bg_create_surface (MateBG      *bg,
 }
 
 /**
- * mate_bg_create_surface_scale:
+ * cafe_bg_create_surface_scale:
  * @bg: MateBG
  * @window:
  * @width:
@@ -1169,7 +1169,7 @@ mate_bg_create_surface (MateBG      *bg,
  * who created it.
  **/
 cairo_surface_t *
-mate_bg_create_surface_scale (MateBG      *bg,
+cafe_bg_create_surface_scale (MateBG      *bg,
 			      GdkWindow   *window,
 			      int          width,
 			      int          height,
@@ -1192,7 +1192,7 @@ mate_bg_create_surface_scale (MateBG      *bg,
 		bg->pixbuf_cache = NULL;
 	}
 
-	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
+	cafe_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
 
 	if (root)
 	{
@@ -1216,7 +1216,7 @@ mate_bg_create_surface_scale (MateBG      *bg,
 
 		pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
 					 width, height);
-		mate_bg_draw (bg, pixbuf, gdk_window_get_screen (window), root);
+		cafe_bg_draw (bg, pixbuf, gdk_window_get_screen (window), root);
 		gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 		g_object_unref (pixbuf);
 	}
@@ -1233,7 +1233,7 @@ mate_bg_create_surface_scale (MateBG      *bg,
  * clients know what colors to draw on top with
  */
 gboolean
-mate_bg_is_dark (MateBG *bg,
+cafe_bg_is_dark (MateBG *bg,
 		  int      width,
 		  int      height)
 {
@@ -1350,7 +1350,7 @@ get_filename_for_size (MateBG *bg, gint best_width, gint best_height)
 }
 
 gboolean
-mate_bg_get_image_size (MateBG	       *bg,
+cafe_bg_get_image_size (MateBG	       *bg,
 			 MateDesktopThumbnailFactory *factory,
 			 int                    best_width,
 			 int                    best_height,
@@ -1392,12 +1392,12 @@ fit_factor (int from_width, int from_height,
 }
 
 /**
- * mate_bg_create_thumbnail:
+ * cafe_bg_create_thumbnail:
  *
  * Returns: (transfer full): a #GdkPixbuf showing the background as a thumbnail
  */
 GdkPixbuf *
-mate_bg_create_thumbnail (MateBG               *bg,
+cafe_bg_create_thumbnail (MateBG               *bg,
 		           MateDesktopThumbnailFactory *factory,
 			   GdkScreen             *screen,
 			   int                    dest_width,
@@ -1425,7 +1425,7 @@ mate_bg_create_thumbnail (MateBG               *bg,
 }
 
 /**
- * mate_bg_get_surface_from_root:
+ * cafe_bg_get_surface_from_root:
  * @screen: a #GdkScreen
  *
  * This function queries the _XROOTPMAP_ID property from
@@ -1437,7 +1437,7 @@ mate_bg_create_thumbnail (MateBG               *bg,
  * Return value: a #cairo_surface_t if successful or %NULL
  **/
 cairo_surface_t *
-mate_bg_get_surface_from_root (GdkScreen *screen)
+cafe_bg_get_surface_from_root (GdkScreen *screen)
 {
 	int result;
 	gint format;
@@ -1532,7 +1532,7 @@ mate_bg_get_surface_from_root (GdkScreen *screen)
 /* Sets the "ESETROOT_PMAP_ID" property to later be used to free the pixmap,
  */
 static void
-mate_bg_set_root_pixmap_id (GdkScreen       *screen,
+cafe_bg_set_root_pixmap_id (GdkScreen       *screen,
 			    Display         *display,
 			    Pixmap           xpixmap)
 {
@@ -1606,7 +1606,7 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 }
 
 /**
- * mate_bg_set_surface_as_root:
+ * cafe_bg_set_surface_as_root:
  * @screen: the #GdkScreen to change root background on
  * @surface: the #cairo_surface_t to set root background from.
  *   Must be an xlib surface backing a pixmap.
@@ -1616,10 +1616,10 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
  * we won't leak the pixmap if somebody else it setting
  * it at the same time. (This assumes that they follow the
  * same conventions we do).  @surface should come from a call
- * to mate_bg_create_surface().
+ * to cafe_bg_create_surface().
  **/
 void
-mate_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
+cafe_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
 {
 	g_return_if_fail (screen != NULL);
 	g_return_if_fail (cairo_surface_get_type (surface) == CAIRO_SURFACE_TYPE_XLIB);
@@ -1632,7 +1632,7 @@ mate_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
 	Window      xroot        = RootWindow (display, gdk_x11_screen_get_screen_number (screen));
 
 	XGrabServer (display);
-	mate_bg_set_root_pixmap_id (screen, display, pixmap_id);
+	cafe_bg_set_root_pixmap_id (screen, display, pixmap_id);
 
 	XSetWindowBackgroundPixmap (display, xroot, pixmap_id);
 	XClearWindow (display, xroot);
@@ -1642,19 +1642,19 @@ mate_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
 }
 
 /**
- * mate_bg_set_surface_as_root_with_crossfade:
+ * cafe_bg_set_surface_as_root_with_crossfade:
  * @screen: the #GdkScreen to change root background on
  * @surface: the cairo xlib surface to set root background from
  *
  * Set the root pixmap, and properties pointing to it.
- * This function differs from mate_bg_set_surface_as_root()
+ * This function differs from cafe_bg_set_surface_as_root()
  * in that it adds a subtle crossfade animation from the
  * current root pixmap to the new one.
  *
  * Return value: (transfer full): a #MateBGCrossfade object
  **/
 MateBGCrossfade *
-mate_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
+cafe_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
 		 			    cairo_surface_t *surface)
 {
 	GdkWindow       *root_window;
@@ -1669,11 +1669,11 @@ mate_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
 	root_window = gdk_screen_get_root_window (screen);
 	width       = gdk_window_get_width (root_window);
 	height      = gdk_window_get_height (root_window);
-	fade        = mate_bg_crossfade_new (width, height);
-	old_surface = mate_bg_get_surface_from_root (screen);
+	fade        = cafe_bg_crossfade_new (width, height);
+	old_surface = cafe_bg_get_surface_from_root (screen);
 
-	mate_bg_crossfade_set_start_surface (fade, old_surface);
-	mate_bg_crossfade_set_end_surface (fade, surface);
+	cafe_bg_crossfade_set_start_surface (fade, old_surface);
+	cafe_bg_crossfade_set_end_surface (fade, surface);
 
 	/* Before setting the surface as a root pixmap, let's have it draw
 	 * the old stuff, just so it won't be noticable
@@ -1686,8 +1686,8 @@ mate_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
 	cairo_destroy (cr);
 	cairo_surface_destroy (old_surface);
 
-	mate_bg_set_surface_as_root (screen, surface);
-	mate_bg_crossfade_start (fade, root_window);
+	cafe_bg_set_surface_as_root (screen, surface);
+	cafe_bg_crossfade_start (fade, root_window);
 
 	return fade;
 }
@@ -3124,7 +3124,7 @@ create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
 	if (uri == NULL)
 		return NULL;
 
-	thumb = mate_desktop_thumbnail_factory_lookup (factory, uri, mtime);
+	thumb = cafe_desktop_thumbnail_factory_lookup (factory, uri, mtime);
 
 	if (thumb) {
 		result = gdk_pixbuf_new_from_file (thumb, NULL);
@@ -3139,17 +3139,17 @@ create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
 			result = pixbuf_scale_to_fit (orig, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
 
 
-			g_object_set_data_full (G_OBJECT (result), "mate-thumbnail-height",
+			g_object_set_data_full (G_OBJECT (result), "cafe-thumbnail-height",
 						g_strdup_printf ("%d", orig_height), g_free);
-			g_object_set_data_full (G_OBJECT (result), "mate-thumbnail-width",
+			g_object_set_data_full (G_OBJECT (result), "cafe-thumbnail-width",
 						g_strdup_printf ("%d", orig_width), g_free);
 
 			g_object_unref (orig);
 
-			mate_desktop_thumbnail_factory_save_thumbnail (factory, result, uri, mtime);
+			cafe_desktop_thumbnail_factory_save_thumbnail (factory, result, uri, mtime);
 		}
 		else {
-			mate_desktop_thumbnail_factory_create_failed_thumbnail (factory, uri, mtime);
+			cafe_desktop_thumbnail_factory_create_failed_thumbnail (factory, uri, mtime);
 		}
 	}
 
@@ -3194,7 +3194,7 @@ slideshow_has_multiple_sizes (SlideShow *show)
  * Returns whether the background is a slideshow.
  */
 gboolean
-mate_bg_changes_with_time (MateBG *bg)
+cafe_bg_changes_with_time (MateBG *bg)
 {
 	SlideShow *show;
 
@@ -3211,7 +3211,7 @@ mate_bg_changes_with_time (MateBG *bg)
 }
 
 /**
- * mate_bg_create_frame_thumbnail:
+ * cafe_bg_create_frame_thumbnail:
  *
  * Creates a thumbnail for a certain frame, where 'frame' is somewhat
  * vaguely defined as 'suitable point to show while single-stepping
@@ -3221,7 +3221,7 @@ mate_bg_changes_with_time (MateBG *bg)
  * or NULL if frame_num is out of bounds.
  */
 GdkPixbuf *
-mate_bg_create_frame_thumbnail (MateBG			*bg,
+cafe_bg_create_frame_thumbnail (MateBG			*bg,
 				 MateDesktopThumbnailFactory	*factory,
 				 GdkScreen			*screen,
 				 int				 dest_width,

@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.accessibility-startup" path="/org/mate/desktop/accessibility/startup/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.accessibility-startup" path="/org/cafe/desktop/accessibility/startup/">
     <key name="exec-ats" type="as">
       <default>[]</default>
       <summary>Startup Assistive Technology Applications</summary>

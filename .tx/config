@@ -1,9 +1,9 @@
 [main]
 host = https://www.transifex.com
  
-[CAFE.1-24--mate-desktop]
+[CAFE.1-24--cafe-desktop]
 file_filter = po/<lang>.po
-source_file = mate-desktop.pot
+source_file = cafe-desktop.pot
 source_lang = en
 type = PO
 minimum_perc = 2

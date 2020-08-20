@@ -3,7 +3,7 @@
 ##########################################################
 requires:
   archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/mate-desktop
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/cafe-desktop
     - autoconf-archive
     - clang
     - gcc
@@ -14,13 +14,13 @@ requires:
     - iso-codes
     - meson
     - make
-    - mate-common
+    - cafe-common
     - startup-notification
     - which
 
   debian:
-    # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-desktop
+    # Useful URL: https://github.com/cafe-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/cafe-desktop
     - autopoint
     - clang
     - clang-tools
@@ -40,11 +40,11 @@ requires:
     - libx11-dev
     - libxml2-dev
     - libxrandr-dev
-    - mate-common
+    - cafe-common
     - meson
 
   fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-desktop.git
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/cafe-desktop.git
     - autoconf-archive
     - cairo-gobject-devel
     - clang-analyzer
@@ -58,7 +58,7 @@ requires:
     - iso-codes-devel
     - itstool
     - make
-    - mate-common
+    - cafe-common
     - meson
     - redhat-rpm-config
     - startup-notification-devel
@@ -82,7 +82,7 @@ requires:
     - libx11-dev
     - libxml2-dev
     - libxrandr-dev
-    - mate-common
+    - cafe-common
     - meson
 
 variables:
@@ -105,9 +105,9 @@ variables:
 
 before_scripts:
   - cd ${START_DIR}
-  - '[ -f mate-common-1.24.1.tar.xz ] || curl -Ls -o mate-common-1.24.1.tar.xz https://github.com/mate-desktop/mate-common/releases/download/v1.24.1/mate-common-1.24.1.tar.xz'
-  - tar xf mate-common-1.24.1.tar.xz
-  - cd mate-common-1.24.1
+  - '[ -f cafe-common-1.24.1.tar.xz ] || curl -Ls -o cafe-common-1.24.1.tar.xz https://github.com/cafe-desktop/cafe-common/releases/download/v1.24.1/cafe-common-1.24.1.tar.xz'
+  - tar xf cafe-common-1.24.1.tar.xz
+  - cd cafe-common-1.24.1
   - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
   -     ./configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
   - else
@@ -138,10 +138,10 @@ releases:
   prerelease: false
   checksum: true
   file_glob: true
-  files: mate-desktop-*.tar.xz
+  files: cafe-desktop-*.tar.xz
   github_release:
     tags: true
     overwrite: true
     base_version: 1.20.0
     notify_servers:
-      - https://release.mate-desktop.org/release
+      - https://release.cafe-desktop.org/release

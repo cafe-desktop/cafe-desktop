@@ -1,4 +1,4 @@
-/* mate-rr.h
+/* cafe-rr.h
  *
  * Copyright 2007, 2008, Red Hat, Inc.
  *
@@ -25,7 +25,7 @@
 #define CAFE_RR_H
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error    MateRR is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including materr.h
+#error    MateRR is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including caferr.h
 #endif
 
 #include <glib.h>
@@ -60,9 +60,9 @@ typedef enum
 
 /* Error codes */
 
-#define CAFE_RR_ERROR (mate_rr_error_quark ())
+#define CAFE_RR_ERROR (cafe_rr_error_quark ())
 
-GQuark mate_rr_error_quark (void);
+GQuark cafe_rr_error_quark (void);
 
 typedef enum {
     CAFE_RR_ERROR_UNKNOWN,		/* generic "fail" */
@@ -75,89 +75,89 @@ typedef enum {
 
 #define CAFE_RR_CONNECTOR_TYPE_PANEL "Panel"  /* This is a laptop's built-in LCD */
 
-#define CAFE_TYPE_RR_SCREEN                  (mate_rr_screen_get_type())
+#define CAFE_TYPE_RR_SCREEN                  (cafe_rr_screen_get_type())
 #define CAFE_RR_SCREEN(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_SCREEN, MateRRScreen))
 #define CAFE_IS_RR_SCREEN(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_SCREEN))
 #define CAFE_RR_SCREEN_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_RR_SCREEN, MateRRScreenClass))
 #define CAFE_IS_RR_SCREEN_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_RR_SCREEN))
 #define CAFE_RR_SCREEN_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_RR_SCREEN, MateRRScreenClass))
 
-#define CAFE_TYPE_RR_OUTPUT (mate_rr_output_get_type())
-#define CAFE_TYPE_RR_CRTC   (mate_rr_crtc_get_type())
-#define CAFE_TYPE_RR_MODE   (mate_rr_mode_get_type())
+#define CAFE_TYPE_RR_OUTPUT (cafe_rr_output_get_type())
+#define CAFE_TYPE_RR_CRTC   (cafe_rr_crtc_get_type())
+#define CAFE_TYPE_RR_MODE   (cafe_rr_mode_get_type())
 
-GType mate_rr_screen_get_type (void);
-GType mate_rr_output_get_type (void);
-GType mate_rr_crtc_get_type (void);
-GType mate_rr_mode_get_type (void);
+GType cafe_rr_screen_get_type (void);
+GType cafe_rr_output_get_type (void);
+GType cafe_rr_crtc_get_type (void);
+GType cafe_rr_mode_get_type (void);
 
 /* MateRRScreen */
-MateRRScreen * mate_rr_screen_new                (GdkScreen             *screen,
+MateRRScreen * cafe_rr_screen_new                (GdkScreen             *screen,
 						    GError               **error);
-MateRROutput **mate_rr_screen_list_outputs       (MateRRScreen         *screen);
-MateRRCrtc **  mate_rr_screen_list_crtcs         (MateRRScreen         *screen);
-MateRRMode **  mate_rr_screen_list_modes         (MateRRScreen         *screen);
-MateRRMode **  mate_rr_screen_list_clone_modes   (MateRRScreen	  *screen);
-void            mate_rr_screen_set_size           (MateRRScreen         *screen,
+MateRROutput **cafe_rr_screen_list_outputs       (MateRRScreen         *screen);
+MateRRCrtc **  cafe_rr_screen_list_crtcs         (MateRRScreen         *screen);
+MateRRMode **  cafe_rr_screen_list_modes         (MateRRScreen         *screen);
+MateRRMode **  cafe_rr_screen_list_clone_modes   (MateRRScreen	  *screen);
+void            cafe_rr_screen_set_size           (MateRRScreen         *screen,
 						    int                    width,
 						    int                    height,
 						    int                    mm_width,
 						    int                    mm_height);
-MateRRCrtc *   mate_rr_screen_get_crtc_by_id     (MateRRScreen         *screen,
+MateRRCrtc *   cafe_rr_screen_get_crtc_by_id     (MateRRScreen         *screen,
 						    guint32                id);
-gboolean        mate_rr_screen_refresh            (MateRRScreen         *screen,
+gboolean        cafe_rr_screen_refresh            (MateRRScreen         *screen,
 						    GError               **error);
-MateRROutput * mate_rr_screen_get_output_by_id   (MateRRScreen         *screen,
+MateRROutput * cafe_rr_screen_get_output_by_id   (MateRRScreen         *screen,
 						    guint32                id);
-MateRROutput * mate_rr_screen_get_output_by_name (MateRRScreen         *screen,
+MateRROutput * cafe_rr_screen_get_output_by_name (MateRRScreen         *screen,
 						    const char            *name);
-void            mate_rr_screen_get_ranges         (MateRRScreen         *screen,
+void            cafe_rr_screen_get_ranges         (MateRRScreen         *screen,
 						    int                   *min_width,
 						    int                   *max_width,
 						    int                   *min_height,
 						    int                   *max_height);
-void            mate_rr_screen_get_timestamps     (MateRRScreen         *screen,
+void            cafe_rr_screen_get_timestamps     (MateRRScreen         *screen,
 						    guint32               *change_timestamp_ret,
 						    guint32               *config_timestamp_ret);
 
-void            mate_rr_screen_set_primary_output (MateRRScreen         *screen,
+void            cafe_rr_screen_set_primary_output (MateRRScreen         *screen,
                                                     MateRROutput         *output);
 
 /* MateRROutput */
-guint32         mate_rr_output_get_id             (MateRROutput         *output);
-const char *    mate_rr_output_get_name           (MateRROutput         *output);
-gboolean        mate_rr_output_is_connected       (MateRROutput         *output);
-int             mate_rr_output_get_size_inches    (MateRROutput         *output);
-int             mate_rr_output_get_width_mm       (MateRROutput         *outout);
-int             mate_rr_output_get_height_mm      (MateRROutput         *output);
-const guint8 *  mate_rr_output_get_edid_data      (MateRROutput         *output);
-MateRRCrtc **  mate_rr_output_get_possible_crtcs (MateRROutput         *output);
-MateRRMode *   mate_rr_output_get_current_mode   (MateRROutput         *output);
-MateRRCrtc *   mate_rr_output_get_crtc           (MateRROutput         *output);
-const char *    mate_rr_output_get_connector_type (MateRROutput         *output);
-gboolean        mate_rr_output_is_laptop          (MateRROutput         *output);
-void            mate_rr_output_get_position       (MateRROutput         *output,
+guint32         cafe_rr_output_get_id             (MateRROutput         *output);
+const char *    cafe_rr_output_get_name           (MateRROutput         *output);
+gboolean        cafe_rr_output_is_connected       (MateRROutput         *output);
+int             cafe_rr_output_get_size_inches    (MateRROutput         *output);
+int             cafe_rr_output_get_width_mm       (MateRROutput         *outout);
+int             cafe_rr_output_get_height_mm      (MateRROutput         *output);
+const guint8 *  cafe_rr_output_get_edid_data      (MateRROutput         *output);
+MateRRCrtc **  cafe_rr_output_get_possible_crtcs (MateRROutput         *output);
+MateRRMode *   cafe_rr_output_get_current_mode   (MateRROutput         *output);
+MateRRCrtc *   cafe_rr_output_get_crtc           (MateRROutput         *output);
+const char *    cafe_rr_output_get_connector_type (MateRROutput         *output);
+gboolean        cafe_rr_output_is_laptop          (MateRROutput         *output);
+void            cafe_rr_output_get_position       (MateRROutput         *output,
 						    int                   *x,
 						    int                   *y);
-gboolean        mate_rr_output_can_clone          (MateRROutput         *output,
+gboolean        cafe_rr_output_can_clone          (MateRROutput         *output,
 						    MateRROutput         *clone);
-MateRRMode **  mate_rr_output_list_modes         (MateRROutput         *output);
-MateRRMode *   mate_rr_output_get_preferred_mode (MateRROutput         *output);
-gboolean        mate_rr_output_supports_mode      (MateRROutput         *output,
+MateRRMode **  cafe_rr_output_list_modes         (MateRROutput         *output);
+MateRRMode *   cafe_rr_output_get_preferred_mode (MateRROutput         *output);
+gboolean        cafe_rr_output_supports_mode      (MateRROutput         *output,
 						    MateRRMode           *mode);
-gboolean        mate_rr_output_get_is_primary     (MateRROutput         *output);
+gboolean        cafe_rr_output_get_is_primary     (MateRROutput         *output);
 
 /* MateRRMode */
-guint32         mate_rr_mode_get_id               (MateRRMode           *mode);
-guint           mate_rr_mode_get_width            (MateRRMode           *mode);
-guint           mate_rr_mode_get_height           (MateRRMode           *mode);
-int             mate_rr_mode_get_freq             (MateRRMode           *mode);
+guint32         cafe_rr_mode_get_id               (MateRRMode           *mode);
+guint           cafe_rr_mode_get_width            (MateRRMode           *mode);
+guint           cafe_rr_mode_get_height           (MateRRMode           *mode);
+int             cafe_rr_mode_get_freq             (MateRRMode           *mode);
 
 /* MateRRCrtc */
-guint32         mate_rr_crtc_get_id               (MateRRCrtc           *crtc);
+guint32         cafe_rr_crtc_get_id               (MateRRCrtc           *crtc);
 
 #ifndef CAFE_DISABLE_DEPRECATED
-gboolean        mate_rr_crtc_set_config           (MateRRCrtc           *crtc,
+gboolean        cafe_rr_crtc_set_config           (MateRRCrtc           *crtc,
 						    int                    x,
 						    int                    y,
 						    MateRRMode           *mode,
@@ -167,7 +167,7 @@ gboolean        mate_rr_crtc_set_config           (MateRRCrtc           *crtc,
 						    GError               **error);
 #endif
 
-gboolean        mate_rr_crtc_set_config_with_time (MateRRCrtc           *crtc,
+gboolean        cafe_rr_crtc_set_config_with_time (MateRRCrtc           *crtc,
 						    guint32                timestamp,
 						    int                    x,
 						    int                    y,
@@ -176,23 +176,23 @@ gboolean        mate_rr_crtc_set_config_with_time (MateRRCrtc           *crtc,
 						    MateRROutput        **outputs,
 						    int                    n_outputs,
 						    GError               **error);
-gboolean        mate_rr_crtc_can_drive_output     (MateRRCrtc           *crtc,
+gboolean        cafe_rr_crtc_can_drive_output     (MateRRCrtc           *crtc,
 						    MateRROutput         *output);
-MateRRMode *   mate_rr_crtc_get_current_mode     (MateRRCrtc           *crtc);
-void            mate_rr_crtc_get_position         (MateRRCrtc           *crtc,
+MateRRMode *   cafe_rr_crtc_get_current_mode     (MateRRCrtc           *crtc);
+void            cafe_rr_crtc_get_position         (MateRRCrtc           *crtc,
 						    int                   *x,
 						    int                   *y);
-MateRRRotation mate_rr_crtc_get_current_rotation (MateRRCrtc           *crtc);
-MateRRRotation mate_rr_crtc_get_rotations        (MateRRCrtc           *crtc);
-gboolean        mate_rr_crtc_supports_rotation    (MateRRCrtc           *crtc,
+MateRRRotation cafe_rr_crtc_get_current_rotation (MateRRCrtc           *crtc);
+MateRRRotation cafe_rr_crtc_get_rotations        (MateRRCrtc           *crtc);
+gboolean        cafe_rr_crtc_supports_rotation    (MateRRCrtc           *crtc,
 						    MateRRRotation        rotation);
 
-gboolean        mate_rr_crtc_get_gamma            (MateRRCrtc           *crtc,
+gboolean        cafe_rr_crtc_get_gamma            (MateRRCrtc           *crtc,
 						    int                   *size,
 						    unsigned short       **red,
 						    unsigned short       **green,
 						    unsigned short       **blue);
-void            mate_rr_crtc_set_gamma            (MateRRCrtc           *crtc,
+void            cafe_rr_crtc_set_gamma            (MateRRCrtc           *crtc,
 						    int                    size,
 						    unsigned short        *red,
 						    unsigned short        *green,

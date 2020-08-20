@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.interface" path="/org/mate/desktop/interface/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.interface" path="/org/cafe/desktop/interface/">
     <key name="accessibility" type="b">
       <default>false</default>
       <summary>Enable Accessibility</summary>

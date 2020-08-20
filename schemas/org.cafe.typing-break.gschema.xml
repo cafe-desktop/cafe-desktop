@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.typing-break" path="/org/mate/desktop/typing-break/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.typing-break" path="/org/cafe/desktop/typing-break/">
     <key name="type-time" type="i">
       <default>60</default>
       <summary>Type time</summary>

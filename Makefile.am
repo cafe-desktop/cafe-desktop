@@ -1,7 +1,7 @@
-SUBDIRS = libmate-desktop man docs schemas tools icons po
+SUBDIRS = libcafe-desktop man docs schemas tools icons po
 
 if CAFE_ABOUT_ENABLED
-SUBDIRS += mate-about
+SUBDIRS += cafe-about
 endif
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}

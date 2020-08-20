@@ -1,1 +1,1 @@
-i18n.gettext(matedt_gettext_package, preset: 'glib')
+i18n.gettext(cafedt_gettext_package, preset: 'glib')

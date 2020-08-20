@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.thumbnailers" path="/org/mate/desktop/thumbnailers/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.thumbnailers" path="/org/cafe/desktop/thumbnailers/">
     <key name="disable-all" type="b">
       <default>false</default>
       <summary>Disable all external thumbnailers</summary>

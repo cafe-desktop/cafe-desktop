@@ -1,4 +1,4 @@
-/* mate-rr.c
+/* cafe-rr.c
  *
  * Copyright 2007, 2008, Red Hat, Inc.
  *
@@ -38,11 +38,11 @@
 #include <X11/Xatom.h>
 
 #undef CAFE_DISABLE_DEPRECATED
-#include "mate-rr.h"
-#include "mate-rr-config.h"
+#include "cafe-rr.h"
+#include "cafe-rr-config.h"
 
 #include "private.h"
-#include "mate-rr-private.h"
+#include "cafe-rr-private.h"
 
 #define DISPLAY(o) ((o)->info->screen->priv->xdisplay)
 
@@ -161,23 +161,23 @@ static MateRRMode *  mode_copy         (const MateRRMode  *from);
 static void           mode_free         (MateRRMode        *mode);
 
 
-static void mate_rr_screen_finalize (GObject*);
-static void mate_rr_screen_set_property (GObject*, guint, const GValue*, GParamSpec*);
-static void mate_rr_screen_get_property (GObject*, guint, GValue*, GParamSpec*);
-static gboolean mate_rr_screen_initable_init (GInitable*, GCancellable*, GError**);
-static void mate_rr_screen_initable_iface_init (GInitableIface *iface);
-G_DEFINE_TYPE_WITH_CODE (MateRRScreen, mate_rr_screen, G_TYPE_OBJECT,
+static void cafe_rr_screen_finalize (GObject*);
+static void cafe_rr_screen_set_property (GObject*, guint, const GValue*, GParamSpec*);
+static void cafe_rr_screen_get_property (GObject*, guint, GValue*, GParamSpec*);
+static gboolean cafe_rr_screen_initable_init (GInitable*, GCancellable*, GError**);
+static void cafe_rr_screen_initable_iface_init (GInitableIface *iface);
+G_DEFINE_TYPE_WITH_CODE (MateRRScreen, cafe_rr_screen, G_TYPE_OBJECT,
                          G_ADD_PRIVATE(MateRRScreen)
-                         G_IMPLEMENT_INTERFACE (G_TYPE_INITABLE, mate_rr_screen_initable_iface_init))
+                         G_IMPLEMENT_INTERFACE (G_TYPE_INITABLE, cafe_rr_screen_initable_iface_init))
 
-G_DEFINE_BOXED_TYPE (MateRRCrtc, mate_rr_crtc, crtc_copy, crtc_free)
-G_DEFINE_BOXED_TYPE (MateRROutput, mate_rr_output, output_copy, output_free)
-G_DEFINE_BOXED_TYPE (MateRRMode, mate_rr_mode, mode_copy, mode_free)
+G_DEFINE_BOXED_TYPE (MateRRCrtc, cafe_rr_crtc, crtc_copy, crtc_free)
+G_DEFINE_BOXED_TYPE (MateRROutput, cafe_rr_output, output_copy, output_free)
+G_DEFINE_BOXED_TYPE (MateRRMode, cafe_rr_mode, mode_copy, mode_free)
 
 /* Errors */
 
 /**
- * mate_rr_error_quark:
+ * cafe_rr_error_quark:
  *
  * Returns the #GQuark that will be used for #GError values returned by the
  * MateRR API.
@@ -185,14 +185,14 @@ G_DEFINE_BOXED_TYPE (MateRRMode, mate_rr_mode, mode_copy, mode_free)
  * Return value: a #GQuark used to identify errors coming from the MateRR API.
  */
 GQuark
-mate_rr_error_quark (void)
+cafe_rr_error_quark (void)
 {
-    return g_quark_from_static_string ("mate-rr-error-quark");
+    return g_quark_from_static_string ("cafe-rr-error-quark");
 }
 
 /* Screen */
 static MateRROutput *
-mate_rr_output_by_id (ScreenInfo *info, RROutput id)
+cafe_rr_output_by_id (ScreenInfo *info, RROutput id)
 {
     MateRROutput **output;
 
@@ -292,16 +292,16 @@ static gboolean
 has_similar_mode (MateRROutput *output, MateRRMode *mode)
 {
     int i;
-    MateRRMode **modes = mate_rr_output_list_modes (output);
-    int width = mate_rr_mode_get_width (mode);
-    int height = mate_rr_mode_get_height (mode);
+    MateRRMode **modes = cafe_rr_output_list_modes (output);
+    int width = cafe_rr_mode_get_width (mode);
+    int height = cafe_rr_mode_get_height (mode);
 
     for (i = 0; modes[i] != NULL; ++i)
     {
 	MateRRMode *m = modes[i];
 
-	if (mate_rr_mode_get_width (m) == width	&&
-	    mate_rr_mode_get_height (m) == height)
+	if (cafe_rr_mode_get_width (m) == width	&&
+	    cafe_rr_mode_get_height (m) == height)
 	{
 	    return TRUE;
 	}
@@ -492,7 +492,7 @@ fill_out_screen_info (Display *xdisplay,
     }
     else
     {
-        mate_rr_screen_get_ranges (info->screen,
+        cafe_rr_screen_get_ranges (info->screen,
 					 &(info->min_width),
 					 &(info->max_width),
 					 &(info->min_height),
@@ -621,7 +621,7 @@ screen_on_event (GdkXEvent *xevent,
 #if 0
     /* WHY THIS CODE IS DISABLED:
      *
-     * Note that in mate_rr_screen_new(), we only select for
+     * Note that in cafe_rr_screen_new(), we only select for
      * RRScreenChangeNotifyMask.  We used to select for other values in
      * RR*NotifyMask, but we weren't really doing anything useful with those
      * events.  We only care about "the screens changed in some way or another"
@@ -662,7 +662,7 @@ screen_on_event (GdkXEvent *xevent,
 }
 
 static gboolean
-mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **error)
+cafe_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **error)
 
 {
     MateRRScreen *self = CAFE_RR_SCREEN (initable);
@@ -715,13 +715,13 @@ mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
 }
 
 void
-mate_rr_screen_initable_iface_init (GInitableIface *iface)
+cafe_rr_screen_initable_iface_init (GInitableIface *iface)
 {
-    iface->init = mate_rr_screen_initable_init;
+    iface->init = cafe_rr_screen_initable_init;
 }
 
 void
-    mate_rr_screen_finalize (GObject *gobject)
+    cafe_rr_screen_finalize (GObject *gobject)
 {
     MateRRScreen *screen = CAFE_RR_SCREEN (gobject);
 
@@ -730,11 +730,11 @@ void
     if (screen->priv->info)
       screen_info_free (screen->priv->info);
 
-    G_OBJECT_CLASS (mate_rr_screen_parent_class)->finalize (gobject);
+    G_OBJECT_CLASS (cafe_rr_screen_parent_class)->finalize (gobject);
 }
 
 void
-mate_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *property)
+cafe_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *property)
 {
     MateRRScreen *self = CAFE_RR_SCREEN (gobject);
     MateRRScreenPrivate *priv = self->priv;
@@ -755,7 +755,7 @@ mate_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *
 }
 
 void
-mate_rr_screen_get_property (GObject *gobject, guint property_id, GValue *value, GParamSpec *property)
+cafe_rr_screen_get_property (GObject *gobject, guint property_id, GValue *value, GParamSpec *property)
 {
     MateRRScreen *self = CAFE_RR_SCREEN (gobject);
     MateRRScreenPrivate *priv = self->priv;
@@ -772,13 +772,13 @@ mate_rr_screen_get_property (GObject *gobject, guint property_id, GValue *value,
 }
 
 void
-mate_rr_screen_class_init (MateRRScreenClass *klass)
+cafe_rr_screen_class_init (MateRRScreenClass *klass)
 {
     GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-    gobject_class->set_property = mate_rr_screen_set_property;
-    gobject_class->get_property = mate_rr_screen_get_property;
-    gobject_class->finalize = mate_rr_screen_finalize;
+    gobject_class->set_property = cafe_rr_screen_set_property;
+    gobject_class->get_property = cafe_rr_screen_get_property;
+    gobject_class->finalize = cafe_rr_screen_finalize;
 
     g_object_class_install_property(
         gobject_class,
@@ -803,9 +803,9 @@ mate_rr_screen_class_init (MateRRScreenClass *klass)
 }
 
 void
-mate_rr_screen_init (MateRRScreen *self)
+cafe_rr_screen_init (MateRRScreen *self)
 {
-    MateRRScreenPrivate *priv = mate_rr_screen_get_instance_private (self);
+    MateRRScreenPrivate *priv = cafe_rr_screen_get_instance_private (self);
     self->priv = priv;
 
     priv->gdk_screen = NULL;
@@ -819,7 +819,7 @@ mate_rr_screen_init (MateRRScreen *self)
 }
 
 /**
- * mate_rr_screen_new:
+ * cafe_rr_screen_new:
  * @screen: the #GdkScreen on which to operate
  * @error: will be set if XRandR is not supported
  *
@@ -829,15 +829,15 @@ mate_rr_screen_init (MateRRScreen *self)
  * for instance if the driver does not support Xrandr 1.2
  */
 MateRRScreen *
-mate_rr_screen_new (GdkScreen *screen,
+cafe_rr_screen_new (GdkScreen *screen,
                     GError **error)
 {
-    _mate_desktop_init_i18n ();
+    _cafe_desktop_init_i18n ();
     return g_initable_new (CAFE_TYPE_RR_SCREEN, NULL, error, "gdk-screen", screen, NULL);
 }
 
 void
-mate_rr_screen_set_size (MateRRScreen *screen,
+cafe_rr_screen_set_size (MateRRScreen *screen,
 			  int	      width,
 			  int       height,
 			  int       mm_width,
@@ -857,7 +857,7 @@ mate_rr_screen_set_size (MateRRScreen *screen,
 }
 
 /**
- * mate_rr_screen_get_ranges:
+ * cafe_rr_screen_get_ranges:
  * @screen: a #MateRRScreen
  * @min_width: (out): the minimum width
  * @max_width: (out): the maximum width
@@ -867,7 +867,7 @@ mate_rr_screen_set_size (MateRRScreen *screen,
  * Get the ranges of the screen
  */
 void
-mate_rr_screen_get_ranges (MateRRScreen *screen,
+cafe_rr_screen_get_ranges (MateRRScreen *screen,
 			    int	          *min_width,
 			    int	          *max_width,
 			    int           *min_height,
@@ -893,7 +893,7 @@ mate_rr_screen_get_ranges (MateRRScreen *screen,
 }
 
 /**
- * mate_rr_screen_get_timestamps:
+ * cafe_rr_screen_get_timestamps:
  * @screen: a #MateRRScreen
  * @change_timestamp_ret: (out): Location in which to store the timestamp at which the RANDR configuration was last changed
  * @config_timestamp_ret: (out): Location in which to store the timestamp at which the RANDR configuration was last obtained
@@ -905,7 +905,7 @@ mate_rr_screen_get_ranges (MateRRScreen *screen,
  * the latest change request.
  */
 void
-mate_rr_screen_get_timestamps (MateRRScreen *screen,
+cafe_rr_screen_get_timestamps (MateRRScreen *screen,
 				guint32       *change_timestamp_ret,
 				guint32       *config_timestamp_ret)
 {
@@ -978,7 +978,7 @@ out:
 }
 
 /**
- * mate_rr_screen_refresh:
+ * cafe_rr_screen_refresh:
  * @screen: a #MateRRScreen
  * @error: location to store error, or %NULL
  *
@@ -991,7 +991,7 @@ out:
  * configuration.
  */
 gboolean
-mate_rr_screen_refresh (MateRRScreen *screen,
+cafe_rr_screen_refresh (MateRRScreen *screen,
 			 GError       **error)
 {
     gboolean refreshed;
@@ -1009,14 +1009,14 @@ mate_rr_screen_refresh (MateRRScreen *screen,
 }
 
 /**
- * mate_rr_screen_list_modes:
+ * cafe_rr_screen_list_modes:
  *
  * List available XRandR modes
  *
  * Returns: (array zero-terminated=1) (transfer none):
  */
 MateRRMode **
-mate_rr_screen_list_modes (MateRRScreen *screen)
+cafe_rr_screen_list_modes (MateRRScreen *screen)
 {
     g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
@@ -1025,14 +1025,14 @@ mate_rr_screen_list_modes (MateRRScreen *screen)
 }
 
 /**
- * mate_rr_screen_list_clone_modes:
+ * cafe_rr_screen_list_clone_modes:
  *
  * List available XRandR clone modes
  *
  * Returns: (array zero-terminated=1) (transfer none):
  */
 MateRRMode **
-mate_rr_screen_list_clone_modes   (MateRRScreen *screen)
+cafe_rr_screen_list_clone_modes   (MateRRScreen *screen)
 {
     g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
@@ -1041,14 +1041,14 @@ mate_rr_screen_list_clone_modes   (MateRRScreen *screen)
 }
 
 /**
- * mate_rr_screen_list_crtcs:
+ * cafe_rr_screen_list_crtcs:
  *
  * List all CRTCs
  *
  * Returns: (array zero-terminated=1) (transfer none):
  */
 MateRRCrtc **
-mate_rr_screen_list_crtcs (MateRRScreen *screen)
+cafe_rr_screen_list_crtcs (MateRRScreen *screen)
 {
     g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
@@ -1057,14 +1057,14 @@ mate_rr_screen_list_crtcs (MateRRScreen *screen)
 }
 
 /**
- * mate_rr_screen_list_outputs:
+ * cafe_rr_screen_list_outputs:
  *
  * List all outputs
  *
  * Returns: (array zero-terminated=1) (transfer none):
  */
 MateRROutput **
-mate_rr_screen_list_outputs (MateRRScreen *screen)
+cafe_rr_screen_list_outputs (MateRRScreen *screen)
 {
     g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
@@ -1073,12 +1073,12 @@ mate_rr_screen_list_outputs (MateRRScreen *screen)
 }
 
 /**
- * mate_rr_screen_get_crtc_by_id:
+ * cafe_rr_screen_get_crtc_by_id:
  *
  * Returns: (transfer none): the CRTC identified by @id
  */
 MateRRCrtc *
-mate_rr_screen_get_crtc_by_id (MateRRScreen *screen,
+cafe_rr_screen_get_crtc_by_id (MateRRScreen *screen,
 				guint32        id)
 {
     MateRRCrtc **crtcs;
@@ -1099,12 +1099,12 @@ mate_rr_screen_get_crtc_by_id (MateRRScreen *screen,
 }
 
 /**
- * mate_rr_screen_get_output_by_id:
+ * cafe_rr_screen_get_output_by_id:
  *
  * Returns: (transfer none): the output identified by @id
  */
 MateRROutput *
-mate_rr_screen_get_output_by_id (MateRRScreen *screen,
+cafe_rr_screen_get_output_by_id (MateRRScreen *screen,
 				  guint32        id)
 {
     MateRROutput **outputs;
@@ -1291,10 +1291,10 @@ output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error
     a = g_ptr_array_new ();
     for (i = 0; i < info->nclone; ++i)
     {
-	MateRROutput *mate_rr_output = mate_rr_output_by_id (output->info, info->clones[i]);
+	MateRROutput *cafe_rr_output = cafe_rr_output_by_id (output->info, info->clones[i]);
 
-	if (mate_rr_output)
-	    g_ptr_array_add (a, mate_rr_output);
+	if (cafe_rr_output)
+	    g_ptr_array_add (a, cafe_rr_output);
     }
     g_ptr_array_add (a, NULL);
     output->clones = (MateRROutput **)g_ptr_array_free (a, FALSE);
@@ -1381,7 +1381,7 @@ output_free (MateRROutput *output)
 }
 
 guint32
-mate_rr_output_get_id (MateRROutput *output)
+cafe_rr_output_get_id (MateRROutput *output)
 {
     g_assert(output != NULL);
 
@@ -1389,7 +1389,7 @@ mate_rr_output_get_id (MateRROutput *output)
 }
 
 const guint8 *
-mate_rr_output_get_edid_data (MateRROutput *output)
+cafe_rr_output_get_edid_data (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
 
@@ -1397,12 +1397,12 @@ mate_rr_output_get_edid_data (MateRROutput *output)
 }
 
 /**
- * mate_rr_screen_get_output_by_name:
+ * cafe_rr_screen_get_output_by_name:
  *
  * Returns: (transfer none): the output identified by @name
  */
 MateRROutput *
-mate_rr_screen_get_output_by_name (MateRRScreen *screen,
+cafe_rr_screen_get_output_by_name (MateRRScreen *screen,
 				    const char    *name)
 {
     int i;
@@ -1422,12 +1422,12 @@ mate_rr_screen_get_output_by_name (MateRRScreen *screen,
 }
 
 /**
- * mate_rr_output_get_crtc:
+ * cafe_rr_output_get_crtc:
  * @output: a #MateRROutput
  * Returns: (transfer none):
  */
 MateRRCrtc *
-mate_rr_output_get_crtc (MateRROutput *output)
+cafe_rr_output_get_crtc (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
 
@@ -1435,12 +1435,12 @@ mate_rr_output_get_crtc (MateRROutput *output)
 }
 
 /**
- * mate_rr_output_get_possible_crtcs:
+ * cafe_rr_output_get_possible_crtcs:
  * @output: a #MateRROutput
  * Returns: (array zero-terminated=1) (transfer none):
  */
 MateRRCrtc **
-mate_rr_output_get_possible_crtcs (MateRROutput *output)
+cafe_rr_output_get_possible_crtcs (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
 
@@ -1449,7 +1449,7 @@ mate_rr_output_get_possible_crtcs (MateRROutput *output)
 
 /* Returns NULL if the ConnectorType property is not available */
 const char *
-mate_rr_output_get_connector_type (MateRROutput *output)
+cafe_rr_output_get_connector_type (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
 
@@ -1457,7 +1457,7 @@ mate_rr_output_get_connector_type (MateRROutput *output)
 }
 
 gboolean
-_mate_rr_output_name_is_laptop (const char *name)
+_cafe_rr_output_name_is_laptop (const char *name)
 {
     if (!name)
         return FALSE;
@@ -1473,7 +1473,7 @@ _mate_rr_output_name_is_laptop (const char *name)
 }
 
 gboolean
-mate_rr_output_is_laptop (MateRROutput *output)
+cafe_rr_output_is_laptop (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, FALSE);
 
@@ -1484,35 +1484,35 @@ mate_rr_output_is_laptop (MateRROutput *output)
         return TRUE;
 
     /* Fallback (see https://bugs.freedesktop.org/show_bug.cgi?id=26736) */
-    return _mate_rr_output_name_is_laptop (output->name);
+    return _cafe_rr_output_name_is_laptop (output->name);
 }
 
 /**
- * mate_rr_output_get_current_mode:
+ * cafe_rr_output_get_current_mode:
  * @output: a #MateRROutput
  * Returns: (transfer none): the current mode of this output
  */
 MateRRMode *
-mate_rr_output_get_current_mode (MateRROutput *output)
+cafe_rr_output_get_current_mode (MateRROutput *output)
 {
     MateRRCrtc *crtc;
 
     g_return_val_if_fail (output != NULL, NULL);
 
-    if ((crtc = mate_rr_output_get_crtc (output)))
-	return mate_rr_crtc_get_current_mode (crtc);
+    if ((crtc = cafe_rr_output_get_crtc (output)))
+	return cafe_rr_crtc_get_current_mode (crtc);
 
     return NULL;
 }
 
 /**
- * mate_rr_output_get_position:
+ * cafe_rr_output_get_position:
  * @output: a #MateRROutput
  * @x: (out) (allow-none):
  * @y: (out) (allow-none):
  */
 void
-mate_rr_output_get_position (MateRROutput   *output,
+cafe_rr_output_get_position (MateRROutput   *output,
 			      int             *x,
 			      int             *y)
 {
@@ -1520,38 +1520,38 @@ mate_rr_output_get_position (MateRROutput   *output,
 
     g_return_if_fail (output != NULL);
 
-    if ((crtc = mate_rr_output_get_crtc (output)))
-	mate_rr_crtc_get_position (crtc, x, y);
+    if ((crtc = cafe_rr_output_get_crtc (output)))
+	cafe_rr_crtc_get_position (crtc, x, y);
 }
 
 const char *
-mate_rr_output_get_name (MateRROutput *output)
+cafe_rr_output_get_name (MateRROutput *output)
 {
     g_assert (output != NULL);
     return output->name;
 }
 
 int
-mate_rr_output_get_width_mm (MateRROutput *output)
+cafe_rr_output_get_width_mm (MateRROutput *output)
 {
     g_assert (output != NULL);
     return output->width_mm;
 }
 
 int
-mate_rr_output_get_height_mm (MateRROutput *output)
+cafe_rr_output_get_height_mm (MateRROutput *output)
 {
     g_assert (output != NULL);
     return output->height_mm;
 }
 
 /**
- * mate_rr_output_get_preferred_mode:
+ * cafe_rr_output_get_preferred_mode:
  * @output: a #MateRROutput
  * Returns: (transfer none):
  */
 MateRRMode *
-mate_rr_output_get_preferred_mode (MateRROutput *output)
+cafe_rr_output_get_preferred_mode (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
     if (output->n_preferred)
@@ -1561,27 +1561,27 @@ mate_rr_output_get_preferred_mode (MateRROutput *output)
 }
 
 /**
- * mate_rr_output_list_modes:
+ * cafe_rr_output_list_modes:
  * @output: a #MateRROutput
  * Returns: (array zero-terminated=1) (transfer none):
  */
 
 MateRRMode **
-mate_rr_output_list_modes (MateRROutput *output)
+cafe_rr_output_list_modes (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
     return output->modes;
 }
 
 gboolean
-mate_rr_output_is_connected (MateRROutput *output)
+cafe_rr_output_is_connected (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, FALSE);
     return output->connected;
 }
 
 gboolean
-mate_rr_output_supports_mode (MateRROutput *output,
+cafe_rr_output_supports_mode (MateRROutput *output,
 			       MateRRMode   *mode)
 {
     int i;
@@ -1599,7 +1599,7 @@ mate_rr_output_supports_mode (MateRROutput *output,
 }
 
 gboolean
-mate_rr_output_can_clone (MateRROutput *output,
+cafe_rr_output_can_clone (MateRROutput *output,
 			   MateRROutput *clone)
 {
     int i;
@@ -1617,7 +1617,7 @@ mate_rr_output_can_clone (MateRROutput *output,
 }
 
 gboolean
-mate_rr_output_get_is_primary (MateRROutput *output)
+cafe_rr_output_get_is_primary (MateRROutput *output)
 {
 #ifdef HAVE_RANDR
     return output->info->primary == output->id;
@@ -1627,7 +1627,7 @@ mate_rr_output_get_is_primary (MateRROutput *output)
 }
 
 void
-mate_rr_screen_set_primary_output (MateRRScreen *screen,
+cafe_rr_screen_set_primary_output (MateRRScreen *screen,
                                     MateRROutput *output)
 {
 #ifdef HAVE_RANDR
@@ -1666,7 +1666,7 @@ static const RotationMap rotation_map[] =
 };
 
 static MateRRRotation
-mate_rr_rotation_from_xrotation (Rotation r)
+cafe_rr_rotation_from_xrotation (Rotation r)
 {
     int i;
     MateRRRotation result = 0;
@@ -1697,7 +1697,7 @@ xrotation_from_rotation (MateRRRotation r)
 
 #ifndef CAFE_DISABLE_DEPRECATED_SOURCE
 gboolean
-mate_rr_crtc_set_config (MateRRCrtc      *crtc,
+cafe_rr_crtc_set_config (MateRRCrtc      *crtc,
 			  int               x,
 			  int               y,
 			  MateRRMode      *mode,
@@ -1706,12 +1706,12 @@ mate_rr_crtc_set_config (MateRRCrtc      *crtc,
 			  int               n_outputs,
 			  GError          **error)
 {
-    return mate_rr_crtc_set_config_with_time (crtc, GDK_CURRENT_TIME, x, y, mode, rotation, outputs, n_outputs, error);
+    return cafe_rr_crtc_set_config_with_time (crtc, GDK_CURRENT_TIME, x, y, mode, rotation, outputs, n_outputs, error);
 }
 #endif
 
 gboolean
-mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
+cafe_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 				    guint32           timestamp,
 				    int               x,
 				    int               y,
@@ -1793,12 +1793,12 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 }
 
 /**
- * mate_rr_crtc_get_current_mode:
+ * cafe_rr_crtc_get_current_mode:
  * @crtc: a #MateRRCrtc
  * Returns: (transfer none): the current mode of this crtc
  */
 MateRRMode *
-mate_rr_crtc_get_current_mode (MateRRCrtc *crtc)
+cafe_rr_crtc_get_current_mode (MateRRCrtc *crtc)
 {
     g_return_val_if_fail (crtc != NULL, NULL);
 
@@ -1806,7 +1806,7 @@ mate_rr_crtc_get_current_mode (MateRRCrtc *crtc)
 }
 
 guint32
-mate_rr_crtc_get_id (MateRRCrtc *crtc)
+cafe_rr_crtc_get_id (MateRRCrtc *crtc)
 {
     g_return_val_if_fail (crtc != NULL, 0);
 
@@ -1814,7 +1814,7 @@ mate_rr_crtc_get_id (MateRRCrtc *crtc)
 }
 
 gboolean
-mate_rr_crtc_can_drive_output (MateRRCrtc   *crtc,
+cafe_rr_crtc_can_drive_output (MateRRCrtc   *crtc,
 				MateRROutput *output)
 {
     int i;
@@ -1834,13 +1834,13 @@ mate_rr_crtc_can_drive_output (MateRRCrtc   *crtc,
 /* FIXME: merge with get_mode()? */
 
 /**
- * mate_rr_crtc_get_position:
+ * cafe_rr_crtc_get_position:
  * @crtc: a #MateRRCrtc
  * @x: (out) (allow-none):
  * @y: (out) (allow-none):
  */
 void
-mate_rr_crtc_get_position (MateRRCrtc *crtc,
+cafe_rr_crtc_get_position (MateRRCrtc *crtc,
 			    int         *x,
 			    int         *y)
 {
@@ -1855,21 +1855,21 @@ mate_rr_crtc_get_position (MateRRCrtc *crtc,
 
 /* FIXME: merge with get_mode()? */
 MateRRRotation
-mate_rr_crtc_get_current_rotation (MateRRCrtc *crtc)
+cafe_rr_crtc_get_current_rotation (MateRRCrtc *crtc)
 {
     g_assert(crtc != NULL);
     return crtc->current_rotation;
 }
 
 MateRRRotation
-mate_rr_crtc_get_rotations (MateRRCrtc *crtc)
+cafe_rr_crtc_get_rotations (MateRRCrtc *crtc)
 {
     g_assert(crtc != NULL);
     return crtc->rotations;
 }
 
 gboolean
-mate_rr_crtc_supports_rotation (MateRRCrtc *   crtc,
+cafe_rr_crtc_supports_rotation (MateRRCrtc *   crtc,
 				 MateRRRotation rotation)
 {
     g_return_val_if_fail (crtc != NULL, FALSE);
@@ -1958,7 +1958,7 @@ crtc_initialize (MateRRCrtc        *crtc,
     a = g_ptr_array_new ();
     for (i = 0; i < info->noutput; ++i)
     {
-	MateRROutput *output = mate_rr_output_by_id (crtc->info, info->outputs[i]);
+	MateRROutput *output = cafe_rr_output_by_id (crtc->info, info->outputs[i]);
 
 	if (output)
 	    g_ptr_array_add (a, output);
@@ -1970,7 +1970,7 @@ crtc_initialize (MateRRCrtc        *crtc,
     a = g_ptr_array_new ();
     for (i = 0; i < info->npossible; ++i)
     {
-	MateRROutput *output = mate_rr_output_by_id (crtc->info, info->possible[i]);
+	MateRROutput *output = cafe_rr_output_by_id (crtc->info, info->possible[i]);
 
 	if (output)
 	    g_ptr_array_add (a, output);
@@ -1979,8 +1979,8 @@ crtc_initialize (MateRRCrtc        *crtc,
     crtc->possible_outputs = (MateRROutput **)g_ptr_array_free (a, FALSE);
 
     /* Rotations */
-    crtc->current_rotation = mate_rr_rotation_from_xrotation (info->rotation);
-    crtc->rotations = mate_rr_rotation_from_xrotation (info->rotations);
+    crtc->current_rotation = cafe_rr_rotation_from_xrotation (info->rotation);
+    crtc->rotations = cafe_rr_rotation_from_xrotation (info->rotations);
 
     XRRFreeCrtcInfo (info);
 
@@ -2012,28 +2012,28 @@ mode_new (ScreenInfo *info, RRMode id)
 }
 
 guint32
-mate_rr_mode_get_id (MateRRMode *mode)
+cafe_rr_mode_get_id (MateRRMode *mode)
 {
     g_return_val_if_fail (mode != NULL, 0);
     return mode->id;
 }
 
 guint
-mate_rr_mode_get_width (MateRRMode *mode)
+cafe_rr_mode_get_width (MateRRMode *mode)
 {
     g_return_val_if_fail (mode != NULL, 0);
     return mode->width;
 }
 
 int
-mate_rr_mode_get_freq (MateRRMode *mode)
+cafe_rr_mode_get_freq (MateRRMode *mode)
 {
     g_return_val_if_fail (mode != NULL, 0);
     return (mode->freq) / 1000;
 }
 
 guint
-mate_rr_mode_get_height (MateRRMode *mode)
+cafe_rr_mode_get_height (MateRRMode *mode)
 {
     g_return_val_if_fail (mode != NULL, 0);
     return mode->height;
@@ -2076,7 +2076,7 @@ mode_free (MateRRMode *mode)
 }
 
 void
-mate_rr_crtc_set_gamma (MateRRCrtc *crtc, int size,
+cafe_rr_crtc_set_gamma (MateRRCrtc *crtc, int size,
 			 unsigned short *red,
 			 unsigned short *green,
 			 unsigned short *blue)
@@ -2106,7 +2106,7 @@ mate_rr_crtc_set_gamma (MateRRCrtc *crtc, int size,
 }
 
 /**
- * mate_rr_crtc_get_gamma:
+ * cafe_rr_crtc_get_gamma:
  * @crtc: a #MateRRCrtc
  * @size:
  * @red: (out): the minimum width
@@ -2116,7 +2116,7 @@ mate_rr_crtc_set_gamma (MateRRCrtc *crtc, int size,
  * Returns: %TRUE for success
  */
 gboolean
-mate_rr_crtc_get_gamma (MateRRCrtc *crtc, int *size,
+cafe_rr_crtc_get_gamma (MateRRCrtc *crtc, int *size,
 			 unsigned short **red, unsigned short **green,
 			 unsigned short **blue)
 {

@@ -1,7 +1,7 @@
 gnome.gtkdoc(
-  'mate-desktop',
-  src_dir: 'libmate-desktop',
-  main_sgml: 'mate-desktop-docs.sgml',
+  'cafe-desktop',
+  src_dir: 'libcafe-desktop',
+  main_sgml: 'cafe-desktop-docs.sgml',
   scan_args: '--deprecated-guards="CAFE_DISABLE_DEPRECATED"',
   mkdb_args: ['--sgml-mode', '--output-format=xml'],
 )

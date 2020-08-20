@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.applications-at-mobility" path="/org/mate/desktop/applications/at/mobility/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.applications-at-mobility" path="/org/cafe/desktop/applications/at/mobility/">
     <key name="exec" type="s">
       <default>'dasher'</default>
       <summary>Preferred Mobility assistive technology application</summary>

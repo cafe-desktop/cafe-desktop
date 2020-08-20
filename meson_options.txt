@@ -6,7 +6,7 @@ option('introspection',
   type: 'boolean',
   value: 'false',
 )
-option('mate-about',
+option('cafe-about',
   type: 'boolean',
   value: 'true',
 )

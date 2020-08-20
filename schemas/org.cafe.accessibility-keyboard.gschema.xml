@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.accessibility-keyboard" path="/org/mate/desktop/accessibility/keyboard/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.accessibility-keyboard" path="/org/cafe/desktop/accessibility/keyboard/">
     <key name="enable" type="b">
       <default>false</default>
     </key>

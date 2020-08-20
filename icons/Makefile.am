@@ -2,17 +2,17 @@
 iconsdir = $(datadir)/icons/hicolor
 
 png_icons = \
-	16x16/apps/mate-desktop.png \
-	22x22/apps/mate-desktop.png \
-	24x24/apps/mate-desktop.png \
-	32x32/apps/mate-desktop.png \
-	48x48/apps/mate-desktop.png \
-	128x128/apps/mate-desktop.png
+	16x16/apps/cafe-desktop.png \
+	22x22/apps/cafe-desktop.png \
+	24x24/apps/cafe-desktop.png \
+	32x32/apps/cafe-desktop.png \
+	48x48/apps/cafe-desktop.png \
+	128x128/apps/cafe-desktop.png
 
 nobase_dist_icons_DATA = \
 	$(png_icons) \
-	scalable/apps/mate-desktop.svg \
-	scalable/apps/mate-desktop-symbolic.svg
+	scalable/apps/cafe-desktop.svg \
+	scalable/apps/cafe-desktop-symbolic.svg
 
 gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 
@@ -34,12 +34,12 @@ update-icon-cache:
 
 if HAVE_RSVG_CONVERT
 build-png-icons:
-	$(RSVG_CONVERT) -w 16 -h 16 scalable/apps/mate-desktop.svg -o 16x16/apps/mate-desktop.png
-	$(RSVG_CONVERT) -w 22 -h 22 scalable/apps/mate-desktop.svg -o 22x22/apps/mate-desktop.png
-	$(RSVG_CONVERT) -w 24 -h 24 scalable/apps/mate-desktop.svg -o 24x24/apps/mate-desktop.png
-	$(RSVG_CONVERT) -w 32 -h 32 scalable/apps/mate-desktop.svg -o 32x32/apps/mate-desktop.png
-	$(RSVG_CONVERT) -w 48 -h 48 scalable/apps/mate-desktop.svg -o 48x48/apps/mate-desktop.png
-	$(RSVG_CONVERT) -w 128 -h 128 scalable/apps/mate-desktop.svg -o 128x128/apps/mate-desktop.png
+	$(RSVG_CONVERT) -w 16 -h 16 scalable/apps/cafe-desktop.svg -o 16x16/apps/cafe-desktop.png
+	$(RSVG_CONVERT) -w 22 -h 22 scalable/apps/cafe-desktop.svg -o 22x22/apps/cafe-desktop.png
+	$(RSVG_CONVERT) -w 24 -h 24 scalable/apps/cafe-desktop.svg -o 24x24/apps/cafe-desktop.png
+	$(RSVG_CONVERT) -w 32 -h 32 scalable/apps/cafe-desktop.svg -o 32x32/apps/cafe-desktop.png
+	$(RSVG_CONVERT) -w 48 -h 48 scalable/apps/cafe-desktop.svg -o 48x48/apps/cafe-desktop.png
+	$(RSVG_CONVERT) -w 128 -h 128 scalable/apps/cafe-desktop.svg -o 128x128/apps/cafe-desktop.png
 endif
 
 clean-png-icons:

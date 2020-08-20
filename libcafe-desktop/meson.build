@@ -1,47 +1,47 @@
 libmdt_inc = include_directories('.')
 
 headers = files(
-  'mate-desktop.h',
-  'mate-desktop-utils.h',
-  'mate-desktop-item.h',
-  'mate-dconf.h',
-  'mate-gsettings.h',
-  'mate-bg.h',
-  'mate-bg-crossfade.h',
-  'mate-desktop-thumbnail.h',
-  'mate-rr.h',
-  'mate-languages.h',
-  'mate-rr-config.h',
-  'mate-rr-labeler.h',
-  'mate-colorbutton.h',
-  'mate-colorsel.h',
-  'mate-hsv.h',
-  'mate-colorseldialog.h',
+  'cafe-desktop.h',
+  'cafe-desktop-utils.h',
+  'cafe-desktop-item.h',
+  'cafe-dconf.h',
+  'cafe-gsettings.h',
+  'cafe-bg.h',
+  'cafe-bg-crossfade.h',
+  'cafe-desktop-thumbnail.h',
+  'cafe-rr.h',
+  'cafe-languages.h',
+  'cafe-rr-config.h',
+  'cafe-rr-labeler.h',
+  'cafe-colorbutton.h',
+  'cafe-colorsel.h',
+  'cafe-hsv.h',
+  'cafe-colorseldialog.h',
 )
 
 install_headers(
   headers,
-  subdir: 'mate-desktop-2.0/libmate-desktop',
+  subdir: 'cafe-desktop-2.0/libcafe-desktop',
 )
 
 sources = files(
-  'mate-desktop-item.c',
-  'mate-desktop-utils.c',
-  'mate-desktop-thumbnail.c',
-  'mate-dconf.c',
-  'mate-gsettings.c',
-  'mate-bg.c',
-  'mate-bg-crossfade.c',
+  'cafe-desktop-item.c',
+  'cafe-desktop-utils.c',
+  'cafe-desktop-thumbnail.c',
+  'cafe-dconf.c',
+  'cafe-gsettings.c',
+  'cafe-bg.c',
+  'cafe-bg-crossfade.c',
   'display-name.c',
-  'mate-rr.c',
-  'mate-languages.c',
-  'mate-rr-config.c',
-  'mate-rr-output-info.c',
-  'mate-rr-labeler.c',
-  'mate-colorbutton.c',
-  'mate-colorsel.c',
-  'mate-hsv.c',
-  'mate-colorseldialog.c',
+  'cafe-rr.c',
+  'cafe-languages.c',
+  'cafe-rr-config.c',
+  'cafe-rr-output-info.c',
+  'cafe-rr-labeler.c',
+  'cafe-colorbutton.c',
+  'cafe-colorsel.c',
+  'cafe-hsv.c',
+  'cafe-colorseldialog.c',
   'edid-parse.c',
 )
 
@@ -54,14 +54,14 @@ deps = [
 ]
 
 if get_option('pnp-ids-path') == 'internal'
-  pnp_ids_path = join_paths(matedt_pkgdatadir, 'pnp.ids')
-  install_data('pnp.ids', install_dir: matedt_pkgdatadir)
+  pnp_ids_path = join_paths(cafedt_pkgdatadir, 'pnp.ids')
+  install_data('pnp.ids', install_dir: cafedt_pkgdatadir)
 else
   pnp_ids_path = get_option('pnp-ids-path')
 endif
 
 cflags = [
-  '-DCAFELOCALEDIR="@0@"'.format(matedt_localedir),
+  '-DCAFELOCALEDIR="@0@"'.format(cafedt_localedir),
   '-DG_LOG_DOMAIN="MateDesktop"',
   '-DISO_CODES_PREFIX="@0@"'.format(iso_codes_prefix),
   '-DPNP_IDS="@0@"'.format(pnp_ids_path),
@@ -76,8 +76,8 @@ if cc.has_link_argument(test_ldflag)
   ldflags += test_ldflag
 endif
 
-libmate_desktop = shared_library(
-  'mate-desktop-2',
+libcafe_desktop = shared_library(
+  'cafe-desktop-2',
   sources: sources,
   version: libversion,
   include_directories: top_inc,
@@ -86,27 +86,27 @@ libmate_desktop = shared_library(
   link_args: ldflags,
   link_depends: symbol_map,
   install: true,
-  install_dir: matedt_libdir,
+  install_dir: cafedt_libdir,
 )
 
-libmate_desktop_dep = declare_dependency(
-  link_with: libmate_desktop,
+libcafe_desktop_dep = declare_dependency(
+  link_with: libcafe_desktop,
   include_directories: libmdt_inc,
   dependencies: deps,
 )
 
 pkg.generate(
-  libraries: libmate_desktop,
-  version: matedt_version,
-  name: matedt_api_name,
+  libraries: libcafe_desktop,
+  version: cafedt_version,
+  name: cafedt_api_name,
   description: 'Utility library for loading .desktop files',
-  filebase: matedt_api_name,
-  subdirs: matedt_api_name,
+  filebase: cafedt_api_name,
+  subdirs: cafedt_api_name,
   requires: [
     'gtk+-3.0',
   ],
   requires_private: 'dconf',
-  variables: 'exec_prefix=' + matedt_libexecdir,
+  variables: 'exec_prefix=' + cafedt_libexecdir,
   install_dir: join_paths(get_option('libdir'), 'pkgconfig')
 )
 
@@ -124,17 +124,17 @@ if enable_gir
     '-DCAFE_DESKTOP_USE_UNSTABLE_API',
   ]
 
-  gir_dir = join_paths(matedt_datadir, 'gir-1.0')
-  typelib_dir = join_paths(matedt_libdir, 'girepository-1.0')
+  gir_dir = join_paths(cafedt_datadir, 'gir-1.0')
+  typelib_dir = join_paths(cafedt_libdir, 'girepository-1.0')
 
   gnome.generate_gir(
-    libmate_desktop,
+    libcafe_desktop,
     sources: gir_sources,
-    nsversion: matedt_api_version,
-    namespace: matedt_gir_ns,
-    symbol_prefix: 'mate_',
+    nsversion: cafedt_api_version,
+    namespace: cafedt_gir_ns,
+    symbol_prefix: 'cafe_',
     identifier_prefix: 'Mate',
-    export_packages: matedt_api_name,
+    export_packages: cafedt_api_name,
     includes: gir_incs,
     extra_args: gir_extra_args,
     install: true,
@@ -145,18 +145,18 @@ endif
 
 test_ditem = executable('test-ditem',
   sources : 'test-ditem.c',
-  dependencies : libmate_desktop_dep,
+  dependencies : libcafe_desktop_dep,
   install : false,
 )
 
 test_color_button = executable('test-color-button',
   sources : 'test.c',
-  dependencies : libmate_desktop_dep,
+  dependencies : libcafe_desktop_dep,
   install : false,
 )
 
 test_languages = executable('test-languages',
   sources : 'test-languages.c',
-  dependencies : libmate_desktop_dep,
+  dependencies : libcafe_desktop_dep,
   install : false,
 )

@@ -1,5 +1,5 @@
 install_man([
-    'mate-about.1',
-    'mate-color-select.1',
+    'cafe-about.1',
+    'cafe-color-select.1',
   ]
 )

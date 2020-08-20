@@ -1,9 +1,9 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.applications-office" path="/org/mate/desktop/applications/">
-    <child name="calendar" schema="org.mate.applications-office.calendar"/>
-    <child name="tasks" schema="org.mate.applications-office.tasks"/>
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.applications-office" path="/org/cafe/desktop/applications/">
+    <child name="calendar" schema="org.cafe.applications-office.calendar"/>
+    <child name="tasks" schema="org.cafe.applications-office.tasks"/>
   </schema>
-  <schema id="org.mate.applications-office.calendar" path="/org/mate/desktop/applications/calendar/">
+  <schema id="org.cafe.applications-office.calendar" path="/org/cafe/desktop/applications/calendar/">
     <key name="exec" type="s">
       <default>'evolution'</default>
       <summary>Default calendar</summary>
@@ -15,7 +15,7 @@
       <description>Whether the default calendar application needs a terminal to run</description>
     </key>
   </schema>
-  <schema id="org.mate.applications-office.tasks" path="/org/mate/desktop/applications/tasks/">
+  <schema id="org.cafe.applications-office.tasks" path="/org/cafe/desktop/applications/tasks/">
     <key name="exec" type="s">
       <default>'evolution'</default>
       <summary>Default tasks</summary>

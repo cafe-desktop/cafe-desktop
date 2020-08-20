@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <enum id="org.mate.background.picture-options-enum">
+<schemalist gettext-domain="cafe-desktop">
+  <enum id="org.cafe.background.picture-options-enum">
 	<value nick="wallpaper" value="0"/>
 	<value nick="zoom" value="1"/>
 	<value nick="centered" value="2"/>
@@ -7,12 +7,12 @@
 	<value nick="stretched" value="4"/>
 	<value nick="spanned" value="5"/>
   </enum>
-  <enum id="org.mate.background.color-shading-type-enum">
+  <enum id="org.cafe.background.color-shading-type-enum">
 	<value nick="solid" value="0"/>
 	<value nick="horizontal-gradient" value="1"/>
 	<value nick="vertical-gradient" value="2"/>
   </enum>
-  <schema id="org.mate.background" path="/org/mate/desktop/background/">
+  <schema id="org.cafe.background" path="/org/cafe/desktop/background/">
     <key name="draw-background" type="b">
       <default>true</default>
       <summary>Draw Desktop Background</summary>
@@ -28,13 +28,13 @@
       <summary>Fade the background on change</summary>
       <description>If set to true, then CAFE will change the desktop background with a fading effect.</description>
     </key>
-    <key name="picture-options" enum="org.mate.background.picture-options-enum">
+    <key name="picture-options" enum="org.cafe.background.picture-options-enum">
       <default>'zoom'</default>
       <summary>Picture Options</summary>
       <description>Determines how the image set by wallpaper_filename is rendered.  Possible values are "wallpaper", "centered", "scaled", "stretched", "zoom", "spanned".</description>
     </key>
     <key name="picture-filename" type="s">
-      <default>'@datadir@/backgrounds/mate/desktop/Stripes.png'</default>
+      <default>'@datadir@/backgrounds/cafe/desktop/Stripes.png'</default>
       <summary>Picture Filename</summary>
       <description>File to use for the background image.</description>
     </key>
@@ -53,7 +53,7 @@
       <summary>Secondary Color</summary>
       <description>Right or Bottom color when drawing gradients, not used for solid color.</description>
     </key>
-    <key name="color-shading-type" enum="org.mate.background.color-shading-type-enum">
+    <key name="color-shading-type" enum="org.cafe.background.color-shading-type-enum">
       <default>'vertical-gradient'</default>
       <summary>Color Shading Type</summary>
       <description>How to shade the background color. Possible values are "horizontal-gradient", "vertical-gradient", and "solid".</description>

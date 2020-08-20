@@ -1,4 +1,4 @@
-/* mate-bg-crossfade.h - fade window background between two surfaces
+/* cafe-bg-crossfade.h - fade window background between two surfaces
  *
  * Copyright (C) 2008 Red Hat, Inc.
  *
@@ -35,8 +35,8 @@
 #include <cairo-xlib.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
-#include <mate-bg.h>
-#include "mate-bg-crossfade.h"
+#include <cafe-bg.h>
+#include "cafe-bg-crossfade.h"
 
 struct _MateBGCrossfadePrivate
 {
@@ -66,10 +66,10 @@ enum {
 
 static guint signals[NUMBER_OF_SIGNALS] = { 0 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (MateBGCrossfade, mate_bg_crossfade, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (MateBGCrossfade, cafe_bg_crossfade, G_TYPE_OBJECT)
 
 static void
-mate_bg_crossfade_set_property (GObject      *object,
+cafe_bg_crossfade_set_property (GObject      *object,
                                 guint         property_id,
                                 const GValue *value,
                                 GParamSpec   *pspec)
@@ -95,7 +95,7 @@ mate_bg_crossfade_set_property (GObject      *object,
 }
 
 static void
-mate_bg_crossfade_get_property (GObject    *object,
+cafe_bg_crossfade_get_property (GObject    *object,
                                 guint       property_id,
                                 GValue     *value,
                                 GParamSpec *pspec)
@@ -122,13 +122,13 @@ mate_bg_crossfade_get_property (GObject    *object,
 }
 
 static void
-mate_bg_crossfade_finalize (GObject *object)
+cafe_bg_crossfade_finalize (GObject *object)
 {
     MateBGCrossfade *fade;
 
     fade = CAFE_BG_CROSSFADE (object);
 
-    mate_bg_crossfade_stop (fade);
+    cafe_bg_crossfade_stop (fade);
 
     if (fade->priv->fading_surface != NULL) {
         cairo_surface_destroy (fade->priv->fading_surface);
@@ -147,15 +147,15 @@ mate_bg_crossfade_finalize (GObject *object)
 }
 
 static void
-mate_bg_crossfade_class_init (MateBGCrossfadeClass *fade_class)
+cafe_bg_crossfade_class_init (MateBGCrossfadeClass *fade_class)
 {
     GObjectClass *gobject_class;
 
     gobject_class = G_OBJECT_CLASS (fade_class);
 
-    gobject_class->get_property = mate_bg_crossfade_get_property;
-    gobject_class->set_property = mate_bg_crossfade_set_property;
-    gobject_class->finalize = mate_bg_crossfade_finalize;
+    gobject_class->get_property = cafe_bg_crossfade_get_property;
+    gobject_class->set_property = cafe_bg_crossfade_set_property;
+    gobject_class->finalize = cafe_bg_crossfade_finalize;
 
     /**
      * MateBGCrossfade:width:
@@ -201,9 +201,9 @@ mate_bg_crossfade_class_init (MateBGCrossfadeClass *fade_class)
 }
 
 static void
-mate_bg_crossfade_init (MateBGCrossfade *fade)
+cafe_bg_crossfade_init (MateBGCrossfade *fade)
 {
-    fade->priv = mate_bg_crossfade_get_instance_private (fade);
+    fade->priv = cafe_bg_crossfade_get_instance_private (fade);
 
     fade->priv->window = NULL;
     fade->priv->widget = NULL;
@@ -214,7 +214,7 @@ mate_bg_crossfade_init (MateBGCrossfade *fade)
 }
 
 /**
- * mate_bg_crossfade_new:
+ * cafe_bg_crossfade_new:
  * @width: The width of the crossfading window
  * @height: The height of the crossfading window
  *
@@ -223,7 +223,7 @@ mate_bg_crossfade_init (MateBGCrossfade *fade)
  *
  * Return value: the new #MateBGCrossfade
  **/
-MateBGCrossfade* mate_bg_crossfade_new (int width, int height)
+MateBGCrossfade* cafe_bg_crossfade_new (int width, int height)
 {
     GObject* object;
 
@@ -297,11 +297,11 @@ tile_surface (cairo_surface_t *surface,
 }
 
 /**
- * mate_bg_crossfade_set_start_surface:
+ * cafe_bg_crossfade_set_start_surface:
  * @fade: a #MateBGCrossfade
  * @surface: The cairo surface to fade from
  *
- * Before initiating a crossfade with mate_bg_crossfade_start()
+ * Before initiating a crossfade with cafe_bg_crossfade_start()
  * a start and end surface have to be set.  This function sets
  * the surface shown at the beginning of the crossfade effect.
  *
@@ -309,7 +309,7 @@ tile_surface (cairo_surface_t *surface,
  * could not be copied.
  **/
 gboolean
-mate_bg_crossfade_set_start_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
+cafe_bg_crossfade_set_start_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
 {
     g_return_val_if_fail (CAFE_IS_BG_CROSSFADE (fade), FALSE);
 
@@ -355,11 +355,11 @@ get_current_time (void)
 #endif
 
 /**
- * mate_bg_crossfade_set_end_surface:
+ * cafe_bg_crossfade_set_end_surface:
  * @fade: a #MateBGCrossfade
  * @surface: The cairo surface to fade to
  *
- * Before initiating a crossfade with mate_bg_crossfade_start()
+ * Before initiating a crossfade with cafe_bg_crossfade_start()
  * a start and end surface have to be set.  This function sets
  * the surface shown at the end of the crossfade effect.
  *
@@ -367,7 +367,7 @@ get_current_time (void)
  * could not be copied.
  **/
 gboolean
-mate_bg_crossfade_set_end_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
+cafe_bg_crossfade_set_end_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
 {
     g_return_val_if_fail (CAFE_IS_BG_CROSSFADE (fade), FALSE);
 
@@ -622,19 +622,19 @@ get_root_pixmap_id_surface (GdkDisplay *display)
 }
 
 /**
- * mate_bg_crossfade_start:
+ * cafe_bg_crossfade_start:
  * @fade: a #MateBGCrossfade
  * @window: The #GdkWindow to draw crossfade on
  *
  * This function initiates a quick crossfade between two surfaces on
  * the background of @window. Before initiating the crossfade both
- * mate_bg_crossfade_set_start_surface() and
- * mate_bg_crossfade_set_end_surface() need to be called. If animations
+ * cafe_bg_crossfade_set_start_surface() and
+ * cafe_bg_crossfade_set_end_surface() need to be called. If animations
  * are disabled, the crossfade is skipped, and the window background is
  * set immediately to the end surface.
  **/
 void
-mate_bg_crossfade_start (MateBGCrossfade *fade,
+cafe_bg_crossfade_start (MateBGCrossfade *fade,
                          GdkWindow       *window)
 {
     GSource *source;
@@ -644,7 +644,7 @@ mate_bg_crossfade_start (MateBGCrossfade *fade,
     g_return_if_fail (window != NULL);
     g_return_if_fail (fade->priv->start_surface != NULL);
     g_return_if_fail (fade->priv->end_surface != NULL);
-    g_return_if_fail (!mate_bg_crossfade_is_started (fade));
+    g_return_if_fail (!cafe_bg_crossfade_is_started (fade));
     g_return_if_fail (gdk_window_get_window_type (window) != GDK_WINDOW_FOREIGN);
 
     /* If drawing is done on the root window,
@@ -699,19 +699,19 @@ mate_bg_crossfade_start (MateBGCrossfade *fade,
 }
 
 /**
- * mate_bg_crossfade_start_widget:
+ * cafe_bg_crossfade_start_widget:
  * @fade: a #MateBGCrossfade
  * @widget: The #GtkWidget to draw crossfade on
  *
  * This function initiates a quick crossfade between two surfaces on
  * the background of @widget. Before initiating the crossfade both
- * mate_bg_crossfade_set_start_surface() and
- * mate_bg_crossfade_set_end_surface() need to be called. If animations
+ * cafe_bg_crossfade_set_start_surface() and
+ * cafe_bg_crossfade_set_end_surface() need to be called. If animations
  * are disabled, the crossfade is skipped, and the window background is
  * set immediately to the end surface.
  **/
 void
-mate_bg_crossfade_start_widget (MateBGCrossfade *fade,
+cafe_bg_crossfade_start_widget (MateBGCrossfade *fade,
                                 GtkWidget       *widget)
 {
     GdkWindow *window;
@@ -723,21 +723,21 @@ mate_bg_crossfade_start_widget (MateBGCrossfade *fade,
     gtk_widget_realize (fade->priv->widget);
     window = gtk_widget_get_window (fade->priv->widget);
 
-    mate_bg_crossfade_start (fade, window);
+    cafe_bg_crossfade_start (fade, window);
 }
 
 /**
- * mate_bg_crossfade_is_started:
+ * cafe_bg_crossfade_is_started:
  * @fade: a #MateBGCrossfade
  *
  * This function reveals whether or not @fade is currently
- * running on a window.  See mate_bg_crossfade_start() for
+ * running on a window.  See cafe_bg_crossfade_start() for
  * information on how to initiate a crossfade.
  *
  * Return value: %TRUE if fading, or %FALSE if not fading
  **/
 gboolean
-mate_bg_crossfade_is_started (MateBGCrossfade *fade)
+cafe_bg_crossfade_is_started (MateBGCrossfade *fade)
 {
     g_return_val_if_fail (CAFE_IS_BG_CROSSFADE (fade), FALSE);
 
@@ -745,7 +745,7 @@ mate_bg_crossfade_is_started (MateBGCrossfade *fade)
 }
 
 /**
- * mate_bg_crossfade_stop:
+ * cafe_bg_crossfade_stop:
  * @fade: a #MateBGCrossfade
  *
  * This function stops any in progress crossfades that may be
@@ -753,11 +753,11 @@ mate_bg_crossfade_is_started (MateBGCrossfade *fade)
  * already stopped.
  **/
 void
-mate_bg_crossfade_stop (MateBGCrossfade *fade)
+cafe_bg_crossfade_stop (MateBGCrossfade *fade)
 {
     g_return_if_fail (CAFE_IS_BG_CROSSFADE (fade));
 
-    if (!mate_bg_crossfade_is_started (fade))
+    if (!cafe_bg_crossfade_is_started (fade))
         return;
 
     g_assert (fade->priv->timeout_id != 0);

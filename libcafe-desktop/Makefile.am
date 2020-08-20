@@ -1,23 +1,23 @@
-libmate_desktopdir = $(includedir)/mate-desktop-2.0/libmate-desktop
-libmate_desktop_HEADERS = \
-	mate-desktop.h \
-	mate-desktop-utils.h \
-	mate-desktop-item.h \
-	mate-dconf.h \
-	mate-gsettings.h \
-	mate-bg.h			\
-	mate-bg-crossfade.h		\
-	mate-desktop-thumbnail.h	\
-	mate-rr.h			\
-	mate-languages.h		\
-	mate-rr-config.h		\
-	mate-rr-labeler.h \
-	mate-colorbutton.h \
-	mate-colorsel.h \
-	mate-hsv.h \
-	mate-colorseldialog.h
+libcafe_desktopdir = $(includedir)/cafe-desktop-2.0/libcafe-desktop
+libcafe_desktop_HEADERS = \
+	cafe-desktop.h \
+	cafe-desktop-utils.h \
+	cafe-desktop-item.h \
+	cafe-dconf.h \
+	cafe-gsettings.h \
+	cafe-bg.h			\
+	cafe-bg-crossfade.h		\
+	cafe-desktop-thumbnail.h	\
+	cafe-rr.h			\
+	cafe-languages.h		\
+	cafe-rr-config.h		\
+	cafe-rr-labeler.h \
+	cafe-colorbutton.h \
+	cafe-colorsel.h \
+	cafe-hsv.h \
+	cafe-colorseldialog.h
 
-lib_LTLIBRARIES = libmate-desktop-2.la
+lib_LTLIBRARIES = libcafe-desktop-2.la
 
 AM_CPPFLAGS =							\
 	$(CAFE_DESKTOP_CFLAGS)					\
@@ -36,46 +36,46 @@ noinst_PROGRAMS = test-desktop-thumbnail test-ditem test test-languages
 CLEANFILES =
 
 introspection_sources = \
-	mate-desktop-utils.c	\
-	mate-desktop-thumbnail.c \
-	mate-dconf.c \
-	mate-gsettings.c \
-	mate-bg.c		\
-	mate-bg-crossfade.c	\
+	cafe-desktop-utils.c	\
+	cafe-desktop-thumbnail.c \
+	cafe-dconf.c \
+	cafe-gsettings.c \
+	cafe-bg.c		\
+	cafe-bg-crossfade.c	\
 	display-name.c		\
-	mate-rr.c		\
-	mate-languages.c	\
-	mate-rr-config.c	\
-	mate-rr-output-info.c	\
-	mate-rr-labeler.c	\
-	mate-colorbutton.c \
-	mate-colorsel.c \
-	mate-hsv.c \
-	mate-colorseldialog.c \
+	cafe-rr.c		\
+	cafe-languages.c	\
+	cafe-rr-config.c	\
+	cafe-rr-output-info.c	\
+	cafe-rr-labeler.c	\
+	cafe-colorbutton.c \
+	cafe-colorsel.c \
+	cafe-hsv.c \
+	cafe-colorseldialog.c \
 	edid-parse.c
 
-libmate_desktop_2_la_SOURCES =		\
+libcafe_desktop_2_la_SOURCES =		\
 	$(introspection_sources)	\
-	mate-desktop-item.c		\
-	mate-rr-private.h		\
+	cafe-desktop-item.c		\
+	cafe-rr-private.h		\
 	edid.h				\
 	private.h
 
-libmate_desktop_2_la_LIBADD =	\
+libcafe_desktop_2_la_LIBADD =	\
 	$(XLIB_LIBS)		\
 	$(CAFE_DESKTOP_LIBS)	\
 	$(DCONF_LIBS)
 
-libmate_desktop_2_la_LDFLAGS = \
+libcafe_desktop_2_la_LDFLAGS = \
 	-version-info $(LT_VERSION) \
-	-export-symbols-regex "^mate_.*" \
+	-export-symbols-regex "^cafe_.*" \
 	-no-undefined
 
 test_SOURCES = \
 	test.c
 
 test_LDADD = \
-	libmate-desktop-2.la		\
+	libcafe-desktop-2.la		\
 	$(CAFE_DESKTOP_LIBS)
 
 test_desktop_thumbnail_LDADD = \
@@ -88,27 +88,27 @@ test_ditem_SOURCES = \
 	test-ditem.c
 
 test_ditem_LDADD = \
-	libmate-desktop-2.la		\
+	libcafe-desktop-2.la		\
 	$(XLIB_LIBS)			\
 	$(CAFE_DESKTOP_LIBS)
 
 test_languages_SOURCES = test-languages.c
 
 test_languages_LDADD = \
-	libmate-desktop-2.la		\
+	libcafe-desktop-2.la		\
 	$(CAFE_DESKTOP_LIBS)
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = mate-desktop-2.0.pc
+pkgconfig_DATA = cafe-desktop-2.0.pc
 
 if USE_INTERNAL_PNP_IDS
-pnpdatadir = $(datadir)/libmate-desktop
+pnpdatadir = $(datadir)/libcafe-desktop
 pnpdata_DATA = pnp.ids
 endif
 pnpdata_DATA_dist = pnp.ids
 
 check:
-	test -s $(top_srcdir)/libmate-desktop/pnp.ids
+	test -s $(top_srcdir)/libcafe-desktop/pnp.ids
 
 -include $(INTROSPECTION_MAKEFILE)
 INTROSPECTION_GIRS =
@@ -117,14 +117,14 @@ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 
 if HAVE_INTROSPECTION
 
-MateDesktop-2.0.gir: libmate-desktop-2.la
+MateDesktop-2.0.gir: libcafe-desktop-2.la
 MateDesktop_2_0_gir_INCLUDES = GObject-2.0 Gtk-3.0
 MateDesktop_2_0_gir_PACKAGES = gdk-pixbuf-2.0 glib-2.0 gobject-2.0 gio-2.0 gtk+-3.0
 MateDesktop_2_0_gir_CFLAGS = -DCAFE_DESKTOP_USE_UNSTABLE_API -I$(top_srcdir)
-MateDesktop_2_0_gir_LIBS = libmate-desktop-2.la
-MateDesktop_2_0_gir_FILES = $(introspection_sources) $(libmate_desktop_HEADERS)
-MateDesktop_2_0_gir_SCANNERFLAGS = --identifier-prefix=Mate --symbol-prefix=mate_
-INTROSPECTION_SCANNER_ARGS += $(patsubst %,--c-include='libmate-desktop/%',$(libmate_desktop_HEADERS))
+MateDesktop_2_0_gir_LIBS = libcafe-desktop-2.la
+MateDesktop_2_0_gir_FILES = $(introspection_sources) $(libcafe_desktop_HEADERS)
+MateDesktop_2_0_gir_SCANNERFLAGS = --identifier-prefix=Mate --symbol-prefix=cafe_
+INTROSPECTION_SCANNER_ARGS += $(patsubst %,--c-include='libcafe-desktop/%',$(libcafe_desktop_HEADERS))
 INTROSPECTION_GIRS += MateDesktop-2.0.gir
 
 girdir = $(datadir)/gir-1.0
@@ -138,9 +138,9 @@ endif
 
 EXTRA_DIST = \
 	meson.build \
-	mate-desktop.map \
-	mate-desktop-2.0.pc.in \
-	mate-desktop-2.0-uninstalled.pc.in \
+	cafe-desktop.map \
+	cafe-desktop-2.0.pc.in \
+	cafe-desktop-2.0-uninstalled.pc.in \
 	$(pnpdata_DATA_dist)
 
 MAINTAINERCLEANFILES = \

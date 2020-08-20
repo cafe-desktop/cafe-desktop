@@ -1,12 +1,12 @@
 icons = [
-  '16x16/apps/mate-desktop.png',
-  '22x22/apps/mate-desktop.png',
-  '24x24/apps/mate-desktop.png',
-  '32x32/apps/mate-desktop.png',
-  '48x48/apps/mate-desktop.png',
-  '128x128/apps/mate-desktop.png',
-  'scalable/apps/mate-desktop.svg',
-  'scalable/apps/mate-desktop-symbolic.svg',
+  '16x16/apps/cafe-desktop.png',
+  '22x22/apps/cafe-desktop.png',
+  '24x24/apps/cafe-desktop.png',
+  '32x32/apps/cafe-desktop.png',
+  '48x48/apps/cafe-desktop.png',
+  '128x128/apps/cafe-desktop.png',
+  'scalable/apps/cafe-desktop.svg',
+  'scalable/apps/cafe-desktop-symbolic.svg',
 ]
 
 foreach i : icons

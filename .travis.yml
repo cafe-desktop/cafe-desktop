@@ -12,7 +12,7 @@ addons:
       - python3-setuptools
 
 before_install:
-  - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
+  - curl -Ls -o docker-build https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/docker-build
   - chmod +x docker-build
 
 install:
@@ -25,9 +25,9 @@ script:
 notifications:
   irc:
     if: (tag OR branch = "1.24") AND
-        repo = "mate-desktop/mate-desktop"
+        repo = "cafe-desktop/cafe-desktop"
     channels:
-      - "irc.freenode.org#mate-dev"
+      - "irc.freenode.org#cafe-dev"
     template:
       - "[%{repository_name}] %{author}: %{commit_subject}"
       - "[%{branch}] %{commit} %{message} %{build_url}"

@@ -1,5 +1,5 @@
 /*
- * mate-color.c: CAFE color selection tool
+ * cafe-color.c: CAFE color selection tool
  *
  * Copyright (C) 2014 Stefano Karapetsas
  *
@@ -25,10 +25,10 @@
 #include <config.h>
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
-#include <libmate-desktop/mate-colorseldialog.h>
-#include <libmate-desktop/mate-colorsel.h>
+#include <libcafe-desktop/cafe-colorseldialog.h>
+#include <libcafe-desktop/cafe-colorsel.h>
 
-#define mate_gettext(package, locale, codeset) \
+#define cafe_gettext(package, locale, codeset) \
     bindtextdomain(package, locale); \
     bind_textdomain_codeset(package, codeset); \
     textdomain(package);
@@ -39,7 +39,7 @@ copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color
     GdkColor color;
     gchar *color_string;
 
-    mate_color_selection_get_current_color (CAFE_COLOR_SELECTION (color_dialog->colorsel), &color);
+    cafe_color_selection_get_current_color (CAFE_COLOR_SELECTION (color_dialog->colorsel), &color);
     g_object_get (color_dialog->colorsel, "hex-string", &color_string, NULL);
 
     gtk_clipboard_set_text (gtk_clipboard_get (GDK_SELECTION_CLIPBOARD), color_string, -1);
@@ -55,15 +55,15 @@ main (int argc, char **argv)
     GtkWidget *color_selection;
     GtkWidget *widget;
 
-    mate_gettext (GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
+    cafe_gettext (GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
     /* initialize GTK+ */
     gtk_init (&argc, &argv);
     gtk_window_set_default_icon_name ("gtk-select-color");
 
-    color_dialog = mate_color_selection_dialog_new (_("CAFE Color Selection"));
+    color_dialog = cafe_color_selection_dialog_new (_("CAFE Color Selection"));
     color_selection = CAFE_COLOR_SELECTION_DIALOG (color_dialog)->colorsel;
-    mate_color_selection_set_has_palette (CAFE_COLOR_SELECTION (color_selection), TRUE);
+    cafe_color_selection_set_has_palette (CAFE_COLOR_SELECTION (color_selection), TRUE);
 
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", gtk_main_quit, NULL);

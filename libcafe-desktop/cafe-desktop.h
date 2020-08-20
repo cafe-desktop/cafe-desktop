@@ -1,5 +1,5 @@
 /*
- * mate-desktop.h: general functions for libmate-desktop
+ * cafe-desktop.h: general functions for libcafe-desktop
  *
  * Copyright (C) 2013 Stefano Karapetsas
  *

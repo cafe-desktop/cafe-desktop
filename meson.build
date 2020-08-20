@@ -1,37 +1,37 @@
 project(
-  'mate-desktop',
+  'cafe-desktop',
   'c',
   version: '1.24.1',
   license: [ 'GPL-2', 'FDL-1.1', 'LGPL-2' ],
 )
 
-matedt_version = meson.project_version()
-version_array = matedt_version.split('.')
-mate_major_version = version_array[0].to_int()
-mate_minor_version = version_array[0].to_int()
-mate_micro_version = version_array[0].to_int()
-mate_platform = 1
-mate_minor = 24
-mate_micro = 0
+cafedt_version = meson.project_version()
+version_array = cafedt_version.split('.')
+cafe_major_version = version_array[0].to_int()
+cafe_minor_version = version_array[0].to_int()
+cafe_micro_version = version_array[0].to_int()
+cafe_platform = 1
+cafe_minor = 24
+cafe_micro = 0
 
-matedt_api_version = '2.0'
-matedt_api_name = '@0@-@1@'.format(meson.project_name(), matedt_api_version)
+cafedt_api_version = '2.0'
+cafedt_api_name = '@0@-@1@'.format(meson.project_name(), cafedt_api_version)
 
-matedt_gir_ns = 'MateDesktop'
-matedt_gir_version = '2.0'
+cafedt_gir_ns = 'MateDesktop'
+cafedt_gir_version = '2.0'
 
-matedt_gettext_package = meson.project_name()
+cafedt_gettext_package = meson.project_name()
 
-matedt_prefix = get_option('prefix')
-matedt_bindir = join_paths(matedt_prefix, get_option('bindir'))
-matedt_datadir = join_paths(matedt_prefix, get_option('datadir'))
-matedt_includedir = join_paths(matedt_prefix, get_option('includedir'))
-matedt_libdir = join_paths(matedt_prefix, get_option('libdir'))
-matedt_libexecdir = join_paths(matedt_prefix, get_option('libexecdir'))
-matedt_localedir = join_paths(matedt_prefix, get_option('localedir'))
-matedt_mandir = join_paths(matedt_prefix, get_option('mandir'))
+cafedt_prefix = get_option('prefix')
+cafedt_bindir = join_paths(cafedt_prefix, get_option('bindir'))
+cafedt_datadir = join_paths(cafedt_prefix, get_option('datadir'))
+cafedt_includedir = join_paths(cafedt_prefix, get_option('includedir'))
+cafedt_libdir = join_paths(cafedt_prefix, get_option('libdir'))
+cafedt_libexecdir = join_paths(cafedt_prefix, get_option('libexecdir'))
+cafedt_localedir = join_paths(cafedt_prefix, get_option('localedir'))
+cafedt_mandir = join_paths(cafedt_prefix, get_option('mandir'))
 
-matedt_pkgdatadir = join_paths(matedt_datadir, 'libmate-desktop')
+cafedt_pkgdatadir = join_paths(cafedt_datadir, 'libcafe-desktop')
 
 # options
 enable_gir = get_option('introspection')
@@ -57,13 +57,13 @@ nm = find_program('nm')
 config_h = configuration_data()
 
 # i18n
-config_h.set_quoted('GETTEXT_PACKAGE', matedt_gettext_package)
-config_h.set_quoted('LOCALEDIR', matedt_localedir)
+config_h.set_quoted('GETTEXT_PACKAGE', cafedt_gettext_package)
+config_h.set_quoted('LOCALEDIR', cafedt_localedir)
 
 common_flags = [
   '-DHAVE_CONFIG_H',
   '-I' + meson.build_root(),
-  '-DPACKAGE_VERSION="@0@"'.format(matedt_version),
+  '-DPACKAGE_VERSION="@0@"'.format(cafedt_version),
 ]
 
 add_project_arguments(common_flags, language: 'c')
@@ -96,16 +96,16 @@ po_dir = join_paths(meson.source_root(), 'po')
 top_inc = include_directories('.')
 
 subdir('icons')
-subdir('libmate-desktop')
+subdir('libcafe-desktop')
 subdir('man')
 if enable_gtk_doc
-  subdir('docs/reference/mate-desktop')
+  subdir('docs/reference/cafe-desktop')
 endif
 subdir('po')
 subdir('tools')
 subdir('schemas')
-if get_option('mate-about')
-  subdir('mate-about')
+if get_option('cafe-about')
+  subdir('cafe-about')
 endif
 
 configure_file(
@@ -115,11 +115,11 @@ configure_file(
 
 meson.add_install_script('utils/post_install.py')
 
-test('libmate-desktop symbols check',
+test('libcafe-desktop symbols check',
   find_program('abi-check'),
   env: [
-    'LIB=@0@'.format(libmate_desktop.full_path()),
+    'LIB=@0@'.format(libcafe_desktop.full_path()),
     'NM=@0@'.format(nm.path()),
-    'ABI=@0@/libmate-desktop/mate-desktop.abi'.format(meson.source_root())
+    'ABI=@0@/libcafe-desktop/cafe-desktop.abi'.format(meson.source_root())
   ]
 )

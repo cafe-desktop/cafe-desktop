@@ -44,7 +44,7 @@ G_BEGIN_DECLS
  * The color picker emits the "color_set" signal when the color is set.
  */
 
-#define CAFE_TYPE_COLOR_BUTTON             (mate_color_button_get_type ())
+#define CAFE_TYPE_COLOR_BUTTON             (cafe_color_button_get_type ())
 #define CAFE_COLOR_BUTTON(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_BUTTON, MateColorButton))
 #define CAFE_COLOR_BUTTON_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_BUTTON, MateColorButtonClass))
 #define CAFE_IS_COLOR_BUTTON(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_BUTTON))
@@ -76,26 +76,26 @@ struct _MateColorButtonClass {
 };
 
 
-GType      mate_color_button_get_type       (void) G_GNUC_CONST;
-GtkWidget *mate_color_button_new            (void);
-GtkWidget *mate_color_button_new_with_color (const GdkColor *color);
-void       mate_color_button_set_color      (MateColorButton *color_button,
+GType      cafe_color_button_get_type       (void) G_GNUC_CONST;
+GtkWidget *cafe_color_button_new            (void);
+GtkWidget *cafe_color_button_new_with_color (const GdkColor *color);
+void       cafe_color_button_set_color      (MateColorButton *color_button,
 					    const GdkColor *color);
-void       mate_color_button_set_rgba       (MateColorButton *color_button,
+void       cafe_color_button_set_rgba       (MateColorButton *color_button,
 					     const GdkRGBA   *color);
-void       mate_color_button_set_alpha      (MateColorButton *color_button,
+void       cafe_color_button_set_alpha      (MateColorButton *color_button,
 					    guint16         alpha);
-void       mate_color_button_get_color      (MateColorButton *color_button,
+void       cafe_color_button_get_color      (MateColorButton *color_button,
 					    GdkColor       *color);
-void       mate_color_button_get_rgba       (MateColorButton *color_button,
+void       cafe_color_button_get_rgba       (MateColorButton *color_button,
 					     GdkRGBA         *color);
-guint16    mate_color_button_get_alpha      (MateColorButton *color_button);
-void       mate_color_button_set_use_alpha  (MateColorButton *color_button,
+guint16    cafe_color_button_get_alpha      (MateColorButton *color_button);
+void       cafe_color_button_set_use_alpha  (MateColorButton *color_button,
 					    gboolean        use_alpha);
-gboolean   mate_color_button_get_use_alpha  (MateColorButton *color_button);
-void       mate_color_button_set_title      (MateColorButton *color_button,
+gboolean   cafe_color_button_get_use_alpha  (MateColorButton *color_button);
+void       cafe_color_button_set_title      (MateColorButton *color_button,
 					    const gchar    *title);
-const gchar *mate_color_button_get_title (MateColorButton *color_button);
+const gchar *cafe_color_button_get_title (MateColorButton *color_button);
 
 
 G_END_DECLS

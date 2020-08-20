@@ -1,5 +1,5 @@
 /* -*- Mode: C; c-set-style: linux indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
-/* mate-desktop-utils.c - Utilities for the CAFE Desktop
+/* cafe-desktop-utils.c - Utilities for the CAFE Desktop
 
    Copyright (C) 1998 Tom Tromey
    All rights reserved.
@@ -32,7 +32,7 @@
 #include <gtk/gtk.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
-#include <mate-desktop-utils.h>
+#include <cafe-desktop-utils.h>
 
 #include "private.h"
 
@@ -52,7 +52,7 @@ hls_to_rgb (gdouble *h,
             gdouble *s);
 
 /**
- * mate_desktop_prepend_terminal_to_vector:
+ * cafe_desktop_prepend_terminal_to_vector:
  * @argc: a pointer to the vector size
  * @argv: a pointer to the vector
  *
@@ -66,7 +66,7 @@ hls_to_rgb (gdouble *h,
  * empty, will just create a new vector for you.
  **/
 void
-mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
+cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 {
         char **real_argv;
         int real_argc;
@@ -82,7 +82,7 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
         g_return_if_fail (argc != NULL);
         g_return_if_fail (argv != NULL);
 
-        _mate_desktop_init_i18n ();
+        _cafe_desktop_init_i18n ();
 
 	/* sanity */
         if(*argv == NULL)
@@ -97,7 +97,7 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 		*argc = i;
 	}
 
-	settings = g_settings_new ("org.mate.applications-terminal");
+	settings = g_settings_new ("org.cafe.applications-terminal");
 	terminal = g_settings_get_string (settings, "exec");
 
 	if (terminal) {
@@ -128,11 +128,11 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 		term_argc = 2;
 		term_argv = g_new0 (char *, 3);
 
-		check = g_find_program_in_path ("mate-terminal");
+		check = g_find_program_in_path ("cafe-terminal");
 		if (check != NULL) {
 			term_argv[0] = check;
-			/* Note that mate-terminal takes -x and
-			 * as -e in mate-terminal is broken we use that. */
+			/* Note that cafe-terminal takes -x and
+			 * as -e in cafe-terminal is broken we use that. */
 			term_argv[1] = g_strdup ("-x");
 		} else {
 			if (check == NULL)
@@ -176,7 +176,7 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 }
 
 /**
- * mate_gdk_spawn_command_line_on_screen:
+ * cafe_gdk_spawn_command_line_on_screen:
  * @screen: a GdkScreen
  * @command: a command line
  * @error: return location for errors
@@ -197,7 +197,7 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
  * Since: 1.7.1
  **/
 gboolean
-mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error)
+cafe_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error)
 {
 	GAppInfo *appinfo = NULL;
 	GdkAppLaunchContext *context = NULL;
@@ -216,7 +216,7 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 }
 
 void
-_mate_desktop_init_i18n (void) {
+_cafe_desktop_init_i18n (void) {
 	static gboolean initialized = FALSE;
 
 	if (!initialized) {
@@ -442,7 +442,7 @@ hls_to_rgb (gdouble *h,
 #define LIGHTNESS_MULT 1.3
 #define DARKNESS_MULT  0.7
 void
-mate_desktop_gtk_style_get_light_color (GtkStyleContext *style,
+cafe_desktop_gtk_style_get_light_color (GtkStyleContext *style,
                                         GtkStateFlags    state,
                                         GdkRGBA         *color)
 {
@@ -451,7 +451,7 @@ mate_desktop_gtk_style_get_light_color (GtkStyleContext *style,
 }
 
 void
-mate_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
+cafe_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
                                        GtkStateFlags    state,
                                        GdkRGBA         *color)
 {

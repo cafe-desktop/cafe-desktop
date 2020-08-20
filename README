@@ -1,26 +1,26 @@
-mate-desktop
+cafe-desktop
 =============
 
-mate-desktop contains the libmate-desktop library, the mate-about
+cafe-desktop contains the libcafe-desktop library, the cafe-about
 program as well as some desktop-wide documents.
 
-The libmate-desktop library provides API shared by several applications
+The libcafe-desktop library provides API shared by several applications
 on the desktop, but that cannot live in the platform for various
 reasons. There is no API or ABI guarantee, although we are doing our
 best to provide stability. Documentation for the API is available with
 gtk-doc.
 
-The mate-about program helps find which version of CAFE is installed.
+The cafe-about program helps find which version of CAFE is installed.
 
 You may download updates to the package from:
 
-   http://pub.mate-desktop.org/releases/
+   http://pub.cafe-desktop.org/releases/
 
 
 Installation
 ============
 
-If you are not using a released version of mate-desktop (for example,
+If you are not using a released version of cafe-desktop (for example,
 if you checked out the code from git), you first need to run
 './autogen.sh'.
 
@@ -30,5 +30,5 @@ How to report bugs
 
 Bugs should be reported to the CAFE bug tracking system:
 
-   https://github.com/mate-desktop/mate-desktop/issues
+   https://github.com/cafe-desktop/cafe-desktop/issues
 

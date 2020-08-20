@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.thumbnail-cache" path="/org/mate/desktop/thumbnail-cache/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.thumbnail-cache" path="/org/cafe/desktop/thumbnail-cache/">
     <key name="maximum-age" type="i">
       <default>180</default>
       <description>Maximum age for thumbnails in the cache, in days. Set to -1 to disable cleaning.</description>

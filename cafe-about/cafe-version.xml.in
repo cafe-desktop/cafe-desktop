@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<mate-version>
+<cafe-version>
   <platform>@CAFE_PLATFORM@</platform>
   <minor>@CAFE_MINOR@</minor>
   <micro>@CAFE_MICRO@</micro>
   @CAFE_DATE_COMMENT_START@<date>@CAFE_DATE@</date>@CAFE_DATE_COMMENT_END@
-</mate-version>
+</cafe-version>

@@ -29,7 +29,7 @@
 
 G_BEGIN_DECLS
 
-void _mate_desktop_init_i18n (void);
+void _cafe_desktop_init_i18n (void);
 
 G_END_DECLS
 

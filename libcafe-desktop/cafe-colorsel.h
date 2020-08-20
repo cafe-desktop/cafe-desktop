@@ -33,7 +33,7 @@
 
 G_BEGIN_DECLS
 
-#define CAFE_TYPE_COLOR_SELECTION			(mate_color_selection_get_type ())
+#define CAFE_TYPE_COLOR_SELECTION			(cafe_color_selection_get_type ())
 #define CAFE_COLOR_SELECTION(obj)			(G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_SELECTION, MateColorSelection))
 #define CAFE_COLOR_SELECTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_SELECTION, MateColorSelectionClass))
 #define CAFE_IS_COLOR_SELECTION(obj)			(G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_SELECTION))
@@ -76,52 +76,52 @@ struct _MateColorSelectionClass
 
 /* ColorSelection */
 
-GType      mate_color_selection_get_type                (void) G_GNUC_CONST;
-GtkWidget *mate_color_selection_new                     (void);
-gboolean   mate_color_selection_get_has_opacity_control (MateColorSelection *colorsel);
-void       mate_color_selection_set_has_opacity_control (MateColorSelection *colorsel,
+GType      cafe_color_selection_get_type                (void) G_GNUC_CONST;
+GtkWidget *cafe_color_selection_new                     (void);
+gboolean   cafe_color_selection_get_has_opacity_control (MateColorSelection *colorsel);
+void       cafe_color_selection_set_has_opacity_control (MateColorSelection *colorsel,
 							gboolean           has_opacity);
-gboolean   mate_color_selection_get_has_palette         (MateColorSelection *colorsel);
-void       mate_color_selection_set_has_palette         (MateColorSelection *colorsel,
+gboolean   cafe_color_selection_get_has_palette         (MateColorSelection *colorsel);
+void       cafe_color_selection_set_has_palette         (MateColorSelection *colorsel,
 							gboolean           has_palette);
 
 
-void     mate_color_selection_set_current_color   (MateColorSelection *colorsel,
+void     cafe_color_selection_set_current_color   (MateColorSelection *colorsel,
 						  const GdkColor    *color);
-void     mate_color_selection_set_current_alpha   (MateColorSelection *colorsel,
+void     cafe_color_selection_set_current_alpha   (MateColorSelection *colorsel,
 						  guint16            alpha);
-void     mate_color_selection_get_current_color   (MateColorSelection *colorsel,
+void     cafe_color_selection_get_current_color   (MateColorSelection *colorsel,
 						  GdkColor          *color);
-guint16  mate_color_selection_get_current_alpha   (MateColorSelection *colorsel);
-void     mate_color_selection_set_previous_color  (MateColorSelection *colorsel,
+guint16  cafe_color_selection_get_current_alpha   (MateColorSelection *colorsel);
+void     cafe_color_selection_set_previous_color  (MateColorSelection *colorsel,
 						  const GdkColor    *color);
-void     mate_color_selection_set_previous_alpha  (MateColorSelection *colorsel,
+void     cafe_color_selection_set_previous_alpha  (MateColorSelection *colorsel,
 						  guint16            alpha);
-void     mate_color_selection_get_previous_color  (MateColorSelection *colorsel,
+void     cafe_color_selection_get_previous_color  (MateColorSelection *colorsel,
 						  GdkColor          *color);
-guint16  mate_color_selection_get_previous_alpha  (MateColorSelection *colorsel);
+guint16  cafe_color_selection_get_previous_alpha  (MateColorSelection *colorsel);
 
-gboolean mate_color_selection_is_adjusting        (MateColorSelection *colorsel);
+gboolean cafe_color_selection_is_adjusting        (MateColorSelection *colorsel);
 
-gboolean mate_color_selection_palette_from_string (const gchar       *str,
+gboolean cafe_color_selection_palette_from_string (const gchar       *str,
                                                   GdkColor         **colors,
                                                   gint              *n_colors);
-gchar*   mate_color_selection_palette_to_string   (const GdkColor    *colors,
+gchar*   cafe_color_selection_palette_to_string   (const GdkColor    *colors,
                                                   gint               n_colors);
 
 #ifndef GTK_DISABLE_DEPRECATED
 #ifndef GDK_MULTIHEAD_SAFE
-MateColorSelectionChangePaletteFunc           mate_color_selection_set_change_palette_hook             (MateColorSelectionChangePaletteFunc           func);
+MateColorSelectionChangePaletteFunc           cafe_color_selection_set_change_palette_hook             (MateColorSelectionChangePaletteFunc           func);
 #endif
 #endif
 
-MateColorSelectionChangePaletteWithScreenFunc mate_color_selection_set_change_palette_with_screen_hook (MateColorSelectionChangePaletteWithScreenFunc func);
+MateColorSelectionChangePaletteWithScreenFunc cafe_color_selection_set_change_palette_with_screen_hook (MateColorSelectionChangePaletteWithScreenFunc func);
 
 #ifndef GTK_DISABLE_DEPRECATED
 /* Deprecated calls: */
-void mate_color_selection_set_color         (MateColorSelection *colorsel,
+void cafe_color_selection_set_color         (MateColorSelection *colorsel,
 					    gdouble           *color);
-void mate_color_selection_get_color         (MateColorSelection *colorsel,
+void cafe_color_selection_get_color         (MateColorSelection *colorsel,
 					    gdouble           *color);
 #endif /* GTK_DISABLE_DEPRECATED */
 

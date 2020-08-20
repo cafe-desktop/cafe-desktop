@@ -26,7 +26,7 @@
  * files for a list of changes.  These files are distributed with
  * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
  *
- * Modified to work internally in mate-desktop by Pablo Barciela 2019
+ * Modified to work internally in cafe-desktop by Pablo Barciela 2019
  */
 
 #ifndef __CAFE_HSV_H__
@@ -36,7 +36,7 @@
 
 G_BEGIN_DECLS
 
-#define CAFE_TYPE_HSV            (mate_hsv_get_type ())
+#define CAFE_TYPE_HSV            (cafe_hsv_get_type ())
 #define CAFE_HSV(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_HSV, MateHSV))
 #define CAFE_HSV_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_HSV, MateHSVClass))
 #define CAFE_IS_HSV(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_HSV))
@@ -75,23 +75,23 @@ struct _MateHSVClass
 };
 
 
-GType      mate_hsv_get_type     (void) G_GNUC_CONST;
-GtkWidget* mate_hsv_new          (void);
-void       mate_hsv_set_color    (MateHSV    *hsv,
+GType      cafe_hsv_get_type     (void) G_GNUC_CONST;
+GtkWidget* cafe_hsv_new          (void);
+void       cafe_hsv_set_color    (MateHSV    *hsv,
 				  double      h,
 				  double      s,
 				  double      v);
-void       mate_hsv_get_color    (MateHSV    *hsv,
+void       cafe_hsv_get_color    (MateHSV    *hsv,
 				  gdouble    *h,
 				  gdouble    *s,
 				  gdouble    *v);
-void       mate_hsv_set_metrics  (MateHSV    *hsv,
+void       cafe_hsv_set_metrics  (MateHSV    *hsv,
 				  gint        size,
 				  gint        ring_width);
-void       mate_hsv_get_metrics  (MateHSV    *hsv,
+void       cafe_hsv_get_metrics  (MateHSV    *hsv,
 				  gint       *size,
 				  gint       *ring_width);
-gboolean   mate_hsv_is_adjusting (MateHSV    *hsv);
+gboolean   cafe_hsv_is_adjusting (MateHSV    *hsv);
 
 G_END_DECLS
 

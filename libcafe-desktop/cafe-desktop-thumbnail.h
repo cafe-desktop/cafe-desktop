@@ -1,5 +1,5 @@
 /*
- * mate-thumbnail.h: Utilities for handling thumbnails
+ * cafe-thumbnail.h: Utilities for handling thumbnails
  *
  * Copyright (C) 2002 Red Hat, Inc.
  *
@@ -27,7 +27,7 @@
 #define CAFE_DESKTOP_THUMBNAIL_H
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error    MateDesktopThumbnail is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-desktop-thumbnail.h
+#error    MateDesktopThumbnail is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including cafe-desktop-thumbnail.h
 #endif
 
 #include <glib.h>
@@ -42,7 +42,7 @@ typedef enum {
   CAFE_DESKTOP_THUMBNAIL_SIZE_LARGE
 } MateDesktopThumbnailSize;
 
-#define CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY    (mate_desktop_thumbnail_factory_get_type ())
+#define CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY    (cafe_desktop_thumbnail_factory_get_type ())
 #define CAFE_DESKTOP_THUMBNAIL_FACTORY(obj)    (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactory))
 #define CAFE_DESKTOP_THUMBNAIL_FACTORY_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryClass))
 #define CAFE_DESKTOP_IS_THUMBNAIL_FACTORY(obj)    (G_TYPE_INSTANCE_CHECK_TYPE ((obj), CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
@@ -62,39 +62,39 @@ struct _MateDesktopThumbnailFactoryClass {
     GObjectClass parent;
 };
 
-GType      mate_desktop_thumbnail_factory_get_type (void);
-MateDesktopThumbnailFactory *mate_desktop_thumbnail_factory_new      (MateDesktopThumbnailSize     size);
+GType      cafe_desktop_thumbnail_factory_get_type (void);
+MateDesktopThumbnailFactory *cafe_desktop_thumbnail_factory_new      (MateDesktopThumbnailSize     size);
 
-char *     mate_desktop_thumbnail_factory_lookup   (MateDesktopThumbnailFactory *factory,
+char *     cafe_desktop_thumbnail_factory_lookup   (MateDesktopThumbnailFactory *factory,
                                                     const char                  *uri,
                                                     time_t                       mtime);
 
-gboolean   mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailFactory *factory,
+gboolean   cafe_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailFactory *factory,
                                                                       const char                  *uri,
                                                                       time_t                       mtime);
-gboolean   mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *factory,
+gboolean   cafe_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *factory,
                                                          const char                  *uri,
                                                          const char                  *mime_type,
                                                          time_t                       mtime);
-GdkPixbuf *  mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *factory,
+GdkPixbuf *  cafe_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *factory,
                                                                 const char                  *uri,
                                                                 const char                  *mime_type);
-void       mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *factory,
+void       cafe_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *factory,
                                                           GdkPixbuf                   *thumbnail,
                                                           const char                  *uri,
                                                           time_t                       original_mtime);
-void       mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFactory *factory,
+void       cafe_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFactory *factory,
                                                                    const char                  *uri,
                                                                    time_t                       mtime);
 
 
 /* Thumbnailing utils: */
-gboolean   mate_desktop_thumbnail_has_uri           (GdkPixbuf          *pixbuf,
+gboolean   cafe_desktop_thumbnail_has_uri           (GdkPixbuf          *pixbuf,
                                                      const char         *uri);
-gboolean   mate_desktop_thumbnail_is_valid          (GdkPixbuf          *pixbuf,
+gboolean   cafe_desktop_thumbnail_is_valid          (GdkPixbuf          *pixbuf,
                                                      const char         *uri,
                                                      time_t              mtime);
-char *     mate_desktop_thumbnail_path_for_uri      (const char         *uri,
+char *     cafe_desktop_thumbnail_path_for_uri      (const char         *uri,
                                                      MateDesktopThumbnailSize  size);
 
 G_END_DECLS

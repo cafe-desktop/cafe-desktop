@@ -1,7 +1,7 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.applications-terminal" path="/org/mate/desktop/applications/terminal/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.applications-terminal" path="/org/cafe/desktop/applications/terminal/">
     <key name="exec" type="s">
-      <default>'mate-terminal'</default>
+      <default>'cafe-terminal'</default>
       <summary>Terminal application</summary>
       <description>Terminal program to use when starting applications that require one.</description>
     </key>

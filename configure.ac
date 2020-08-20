@@ -1,11 +1,11 @@
-m4_define([mate_platform], [1])
-m4_define([mate_minor], [24])
-m4_define([mate_micro], [1])
+m4_define([cafe_platform], [1])
+m4_define([cafe_minor], [24])
+m4_define([cafe_micro], [1])
 
-m4_define(mate_version, [mate_platform.mate_minor.mate_micro]),
+m4_define(cafe_version, [cafe_platform.cafe_minor.cafe_micro]),
 
-AC_INIT([mate-desktop], mate_version, [https://github.com/mate-desktop/mate-desktop/])
-AC_CONFIG_SRCDIR([libmate-desktop])
+AC_INIT([cafe-desktop], cafe_version, [https://github.com/cafe-desktop/cafe-desktop/])
+AC_CONFIG_SRCDIR([libcafe-desktop])
 
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz tar-ustar check-news])
@@ -41,9 +41,9 @@ AC_STDC_HEADERS
 AC_PROG_LIBTOOL
 PKG_PROG_PKG_CONFIG
 
-CAFE_PLATFORM=mate_platform
-CAFE_MINOR=mate_minor
-CAFE_MICRO=mate_micro
+CAFE_PLATFORM=cafe_platform
+CAFE_MINOR=cafe_minor
+CAFE_MICRO=cafe_micro
 CAFE_DATE=`date +"%Y-%m-%d"`
 if test "x$SOURCE_DATE_EPOCH" != "x"; then
 	CAFE_DATE=`date -u -d "@$SOURCE_DATE_EPOCH" +%Y-%m-%d`
@@ -59,9 +59,9 @@ AC_SUBST(CAFE_DATE)
 AC_SUBST(CAFE_DATE_COMMENT_START)
 AC_SUBST(CAFE_DATE_COMMENT_END)
 
-AC_DEFINE(CAFE_MAJOR, [mate_platform], [Define to the major version])
-AC_DEFINE(CAFE_MINOR, [mate_minor], [Define to the minor version])
-AC_DEFINE(CAFE_MICRO, [mate_micro], [Define to the micro version])
+AC_DEFINE(CAFE_MAJOR, [cafe_platform], [Define to the major version])
+AC_DEFINE(CAFE_MINOR, [cafe_minor], [Define to the minor version])
+AC_DEFINE(CAFE_MICRO, [cafe_micro], [Define to the micro version])
 
 RELEASE_YEAR=`date +%Y`
 if test "x$SOURCE_DATE_EPOCH" != "x"; then
@@ -79,11 +79,11 @@ if test "x$enable_deprecation_flags" = "xyes"; then
    AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
 
-# Whether to build mate-about
-AC_ARG_ENABLE([mate-about],
-	[AS_HELP_STRING([--disable-mate-about],[do not build mate-about])],,
-	[enable_mate_about=yes])
-AM_CONDITIONAL(CAFE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
+# Whether to build cafe-about
+AC_ARG_ENABLE([cafe-about],
+	[AS_HELP_STRING([--disable-cafe-about],[do not build cafe-about])],,
+	[enable_cafe_about=yes])
+AM_CONDITIONAL(CAFE_ABOUT_ENABLED, test "x$enable_cafe_about" = "xyes")
 
 
 # Path to the pnp.ids file -- to know if we use one shipped with another
@@ -208,7 +208,7 @@ dnl Language Support
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.19.8])
 
-GETTEXT_PACKAGE=mate-desktop
+GETTEXT_PACKAGE=cafe-desktop
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
 		   [The gettext translation domain])
 AC_SUBST(GETTEXT_PACKAGE)
@@ -242,18 +242,18 @@ AM_CONDITIONAL([HAVE_RSVG_CONVERT], [test "x$RSVG_CONVERT" != x])
 
 AC_CONFIG_FILES([
 Makefile
-mate-about/Makefile
-mate-about/mate-about.h
-mate-about/mate-version.xml
-libmate-desktop/Makefile
-libmate-desktop/mate-desktop-2.0.pc
-libmate-desktop/mate-desktop-2.0-uninstalled.pc
+cafe-about/Makefile
+cafe-about/cafe-about.h
+cafe-about/cafe-version.xml
+libcafe-desktop/Makefile
+libcafe-desktop/cafe-desktop-2.0.pc
+libcafe-desktop/cafe-desktop-2.0-uninstalled.pc
 docs/Makefile
 docs/reference/Makefile
-docs/reference/mate-desktop/Makefile
+docs/reference/cafe-desktop/Makefile
 po/Makefile.in
 schemas/Makefile
-schemas/org.mate.background.gschema.xml
+schemas/org.cafe.background.gschema.xml
 man/Makefile
 tools/Makefile
 icons/Makefile
@@ -266,8 +266,8 @@ dnl - Show summary
 dnl ---------------------------------------------------------------------------
 
 echo "
-mate-desktop $VERSION
-`echo mate-desktop $VERSION | sed "s/./=/g"`
+cafe-desktop $VERSION
+`echo cafe-desktop $VERSION | sed "s/./=/g"`
 
     prefix:                       ${prefix}
     exec_prefix:                  ${exec_prefix}
@@ -284,7 +284,7 @@ mate-desktop $VERSION
     Maintainer mode:              ${USE_MAINTAINER_MODE}
     Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
-    Build mate-about:             ${enable_mate_about}
+    Build cafe-about:             ${enable_cafe_about}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}

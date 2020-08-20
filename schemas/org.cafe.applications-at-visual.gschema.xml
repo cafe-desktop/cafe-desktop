@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.applications-at-visual" path="/org/mate/desktop/applications/at/visual/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.applications-at-visual" path="/org/cafe/desktop/applications/at/visual/">
     <key name="exec" type="s">
       <default>'orca'</default>
       <summary>Preferred Visual assistive technology application</summary>

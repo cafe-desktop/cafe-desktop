@@ -26,14 +26,14 @@
  * files for a list of changes.  These files are distributed with
  * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
  *
- * Modified to work internally in mate-desktop by Pablo Barciela 2019
+ * Modified to work internally in cafe-desktop by Pablo Barciela 2019
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
 
-#include "mate-hsv.h"
+#include "cafe-hsv.h"
 
 #include <math.h>
 #include <string.h>
@@ -43,7 +43,7 @@
 #define I_(string) g_intern_static_string (string)
 
 /**
- * SECTION:mate-hsv
+ * SECTION:cafe-hsv
  * @Short_description: A “color wheel” widget
  * @Title: MateHSV
  *
@@ -98,39 +98,39 @@ enum {
   LAST_SIGNAL
 };
 
-static void     mate_hsv_destroy              (GtkWidget          *widget);
-static void     mate_hsv_realize              (GtkWidget          *widget);
-static void     mate_hsv_unrealize            (GtkWidget          *widget);
-static void     mate_hsv_get_preferred_width  (GtkWidget          *widget,
+static void     cafe_hsv_destroy              (GtkWidget          *widget);
+static void     cafe_hsv_realize              (GtkWidget          *widget);
+static void     cafe_hsv_unrealize            (GtkWidget          *widget);
+static void     cafe_hsv_get_preferred_width  (GtkWidget          *widget,
                                                gint               *minimum,
                                                gint               *natural);
-static void     mate_hsv_get_preferred_height (GtkWidget          *widget,
+static void     cafe_hsv_get_preferred_height (GtkWidget          *widget,
                                                gint               *minimum,
                                                gint               *natural);
-static void     mate_hsv_size_allocate        (GtkWidget          *widget,
+static void     cafe_hsv_size_allocate        (GtkWidget          *widget,
                                                GtkAllocation      *allocation);
-static gboolean mate_hsv_button_press         (GtkWidget          *widget,
+static gboolean cafe_hsv_button_press         (GtkWidget          *widget,
                                                GdkEventButton     *event);
-static gboolean mate_hsv_button_release       (GtkWidget          *widget,
+static gboolean cafe_hsv_button_release       (GtkWidget          *widget,
                                                GdkEventButton     *event);
-static gboolean mate_hsv_motion               (GtkWidget          *widget,
+static gboolean cafe_hsv_motion               (GtkWidget          *widget,
                                                GdkEventMotion     *event);
-static gboolean mate_hsv_draw                 (GtkWidget          *widget,
+static gboolean cafe_hsv_draw                 (GtkWidget          *widget,
                                                cairo_t            *cr);
-static gboolean mate_hsv_grab_broken          (GtkWidget          *widget,
+static gboolean cafe_hsv_grab_broken          (GtkWidget          *widget,
                                                GdkEventGrabBroken *event);
-static gboolean mate_hsv_focus                (GtkWidget          *widget,
+static gboolean cafe_hsv_focus                (GtkWidget          *widget,
                                                GtkDirectionType    direction);
-static void     mate_hsv_move                 (MateHSV            *hsv,
+static void     cafe_hsv_move                 (MateHSV            *hsv,
                                                GtkDirectionType    dir);
 
 static guint hsv_signals[LAST_SIGNAL];
 
-G_DEFINE_TYPE_WITH_PRIVATE (MateHSV, mate_hsv, GTK_TYPE_WIDGET)
+G_DEFINE_TYPE_WITH_PRIVATE (MateHSV, cafe_hsv, GTK_TYPE_WIDGET)
 
 /* Class initialization function for the HSV color selector */
 static void
-mate_hsv_class_init (MateHSVClass *class)
+cafe_hsv_class_init (MateHSVClass *class)
 {
   GObjectClass    *gobject_class;
   GtkWidgetClass  *widget_class;
@@ -141,22 +141,22 @@ mate_hsv_class_init (MateHSVClass *class)
   widget_class = (GtkWidgetClass *) class;
   hsv_class = CAFE_HSV_CLASS (class);
 
-  widget_class->destroy = mate_hsv_destroy;
-  widget_class->realize = mate_hsv_realize;
-  widget_class->unrealize = mate_hsv_unrealize;
-  widget_class->get_preferred_width = mate_hsv_get_preferred_width;
-  widget_class->get_preferred_height = mate_hsv_get_preferred_height;
-  widget_class->size_allocate = mate_hsv_size_allocate;
-  widget_class->button_press_event = mate_hsv_button_press;
-  widget_class->button_release_event = mate_hsv_button_release;
-  widget_class->motion_notify_event = mate_hsv_motion;
-  widget_class->draw = mate_hsv_draw;
-  widget_class->focus = mate_hsv_focus;
-  widget_class->grab_broken_event = mate_hsv_grab_broken;
+  widget_class->destroy = cafe_hsv_destroy;
+  widget_class->realize = cafe_hsv_realize;
+  widget_class->unrealize = cafe_hsv_unrealize;
+  widget_class->get_preferred_width = cafe_hsv_get_preferred_width;
+  widget_class->get_preferred_height = cafe_hsv_get_preferred_height;
+  widget_class->size_allocate = cafe_hsv_size_allocate;
+  widget_class->button_press_event = cafe_hsv_button_press;
+  widget_class->button_release_event = cafe_hsv_button_release;
+  widget_class->motion_notify_event = cafe_hsv_motion;
+  widget_class->draw = cafe_hsv_draw;
+  widget_class->focus = cafe_hsv_focus;
+  widget_class->grab_broken_event = cafe_hsv_grab_broken;
 
   gtk_widget_class_set_accessible_role (widget_class, ATK_ROLE_COLOR_CHOOSER);
 
-  hsv_class->move = mate_hsv_move;
+  hsv_class->move = cafe_hsv_move;
 
   hsv_signals[CHANGED] =
     g_signal_new (I_("changed"),
@@ -206,11 +206,11 @@ mate_hsv_class_init (MateHSVClass *class)
 }
 
 static void
-mate_hsv_init (MateHSV *hsv)
+cafe_hsv_init (MateHSV *hsv)
 {
   MateHSVPrivate *priv;
 
-  priv = mate_hsv_get_instance_private (hsv);
+  priv = cafe_hsv_get_instance_private (hsv);
   hsv->priv = priv;
 
   gtk_widget_set_has_window (GTK_WIDGET (hsv), FALSE);
@@ -225,13 +225,13 @@ mate_hsv_init (MateHSV *hsv)
 }
 
 static void
-mate_hsv_destroy (GtkWidget *widget)
+cafe_hsv_destroy (GtkWidget *widget)
 {
-  GTK_WIDGET_CLASS (mate_hsv_parent_class)->destroy (widget);
+  GTK_WIDGET_CLASS (cafe_hsv_parent_class)->destroy (widget);
 }
 
 static void
-mate_hsv_realize (GtkWidget *widget)
+cafe_hsv_realize (GtkWidget *widget)
 {
   MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
@@ -269,7 +269,7 @@ mate_hsv_realize (GtkWidget *widget)
 }
 
 static void
-mate_hsv_unrealize (GtkWidget *widget)
+cafe_hsv_unrealize (GtkWidget *widget)
 {
   MateHSV *hsv = CAFE_HSV (widget);
   MateHSVPrivate *priv = hsv->priv;
@@ -278,11 +278,11 @@ mate_hsv_unrealize (GtkWidget *widget)
   gdk_window_destroy (priv->window);
   priv->window = NULL;
 
-  GTK_WIDGET_CLASS (mate_hsv_parent_class)->unrealize (widget);
+  GTK_WIDGET_CLASS (cafe_hsv_parent_class)->unrealize (widget);
 }
 
 static void
-mate_hsv_get_preferred_width (GtkWidget *widget,
+cafe_hsv_get_preferred_width (GtkWidget *widget,
                               gint      *minimum,
                               gint      *natural)
 {
@@ -301,7 +301,7 @@ mate_hsv_get_preferred_width (GtkWidget *widget,
 }
 
 static void
-mate_hsv_get_preferred_height (GtkWidget *widget,
+cafe_hsv_get_preferred_height (GtkWidget *widget,
                                gint      *minimum,
                                gint      *natural)
 {
@@ -320,7 +320,7 @@ mate_hsv_get_preferred_height (GtkWidget *widget,
 }
 
 static void
-mate_hsv_size_allocate (GtkWidget     *widget,
+cafe_hsv_size_allocate (GtkWidget     *widget,
                         GtkAllocation *allocation)
 {
   MateHSV *hsv = CAFE_HSV (widget);
@@ -624,7 +624,7 @@ set_cross_grab (MateHSV   *hsv,
 }
 
 static gboolean
-mate_hsv_grab_broken (GtkWidget          *widget,
+cafe_hsv_grab_broken (GtkWidget          *widget,
                       GdkEventGrabBroken *event)
 {
   MateHSV *hsv = CAFE_HSV (widget);
@@ -636,7 +636,7 @@ mate_hsv_grab_broken (GtkWidget          *widget,
 }
 
 static gint
-mate_hsv_button_press (GtkWidget      *widget,
+cafe_hsv_button_press (GtkWidget      *widget,
                        GdkEventButton *event)
 {
   MateHSV *hsv = CAFE_HSV (widget);
@@ -654,7 +654,7 @@ mate_hsv_button_press (GtkWidget      *widget,
       priv->mode = DRAG_H;
       set_cross_grab (hsv, gdk_event_get_device ((GdkEvent *) event), event->time);
 
-      mate_hsv_set_color (hsv,
+      cafe_hsv_set_color (hsv,
                          compute_v (hsv, x, y),
                          priv->s,
                          priv->v);
@@ -673,7 +673,7 @@ mate_hsv_button_press (GtkWidget      *widget,
       set_cross_grab (hsv, gdk_event_get_device ((GdkEvent *) event), event->time);
 
       compute_sv (hsv, x, y, &s, &v);
-      mate_hsv_set_color (hsv, priv->h, s, v);
+      cafe_hsv_set_color (hsv, priv->h, s, v);
 
       gtk_widget_grab_focus (widget);
       priv->focus_on_ring = FALSE;
@@ -685,7 +685,7 @@ mate_hsv_button_press (GtkWidget      *widget,
 }
 
 static gint
-mate_hsv_button_release (GtkWidget      *widget,
+cafe_hsv_button_release (GtkWidget      *widget,
                          GdkEventButton *event)
 {
   MateHSV *hsv = CAFE_HSV (widget);
@@ -707,14 +707,14 @@ mate_hsv_button_release (GtkWidget      *widget,
 
   if (mode == DRAG_H)
     {
-      mate_hsv_set_color (hsv, compute_v (hsv, x, y), priv->s, priv->v);
+      cafe_hsv_set_color (hsv, compute_v (hsv, x, y), priv->s, priv->v);
     }
   else if (mode == DRAG_SV)
     {
       gdouble s, v;
 
       compute_sv (hsv, x, y, &s, &v);
-      mate_hsv_set_color (hsv, priv->h, s, v);
+      cafe_hsv_set_color (hsv, priv->h, s, v);
     }
   else
     {
@@ -727,7 +727,7 @@ mate_hsv_button_release (GtkWidget      *widget,
 }
 
 static gint
-mate_hsv_motion (GtkWidget      *widget,
+cafe_hsv_motion (GtkWidget      *widget,
                  GdkEventMotion *event)
 {
   MateHSV *hsv = CAFE_HSV (widget);
@@ -743,7 +743,7 @@ mate_hsv_motion (GtkWidget      *widget,
 
   if (priv->mode == DRAG_H)
     {
-      mate_hsv_set_color (hsv, compute_v (hsv, x, y), priv->s, priv->v);
+      cafe_hsv_set_color (hsv, compute_v (hsv, x, y), priv->s, priv->v);
       return TRUE;
     }
   else if (priv->mode == DRAG_SV)
@@ -751,7 +751,7 @@ mate_hsv_motion (GtkWidget      *widget,
       gdouble s, v;
 
       compute_sv (hsv, x, y, &s, &v);
-      mate_hsv_set_color (hsv, priv->h, s, v);
+      cafe_hsv_set_color (hsv, priv->h, s, v);
       return TRUE;
     }
 
@@ -1114,7 +1114,7 @@ paint_triangle (MateHSV  *hsv,
 
 /* Paints the contents of the HSV color selector */
 static gboolean
-mate_hsv_draw (GtkWidget *widget,
+cafe_hsv_draw (GtkWidget *widget,
                cairo_t   *cr)
 {
   MateHSV *hsv = CAFE_HSV (widget);
@@ -1142,7 +1142,7 @@ mate_hsv_draw (GtkWidget *widget,
 }
 
 static gboolean
-mate_hsv_focus (GtkWidget       *widget,
+cafe_hsv_focus (GtkWidget       *widget,
                 GtkDirectionType dir)
 {
   MateHSV *hsv = CAFE_HSV (widget);
@@ -1198,20 +1198,20 @@ mate_hsv_focus (GtkWidget       *widget,
 }
 
 /**
- * mate_hsv_new:
+ * cafe_hsv_new:
  *
  * Creates a new HSV color selector.
  *
  * Returns: A newly-created HSV color selector.
  */
 GtkWidget*
-mate_hsv_new (void)
+cafe_hsv_new (void)
 {
   return g_object_new (CAFE_TYPE_HSV, NULL);
 }
 
 /**
- * mate_hsv_set_color:
+ * cafe_hsv_set_color:
  * @hsv: An HSV color selector
  * @h: Hue
  * @s: Saturation
@@ -1221,7 +1221,7 @@ mate_hsv_new (void)
  * Color component values must be in the [0.0, 1.0] range.
  */
 void
-mate_hsv_set_color (MateHSV *hsv,
+cafe_hsv_set_color (MateHSV *hsv,
                     gdouble  h,
                     gdouble  s,
                     gdouble  v)
@@ -1245,7 +1245,7 @@ mate_hsv_set_color (MateHSV *hsv,
 }
 
 /**
- * mate_hsv_get_color:
+ * cafe_hsv_get_color:
  * @hsv: An HSV color selector
  * @h: (out): Return value for the hue
  * @s: (out): Return value for the saturation
@@ -1255,7 +1255,7 @@ mate_hsv_set_color (MateHSV *hsv,
  * Returned values will be in the [0.0, 1.0] range.
  */
 void
-mate_hsv_get_color (MateHSV *hsv,
+cafe_hsv_get_color (MateHSV *hsv,
                     double  *h,
                     double  *s,
                     double  *v)
@@ -1277,7 +1277,7 @@ mate_hsv_get_color (MateHSV *hsv,
 }
 
 /**
- * mate_hsv_set_metrics:
+ * cafe_hsv_set_metrics:
  * @hsv: An HSV color selector
  * @size: Diameter for the hue ring
  * @ring_width: Width of the hue ring
@@ -1285,7 +1285,7 @@ mate_hsv_get_color (MateHSV *hsv,
  * Sets the size and ring width of an HSV color selector.
  */
 void
-mate_hsv_set_metrics (MateHSV *hsv,
+cafe_hsv_set_metrics (MateHSV *hsv,
                       gint     size,
                       gint     ring_width)
 {
@@ -1311,7 +1311,7 @@ mate_hsv_set_metrics (MateHSV *hsv,
 }
 
 /**
- * mate_hsv_get_metrics:
+ * cafe_hsv_get_metrics:
  * @hsv: An HSV color selector
  * @size: (out): Return value for the diameter of the hue ring
  * @ring_width: (out): Return value for the width of the hue ring
@@ -1319,7 +1319,7 @@ mate_hsv_set_metrics (MateHSV *hsv,
  * Queries the size and ring width of an HSV color selector.
  */
 void
-mate_hsv_get_metrics (MateHSV *hsv,
+cafe_hsv_get_metrics (MateHSV *hsv,
                       gint    *size,
                       gint    *ring_width)
 {
@@ -1337,7 +1337,7 @@ mate_hsv_get_metrics (MateHSV *hsv,
 }
 
 /**
- * mate_hsv_is_adjusting:
+ * cafe_hsv_is_adjusting:
  * @hsv: A #MateHSV
  *
  * An HSV color selector can be said to be adjusting if multiple rapid
@@ -1350,7 +1350,7 @@ mate_hsv_get_metrics (MateHSV *hsv,
  *     the color value status to be final.
  */
 gboolean
-mate_hsv_is_adjusting (MateHSV *hsv)
+cafe_hsv_is_adjusting (MateHSV *hsv)
 {
   MateHSVPrivate *priv;
 
@@ -1362,7 +1362,7 @@ mate_hsv_is_adjusting (MateHSV *hsv)
 }
 
 static void
-mate_hsv_move (MateHSV         *hsv,
+cafe_hsv_move (MateHSV         *hsv,
                GtkDirectionType dir)
 {
   MateHSVPrivate *priv = hsv->priv;
@@ -1434,6 +1434,6 @@ mate_hsv_move (MateHSV         *hsv,
   else if (hue > 1.0)
     hue = 0.0;
 
-  mate_hsv_set_color (hsv, hue, sat, val);
+  cafe_hsv_set_color (hsv, hue, sat, val);
 }
 

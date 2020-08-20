@@ -1,7 +1,7 @@
-bin_PROGRAMS = mate-about
-mate_about_SOURCES = mate-about.c mate-about.h
-mate_about_CFLAGS = $(WARN_CFLAGS) $(CAFE_ABOUT_CFLAGS)
-mate_about_LDADD = $(CAFE_ABOUT_LIBS)
+bin_PROGRAMS = cafe-about
+cafe_about_SOURCES = cafe-about.c cafe-about.h
+cafe_about_CFLAGS = $(WARN_CFLAGS) $(CAFE_ABOUT_CFLAGS)
+cafe_about_LDADD = $(CAFE_ABOUT_LIBS)
 
 AM_CPPFLAGS = \
 	-I$(top_srcdir) \
@@ -10,21 +10,21 @@ AM_CPPFLAGS = \
 	-DPIXMAPS_DIR=\"$(datadir)/pixmaps/\"
 
 desktopdir = $(datadir)/applications
-desktop_in_files = mate-about.desktop.in
+desktop_in_files = cafe-about.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-mate-about.desktop: mate-about.desktop.in
+cafe-about.desktop: cafe-about.desktop.in
 	$(AM_V_GEN)$(MSGFMT) --desktop --keyword= --keyword=Name --keyword=Comment --template $< -d $(top_srcdir)/po -o $@
 
-versiondir = $(datadir)/mate-about
-version_DATA = mate-version.xml
+versiondir = $(datadir)/cafe-about
+version_DATA = cafe-version.xml
 
 EXTRA_DIST = \
 	$(desktop_in_files) \
 	meson.build \
-	mate-about.h.in \
-	mate-version.xml.in
+	cafe-about.h.in \
+	cafe-version.xml.in
 
-CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS) $(version_DATA) mate-about.h
+CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS) $(version_DATA) cafe-about.h
 
 #-include $(top_srcdir)/git.mk
 

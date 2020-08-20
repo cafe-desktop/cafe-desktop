@@ -28,8 +28,8 @@
 
 const char* program_name = N_("CAFE Desktop Environment");
 const char* version = PACKAGE_VERSION;
-const char* icon = "mate-desktop";
-const char* website = "https://mate-desktop.org/";
+const char* icon = "cafe-desktop";
+const char* website = "https://cafe-desktop.org/";
 
 const char* copyright =  N_("Copyright © 1997-2011 GNOME developers\n"
                             "Copyright © 2011 Perberos\n"
@@ -57,7 +57,7 @@ const char* comments_array[] = {
 
     N_("The name “CAFE” comes from yerba maté, a species of holly native "
     "to subtropical South America. Its leaves contain caffeine and are "
-    "used to make infusions and a beverage called mate.")
+    "used to make infusions and a beverage called cafe.")
 };
 
 const char* authors[] = {
@@ -645,25 +645,25 @@ const char* artists[] = {
     NULL
 };
 
-// widget for mate-about window
-GtkAboutDialog* mate_about_dialog = FALSE;
+// widget for cafe-about window
+GtkAboutDialog* cafe_about_dialog = FALSE;
 
-GtkApplication* mate_about_application;
+GtkApplication* cafe_about_application;
 
 /**
- * If this value is set to TRUE, then mate_about_dialog will not be called
+ * If this value is set to TRUE, then cafe_about_dialog will not be called
  * on the main function.
  */
-gboolean mate_about_nogui = FALSE;
+gboolean cafe_about_nogui = FALSE;
 // functions
-void mate_about_run(void);
-void mate_about_release_version(void);
+void cafe_about_run(void);
+void cafe_about_release_version(void);
 
-static void mate_about_on_activate(GtkApplication* app);
+static void cafe_about_on_activate(GtkApplication* app);
 
 // arguments definitions
 static GOptionEntry command_entries[] = {
-    {"version", 'v', 0, G_OPTION_ARG_NONE, &mate_about_nogui, "Show CAFE version", NULL},
+    {"version", 'v', 0, G_OPTION_ARG_NONE, &cafe_about_nogui, "Show CAFE version", NULL},
     {NULL}
 };
 

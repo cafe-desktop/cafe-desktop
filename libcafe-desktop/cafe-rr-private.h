@@ -79,6 +79,6 @@ struct MateRRConfigPrivate
   MateRROutputInfo **outputs;
 };
 
-gboolean _mate_rr_output_name_is_laptop (const char *name);
+gboolean _cafe_rr_output_name_is_laptop (const char *name);
 
 #endif

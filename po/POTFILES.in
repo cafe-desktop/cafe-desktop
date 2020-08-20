@@ -1,39 +1,39 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-mate-about/mate-about.c
-mate-about/mate-about.desktop.in
-mate-about/mate-about.h
+cafe-about/cafe-about.c
+cafe-about/cafe-about.desktop.in
+cafe-about/cafe-about.h
 # When adding a file here, make sure that the entry point in the API of this
-# file calls _mate_desktop_init_i18n ()
-libmate-desktop/display-name.c
-libmate-desktop/mate-colorbutton.c
-libmate-desktop/mate-colorsel.c
-libmate-desktop/mate-hsv.c
-libmate-desktop/mate-colorseldialog.c
-libmate-desktop/mate-desktop-item.c
-libmate-desktop/mate-desktop-utils.c
-libmate-desktop/mate-languages.c
-libmate-desktop/mate-rr.c
-libmate-desktop/mate-rr-config.c
-libmate-desktop/mate-rr-labeler.c
-schemas/org.mate.accessibility-keyboard.gschema.xml
-schemas/org.mate.accessibility-startup.gschema.xml
-schemas/org.mate.applications-at-mobility.gschema.xml
-schemas/org.mate.applications-at-visual.gschema.xml
-schemas/org.mate.applications-browser.gschema.xml
-schemas/org.mate.applications-calculator.gschema.xml
-schemas/org.mate.applications-messenger.gschema.xml
-schemas/org.mate.applications-office.gschema.xml
-schemas/org.mate.applications-terminal.gschema.xml
-schemas/org.mate.background.gschema.xml.in
-schemas/org.mate.debug.gschema.xml
-schemas/org.mate.file-views.gschema.xml
-schemas/org.mate.interface.gschema.xml
-schemas/org.mate.lockdown.gschema.xml
-schemas/org.mate.sound.gschema.xml
-schemas/org.mate.thumbnail-cache.gschema.xml
-schemas/org.mate.thumbnailers.gschema.xml
-schemas/org.mate.typing-break.gschema.xml
-tools/mate-color-select.c
-tools/mate-color-select.desktop.in
+# file calls _cafe_desktop_init_i18n ()
+libcafe-desktop/display-name.c
+libcafe-desktop/cafe-colorbutton.c
+libcafe-desktop/cafe-colorsel.c
+libcafe-desktop/cafe-hsv.c
+libcafe-desktop/cafe-colorseldialog.c
+libcafe-desktop/cafe-desktop-item.c
+libcafe-desktop/cafe-desktop-utils.c
+libcafe-desktop/cafe-languages.c
+libcafe-desktop/cafe-rr.c
+libcafe-desktop/cafe-rr-config.c
+libcafe-desktop/cafe-rr-labeler.c
+schemas/org.cafe.accessibility-keyboard.gschema.xml
+schemas/org.cafe.accessibility-startup.gschema.xml
+schemas/org.cafe.applications-at-mobility.gschema.xml
+schemas/org.cafe.applications-at-visual.gschema.xml
+schemas/org.cafe.applications-browser.gschema.xml
+schemas/org.cafe.applications-calculator.gschema.xml
+schemas/org.cafe.applications-messenger.gschema.xml
+schemas/org.cafe.applications-office.gschema.xml
+schemas/org.cafe.applications-terminal.gschema.xml
+schemas/org.cafe.background.gschema.xml.in
+schemas/org.cafe.debug.gschema.xml
+schemas/org.cafe.file-views.gschema.xml
+schemas/org.cafe.interface.gschema.xml
+schemas/org.cafe.lockdown.gschema.xml
+schemas/org.cafe.sound.gschema.xml
+schemas/org.cafe.thumbnail-cache.gschema.xml
+schemas/org.cafe.thumbnailers.gschema.xml
+schemas/org.cafe.typing-break.gschema.xml
+tools/cafe-color-select.c
+tools/cafe-color-select.desktop.in
 

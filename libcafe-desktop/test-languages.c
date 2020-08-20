@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <locale.h>
 #define CAFE_DESKTOP_USE_UNSTABLE_API
-#include "mate-languages.h"
+#include "cafe-languages.h"
 
 void test_one_locale(const gchar *locale);
 void test_locales(void);
@@ -28,9 +28,9 @@ void test_one_locale(const gchar *locale)
     char *lang, *country, *norm_locale;
     char *language_code, *country_code, *codeset, *modifier;
 
-    lang = mate_get_language_from_locale (locale, locale);
-    country = mate_get_country_from_locale (locale, locale);
-    norm_locale = mate_normalize_locale (locale);
+    lang = cafe_get_language_from_locale (locale, locale);
+    country = cafe_get_country_from_locale (locale, locale);
+    norm_locale = cafe_normalize_locale (locale);
 
     printf("Current locale: %s\n", locale);
     printf("[locale]:\t\tlang=%s, country=%s, locale=%s\n", lang, country, norm_locale);
@@ -38,16 +38,16 @@ void test_one_locale(const gchar *locale)
     g_free(country);
     g_free(norm_locale);
 
-    if (mate_parse_locale (locale, &language_code, &country_code, &codeset, &modifier)) {
-        lang = mate_get_language_from_code (language_code, locale);
-        country = mate_get_country_from_code (country_code, locale);
-        if (mate_language_has_translations(language_code)) {
-            printf("[mate_parse_locale]:\tlang_code=%s, country_code=%s, code=%s, modifier=%s\n"
+    if (cafe_parse_locale (locale, &language_code, &country_code, &codeset, &modifier)) {
+        lang = cafe_get_language_from_code (language_code, locale);
+        country = cafe_get_country_from_code (country_code, locale);
+        if (cafe_language_has_translations(language_code)) {
+            printf("[cafe_parse_locale]:\tlang_code=%s, country_code=%s, code=%s, modifier=%s\n"
                     "[code]:\t\t\tlang=%s, country=%s, Has translation\n",
                     language_code, country_code, codeset, modifier,
                     lang, country);
         } else {
-            printf("[mate_parse_locale]:\tlang_code=%s, country_code=%s, code=%s, modifier=%s\n"
+            printf("[cafe_parse_locale]:\tlang_code=%s, country_code=%s, code=%s, modifier=%s\n"
                     "[code]:\t\t\tlang=%s, country=%s\n",
                     language_code, country_code, codeset, modifier,
                     lang, country);
@@ -68,7 +68,7 @@ void test_locales(void)
     char **all;
     guint i, len;
 
-    all= mate_get_all_locales ();
+    all= cafe_get_all_locales ();
     len = g_strv_length (all);
 
     for (i =0; i < len; i++) {

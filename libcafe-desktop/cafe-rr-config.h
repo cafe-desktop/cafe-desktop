@@ -1,4 +1,4 @@
-/* mate-rr-config.h
+/* cafe-rr-config.h
  * -*- c-basic-offset: 4 -*-
  *
  * Copyright 2007, 2008, Red Hat, Inc.
@@ -27,10 +27,10 @@
 #define CAFE_RR_CONFIG_H
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error   mate-rr-config.h is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-rr-config.h
+#error   cafe-rr-config.h is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including cafe-rr-config.h
 #endif
 
-#include "mate-rr.h"
+#include "cafe-rr.h"
 #include <glib.h>
 #include <glib-object.h>
 
@@ -50,42 +50,42 @@ typedef struct
     GObjectClass parent_class;
 } MateRROutputInfoClass;
 
-#define CAFE_TYPE_RR_OUTPUT_INFO                  (mate_rr_output_info_get_type())
+#define CAFE_TYPE_RR_OUTPUT_INFO                  (cafe_rr_output_info_get_type())
 #define CAFE_RR_OUTPUT_INFO(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_OUTPUT_INFO, MateRROutputInfo))
 #define CAFE_IS_RR_OUTPUT_INFO(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_OUTPUT_INFO))
 #define CAFE_RR_OUTPUT_INFO_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))
 #define CAFE_IS_RR_OUTPUT_INFO_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_RR_OUTPUT_INFO))
 #define CAFE_RR_OUTPUT_INFO_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))
 
-GType mate_rr_output_info_get_type (void);
+GType cafe_rr_output_info_get_type (void);
 
-char *mate_rr_output_info_get_name (MateRROutputInfo *self);
+char *cafe_rr_output_info_get_name (MateRROutputInfo *self);
 
-gboolean mate_rr_output_info_is_active  (MateRROutputInfo *self);
-void     mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active);
+gboolean cafe_rr_output_info_is_active  (MateRROutputInfo *self);
+void     cafe_rr_output_info_set_active (MateRROutputInfo *self, gboolean active);
 
 
-void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, int *width, int *height);
-void mate_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, int  width, int  height);
+void cafe_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, int *width, int *height);
+void cafe_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, int  width, int  height);
 
-int  mate_rr_output_info_get_refresh_rate (MateRROutputInfo *self);
-void mate_rr_output_info_set_refresh_rate (MateRROutputInfo *self, int rate);
+int  cafe_rr_output_info_get_refresh_rate (MateRROutputInfo *self);
+void cafe_rr_output_info_set_refresh_rate (MateRROutputInfo *self, int rate);
 
-MateRRRotation mate_rr_output_info_get_rotation (MateRROutputInfo *self);
-void            mate_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation rotation);
+MateRRRotation cafe_rr_output_info_get_rotation (MateRROutputInfo *self);
+void            cafe_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation rotation);
 
-gboolean mate_rr_output_info_is_connected     (MateRROutputInfo *self);
-void     mate_rr_output_info_get_vendor       (MateRROutputInfo *self, gchar* vendor);
-guint    mate_rr_output_info_get_product      (MateRROutputInfo *self);
-guint    mate_rr_output_info_get_serial       (MateRROutputInfo *self);
-double   mate_rr_output_info_get_aspect_ratio (MateRROutputInfo *self);
-char    *mate_rr_output_info_get_display_name (MateRROutputInfo *self);
+gboolean cafe_rr_output_info_is_connected     (MateRROutputInfo *self);
+void     cafe_rr_output_info_get_vendor       (MateRROutputInfo *self, gchar* vendor);
+guint    cafe_rr_output_info_get_product      (MateRROutputInfo *self);
+guint    cafe_rr_output_info_get_serial       (MateRROutputInfo *self);
+double   cafe_rr_output_info_get_aspect_ratio (MateRROutputInfo *self);
+char    *cafe_rr_output_info_get_display_name (MateRROutputInfo *self);
 
-gboolean mate_rr_output_info_get_primary (MateRROutputInfo *self);
-void     mate_rr_output_info_set_primary (MateRROutputInfo *self, gboolean primary);
+gboolean cafe_rr_output_info_get_primary (MateRROutputInfo *self);
+void     cafe_rr_output_info_set_primary (MateRROutputInfo *self, gboolean primary);
 
-int mate_rr_output_info_get_preferred_width  (MateRROutputInfo *self);
-int mate_rr_output_info_get_preferred_height (MateRROutputInfo *self);
+int cafe_rr_output_info_get_preferred_width  (MateRROutputInfo *self);
+int cafe_rr_output_info_get_preferred_height (MateRROutputInfo *self);
 
 typedef struct
 {
@@ -100,52 +100,52 @@ typedef struct
     GObjectClass parent_class;
 } MateRRConfigClass;
 
-#define CAFE_TYPE_RR_CONFIG                  (mate_rr_config_get_type())
+#define CAFE_TYPE_RR_CONFIG                  (cafe_rr_config_get_type())
 #define CAFE_RR_CONFIG(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_CONFIG, MateRRConfig))
 #define CAFE_IS_RR_CONFIG(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_CONFIG))
 #define CAFE_RR_CONFIG_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_RR_CONFIG, MateRRConfigClass))
 #define CAFE_IS_RR_CONFIG_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_RR_CONFIG))
 #define CAFE_RR_CONFIG_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_RR_CONFIG, MateRRConfigClass))
 
-GType               mate_rr_config_get_type     (void);
+GType               cafe_rr_config_get_type     (void);
 
-MateRRConfig      *mate_rr_config_new_current  (MateRRScreen  *screen,
+MateRRConfig      *cafe_rr_config_new_current  (MateRRScreen  *screen,
 						  GError        **error);
-MateRRConfig      *mate_rr_config_new_stored   (MateRRScreen  *screen,
+MateRRConfig      *cafe_rr_config_new_stored   (MateRRScreen  *screen,
 						  GError        **error);
-gboolean                mate_rr_config_load_current (MateRRConfig  *self,
+gboolean                cafe_rr_config_load_current (MateRRConfig  *self,
 						      GError        **error);
-gboolean                mate_rr_config_load_filename (MateRRConfig  *self,
+gboolean                cafe_rr_config_load_filename (MateRRConfig  *self,
 						       const gchar    *filename,
 						       GError        **error);
-gboolean            mate_rr_config_match        (MateRRConfig  *config1,
+gboolean            cafe_rr_config_match        (MateRRConfig  *config1,
 						  MateRRConfig  *config2);
-gboolean            mate_rr_config_equal	 (MateRRConfig  *config1,
+gboolean            cafe_rr_config_equal	 (MateRRConfig  *config1,
 						  MateRRConfig  *config2);
-gboolean            mate_rr_config_save         (MateRRConfig  *configuration,
+gboolean            cafe_rr_config_save         (MateRRConfig  *configuration,
 						  GError        **error);
-void                mate_rr_config_sanitize     (MateRRConfig  *configuration);
-gboolean            mate_rr_config_ensure_primary (MateRRConfig  *configuration);
+void                cafe_rr_config_sanitize     (MateRRConfig  *configuration);
+gboolean            cafe_rr_config_ensure_primary (MateRRConfig  *configuration);
 
-gboolean	    mate_rr_config_apply_with_time (MateRRConfig  *configuration,
+gboolean	    cafe_rr_config_apply_with_time (MateRRConfig  *configuration,
 						     MateRRScreen  *screen,
 						     guint32         timestamp,
 						     GError        **error);
 
-gboolean            mate_rr_config_apply_from_filename_with_time (MateRRScreen  *screen,
+gboolean            cafe_rr_config_apply_from_filename_with_time (MateRRScreen  *screen,
 								   const char     *filename,
 								   guint32         timestamp,
 								   GError        **error);
 
-gboolean            mate_rr_config_applicable   (MateRRConfig  *configuration,
+gboolean            cafe_rr_config_applicable   (MateRRConfig  *configuration,
 						  MateRRScreen  *screen,
 						  GError        **error);
 
-gboolean            mate_rr_config_get_clone    (MateRRConfig  *configuration);
-void                mate_rr_config_set_clone    (MateRRConfig  *configuration, gboolean clone);
-MateRROutputInfo **mate_rr_config_get_outputs  (MateRRConfig  *configuration);
+gboolean            cafe_rr_config_get_clone    (MateRRConfig  *configuration);
+void                cafe_rr_config_set_clone    (MateRRConfig  *configuration, gboolean clone);
+MateRROutputInfo **cafe_rr_config_get_outputs  (MateRRConfig  *configuration);
 
-char *mate_rr_config_get_backup_filename (void);
-char *mate_rr_config_get_intended_filename (void);
+char *cafe_rr_config_get_backup_filename (void);
+char *cafe_rr_config_get_intended_filename (void);
 
 #endif

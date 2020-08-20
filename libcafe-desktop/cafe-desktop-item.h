@@ -1,5 +1,5 @@
 /* -*- Mode: C; c-set-style: linux indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
-/* mate-ditem.h - CAFE Desktop File Representation
+/* cafe-ditem.h - CAFE Desktop File Representation
 
    Copyright (C) 1999, 2000 Red Hat Inc.
    Copyright (C) 2001 Sid Vicious
@@ -59,8 +59,8 @@ typedef enum {
         CAFE_DESKTOP_ITEM_DISAPPEARED = 2
 } MateDesktopItemStatus;
 
-#define CAFE_TYPE_DESKTOP_ITEM         (mate_desktop_item_get_type ())
-GType mate_desktop_item_get_type       (void);
+#define CAFE_TYPE_DESKTOP_ITEM         (cafe_desktop_item_get_type ())
+GType cafe_desktop_item_get_type       (void);
 
 typedef struct _MateDesktopItem MateDesktopItem;
 
@@ -135,50 +135,50 @@ typedef enum {
 	CAFE_DESKTOP_ITEM_ERROR_BAD_EXEC_STRING /* Cannot launch due to bad execute string */,
 	CAFE_DESKTOP_ITEM_ERROR_NO_URL /* No URL on a url entry*/,
 	CAFE_DESKTOP_ITEM_ERROR_NOT_LAUNCHABLE /* Not a launchable type of item */,
-	CAFE_DESKTOP_ITEM_ERROR_INVALID_TYPE /* Not of type application/x-mate-app-info */
+	CAFE_DESKTOP_ITEM_ERROR_INVALID_TYPE /* Not of type application/x-cafe-app-info */
 } MateDesktopItemError;
 
 /* Note that functions can also return the G_FILE_ERROR_* errors */
 
-#define CAFE_DESKTOP_ITEM_ERROR mate_desktop_item_error_quark ()
-GQuark mate_desktop_item_error_quark (void);
+#define CAFE_DESKTOP_ITEM_ERROR cafe_desktop_item_error_quark ()
+GQuark cafe_desktop_item_error_quark (void);
 
 /* Returned item from new*() and copy() methods have a refcount of 1 */
-MateDesktopItem *      mate_desktop_item_new               (void);
-MateDesktopItem *      mate_desktop_item_new_from_file     (const char                 *file,
+MateDesktopItem *      cafe_desktop_item_new               (void);
+MateDesktopItem *      cafe_desktop_item_new_from_file     (const char                 *file,
 							      MateDesktopItemLoadFlags   flags,
 							      GError                    **error);
-MateDesktopItem *      mate_desktop_item_new_from_uri      (const char                 *uri,
+MateDesktopItem *      cafe_desktop_item_new_from_uri      (const char                 *uri,
 							      MateDesktopItemLoadFlags   flags,
 							      GError                    **error);
-MateDesktopItem *      mate_desktop_item_new_from_string   (const char                 *uri,
+MateDesktopItem *      cafe_desktop_item_new_from_string   (const char                 *uri,
 							      const char                 *string,
 							      gssize                      length,
 							      MateDesktopItemLoadFlags   flags,
 							      GError                    **error);
-MateDesktopItem *      mate_desktop_item_new_from_basename (const char                 *basename,
+MateDesktopItem *      cafe_desktop_item_new_from_basename (const char                 *basename,
 							      MateDesktopItemLoadFlags   flags,
 							      GError                    **error);
-MateDesktopItem *      mate_desktop_item_copy              (const MateDesktopItem     *item);
+MateDesktopItem *      cafe_desktop_item_copy              (const MateDesktopItem     *item);
 
 /* if under is NULL save in original location */
-gboolean                mate_desktop_item_save              (MateDesktopItem           *item,
+gboolean                cafe_desktop_item_save              (MateDesktopItem           *item,
 							      const char                 *under,
 							      gboolean			  force,
 							      GError                    **error);
-MateDesktopItem *      mate_desktop_item_ref               (MateDesktopItem           *item);
-void                    mate_desktop_item_unref             (MateDesktopItem           *item);
-int			mate_desktop_item_launch	     (const MateDesktopItem     *item,
+MateDesktopItem *      cafe_desktop_item_ref               (MateDesktopItem           *item);
+void                    cafe_desktop_item_unref             (MateDesktopItem           *item);
+int			cafe_desktop_item_launch	     (const MateDesktopItem     *item,
 							      GList                      *file_list,
 							      MateDesktopItemLaunchFlags flags,
 							      GError                    **error);
-int			mate_desktop_item_launch_with_env   (const MateDesktopItem     *item,
+int			cafe_desktop_item_launch_with_env   (const MateDesktopItem     *item,
 							      GList                      *file_list,
 							      MateDesktopItemLaunchFlags flags,
 							      char                      **envp,
 							      GError                    **error);
 
-int                     mate_desktop_item_launch_on_screen  (const MateDesktopItem       *item,
+int                     cafe_desktop_item_launch_on_screen  (const MateDesktopItem       *item,
 							      GList                        *file_list,
 							      MateDesktopItemLaunchFlags   flags,
 							      GdkScreen                    *screen,
@@ -186,40 +186,40 @@ int                     mate_desktop_item_launch_on_screen  (const MateDesktopIt
 							      GError                      **error);
 
 /* A list of files or urls dropped onto an icon */
-int                     mate_desktop_item_drop_uri_list     (const MateDesktopItem     *item,
+int                     cafe_desktop_item_drop_uri_list     (const MateDesktopItem     *item,
 							      const char                 *uri_list,
 							      MateDesktopItemLaunchFlags flags,
 							      GError                    **error);
 
-int                     mate_desktop_item_drop_uri_list_with_env    (const MateDesktopItem     *item,
+int                     cafe_desktop_item_drop_uri_list_with_env    (const MateDesktopItem     *item,
 								      const char                 *uri_list,
 								      MateDesktopItemLaunchFlags flags,
 								      char                      **envp,
 								      GError                    **error);
 
-gboolean                mate_desktop_item_exists            (const MateDesktopItem     *item);
+gboolean                cafe_desktop_item_exists            (const MateDesktopItem     *item);
 
-MateDesktopItemType	mate_desktop_item_get_entry_type    (const MateDesktopItem	 *item);
+MateDesktopItemType	cafe_desktop_item_get_entry_type    (const MateDesktopItem	 *item);
 /* You could also just use the set_string on the TYPE argument */
-void			mate_desktop_item_set_entry_type    (MateDesktopItem		 *item,
+void			cafe_desktop_item_set_entry_type    (MateDesktopItem		 *item,
 							      MateDesktopItemType	  type);
 
 /* Get current location on disk */
-const char *            mate_desktop_item_get_location      (const MateDesktopItem     *item);
-void                    mate_desktop_item_set_location      (MateDesktopItem           *item,
+const char *            cafe_desktop_item_get_location      (const MateDesktopItem     *item);
+void                    cafe_desktop_item_set_location      (MateDesktopItem           *item,
 							      const char                 *location);
-void                    mate_desktop_item_set_location_file (MateDesktopItem           *item,
+void                    cafe_desktop_item_set_location_file (MateDesktopItem           *item,
 							      const char                 *file);
-MateDesktopItemStatus  mate_desktop_item_get_file_status   (const MateDesktopItem     *item);
+MateDesktopItemStatus  cafe_desktop_item_get_file_status   (const MateDesktopItem     *item);
 
 /*
  * Get the icon, this is not as simple as getting the Icon attr as it actually tries to find
  * it and returns %NULL if it can't
  */
-char *                  mate_desktop_item_get_icon          (const MateDesktopItem     *item,
+char *                  cafe_desktop_item_get_icon          (const MateDesktopItem     *item,
 							      GtkIconTheme               *icon_theme);
 
-char *                  mate_desktop_item_find_icon         (GtkIconTheme               *icon_theme,
+char *                  cafe_desktop_item_find_icon         (GtkIconTheme               *icon_theme,
 							      const char                 *icon,
 							      /* size is only a suggestion */
 							      int                         desired_size,
@@ -229,78 +229,78 @@ char *                  mate_desktop_item_find_icon         (GtkIconTheme       
 /*
  * Reading/Writing different sections, NULL is the standard section
  */
-gboolean                mate_desktop_item_attr_exists       (const MateDesktopItem     *item,
+gboolean                cafe_desktop_item_attr_exists       (const MateDesktopItem     *item,
 							      const char                 *attr);
 
 /*
  * String type
  */
-const char *            mate_desktop_item_get_string        (const MateDesktopItem     *item,
+const char *            cafe_desktop_item_get_string        (const MateDesktopItem     *item,
 							      const char		 *attr);
 
-void                    mate_desktop_item_set_string        (MateDesktopItem           *item,
+void                    cafe_desktop_item_set_string        (MateDesktopItem           *item,
 							      const char		 *attr,
 							      const char                 *value);
 
-const char *            mate_desktop_item_get_attr_locale   (const MateDesktopItem     *item,
+const char *            cafe_desktop_item_get_attr_locale   (const MateDesktopItem     *item,
 							      const char		 *attr);
 
 /*
  * LocaleString type
  */
-const char *            mate_desktop_item_get_localestring  (const MateDesktopItem     *item,
+const char *            cafe_desktop_item_get_localestring  (const MateDesktopItem     *item,
 							      const char		 *attr);
-const char *            mate_desktop_item_get_localestring_lang (const MateDesktopItem *item,
+const char *            cafe_desktop_item_get_localestring_lang (const MateDesktopItem *item,
 								  const char		 *attr,
 								  const char             *language);
 /* use g_list_free only */
-GList *                 mate_desktop_item_get_languages     (const MateDesktopItem     *item,
+GList *                 cafe_desktop_item_get_languages     (const MateDesktopItem     *item,
 							      const char		 *attr);
 
-void                    mate_desktop_item_set_localestring  (MateDesktopItem           *item,
+void                    cafe_desktop_item_set_localestring  (MateDesktopItem           *item,
 							      const char		 *attr,
 							      const char                 *value);
-void                    mate_desktop_item_set_localestring_lang  (MateDesktopItem      *item,
+void                    cafe_desktop_item_set_localestring_lang  (MateDesktopItem      *item,
 								   const char		 *attr,
 								   const char		 *language,
 								   const char            *value);
-void                    mate_desktop_item_clear_localestring(MateDesktopItem           *item,
+void                    cafe_desktop_item_clear_localestring(MateDesktopItem           *item,
 							      const char		 *attr);
 
 /*
  * Strings, Regexps types
  */
 
-/* use mate_desktop_item_free_string_list */
-char **                 mate_desktop_item_get_strings       (const MateDesktopItem     *item,
+/* use cafe_desktop_item_free_string_list */
+char **                 cafe_desktop_item_get_strings       (const MateDesktopItem     *item,
 							      const char		 *attr);
 
-void			mate_desktop_item_set_strings       (MateDesktopItem           *item,
+void			cafe_desktop_item_set_strings       (MateDesktopItem           *item,
 							      const char                 *attr,
 							      char                      **strings);
 
 /*
  * Boolean type
  */
-gboolean                mate_desktop_item_get_boolean       (const MateDesktopItem     *item,
+gboolean                cafe_desktop_item_get_boolean       (const MateDesktopItem     *item,
 							      const char		 *attr);
 
-void                    mate_desktop_item_set_boolean       (MateDesktopItem           *item,
+void                    cafe_desktop_item_set_boolean       (MateDesktopItem           *item,
 							      const char		 *attr,
 							      gboolean                    value);
 
 /*
  * Xserver time of user action that caused the application launch to start.
  */
-void                    mate_desktop_item_set_launch_time   (MateDesktopItem           *item,
+void                    cafe_desktop_item_set_launch_time   (MateDesktopItem           *item,
 							      guint32                     timestamp);
 
 /*
  * Clearing attributes
  */
-#define                 mate_desktop_item_clear_attr(item,attr) \
-				mate_desktop_item_set_string(item,attr,NULL)
-void			mate_desktop_item_clear_section     (MateDesktopItem           *item,
+#define                 cafe_desktop_item_clear_attr(item,attr) \
+				cafe_desktop_item_set_string(item,attr,NULL)
+void			cafe_desktop_item_clear_section     (MateDesktopItem           *item,
 							      const char                 *section);
 
 G_END_DECLS

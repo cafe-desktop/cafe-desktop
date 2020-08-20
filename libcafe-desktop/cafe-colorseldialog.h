@@ -32,7 +32,7 @@
 
 G_BEGIN_DECLS
 
-#define CAFE_TYPE_COLOR_SELECTION_DIALOG            (mate_color_selection_dialog_get_type ())
+#define CAFE_TYPE_COLOR_SELECTION_DIALOG            (cafe_color_selection_dialog_get_type ())
 #define CAFE_COLOR_SELECTION_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialog))
 #define CAFE_COLOR_SELECTION_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
 #define CAFE_IS_COLOR_SELECTION_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG))
@@ -67,9 +67,9 @@ struct _MateColorSelectionDialogClass
 
 
 /* ColorSelectionDialog */
-GType      mate_color_selection_dialog_get_type            (void) G_GNUC_CONST;
-GtkWidget* mate_color_selection_dialog_new                 (const gchar *title);
-GtkWidget* mate_color_selection_dialog_get_color_selection (MateColorSelectionDialog *colorsel);
+GType      cafe_color_selection_dialog_get_type            (void) G_GNUC_CONST;
+GtkWidget* cafe_color_selection_dialog_new                 (const gchar *title);
+GtkWidget* cafe_color_selection_dialog_get_color_selection (MateColorSelectionDialog *colorsel);
 
 
 G_END_DECLS

@@ -1,5 +1,5 @@
 /*
- * mate-thumbnail.c: Utilities for handling thumbnails
+ * cafe-thumbnail.c: Utilities for handling thumbnails
  *
  * Copyright (C) 2002 Red Hat, Inc.
  * Copyright (C) 2010 Carlos Garcia Campos <carlosgc@gnome.org>
@@ -33,7 +33,7 @@
 #include <stdlib.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
-#include "mate-desktop-thumbnail.h"
+#include "cafe-desktop-thumbnail.h"
 
 static void
 thumbnailers_directory_changed (GFileMonitor                 *monitor,
@@ -57,13 +57,13 @@ struct _MateDesktopThumbnailFactoryPrivate {
   gchar **disabled_types;
 };
 
-static const char *appname = "mate-thumbnail-factory";
+static const char *appname = "cafe-thumbnail-factory";
 
 G_DEFINE_TYPE_WITH_PRIVATE (MateDesktopThumbnailFactory,
-                            mate_desktop_thumbnail_factory,
+                            cafe_desktop_thumbnail_factory,
                             G_TYPE_OBJECT)
 
-#define parent_class mate_desktop_thumbnail_factory_parent_class
+#define parent_class cafe_desktop_thumbnail_factory_parent_class
 
 #define THUMBNAILER_ENTRY_GROUP "Thumbnailer Entry"
 #define THUMBNAILER_EXTENSION   ".thumbnailer"
@@ -231,7 +231,7 @@ get_thumbnailers_dirs (void)
 
 /* These should be called with the lock held */
 static void
-mate_desktop_thumbnail_factory_register_mime_types (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_register_mime_types (MateDesktopThumbnailFactory *factory,
                                                      Thumbnailer                  *thumb)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
@@ -247,17 +247,17 @@ mate_desktop_thumbnail_factory_register_mime_types (MateDesktopThumbnailFactory 
 }
 
 static void
-mate_desktop_thumbnail_factory_add_thumbnailer (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_add_thumbnailer (MateDesktopThumbnailFactory *factory,
                                                  Thumbnailer                  *thumb)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
 
-  mate_desktop_thumbnail_factory_register_mime_types (factory, thumb);
+  cafe_desktop_thumbnail_factory_register_mime_types (factory, thumb);
   priv->thumbnailers = g_list_prepend (priv->thumbnailers, thumb);
 }
 
 static gboolean
-mate_desktop_thumbnail_factory_is_disabled (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_is_disabled (MateDesktopThumbnailFactory *factory,
                                              const gchar                  *mime_type)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
@@ -312,7 +312,7 @@ update_or_create_thumbnailer (MateDesktopThumbnailFactory *factory,
           if (!thumbnailer_reload (thumb))
               priv->thumbnailers = g_list_delete_link (priv->thumbnailers, l);
           else
-              mate_desktop_thumbnail_factory_register_mime_types (factory, thumb);
+              cafe_desktop_thumbnail_factory_register_mime_types (factory, thumb);
         }
     }
 
@@ -320,7 +320,7 @@ update_or_create_thumbnailer (MateDesktopThumbnailFactory *factory,
     {
       thumb = thumbnailer_new (path);
       if (thumb)
-        mate_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
+        cafe_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
     }
 
   g_mutex_unlock (&priv->lock);
@@ -391,7 +391,7 @@ remove_thumbnailers_for_dir (MateDesktopThumbnailFactory *factory,
 }
 
 static void
-mate_desktop_thumbnail_factory_load_thumbnailers_for_dir (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_load_thumbnailers_for_dir (MateDesktopThumbnailFactory *factory,
                                                           const gchar                 *path)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
@@ -431,7 +431,7 @@ mate_desktop_thumbnail_factory_load_thumbnailers_for_dir (MateDesktopThumbnailFa
       g_free (filename);
 
       if (thumb)
-          mate_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
+          cafe_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
     }
 
   g_dir_close (dir);
@@ -471,7 +471,7 @@ thumbnailers_directory_changed (GFileMonitor                *monitor,
       remove_thumbnailers_for_dir (factory, path, monitor);
 
       if (event_type == G_FILE_MONITOR_EVENT_MOVED)
-          mate_desktop_thumbnail_factory_load_thumbnailers_for_dir (factory, path);
+          cafe_desktop_thumbnail_factory_load_thumbnailers_for_dir (factory, path);
 
       g_free (path);
       break;
@@ -484,7 +484,7 @@ thumbnailers_directory_changed (GFileMonitor                *monitor,
 }
 
 static void
-mate_desktop_thumbnail_factory_load_thumbnailers (MateDesktopThumbnailFactory *factory)
+cafe_desktop_thumbnail_factory_load_thumbnailers (MateDesktopThumbnailFactory *factory)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
   const gchar * const *dirs;
@@ -496,7 +496,7 @@ mate_desktop_thumbnail_factory_load_thumbnailers (MateDesktopThumbnailFactory *f
   dirs = get_thumbnailers_dirs ();
   for (i = 0; dirs[i]; i++)
     {
-      mate_desktop_thumbnail_factory_load_thumbnailers_for_dir (factory, dirs[i]);
+      cafe_desktop_thumbnail_factory_load_thumbnailers_for_dir (factory, dirs[i]);
     }
 
   priv->loaded = TRUE;
@@ -520,7 +520,7 @@ external_thumbnailers_disabled_all_changed_cb (GSettings                   *sett
   else
     {
       priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
-      mate_desktop_thumbnail_factory_load_thumbnailers (factory);
+      cafe_desktop_thumbnail_factory_load_thumbnailers (factory);
     }
 
   g_mutex_unlock (&priv->lock);
@@ -545,11 +545,11 @@ external_thumbnailers_disabled_changed_cb (GSettings                   *settings
 }
 
 static void
-mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
+cafe_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
 {
   MateDesktopThumbnailFactoryPrivate *priv;
 
-  factory->priv = mate_desktop_thumbnail_factory_get_instance_private (factory);
+  factory->priv = cafe_desktop_thumbnail_factory_get_instance_private (factory);
 
   priv = factory->priv;
 
@@ -562,7 +562,7 @@ mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
 
   g_mutex_init (&priv->lock);
 
-  priv->settings = g_settings_new ("org.mate.thumbnailers");
+  priv->settings = g_settings_new ("org.cafe.thumbnailers");
 
   g_signal_connect (priv->settings, "changed::disable-all",
                     G_CALLBACK (external_thumbnailers_disabled_all_changed_cb),
@@ -577,11 +577,11 @@ mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
     priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
 
   if (!priv->disabled)
-    mate_desktop_thumbnail_factory_load_thumbnailers (factory);
+    cafe_desktop_thumbnail_factory_load_thumbnailers (factory);
 }
 
 static void
-mate_desktop_thumbnail_factory_finalize (GObject *object)
+cafe_desktop_thumbnail_factory_finalize (GObject *object)
 {
   MateDesktopThumbnailFactory *factory;
   MateDesktopThumbnailFactoryPrivate *priv;
@@ -624,17 +624,17 @@ mate_desktop_thumbnail_factory_finalize (GObject *object)
 }
 
 static void
-mate_desktop_thumbnail_factory_class_init (MateDesktopThumbnailFactoryClass *class)
+cafe_desktop_thumbnail_factory_class_init (MateDesktopThumbnailFactoryClass *class)
 {
   GObjectClass *gobject_class;
 
   gobject_class = G_OBJECT_CLASS (class);
 
-  gobject_class->finalize = mate_desktop_thumbnail_factory_finalize;
+  gobject_class->finalize = cafe_desktop_thumbnail_factory_finalize;
 }
 
 /**
- * mate_desktop_thumbnail_factory_new:
+ * cafe_desktop_thumbnail_factory_new:
  * @size: The thumbnail size to use
  *
  * Creates a new #MateDesktopThumbnailFactory.
@@ -646,7 +646,7 @@ mate_desktop_thumbnail_factory_class_init (MateDesktopThumbnailFactoryClass *cla
  * Since: 2.2
  **/
 MateDesktopThumbnailFactory *
-mate_desktop_thumbnail_factory_new (MateDesktopThumbnailSize size)
+cafe_desktop_thumbnail_factory_new (MateDesktopThumbnailSize size)
 {
   MateDesktopThumbnailFactory *factory;
 
@@ -721,7 +721,7 @@ validate_thumbnail_path (char                     *path,
 
   pixbuf = gdk_pixbuf_new_from_file (path, NULL);
   if (pixbuf == NULL ||
-      !mate_desktop_thumbnail_is_valid (pixbuf, uri, mtime)) {
+      !cafe_desktop_thumbnail_is_valid (pixbuf, uri, mtime)) {
       g_free (path);
       return NULL;
   }
@@ -750,7 +750,7 @@ lookup_failed_thumbnail_path (const char               *uri,
 }
 
 /**
- * mate_desktop_thumbnail_factory_lookup:
+ * cafe_desktop_thumbnail_factory_lookup:
  * @factory: a #MateDesktopThumbnailFactory
  * @uri: the uri of a file
  * @mtime: the mtime of the file
@@ -764,7 +764,7 @@ lookup_failed_thumbnail_path (const char               *uri,
  * Since: 2.2
  **/
 char *
-mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
                                        const char                  *uri,
                                        time_t                       mtime)
 {
@@ -776,7 +776,7 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
 }
 
 /**
- * mate_desktop_thumbnail_factory_has_valid_failed_thumbnail:
+ * cafe_desktop_thumbnail_factory_has_valid_failed_thumbnail:
  * @factory: a #MateDesktopThumbnailFactory
  * @uri: the uri of a file
  * @mtime: the mtime of the file
@@ -792,7 +792,7 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
  * Since: 2.2
  **/
 gboolean
-mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailFactory *factory,
                                                            const char                  *uri,
                                                            time_t                       mtime)
 {
@@ -810,7 +810,7 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
 }
 
 /**
- * mate_desktop_thumbnail_factory_can_thumbnail:
+ * cafe_desktop_thumbnail_factory_can_thumbnail:
  * @factory: a #MateDesktopThumbnailFactory
  * @uri: the uri of a file
  * @mime_type: the mime type of the file
@@ -826,7 +826,7 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
  * Since: 2.2
  **/
 gboolean
-mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *factory,
                                               const char                  *uri,
                                               const char                  *mime_type,
                                               time_t                       mtime)
@@ -844,7 +844,7 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
     return FALSE;
 
   g_mutex_lock (&factory->priv->lock);
-  if (!mate_desktop_thumbnail_factory_is_disabled (factory, mime_type))
+  if (!cafe_desktop_thumbnail_factory_is_disabled (factory, mime_type))
     {
       Thumbnailer *thumb;
 
@@ -855,7 +855,7 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
 
   if (uri && (have_script ))
     {
-      return !mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (factory,
+      return !cafe_desktop_thumbnail_factory_has_valid_failed_thumbnail (factory,
                                                                          uri,
                                                                          mtime);
     }
@@ -1036,7 +1036,7 @@ get_preview_thumbnail (const char *uri,
 }
 
 /**
- * mate_desktop_thumbnail_factory_generate_thumbnail:
+ * cafe_desktop_thumbnail_factory_generate_thumbnail:
  * @factory: a #MateDesktopThumbnailFactory
  * @uri: the uri of a file
  * @mime_type: the mime type of the file
@@ -1051,7 +1051,7 @@ get_preview_thumbnail (const char *uri,
  * Since: 2.2
  **/
 GdkPixbuf *
-mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *factory,
                                                    const char                  *uri,
                                                    const char                  *mime_type)
 {
@@ -1078,7 +1078,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
 
   script = NULL;
   g_mutex_lock (&factory->priv->lock);
-  if (!mate_desktop_thumbnail_factory_is_disabled (factory, mime_type))
+  if (!cafe_desktop_thumbnail_factory_is_disabled (factory, mime_type))
     {
       Thumbnailer *thumb;
 
@@ -1092,7 +1092,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
     {
       int fd;
 
-      fd = g_file_open_tmp (".mate_desktop_thumbnail.XXXXXX", &tmpname, NULL);
+      fd = g_file_open_tmp (".cafe_desktop_thumbnail.XXXXXX", &tmpname, NULL);
 
       if (fd != -1)
     {
@@ -1213,7 +1213,7 @@ make_failed_thumbnail (void)
 }
 
 /**
- * mate_desktop_thumbnail_factory_save_thumbnail:
+ * cafe_desktop_thumbnail_factory_save_thumbnail:
  * @factory: a #MateDesktopThumbnailFactory
  * @thumbnail: the thumbnail as a pixbuf
  * @uri: the uri of a file
@@ -1227,7 +1227,7 @@ make_failed_thumbnail (void)
  * Since: 2.2
  **/
 void
-mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *factory,
                                                GdkPixbuf                   *thumbnail,
                                                const char                  *uri,
                                                time_t                       original_mtime)
@@ -1247,7 +1247,7 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
 }
 
 /**
- * mate_desktop_thumbnail_factory_create_failed_thumbnail:
+ * cafe_desktop_thumbnail_factory_create_failed_thumbnail:
  * @factory: a #MateDesktopThumbnailFactory
  * @uri: the uri of a file
  * @mtime: the modification time of the file
@@ -1260,7 +1260,7 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
  * Since: 2.2
  **/
 void
-mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFactory *factory,
                                                         const char                  *uri,
                                                         time_t                      mtime)
 {
@@ -1276,7 +1276,7 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
 }
 
 /**
- * mate_desktop_thumbnail_path_for_uri:
+ * cafe_desktop_thumbnail_path_for_uri:
  * @uri: an uri
  * @size: a thumbnail size
  *
@@ -1287,14 +1287,14 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
  * Since: 2.2
  **/
 char *
-mate_desktop_thumbnail_path_for_uri (const char               *uri,
+cafe_desktop_thumbnail_path_for_uri (const char               *uri,
                                      MateDesktopThumbnailSize  size)
 {
   return thumbnail_path (uri, size);
 }
 
 /**
- * mate_desktop_thumbnail_has_uri:
+ * cafe_desktop_thumbnail_has_uri:
  * @pixbuf: an loaded thumbnail pixbuf
  * @uri: a uri
  *
@@ -1306,7 +1306,7 @@ mate_desktop_thumbnail_path_for_uri (const char               *uri,
  * Since: 2.2
  **/
 gboolean
-mate_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
+cafe_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
                                 const char         *uri)
 {
   const char *thumb_uri;
@@ -1316,7 +1316,7 @@ mate_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
 }
 
 /**
- * mate_desktop_thumbnail_is_valid:
+ * cafe_desktop_thumbnail_is_valid:
  * @pixbuf: an loaded thumbnail #GdkPixbuf
  * @uri: a uri
  * @mtime: the mtime
@@ -1329,7 +1329,7 @@ mate_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
  * Since: 2.2
  **/
 gboolean
-mate_desktop_thumbnail_is_valid (GdkPixbuf          *pixbuf,
+cafe_desktop_thumbnail_is_valid (GdkPixbuf          *pixbuf,
                                  const char         *uri,
                                  time_t              mtime)
 {

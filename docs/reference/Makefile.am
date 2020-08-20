@@ -1,3 +1,3 @@
-SUBDIRS = mate-desktop
+SUBDIRS = cafe-desktop
 
 -include $(top_srcdir)/git.mk

@@ -1,7 +1,7 @@
 ========== af.po ==========
-# Afrikaans translation of mate-desktop.
+# Afrikaans translation of cafe-desktop.
 # Copyright (C) 2004, 2007 Zuza Software Foundation
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Zuza Software Foundation <info@translate.org.za>, 2004, 2007
 # F Wolff <friedel@translate.org.za>, 2008
 
@@ -11,7 +11,7 @@
 ========== am.po ==========
 # Translations into the Amharic Language.
 # Copyright (C) 2002 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Ge'ez Frontier Foundation <locales@geez.org>, 2002.
 #
 #
@@ -20,9 +20,9 @@
 
 
 ========== an.po ==========
-# Aragonese translation for mate-desktop.
-# Copyright (C) 2010 mate-desktop's COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-desktop package.
+# Aragonese translation for cafe-desktop.
+# Copyright (C) 2010 cafe-desktop's COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-desktop package.
 # Daniel Martinez Cucalon <entaltoaragon@gmail.com>, 2010.
 # Daniel Martinez <entaltoaragon@gmail.com>, 2010.
 
@@ -30,7 +30,7 @@
 
 
 ========== ar.po ==========
-# translation of mate-desktop.HEAD.ar.po to Arabic
+# translation of cafe-desktop.HEAD.ar.po to Arabic
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
 # Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
@@ -51,10 +51,10 @@
 
 
 ========== ast.po ==========
-# translation of mate-desktop-2.0.po to Asturian
-# Asturian translation for mate-desktop
+# translation of cafe-desktop-2.0.po to Asturian
+# Asturian translation for cafe-desktop
 # Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
 # Xose S. Puente <xspuente@gmail.com>, 2007.
@@ -63,7 +63,7 @@
 
 
 ========== az.po ==========
-# mate-desktop faylının Azərbaycan dilinə tərcüməsi.
+# cafe-desktop faylının Azərbaycan dilinə tərcüməsi.
 # Copyright (C) 200 Free Software Foundation, Inc.
 # Vasif Ismailoglu MD <azerb_linux@hotmail.com>, 2000.
 #
@@ -72,7 +72,7 @@
 
 
 ========== be.po ==========
-# translation of mate-desktop.HEAD.be.po to belarusian
+# translation of cafe-desktop.HEAD.be.po to belarusian
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # Vital Khilko <dojlid@mova.org>, 2002, 2003.
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2007
@@ -84,7 +84,7 @@
 
 
 ========== be@latin.po ==========
-# Biełaruski pierakład mate-desktop
+# Biełaruski pierakład cafe-desktop
 # Ihar Hračyška <iharh@gnome.org>
 #
 
@@ -92,7 +92,7 @@
 
 
 ========== bg.po ==========
-# Bulgarian translation of mate-desktop po-file
+# Bulgarian translation of cafe-desktop po-file
 # Copyright (C) 2001, 2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
 # Copyright (C) 2009, 2010 Free Software Foundation, Inc.
 # Pavel Cholakov <pavel@linux.zonebg.com>, 2001.
@@ -107,9 +107,9 @@
 
 
 ========== bn.po ==========
-# Bangla translation of mate-desktop module.
+# Bangla translation of cafe-desktop module.
 # Copyright (C) 2001 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Taneem Ahmed <taneem@bengalinux.org>, 2003.
 # Khandakar Mujahidul Islam <suzan@bengalinux.org>, 2007.
 # Sadia Afroz <sadia@ankur.org.bd>, 2010.
@@ -121,9 +121,9 @@
 
 ========== bn_IN.po ==========
 # translation of bn_IN.po to Bengali INDIA
-# Bengali India translation of mate-desktop module.
+# Bengali India translation of cafe-desktop module.
 # Copyright (C) 2001, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Taneem Ahmed <taneem@bengalinux.org>, 2003.
 # Runa Bhattacharjee <runab@fedoraproject.org>, 2008.
@@ -133,9 +133,9 @@
 
 
 ========== br.po ==========
-# Breton translation for the mate-desktop.
+# Breton translation for the cafe-desktop.
 # Copyright (C) 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Jérémy Ar Floc'h <jeremy.lefloch@gmail.com>, 2006-2010.
 # Oublieuse <oublieuse@gmail.com>, 2007
@@ -146,9 +146,9 @@
 
 
 ========== bs.po ==========
-# translation of mate-desktop.HEAD.po to Bosnian
+# translation of cafe-desktop.HEAD.po to Bosnian
 # Copyright (C) 2002
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Samir Marić <samir@lugbih.org>, 2002.
 # Kemal Sanjta <gomez@lugzdk.ba>, 2004.
 # Amila Akagić <bono@linux.org.ba>, 2004.
@@ -158,7 +158,7 @@
 
 
 ========== ca.po ==========
-# mate-desktop translation to Catalan.
+# cafe-desktop translation to Catalan.
 # Copyright © 2000, 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
 # Ivan Vilata i Balaguer <ivan@selidor.net>, 2000.
 # Softcatalà <info@softcatala.org>, 2000.
@@ -170,7 +170,7 @@
 
 
 ========== ca@valencia.po ==========
-# mate-desktop translation to Catalan.
+# cafe-desktop translation to Catalan.
 # Copyright © 2000, 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
 # Ivan Vilata i Balaguer <ivan@selidor.net>, 2000.
 # Softcatalà <info@softcatala.org>, 2000.
@@ -182,8 +182,8 @@
 
 
 ========== crh.po ==========
-# Qırımtatarca mate-desktop.
-# This file is distributed under the same license as the mate-desktop package.
+# Qırımtatarca cafe-desktop.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010.
 
@@ -191,10 +191,10 @@
 
 
 ========== cs.po ==========
-# Czech message catalog for mate-desktop.
-# Copyright (C) 1999, 2006, 2007, 2008, 2009, 2010 the author(s) of mate-desktop.
+# Czech message catalog for cafe-desktop.
+# Copyright (C) 1999, 2006, 2007, 2008, 2009, 2010 the author(s) of cafe-desktop.
 # Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # GIS <gis@academy.cas.cz>, 1999.
 # David Šauer <davids@penguin.cz>, 1999.
 # George Lebl <jirka@5z.com>, 2000, 2001.
@@ -209,7 +209,7 @@
 
 
 ========== cy.po ==========
-# mate-desktop yn Gymraeg.
+# cafe-desktop yn Gymraeg.
 # Copyright (C) 2003-2005 www.kyfieithu.co.uk, Dafydd Harries, Gareth Bowker
 # www.kyfieithu.co.uk <gyfieithu@kyfieithu.co.uk>, 2003.
 # and contributors.
@@ -221,9 +221,9 @@
 
 
 ========== da.po ==========
-# Danish translation of mate-desktop.
+# Danish translation of cafe-desktop.
 # Copyright (C) 1998-99, 2000-09 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2000.
 # Birger Langkjer <birger.langkjer@image.dk>, 1999.
 # Keld Simonsen <keld@dkuug.dk>, 2000-2001.
@@ -254,7 +254,7 @@
 # Christian Meyer <chrisime@gnome.org>, 2000, 2001.
 # Benedikt Roth <Benedikt.Roth@gmx.net>, 2000, 2001.
 # Jörgen Scheibengruber <mfcn@gmx.de>, 2002.
-# Christian Neumair <chris@mate-de.org>, 2002, 2003.
+# Christian Neumair <chris@cafe-de.org>, 2002, 2003.
 # Hendrik Richter <hendrikr@gnome.org>, 2005, 2006, 2007.
 # Andre Klapper <ak-47@gmx.net>, 2008.
 # Nathan-J. Hirschauer <nathanhirschauer@verfriemelt.org>, 2009
@@ -266,7 +266,7 @@
 
 
 ========== dz.po ==========
-# Dzongkha translation of mate-desktop
+# Dzongkha translation of cafe-desktop
 # Copyright @ 2006, Free Software Foundation, Inc.
 # Mindu Dorji.
 #
@@ -275,7 +275,7 @@
 
 
 ========== el.po ==========
-# translation of mate-desktop.HEAD.po to Greek
+# translation of cafe-desktop.HEAD.po to Greek
 # Mate-core Greek PO file.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2005, 2006, 2007, 2009 Free Software Foundation, Inc.
 #
@@ -284,7 +284,7 @@
 # simos: 959 messages, 04Jun2001, (micumple).
 # simos: 959 messages, 06Jun2001, (fixed minor typo).
 # simos: 897 messages, 28Nov2001, (feeling good to translate HEAD).
-# simos: 105 messages, 06Aug2002, file split from mate-core, first full translation.
+# simos: 105 messages, 06Aug2002, file split from cafe-core, first full translation.
 # kostas: 105 messages, 06Jan2003, one more update.
 # Spiros Papadimitriou <spapadim+@cs.cmu.edu>, 1999.
 # Simos Xenitellis <simos@hellug.gr>, 1999, 2000, 2001, 2002.
@@ -312,16 +312,16 @@
 
 
 ========== en@shaw.po ==========
-# Shavian translation of mate-desktop.
+# Shavian translation of cafe-desktop.
 #
 
 
 
 
 ========== en_CA.po ==========
-# Canadian English translation of mate-desktop
+# Canadian English translation of cafe-desktop
 # Copyright (C) 2004 Adam Weinberger and the CAFE Foundation
-# This file is distributed under the same licence as the mate-desktop package.
+# This file is distributed under the same licence as the cafe-desktop package.
 # Alexander Winston <alexander.winston@comcast.net>, 2004.
 # Adam Weinberger <adamw@gnome.org>, 2004.
 #
@@ -330,7 +330,7 @@
 
 
 ========== en_GB.po ==========
-# English (British) translation of mate-core
+# English (British) translation of cafe-core
 # Copyright (C) 1999-2000 Free Software Foundation, Inc.
 # Robert Brady <robert@susu.org.uk>, 1999-2000.
 # Philip Withnall <philip@tecnocode.co.uk>, 2009.
@@ -340,7 +340,7 @@
 
 
 ========== eo.po ==========
-# Esperanto translation of mate-desktop.
+# Esperanto translation of cafe-desktop.
 # Copyright (C) 1998-2010 Free Software Foundation, Inc.
 #
 # Joël BRICH <joel.brich@laposte.net>, 2003
@@ -352,8 +352,8 @@
 
 
 ========== es.po ==========
-# translation of mate-desktop.HEAD.po to Español
-# translation of mate-desktop to Spanish
+# translation of cafe-desktop.HEAD.po to Español
+# translation of cafe-desktop to Spanish
 # Copyright © 1998-2002, 2007, 2008 Free Software Foundation, Inc.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -375,7 +375,7 @@
 #
 # Copyright (C) 1999-2006 Free Software Foundation, Inc.
 # Copyright (C) 2007-2010 The CAFE Project.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Lauris Kaplinski <lauris@ariman.ee>, 1999.
 # Ilmar Kerm <ikerm@hot.ee>, 2001, 2002.
@@ -401,7 +401,7 @@
 
 
 ========== fa.po ==========
-# Translation of mate-desktop to Persian
+# Translation of cafe-desktop to Persian
 # Copyright (C) 2003, 2004 Sharif FarsiWeb, Inc.
 # Roozbeh Pournader <roozbeh@farsiweb.info>, 2003.
 # Meelad Zakaria <meelad@farsiweb.info>, 2004.
@@ -413,8 +413,8 @@
 
 
 ========== fi.po ==========
-# mate-desktop Finnish translation
-# Suomennos: http://mate-fi.sourceforge.net/
+# cafe-desktop Finnish translation
+# Suomennos: http://cafe-fi.sourceforge.net/
 # Copyright (C) 2002-2008 Free Software Foundation, Inc.
 #
 # Ville Hautamäki <villeh@cs.joensuu.fi>, 1998, 2000
@@ -428,15 +428,15 @@
 
 
 ========== fr.po ==========
-# French translation of mate-desktop.
+# French translation of cafe-desktop.
 # Copyright (C) 1998-2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Vincent Renardias <vincent@ldsol.com>, 1998-2000.
 # Joaquim Fellmann <joaquim@hrnet.fr>, 2000.
 # Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.
 # Christophe Fergeau <teuf@users.sourceforge.net>, 2002-2003.
-# Sun G11n <mate_int_l10n@ireland.sun.com>, 2002.
+# Sun G11n <cafe_int_l10n@ireland.sun.com>, 2002.
 # Robert-André Mauchin <zebob.m@pengzone.org>, 2006-2008.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
 # Yannick Tailliez <ytdispatch-libre@yahoo.com>, 2008.
@@ -448,7 +448,7 @@
 
 
 ========== fur.po ==========
-# Friulian traslation for mate-desktop
+# Friulian traslation for cafe-desktop
 # Copyright (C) 2007 Free Software Foundation, Inc.
 # Massimo Furlani <massimo.furlani@libero.it>, 2007.
 ##
@@ -457,9 +457,9 @@
 
 
 ========== ga.po ==========
-# Irish translations for mate-desktop package.
+# Irish translations for cafe-desktop package.
 # Copyright (C) 2000-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Seán Ó Ceallaigh <s_oceallaigh@yahoo.com>, 2000.
 # Paul Duffy <dubhthach@zion.nuigalway.ie>, 2003.
 # Seán de Búrca <leftmostcat@gmail.com>, 2007, 2009.
@@ -469,8 +469,8 @@
 
 
 ========== gl.po ==========
-# translation of mate-desktop-master-po-gl-54183.merged.po to Galician
-# Galician translation of mate-desktop.
+# translation of cafe-desktop-master-po-gl-54183.merged.po to Galician
+# Galician translation of cafe-desktop.
 # Copyright (C) 1999-2004 Jesús Bravo Álvarez
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
@@ -492,7 +492,7 @@
 
 
 ========== gu.po ==========
-# translation of mate-desktop.master.gu.po to Gujarati
+# translation of cafe-desktop.master.gu.po to Gujarati
 # Ankit Patel <ankit644@yahoo.com>, 2005, 2006.
 # Ankit Patel <ankit@redhat.com>, 2007.
 # Sweta Kothari <sweta2782@yahoo.co.in>, 2008.
@@ -502,8 +502,8 @@
 
 
 ========== he.po ==========
-# translation of mate-desktop.HEAD.po to Hebrew
-# translation of mate-desktop.HEAD.he.po to Hebrew
+# translation of cafe-desktop.HEAD.po to Hebrew
+# translation of cafe-desktop.HEAD.he.po to Hebrew
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Gil Osher <dolfin@rpg.org.il>, 2002, 2005.
@@ -514,7 +514,7 @@
 
 
 ========== hi.po ==========
-# translation of mate-desktop.master.po to Hindi
+# translation of cafe-desktop.master.po to Hindi
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -527,7 +527,7 @@
 
 
 ========== hr.po ==========
-# Translation of mate-desktop to Croatian
+# Translation of cafe-desktop to Croatian
 # Copyright (C) Croatian team
 # Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,Robert Sedak <robert.sedak@sk.t-com.hr>,
 
@@ -535,22 +535,22 @@
 
 
 ========== hu.po ==========
-# Hungarian translation of mate-desktop.
+# Hungarian translation of cafe-desktop.
 # Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
-# Szabolcs Ban <shooby at mate dot hu>, 1998, 1999, 2000, 2001, 2002.
-# Emese Kovacs <emese at mate dot hu>, 2000, 2001, 2002.
-# Andras Timar <timar at mate dot hu>, 2001, 2002, 2003.
-# Laszlo Dvornik <dvornik at mate dot hu>, 2004.
-# Gabor Kelemen <kelemeng at mate dot hu>, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
+# Szabolcs Ban <shooby at cafe dot hu>, 1998, 1999, 2000, 2001, 2002.
+# Emese Kovacs <emese at cafe dot hu>, 2000, 2001, 2002.
+# Andras Timar <timar at cafe dot hu>, 2001, 2002, 2003.
+# Laszlo Dvornik <dvornik at cafe dot hu>, 2004.
+# Gabor Kelemen <kelemeng at cafe dot hu>, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
 # Kováts Dóra <dorcssa at gmail dot com>, 2008.
 
 
 
 
 ========== hy.po ==========
-# translation of mate-desktop.HEAD.po to armenian
+# translation of cafe-desktop.HEAD.po to armenian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Lilit Azizbekyan <lithla@yahoo.com>, 2005.
@@ -563,10 +563,10 @@
 
 
 ========== id.po ==========
-# translation of mate-desktop.master.po to Indonesian
-# Indonesia translation of mate-desktop.
-# Copyright (C) 2005 THE mate-desktop'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-desktop package.
+# translation of cafe-desktop.master.po to Indonesian
+# Indonesia translation of cafe-desktop.
+# Copyright (C) 2005 THE cafe-desktop'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Mohammad DAMT <mdamt@bisnisweb.com>, 2005.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2010.
@@ -581,7 +581,7 @@
 
 
 ========== is.po ==========
-# translation of mate-desktop.master.po to Icelandic
+# translation of cafe-desktop.master.po to Icelandic
 # Samúel Jón Gunnarsson <sammi@techattack.nu>, 2003.
 # Sveinn í Felli <sveinki@nett.is>, 2009.
 # Copyright (C) 2009 THE PACKAGE'S COPYRIGHT HOLDER
@@ -591,8 +591,8 @@
 
 
 ========== it.po ==========
-# Italian translation for mate-desktop
-# This file is distributed under the same license as mate-desktop package
+# Italian translation for cafe-desktop
+# This file is distributed under the same license as cafe-desktop package
 # Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
 # Christopher R. Gabriel <cgabriel@pluto.linux.it>, 1997, 1998, 1999, 2000, 2001, 2002.
 # Alessio Frusciante <algol@firenze.linux.it>, 2003.
@@ -603,7 +603,7 @@
 
 
 ========== ja.po ==========
-# mate-desktop ja.po.
+# cafe-desktop ja.po.
 # Copyright (C) 1998-2010 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@abricot.co.jp>, 1998.
 # Yasuyuki Furukawa <yasu@on.cs.keio.ac.jp>, 1999.
@@ -623,7 +623,7 @@
 ========== ka.po ==========
 # translation of ka.po to Georgian
 # Georgian translation for Mate Desktop.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Vladimer Sichinava <vsichi@gnome.org>.
 #
 # Vladimer Sichinava <vsichi@gnome.org>, 2007.
@@ -633,9 +633,9 @@
 
 
 ========== kk.po ==========
-# Kazakh translation of mate-desktop.
+# Kazakh translation of cafe-desktop.
 # Copyright (C) 2010 HZ
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
 # Moldabekov Margulan <moldabekov@gmail.com>, 2008
 # Erzhan Shaniev <erzhan.jktl@gmail.com>, 2008
@@ -644,7 +644,7 @@
 
 
 ========== kn.po ==========
-# translation of mate-desktop.master.kn.po to Kannada
+# translation of cafe-desktop.master.kn.po to Kannada
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -654,8 +654,8 @@
 
 
 ========== ko.po ==========
-# Korean translation of mate-desktop
-# This file is distributed under the same license as the mate-desktop package.
+# Korean translation of cafe-desktop
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Sung-Hyun Nam <namsh@kldp.org>, 2000.
 # Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2003, 2007.
@@ -667,7 +667,7 @@
 
 
 ========== ku.po ==========
-# translation of mate-desktop.HEAD.po to Kurdish
+# translation of cafe-desktop.HEAD.po to Kurdish
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
 # Erdal Ronahi <erdal.ronahi@gmail.com, pckurd@hotmail.com>, 2005.
@@ -677,7 +677,7 @@
 
 
 ========== ky.po ==========
-# Translation of mate-desktop to Kirghiz
+# Translation of cafe-desktop to Kirghiz
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2003, 2004, 2005.
 # Timur Jamakeev <ztimur@gmail.com>, 2005.
@@ -696,10 +696,10 @@
 
 
 ========== lo.po ==========
-# translation of mate-desktop.mate-2-28.lo.po to Lao
-# Lao translation for mate-desktop.
+# translation of cafe-desktop.cafe-2-28.lo.po to Lao
+# Lao translation for cafe-desktop.
 # Copyright (C) 2004-2008, 2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Anousak Souphavanh <anousak@gmail.ocm>, 2008.
 # Anousak Souphavanh <anousak@gmail.com>, 2008, 2010.
@@ -709,7 +709,7 @@
 
 ========== lt.po ==========
 # translation of lt.po to Lithuanian
-# Lithuanian translation of mate-desktop
+# Lithuanian translation of cafe-desktop
 # Copyright (C) 2000-2005, 2006, 2007 Free Software Foundation, Inc.
 #
 #
@@ -735,7 +735,7 @@
 
 
 ========== mai.po ==========
-# translation of mate-desktop.master.mai.po to Hindi
+# translation of cafe-desktop.master.mai.po to Hindi
 # BOSS GNU/Linux <bosslinux@cdac.in>, 2008.
 # Rajesh Ranjan <rajesh672@gmail.com>, 2009.
 # Copyright (C) 2006 The CAFE Foundation
@@ -746,8 +746,8 @@
 
 ========== mg.po ==========
 # Malagasy translation of Mate-desktop.
-# Copyright (C) 2006-2008 THE mate-desktop'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-desktop package.
+# Copyright (C) 2006-2008 THE cafe-desktop'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-desktop package.
 # Thierry Randrianiriana <randrianiriana@gmail.com>, 2006-2008.
 # Fano Rajaonarisoa <fano@isvtec.com>, 2006.
 
@@ -755,9 +755,9 @@
 
 
 ========== mi.po ==========
-# English translation of mate-desktop.
+# English translation of cafe-desktop.
 # Copyright (C) 2004 Free Software Foundation
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # John C Barstow <jbarstow@cvs.gnome.org>, 2004.
 #
 #
@@ -766,9 +766,9 @@
 
 
 ========== mk.po ==========
-# translation of mate-desktop.HEAD.mk.po to Macedonian
-# translation of mate-desktop.HEAD.mk.po to
-# translation of mate-desktop.HEAD.mk.po to
+# translation of cafe-desktop.HEAD.mk.po to Macedonian
+# translation of cafe-desktop.HEAD.mk.po to
+# translation of cafe-desktop.HEAD.mk.po to
 # Copyright (C) 2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Дамјан Георгиевски, 2002.
@@ -783,20 +783,20 @@
 
 
 ========== ml.po ==========
-# translation of mate-desktop.master.ml.po to
+# translation of cafe-desktop.master.ml.po to
 # FSF-India <locale@gnu.org.in>, 2003.
 # Ani Peter <apeter@redhat.com>, 2006, 2007.
 # Praveen|പ്രവീണ്‍ A|എ <pravi.a@gmail.com>, 2007, 2008, 2009.
-# This file is distributed under the same license as the mate-desktop package.
-# Copyright (C) 2007 mate-desktop'S COPYRIGHT HOLDER.
+# This file is distributed under the same license as the cafe-desktop package.
+# Copyright (C) 2007 cafe-desktop'S COPYRIGHT HOLDER.
 # Reviewed by  Anivar Aravind <anivar@movingrepublic.org>, Santhosh Thottingal <santhosh.thottingal@gmail.com>
 
 
 
 
 ========== mn.po ==========
-# translation of mate-desktop.HEAD.mn.po to Mongolian
-# translation of mate-desktop.HEAD.po to mongolian
+# translation of cafe-desktop.HEAD.mn.po to Mongolian
+# translation of cafe-desktop.HEAD.po to mongolian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Sanlig Badral <badral@chinggis.com>, 2003.
@@ -819,7 +819,7 @@
 
 
 ========== ms.po ==========
-# mate-desktop Bahasa Melayu (ms)
+# cafe-desktop Bahasa Melayu (ms)
 # Melihat Sistem kehakiman masa kini, Saya tak hairan
 # kalau saya disabitkan dengan kesalahan mendera isteri
 # ketika saya masih BUJANG
@@ -831,7 +831,7 @@
 
 
 ========== nb.po ==========
-# Norwegian translation of mate-desktop (bokmål dialect).
+# Norwegian translation of cafe-desktop (bokmål dialect).
 # Copyright (C) 1998-2004 Free Software Foundation, Inc.
 # Kjartan Maraas <kmaraas@gnome.org>, 1998-2010.
 # Åsmund Skjæveland <aasmunds@fys.uio.no>, 2003.
@@ -841,9 +841,9 @@
 
 
 ========== nds.po ==========
-# Low German translation for mate-desktop.
-# Copyright (C) 2009 mate-desktop's COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-desktop package.
+# Low German translation for cafe-desktop.
+# Copyright (C) 2009 cafe-desktop's COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-desktop package.
 # Nils-Christoph Fiedler <linux@medienkompanie.de>, 2009.
 #
 
@@ -851,10 +851,10 @@
 
 
 ========== ne.po ==========
-# translation of mate-desktop.HEAD.ne.po to Nepali
-# Nepali Translation of mate-desktop
+# translation of cafe-desktop.HEAD.ne.po to Nepali
+# Nepali Translation of cafe-desktop
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Pawan Chitrakar <pawan@nplinux.org>.
 #
 # Narayan Kumar Magar <narayan@mpp.org.np>, 2007.
@@ -863,9 +863,9 @@
 
 
 ========== nl.po ==========
-# Dutch translation for mate-desktop
+# Dutch translation for cafe-desktop
 #
-# This file is licensed under the same terms as the mate-desktop package.
+# This file is licensed under the same terms as the cafe-desktop package.
 #
 # Dirk-Jan C. Binnema <djcb@dds.nl>, 1998, 1999
 # Dennis Smit <synap@area101.penguin.nl>, 2000
@@ -881,7 +881,7 @@
 
 ========== nn.po ==========
 # translation of nn.po to Norwegian Nynorsk
-# Norwegian (nynorsk) translation of mate-core.
+# Norwegian (nynorsk) translation of cafe-core.
 # Copyright (C) 1998-2000, 2003, 2006 Free Software Foundation, Inc.
 # Christian Fredrik Kalager Schaller <Uraeus@linuxrising.org>, 2000-2001.
 # Kjartan Maraas  <kmaraas@gnome.org>, 2001.
@@ -896,9 +896,9 @@
 
 
 ========== nso.po ==========
-# Northern Sotho translation of mate-desktop.
+# Northern Sotho translation of cafe-desktop.
 # Copyright (C) 2004 Zuza Software Foundation (Translate.org.za)
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Zuza Software Foundation <info@translate.org.za>, 2004
 #
@@ -908,9 +908,9 @@
 
 ========== oc.po ==========
 # Translation of oc.po to Occitan
-# Occitan translation of mate-desktop.
+# Occitan translation of cafe-desktop.
 # Copyright (C) 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 #
 # Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007.
@@ -920,9 +920,9 @@
 
 ========== or.po ==========
 # translation of or.po to Oriya
-# Oriya translation of mate-desktop.HEAD.pot.
+# Oriya translation of cafe-desktop.HEAD.pot.
 # Copyright (C) 2006, 2008, 2009, 2010, Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # $Id: or.po,v 1.1 2006/04/30 13:17:46 gmohanty Exp $
 #
 # Hariram Pansari <hrpansari@vsnl.net>, 2006.
@@ -933,8 +933,8 @@
 
 
 ========== pa.po ==========
-# translation of mate-desktop.HEAD.po to Punjabi
-# Copyright (C) 2004 THE mate-desktop'S COPYRIGHT HOLDER
+# translation of cafe-desktop.HEAD.po to Punjabi
+# Copyright (C) 2004 THE cafe-desktop'S COPYRIGHT HOLDER
 #
 #
 # Amanpreet Singh Alam <amanliunx@netscapet.net>, 2004.
@@ -970,9 +970,9 @@
 
 
 ========== pt.po ==========
-# mate-desktop's Portuguese translation
-# Copyright © 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 mate-desktop
-# Distributed under the same licence as the mate-desktop package
+# cafe-desktop's Portuguese translation
+# Copyright © 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 cafe-desktop
+# Distributed under the same licence as the cafe-desktop package
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1999
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
 #
@@ -981,9 +981,9 @@
 
 
 ========== pt_BR.po ==========
-# Brazilian Portuguese translation of mate-desktop.
+# Brazilian Portuguese translation of cafe-desktop.
 # Copyright (C) 1999-2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Elvis Pfützenreuter <epx@netville.com.br>, 1999.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Rodrigo Stulzer Lopes <rodrigo@conectiva.com.br>, 1999.
@@ -1005,7 +1005,7 @@
 
 
 ========== ro.po ==========
-# Romanian translation of mate-desktop
+# Romanian translation of cafe-desktop
 # Copyright (C) 2000 - 2004 Free Software Foundation, Inc.
 # Marius Andreiana <marius galuna.ro>, 2000, 2002.
 # Mugurel Tudor <mugurelu@gnome.ro>, 2003.
@@ -1018,8 +1018,8 @@
 
 
 ========== ru.po ==========
-# translation of mate-desktop.master.ru.po to Russian
-# translation of mate-desktop to Russian
+# translation of cafe-desktop.master.ru.po to Russian
+# translation of cafe-desktop to Russian
 # Copyright (C) 1998-2002, 2005, 2006, 2007, 2009, 2010 Free Software Foundation, Inc.
 #
 # Max Valianskiy <maxcom@vinchi.ru>, 1998-1999.
@@ -1035,9 +1035,9 @@
 
 
 ========== rw.po ==========
-# translation of mate-desktop to Kinyarwanda.
+# translation of cafe-desktop to Kinyarwanda.
 # Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Steve Murphy <murf@e-tools.com>, 2005
 # Steve performed initial rough translation from compendium built from translations provided by the following translators:
 # Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
@@ -1053,7 +1053,7 @@
 
 
 ========== si.po ==========
-# translation of mate-desktop.si.po to Sinhala
+# translation of cafe-desktop.si.po to Sinhala
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -1063,9 +1063,9 @@
 
 
 ========== sk.po ==========
-# Slovak translation for mate-desktop.
+# Slovak translation for cafe-desktop.
 # Copyright (C) 2002, 2003, 2005, 2006, 2008, 2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>, 2002, 2003.
 # Stanislav Višňovský <visnov@suse.cz>, 2003.
 # Marcel Telka <marcel@telka.sk>, 2005, 2006, 2008, 2010.
@@ -1075,23 +1075,23 @@
 
 
 ========== sl.po ==========
-# Slovenian translation of mate-desktop.
+# Slovenian translation of cafe-desktop.
 # Copyright (C) 2000-2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Andraž Tori <andraz.tori1@guest.arnes.si>, 2000.
 # Matjaž Horvat <m@owca.info>, 2006.
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007 - 2010.
+# Matej Urbančič <cafeju@svn.gnome.org>, 2007 - 2010.
 #
 
 
 
 
 ========== sq.po ==========
-# Përkthimi i mesazheve të mate-desktop në shqip.
+# Përkthimi i mesazheve të cafe-desktop në shqip.
 # Copyright (C) 2003-2004, 2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Elian Myftiu <elian@alblinux.net>, 2003-2004.
 # Laurent Dhima <laurenti@alblinux.net>, 2008.
@@ -1100,10 +1100,10 @@
 
 
 ========== sr.po ==========
-# Serbian translation of mate-desktop
+# Serbian translation of cafe-desktop
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006, 2007.
 #
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Maintainer: Данило Шеган <dsegan@gmx.net>
 # Милош Поповић <gpopac@gmail.com>, 2010.
@@ -1113,10 +1113,10 @@
 
 
 ========== sr@latin.po ==========
-# Serbian translation of mate-desktop
+# Serbian translation of cafe-desktop
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006, 2007.
 #
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Maintainer: Danilo Šegan <dsegan@gmx.net>
 # Miloš Popović <gpopac@gmail.com>, 2010.
@@ -1126,7 +1126,7 @@
 
 
 ========== sv.po ==========
-# Swedish messages for mate-desktop.
+# Swedish messages for cafe-desktop.
 # Copyright (C) 1998-2010 Free Software Foundation, Inc.
 # Martin Wahlen <mva@sbbs.se>, 1998.
 # Anders Carlsson <anders.carlsson@tordata.se>, 1999.
@@ -1142,7 +1142,7 @@
 
 
 ========== ta.po ==========
-# translation of mate-desktop.master.ta.po to Tamil
+# translation of cafe-desktop.master.ta.po to Tamil
 # Tamil translation of Mate-Desktop messages.
 # Copyright (C) 2001, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
@@ -1157,9 +1157,9 @@
 
 
 ========== te.po ==========
-# translation of mate-desktop.master.te.po to Telugu
-# Telugu translation of mate-desktop
-# This file is distributed under the same license as the mate-desktop package.
+# translation of cafe-desktop.master.te.po to Telugu
+# Telugu translation of cafe-desktop
+# This file is distributed under the same license as the cafe-desktop package.
 # Copyright (C) 2005,2007 Free Software Foundation, Andhra Pradesh.
 #
 # Prajasakti Localisation Team <localisation@prajasakti.com>, 2005.
@@ -1170,9 +1170,9 @@
 
 
 ========== th.po ==========
-# Thai translation for mate-desktop.
+# Thai translation for cafe-desktop.
 # Copyright (C) 2004-2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Paisa Seeluangsawat <paisa@users.sf.net>, 2003, 2004.
 # Theppitak Karoonboonyanan <thep@linux.thai.net> 2005-2010.
 #
@@ -1181,7 +1181,7 @@
 
 
 ========== tk.po ==========
-# Turkmen translation of mate-desktop
+# Turkmen translation of cafe-desktop
 # Copyright (C) 2004 Free Software Foundation
 # Copyright (C) 2004 Gurban Mühemmet Tewekgeli and
 #                                Kakilik - Turkmen free software developers community
@@ -1194,7 +1194,7 @@
 
 
 ========== tr.po ==========
-# Turkish translation of mate-desktop.
+# Turkish translation of cafe-desktop.
 # Copyright (C) 2001-2003, 2004, 2008 Free Software Foundation, Inc.
 #
 # Fatih Demir <kabalak@kabalak.net>, 2000.
@@ -1205,9 +1205,9 @@
 
 
 ========== ug.po ==========
-# Translation of mate-desktop to Uyghur
-# Copyright (C) 2004,2005 THE mate-menus' COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-doc-utils package.
+# Translation of cafe-desktop to Uyghur
+# Copyright (C) 2004,2005 THE cafe-menus' COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-doc-utils package.
 # Gheyret T.Kenji <gheyret@yahoo.com>, 2005.
 #
 
@@ -1215,7 +1215,7 @@
 
 
 ========== uk.po ==========
-# Ukrainian translation of mate-desktop module
+# Ukrainian translation of cafe-desktop module
 # Copyright (C) 1999-2002 Free Software Foundation, Inc.
 # Yuri Syrota <rasta@renome.rovno.ua>, 1999-2002.
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2009
@@ -1231,9 +1231,9 @@
 
 
 ========== uz.po ==========
-# translation of mate-desktop to uzbek
+# translation of cafe-desktop to uzbek
 # Copyright (C) 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Nurali Abdurahmonov <nurali@paradox-neo.uz>, 2007.
 # Nurali Abdurahmonov <mavnur@gmail.com>, 2008.
@@ -1242,9 +1242,9 @@
 
 
 ========== uz@cyrillic.po ==========
-# translation of mate-desktop to uzbek
+# translation of cafe-desktop to uzbek
 # Copyright (C) 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Nurali Abdurahmonov <nurali@paradox-neo.uz>, 2007.
 # Nurali Abdurahmonov <mavnur@gmail.com>, 2008.
@@ -1255,7 +1255,7 @@
 ========== vi.po ==========
 # Vietnamese translation for CAFE Desktop.
 # Copyright © 2009 CAFE i18n Project for Vietnamese
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Trinh Minh Thanh <tmthanhmd@fptnet.com>, 2002.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2004, 2007.
 # Pham Thanh Long <lngt@ngonngu.net>, 2007.
@@ -1282,9 +1282,9 @@
 
 
 ========== xh.po ==========
-# Xhosa translation for mate-desktop
+# Xhosa translation for cafe-desktop
 # Copyright (C) 2005 Canonical Ltd.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 # Translation by Canonical Ltd <translations@canonical.com> with thanks to
 # Translation World CC in South Africa, 2005.
 #
@@ -1307,9 +1307,9 @@
 
 
 ========== zh_CN.po ==========
-# Simplified Chinese translation to mate-desktop
+# Simplified Chinese translation to cafe-desktop
 # Copyright (C) 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Dillion Chen <dillon.chen@turbolinux.com.cn>
 #   Updated and QA by Wang Jian <lark@linux.net.cn>
@@ -1326,7 +1326,7 @@
 
 
 ========== zh_HK.po ==========
-# Chinese (Hong Kong) translation of mate-desktop.
+# Chinese (Hong Kong) translation of cafe-desktop.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2007 Free Software Foundation, Inc.
 # Mate-core:
 # Yuan-Chung Cheng <platin@linux.org.tw>, 1999.
@@ -1344,7 +1344,7 @@
 
 
 ========== zh_TW.po ==========
-# Chinese (Taiwan) translation of mate-desktop.
+# Chinese (Taiwan) translation of cafe-desktop.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2007 Free Software Foundation, Inc.
 # Mate-core:
 # Yuan-Chung Cheng <platin@linux.org.tw>, 1999.
@@ -1362,9 +1362,9 @@
 
 
 ========== zu.po ==========
-# Zulu translation of mate-desktop.
+# Zulu translation of cafe-desktop.
 # Copyright (C) 2004 Zuza Software Foundation (Translate.org.za)
-# This file is distributed under the same license as the mate-desktop package.
+# This file is distributed under the same license as the cafe-desktop package.
 #
 # Zuza Software Foundation <info@translate.org.za>, 2004
 #

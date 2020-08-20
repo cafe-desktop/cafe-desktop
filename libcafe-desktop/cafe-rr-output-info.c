@@ -1,4 +1,4 @@
-/* mate-rr-output-info.c
+/* cafe-rr-output-info.c
  * -*- c-basic-offset: 4 -*-
  *
  * Copyright 2010 Giovanni Campagna
@@ -25,17 +25,17 @@
 
 #include <config.h>
 
-#include "mate-rr-config.h"
+#include "cafe-rr-config.h"
 
 #include "edid.h"
-#include "mate-rr-private.h"
+#include "cafe-rr-private.h"
 
-G_DEFINE_TYPE_WITH_PRIVATE (MateRROutputInfo, mate_rr_output_info, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (MateRROutputInfo, cafe_rr_output_info, G_TYPE_OBJECT)
 
 static void
-mate_rr_output_info_init (MateRROutputInfo *self)
+cafe_rr_output_info_init (MateRROutputInfo *self)
 {
-    self->priv = mate_rr_output_info_get_instance_private (self);
+    self->priv = cafe_rr_output_info_get_instance_private (self);
 
     self->priv->name = NULL;
     self->priv->on = FALSE;
@@ -43,30 +43,30 @@ mate_rr_output_info_init (MateRROutputInfo *self)
 }
 
 static void
-mate_rr_output_info_finalize (GObject *gobject)
+cafe_rr_output_info_finalize (GObject *gobject)
 {
     MateRROutputInfo *self = CAFE_RR_OUTPUT_INFO (gobject);
 
     g_free (self->priv->name);
     g_free (self->priv->display_name);
 
-    G_OBJECT_CLASS (mate_rr_output_info_parent_class)->finalize (gobject);
+    G_OBJECT_CLASS (cafe_rr_output_info_parent_class)->finalize (gobject);
 }
 
 static void
-mate_rr_output_info_class_init (MateRROutputInfoClass *klass)
+cafe_rr_output_info_class_init (MateRROutputInfoClass *klass)
 {
     GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-    gobject_class->finalize = mate_rr_output_info_finalize;
+    gobject_class->finalize = cafe_rr_output_info_finalize;
 }
 
 /**
- * mate_rr_output_info_get_name:
+ * cafe_rr_output_info_get_name:
  *
  * Returns: (transfer none): the output name
  */
-char *mate_rr_output_info_get_name (MateRROutputInfo *self)
+char *cafe_rr_output_info_get_name (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), NULL);
 
@@ -74,18 +74,18 @@ char *mate_rr_output_info_get_name (MateRROutputInfo *self)
 }
 
 /**
- * mate_rr_output_info_is_active:
+ * cafe_rr_output_info_is_active:
  *
  * Returns: whether there is a CRTC assigned to this output (i.e. a signal is being sent to it)
  */
-gboolean mate_rr_output_info_is_active (MateRROutputInfo *self)
+gboolean cafe_rr_output_info_is_active (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), FALSE);
 
     return self->priv->on;
 }
 
-void mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active)
+void cafe_rr_output_info_set_active (MateRROutputInfo *self, gboolean active)
 {
     g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
@@ -93,14 +93,14 @@ void mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active)
 }
 
 /**
- * mate_rr_output_info_get_geometry:
+ * cafe_rr_output_info_get_geometry:
  * @self: a #MateRROutputInfo
  * @x: (out) (allow-none):
  * @y: (out) (allow-none):
  * @width: (out) (allow-none):
  * @height: (out) (allow-none):
  */
-void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, int *width, int *height)
+void cafe_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, int *width, int *height)
 {
     g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
@@ -115,7 +115,7 @@ void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, i
 }
 
 /**
- * mate_rr_output_info_set_geometry:
+ * cafe_rr_output_info_set_geometry:
  * @self: a #MateRROutputInfo
  * @x: x offset for monitor
  * @y: y offset for monitor
@@ -124,7 +124,7 @@ void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, i
  *
  * Set the geometry for the monitor connected to the specified output.
  */
-void mate_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, int  width, int  height)
+void cafe_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, int  width, int  height)
 {
     g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
@@ -134,28 +134,28 @@ void mate_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, i
     self->priv->height = height;
 }
 
-int mate_rr_output_info_get_refresh_rate (MateRROutputInfo *self)
+int cafe_rr_output_info_get_refresh_rate (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->rate;
 }
 
-void mate_rr_output_info_set_refresh_rate (MateRROutputInfo *self, int rate)
+void cafe_rr_output_info_set_refresh_rate (MateRROutputInfo *self, int rate)
 {
     g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     self->priv->rate = rate;
 }
 
-MateRRRotation mate_rr_output_info_get_rotation (MateRROutputInfo *self)
+MateRRRotation cafe_rr_output_info_get_rotation (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), CAFE_RR_ROTATION_0);
 
     return self->priv->rotation;
 }
 
-void mate_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation rotation)
+void cafe_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation rotation)
 {
     g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
@@ -163,11 +163,11 @@ void mate_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation ro
 }
 
 /**
- * mate_rr_output_info_is_connected:
+ * cafe_rr_output_info_is_connected:
  *
  * Returns: whether the output is physically connected to a monitor
  */
-gboolean mate_rr_output_info_is_connected (MateRROutputInfo *self)
+gboolean cafe_rr_output_info_is_connected (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), FALSE);
 
@@ -175,11 +175,11 @@ gboolean mate_rr_output_info_is_connected (MateRROutputInfo *self)
 }
 
 /**
- * mate_rr_output_info_get_vendor:
+ * cafe_rr_output_info_get_vendor:
  * @self: a #MateRROutputInfo
  * @vendor: (out caller-allocates) (array fixed-size=4):
  */
-void mate_rr_output_info_get_vendor (MateRROutputInfo *self, gchar* vendor)
+void cafe_rr_output_info_get_vendor (MateRROutputInfo *self, gchar* vendor)
 {
     g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
     g_return_if_fail (vendor != NULL);
@@ -190,21 +190,21 @@ void mate_rr_output_info_get_vendor (MateRROutputInfo *self, gchar* vendor)
     vendor[3] = self->priv->vendor[3];
 }
 
-guint mate_rr_output_info_get_product (MateRROutputInfo *self)
+guint cafe_rr_output_info_get_product (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->product;
 }
 
-guint mate_rr_output_info_get_serial (MateRROutputInfo *self)
+guint cafe_rr_output_info_get_serial (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->serial;
 }
 
-double mate_rr_output_info_get_aspect_ratio (MateRROutputInfo *self)
+double cafe_rr_output_info_get_aspect_ratio (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
@@ -212,39 +212,39 @@ double mate_rr_output_info_get_aspect_ratio (MateRROutputInfo *self)
 }
 
 /**
- * mate_rr_output_info_get_display_name:
+ * cafe_rr_output_info_get_display_name:
  *
  * Returns: (transfer none): the display name of this output
  */
-char *mate_rr_output_info_get_display_name (MateRROutputInfo *self)
+char *cafe_rr_output_info_get_display_name (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), NULL);
 
     return self->priv->display_name;
 }
 
-gboolean mate_rr_output_info_get_primary (MateRROutputInfo *self)
+gboolean cafe_rr_output_info_get_primary (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), FALSE);
 
     return self->priv->primary;
 }
 
-void mate_rr_output_info_set_primary (MateRROutputInfo *self, gboolean primary)
+void cafe_rr_output_info_set_primary (MateRROutputInfo *self, gboolean primary)
 {
     g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (self));
 
     self->priv->primary = primary;
 }
 
-int mate_rr_output_info_get_preferred_width (MateRROutputInfo *self)
+int cafe_rr_output_info_get_preferred_width (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 
     return self->priv->pref_width;
 }
 
-int mate_rr_output_info_get_preferred_height (MateRROutputInfo *self)
+int cafe_rr_output_info_get_preferred_height (MateRROutputInfo *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_OUTPUT_INFO (self), 0);
 

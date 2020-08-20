@@ -1,5 +1,5 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.sound" path="/org/mate/desktop/sound/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.sound" path="/org/cafe/desktop/sound/">
     <key name="default-mixer-device" type="s">
       <default>''</default>
       <summary>Default mixer device</summary>

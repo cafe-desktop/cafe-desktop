@@ -1,4 +1,4 @@
-/* mate-bg.h -
+/* cafe-bg.h -
 
    Copyright (C) 2007 Red Hat, Inc.
    Copyright (C) 2012 Jasmine Hassan <jasmine.aura@gmail.com>
@@ -28,30 +28,30 @@
 #define __CAFE_BG_H__
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error    MateBG is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including mate-bg.h
+#error    MateBG is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including cafe-bg.h
 #endif
 
 #include <glib.h>
 #include <gdk/gdk.h>
 #include <gio/gio.h>
-#include "mate-desktop-thumbnail.h"
-#include "mate-bg-crossfade.h"
+#include "cafe-desktop-thumbnail.h"
+#include "cafe-bg-crossfade.h"
 
 G_BEGIN_DECLS
 
-#define CAFE_TYPE_BG            (mate_bg_get_type ())
+#define CAFE_TYPE_BG            (cafe_bg_get_type ())
 #define CAFE_BG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_BG, MateBG))
 #define CAFE_BG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_BG, MateBGClass))
 #define CAFE_IS_BG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_BG))
 #define CAFE_IS_BG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  CAFE_TYPE_BG))
 #define CAFE_BG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  CAFE_TYPE_BG, MateBGClass))
 
-#define CAFE_BG_SCHEMA "org.mate.background"
+#define CAFE_BG_SCHEMA "org.cafe.background"
 
 /* whether to draw the desktop bg */
 #define CAFE_BG_KEY_DRAW_BACKGROUND	"draw-background"
 
-/* whether Caja or mate-settings-daemon draw the desktop */
+/* whether Caja or cafe-settings-daemon draw the desktop */
 #define CAFE_BG_KEY_SHOW_DESKTOP	"show-desktop-icons"
 
 /* whether to fade when changing background (By Caja/m-s-d) */
@@ -82,75 +82,75 @@ typedef enum {
 	CAFE_BG_PLACEMENT_SPANNED
 } MateBGPlacement;
 
-GType            mate_bg_get_type              (void);
-MateBG *         mate_bg_new                   (void);
-void             mate_bg_load_from_preferences (MateBG               *bg);
-void             mate_bg_load_from_system_preferences  (MateBG       *bg);
-void             mate_bg_load_from_system_gsettings    (MateBG       *bg,
+GType            cafe_bg_get_type              (void);
+MateBG *         cafe_bg_new                   (void);
+void             cafe_bg_load_from_preferences (MateBG               *bg);
+void             cafe_bg_load_from_system_preferences  (MateBG       *bg);
+void             cafe_bg_load_from_system_gsettings    (MateBG       *bg,
 							GSettings    *settings,
 							gboolean      reset_apply);
-void             mate_bg_load_from_gsettings   (MateBG               *bg,
+void             cafe_bg_load_from_gsettings   (MateBG               *bg,
 						GSettings            *settings);
-void             mate_bg_save_to_preferences   (MateBG               *bg);
-void             mate_bg_save_to_gsettings     (MateBG               *bg,
+void             cafe_bg_save_to_preferences   (MateBG               *bg);
+void             cafe_bg_save_to_gsettings     (MateBG               *bg,
 						GSettings            *settings);
 
 /* Setters */
-void             mate_bg_set_filename          (MateBG               *bg,
+void             cafe_bg_set_filename          (MateBG               *bg,
 						 const char            *filename);
-void             mate_bg_set_placement         (MateBG               *bg,
+void             cafe_bg_set_placement         (MateBG               *bg,
 						 MateBGPlacement       placement);
-void             mate_bg_set_color             (MateBG               *bg,
+void             cafe_bg_set_color             (MateBG               *bg,
 						 MateBGColorType       type,
 						 GdkRGBA              *primary,
 						 GdkRGBA              *secondary);
-void		 mate_bg_set_draw_background   (MateBG		     *bg,
+void		 cafe_bg_set_draw_background   (MateBG		     *bg,
 						gboolean	      draw_background);
 /* Getters */
-gboolean	 mate_bg_get_draw_background   (MateBG		     *bg);
-MateBGPlacement  mate_bg_get_placement         (MateBG               *bg);
-void		 mate_bg_get_color             (MateBG               *bg,
+gboolean	 cafe_bg_get_draw_background   (MateBG		     *bg);
+MateBGPlacement  cafe_bg_get_placement         (MateBG               *bg);
+void		 cafe_bg_get_color             (MateBG               *bg,
 						 MateBGColorType      *type,
 						 GdkRGBA              *primary,
 						 GdkRGBA              *secondary);
-const gchar *    mate_bg_get_filename          (MateBG               *bg);
+const gchar *    cafe_bg_get_filename          (MateBG               *bg);
 
 /* Drawing and thumbnailing */
-void             mate_bg_draw                  (MateBG               *bg,
+void             cafe_bg_draw                  (MateBG               *bg,
 						 GdkPixbuf             *dest,
 						 GdkScreen	       *screen,
                                                  gboolean               is_root);
 
-cairo_surface_t *mate_bg_create_surface        (MateBG               *bg,
+cairo_surface_t *cafe_bg_create_surface        (MateBG               *bg,
 						GdkWindow            *window,
 						int                   width,
 						int                   height,
 						gboolean              root);
 
-cairo_surface_t *mate_bg_create_surface_scale  (MateBG               *bg,
+cairo_surface_t *cafe_bg_create_surface_scale  (MateBG               *bg,
 						GdkWindow            *window,
 						int                   width,
 						int                   height,
 						int                   scale,
 						gboolean              root);
 
-gboolean         mate_bg_get_image_size        (MateBG               *bg,
+gboolean         cafe_bg_get_image_size        (MateBG               *bg,
 						 MateDesktopThumbnailFactory *factory,
                                                  int                    best_width,
                                                  int                    best_height,
 						 int                   *width,
 						 int                   *height);
-GdkPixbuf *      mate_bg_create_thumbnail      (MateBG               *bg,
+GdkPixbuf *      cafe_bg_create_thumbnail      (MateBG               *bg,
 						 MateDesktopThumbnailFactory *factory,
 						 GdkScreen             *screen,
 						 int                    dest_width,
 						 int                    dest_height);
-gboolean         mate_bg_is_dark               (MateBG               *bg,
+gboolean         cafe_bg_is_dark               (MateBG               *bg,
                                                  int                    dest_width,
 						 int                    dest_height);
-gboolean         mate_bg_has_multiple_sizes    (MateBG               *bg);
-gboolean         mate_bg_changes_with_time     (MateBG               *bg);
-GdkPixbuf *      mate_bg_create_frame_thumbnail (MateBG              *bg,
+gboolean         cafe_bg_has_multiple_sizes    (MateBG               *bg);
+gboolean         cafe_bg_changes_with_time     (MateBG               *bg);
+GdkPixbuf *      cafe_bg_create_frame_thumbnail (MateBG              *bg,
 						 MateDesktopThumbnailFactory *factory,
 						 GdkScreen             *screen,
 						 int                    dest_width,
@@ -159,13 +159,13 @@ GdkPixbuf *      mate_bg_create_frame_thumbnail (MateBG              *bg,
 
 /* Set a surface as root - not a MateBG method. At some point
  * if we decide to stabilize the API then we may want to make
- * these object methods, drop mate_bg_create_surface, etc.
+ * these object methods, drop cafe_bg_create_surface, etc.
  */
-void             mate_bg_set_surface_as_root   (GdkScreen            *screen,
+void             cafe_bg_set_surface_as_root   (GdkScreen            *screen,
 						cairo_surface_t    *surface);
-MateBGCrossfade *mate_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
+MateBGCrossfade *cafe_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
 							     cairo_surface_t *surface);
-cairo_surface_t *mate_bg_get_surface_from_root (GdkScreen *screen);
+cairo_surface_t *cafe_bg_get_surface_from_root (GdkScreen *screen);
 
 G_END_DECLS
 

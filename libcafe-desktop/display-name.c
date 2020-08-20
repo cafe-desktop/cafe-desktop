@@ -43,7 +43,7 @@ struct Vendor {
  * http://ezix.org/project/wiki/HardwareLiSter
  *
  * Note: we now prefer to use data coming from hwdata (and shipped with
- * mate-desktop). See
+ * cafe-desktop). See
  * http://git.fedorahosted.org/git/?p=hwdata.git;a=blob_plain;f=pnp.ids;hb=HEAD
  * All contributions to the list of vendors should go there.
  */

@@ -4,23 +4,23 @@ source_date_epoch = cmd.stdout().strip()
 if source_date_epoch == ''
 	source_date_epoch = run_command(date_exe, '+%s').stdout().strip()
 endif
-mate_date = run_command(date_exe, '-u', '-d', '@' + source_date_epoch, '+%Y-%m-%d').stdout().strip()
-mate_year = run_command(date_exe, '-u', '-d', '@' + source_date_epoch, '+%Y').stdout().strip()
+cafe_date = run_command(date_exe, '-u', '-d', '@' + source_date_epoch, '+%Y-%m-%d').stdout().strip()
+cafe_year = run_command(date_exe, '-u', '-d', '@' + source_date_epoch, '+%Y').stdout().strip()
 
-mate_data = configuration_data()
+cafe_data = configuration_data()
 
-mate_data.set('CAFE_DATE', mate_date)
-mate_data.set('CAFE_DATE_COMMENT_START', '<!--')
-mate_data.set('CAFE_DATE_COMMENT_END', '-->')
-mate_data.set('CAFE_PLATFORM', mate_platform)
-mate_data.set('CAFE_MINOR', mate_minor)
-mate_data.set('CAFE_MICRO', mate_micro)
+cafe_data.set('CAFE_DATE', cafe_date)
+cafe_data.set('CAFE_DATE_COMMENT_START', '<!--')
+cafe_data.set('CAFE_DATE_COMMENT_END', '-->')
+cafe_data.set('CAFE_PLATFORM', cafe_platform)
+cafe_data.set('CAFE_MINOR', cafe_minor)
+cafe_data.set('CAFE_MICRO', cafe_micro)
 
-mate_about_data = configuration_data()
-mate_about_data.set('RELEASE_YEAR', mate_year)
+cafe_about_data = configuration_data()
+cafe_about_data.set('RELEASE_YEAR', cafe_year)
 
-executable('mate-about',
-  'mate-about.c',
+executable('cafe-about',
+  'cafe-about.c',
   c_args: [
     '-DLOCALE_DIR="@0@"'.format(join_paths(get_option('prefix'), get_option('localedir'))),
     '-DPIXMAPS_DIR="@0@"'.format(join_paths(get_option('prefix'), get_option('datadir'), 'pixmaps')),
@@ -31,25 +31,25 @@ executable('mate-about',
 )
 
 i18n.merge_file(
-  input: 'mate-about.desktop.in',
-  output: 'mate-about.desktop',
+  input: 'cafe-about.desktop.in',
+  output: 'cafe-about.desktop',
   type: 'desktop',
   po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'applications'),
 )
 
-mate_version_xml_in = configure_file(
-  input: 'mate-version.xml.in',
-  output: 'mate-version.xml',
-  configuration: mate_data,
+cafe_version_xml_in = configure_file(
+  input: 'cafe-version.xml.in',
+  output: 'cafe-version.xml',
+  configuration: cafe_data,
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'mate-about'),
+  install_dir: join_paths(get_option('datadir'), 'cafe-about'),
 )
 
-mate_about_h_in = configure_file(
-  input: 'mate-about.h.in',
-  output: 'mate-about.h',
-  configuration: mate_about_data,
+cafe_about_h_in = configure_file(
+  input: 'cafe-about.h.in',
+  output: 'cafe-about.h',
+  configuration: cafe_about_data,
   install: false,
 )

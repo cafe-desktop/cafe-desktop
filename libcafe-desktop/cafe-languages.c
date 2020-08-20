@@ -37,7 +37,7 @@
 #include <glib/gstdio.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
-#include "mate-languages.h"
+#include "cafe-languages.h"
 
 #include <langinfo.h>
 #ifndef __LC_LAST
@@ -56,11 +56,11 @@ typedef struct _MateLocale {
         char *modifier;
 } MateLocale;
 
-static GHashTable *mate_languages_map;
-static GHashTable *mate_territories_map;
-static GHashTable *mate_available_locales_map;
-static GHashTable *mate_language_count_map;
-static GHashTable *mate_territory_count_map;
+static GHashTable *cafe_languages_map;
+static GHashTable *cafe_territories_map;
+static GHashTable *cafe_available_locales_map;
+static GHashTable *cafe_language_count_map;
+static GHashTable *cafe_territory_count_map;
 
 static char * construct_language_name (const char *language,
                                        const char *territory,
@@ -70,7 +70,7 @@ static char * construct_language_name (const char *language,
 static gboolean language_name_is_valid (const char *language_name);
 
 static void
-mate_locale_free (MateLocale *locale)
+cafe_locale_free (MateLocale *locale)
 {
         if (locale == NULL) {
                 return;
@@ -99,7 +99,7 @@ normalize_codeset (const char *codeset)
 }
 
 /**
- * mate_parse_locale:
+ * cafe_parse_locale:
  * @locale: a locale string
  * @language_codep: (out) (allow-none) (transfer full): location to
  * store the language code, or %NULL
@@ -119,7 +119,7 @@ normalize_codeset (const char *codeset)
  * Since: 1.22
  */
 gboolean
-mate_parse_locale (const char *locale,
+cafe_parse_locale (const char *locale,
                     char      **language_codep,
                     char      **country_codep,
                     char      **codesetp,
@@ -245,7 +245,7 @@ construct_language_name (const char *language,
 }
 
 /**
- * mate_normalize_locale:
+ * cafe_normalize_locale:
  * @locale: a locale string
  *
  * Gets the normalized locale string in the form
@@ -257,7 +257,7 @@ construct_language_name (const char *language,
  * Since: 1.22
  */
 char *
-mate_normalize_locale (const char *locale)
+cafe_normalize_locale (const char *locale)
 {
         char *normalized_name;
         gboolean valid;
@@ -270,7 +270,7 @@ mate_normalize_locale (const char *locale)
                 return NULL;
         }
 
-        valid = mate_parse_locale (locale,
+        valid = cafe_parse_locale (locale,
                                     &language_code,
                                     &territory_code,
                                     &codeset, &modifier);
@@ -358,7 +358,7 @@ locale_dir_has_mo_files (const gchar* path)
 }
 
 /**
- * mate_language_has_translations:
+ * cafe_language_has_translations:
  * @code: an ISO 639 code string
  *
  * Returns %TRUE if there are translations for language @code.
@@ -368,7 +368,7 @@ locale_dir_has_mo_files (const gchar* path)
  * Since: 1.22
  */
 gboolean
-mate_language_has_translations (const char *code)
+cafe_language_has_translations (const char *code)
 {
         gboolean     has_translations;
         gchar *path = NULL;
@@ -427,13 +427,13 @@ add_locale (const char *language_name,
         }
 
         locale = g_new0 (MateLocale, 1);
-        valid = mate_parse_locale (name,
+        valid = cafe_parse_locale (name,
                                     &locale->language_code,
                                     &locale->territory_code,
                                     &locale->codeset,
                                     &locale->modifier);
         if (!valid) {
-                mate_locale_free (locale);
+                cafe_locale_free (locale);
                 return FALSE;
         }
 
@@ -442,12 +442,12 @@ add_locale (const char *language_name,
         locale->name = construct_language_name (locale->language_code, locale->territory_code,
                                                 locale->codeset, locale->modifier);
 
-        if (!mate_language_has_translations (locale->name) &&
-            !mate_language_has_translations (locale->id) &&
-            !mate_language_has_translations (locale->language_code) &&
+        if (!cafe_language_has_translations (locale->name) &&
+            !cafe_language_has_translations (locale->id) &&
+            !cafe_language_has_translations (locale->language_code) &&
             utf8_only) {
                 g_debug ("Ignoring '%s' as a locale, since it lacks translations", locale->name);
-                mate_locale_free (locale);
+                cafe_locale_free (locale);
                 return FALSE;
         }
 
@@ -456,15 +456,15 @@ add_locale (const char *language_name,
                 locale->id = g_strdup (locale->name);
         }
 
-        old_locale = g_hash_table_lookup (mate_available_locales_map, locale->id);
+        old_locale = g_hash_table_lookup (cafe_available_locales_map, locale->id);
         if (old_locale != NULL) {
                 if (strlen (old_locale->name) > strlen (locale->name)) {
-                        mate_locale_free (locale);
+                        cafe_locale_free (locale);
                         return FALSE;
                 }
         }
 
-        g_hash_table_insert (mate_available_locales_map, g_strdup (locale->id), locale);
+        g_hash_table_insert (cafe_available_locales_map, g_strdup (locale->id), locale);
 
         return TRUE;
 }
@@ -554,10 +554,10 @@ count_languages_and_territories (void)
 	gpointer value;
 	GHashTableIter iter;
 
-	mate_language_count_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
-	mate_territory_count_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+	cafe_language_count_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+	cafe_territory_count_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 
-        g_hash_table_iter_init (&iter, mate_available_locales_map);
+        g_hash_table_iter_init (&iter, cafe_available_locales_map);
         while (g_hash_table_iter_next (&iter, NULL, &value)) {
                 MateLocale *locale;
 
@@ -566,17 +566,17 @@ count_languages_and_territories (void)
 		if (locale->language_code != NULL) {
 			int count;
 
-			count = GPOINTER_TO_INT (g_hash_table_lookup (mate_language_count_map, locale->language_code));
+			count = GPOINTER_TO_INT (g_hash_table_lookup (cafe_language_count_map, locale->language_code));
 			count++;
-			g_hash_table_insert (mate_language_count_map, g_strdup (locale->language_code), GINT_TO_POINTER (count));
+			g_hash_table_insert (cafe_language_count_map, g_strdup (locale->language_code), GINT_TO_POINTER (count));
 		}
 
 		if (locale->territory_code != NULL) {
 			int count;
 
-			count = GPOINTER_TO_INT (g_hash_table_lookup (mate_territory_count_map, locale->territory_code));
+			count = GPOINTER_TO_INT (g_hash_table_lookup (cafe_territory_count_map, locale->territory_code));
 			count++;
-			g_hash_table_insert (mate_territory_count_map, g_strdup (locale->territory_code), GINT_TO_POINTER (count));
+			g_hash_table_insert (cafe_territory_count_map, g_strdup (locale->territory_code), GINT_TO_POINTER (count));
 		}
         }
 }
@@ -587,8 +587,8 @@ collect_locales (void)
         gboolean found_localebin_locales = FALSE;
         gboolean found_dir_locales = FALSE;
 
-        if (mate_available_locales_map == NULL) {
-                mate_available_locales_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, (GDestroyNotify) mate_locale_free);
+        if (cafe_available_locales_map == NULL) {
+                cafe_available_locales_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, (GDestroyNotify) cafe_locale_free);
         }
 
         found_localebin_locales = collect_locales_from_localebin ();
@@ -607,11 +607,11 @@ collect_locales (void)
 static gint
 get_language_count (const char *language)
 {
-        if (mate_language_count_map == NULL) {
+        if (cafe_language_count_map == NULL) {
                 collect_locales ();
         }
 
-	return GPOINTER_TO_INT (g_hash_table_lookup (mate_language_count_map, language));
+	return GPOINTER_TO_INT (g_hash_table_lookup (cafe_language_count_map, language));
 }
 
 static gboolean
@@ -623,11 +623,11 @@ is_unique_language (const char *language)
 static gint
 get_territory_count (const char *territory)
 {
-        if (mate_territory_count_map == NULL) {
+        if (cafe_territory_count_map == NULL) {
                 collect_locales ();
         }
 
-	return GPOINTER_TO_INT (g_hash_table_lookup (mate_territory_count_map, territory));
+	return GPOINTER_TO_INT (g_hash_table_lookup (cafe_territory_count_map, territory));
 }
 
 static gboolean
@@ -668,7 +668,7 @@ get_language (const char *code)
                 return NULL;
         }
 
-        name = (const char *) g_hash_table_lookup (mate_languages_map, code);
+        name = (const char *) g_hash_table_lookup (cafe_languages_map, code);
 
         return name;
 }
@@ -753,7 +753,7 @@ get_territory (const char *code)
                 return NULL;
         }
 
-        name = (const char *) g_hash_table_lookup (mate_territories_map, code);
+        name = (const char *) g_hash_table_lookup (cafe_territories_map, code);
 
         return name;
 }
@@ -862,22 +862,22 @@ languages_parse_start_tag (GMarkupParseContext      *ctx,
         }
 
         if (ccode != NULL) {
-                g_hash_table_insert (mate_languages_map,
+                g_hash_table_insert (cafe_languages_map,
                                      g_strdup (ccode),
                                      g_strdup (lang_name));
         }
         if (ccode_longB != NULL) {
-                g_hash_table_insert (mate_languages_map,
+                g_hash_table_insert (cafe_languages_map,
                                      g_strdup (ccode_longB),
                                      g_strdup (lang_name));
         }
         if (ccode_longT != NULL) {
-                g_hash_table_insert (mate_languages_map,
+                g_hash_table_insert (cafe_languages_map,
                                      g_strdup (ccode_longT),
                                      g_strdup (lang_name));
         }
         if (ccode_id != NULL) {
-                g_hash_table_insert (mate_languages_map,
+                g_hash_table_insert (cafe_languages_map,
                                      g_strdup (ccode_id),
                                      g_strdup (lang_name));
         }
@@ -954,17 +954,17 @@ territories_parse_start_tag (GMarkupParseContext      *ctx,
         }
 
         if (acode_2 != NULL) {
-                g_hash_table_insert (mate_territories_map,
+                g_hash_table_insert (cafe_territories_map,
                                      g_strdup (acode_2),
                                      g_strdup (territory_name));
         }
         if (acode_3 != NULL) {
-                g_hash_table_insert (mate_territories_map,
+                g_hash_table_insert (cafe_territories_map,
                                      g_strdup (acode_3),
                                      g_strdup (territory_name));
         }
         if (ncode != NULL) {
-                g_hash_table_insert (mate_territories_map,
+                g_hash_table_insert (cafe_territories_map,
                                      g_strdup (ncode),
                                      g_strdup (territory_name));
         }
@@ -1012,10 +1012,10 @@ languages_variant_init (const char *variant)
 static void
 languages_init (void)
 {
-        if (mate_languages_map)
+        if (cafe_languages_map)
                 return;
 
-        mate_languages_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
+        cafe_languages_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
         languages_variant_init ("iso_639");
         languages_variant_init ("iso_639_3");
@@ -1029,13 +1029,13 @@ territories_init (void)
         g_autofree char *buf = NULL;
         g_autoptr (GError) error = NULL;
 
-        if (mate_territories_map)
+        if (cafe_territories_map)
                 return;
 
         bindtextdomain ("iso_3166", ISO_CODES_LOCALESDIR);
         bind_textdomain_codeset ("iso_3166", "UTF-8");
 
-        mate_territories_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
+        cafe_territories_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
         error = NULL;
         res = g_file_get_contents (ISO_CODES_DATADIR "/iso_3166.xml",
@@ -1064,7 +1064,7 @@ territories_init (void)
 }
 
 /**
- * mate_get_language_from_locale:
+ * cafe_get_language_from_locale:
  * @locale: a locale string
  * @translation: (allow-none): a locale string
  *
@@ -1077,7 +1077,7 @@ territories_init (void)
  * Since: 1.22
  */
 char *
-mate_get_language_from_locale (const char *locale,
+cafe_get_language_from_locale (const char *locale,
                                 const char *translation)
 {
         GString *full_language;
@@ -1097,7 +1097,7 @@ mate_get_language_from_locale (const char *locale,
         languages_init ();
         territories_init ();
 
-        mate_parse_locale (locale,
+        cafe_parse_locale (locale,
                             &language_code,
                             &territory_code,
                             &codeset_code,
@@ -1149,7 +1149,7 @@ mate_get_language_from_locale (const char *locale,
 }
 
 /**
- * mate_get_country_from_locale:
+ * cafe_get_country_from_locale:
  * @locale: a locale string
  * @translation: (allow-none): a locale string
  *
@@ -1162,7 +1162,7 @@ mate_get_language_from_locale (const char *locale,
  * Since: 1.22
  */
 char *
-mate_get_country_from_locale (const char *locale,
+cafe_get_country_from_locale (const char *locale,
                                const char *translation)
 {
         GString *full_name;
@@ -1182,7 +1182,7 @@ mate_get_country_from_locale (const char *locale,
         languages_init ();
         territories_init ();
 
-        mate_parse_locale (locale,
+        cafe_parse_locale (locale,
                             &language_code,
                             &territory_code,
                             &codeset_code,
@@ -1230,7 +1230,7 @@ mate_get_country_from_locale (const char *locale,
 }
 
 /**
- * mate_get_all_locales:
+ * cafe_get_all_locales:
  *
  * Gets all locales.
  *
@@ -1241,18 +1241,18 @@ mate_get_country_from_locale (const char *locale,
  * Since: 1.22
  */
 char **
-mate_get_all_locales (void)
+cafe_get_all_locales (void)
 {
         GHashTableIter iter;
         gpointer key, value;
         GPtrArray *array;
 
-        if (mate_available_locales_map == NULL) {
+        if (cafe_available_locales_map == NULL) {
                 collect_locales ();
         }
 
         array = g_ptr_array_new ();
-        g_hash_table_iter_init (&iter, mate_available_locales_map);
+        g_hash_table_iter_init (&iter, cafe_available_locales_map);
         while (g_hash_table_iter_next (&iter, &key, &value)) {
                 MateLocale *locale;
 
@@ -1266,7 +1266,7 @@ mate_get_all_locales (void)
 }
 
 /**
- * mate_get_language_from_code:
+ * cafe_get_language_from_code:
  * @code: an ISO 639 code string
  * @translation: (allow-none): a locale string
  *
@@ -1279,7 +1279,7 @@ mate_get_all_locales (void)
  * Since: 1.22
  */
 char *
-mate_get_language_from_code (const char *code,
+cafe_get_language_from_code (const char *code,
                               const char *translation)
 {
         g_return_val_if_fail (code != NULL, NULL);
@@ -1290,7 +1290,7 @@ mate_get_language_from_code (const char *code,
 }
 
 /**
- * mate_get_country_from_code:
+ * cafe_get_country_from_code:
  * @code: an ISO 3166 code string
  * @translation: (allow-none): a locale string
  *
@@ -1303,7 +1303,7 @@ mate_get_language_from_code (const char *code,
  * Since: 1.22
  */
 char *
-mate_get_country_from_code (const char *code,
+cafe_get_country_from_code (const char *code,
                              const char *translation)
 {
         g_return_val_if_fail (code != NULL, NULL);

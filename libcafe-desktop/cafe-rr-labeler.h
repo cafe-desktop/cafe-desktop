@@ -1,4 +1,4 @@
-/* mate-rr-labeler.h - Utility to label monitors to identify them
+/* cafe-rr-labeler.h - Utility to label monitors to identify them
  * while they are being configured.
  *
  * Copyright 2008, Novell, Inc.
@@ -27,12 +27,12 @@
 #define CAFE_RR_LABELER_H
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error    MateRR is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including materr.h
+#error    MateRR is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including caferr.h
 #endif
 
-#include "mate-rr-config.h"
+#include "cafe-rr-config.h"
 
-#define CAFE_TYPE_RR_LABELER            (mate_rr_labeler_get_type ())
+#define CAFE_TYPE_RR_LABELER            (cafe_rr_labeler_get_type ())
 #define CAFE_RR_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_RR_LABELER, MateRRLabeler))
 #define CAFE_RR_LABELER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_RR_LABELER, MateRRLabelerClass))
 #define CAFE_IS_RR_LABELER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_RR_LABELER))
@@ -54,12 +54,12 @@ struct _MateRRLabelerClass {
 	GObjectClass parent_class;
 };
 
-GType mate_rr_labeler_get_type (void);
+GType cafe_rr_labeler_get_type (void);
 
-MateRRLabeler *mate_rr_labeler_new (MateRRConfig *config);
+MateRRLabeler *cafe_rr_labeler_new (MateRRConfig *config);
 
-void mate_rr_labeler_hide (MateRRLabeler *labeler);
+void cafe_rr_labeler_hide (MateRRLabeler *labeler);
 
-void mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color_out);
+void cafe_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color_out);
 
 #endif

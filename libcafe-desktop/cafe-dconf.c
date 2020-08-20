@@ -1,5 +1,5 @@
 /*
- * mate-dconf.c: helper API for dconf
+ * cafe-dconf.c: helper API for dconf
  *
  * Copyright (C) 2011 Novell, Inc.
  * Copyright (C) 2013 Stefano Karapetsas
@@ -32,16 +32,16 @@
 
 #include <dconf.h>
 
-#include "mate-dconf.h"
+#include "cafe-dconf.h"
 
 static DConfClient *
-mate_dconf_client_get (void)
+cafe_dconf_client_get (void)
 {
     return dconf_client_new ();
 }
 
 /**
- * mate_dconf_write_sync:
+ * cafe_dconf_write_sync:
  * @key: the key to write.
  * @value: the value to write.
  * @error: a variable to store the error, or NULL.
@@ -51,12 +51,12 @@ mate_dconf_client_get (void)
  * Since: 1.7.1
  */
 gboolean
-mate_dconf_write_sync (const gchar  *key,
+cafe_dconf_write_sync (const gchar  *key,
                        GVariant     *value,
                        GError      **error)
 {
     gboolean     ret;
-    DConfClient *client = mate_dconf_client_get ();
+    DConfClient *client = cafe_dconf_client_get ();
 
     ret = dconf_client_write_sync (client, key, value, NULL, NULL, error);
 
@@ -66,7 +66,7 @@ mate_dconf_write_sync (const gchar  *key,
 }
 
 /**
- * mate_dconf_recursive_reset:
+ * cafe_dconf_recursive_reset:
  * @dir: the dconf directory to reset.
  * @error: a variable to store the error, or NULL.
  *
@@ -75,11 +75,11 @@ mate_dconf_write_sync (const gchar  *key,
  * Since: 1.7.1
  */
 gboolean
-mate_dconf_recursive_reset (const gchar  *dir,
+cafe_dconf_recursive_reset (const gchar  *dir,
                             GError      **error)
 {
     gboolean     ret;
-    DConfClient *client = mate_dconf_client_get ();
+    DConfClient *client = cafe_dconf_client_get ();
 
     ret = dconf_client_write_sync (client, dir, NULL, NULL, NULL, error);
 
@@ -89,7 +89,7 @@ mate_dconf_recursive_reset (const gchar  *dir,
 }
 
 /**
- * mate_dconf_list_subdirs:
+ * cafe_dconf_list_subdirs:
  * @dir: the dconf directory.
  * @remove_trailing_slash: whether to remove the trailing slash from
  * paths.
@@ -101,14 +101,14 @@ mate_dconf_recursive_reset (const gchar  *dir,
  * Since: 1.7.1
  */
 gchar **
-mate_dconf_list_subdirs (const gchar *dir,
+cafe_dconf_list_subdirs (const gchar *dir,
                          gboolean     remove_trailing_slash)
 {
     GArray       *array;
     gchar       **children;
     int       len;
     int       i;
-    DConfClient  *client = mate_dconf_client_get ();
+    DConfClient  *client = cafe_dconf_client_get ();
 
     array = g_array_new (TRUE, TRUE, sizeof (gchar *));
 
@@ -133,15 +133,15 @@ mate_dconf_list_subdirs (const gchar *dir,
 }
 
 /**
- * mate_dconf_sync:
+ * cafe_dconf_sync:
  *
  * Ensure dconf daemon syncs the written values.
  *
  * Since: 1.7.1
  */
-void mate_dconf_sync (void)
+void cafe_dconf_sync (void)
 {
-    DConfClient  *client = mate_dconf_client_get ();
+    DConfClient  *client = cafe_dconf_client_get ();
     dconf_client_sync (client);
     g_object_unref (client);
 }

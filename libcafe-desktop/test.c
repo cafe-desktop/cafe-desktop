@@ -1,5 +1,5 @@
 /*
- * test.c: general tests for libmate-desktop
+ * test.c: general tests for libcafe-desktop
  *
  * Copyright (C) 2013-2014 Stefano Karapetsas
  *
@@ -23,8 +23,8 @@
  */
 
 #include <config.h>
-#include "mate-desktop.h"
-#include "mate-colorbutton.h"
+#include "cafe-desktop.h"
+#include "cafe-colorbutton.h"
 
 int
 main (int argc, char **argv)
@@ -41,7 +41,7 @@ main (int argc, char **argv)
     gtk_window_set_title (window, "CAFE Desktop Test");
 
     /* create a MateColorButton */
-    widget = mate_color_button_new ();
+    widget = cafe_color_button_new ();
 
     /* add MateColorButton to window */
     gtk_container_add (GTK_CONTAINER (window), widget);

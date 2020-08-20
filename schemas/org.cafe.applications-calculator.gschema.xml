@@ -1,7 +1,7 @@
-<schemalist gettext-domain="mate-desktop">
-  <schema id="org.mate.applications-calculator" path="/org/mate/desktop/applications/calculator/">
+<schemalist gettext-domain="cafe-desktop">
+  <schema id="org.cafe.applications-calculator" path="/org/cafe/desktop/applications/calculator/">
     <key name="exec" type="s">
-      <default>'mate-calc'</default>
+      <default>'cafe-calc'</default>
       <summary>Calculator application</summary>
       <description>Calculator program to use when starting applications that require one.</description>
     </key>

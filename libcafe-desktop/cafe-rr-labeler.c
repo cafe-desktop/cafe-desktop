@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
  *
- * mate-rr-labeler.c - Utility to label monitors to identify them
+ * cafe-rr-labeler.c - Utility to label monitors to identify them
  * while they are being configured.
  *
  * Copyright 2008, Novell, Inc.
@@ -37,7 +37,7 @@
 #include <X11/Xatom.h>
 #include <gdk/gdkx.h>
 
-#include "mate-rr-labeler.h"
+#include "cafe-rr-labeler.h"
 
 struct _MateRRLabelerPrivate {
 	MateRRConfig *config;
@@ -57,9 +57,9 @@ enum {
 	PROP_LAST
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (MateRRLabeler, mate_rr_labeler, G_TYPE_OBJECT);
+G_DEFINE_TYPE_WITH_PRIVATE (MateRRLabeler, cafe_rr_labeler, G_TYPE_OBJECT);
 
-static void mate_rr_labeler_finalize (GObject *object);
+static void cafe_rr_labeler_finalize (GObject *object);
 static void create_label_windows (MateRRLabeler *labeler);
 static void setup_from_config (MateRRLabeler *labeler);
 
@@ -174,7 +174,7 @@ screen_xevent_filter (GdkXEvent      *xevent,
 	if (xev->type == PropertyNotify &&
 	    xev->xproperty.atom == labeler->priv->workarea_atom) {
 		/* update label positions */
-		mate_rr_labeler_hide (labeler);
+		cafe_rr_labeler_hide (labeler);
 		create_label_windows (labeler);
 	}
 
@@ -182,11 +182,11 @@ screen_xevent_filter (GdkXEvent      *xevent,
 }
 
 static void
-mate_rr_labeler_init (MateRRLabeler *labeler)
+cafe_rr_labeler_init (MateRRLabeler *labeler)
 {
 	GdkWindow *gdkwindow;
 
-	labeler->priv = mate_rr_labeler_get_instance_private (labeler);
+	labeler->priv = cafe_rr_labeler_get_instance_private (labeler);
 
 	labeler->priv->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 						    "_NET_WORKAREA",
@@ -200,7 +200,7 @@ mate_rr_labeler_init (MateRRLabeler *labeler)
 }
 
 static void
-mate_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *param_spec)
+cafe_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *param_spec)
 {
 	MateRRLabeler *self = CAFE_RR_LABELER (gobject);
 
@@ -214,9 +214,9 @@ mate_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue 
 }
 
 static GObject *
-mate_rr_labeler_constructor (GType type, guint n_construct_properties, GObjectConstructParam *construct_properties)
+cafe_rr_labeler_constructor (GType type, guint n_construct_properties, GObjectConstructParam *construct_properties)
 {
-	MateRRLabeler *self = (MateRRLabeler*) G_OBJECT_CLASS (mate_rr_labeler_parent_class)->constructor (type, n_construct_properties, construct_properties);
+	MateRRLabeler *self = (MateRRLabeler*) G_OBJECT_CLASS (cafe_rr_labeler_parent_class)->constructor (type, n_construct_properties, construct_properties);
 
 	setup_from_config (self);
 
@@ -224,15 +224,15 @@ mate_rr_labeler_constructor (GType type, guint n_construct_properties, GObjectCo
 }
 
 static void
-mate_rr_labeler_class_init (MateRRLabelerClass *klass)
+cafe_rr_labeler_class_init (MateRRLabelerClass *klass)
 {
 	GObjectClass *object_class;
 
 	object_class = (GObjectClass *) klass;
 
-	object_class->set_property = mate_rr_labeler_set_property;
-	object_class->finalize = mate_rr_labeler_finalize;
-	object_class->constructor = mate_rr_labeler_constructor;
+	object_class->set_property = cafe_rr_labeler_set_property;
+	object_class->finalize = cafe_rr_labeler_finalize;
+	object_class->constructor = cafe_rr_labeler_constructor;
 
 	g_object_class_install_property (object_class, PROP_CONFIG, g_param_spec_object ("config",
 											 "Configuration",
@@ -243,7 +243,7 @@ mate_rr_labeler_class_init (MateRRLabelerClass *klass)
 }
 
 static void
-mate_rr_labeler_finalize (GObject *object)
+cafe_rr_labeler_finalize (GObject *object)
 {
 	MateRRLabeler *labeler;
 	GdkWindow      *gdkwindow;
@@ -258,20 +258,20 @@ mate_rr_labeler_finalize (GObject *object)
 	}
 
 	if (labeler->priv->windows != NULL) {
-		mate_rr_labeler_hide (labeler);
+		cafe_rr_labeler_hide (labeler);
 		g_free (labeler->priv->windows);
 	}
 
 	g_free (labeler->priv->palette);
 
-	G_OBJECT_CLASS (mate_rr_labeler_parent_class)->finalize (object);
+	G_OBJECT_CLASS (cafe_rr_labeler_parent_class)->finalize (object);
 }
 
 static int
 count_outputs (MateRRConfig *config)
 {
 	int i;
-	MateRROutputInfo **outputs = mate_rr_config_get_outputs (config);
+	MateRROutputInfo **outputs = cafe_rr_config_get_outputs (config);
 
 	for (i = 0; outputs[i] != NULL; i++)
 		;
@@ -387,7 +387,7 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *
 	gtk_container_set_border_width (GTK_CONTAINER (window), LABEL_WINDOW_PADDING + LABEL_WINDOW_EDGE_THICKNESS);
 
 	/* This is semi-dangerous.  The color is part of the labeler->palette
-	 * array.  Note that in mate_rr_labeler_finalize(), we are careful to
+	 * array.  Note that in cafe_rr_labeler_finalize(), we are careful to
 	 * free the palette only after we free the windows.
 	 */
 	g_object_set_data (G_OBJECT (window), "color", color);
@@ -395,8 +395,8 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *
 	g_signal_connect (window, "draw",
 			  G_CALLBACK (label_window_draw_event_cb), labeler);
 
-	if (mate_rr_config_get_clone (labeler->priv->config)) {
-		/* Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name() */
+	if (cafe_rr_config_get_clone (labeler->priv->config)) {
+		/* Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name() */
 
 		/* Translators:  this is the feature where what you see on your laptop's
 		 * screen is the same as your external monitor.  Here, "Mirror" is being
@@ -406,7 +406,7 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *
 		display_name = g_strdup_printf (_("Mirror Screens"));
 		str = g_strdup_printf ("<b>%s</b>", display_name);
 	} else {
-		display_name = g_strdup_printf ("<b>%s</b>\n<small>%s</small>", mate_rr_output_info_get_display_name (output), mate_rr_output_info_get_name (output));
+		display_name = g_strdup_printf ("<b>%s</b>\n<small>%s</small>", cafe_rr_output_info_get_display_name (output), cafe_rr_output_info_get_name (output));
 		str = g_strdup_printf ("%s", display_name);
 	}
 	g_free (display_name);
@@ -424,7 +424,7 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
 	/* Should we center this at the top edge of the monitor, instead of using the upper-left corner? */
-	mate_rr_output_info_get_geometry (output, &x, &y, NULL, NULL);
+	cafe_rr_output_info_get_geometry (output, &x, &y, NULL, NULL);
 	position_window (labeler, window, x, y);
 
 	gtk_widget_show_all (window);
@@ -443,13 +443,13 @@ create_label_windows (MateRRLabeler *labeler)
 
 	created_window_for_clone = FALSE;
 
-	outputs = mate_rr_config_get_outputs (labeler->priv->config);
+	outputs = cafe_rr_config_get_outputs (labeler->priv->config);
 
 	for (i = 0; i < labeler->priv->num_outputs; i++) {
-		if (!created_window_for_clone && mate_rr_output_info_is_active (outputs[i])) {
+		if (!created_window_for_clone && cafe_rr_output_info_is_active (outputs[i])) {
 			labeler->priv->windows[i] = create_label_window (labeler, outputs[i], labeler->priv->palette + i);
 
-			if (mate_rr_config_get_clone (labeler->priv->config))
+			if (cafe_rr_config_get_clone (labeler->priv->config))
 				created_window_for_clone = TRUE;
 		} else
 			labeler->priv->windows[i] = NULL;
@@ -467,18 +467,18 @@ setup_from_config (MateRRLabeler *labeler)
 }
 
 /**
- * mate_rr_labeler_new:
+ * cafe_rr_labeler_new:
  * @config: Configuration of the screens to label
  *
  * Create a GUI element that will display colored labels on each connected monitor.
  * This is useful when users are required to identify which monitor is which, e.g. for
  * for configuring multiple monitors.
- * The labels will be shown by default, use mate_rr_labeler_hide to hide them.
+ * The labels will be shown by default, use cafe_rr_labeler_hide to hide them.
  *
  * Returns: A new #MateRRLabeler
  */
 MateRRLabeler *
-mate_rr_labeler_new (MateRRConfig *config)
+cafe_rr_labeler_new (MateRRConfig *config)
 {
 	g_return_val_if_fail (CAFE_IS_RR_CONFIG (config), NULL);
 
@@ -486,13 +486,13 @@ mate_rr_labeler_new (MateRRConfig *config)
 }
 
 /**
- * mate_rr_labeler_hide:
+ * cafe_rr_labeler_hide:
  * @labeler: A #MateRRLabeler
  *
  * Hide ouput labels.
  */
 void
-mate_rr_labeler_hide (MateRRLabeler *labeler)
+cafe_rr_labeler_hide (MateRRLabeler *labeler)
 {
 	int i;
 	MateRRLabelerPrivate *priv;
@@ -514,7 +514,7 @@ mate_rr_labeler_hide (MateRRLabeler *labeler)
 }
 
 /**
- * mate_rr_labeler_get_rgba_for_output:
+ * cafe_rr_labeler_get_rgba_for_output:
  * @labeler: A #MateRRLabeler
  * @output: Output device (i.e. monitor) to query
  * @color_out: (out): Color of selected monitor.
@@ -522,7 +522,7 @@ mate_rr_labeler_hide (MateRRLabeler *labeler)
  * Get the color used for the label on a given output (monitor).
  */
 void
-mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color_out)
+cafe_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color_out)
 {
 	int i;
 	MateRROutputInfo **outputs;
@@ -531,7 +531,7 @@ mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *o
 	g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (output));
 	g_return_if_fail (color_out != NULL);
 
-	outputs = mate_rr_config_get_outputs (labeler->priv->config);
+	outputs = cafe_rr_config_get_outputs (labeler->priv->config);
 
 	for (i = 0; i < labeler->priv->num_outputs; i++)
 		if (outputs[i] == output) {
