@@ -12,6 +12,7 @@ requires:
     - gtk3
     - intltool
     - iso-codes
+    - libtool
     - meson
     - make
     - startup-notification
@@ -36,6 +37,7 @@ requires:
     - libgtk-3-dev
     - libgtk-3-doc
     - libstartup-notification0-dev
+    - libtool
     - libx11-dev
     - libxml2-dev
     - libxrandr-dev
@@ -55,6 +57,7 @@ requires:
     - gtk3-devel
     - iso-codes-devel
     - itstool
+    - libtool
     - make
     - meson
     - redhat-rpm-config
@@ -76,6 +79,7 @@ requires:
     - libgtk-3-dev
     - libgtk-3-doc
     - libstartup-notification0-dev
+    - libtool
     - libx11-dev
     - libxml2-dev
     - libxrandr-dev
