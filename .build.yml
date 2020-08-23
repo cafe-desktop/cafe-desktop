@@ -9,6 +9,7 @@ requires:
     - clang
     - gcc
     - git
+    - gtk-doc
     - gobject-introspection
     - gtk3
     - intltool
