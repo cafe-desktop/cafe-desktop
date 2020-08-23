@@ -54,6 +54,7 @@ requires:
     - desktop-file-utils
     - gcc
     - git
+    - gtk-doc
     - gobject-introspection-devel
     - gtk3-devel
     - iso-codes-devel
