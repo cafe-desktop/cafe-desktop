@@ -5,22 +5,22 @@
    Copyright (C) 2001 Sid Vicious
    All rights reserved.
 
-   This file is part of the Mate Library.
+   This file is part of the Cafe Library.
 
    Developed by Elliot Lee <sopwith@redhat.com> and Sid Vicious
 
-   The Mate Library is free software; you can redistribute it and/or
+   The Cafe Library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public License as
    published by the Free Software Foundation; either version 2 of the
    License, or (at your option) any later version.
 
-   The Mate Library is distributed in the hope that it will be useful,
+   The Cafe Library is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
    Library General Public License for more details.
 
    You should have received a copy of the GNU Library General Public
-   License along with the Mate Library; see the file COPYING.LIB.  If not,
+   License along with the Cafe Library; see the file COPYING.LIB.  If not,
    write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
    Boston, MA 02110-1301, USA.  */
 /*
@@ -61,13 +61,13 @@
 
 #include "private.h"
 
-struct _MateDesktopItem {
+struct _CafeDesktopItem {
 	int refcount;
 
 	/* all languages used */
 	GList *languages;
 
-	MateDesktopItemType type;
+	CafeDesktopItemType type;
 
 	/* `modified' means that the ditem has been
 	 * modified since the last save. */
@@ -122,18 +122,18 @@ typedef struct {
 	gsize pos;
 } ReadBuf;
 
-static MateDesktopItem *ditem_load (ReadBuf           *rb,
+static CafeDesktopItem *ditem_load (ReadBuf           *rb,
 				     gboolean           no_translations,
 				     GError           **error);
-static gboolean          ditem_save (MateDesktopItem  *item,
+static gboolean          ditem_save (CafeDesktopItem  *item,
 				     const char        *uri,
 				     GError           **error);
 
-static void cafe_desktop_item_set_location_gfile (MateDesktopItem *item,
+static void cafe_desktop_item_set_location_gfile (CafeDesktopItem *item,
 						   GFile            *file);
 
-static MateDesktopItem *cafe_desktop_item_new_from_gfile (GFile *file,
-							    MateDesktopItemLoadFlags flags,
+static CafeDesktopItem *cafe_desktop_item_new_from_gfile (GFile *file,
+							    CafeDesktopItemLoadFlags flags,
 							    GError **error);
 
 static int
@@ -308,7 +308,7 @@ readbuf_close (ReadBuf *rb)
 	g_free (rb);
 }
 
-static MateDesktopItemType
+static CafeDesktopItemType
 type_from_string (const char *type)
 {
 	if (!type)
@@ -352,18 +352,18 @@ type_from_string (const char *type)
 /**
  * cafe_desktop_item_new:
  *
- * Creates a MateDesktopItem object. The reference count on the returned value is set to '1'.
+ * Creates a CafeDesktopItem object. The reference count on the returned value is set to '1'.
  *
- * Returns: The new MateDesktopItem
+ * Returns: The new CafeDesktopItem
  */
-MateDesktopItem *
+CafeDesktopItem *
 cafe_desktop_item_new (void)
 {
-	MateDesktopItem *retval;
+	CafeDesktopItem *retval;
 
 	_cafe_desktop_init_i18n ();
 
-	retval = g_new0 (MateDesktopItem, 1);
+	retval = g_new0 (CafeDesktopItem, 1);
 
 	retval->refcount++;
 
@@ -419,16 +419,16 @@ copy_string_hash (gpointer key, gpointer value, gpointer user_data)
  * cafe_desktop_item_copy:
  * @item: The item to be copied
  *
- * Creates a copy of a MateDesktopItem.  The new copy has a refcount of 1.
+ * Creates a copy of a CafeDesktopItem.  The new copy has a refcount of 1.
  * Note: Section stack is NOT copied.
  *
  * Returns: The new copy
  */
-MateDesktopItem *
-cafe_desktop_item_copy (const MateDesktopItem *item)
+CafeDesktopItem *
+cafe_desktop_item_copy (const CafeDesktopItem *item)
 {
 	GList *li;
-	MateDesktopItem *retval;
+	CafeDesktopItem *retval;
 
 	g_return_val_if_fail (item != NULL, NULL);
 	g_return_val_if_fail (item->refcount > 0, NULL);
@@ -468,7 +468,7 @@ cafe_desktop_item_copy (const MateDesktopItem *item)
 }
 
 static void
-read_sort_order (MateDesktopItem *item, GFile *dir)
+read_sort_order (CafeDesktopItem *item, GFile *dir)
 {
 	GFile *child;
 	char buf[BUFSIZ];
@@ -499,10 +499,10 @@ read_sort_order (MateDesktopItem *item, GFile *dir)
 	}
 }
 
-static MateDesktopItem *
+static CafeDesktopItem *
 make_fake_directory (GFile *dir)
 {
-	MateDesktopItem *item;
+	CafeDesktopItem *item;
 	GFile *child;
 
 	item = cafe_desktop_item_new ();
@@ -523,19 +523,19 @@ make_fake_directory (GFile *dir)
 
 /**
  * cafe_desktop_item_new_from_file:
- * @file: The filename or directory path to load the MateDesktopItem from
+ * @file: The filename or directory path to load the CafeDesktopItem from
  * @flags: Flags to influence the loading process
  *
- * This function loads 'file' and turns it into a MateDesktopItem.
+ * This function loads 'file' and turns it into a CafeDesktopItem.
  *
  * Returns: The newly loaded item.
  */
-MateDesktopItem *
+CafeDesktopItem *
 cafe_desktop_item_new_from_file (const char *file,
-				  MateDesktopItemLoadFlags flags,
+				  CafeDesktopItemLoadFlags flags,
 				  GError **error)
 {
-	MateDesktopItem *retval;
+	CafeDesktopItem *retval;
 	GFile *gfile;
 
 	g_return_val_if_fail (file != NULL, NULL);
@@ -549,19 +549,19 @@ cafe_desktop_item_new_from_file (const char *file,
 
 /**
  * cafe_desktop_item_new_from_uri:
- * @uri: URI to load the MateDesktopItem from
+ * @uri: URI to load the CafeDesktopItem from
  * @flags: Flags to influence the loading process
  *
- * This function loads 'uri' and turns it into a MateDesktopItem.
+ * This function loads 'uri' and turns it into a CafeDesktopItem.
  *
  * Returns: The newly loaded item.
  */
-MateDesktopItem *
+CafeDesktopItem *
 cafe_desktop_item_new_from_uri (const char *uri,
-				 MateDesktopItemLoadFlags flags,
+				 CafeDesktopItemLoadFlags flags,
 				 GError **error)
 {
-	MateDesktopItem *retval;
+	CafeDesktopItem *retval;
 	GFile *file;
 
 	g_return_val_if_fail (uri != NULL, NULL);
@@ -573,12 +573,12 @@ cafe_desktop_item_new_from_uri (const char *uri,
 	return retval;
 }
 
-static MateDesktopItem *
+static CafeDesktopItem *
 cafe_desktop_item_new_from_gfile (GFile *file,
-				   MateDesktopItemLoadFlags flags,
+				   CafeDesktopItemLoadFlags flags,
 				   GError **error)
 {
-	MateDesktopItem *retval;
+	CafeDesktopItem *retval;
 	GFile *subfn;
 	GFileInfo *info;
 	GFileType type;
@@ -687,23 +687,23 @@ cafe_desktop_item_new_from_gfile (GFile *file,
 
 /**
  * cafe_desktop_item_new_from_string:
- * @string: string to load the MateDesktopItem from
+ * @string: string to load the CafeDesktopItem from
  * @length: length of string, or -1 to use strlen
  * @flags: Flags to influence the loading process
  * @error: place to put errors
  *
- * This function turns the contents of the string into a MateDesktopItem.
+ * This function turns the contents of the string into a CafeDesktopItem.
  *
  * Returns: The newly loaded item.
  */
-MateDesktopItem *
+CafeDesktopItem *
 cafe_desktop_item_new_from_string (const char *uri,
 				    const char *string,
 				    gssize length,
-				    MateDesktopItemLoadFlags flags,
+				    CafeDesktopItemLoadFlags flags,
 				    GError **error)
 {
-	MateDesktopItem *retval;
+	CafeDesktopItem *retval;
 	ReadBuf *rb;
 
 	g_return_val_if_fail (string != NULL, NULL);
@@ -766,20 +766,20 @@ file_from_basename (const char *basename)
 
 /**
  * cafe_desktop_item_new_from_basename:
- * @basename: The basename of the MateDesktopItem to load.
+ * @basename: The basename of the CafeDesktopItem to load.
  * @flags: Flags to influence the loading process
  *
  * This function loads 'basename' from a system data directory and
- * returns its MateDesktopItem.
+ * returns its CafeDesktopItem.
  *
  * Returns: The newly loaded item.
  */
-MateDesktopItem *
+CafeDesktopItem *
 cafe_desktop_item_new_from_basename (const char *basename,
-                                      MateDesktopItemLoadFlags flags,
+                                      CafeDesktopItemLoadFlags flags,
                                       GError **error)
 {
-	MateDesktopItem *retval;
+	CafeDesktopItem *retval;
 	char *file;
 
 	g_return_val_if_fail (basename != NULL, NULL);
@@ -802,7 +802,7 @@ cafe_desktop_item_new_from_basename (const char *basename,
 /**
  * cafe_desktop_item_save:
  * @item: A desktop item
- * @under: A new uri (location) for this #MateDesktopItem
+ * @under: A new uri (location) for this #CafeDesktopItem
  * @force: Save even if it wasn't modified
  * @error: #GError return
  *
@@ -813,7 +813,7 @@ cafe_desktop_item_new_from_basename (const char *basename,
  * Returns: boolean. %TRUE if the file was saved, %FALSE otherwise
  */
 gboolean
-cafe_desktop_item_save (MateDesktopItem *item,
+cafe_desktop_item_save (CafeDesktopItem *item,
 			 const char *under,
 			 gboolean force,
 			 GError **error)
@@ -855,8 +855,8 @@ cafe_desktop_item_save (MateDesktopItem *item,
  *
  * Returns: the newly referenced @item
  */
-MateDesktopItem *
-cafe_desktop_item_ref (MateDesktopItem *item)
+CafeDesktopItem *
+cafe_desktop_item_ref (CafeDesktopItem *item)
 {
 	g_return_val_if_fail (item != NULL, NULL);
 
@@ -887,7 +887,7 @@ free_section (gpointer data, gpointer user_data)
  * Decreases the reference count of the specified item, and destroys the item if there are no more references left.
  */
 void
-cafe_desktop_item_unref (MateDesktopItem *item)
+cafe_desktop_item_unref (CafeDesktopItem *item)
 {
 	g_return_if_fail (item != NULL);
 	g_return_if_fail (item->refcount > 0);
@@ -919,7 +919,7 @@ cafe_desktop_item_unref (MateDesktopItem *item)
 }
 
 static Section *
-find_section (MateDesktopItem *item, const char *section)
+find_section (CafeDesktopItem *item, const char *section)
 {
 	GList *li;
 	Section *sec;
@@ -948,7 +948,7 @@ find_section (MateDesktopItem *item, const char *section)
 }
 
 static Section *
-section_from_key (MateDesktopItem *item, const char *key)
+section_from_key (CafeDesktopItem *item, const char *key)
 {
 	char *p;
 	char *name;
@@ -982,13 +982,13 @@ key_basename (const char *key)
 
 
 static const char *
-lookup (const MateDesktopItem *item, const char *key)
+lookup (const CafeDesktopItem *item, const char *key)
 {
 	return g_hash_table_lookup (item->main_hash, key);
 }
 
 static const char *
-lookup_locale (const MateDesktopItem *item, const char *key, const char *locale)
+lookup_locale (const CafeDesktopItem *item, const char *key, const char *locale)
 {
 	if (locale == NULL ||
 	    strcmp (locale, "C") == 0) {
@@ -1003,7 +1003,7 @@ lookup_locale (const MateDesktopItem *item, const char *key, const char *locale)
 }
 
 static const char *
-lookup_best_locale (const MateDesktopItem *item, const char *key)
+lookup_best_locale (const CafeDesktopItem *item, const char *key)
 {
 	const char * const *langs_pointer;
 	int                 i;
@@ -1021,7 +1021,7 @@ lookup_best_locale (const MateDesktopItem *item, const char *key)
 }
 
 static void
-set (MateDesktopItem *item, const char *key, const char *value)
+set (CafeDesktopItem *item, const char *key, const char *value)
 {
 	Section *sec = section_from_key (item, key);
 
@@ -1070,7 +1070,7 @@ set (MateDesktopItem *item, const char *key, const char *value)
 }
 
 static void
-set_locale (MateDesktopItem *item, const char *key,
+set_locale (CafeDesktopItem *item, const char *key,
 	    const char *locale, const char *value)
 {
 	if (locale == NULL ||
@@ -1283,7 +1283,7 @@ append_first_converted (GString         *str,
 }
 
 static gboolean
-do_percent_subst (const MateDesktopItem  *item,
+do_percent_subst (const CafeDesktopItem  *item,
 		  const char              *arg,
 		  GString                 *str,
 		  gboolean                 in_single_quotes,
@@ -1420,7 +1420,7 @@ do_percent_subst (const MateDesktopItem  *item,
 }
 
 static char *
-expand_string (const MateDesktopItem  *item,
+expand_string (const CafeDesktopItem  *item,
 	       const char              *s,
 	       GSList                  *args,
 	       GSList                 **arg_ptr,
@@ -1756,7 +1756,7 @@ dummy_child_watch (GPid         pid,
 }
 
 static int
-ditem_execute (const MateDesktopItem *item,
+ditem_execute (const CafeDesktopItem *item,
 	       const char *exec,
 	       GList *file_list,
 	       GdkScreen *screen,
@@ -1976,7 +1976,7 @@ ditem_execute (const MateDesktopItem *item,
 						      launch_time);
 
 			/* Don't allow accidental reuse of same timestamp */
-			((MateDesktopItem *)item)->launch_time = 0;
+			((CafeDesktopItem *)item)->launch_time = 0;
 
 			envp = make_spawn_environment_for_sn_context (sn_context, envp);
 			if (free_me)
@@ -2070,9 +2070,9 @@ strip_the_amp (char *exec)
 
 static int
 cafe_desktop_item_launch_on_screen_with_env (
-		const MateDesktopItem       *item,
+		const CafeDesktopItem       *item,
 		GList                        *file_list,
-		MateDesktopItemLaunchFlags   flags,
+		CafeDesktopItemLaunchFlags   flags,
 		GdkScreen                    *screen,
 		int                           workspace,
 		char                        **envp,
@@ -2089,7 +2089,7 @@ cafe_desktop_item_launch_on_screen_with_env (
 		gboolean    retval;
 
 		url = cafe_desktop_item_get_string (item, CAFE_DESKTOP_ITEM_URL);
-		/* Mate panel used to put this in Exec */
+		/* Cafe panel used to put this in Exec */
 		if (!(url && url[0] != '\0'))
 			url = exec;
 
@@ -2162,7 +2162,7 @@ cafe_desktop_item_launch_on_screen_with_env (
  * optionally appending additional arguments to its command line.  It uses
  * #g_shell_parse_argv to parse the the exec string into a vector which is
  * then passed to #g_spawn_async for execution. This can return all
- * the errors from MateURL, #g_shell_parse_argv and #g_spawn_async,
+ * the errors from CafeURL, #g_shell_parse_argv and #g_spawn_async,
  * in addition to it's own.  The files are
  * only added if the entry defines one of the standard % strings in it's
  * Exec field.
@@ -2172,9 +2172,9 @@ cafe_desktop_item_launch_on_screen_with_env (
  * is returned and @error is set.
  */
 int
-cafe_desktop_item_launch (const MateDesktopItem       *item,
+cafe_desktop_item_launch (const CafeDesktopItem       *item,
 			   GList                        *file_list,
-			   MateDesktopItemLaunchFlags   flags,
+			   CafeDesktopItemLaunchFlags   flags,
 			   GError                      **error)
 {
 	return cafe_desktop_item_launch_on_screen_with_env (
@@ -2198,9 +2198,9 @@ cafe_desktop_item_launch (const MateDesktopItem       *item,
  * is returned and @error is set.
  */
 int
-cafe_desktop_item_launch_with_env (const MateDesktopItem       *item,
+cafe_desktop_item_launch_with_env (const CafeDesktopItem       *item,
 				    GList                        *file_list,
-				    MateDesktopItemLaunchFlags   flags,
+				    CafeDesktopItemLaunchFlags   flags,
 				    char                        **envp,
 				    GError                      **error)
 {
@@ -2227,9 +2227,9 @@ cafe_desktop_item_launch_with_env (const MateDesktopItem       *item,
  * is returned and @error is set.
  */
 int
-cafe_desktop_item_launch_on_screen (const MateDesktopItem       *item,
+cafe_desktop_item_launch_on_screen (const CafeDesktopItem       *item,
 				     GList                        *file_list,
-				     MateDesktopItemLaunchFlags   flags,
+				     CafeDesktopItemLaunchFlags   flags,
 				     GdkScreen                    *screen,
 				     int                           workspace,
 				     GError                      **error)
@@ -2255,9 +2255,9 @@ cafe_desktop_item_launch_on_screen (const MateDesktopItem       *item,
  * return of the last one is returned.
  */
 int
-cafe_desktop_item_drop_uri_list (const MateDesktopItem *item,
+cafe_desktop_item_drop_uri_list (const CafeDesktopItem *item,
 				  const char *uri_list,
-				  MateDesktopItemLaunchFlags flags,
+				  CafeDesktopItemLaunchFlags flags,
 				  GError **error)
 {
 	return cafe_desktop_item_drop_uri_list_with_env (item, uri_list,
@@ -2281,9 +2281,9 @@ cafe_desktop_item_drop_uri_list (const MateDesktopItem *item,
 * return of the last one is returned.
 */
 int
-cafe_desktop_item_drop_uri_list_with_env (const MateDesktopItem *item,
+cafe_desktop_item_drop_uri_list_with_env (const CafeDesktopItem *item,
 					   const char *uri_list,
-					   MateDesktopItemLaunchFlags flags,
+					   CafeDesktopItemLaunchFlags flags,
 					   char                        **envp,
 					   GError **error)
 {
@@ -2340,7 +2340,7 @@ exec_exists (const char *exec)
  * Returns: A boolean, %TRUE if it exists, %FALSE otherwise.
  */
 gboolean
-cafe_desktop_item_exists (const MateDesktopItem *item)
+cafe_desktop_item_exists (const CafeDesktopItem *item)
 {
 	const char *try_exec;
 	const char *exec;
@@ -2394,10 +2394,10 @@ cafe_desktop_item_exists (const MateDesktopItem *item)
  * how the 'Exec' field should be handeled.
  *
  * Returns: The type of the specified 'item'. The returned
- * memory remains owned by the MateDesktopItem and should not be freed.
+ * memory remains owned by the CafeDesktopItem and should not be freed.
  */
-MateDesktopItemType
-cafe_desktop_item_get_entry_type (const MateDesktopItem *item)
+CafeDesktopItemType
+cafe_desktop_item_get_entry_type (const CafeDesktopItem *item)
 {
 	g_return_val_if_fail (item != NULL, 0);
 	g_return_val_if_fail (item->refcount > 0, 0);
@@ -2406,8 +2406,8 @@ cafe_desktop_item_get_entry_type (const MateDesktopItem *item)
 }
 
 void
-cafe_desktop_item_set_entry_type (MateDesktopItem *item,
-				   MateDesktopItemType type)
+cafe_desktop_item_set_entry_type (CafeDesktopItem *item,
+				   CafeDesktopItemType type)
 {
 	g_return_if_fail (item != NULL);
 	g_return_if_fail (item->refcount > 0);
@@ -2455,10 +2455,10 @@ cafe_desktop_item_set_entry_type (MateDesktopItem *item,
  *
  * Returns: An enum value that specifies whether the item has changed since being loaded.
  */
-MateDesktopItemStatus
-cafe_desktop_item_get_file_status (const MateDesktopItem *item)
+CafeDesktopItemStatus
+cafe_desktop_item_get_file_status (const CafeDesktopItem *item)
 {
-	MateDesktopItemStatus retval;
+	CafeDesktopItemStatus retval;
 	GFile *file;
 	GFileInfo *info;
 
@@ -2564,7 +2564,7 @@ cafe_desktop_item_find_icon (GtkIconTheme *icon_theme,
  * Returns: A newly allocated string
  */
 char *
-cafe_desktop_item_get_icon (const MateDesktopItem *item,
+cafe_desktop_item_get_icon (const CafeDesktopItem *item,
 			     GtkIconTheme *icon_theme)
 {
 	/* maybe this function should be deprecated in favour of find icon
@@ -2589,7 +2589,7 @@ cafe_desktop_item_get_icon (const MateDesktopItem *item,
  *
  */
 const char *
-cafe_desktop_item_get_location (const MateDesktopItem *item)
+cafe_desktop_item_get_location (const CafeDesktopItem *item)
 {
 	g_return_val_if_fail (item != NULL, NULL);
 	g_return_val_if_fail (item->refcount > 0, NULL);
@@ -2605,7 +2605,7 @@ cafe_desktop_item_get_location (const MateDesktopItem *item)
  * Set's the 'location' uri of this item.
  */
 void
-cafe_desktop_item_set_location (MateDesktopItem *item, const char *location)
+cafe_desktop_item_set_location (CafeDesktopItem *item, const char *location)
 {
 	g_return_if_fail (item != NULL);
 	g_return_if_fail (item->refcount > 0);
@@ -2655,7 +2655,7 @@ cafe_desktop_item_set_location (MateDesktopItem *item, const char *location)
  * Set's the 'location' uri of this item to the given @file.
  */
 void
-cafe_desktop_item_set_location_file (MateDesktopItem *item, const char *file)
+cafe_desktop_item_set_location_file (CafeDesktopItem *item, const char *file)
 {
 	g_return_if_fail (item != NULL);
 	g_return_if_fail (item->refcount > 0);
@@ -2672,7 +2672,7 @@ cafe_desktop_item_set_location_file (MateDesktopItem *item, const char *file)
 }
 
 static void
-cafe_desktop_item_set_location_gfile (MateDesktopItem *item, GFile *file)
+cafe_desktop_item_set_location_gfile (CafeDesktopItem *item, GFile *file)
 {
 	g_return_if_fail (item != NULL);
 	g_return_if_fail (item->refcount > 0);
@@ -2693,7 +2693,7 @@ cafe_desktop_item_set_location_gfile (MateDesktopItem *item, GFile *file)
  */
 
 gboolean
-cafe_desktop_item_attr_exists (const MateDesktopItem *item,
+cafe_desktop_item_attr_exists (const CafeDesktopItem *item,
 				const char *attr)
 {
 	g_return_val_if_fail (item != NULL, FALSE);
@@ -2707,7 +2707,7 @@ cafe_desktop_item_attr_exists (const MateDesktopItem *item,
  * String type
  */
 const char *
-cafe_desktop_item_get_string (const MateDesktopItem *item,
+cafe_desktop_item_get_string (const CafeDesktopItem *item,
 			       const char *attr)
 {
 	g_return_val_if_fail (item != NULL, NULL);
@@ -2718,7 +2718,7 @@ cafe_desktop_item_get_string (const MateDesktopItem *item,
 }
 
 void
-cafe_desktop_item_set_string (MateDesktopItem *item,
+cafe_desktop_item_set_string (CafeDesktopItem *item,
 			       const char *attr,
 			       const char *value)
 {
@@ -2735,7 +2735,7 @@ cafe_desktop_item_set_string (MateDesktopItem *item,
 /*
  * LocaleString type
  */
-const char* cafe_desktop_item_get_localestring(const MateDesktopItem* item, const char* attr)
+const char* cafe_desktop_item_get_localestring(const CafeDesktopItem* item, const char* attr)
 {
 	g_return_val_if_fail(item != NULL, NULL);
 	g_return_val_if_fail(item->refcount > 0, NULL);
@@ -2744,7 +2744,7 @@ const char* cafe_desktop_item_get_localestring(const MateDesktopItem* item, cons
 	return lookup_best_locale(item, attr);
 }
 
-const char* cafe_desktop_item_get_localestring_lang(const MateDesktopItem* item, const char* attr, const char* language)
+const char* cafe_desktop_item_get_localestring_lang(const CafeDesktopItem* item, const char* attr, const char* language)
 {
 	g_return_val_if_fail(item != NULL, NULL);
 	g_return_val_if_fail(item->refcount > 0, NULL);
@@ -2768,7 +2768,7 @@ const char* cafe_desktop_item_get_localestring_lang(const MateDesktopItem* item,
  * if the attribute is invalid or there is no matching locale.
  */
 const char *
-cafe_desktop_item_get_attr_locale (const MateDesktopItem *item,
+cafe_desktop_item_get_attr_locale (const CafeDesktopItem *item,
 				    const char             *attr)
 {
 	const char * const *langs_pointer;
@@ -2787,7 +2787,7 @@ cafe_desktop_item_get_attr_locale (const MateDesktopItem *item,
 }
 
 GList *
-cafe_desktop_item_get_languages (const MateDesktopItem *item,
+cafe_desktop_item_get_languages (const CafeDesktopItem *item,
 				  const char *attr)
 {
 	GList *li;
@@ -2824,7 +2824,7 @@ get_language (void)
 }
 
 void
-cafe_desktop_item_set_localestring (MateDesktopItem *item,
+cafe_desktop_item_set_localestring (CafeDesktopItem *item,
 				     const char *attr,
 				     const char *value)
 {
@@ -2836,7 +2836,7 @@ cafe_desktop_item_set_localestring (MateDesktopItem *item,
 }
 
 void
-cafe_desktop_item_set_localestring_lang (MateDesktopItem *item,
+cafe_desktop_item_set_localestring_lang (CafeDesktopItem *item,
 					  const char *attr,
 					  const char *language,
 					  const char *value)
@@ -2849,7 +2849,7 @@ cafe_desktop_item_set_localestring_lang (MateDesktopItem *item,
 }
 
 void
-cafe_desktop_item_clear_localestring (MateDesktopItem *item,
+cafe_desktop_item_clear_localestring (CafeDesktopItem *item,
 				       const char *attr)
 {
 	GList *l;
@@ -2869,7 +2869,7 @@ cafe_desktop_item_clear_localestring (MateDesktopItem *item,
  */
 
 char **
-cafe_desktop_item_get_strings (const MateDesktopItem *item,
+cafe_desktop_item_get_strings (const CafeDesktopItem *item,
 				const char *attr)
 {
 	const char *value;
@@ -2887,7 +2887,7 @@ cafe_desktop_item_get_strings (const MateDesktopItem *item,
 }
 
 void
-cafe_desktop_item_set_strings (MateDesktopItem *item,
+cafe_desktop_item_set_strings (CafeDesktopItem *item,
 				const char *attr,
 				char **strings)
 {
@@ -2909,7 +2909,7 @@ cafe_desktop_item_set_strings (MateDesktopItem *item,
  * Boolean type
  */
 gboolean
-cafe_desktop_item_get_boolean (const MateDesktopItem *item,
+cafe_desktop_item_get_boolean (const CafeDesktopItem *item,
 				const char *attr)
 {
 	const char *value;
@@ -2930,7 +2930,7 @@ cafe_desktop_item_get_boolean (const MateDesktopItem *item,
 }
 
 void
-cafe_desktop_item_set_boolean (MateDesktopItem *item,
+cafe_desktop_item_set_boolean (CafeDesktopItem *item,
 				const char *attr,
 				gboolean value)
 {
@@ -2942,7 +2942,7 @@ cafe_desktop_item_set_boolean (MateDesktopItem *item,
 }
 
 void
-cafe_desktop_item_set_launch_time (MateDesktopItem *item,
+cafe_desktop_item_set_launch_time (CafeDesktopItem *item,
 				    guint32           timestamp)
 {
 	g_return_if_fail (item != NULL);
@@ -2954,7 +2954,7 @@ cafe_desktop_item_set_launch_time (MateDesktopItem *item,
  * Clearing attributes
  */
 void
-cafe_desktop_item_clear_section (MateDesktopItem *item,
+cafe_desktop_item_clear_section (CafeDesktopItem *item,
 				  const char *section)
 {
 	Section *sec;
@@ -3365,7 +3365,7 @@ snarf_locale_from_key (const char *key)
 }
 
 static void
-insert_key (MateDesktopItem *item,
+insert_key (CafeDesktopItem *item,
 	    Section *cur_section,
 	    Encoding encoding,
 	    const char *key,
@@ -3481,7 +3481,7 @@ insert_key (MateDesktopItem *item,
 }
 
 static void
-setup_type (MateDesktopItem *item, const char *uri)
+setup_type (CafeDesktopItem *item, const char *uri)
 {
 	const char *type = g_hash_table_lookup (item->main_hash,
 						CAFE_DESKTOP_ITEM_TYPE);
@@ -3507,7 +3507,7 @@ setup_type (MateDesktopItem *item, const char *uri)
 
 /* fallback to find something suitable for C locale */
 static char *
-try_english_key (MateDesktopItem *item, const char *key)
+try_english_key (CafeDesktopItem *item, const char *key)
 {
 	char *str;
 	char *locales[] = { "en_US", "en_GB", "en_AU", "en", NULL };
@@ -3531,7 +3531,7 @@ try_english_key (MateDesktopItem *item, const char *key)
 
 
 static void
-sanitize (MateDesktopItem *item, const char *uri)
+sanitize (CafeDesktopItem *item, const char *uri)
 {
 	const char *type;
 
@@ -3594,7 +3594,7 @@ enum {
 	KeyValue
 };
 
-static MateDesktopItem *
+static CafeDesktopItem *
 ditem_load (ReadBuf *rb,
 	    gboolean no_translations,
 	    GError **error)
@@ -3604,7 +3604,7 @@ ditem_load (ReadBuf *rb,
 	char *next = CharBuffer;
 	int c;
 	Encoding encoding;
-	MateDesktopItem *item;
+	CafeDesktopItem *item;
 	Section *cur_section = NULL;
 	char *key = NULL;
 	gboolean old_kde = FALSE;
@@ -3809,7 +3809,7 @@ stream_printf (GFileOutputStream *stream, const char *format, ...)
 }
 
 static void
-dump_section (MateDesktopItem *item, GFileOutputStream *stream, Section *section)
+dump_section (CafeDesktopItem *item, GFileOutputStream *stream, Section *section)
 {
 	GList *li;
 
@@ -3828,7 +3828,7 @@ dump_section (MateDesktopItem *item, GFileOutputStream *stream, Section *section
 }
 
 static gboolean
-ditem_save (MateDesktopItem *item, const char *uri, GError **error)
+ditem_save (CafeDesktopItem *item, const char *uri, GError **error)
 {
 	GList *li;
 	GFile *file;
@@ -3891,7 +3891,7 @@ cafe_desktop_item_get_type (void)
 	static GType type = 0;
 
 	if (type == 0) {
-		type = g_boxed_type_register_static ("MateDesktopItem",
+		type = g_boxed_type_register_static ("CafeDesktopItem",
 						     _cafe_desktop_item_copy,
 						     _cafe_desktop_item_free);
 	}

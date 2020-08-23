@@ -121,7 +121,7 @@ msgid ""
 msgstr ""
 "Der Name »CAFE« wird abgeleitet von yerba maté, eine Stechpalmenart, die im "
 "subtropischen Südamerika heimisch ist. Seine Blätter enthalten Koffein und "
-"werden verwendet, um Infusionen und ein Getränk namens Mate herzustellen."
+"werden verwendet, um Infusionen und ein Getränk namens Cafe herzustellen."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -1438,7 +1438,7 @@ msgstr "ESD aktivieren"
 
 #: schemas/org.cafe.sound.gschema.xml:16
 msgid "Enable sound server startup."
-msgstr "Den Klangservers beim Mate-Start aktivieren."
+msgstr "Den Klangservers beim Cafe-Start aktivieren."
 
 #: schemas/org.cafe.sound.gschema.xml:20
 msgid "Sounds for events"

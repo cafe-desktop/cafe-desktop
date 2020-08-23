@@ -14,7 +14,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with the Mate Library; see the file COPYING.LIB. If not,
+ * License along with the Cafe Library; see the file COPYING.LIB. If not,
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
@@ -38,35 +38,35 @@
 G_BEGIN_DECLS
 
 
-/* The MateColorButton widget is a simple color picker in a button.
+/* The CafeColorButton widget is a simple color picker in a button.
  * The button displays a sample of the currently selected color.  When
  * the user clicks on the button, a color selection dialog pops up.
  * The color picker emits the "color_set" signal when the color is set.
  */
 
 #define CAFE_TYPE_COLOR_BUTTON             (cafe_color_button_get_type ())
-#define CAFE_COLOR_BUTTON(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_BUTTON, MateColorButton))
-#define CAFE_COLOR_BUTTON_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_BUTTON, MateColorButtonClass))
+#define CAFE_COLOR_BUTTON(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_BUTTON, CafeColorButton))
+#define CAFE_COLOR_BUTTON_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_BUTTON, CafeColorButtonClass))
 #define CAFE_IS_COLOR_BUTTON(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_BUTTON))
 #define CAFE_IS_COLOR_BUTTON_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_COLOR_BUTTON))
-#define CAFE_COLOR_BUTTON_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_COLOR_BUTTON, MateColorButtonClass))
+#define CAFE_COLOR_BUTTON_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_COLOR_BUTTON, CafeColorButtonClass))
 
-typedef struct _MateColorButton          MateColorButton;
-typedef struct _MateColorButtonClass     MateColorButtonClass;
-typedef struct _MateColorButtonPrivate   MateColorButtonPrivate;
+typedef struct _CafeColorButton          CafeColorButton;
+typedef struct _CafeColorButtonClass     CafeColorButtonClass;
+typedef struct _CafeColorButtonPrivate   CafeColorButtonPrivate;
 
-struct _MateColorButton {
+struct _CafeColorButton {
   GtkButton button;
 
   /*< private >*/
 
-  MateColorButtonPrivate *priv;
+  CafeColorButtonPrivate *priv;
 };
 
-struct _MateColorButtonClass {
+struct _CafeColorButtonClass {
   GtkButtonClass parent_class;
 
-  void (* color_set) (MateColorButton *cp);
+  void (* color_set) (CafeColorButton *cp);
 
   /* Padding for future expansion */
   void (*_gtk_reserved1) (void);
@@ -79,23 +79,23 @@ struct _MateColorButtonClass {
 GType      cafe_color_button_get_type       (void) G_GNUC_CONST;
 GtkWidget *cafe_color_button_new            (void);
 GtkWidget *cafe_color_button_new_with_color (const GdkColor *color);
-void       cafe_color_button_set_color      (MateColorButton *color_button,
+void       cafe_color_button_set_color      (CafeColorButton *color_button,
 					    const GdkColor *color);
-void       cafe_color_button_set_rgba       (MateColorButton *color_button,
+void       cafe_color_button_set_rgba       (CafeColorButton *color_button,
 					     const GdkRGBA   *color);
-void       cafe_color_button_set_alpha      (MateColorButton *color_button,
+void       cafe_color_button_set_alpha      (CafeColorButton *color_button,
 					    guint16         alpha);
-void       cafe_color_button_get_color      (MateColorButton *color_button,
+void       cafe_color_button_get_color      (CafeColorButton *color_button,
 					    GdkColor       *color);
-void       cafe_color_button_get_rgba       (MateColorButton *color_button,
+void       cafe_color_button_get_rgba       (CafeColorButton *color_button,
 					     GdkRGBA         *color);
-guint16    cafe_color_button_get_alpha      (MateColorButton *color_button);
-void       cafe_color_button_set_use_alpha  (MateColorButton *color_button,
+guint16    cafe_color_button_get_alpha      (CafeColorButton *color_button);
+void       cafe_color_button_set_use_alpha  (CafeColorButton *color_button,
 					    gboolean        use_alpha);
-gboolean   cafe_color_button_get_use_alpha  (MateColorButton *color_button);
-void       cafe_color_button_set_title      (MateColorButton *color_button,
+gboolean   cafe_color_button_get_use_alpha  (CafeColorButton *color_button);
+void       cafe_color_button_set_title      (CafeColorButton *color_button,
 					    const gchar    *title);
-const gchar *cafe_color_button_get_title (MateColorButton *color_button);
+const gchar *cafe_color_button_get_title (CafeColorButton *color_button);
 
 
 G_END_DECLS

@@ -276,7 +276,7 @@
 
 ========== el.po ==========
 # translation of cafe-desktop.HEAD.po to Greek
-# Mate-core Greek PO file.
+# Cafe-core Greek PO file.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2005, 2006, 2007, 2009 Free Software Foundation, Inc.
 #
 # simos: 874 messages, 18Feb2001, (sgpbea).
@@ -622,7 +622,7 @@
 
 ========== ka.po ==========
 # translation of ka.po to Georgian
-# Georgian translation for Mate Desktop.
+# Georgian translation for Cafe Desktop.
 # This file is distributed under the same license as the cafe-desktop package.
 # Vladimer Sichinava <vsichi@gnome.org>.
 #
@@ -722,8 +722,8 @@
 
 ========== lv.po ==========
 # translation of lv.po to Latvian
-# Latvian translation for Mate Desktop.
-# Copyright © 2006 Mate i18n Project for Latvian.
+# Latvian translation for Cafe Desktop.
+# Copyright © 2006 Cafe i18n Project for Latvian.
 # Copyright (C) 2000, 2006, 2007, 2009 Free Software Foundation, Inc.
 #
 # P�eris Krij�is <peterisk@apollo.lv>, 2000.
@@ -745,7 +745,7 @@
 
 
 ========== mg.po ==========
-# Malagasy translation of Mate-desktop.
+# Malagasy translation of Cafe-desktop.
 # Copyright (C) 2006-2008 THE cafe-desktop'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the cafe-desktop package.
 # Thierry Randrianiriana <randrianiriana@gmail.com>, 2006-2008.
@@ -1082,7 +1082,7 @@
 # Andraž Tori <andraz.tori1@guest.arnes.si>, 2000.
 # Matjaž Horvat <m@owca.info>, 2006.
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
-# Matej Urbančič <cafeju@svn.gnome.org>, 2007 - 2010.
+# Cafej Urbančič <cafeju@svn.gnome.org>, 2007 - 2010.
 #
 
 
@@ -1143,7 +1143,7 @@
 
 ========== ta.po ==========
 # translation of cafe-desktop.master.ta.po to Tamil
-# Tamil translation of Mate-Desktop messages.
+# Tamil translation of Cafe-Desktop messages.
 # Copyright (C) 2001, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # Dinesh Nadarajah <n_dinesh@yahoo.com>, 2001.
@@ -1267,7 +1267,7 @@
 ========== wa.po ==========
 # Traduction into the walloon language.
 #
-# Si vos voloz donner on côp di spale pol ratournaedje di Mate (ou des
+# Si vos voloz donner on côp di spale pol ratournaedje di Cafe (ou des
 # ôtes libes programes) sicrijhoz mu a l' adresse emile
 # <srtxg@chanae.alphanet.ch>; nos avons co bråmint di l' ovraedje a fé.
 #
@@ -1328,12 +1328,12 @@
 ========== zh_HK.po ==========
 # Chinese (Hong Kong) translation of cafe-desktop.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2007 Free Software Foundation, Inc.
-# Mate-core:
+# Cafe-core:
 # Yuan-Chung Cheng <platin@linux.org.tw>, 1999.
 # Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000.
 # Chih-Wei Huang <cwhuang@linux.org.tw>, 2000.
 # Abel Cheung <abel@oaka.org>, 2001.
-# Mate-desktop:
+# Cafe-desktop:
 # Abel Cheung <abel@oaka.org>, 2001-2003.
 # Abel Cheung <abel@oaka.org>, 2007.
 # Woodman Tuen <wmtuen@gmail.com>, 2007.
@@ -1346,12 +1346,12 @@
 ========== zh_TW.po ==========
 # Chinese (Taiwan) translation of cafe-desktop.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2007 Free Software Foundation, Inc.
-# Mate-core:
+# Cafe-core:
 # Yuan-Chung Cheng <platin@linux.org.tw>, 1999.
 # Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000.
 # Chih-Wei Huang <cwhuang@linux.org.tw>, 2000.
 # Abel Cheung <abel@oaka.org>, 2001.
-# Mate-desktop:
+# Cafe-desktop:
 # Abel Cheung <abel@oaka.org>, 2001-2003.
 # Abel Cheung <abel@oaka.org>, 2007.
 # Woodman Tuen <wmtuen@gmail.com>, 2007.

@@ -27,7 +27,7 @@
   * thumbnail: Fix typo in optional
   * thumbnail: Remove unused constant SECONDS_BETWEEN_STATS
   * thumbnail: Remove unused #define GDK_PIXBUF_ENABLE_BACKEND
-  * thumbnail: Remove reference to MateIconFactory
+  * thumbnail: Remove reference to CafeIconFactory
   * thumbnail: Simplify init_thumbnailers_dirs()
   * thumbnail: some code-styling fixes
   * Deprecate cafe_desktop_thumbnail_scale_down_pixbuf()
@@ -96,8 +96,8 @@
   * cafe-hsv: avoid duplicate initialization in variable
   * [ci] Enable Clang Static Analyzer
   * cafe-hsv: avoid deprecated 'gdk_device_grab/ungrab'
-  * cafe-colorsel: avoid deprecated 'GtkHSV', use 'MateHSV' instead
-  * MateHSV implementation (GtkHSV fork)
+  * cafe-colorsel: avoid deprecated 'GtkHSV', use 'CafeHSV' instead
+  * CafeHSV implementation (GtkHSV fork)
 
 
 ### cafe-desktop 1.22.0
@@ -162,7 +162,7 @@
 ### cafe-desktop 1.19.1
 
   * Translations update
-  * drop MateAboutDialog
+  * drop CafeAboutDialog
   * cafe-about: remove remains of libunique references
   * cafe-about: switch to GtkAboutDialog
   * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
@@ -222,7 +222,7 @@
 
 ### cafe-desktop 1.14.0
 
-  * Drop MateConf migration script and ancient cafe-conf-import tool
+  * Drop CafeConf migration script and ancient cafe-conf-import tool
   * Fix deprecated usage of GtkHBox and GtkVBox in GTK+3 build
   * Translations update
   * Fix Changelog generation
@@ -265,7 +265,7 @@
 
 ### cafe-desktop 1.10.0
 
-  * Turn MateRRScreen, GnomeRRConfig and GnomeOutputInfo into a GObject.
+  * Turn CafeRRScreen, GnomeRRConfig and GnomeOutputInfo into a GObject.
     Thanks to monsta for helping to test this.
   * Add gobject introspection
   * Many RANDR fixes
@@ -273,12 +273,12 @@
   * use GDK_WINDOW_XID for inter-GTK compatibility
   * Updated mpaste for website change
   * Added org.cafe.debug GSettings schema
-  * Added MateColorButton class to have traditional color selection
+  * Added CafeColorButton class to have traditional color selection
     dialog with GTK3
   * Removed desktop-docs
   * Removed user guide
   * Removed libunique optional dependency
-  * Added MateAboutDialog class to have traditional about dialog with
+  * Added CafeAboutDialog class to have traditional about dialog with
     GTK3 too
 
 ### cafe-desktop 1.8.0

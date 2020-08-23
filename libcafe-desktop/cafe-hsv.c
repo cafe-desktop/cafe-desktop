@@ -45,9 +45,9 @@
 /**
  * SECTION:cafe-hsv
  * @Short_description: A “color wheel” widget
- * @Title: MateHSV
+ * @Title: CafeHSV
  *
- * #MateHSV is the “color wheel” part of a complete color selector widget.
+ * #CafeHSV is the “color wheel” part of a complete color selector widget.
  * It allows to select a color by determining its HSV components in an
  * intuitive way. Moving the selection around the outer ring changes the hue,
  * and moving the selection point inside the inner triangle changes value and
@@ -68,8 +68,8 @@ typedef enum {
   DRAG_SV
 } DragMode;
 
-/* Private part of the MateHSV structure */
-struct _MateHSVPrivate
+/* Private part of the CafeHSV structure */
+struct _CafeHSVPrivate
 {
   /* Color value */
   double h;
@@ -121,20 +121,20 @@ static gboolean cafe_hsv_grab_broken          (GtkWidget          *widget,
                                                GdkEventGrabBroken *event);
 static gboolean cafe_hsv_focus                (GtkWidget          *widget,
                                                GtkDirectionType    direction);
-static void     cafe_hsv_move                 (MateHSV            *hsv,
+static void     cafe_hsv_move                 (CafeHSV            *hsv,
                                                GtkDirectionType    dir);
 
 static guint hsv_signals[LAST_SIGNAL];
 
-G_DEFINE_TYPE_WITH_PRIVATE (MateHSV, cafe_hsv, GTK_TYPE_WIDGET)
+G_DEFINE_TYPE_WITH_PRIVATE (CafeHSV, cafe_hsv, GTK_TYPE_WIDGET)
 
 /* Class initialization function for the HSV color selector */
 static void
-cafe_hsv_class_init (MateHSVClass *class)
+cafe_hsv_class_init (CafeHSVClass *class)
 {
   GObjectClass    *gobject_class;
   GtkWidgetClass  *widget_class;
-  MateHSVClass    *hsv_class;
+  CafeHSVClass    *hsv_class;
   GtkBindingSet   *binding_set;
 
   gobject_class = (GObjectClass *) class;
@@ -162,7 +162,7 @@ cafe_hsv_class_init (MateHSVClass *class)
     g_signal_new (I_("changed"),
                   G_OBJECT_CLASS_TYPE (gobject_class),
                   G_SIGNAL_RUN_FIRST,
-                  G_STRUCT_OFFSET (MateHSVClass, changed),
+                  G_STRUCT_OFFSET (CafeHSVClass, changed),
                   NULL, NULL,
                   NULL,
                   G_TYPE_NONE, 0);
@@ -171,7 +171,7 @@ cafe_hsv_class_init (MateHSVClass *class)
     g_signal_new (I_("move"),
                   G_OBJECT_CLASS_TYPE (gobject_class),
                   G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
-                  G_STRUCT_OFFSET (MateHSVClass, move),
+                  G_STRUCT_OFFSET (CafeHSVClass, move),
                   NULL, NULL,
                   NULL,
                   G_TYPE_NONE, 1,
@@ -206,9 +206,9 @@ cafe_hsv_class_init (MateHSVClass *class)
 }
 
 static void
-cafe_hsv_init (MateHSV *hsv)
+cafe_hsv_init (CafeHSV *hsv)
 {
-  MateHSVPrivate *priv;
+  CafeHSVPrivate *priv;
 
   priv = cafe_hsv_get_instance_private (hsv);
   hsv->priv = priv;
@@ -233,8 +233,8 @@ cafe_hsv_destroy (GtkWidget *widget)
 static void
 cafe_hsv_realize (GtkWidget *widget)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
   GtkAllocation allocation;
   GdkWindow *parent_window;
   GdkWindowAttr attr;
@@ -271,8 +271,8 @@ cafe_hsv_realize (GtkWidget *widget)
 static void
 cafe_hsv_unrealize (GtkWidget *widget)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
 
   gdk_window_set_user_data (priv->window, NULL);
   gdk_window_destroy (priv->window);
@@ -286,8 +286,8 @@ cafe_hsv_get_preferred_width (GtkWidget *widget,
                               gint      *minimum,
                               gint      *natural)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
   gint focus_width;
   gint focus_pad;
 
@@ -305,8 +305,8 @@ cafe_hsv_get_preferred_height (GtkWidget *widget,
                                gint      *minimum,
                                gint      *natural)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
   gint focus_width;
   gint focus_pad;
 
@@ -323,8 +323,8 @@ static void
 cafe_hsv_size_allocate (GtkWidget     *widget,
                         GtkAllocation *allocation)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
 
   gtk_widget_set_allocation (widget, allocation);
 
@@ -416,7 +416,7 @@ hsv_to_rgb (gdouble *h,
 
 /* Computes the vertices of the saturation/value triangle */
 static void
-compute_triangle (MateHSV *hsv,
+compute_triangle (CafeHSV *hsv,
                   gint    *hx,
                   gint    *hy,
                   gint    *sx,
@@ -424,7 +424,7 @@ compute_triangle (MateHSV *hsv,
                   gint    *vx,
                   gint    *vy)
 {
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSVPrivate *priv = hsv->priv;
   GtkWidget *widget = GTK_WIDGET (hsv);
   gdouble center_x;
   gdouble center_y;
@@ -447,11 +447,11 @@ compute_triangle (MateHSV *hsv,
 
 /* Computes whether a point is inside the hue ring */
 static gboolean
-is_in_ring (MateHSV *hsv,
+is_in_ring (CafeHSV *hsv,
             gdouble  x,
             gdouble  y)
 {
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSVPrivate *priv = hsv->priv;
   GtkWidget *widget = GTK_WIDGET (hsv);
   gdouble dx, dy, dist;
   gdouble center_x;
@@ -472,7 +472,7 @@ is_in_ring (MateHSV *hsv,
 
 /* Computes a saturation/value pair based on the mouse coordinates */
 static void
-compute_sv (MateHSV  *hsv,
+compute_sv (CafeHSV  *hsv,
             gdouble   x,
             gdouble   y,
             gdouble  *s,
@@ -559,7 +559,7 @@ compute_sv (MateHSV  *hsv,
 
 /* Computes whether a point is inside the saturation/value triangle */
 static gboolean
-is_in_triangle (MateHSV *hsv,
+is_in_triangle (CafeHSV *hsv,
                 gdouble  x,
                 gdouble  y)
 {
@@ -578,7 +578,7 @@ is_in_triangle (MateHSV *hsv,
 
 /* Computes a value based on the mouse coordinates */
 static double
-compute_v (MateHSV *hsv,
+compute_v (CafeHSV *hsv,
            gdouble  x,
            gdouble  y)
 {
@@ -603,11 +603,11 @@ compute_v (MateHSV *hsv,
 /* Event handlers */
 
 static void
-set_cross_grab (MateHSV   *hsv,
+set_cross_grab (CafeHSV   *hsv,
                 GdkDevice *device,
                 guint32    time)
 {
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSVPrivate *priv = hsv->priv;
   GdkCursor *cursor;
 
   cursor = gdk_cursor_new_for_display (gtk_widget_get_display (GTK_WIDGET (hsv)),
@@ -627,8 +627,8 @@ static gboolean
 cafe_hsv_grab_broken (GtkWidget          *widget,
                       GdkEventGrabBroken *event)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
 
   priv->mode = DRAG_NONE;
 
@@ -639,8 +639,8 @@ static gint
 cafe_hsv_button_press (GtkWidget      *widget,
                        GdkEventButton *event)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
   double x, y;
 
   if (priv->mode != DRAG_NONE || event->button != GDK_BUTTON_PRIMARY)
@@ -688,8 +688,8 @@ static gint
 cafe_hsv_button_release (GtkWidget      *widget,
                          GdkEventButton *event)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
   DragMode mode;
   gdouble x, y;
 
@@ -730,8 +730,8 @@ static gint
 cafe_hsv_motion (GtkWidget      *widget,
                  GdkEventMotion *event)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
   gdouble x, y;
 
   if (priv->mode == DRAG_NONE)
@@ -765,10 +765,10 @@ cafe_hsv_motion (GtkWidget      *widget,
 
 /* Paints the hue ring */
 static void
-paint_ring (MateHSV *hsv,
+paint_ring (CafeHSV *hsv,
             cairo_t *cr)
 {
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSVPrivate *priv = hsv->priv;
   GtkWidget *widget = GTK_WIDGET (hsv);
   int xx, yy, width, height;
   gdouble dx, dy, dist;
@@ -906,11 +906,11 @@ get_color (gdouble h,
 
 /* Paints the HSV triangle */
 static void
-paint_triangle (MateHSV  *hsv,
+paint_triangle (CafeHSV  *hsv,
                 cairo_t  *cr,
                 gboolean  draw_focus)
 {
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSVPrivate *priv = hsv->priv;
   GtkWidget *widget = GTK_WIDGET (hsv);
   gint hx, hy, sx, sy, vx, vy; /* HSV vertices */
   gint x1, y1, r1, g1, b1; /* First vertex in scanline order */
@@ -1117,8 +1117,8 @@ static gboolean
 cafe_hsv_draw (GtkWidget *widget,
                cairo_t   *cr)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
   gboolean draw_focus;
 
   draw_focus = gtk_widget_has_visible_focus (widget);
@@ -1145,8 +1145,8 @@ static gboolean
 cafe_hsv_focus (GtkWidget       *widget,
                 GtkDirectionType dir)
 {
-  MateHSV *hsv = CAFE_HSV (widget);
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSV *hsv = CAFE_HSV (widget);
+  CafeHSVPrivate *priv = hsv->priv;
 
   if (!gtk_widget_has_focus (widget))
     {
@@ -1221,12 +1221,12 @@ cafe_hsv_new (void)
  * Color component values must be in the [0.0, 1.0] range.
  */
 void
-cafe_hsv_set_color (MateHSV *hsv,
+cafe_hsv_set_color (CafeHSV *hsv,
                     gdouble  h,
                     gdouble  s,
                     gdouble  v)
 {
-  MateHSVPrivate *priv;
+  CafeHSVPrivate *priv;
 
   g_return_if_fail (CAFE_IS_HSV (hsv));
   g_return_if_fail (h >= 0.0 && h <= 1.0);
@@ -1255,12 +1255,12 @@ cafe_hsv_set_color (MateHSV *hsv,
  * Returned values will be in the [0.0, 1.0] range.
  */
 void
-cafe_hsv_get_color (MateHSV *hsv,
+cafe_hsv_get_color (CafeHSV *hsv,
                     double  *h,
                     double  *s,
                     double  *v)
 {
-  MateHSVPrivate *priv;
+  CafeHSVPrivate *priv;
 
   g_return_if_fail (CAFE_IS_HSV (hsv));
 
@@ -1285,11 +1285,11 @@ cafe_hsv_get_color (MateHSV *hsv,
  * Sets the size and ring width of an HSV color selector.
  */
 void
-cafe_hsv_set_metrics (MateHSV *hsv,
+cafe_hsv_set_metrics (CafeHSV *hsv,
                       gint     size,
                       gint     ring_width)
 {
-  MateHSVPrivate *priv;
+  CafeHSVPrivate *priv;
   int same_size;
 
   g_return_if_fail (CAFE_IS_HSV (hsv));
@@ -1319,11 +1319,11 @@ cafe_hsv_set_metrics (MateHSV *hsv,
  * Queries the size and ring width of an HSV color selector.
  */
 void
-cafe_hsv_get_metrics (MateHSV *hsv,
+cafe_hsv_get_metrics (CafeHSV *hsv,
                       gint    *size,
                       gint    *ring_width)
 {
-  MateHSVPrivate *priv;
+  CafeHSVPrivate *priv;
 
   g_return_if_fail (CAFE_IS_HSV (hsv));
 
@@ -1338,7 +1338,7 @@ cafe_hsv_get_metrics (MateHSV *hsv,
 
 /**
  * cafe_hsv_is_adjusting:
- * @hsv: A #MateHSV
+ * @hsv: A #CafeHSV
  *
  * An HSV color selector can be said to be adjusting if multiple rapid
  * changes are being made to its value, for example, when the user is
@@ -1350,9 +1350,9 @@ cafe_hsv_get_metrics (MateHSV *hsv,
  *     the color value status to be final.
  */
 gboolean
-cafe_hsv_is_adjusting (MateHSV *hsv)
+cafe_hsv_is_adjusting (CafeHSV *hsv)
 {
-  MateHSVPrivate *priv;
+  CafeHSVPrivate *priv;
 
   g_return_val_if_fail (CAFE_IS_HSV (hsv), FALSE);
 
@@ -1362,10 +1362,10 @@ cafe_hsv_is_adjusting (MateHSV *hsv)
 }
 
 static void
-cafe_hsv_move (MateHSV         *hsv,
+cafe_hsv_move (CafeHSV         *hsv,
                GtkDirectionType dir)
 {
-  MateHSVPrivate *priv = hsv->priv;
+  CafeHSVPrivate *priv = hsv->priv;
   gdouble hue, sat, val;
   gint hx, hy, sx, sy, vx, vy; /* HSV vertices */
   gint x, y; /* position in triangle */

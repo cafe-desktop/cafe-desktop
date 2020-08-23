@@ -2,20 +2,20 @@
 
    Copyright 2008, Red Hat, Inc.
 
-   This file is part of the Mate Library.
+   This file is part of the Cafe Library.
 
-   The Mate Library is free software; you can redistribute it and/or
+   The Cafe Library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public License as
    published by the Free Software Foundation; either version 2 of the
    License, or (at your option) any later version.
 
-   The Mate Library is distributed in the hope that it will be useful,
+   The Cafe Library is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
    Library General Public License for more details.
 
    You should have received a copy of the GNU Library General Public
-   License along with the Mate Library; see the file COPYING.LIB.  If not,
+   License along with the Cafe Library; see the file COPYING.LIB.  If not,
    write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth
    Floor, Boston, MA 02110-1301 US.
 
@@ -26,7 +26,7 @@
 #define __CAFE_BG_CROSSFADE_H__
 
 #ifndef CAFE_DESKTOP_USE_UNSTABLE_API
-#error    MateBGCrossfade is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including cafe-bg-crossfade.h
+#error    CafeBGCrossfade is unstable API. You must define CAFE_DESKTOP_USE_UNSTABLE_API before including cafe-bg-crossfade.h
 #endif
 
 #include <glib.h>
@@ -36,44 +36,44 @@
 G_BEGIN_DECLS
 
 #define CAFE_TYPE_BG_CROSSFADE            (cafe_bg_crossfade_get_type ())
-#define CAFE_BG_CROSSFADE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_BG_CROSSFADE, MateBGCrossfade))
-#define CAFE_BG_CROSSFADE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_BG_CROSSFADE, MateBGCrossfadeClass))
+#define CAFE_BG_CROSSFADE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_BG_CROSSFADE, CafeBGCrossfade))
+#define CAFE_BG_CROSSFADE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  CAFE_TYPE_BG_CROSSFADE, CafeBGCrossfadeClass))
 #define CAFE_IS_BG_CROSSFADE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_BG_CROSSFADE))
 #define CAFE_IS_BG_CROSSFADE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  CAFE_TYPE_BG_CROSSFADE))
-#define CAFE_BG_CROSSFADE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  CAFE_TYPE_BG_CROSSFADE, MateBGCrossfadeClass))
+#define CAFE_BG_CROSSFADE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  CAFE_TYPE_BG_CROSSFADE, CafeBGCrossfadeClass))
 
-typedef struct _MateBGCrossfadePrivate MateBGCrossfadePrivate;
-typedef struct _MateBGCrossfade MateBGCrossfade;
-typedef struct _MateBGCrossfadeClass MateBGCrossfadeClass;
+typedef struct _CafeBGCrossfadePrivate CafeBGCrossfadePrivate;
+typedef struct _CafeBGCrossfade CafeBGCrossfade;
+typedef struct _CafeBGCrossfadeClass CafeBGCrossfadeClass;
 
-struct _MateBGCrossfade
+struct _CafeBGCrossfade
 {
     GObject parent_object;
 
-    MateBGCrossfadePrivate *priv;
+    CafeBGCrossfadePrivate *priv;
 };
 
-struct _MateBGCrossfadeClass
+struct _CafeBGCrossfadeClass
 {
     GObjectClass parent_class;
 
-    void (* finished) (MateBGCrossfade *fade, GdkWindow *window);
+    void (* finished) (CafeBGCrossfade *fade, GdkWindow *window);
 };
 
 GType             cafe_bg_crossfade_get_type (void);
-MateBGCrossfade   *cafe_bg_crossfade_new (int width, int height);
+CafeBGCrossfade   *cafe_bg_crossfade_new (int width, int height);
 
-gboolean          cafe_bg_crossfade_set_start_surface (MateBGCrossfade *fade,
+gboolean          cafe_bg_crossfade_set_start_surface (CafeBGCrossfade *fade,
                                                        cairo_surface_t *surface);
-gboolean          cafe_bg_crossfade_set_end_surface (MateBGCrossfade *fade,
+gboolean          cafe_bg_crossfade_set_end_surface (CafeBGCrossfade *fade,
                                                      cairo_surface_t *surface);
 
-void              cafe_bg_crossfade_start (MateBGCrossfade *fade,
+void              cafe_bg_crossfade_start (CafeBGCrossfade *fade,
                                            GdkWindow        *window);
-void              cafe_bg_crossfade_start_widget (MateBGCrossfade *fade,
+void              cafe_bg_crossfade_start_widget (CafeBGCrossfade *fade,
                                                   GtkWidget       *widget);
-gboolean          cafe_bg_crossfade_is_started (MateBGCrossfade *fade);
-void              cafe_bg_crossfade_stop (MateBGCrossfade *fade);
+gboolean          cafe_bg_crossfade_is_started (CafeBGCrossfade *fade);
+void              cafe_bg_crossfade_stop (CafeBGCrossfade *fade);
 
 G_END_DECLS
 

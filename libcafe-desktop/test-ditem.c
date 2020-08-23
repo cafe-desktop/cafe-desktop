@@ -28,8 +28,8 @@
 static void
 test_ditem (const char *file)
 {
-	MateDesktopItem *ditem;
-	MateDesktopItemType type;
+	CafeDesktopItem *ditem;
+	CafeDesktopItemType type;
 	const gchar *text;
 	char *uri;
 	char path[256];
@@ -103,7 +103,7 @@ test_ditem (const char *file)
 static void
 launch_item (const char *file)
 {
-	MateDesktopItem *ditem;
+	CafeDesktopItem *ditem;
 	GList *file_list = NULL;
 	int ret;
 

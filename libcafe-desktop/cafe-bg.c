@@ -84,13 +84,13 @@ typedef struct FileCacheEntry FileCacheEntry;
 #define CACHE_SIZE 4
 
 /*
- *   Implementation of the MateBG class
+ *   Implementation of the CafeBG class
  */
-struct _MateBG {
+struct _CafeBG {
 	GObject		 parent_instance;
 	char		*filename;
-	MateBGPlacement	 placement;
-	MateBGColorType	 color_type;
+	CafeBGPlacement	 placement;
+	CafeBGColorType	 color_type;
 	GdkRGBA	 	 primary;
 	GdkRGBA	 	 secondary;
 	gboolean	 is_enabled;
@@ -110,7 +110,7 @@ struct _MateBG {
 	GList* file_cache;
 };
 
-struct _MateBGClass {
+struct _CafeBGClass {
 	GObjectClass parent_class;
 };
 
@@ -122,7 +122,7 @@ enum {
 
 static guint signals[N_SIGNALS] = {0};
 
-G_DEFINE_TYPE(MateBG, cafe_bg, G_TYPE_OBJECT)
+G_DEFINE_TYPE(CafeBG, cafe_bg, G_TYPE_OBJECT)
 
 static cairo_surface_t *make_root_pixmap     (GdkWindow  *window,
                                               gint        width,
@@ -157,28 +157,28 @@ static void       pixbuf_blend         (GdkPixbuf  *src,
 					double      alpha);
 
 /* Thumbnail utilities */
-static GdkPixbuf *create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
+static GdkPixbuf *create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 						 const char            *filename);
 static gboolean   get_thumb_annotations (GdkPixbuf             *thumb,
 					 int                   *orig_width,
 					 int                   *orig_height);
 
 /* Cache */
-static GdkPixbuf *get_pixbuf_for_size  (MateBG               *bg,
+static GdkPixbuf *get_pixbuf_for_size  (CafeBG               *bg,
 					gint                  num_monitor,
 					int                   width,
 					int                   height);
-static void       clear_cache          (MateBG               *bg);
-static gboolean   is_different         (MateBG               *bg,
+static void       clear_cache          (CafeBG               *bg);
+static gboolean   is_different         (CafeBG               *bg,
 					const char            *filename);
 static time_t     get_mtime            (const char            *filename);
-static GdkPixbuf *create_img_thumbnail (MateBG               *bg,
-					MateDesktopThumbnailFactory *factory,
+static GdkPixbuf *create_img_thumbnail (CafeBG               *bg,
+					CafeDesktopThumbnailFactory *factory,
 					GdkScreen             *screen,
 					int                    dest_width,
 					int                    dest_height,
 					int		       frame_num);
-static SlideShow * get_as_slideshow    (MateBG               *bg,
+static SlideShow * get_as_slideshow    (CafeBG               *bg,
 					const char 	      *filename);
 static Slide *     get_current_slide   (SlideShow 	      *show,
 		   			double    	      *alpha);
@@ -216,7 +216,7 @@ color_to_string (const GdkRGBA *color)
 }
 
 static gboolean
-do_changed (MateBG *bg)
+do_changed (CafeBG *bg)
 {
 	bg->changed_id = 0;
 
@@ -226,7 +226,7 @@ do_changed (MateBG *bg)
 }
 
 static void
-queue_changed (MateBG *bg)
+queue_changed (CafeBG *bg)
 {
 	if (bg->changed_id > 0) {
 		g_source_remove (bg->changed_id);
@@ -240,7 +240,7 @@ queue_changed (MateBG *bg)
 }
 
 static gboolean
-do_transitioned (MateBG *bg)
+do_transitioned (CafeBG *bg)
 {
 	bg->transitioned_id = 0;
 
@@ -255,7 +255,7 @@ do_transitioned (MateBG *bg)
 }
 
 static void
-queue_transitioned (MateBG *bg)
+queue_transitioned (CafeBG *bg)
 {
 	if (bg->transitioned_id > 0) {
 		g_source_remove (bg->transitioned_id);
@@ -270,7 +270,7 @@ queue_transitioned (MateBG *bg)
 
 /* This function loads the user's preferences */
 void
-cafe_bg_load_from_preferences (MateBG *bg)
+cafe_bg_load_from_preferences (CafeBG *bg)
 {
 	GSettings *settings;
 	settings = g_settings_new (CAFE_BG_SCHEMA);
@@ -284,7 +284,7 @@ cafe_bg_load_from_preferences (MateBG *bg)
 
 /* This function loads default system settings */
 void
-cafe_bg_load_from_system_preferences (MateBG *bg)
+cafe_bg_load_from_system_preferences (CafeBG *bg)
 {
 	GSettings *settings;
 
@@ -301,7 +301,7 @@ cafe_bg_load_from_system_preferences (MateBG *bg)
 
 /* This function loads (and optionally resets to) default system settings */
 void
-cafe_bg_load_from_system_gsettings (MateBG    *bg,
+cafe_bg_load_from_system_gsettings (CafeBG    *bg,
 				    GSettings *settings,
 				    gboolean   reset_apply)
 {
@@ -333,14 +333,14 @@ cafe_bg_load_from_system_gsettings (MateBG    *bg,
 }
 
 void
-cafe_bg_load_from_gsettings (MateBG    *bg,
+cafe_bg_load_from_gsettings (CafeBG    *bg,
 			     GSettings *settings)
 {
 	char    *tmp;
 	char    *filename;
-	MateBGColorType ctype;
+	CafeBGColorType ctype;
 	GdkRGBA c1, c2;
-	MateBGPlacement placement;
+	CafeBGPlacement placement;
 
 	g_return_if_fail (CAFE_IS_BG (bg));
 	g_return_if_fail (G_IS_SETTINGS (settings));
@@ -408,7 +408,7 @@ cafe_bg_load_from_gsettings (MateBG    *bg,
 }
 
 void
-cafe_bg_save_to_preferences (MateBG *bg)
+cafe_bg_save_to_preferences (CafeBG *bg)
 {
 	GSettings *settings;
 	settings = g_settings_new (CAFE_BG_SCHEMA);
@@ -418,7 +418,7 @@ cafe_bg_save_to_preferences (MateBG *bg)
 }
 
 void
-cafe_bg_save_to_gsettings (MateBG    *bg,
+cafe_bg_save_to_gsettings (CafeBG    *bg,
 			   GSettings *settings)
 {
 	gchar *primary;
@@ -448,14 +448,14 @@ cafe_bg_save_to_gsettings (MateBG    *bg,
 
 
 static void
-cafe_bg_init (MateBG *bg)
+cafe_bg_init (CafeBG *bg)
 {
 }
 
 static void
 cafe_bg_dispose (GObject *object)
 {
-	MateBG *bg = CAFE_BG (object);
+	CafeBG *bg = CAFE_BG (object);
 
 	if (bg->file_monitor) {
 		g_object_unref (bg->file_monitor);
@@ -470,7 +470,7 @@ cafe_bg_dispose (GObject *object)
 static void
 cafe_bg_finalize (GObject *object)
 {
-	MateBG *bg = CAFE_BG (object);
+	CafeBG *bg = CAFE_BG (object);
 
 	if (bg->changed_id != 0) {
 		g_source_remove (bg->changed_id);
@@ -494,7 +494,7 @@ cafe_bg_finalize (GObject *object)
 }
 
 static void
-cafe_bg_class_init (MateBGClass *klass)
+cafe_bg_class_init (CafeBGClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
@@ -518,15 +518,15 @@ cafe_bg_class_init (MateBGClass *klass)
 					 G_TYPE_NONE, 0);
 }
 
-MateBG *
+CafeBG *
 cafe_bg_new (void)
 {
 	return g_object_new (CAFE_TYPE_BG, NULL);
 }
 
 void
-cafe_bg_set_color (MateBG *bg,
-		    MateBGColorType type,
+cafe_bg_set_color (CafeBG *bg,
+		    CafeBGColorType type,
 		    GdkRGBA *primary,
 		    GdkRGBA *secondary)
 {
@@ -547,8 +547,8 @@ cafe_bg_set_color (MateBG *bg,
 }
 
 void
-cafe_bg_set_placement (MateBG		*bg,
-		       MateBGPlacement	 placement)
+cafe_bg_set_placement (CafeBG		*bg,
+		       CafeBGPlacement	 placement)
 {
 	g_return_if_fail (bg != NULL);
 
@@ -559,8 +559,8 @@ cafe_bg_set_placement (MateBG		*bg,
 	}
 }
 
-MateBGPlacement
-cafe_bg_get_placement (MateBG *bg)
+CafeBGPlacement
+cafe_bg_get_placement (CafeBG *bg)
 {
 	g_return_val_if_fail (bg != NULL, -1);
 
@@ -568,8 +568,8 @@ cafe_bg_get_placement (MateBG *bg)
 }
 
 void
-cafe_bg_get_color (MateBG		*bg,
-		   MateBGColorType	*type,
+cafe_bg_get_color (CafeBG		*bg,
+		   CafeBGColorType	*type,
 		   GdkRGBA		*primary,
 		   GdkRGBA		*secondary)
 {
@@ -586,7 +586,7 @@ cafe_bg_get_color (MateBG		*bg,
 }
 
 void
-cafe_bg_set_draw_background (MateBG	*bg,
+cafe_bg_set_draw_background (CafeBG	*bg,
 			     gboolean	 draw_background)
 {
 	g_return_if_fail (bg != NULL);
@@ -599,7 +599,7 @@ cafe_bg_set_draw_background (MateBG	*bg,
 }
 
 gboolean
-cafe_bg_get_draw_background (MateBG *bg)
+cafe_bg_get_draw_background (CafeBG *bg)
 {
 	g_return_val_if_fail (bg != NULL, FALSE);
 
@@ -607,7 +607,7 @@ cafe_bg_get_draw_background (MateBG *bg)
 }
 
 const gchar *
-cafe_bg_get_filename (MateBG *bg)
+cafe_bg_get_filename (CafeBG *bg)
 {
 	g_return_val_if_fail (bg != NULL, NULL);
 
@@ -622,7 +622,7 @@ get_wallpaper_cache_dir ()
 
 static inline gchar *
 get_wallpaper_cache_prefix_name (gint                     num_monitor,
-				 MateBGPlacement          placement,
+				 CafeBGPlacement          placement,
 				 gint                     width,
 				 gint                     height)
 {
@@ -632,7 +632,7 @@ get_wallpaper_cache_prefix_name (gint                     num_monitor,
 static char *
 get_wallpaper_cache_filename (const char              *filename,
 			      gint                     num_monitor,
-			      MateBGPlacement          placement,
+			      CafeBGPlacement          placement,
 			      gint                     width,
 			      gint                     height)
 {
@@ -703,7 +703,7 @@ cache_file_is_valid (const char *filename,
 }
 
 static void
-refresh_cache_file (MateBG     *bg,
+refresh_cache_file (CafeBG     *bg,
 		    GdkPixbuf  *new_pixbuf,
 		    gint        num_monitor,
 		    gint        width,
@@ -756,14 +756,14 @@ file_changed (GFileMonitor     *file_monitor,
 	      GFileMonitorEvent event_type,
 	      gpointer          user_data)
 {
-	MateBG *bg = CAFE_BG (user_data);
+	CafeBG *bg = CAFE_BG (user_data);
 
 	clear_cache (bg);
 	queue_changed (bg);
 }
 
 void
-cafe_bg_set_filename (MateBG	 *bg,
+cafe_bg_set_filename (CafeBG	 *bg,
 		      const char *filename)
 {
 	g_return_if_fail (bg != NULL);
@@ -796,7 +796,7 @@ cafe_bg_set_filename (MateBG	 *bg,
 }
 
 static void
-draw_color_area (MateBG       *bg,
+draw_color_area (CafeBG       *bg,
 		 GdkPixbuf    *dest,
 		 GdkRectangle *rect)
 {
@@ -835,7 +835,7 @@ draw_color_area (MateBG       *bg,
 }
 
 static void
-draw_color (MateBG    *bg,
+draw_color (CafeBG    *bg,
 	    GdkPixbuf *dest)
 {
 	GdkRectangle rect;
@@ -848,7 +848,7 @@ draw_color (MateBG    *bg,
 }
 
 static void
-draw_color_each_monitor (MateBG    *bg,
+draw_color_each_monitor (CafeBG    *bg,
 			 GdkPixbuf *dest,
 			 GdkScreen *screen)
 {
@@ -899,7 +899,7 @@ pixbuf_clip_to_fit (GdkPixbuf *src,
 }
 
 static GdkPixbuf *
-get_scaled_pixbuf (MateBGPlacement  placement,
+get_scaled_pixbuf (CafeBGPlacement  placement,
 		   GdkPixbuf       *pixbuf,
 		   int width, int height,
 		   int *x, int *y,
@@ -947,7 +947,7 @@ get_scaled_pixbuf (MateBGPlacement  placement,
 
 
 static void
-draw_image_area (MateBG        *bg,
+draw_image_area (CafeBG        *bg,
 		 gint           num_monitor,
 		 GdkPixbuf     *pixbuf,
 		 GdkPixbuf     *dest,
@@ -987,7 +987,7 @@ draw_image_area (MateBG        *bg,
 }
 
 static void
-draw_image_for_thumb (MateBG     *bg,
+draw_image_for_thumb (CafeBG     *bg,
 		      GdkPixbuf  *pixbuf,
 		      GdkPixbuf  *dest)
 {
@@ -1002,7 +1002,7 @@ draw_image_for_thumb (MateBG     *bg,
 }
 
 static void
-draw_once (MateBG    *bg,
+draw_once (CafeBG    *bg,
 	   GdkPixbuf *dest,
 	   gboolean   is_root)
 {
@@ -1027,7 +1027,7 @@ draw_once (MateBG    *bg,
 }
 
 static void
-draw_each_monitor (MateBG    *bg,
+draw_each_monitor (CafeBG    *bg,
 		   GdkPixbuf *dest,
 		   GdkScreen *screen)
 {
@@ -1053,7 +1053,7 @@ draw_each_monitor (MateBG    *bg,
 }
 
 void
-cafe_bg_draw (MateBG     *bg,
+cafe_bg_draw (CafeBG     *bg,
 	       GdkPixbuf *dest,
 	       GdkScreen *screen,
 	       gboolean   is_root)
@@ -1075,7 +1075,7 @@ cafe_bg_draw (MateBG     *bg,
 }
 
 gboolean
-cafe_bg_has_multiple_sizes (MateBG *bg)
+cafe_bg_has_multiple_sizes (CafeBG *bg)
 {
 	SlideShow *show;
 	gboolean ret;
@@ -1094,7 +1094,7 @@ cafe_bg_has_multiple_sizes (MateBG *bg)
 }
 
 static void
-cafe_bg_get_pixmap_size (MateBG   *bg,
+cafe_bg_get_pixmap_size (CafeBG   *bg,
 			  int        width,
 			  int        height,
 			  int       *pixmap_width,
@@ -1128,7 +1128,7 @@ cafe_bg_get_pixmap_size (MateBG   *bg,
 
 /**
  * cafe_bg_create_surface:
- * @bg: MateBG
+ * @bg: CafeBG
  * @window:
  * @width:
  * @height:
@@ -1140,7 +1140,7 @@ cafe_bg_get_pixmap_size (MateBG   *bg,
  * who created it.
  **/
 cairo_surface_t *
-cafe_bg_create_surface (MateBG      *bg,
+cafe_bg_create_surface (CafeBG      *bg,
 		 	GdkWindow   *window,
 			int	     width,
 			int	     height,
@@ -1156,7 +1156,7 @@ cafe_bg_create_surface (MateBG      *bg,
 
 /**
  * cafe_bg_create_surface_scale:
- * @bg: MateBG
+ * @bg: CafeBG
  * @window:
  * @width:
  * @height:
@@ -1169,7 +1169,7 @@ cafe_bg_create_surface (MateBG      *bg,
  * who created it.
  **/
 cairo_surface_t *
-cafe_bg_create_surface_scale (MateBG      *bg,
+cafe_bg_create_surface_scale (CafeBG      *bg,
 			      GdkWindow   *window,
 			      int          width,
 			      int          height,
@@ -1233,7 +1233,7 @@ cafe_bg_create_surface_scale (MateBG      *bg,
  * clients know what colors to draw on top with
  */
 gboolean
-cafe_bg_is_dark (MateBG *bg,
+cafe_bg_is_dark (CafeBG *bg,
 		  int      width,
 		  int      height)
 {
@@ -1329,7 +1329,7 @@ get_original_size (const char *filename,
 }
 
 static const char *
-get_filename_for_size (MateBG *bg, gint best_width, gint best_height)
+get_filename_for_size (CafeBG *bg, gint best_width, gint best_height)
 {
 	SlideShow *show;
 	Slide *slide;
@@ -1350,8 +1350,8 @@ get_filename_for_size (MateBG *bg, gint best_width, gint best_height)
 }
 
 gboolean
-cafe_bg_get_image_size (MateBG	       *bg,
-			 MateDesktopThumbnailFactory *factory,
+cafe_bg_get_image_size (CafeBG	       *bg,
+			 CafeDesktopThumbnailFactory *factory,
 			 int                    best_width,
 			 int                    best_height,
 			 int		       *width,
@@ -1397,8 +1397,8 @@ fit_factor (int from_width, int from_height,
  * Returns: (transfer full): a #GdkPixbuf showing the background as a thumbnail
  */
 GdkPixbuf *
-cafe_bg_create_thumbnail (MateBG               *bg,
-		           MateDesktopThumbnailFactory *factory,
+cafe_bg_create_thumbnail (CafeBG               *bg,
+		           CafeDesktopThumbnailFactory *factory,
 			   GdkScreen             *screen,
 			   int                    dest_width,
 			   int                    dest_height)
@@ -1651,15 +1651,15 @@ cafe_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
  * in that it adds a subtle crossfade animation from the
  * current root pixmap to the new one.
  *
- * Return value: (transfer full): a #MateBGCrossfade object
+ * Return value: (transfer full): a #CafeBGCrossfade object
  **/
-MateBGCrossfade *
+CafeBGCrossfade *
 cafe_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
 		 			    cairo_surface_t *surface)
 {
 	GdkWindow       *root_window;
 	int              width, height;
-	MateBGCrossfade *fade;
+	CafeBGCrossfade *fade;
 	cairo_t         *cr;
 	cairo_surface_t *old_surface;
 
@@ -1832,7 +1832,7 @@ file_cache_entry_delete (FileCacheEntry *ent)
 }
 
 static void
-bound_cache (MateBG *bg)
+bound_cache (CafeBG *bg)
 {
       while (g_list_length (bg->file_cache) >= CACHE_SIZE) {
 	      GList *last_link = g_list_last (bg->file_cache);
@@ -1845,7 +1845,7 @@ bound_cache (MateBG *bg)
 }
 
 static const FileCacheEntry *
-file_cache_lookup (MateBG *bg, FileType type, const char *filename)
+file_cache_lookup (CafeBG *bg, FileType type, const char *filename)
 {
 	GList *list;
 
@@ -1862,7 +1862,7 @@ file_cache_lookup (MateBG *bg, FileType type, const char *filename)
 }
 
 static FileCacheEntry *
-file_cache_entry_new (MateBG *bg,
+file_cache_entry_new (CafeBG *bg,
 		      FileType type,
 		      const char *filename)
 {
@@ -1881,7 +1881,7 @@ file_cache_entry_new (MateBG *bg,
 }
 
 static void
-file_cache_add_pixbuf (MateBG *bg,
+file_cache_add_pixbuf (CafeBG *bg,
 		       const char *filename,
 		       GdkPixbuf *pixbuf)
 {
@@ -1890,7 +1890,7 @@ file_cache_add_pixbuf (MateBG *bg,
 }
 
 static void
-file_cache_add_thumbnail (MateBG *bg,
+file_cache_add_thumbnail (CafeBG *bg,
 			  const char *filename,
 			  GdkPixbuf *pixbuf)
 {
@@ -1899,7 +1899,7 @@ file_cache_add_thumbnail (MateBG *bg,
 }
 
 static void
-file_cache_add_slide_show (MateBG *bg,
+file_cache_add_slide_show (CafeBG *bg,
 			   const char *filename,
 			   SlideShow *show)
 {
@@ -1908,7 +1908,7 @@ file_cache_add_slide_show (MateBG *bg,
 }
 
 static GdkPixbuf *
-load_from_cache_file (MateBG     *bg,
+load_from_cache_file (CafeBG     *bg,
 		      const char *filename,
 		      gint        num_monitor,
 		      gint        best_width,
@@ -1929,7 +1929,7 @@ load_from_cache_file (MateBG     *bg,
 }
 
 static GdkPixbuf *
-get_as_pixbuf_for_size (MateBG    *bg,
+get_as_pixbuf_for_size (CafeBG    *bg,
 			const char *filename,
 			gint         monitor,
 			gint         best_width,
@@ -1984,7 +1984,7 @@ get_as_pixbuf_for_size (MateBG    *bg,
 }
 
 static SlideShow *
-get_as_slideshow (MateBG *bg, const char *filename)
+get_as_slideshow (CafeBG *bg, const char *filename)
 {
 	const FileCacheEntry *ent;
 	if ((ent = file_cache_lookup (bg, SLIDESHOW, filename))) {
@@ -2001,7 +2001,7 @@ get_as_slideshow (MateBG *bg, const char *filename)
 }
 
 static GdkPixbuf *
-get_as_thumbnail (MateBG *bg, MateDesktopThumbnailFactory *factory, const char *filename)
+get_as_thumbnail (CafeBG *bg, CafeDesktopThumbnailFactory *factory, const char *filename)
 {
 	const FileCacheEntry *ent;
 	if ((ent = file_cache_lookup (bg, THUMBNAIL, filename))) {
@@ -2020,7 +2020,7 @@ get_as_thumbnail (MateBG *bg, MateDesktopThumbnailFactory *factory, const char *
 static gboolean
 blow_expensive_caches (gpointer data)
 {
-	MateBG *bg = data;
+	CafeBG *bg = data;
 	GList *list;
 
 	bg->blow_caches_id = 0;
@@ -2046,7 +2046,7 @@ blow_expensive_caches (gpointer data)
 }
 
 static void
-blow_expensive_caches_in_idle (MateBG *bg)
+blow_expensive_caches_in_idle (CafeBG *bg)
 {
 	if (bg->blow_caches_id == 0) {
 		bg->blow_caches_id =
@@ -2059,7 +2059,7 @@ blow_expensive_caches_in_idle (MateBG *bg)
 static gboolean
 on_timeout (gpointer data)
 {
-	MateBG *bg = data;
+	CafeBG *bg = data;
 
 	bg->timeout_id = 0;
 
@@ -2093,7 +2093,7 @@ get_slide_timeout (Slide   *slide)
 }
 
 static void
-ensure_timeout (MateBG *bg,
+ensure_timeout (CafeBG *bg,
 		Slide   *slide)
 {
 	if (!bg->timeout_id) {
@@ -2134,7 +2134,7 @@ get_mtime (const char *filename)
 }
 
 static GdkPixbuf *
-scale_thumbnail (MateBGPlacement placement,
+scale_thumbnail (CafeBGPlacement placement,
 		 const char *filename,
 		 GdkPixbuf *thumb,
 		 GdkScreen *screen,
@@ -2199,8 +2199,8 @@ scale_thumbnail (MateBGPlacement placement,
  * -1 means 'current slide'.
  */
 static GdkPixbuf *
-create_img_thumbnail (MateBG                      *bg,
-		      MateDesktopThumbnailFactory *factory,
+create_img_thumbnail (CafeBG                      *bg,
+		      CafeDesktopThumbnailFactory *factory,
 		      GdkScreen                    *screen,
 		      int                           dest_width,
 		      int                           dest_height,
@@ -2344,7 +2344,7 @@ find_best_size (GSList *sizes, gint width, gint height)
 }
 
 static GdkPixbuf *
-get_pixbuf_for_size (MateBG *bg,
+get_pixbuf_for_size (CafeBG *bg,
 		     gint monitor,
 		     gint best_width,
 		     gint best_height)
@@ -2429,7 +2429,7 @@ get_pixbuf_for_size (MateBG *bg,
 }
 
 static gboolean
-is_different (MateBG    *bg,
+is_different (CafeBG    *bg,
 	      const char *filename)
 {
 	if (!filename && bg->filename) {
@@ -2455,7 +2455,7 @@ is_different (MateBG    *bg,
 }
 
 static void
-clear_cache (MateBG *bg)
+clear_cache (CafeBG *bg)
 {
 	GList *list;
 
@@ -3106,7 +3106,7 @@ read_slideshow_file (const char *filename,
 
 /* Thumbnail utilities */
 static GdkPixbuf *
-create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
+create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 			       const char            *filename)
 {
 	char *thumb;
@@ -3194,7 +3194,7 @@ slideshow_has_multiple_sizes (SlideShow *show)
  * Returns whether the background is a slideshow.
  */
 gboolean
-cafe_bg_changes_with_time (MateBG *bg)
+cafe_bg_changes_with_time (CafeBG *bg)
 {
 	SlideShow *show;
 
@@ -3221,8 +3221,8 @@ cafe_bg_changes_with_time (MateBG *bg)
  * or NULL if frame_num is out of bounds.
  */
 GdkPixbuf *
-cafe_bg_create_frame_thumbnail (MateBG			*bg,
-				 MateDesktopThumbnailFactory	*factory,
+cafe_bg_create_frame_thumbnail (CafeBG			*bg,
+				 CafeDesktopThumbnailFactory	*factory,
 				 GdkScreen			*screen,
 				 int				 dest_width,
 				 int				 dest_height,

@@ -40,10 +40,10 @@ main (int argc, char **argv)
 
     gtk_window_set_title (window, "CAFE Desktop Test");
 
-    /* create a MateColorButton */
+    /* create a CafeColorButton */
     widget = cafe_color_button_new ();
 
-    /* add MateColorButton to window */
+    /* add CafeColorButton to window */
     gtk_container_add (GTK_CONTAINER (window), widget);
 
     /* quit signal */

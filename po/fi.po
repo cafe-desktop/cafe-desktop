@@ -671,7 +671,7 @@ msgid ""
 "CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"Mate käynnistää ensisijaisen liikuntarajoitteisten esteettömyyssovelluksen "
+"Cafe käynnistää ensisijaisen liikuntarajoitteisten esteettömyyssovelluksen "
 "sisäänkirjauduttaessa."
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:5
@@ -695,7 +695,7 @@ msgid ""
 "CAFE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"Mate käynnistää ensisijaisen näkörajoitteisten esteettömyyssovelluksen "
+"Cafe käynnistää ensisijaisen näkörajoitteisten esteettömyyssovelluksen "
 "sisäänkirjauduttaessa."
 
 #: schemas/org.cafe.applications-browser.gschema.xml:5
@@ -801,7 +801,7 @@ msgstr "Piirrä työpöydän tausta"
 
 #: schemas/org.cafe.background.gschema.xml.in:19
 msgid "Have CAFE draw the desktop background."
-msgstr "Anna Maten piirtää työpöydän tausta."
+msgstr "Anna Cafen piirtää työpöydän tausta."
 
 #: schemas/org.cafe.background.gschema.xml.in:23
 msgid "Show Desktop Icons"

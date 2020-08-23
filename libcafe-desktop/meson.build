@@ -62,7 +62,7 @@ endif
 
 cflags = [
   '-DCAFELOCALEDIR="@0@"'.format(cafedt_localedir),
-  '-DG_LOG_DOMAIN="MateDesktop"',
+  '-DG_LOG_DOMAIN="CafeDesktop"',
   '-DISO_CODES_PREFIX="@0@"'.format(iso_codes_prefix),
   '-DPNP_IDS="@0@"'.format(pnp_ids_path),
 ]
@@ -133,7 +133,7 @@ if enable_gir
     nsversion: cafedt_api_version,
     namespace: cafedt_gir_ns,
     symbol_prefix: 'cafe_',
-    identifier_prefix: 'Mate',
+    identifier_prefix: 'Cafe',
     export_packages: cafedt_api_name,
     includes: gir_incs,
     extra_args: gir_extra_args,

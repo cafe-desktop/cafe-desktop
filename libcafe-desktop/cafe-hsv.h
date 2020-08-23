@@ -37,34 +37,34 @@
 G_BEGIN_DECLS
 
 #define CAFE_TYPE_HSV            (cafe_hsv_get_type ())
-#define CAFE_HSV(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_HSV, MateHSV))
-#define CAFE_HSV_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_HSV, MateHSVClass))
+#define CAFE_HSV(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_HSV, CafeHSV))
+#define CAFE_HSV_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_HSV, CafeHSVClass))
 #define CAFE_IS_HSV(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_HSV))
 #define CAFE_IS_HSV_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_HSV))
-#define CAFE_HSV_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_HSV, MateHSVClass))
+#define CAFE_HSV_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_HSV, CafeHSVClass))
 
 
-typedef struct _MateHSV              MateHSV;
-typedef struct _MateHSVPrivate       MateHSVPrivate;
-typedef struct _MateHSVClass         MateHSVClass;
+typedef struct _CafeHSV              CafeHSV;
+typedef struct _CafeHSVPrivate       CafeHSVPrivate;
+typedef struct _CafeHSVClass         CafeHSVClass;
 
-struct _MateHSV
+struct _CafeHSV
 {
   GtkWidget parent_instance;
 
   /*< private >*/
-  MateHSVPrivate *priv;
+  CafeHSVPrivate *priv;
 };
 
-struct _MateHSVClass
+struct _CafeHSVClass
 {
   GtkWidgetClass parent_class;
 
   /* Notification signals */
-  void (* changed) (MateHSV         *hsv);
+  void (* changed) (CafeHSV         *hsv);
 
   /* Keybindings */
-  void (* move)    (MateHSV         *hsv,
+  void (* move)    (CafeHSV         *hsv,
                     GtkDirectionType type);
 
   /* Padding for future expansion */
@@ -77,21 +77,21 @@ struct _MateHSVClass
 
 GType      cafe_hsv_get_type     (void) G_GNUC_CONST;
 GtkWidget* cafe_hsv_new          (void);
-void       cafe_hsv_set_color    (MateHSV    *hsv,
+void       cafe_hsv_set_color    (CafeHSV    *hsv,
 				  double      h,
 				  double      s,
 				  double      v);
-void       cafe_hsv_get_color    (MateHSV    *hsv,
+void       cafe_hsv_get_color    (CafeHSV    *hsv,
 				  gdouble    *h,
 				  gdouble    *s,
 				  gdouble    *v);
-void       cafe_hsv_set_metrics  (MateHSV    *hsv,
+void       cafe_hsv_set_metrics  (CafeHSV    *hsv,
 				  gint        size,
 				  gint        ring_width);
-void       cafe_hsv_get_metrics  (MateHSV    *hsv,
+void       cafe_hsv_get_metrics  (CafeHSV    *hsv,
 				  gint       *size,
 				  gint       *ring_width);
-gboolean   cafe_hsv_is_adjusting (MateHSV    *hsv);
+gboolean   cafe_hsv_is_adjusting (CafeHSV    *hsv);
 
 G_END_DECLS
 

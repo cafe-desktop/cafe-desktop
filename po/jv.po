@@ -64,7 +64,7 @@ msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"Mate ngandhut sing biyasane ana ing komputer, kalebu pangatur file, panampil"
+"Cafe ngandhut sing biyasane ana ing komputer, kalebu pangatur file, panampil"
 " dhokumèn, panampil gambar, menu, lan akeh aplikasi liyane."
 
 #: cafe-about/cafe-about.h:48
@@ -72,7 +72,7 @@ msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"Mate iku Bebas, iso digunakke, stabil, lingkungan desktop sing iso diakses "
+"Cafe iku Bebas, iso digunakke, stabil, lingkungan desktop sing iso diakses "
 "kanggo sistem operasi kulawarga Kaya-Unix."
 
 #: cafe-about/cafe-about.h:51
@@ -82,7 +82,7 @@ msgid ""
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"Mate punika tutugan saka GNOME 2. Atusan wong wis nyumbang kode kanggo GNOME"
+"Cafe punika tutugan saka GNOME 2. Atusan wong wis nyumbang kode kanggo GNOME"
 " awit iku diwiwiti ing 1997; isih akeh maneh liyane sing wis nyumbang ing "
 "cara penting, kalebu jarwan, dokumentasi, lan jaminan kualitas."
 
@@ -92,7 +92,7 @@ msgid ""
 "CAFE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 punika desktop Linux paling populer nanging iku ora ono meneh ... "
-"Mate punika ing kene kanggo nyedhiyani desktop sing padha kanggo sampeyan!"
+"Cafe punika ing kene kanggo nyedhiyani desktop sing padha kanggo sampeyan!"
 
 #: cafe-about/cafe-about.h:58
 msgid ""

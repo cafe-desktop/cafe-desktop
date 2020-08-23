@@ -1,10 +1,10 @@
 <SECTION>
 <INCLUDE>cafe-bg.h</INCLUDE>
 <FILE>cafe-bg</FILE>
-<TITLE>MateBG</TITLE>
-MateBG
-MateBGColorType
-MateBGPlacement
+<TITLE>CafeBG</TITLE>
+CafeBG
+CafeBGColorType
+CafeBGPlacement
 CAFE_BG_KEY_DIR
 cafe_bg_new
 cafe_bg_load_from_preferences
@@ -31,15 +31,15 @@ CAFE_TYPE_BG
 CAFE_BG_CLASS
 CAFE_IS_BG_CLASS
 CAFE_BG_GET_CLASS
-MateBGClass
+CafeBGClass
 </SECTION>
 
 <SECTION>
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-screen</FILE>
 <TITLE></TITLE>
-MateRRScreen
-MateRRScreenChanged
+CafeRRScreen
+CafeRRScreenChanged
 cafe_rr_screen_new
 cafe_rr_screen_destroy
 cafe_rr_screen_refresh
@@ -58,7 +58,7 @@ cafe_rr_screen_get_ranges
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-output</FILE>
 <TITLE></TITLE>
-MateRROutput
+CafeRROutput
 cafe_rr_output_get_id
 cafe_rr_output_get_name
 cafe_rr_output_is_connected
@@ -80,8 +80,8 @@ cafe_rr_output_can_clone
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-crtc</FILE>
 <TITLE></TITLE>
-MateRRCrtc
-MateRRRotation
+CafeRRCrtc
+CafeRRRotation
 cafe_rr_crtc_get_id
 cafe_rr_crtc_set_config
 cafe_rr_crtc_can_drive_output
@@ -96,7 +96,7 @@ cafe_rr_crtc_get_rotations
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-mode</FILE>
 <TITLE></TITLE>
-MateRRMode
+CafeRRMode
 cafe_rr_mode_get_id
 cafe_rr_mode_get_width
 cafe_rr_mode_get_height
@@ -107,8 +107,8 @@ cafe_rr_mode_get_freq
 <INCLUDE>cafe-rr-config.h</INCLUDE>
 <FILE>cafe-rr-config</FILE>
 <TITLE></TITLE>
-MateOutputInfo
-MateRRConfig
+CafeOutputInfo
+CafeRRConfig
 cafe_rr_config_new_current
 cafe_rr_config_new_stored
 cafe_rr_config_free
@@ -124,8 +124,8 @@ cafe_rr_config_applicable
 <SECTION>
 <INCLUDE>cafe-rr-labeler.h</INCLUDE>
 <FILE>cafe-rr-labeler</FILE>
-<TITLE>MateRRLabeler</TITLE>
-MateRRLabeler
+<TITLE>CafeRRLabeler</TITLE>
+CafeRRLabeler
 cafe_rr_labeler_new
 cafe_rr_labeler_hide
 cafe_rr_labeler_get_color_for_output
@@ -138,16 +138,16 @@ CAFE_TYPE_RR_LABELER
 CAFE_RR_LABELER_CLASS
 CAFE_IS_RR_LABELER_CLASS
 CAFE_RR_LABELER_GET_CLASS
-MateRRLabelerClass
+CafeRRLabelerClass
 </SECTION>
 
 <SECTION>
 <INCLUDE>cafe-desktop-item.h</INCLUDE>
 <FILE>cafe-desktop-item</FILE>
-<TITLE>MateDesktopItem</TITLE>
-MateDesktopItemType
-MateDesktopItemStatus
-MateDesktopItem
+<TITLE>CafeDesktopItem</TITLE>
+CafeDesktopItemType
+CafeDesktopItemStatus
+CafeDesktopItem
 CAFE_DESKTOP_ITEM_ENCODING
 CAFE_DESKTOP_ITEM_VERSION
 CAFE_DESKTOP_ITEM_NAME
@@ -180,10 +180,10 @@ CAFE_DESKTOP_ITEM_URL
 CAFE_DESKTOP_ITEM_DOC_PATH
 CAFE_DESKTOP_ITEM_CATEGORIES
 CAFE_DESKTOP_ITEM_ONLY_SHOW_IN
-MateDesktopItemLoadFlags
-MateDesktopItemLaunchFlags
-MateDesktopItemIconFlags
-MateDesktopItemError
+CafeDesktopItemLoadFlags
+CafeDesktopItemLaunchFlags
+CafeDesktopItemIconFlags
+CafeDesktopItemError
 CAFE_DESKTOP_ITEM_ERROR
 cafe_desktop_item_new
 cafe_desktop_item_new_from_file
@@ -244,9 +244,9 @@ cafe_desktop_thumbnail_path_for_uri
 <SECTION>
 <INCLUDE>cafe-thumbnail.h</INCLUDE>
 <FILE>cafe-desktop-thumbnail-factory</FILE>
-<TITLE>MateDesktopThumbnailFactory</TITLE>
-MateDesktopThumbnailFactory
-MateDesktopThumbnailSize
+<TITLE>CafeDesktopThumbnailFactory</TITLE>
+CafeDesktopThumbnailFactory
+CafeDesktopThumbnailSize
 cafe_desktop_thumbnail_factory_new
 cafe_desktop_thumbnail_factory_lookup
 cafe_desktop_thumbnail_factory_has_valid_failed_thumbnail
@@ -255,7 +255,7 @@ cafe_desktop_thumbnail_factory_generate_thumbnail
 cafe_desktop_thumbnail_factory_save_thumbnail
 cafe_desktop_thumbnail_factory_create_failed_thumbnail
 <SUBSECTION Private>
-MateDesktopThumbnailFactoryPrivate
+CafeDesktopThumbnailFactoryPrivate
 cafe_desktop_thumbnail_factory_get_type
 <SUBSECTION Standard>
 CAFE_DESKTOP_THUMBNAIL_FACTORY
@@ -263,7 +263,7 @@ CAFE_DESKTOP_IS_THUMBNAIL_FACTORY
 CAFE_DESKTOP_TYPE_THUMBNAIL_FACTORY
 CAFE_DESKTOP_THUMBNAIL_FACTORY_CLASS
 CAFE_DESKTOP_IS_THUMBNAIL_FACTORY_CLASS
-MateDesktopThumbnailFactoryClass
+CafeDesktopThumbnailFactoryClass
 </SECTION>
 
 <SECTION>
@@ -288,8 +288,8 @@ cafe_desktop_prepend_terminal_to_vector
 
 <SECTION>
 <FILE>cafe-hsv</FILE>
-<TITLE>MateHSV</TITLE>
-MateHSV
+<TITLE>CafeHSV</TITLE>
+CafeHSV
 cafe_hsv_new
 cafe_hsv_set_color
 cafe_hsv_get_color
@@ -304,7 +304,7 @@ CAFE_IS_HSV
 CAFE_IS_HSV_CLASS
 CAFE_HSV_GET_CLASS
 <SUBSECTION Private>
-MateHSVPrivate
+CafeHSVPrivate
 cafe_hsv_get_type
 </SECTION>
 

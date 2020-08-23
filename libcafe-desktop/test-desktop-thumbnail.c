@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2012,2017 Red Hat, Inc.
  *
- * This file is part of the Mate Library.
+ * This file is part of the Cafe Library.
  *
  * The Gnome Library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License as
@@ -28,7 +28,7 @@
 int main (int argc, char **argv)
 {
     GdkPixbuf *pixbuf;
-    MateDesktopThumbnailFactory *factory;
+    CafeDesktopThumbnailFactory *factory;
     GtkWidget *window, *image;
     char *content_type;
 

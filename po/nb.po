@@ -90,7 +90,7 @@ msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"Mate er et gratis, brukervennlig, stabil og med tilgjengelig "
+"Cafe er et gratis, brukervennlig, stabil og med tilgjengelig "
 "skrivebordsmiljø for den Unix-lignende familien av operativsystemer."
 
 #: cafe-about/cafe-about.h:51

@@ -45,11 +45,11 @@ msgstr ""
 
 #: cafe-about/cafe-about.desktop.in:3
 msgid "About CAFE"
-msgstr "Over Mate"
+msgstr "Over Cafe"
 
 #: cafe-about/cafe-about.desktop.in:4
 msgid "Learn more about CAFE"
-msgstr "Meer te weten komen over Mate"
+msgstr "Meer te weten komen over Cafe"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!

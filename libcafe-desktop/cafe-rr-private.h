@@ -20,20 +20,20 @@ struct ScreenInfo
     XRRScreenResources *resources;
 #endif
 
-    MateRROutput **	outputs;
-    MateRRCrtc **	crtcs;
-    MateRRMode **	modes;
+    CafeRROutput **	outputs;
+    CafeRRCrtc **	crtcs;
+    CafeRRMode **	modes;
 
-    MateRRScreen *	screen;
+    CafeRRScreen *	screen;
 
-    MateRRMode **	clone_modes;
+    CafeRRMode **	clone_modes;
 
 #ifdef HAVE_RANDR
     RROutput            primary;
 #endif
 };
 
-struct MateRRScreenPrivate
+struct CafeRRScreenPrivate
 {
     GdkScreen *			gdk_screen;
     GdkWindow *			gdk_root;
@@ -49,7 +49,7 @@ struct MateRRScreenPrivate
     Atom                        connector_type_atom;
 };
 
-struct MateRROutputInfoPrivate
+struct CafeRROutputInfoPrivate
 {
     char *		name;
 
@@ -59,7 +59,7 @@ struct MateRROutputInfoPrivate
     int			rate;
     int			x;
     int			y;
-    MateRRRotation	rotation;
+    CafeRRRotation	rotation;
 
     gboolean		connected;
     gchar		vendor[4];
@@ -72,11 +72,11 @@ struct MateRROutputInfoPrivate
     gboolean            primary;
 };
 
-struct MateRRConfigPrivate
+struct CafeRRConfigPrivate
 {
   gboolean clone;
-  MateRRScreen *screen;
-  MateRROutputInfo **outputs;
+  CafeRRScreen *screen;
+  CafeRROutputInfo **outputs;
 };
 
 gboolean _cafe_rr_output_name_is_laptop (const char *name);

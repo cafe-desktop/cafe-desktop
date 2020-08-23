@@ -28,7 +28,7 @@ msgstr "Fankasitrahana ny mpandika teny"
 
 #: cafe-about/cafe-about.desktop.in:3
 msgid "About CAFE"
-msgstr "Momba ny Mate"
+msgstr "Momba ny Cafe"
 
 #: cafe-about/cafe-about.desktop.in:4
 msgid "Learn more about CAFE"

@@ -17,7 +17,7 @@ cafe_micro = 0
 cafedt_api_version = '2.0'
 cafedt_api_name = '@0@-@1@'.format(meson.project_name(), cafedt_api_version)
 
-cafedt_gir_ns = 'MateDesktop'
+cafedt_gir_ns = 'CafeDesktop'
 cafedt_gir_version = '2.0'
 
 cafedt_gettext_package = meson.project_name()

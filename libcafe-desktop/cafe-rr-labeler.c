@@ -5,20 +5,20 @@
  *
  * Copyright 2008, Novell, Inc.
  *
- * This file is part of the Mate Library.
+ * This file is part of the Cafe Library.
  *
- * The Mate Library is free software; you can redistribute it and/or
+ * The Cafe Library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License as
  * published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
  *
- * The Mate Library is distributed in the hope that it will be useful,
+ * The Cafe Library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with the Mate Library; see the file COPYING.LIB.  If not,
+ * License along with the Cafe Library; see the file COPYING.LIB.  If not,
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  *
@@ -39,8 +39,8 @@
 
 #include "cafe-rr-labeler.h"
 
-struct _MateRRLabelerPrivate {
-	MateRRConfig *config;
+struct _CafeRRLabelerPrivate {
+	CafeRRConfig *config;
 
 	int num_outputs;
 
@@ -57,11 +57,11 @@ enum {
 	PROP_LAST
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (MateRRLabeler, cafe_rr_labeler, G_TYPE_OBJECT);
+G_DEFINE_TYPE_WITH_PRIVATE (CafeRRLabeler, cafe_rr_labeler, G_TYPE_OBJECT);
 
 static void cafe_rr_labeler_finalize (GObject *object);
-static void create_label_windows (MateRRLabeler *labeler);
-static void setup_from_config (MateRRLabeler *labeler);
+static void create_label_windows (CafeRRLabeler *labeler);
+static void setup_from_config (CafeRRLabeler *labeler);
 
 static int
 get_current_desktop (GdkScreen *screen)
@@ -96,7 +96,7 @@ get_current_desktop (GdkScreen *screen)
 }
 
 static gboolean
-get_work_area (MateRRLabeler *labeler,
+get_work_area (CafeRRLabeler *labeler,
 	       GdkRectangle   *rect)
 {
 	Atom            workarea;
@@ -165,7 +165,7 @@ get_work_area (MateRRLabeler *labeler,
 static GdkFilterReturn
 screen_xevent_filter (GdkXEvent      *xevent,
 		      GdkEvent       *event,
-		      MateRRLabeler *labeler)
+		      CafeRRLabeler *labeler)
 {
 	XEvent *xev;
 
@@ -182,7 +182,7 @@ screen_xevent_filter (GdkXEvent      *xevent,
 }
 
 static void
-cafe_rr_labeler_init (MateRRLabeler *labeler)
+cafe_rr_labeler_init (CafeRRLabeler *labeler)
 {
 	GdkWindow *gdkwindow;
 
@@ -202,7 +202,7 @@ cafe_rr_labeler_init (MateRRLabeler *labeler)
 static void
 cafe_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *param_spec)
 {
-	MateRRLabeler *self = CAFE_RR_LABELER (gobject);
+	CafeRRLabeler *self = CAFE_RR_LABELER (gobject);
 
 	switch (property_id) {
 	case PROP_CONFIG:
@@ -216,7 +216,7 @@ cafe_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue 
 static GObject *
 cafe_rr_labeler_constructor (GType type, guint n_construct_properties, GObjectConstructParam *construct_properties)
 {
-	MateRRLabeler *self = (MateRRLabeler*) G_OBJECT_CLASS (cafe_rr_labeler_parent_class)->constructor (type, n_construct_properties, construct_properties);
+	CafeRRLabeler *self = (CafeRRLabeler*) G_OBJECT_CLASS (cafe_rr_labeler_parent_class)->constructor (type, n_construct_properties, construct_properties);
 
 	setup_from_config (self);
 
@@ -224,7 +224,7 @@ cafe_rr_labeler_constructor (GType type, guint n_construct_properties, GObjectCo
 }
 
 static void
-cafe_rr_labeler_class_init (MateRRLabelerClass *klass)
+cafe_rr_labeler_class_init (CafeRRLabelerClass *klass)
 {
 	GObjectClass *object_class;
 
@@ -245,7 +245,7 @@ cafe_rr_labeler_class_init (MateRRLabelerClass *klass)
 static void
 cafe_rr_labeler_finalize (GObject *object)
 {
-	MateRRLabeler *labeler;
+	CafeRRLabeler *labeler;
 	GdkWindow      *gdkwindow;
 
 	labeler = CAFE_RR_LABELER (object);
@@ -268,10 +268,10 @@ cafe_rr_labeler_finalize (GObject *object)
 }
 
 static int
-count_outputs (MateRRConfig *config)
+count_outputs (CafeRRConfig *config)
 {
 	int i;
-	MateRROutputInfo **outputs = cafe_rr_config_get_outputs (config);
+	CafeRROutputInfo **outputs = cafe_rr_config_get_outputs (config);
 
 	for (i = 0; outputs[i] != NULL; i++)
 		;
@@ -280,7 +280,7 @@ count_outputs (MateRRConfig *config)
 }
 
 static void
-make_palette (MateRRLabeler *labeler)
+make_palette (CafeRRLabeler *labeler)
 {
 	/* The idea is that we go around an hue color wheel.  We want to start
 	 * at red, go around to green/etc. and stop at blue --- because magenta
@@ -354,7 +354,7 @@ label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
 }
 
 static void
-position_window (MateRRLabeler  *labeler,
+position_window (CafeRRLabeler  *labeler,
 		 GtkWidget       *window,
 		 int              x,
 		 int              y)
@@ -372,7 +372,7 @@ position_window (MateRRLabeler  *labeler,
 }
 
 static GtkWidget *
-create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color)
+create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *color)
 {
 	GtkWidget *window;
 	GtkWidget *widget;
@@ -433,11 +433,11 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *
 }
 
 static void
-create_label_windows (MateRRLabeler *labeler)
+create_label_windows (CafeRRLabeler *labeler)
 {
 	int i;
 	gboolean created_window_for_clone;
-	MateRROutputInfo **outputs;
+	CafeRROutputInfo **outputs;
 
 	labeler->priv->windows = g_new (GtkWidget *, labeler->priv->num_outputs);
 
@@ -457,7 +457,7 @@ create_label_windows (MateRRLabeler *labeler)
 }
 
 static void
-setup_from_config (MateRRLabeler *labeler)
+setup_from_config (CafeRRLabeler *labeler)
 {
 	labeler->priv->num_outputs = count_outputs (labeler->priv->config);
 
@@ -475,10 +475,10 @@ setup_from_config (MateRRLabeler *labeler)
  * for configuring multiple monitors.
  * The labels will be shown by default, use cafe_rr_labeler_hide to hide them.
  *
- * Returns: A new #MateRRLabeler
+ * Returns: A new #CafeRRLabeler
  */
-MateRRLabeler *
-cafe_rr_labeler_new (MateRRConfig *config)
+CafeRRLabeler *
+cafe_rr_labeler_new (CafeRRConfig *config)
 {
 	g_return_val_if_fail (CAFE_IS_RR_CONFIG (config), NULL);
 
@@ -487,15 +487,15 @@ cafe_rr_labeler_new (MateRRConfig *config)
 
 /**
  * cafe_rr_labeler_hide:
- * @labeler: A #MateRRLabeler
+ * @labeler: A #CafeRRLabeler
  *
  * Hide ouput labels.
  */
 void
-cafe_rr_labeler_hide (MateRRLabeler *labeler)
+cafe_rr_labeler_hide (CafeRRLabeler *labeler)
 {
 	int i;
-	MateRRLabelerPrivate *priv;
+	CafeRRLabelerPrivate *priv;
 
 	g_return_if_fail (CAFE_IS_RR_LABELER (labeler));
 
@@ -515,17 +515,17 @@ cafe_rr_labeler_hide (MateRRLabeler *labeler)
 
 /**
  * cafe_rr_labeler_get_rgba_for_output:
- * @labeler: A #MateRRLabeler
+ * @labeler: A #CafeRRLabeler
  * @output: Output device (i.e. monitor) to query
  * @color_out: (out): Color of selected monitor.
  *
  * Get the color used for the label on a given output (monitor).
  */
 void
-cafe_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color_out)
+cafe_rr_labeler_get_rgba_for_output (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *color_out)
 {
 	int i;
-	MateRROutputInfo **outputs;
+	CafeRROutputInfo **outputs;
 
 	g_return_if_fail (CAFE_IS_RR_LABELER (labeler));
 	g_return_if_fail (CAFE_IS_RR_OUTPUT_INFO (output));
@@ -539,7 +539,7 @@ cafe_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *o
 			return;
 		}
 
-	g_warning ("trying to get the color for unknown MateOutputInfo %p; returning magenta!", output);
+	g_warning ("trying to get the color for unknown CafeOutputInfo %p; returning magenta!", output);
 
 	color_out->red   = 1.0;
 	color_out->green = 0.0;

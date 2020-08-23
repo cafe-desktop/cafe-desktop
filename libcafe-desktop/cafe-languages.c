@@ -47,14 +47,14 @@
 #define ISO_CODES_DATADIR ISO_CODES_PREFIX "/share/xml/iso-codes"
 #define ISO_CODES_LOCALESDIR ISO_CODES_PREFIX "/share/locale"
 
-typedef struct _MateLocale {
+typedef struct _CafeLocale {
         char *id;
         char *name;
         char *language_code;
         char *territory_code;
         char *codeset;
         char *modifier;
-} MateLocale;
+} CafeLocale;
 
 static GHashTable *cafe_languages_map;
 static GHashTable *cafe_territories_map;
@@ -70,7 +70,7 @@ static char * construct_language_name (const char *language,
 static gboolean language_name_is_valid (const char *language_name);
 
 static void
-cafe_locale_free (MateLocale *locale)
+cafe_locale_free (CafeLocale *locale)
 {
         if (locale == NULL) {
                 return;
@@ -390,8 +390,8 @@ static gboolean
 add_locale (const char *language_name,
             gboolean    utf8_only)
 {
-        MateLocale *locale;
-        MateLocale *old_locale;
+        CafeLocale *locale;
+        CafeLocale *old_locale;
         g_autofree char *name = NULL;
         gboolean   is_utf8 = FALSE;
         gboolean   valid = FALSE;
@@ -426,7 +426,7 @@ add_locale (const char *language_name,
                 return FALSE;
         }
 
-        locale = g_new0 (MateLocale, 1);
+        locale = g_new0 (CafeLocale, 1);
         valid = cafe_parse_locale (name,
                                     &locale->language_code,
                                     &locale->territory_code,
@@ -559,9 +559,9 @@ count_languages_and_territories (void)
 
         g_hash_table_iter_init (&iter, cafe_available_locales_map);
         while (g_hash_table_iter_next (&iter, NULL, &value)) {
-                MateLocale *locale;
+                CafeLocale *locale;
 
-                locale = (MateLocale *) value;
+                locale = (CafeLocale *) value;
 
 		if (locale->language_code != NULL) {
 			int count;
@@ -1254,9 +1254,9 @@ cafe_get_all_locales (void)
         array = g_ptr_array_new ();
         g_hash_table_iter_init (&iter, cafe_available_locales_map);
         while (g_hash_table_iter_next (&iter, &key, &value)) {
-                MateLocale *locale;
+                CafeLocale *locale;
 
-                locale = (MateLocale *) value;
+                locale = (CafeLocale *) value;
 
                 g_ptr_array_add (array, g_strdup (locale->name));
         }

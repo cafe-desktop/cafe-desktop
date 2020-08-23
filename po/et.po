@@ -108,7 +108,7 @@ msgid ""
 "infusions and a beverage called cafe."
 msgstr ""
 "Nimi “CAFE” on tuletatud Lõuna-Ameerikast pärit cafepuu lehtedest "
-"valmistatavast joogist. Matepuu lehed sisaldavad kofeiini ja nendest "
+"valmistatavast joogist. Cafepuu lehed sisaldavad kofeiini ja nendest "
 "valmistatud teejooki nimetatakse cafeks."
 
 #. Translators: "Unknown" here is used to identify a monitor for which

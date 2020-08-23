@@ -1360,7 +1360,7 @@ msgstr "Neleisti naudotojui keisti temų nustatymų."
 
 #: schemas/org.cafe.lockdown.gschema.xml:45
 msgid "Disable log out"
-msgstr "Išjungti atsijungimą iš Mate"
+msgstr "Išjungti atsijungimą iš Cafe"
 
 #: schemas/org.cafe.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."

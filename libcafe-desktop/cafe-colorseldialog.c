@@ -42,7 +42,7 @@ enum {
 
 
 /***************************/
-/* MateColorSelectionDialog */
+/* CafeColorSelectionDialog */
 /***************************/
 
 static void cafe_color_selection_dialog_buildable_interface_init     (GtkBuildableIface *iface);
@@ -50,7 +50,7 @@ static GObject * cafe_color_selection_dialog_buildable_get_internal_child (GtkBu
 									  GtkBuilder   *builder,
 									  const gchar  *childname);
 
-G_DEFINE_TYPE_WITH_CODE (MateColorSelectionDialog, cafe_color_selection_dialog,
+G_DEFINE_TYPE_WITH_CODE (CafeColorSelectionDialog, cafe_color_selection_dialog,
            GTK_TYPE_DIALOG,
            G_IMPLEMENT_INTERFACE (GTK_TYPE_BUILDABLE,
                       cafe_color_selection_dialog_buildable_interface_init))
@@ -63,7 +63,7 @@ cafe_color_selection_dialog_get_property (GObject         *object,
 					 GValue          *value,
 					 GParamSpec      *pspec)
 {
-  MateColorSelectionDialog *colorsel;
+  CafeColorSelectionDialog *colorsel;
 
   colorsel = CAFE_COLOR_SELECTION_DIALOG (object);
 
@@ -88,7 +88,7 @@ cafe_color_selection_dialog_get_property (GObject         *object,
 }
 
 static void
-cafe_color_selection_dialog_class_init (MateColorSelectionDialogClass *klass)
+cafe_color_selection_dialog_class_init (CafeColorSelectionDialogClass *klass)
 {
   GObjectClass   *gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->get_property = cafe_color_selection_dialog_get_property;
@@ -124,7 +124,7 @@ cafe_color_selection_dialog_class_init (MateColorSelectionDialogClass *klass)
 }
 
 static void
-cafe_color_selection_dialog_init (MateColorSelectionDialog *colorseldiag)
+cafe_color_selection_dialog_init (CafeColorSelectionDialog *colorseldiag)
 {
   GtkDialog *dialog = GTK_DIALOG (colorseldiag);
 
@@ -167,7 +167,7 @@ cafe_color_selection_dialog_init (MateColorSelectionDialog *colorseldiag)
 GtkWidget*
 cafe_color_selection_dialog_new (const gchar *title)
 {
-  MateColorSelectionDialog *colorseldiag;
+  CafeColorSelectionDialog *colorseldiag;
 
   colorseldiag = g_object_new (CAFE_TYPE_COLOR_SELECTION_DIALOG, NULL);
 
@@ -181,16 +181,16 @@ cafe_color_selection_dialog_new (const gchar *title)
 
 /**
  * cafe_color_selection_dialog_get_color_selection:
- * @colorsel: a #MateColorSelectionDialog
+ * @colorsel: a #CafeColorSelectionDialog
  *
- * Retrieves the #MateColorSelection widget embedded in the dialog.
+ * Retrieves the #CafeColorSelection widget embedded in the dialog.
  *
- * Returns: (transfer none): the embedded #MateColorSelection
+ * Returns: (transfer none): the embedded #CafeColorSelection
  *
  * Since: 1.9.1
  **/
 GtkWidget*
-cafe_color_selection_dialog_get_color_selection (MateColorSelectionDialog *colorsel)
+cafe_color_selection_dialog_get_color_selection (CafeColorSelectionDialog *colorsel)
 {
   g_return_val_if_fail (CAFE_IS_COLOR_SELECTION_DIALOG (colorsel), NULL);
 

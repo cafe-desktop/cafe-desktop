@@ -23,7 +23,7 @@ AM_CPPFLAGS =							\
 	$(CAFE_DESKTOP_CFLAGS)					\
 	$(XLIB_CFLAGS)						\
 	$(DCONF_CFLAGS)						\
-	-DG_LOG_DOMAIN=\"MateDesktop\"				\
+	-DG_LOG_DOMAIN=\"CafeDesktop\"				\
 	-DCAFELOCALEDIR=\""$(localedir)\""			\
 	-DPNP_IDS=\""$(PNP_IDS)"\"				\
 	-DISO_CODES_PREFIX=\""$(ISO_CODES_PREFIX)"\"		\
@@ -117,15 +117,15 @@ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 
 if HAVE_INTROSPECTION
 
-MateDesktop-2.0.gir: libcafe-desktop-2.la
-MateDesktop_2_0_gir_INCLUDES = GObject-2.0 Gtk-3.0
-MateDesktop_2_0_gir_PACKAGES = gdk-pixbuf-2.0 glib-2.0 gobject-2.0 gio-2.0 gtk+-3.0
-MateDesktop_2_0_gir_CFLAGS = -DCAFE_DESKTOP_USE_UNSTABLE_API -I$(top_srcdir)
-MateDesktop_2_0_gir_LIBS = libcafe-desktop-2.la
-MateDesktop_2_0_gir_FILES = $(introspection_sources) $(libcafe_desktop_HEADERS)
-MateDesktop_2_0_gir_SCANNERFLAGS = --identifier-prefix=Mate --symbol-prefix=cafe_
+CafeDesktop-2.0.gir: libcafe-desktop-2.la
+CafeDesktop_2_0_gir_INCLUDES = GObject-2.0 Gtk-3.0
+CafeDesktop_2_0_gir_PACKAGES = gdk-pixbuf-2.0 glib-2.0 gobject-2.0 gio-2.0 gtk+-3.0
+CafeDesktop_2_0_gir_CFLAGS = -DCAFE_DESKTOP_USE_UNSTABLE_API -I$(top_srcdir)
+CafeDesktop_2_0_gir_LIBS = libcafe-desktop-2.la
+CafeDesktop_2_0_gir_FILES = $(introspection_sources) $(libcafe_desktop_HEADERS)
+CafeDesktop_2_0_gir_SCANNERFLAGS = --identifier-prefix=Cafe --symbol-prefix=cafe_
 INTROSPECTION_SCANNER_ARGS += $(patsubst %,--c-include='libcafe-desktop/%',$(libcafe_desktop_HEADERS))
-INTROSPECTION_GIRS += MateDesktop-2.0.gir
+INTROSPECTION_GIRS += CafeDesktop-2.0.gir
 
 girdir = $(datadir)/gir-1.0
 gir_DATA = $(INTROSPECTION_GIRS)

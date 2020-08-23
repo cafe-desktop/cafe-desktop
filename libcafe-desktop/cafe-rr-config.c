@@ -4,20 +4,20 @@
  * Copyright 2007, 2008, Red Hat, Inc.
  * Copyright 2010 Giovanni Campagna
  *
- * This file is part of the Mate Library.
+ * This file is part of the Cafe Library.
  *
- * The Mate Library is free software; you can redistribute it and/or
+ * The Cafe Library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License as
  * published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
  *
- * The Mate Library is distributed in the hope that it will be useful,
+ * The Cafe Library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with the Mate Library; see the file COPYING.LIB.  If not,
+ * License along with the Cafe Library; see the file COPYING.LIB.  If not,
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  *
@@ -80,8 +80,8 @@ typedef struct CrtcAssignment CrtcAssignment;
 static gboolean         crtc_assignment_apply (CrtcAssignment   *assign,
 					       guint32           timestamp,
 					       GError          **error);
-static CrtcAssignment  *crtc_assignment_new   (MateRRScreen      *screen,
-					       MateRROutputInfo **outputs,
+static CrtcAssignment  *crtc_assignment_new   (CafeRRScreen      *screen,
+					       CafeRROutputInfo **outputs,
 					       GError            **error);
 static void             crtc_assignment_free  (CrtcAssignment   *assign);
 
@@ -91,7 +91,7 @@ enum {
   PROP_LAST
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (MateRRConfig, cafe_rr_config, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (CafeRRConfig, cafe_rr_config, G_TYPE_OBJECT)
 
 typedef struct Parser Parser;
 
@@ -99,8 +99,8 @@ typedef struct Parser Parser;
 struct Parser
 {
     int			config_file_version;
-    MateRROutputInfo *	output;
-    MateRRConfig *	configuration;
+    CafeRROutputInfo *	output;
+    CafeRRConfig *	configuration;
     GPtrArray *		outputs;
     GPtrArray *		configurations;
     GQueue *		stack;
@@ -248,7 +248,7 @@ handle_end_element (GMarkupParseContext *context,
     {
 	g_ptr_array_add (parser->outputs, NULL);
 	parser->configuration->priv->outputs =
-	    (MateRROutputInfo **)g_ptr_array_free (parser->outputs, FALSE);
+	    (CafeRROutputInfo **)g_ptr_array_free (parser->outputs, FALSE);
 	parser->outputs = g_ptr_array_new ();
 	g_ptr_array_add (parser->configurations, parser->configuration);
 	parser->configuration = NULL;
@@ -384,7 +384,7 @@ parser_free (Parser *parser)
 
     for (i = 0; i < parser->outputs->len; ++i)
     {
-	MateRROutputInfo *output = parser->outputs->pdata[i];
+	CafeRROutputInfo *output = parser->outputs->pdata[i];
 
 	g_object_unref (output);
     }
@@ -393,7 +393,7 @@ parser_free (Parser *parser)
 
     for (i = 0; i < parser->configurations->len; ++i)
     {
-	MateRRConfig *config = parser->configurations->pdata[i];
+	CafeRRConfig *config = parser->configurations->pdata[i];
 
 	g_object_unref (config);
     }
@@ -407,11 +407,11 @@ parser_free (Parser *parser)
     g_free (parser);
 }
 
-static MateRRConfig **
+static CafeRRConfig **
 configurations_read_from_file (const gchar *filename, GError **error)
 {
     Parser *parser = g_new0 (Parser, 1);
-    MateRRConfig **result;
+    CafeRRConfig **result;
     GMarkupParser callbacks = {
 	handle_start_element,
 	handle_end_element,
@@ -436,7 +436,7 @@ configurations_read_from_file (const gchar *filename, GError **error)
     g_assert (parser->outputs);
 
     g_ptr_array_add (parser->configurations, NULL);
-    result = (MateRRConfig **)g_ptr_array_free (parser->configurations, FALSE);
+    result = (CafeRRConfig **)g_ptr_array_free (parser->configurations, FALSE);
     parser->configurations = g_ptr_array_new ();
 
     g_assert (parser->outputs);
@@ -447,7 +447,7 @@ out:
 }
 
 static void
-cafe_rr_config_init (MateRRConfig *self)
+cafe_rr_config_init (CafeRRConfig *self)
 {
     self->priv = cafe_rr_config_get_instance_private (self);
 
@@ -459,7 +459,7 @@ cafe_rr_config_init (MateRRConfig *self)
 static void
 cafe_rr_config_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *property)
 {
-    MateRRConfig *self = CAFE_RR_CONFIG (gobject);
+    CafeRRConfig *self = CAFE_RR_CONFIG (gobject);
 
     switch (property_id) {
 	case PROP_SCREEN:
@@ -473,7 +473,7 @@ cafe_rr_config_set_property (GObject *gobject, guint property_id, const GValue *
 static void
 cafe_rr_config_finalize (GObject *gobject)
 {
-    MateRRConfig *self = CAFE_RR_CONFIG (gobject);
+    CafeRRConfig *self = CAFE_RR_CONFIG (gobject);
 
     if (self->priv->screen)
 	g_object_unref (self->priv->screen);
@@ -482,7 +482,7 @@ cafe_rr_config_finalize (GObject *gobject)
 	int i;
 
         for (i = 0; self->priv->outputs[i] != NULL; i++) {
-	    MateRROutputInfo *output = self->priv->outputs[i];
+	    CafeRROutputInfo *output = self->priv->outputs[i];
 	    g_object_unref (output);
 	}
 	g_free (self->priv->outputs);
@@ -492,10 +492,10 @@ cafe_rr_config_finalize (GObject *gobject)
 }
 
 gboolean
-cafe_rr_config_load_current (MateRRConfig *config, GError **error)
+cafe_rr_config_load_current (CafeRRConfig *config, GError **error)
 {
     GPtrArray *a;
-    MateRROutput **rr_outputs;
+    CafeRROutput **rr_outputs;
     int i;
     int clone_width = -1;
     int clone_height = -1;
@@ -510,11 +510,11 @@ cafe_rr_config_load_current (MateRRConfig *config, GError **error)
 
     for (i = 0; rr_outputs[i] != NULL; ++i)
     {
-	MateRROutput *rr_output = rr_outputs[i];
-	MateRROutputInfo *output = g_object_new (CAFE_TYPE_RR_OUTPUT_INFO, NULL);
-	MateRRMode *mode = NULL;
+	CafeRROutput *rr_output = rr_outputs[i];
+	CafeRROutputInfo *output = g_object_new (CAFE_TYPE_RR_OUTPUT_INFO, NULL);
+	CafeRRMode *mode = NULL;
 	const guint8 *edid_data = cafe_rr_output_get_edid_data (rr_output);
-	MateRRCrtc *crtc;
+	CafeRRCrtc *crtc;
 
 	output->priv->name = g_strdup (cafe_rr_output_get_name (rr_output));
 	output->priv->connected = cafe_rr_output_is_connected (rr_output);
@@ -592,7 +592,7 @@ cafe_rr_config_load_current (MateRRConfig *config, GError **error)
 
 	    if (!mode)
 	    {
-		MateRRMode **modes = cafe_rr_output_list_modes (rr_output);
+		CafeRRMode **modes = cafe_rr_output_list_modes (rr_output);
 
 		/* FIXME: we should pick the "best" mode here, where best is
 		 * sorted wrt
@@ -628,7 +628,7 @@ cafe_rr_config_load_current (MateRRConfig *config, GError **error)
 
     g_ptr_array_add (a, NULL);
 
-    config->priv->outputs = (MateRROutputInfo **)g_ptr_array_free (a, FALSE);
+    config->priv->outputs = (CafeRROutputInfo **)g_ptr_array_free (a, FALSE);
 
     /* Walk the outputs computing the right-most edge of all
      * lit-up displays
@@ -636,7 +636,7 @@ cafe_rr_config_load_current (MateRRConfig *config, GError **error)
     last_x = 0;
     for (i = 0; config->priv->outputs[i] != NULL; ++i)
     {
-	MateRROutputInfo *output = config->priv->outputs[i];
+	CafeRROutputInfo *output = config->priv->outputs[i];
 
 	if (output->priv->on)
 	{
@@ -649,7 +649,7 @@ cafe_rr_config_load_current (MateRRConfig *config, GError **error)
      */
     for (i = 0; config->priv->outputs[i] != NULL; ++i)
     {
-	MateRROutputInfo *output = config->priv->outputs[i];
+	CafeRROutputInfo *output = config->priv->outputs[i];
 
 	if (output->priv->connected && !output->priv->on)
 	{
@@ -664,10 +664,10 @@ cafe_rr_config_load_current (MateRRConfig *config, GError **error)
 }
 
 gboolean
-cafe_rr_config_load_filename (MateRRConfig *result, const char *filename, GError **error)
+cafe_rr_config_load_filename (CafeRRConfig *result, const char *filename, GError **error)
 {
-    MateRRConfig *current;
-    MateRRConfig **configs;
+    CafeRRConfig *current;
+    CafeRRConfig **configs;
     gboolean found = FALSE;
 
     g_return_val_if_fail (CAFE_IS_RR_CONFIG (result), FALSE);
@@ -699,7 +699,7 @@ cafe_rr_config_load_filename (MateRRConfig *result, const char *filename, GError
 		    g_ptr_array_add (array, configs[i]->priv->outputs[j]);
 		}
 		g_ptr_array_add (array, NULL);
-		result->priv->outputs = (MateRROutputInfo **) g_ptr_array_free (array, FALSE);
+		result->priv->outputs = (CafeRROutputInfo **) g_ptr_array_free (array, FALSE);
 
 		found = TRUE;
 		break;
@@ -718,7 +718,7 @@ cafe_rr_config_load_filename (MateRRConfig *result, const char *filename, GError
 }
 
 static void
-cafe_rr_config_class_init (MateRRConfigClass *klass)
+cafe_rr_config_class_init (CafeRRConfigClass *klass)
 {
     GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
@@ -726,14 +726,14 @@ cafe_rr_config_class_init (MateRRConfigClass *klass)
     gobject_class->finalize = cafe_rr_config_finalize;
 
     g_object_class_install_property (gobject_class, PROP_SCREEN,
-				     g_param_spec_object ("screen", "Screen", "The MateRRScreen this config applies to", CAFE_TYPE_RR_SCREEN,
+				     g_param_spec_object ("screen", "Screen", "The CafeRRScreen this config applies to", CAFE_TYPE_RR_SCREEN,
 							  G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
 }
 
-MateRRConfig *
-cafe_rr_config_new_current (MateRRScreen *screen, GError **error)
+CafeRRConfig *
+cafe_rr_config_new_current (CafeRRScreen *screen, GError **error)
 {
-    MateRRConfig *self = g_object_new (CAFE_TYPE_RR_CONFIG, "screen", screen, NULL);
+    CafeRRConfig *self = g_object_new (CAFE_TYPE_RR_CONFIG, "screen", screen, NULL);
 
     if (cafe_rr_config_load_current (self, error))
       return self;
@@ -744,10 +744,10 @@ cafe_rr_config_new_current (MateRRScreen *screen, GError **error)
       }
 }
 
-MateRRConfig *
-cafe_rr_config_new_stored (MateRRScreen *screen, GError **error)
+CafeRRConfig *
+cafe_rr_config_new_stored (CafeRRScreen *screen, GError **error)
 {
-    MateRRConfig *self = g_object_new (CAFE_TYPE_RR_CONFIG, "screen", screen, NULL);
+    CafeRRConfig *self = g_object_new (CAFE_TYPE_RR_CONFIG, "screen", screen, NULL);
     char *filename;
     gboolean success;
 
@@ -808,7 +808,7 @@ out:
 }
 
 static gboolean
-output_match (MateRROutputInfo *output1, MateRROutputInfo *output2)
+output_match (CafeRROutputInfo *output1, CafeRROutputInfo *output2)
 {
     g_assert (CAFE_IS_RR_OUTPUT_INFO (output1));
     g_assert (CAFE_IS_RR_OUTPUT_INFO (output2));
@@ -832,7 +832,7 @@ output_match (MateRROutputInfo *output1, MateRROutputInfo *output2)
 }
 
 static gboolean
-output_equal (MateRROutputInfo *output1, MateRROutputInfo *output2)
+output_equal (CafeRROutputInfo *output1, CafeRROutputInfo *output2)
 {
     g_assert (CAFE_IS_RR_OUTPUT_INFO (output1));
     g_assert (CAFE_IS_RR_OUTPUT_INFO (output2));
@@ -867,14 +867,14 @@ output_equal (MateRROutputInfo *output1, MateRROutputInfo *output2)
     return TRUE;
 }
 
-static MateRROutputInfo *
-find_output (MateRRConfig *config, const char *name)
+static CafeRROutputInfo *
+find_output (CafeRRConfig *config, const char *name)
 {
     int i;
 
     for (i = 0; config->priv->outputs[i] != NULL; ++i)
     {
-	MateRROutputInfo *output = config->priv->outputs[i];
+	CafeRROutputInfo *output = config->priv->outputs[i];
 
 	if (strcmp (name, output->priv->name) == 0)
 	    return output;
@@ -887,7 +887,7 @@ find_output (MateRRConfig *config, const char *name)
  * setups"
  */
 gboolean
-cafe_rr_config_match (MateRRConfig *c1, MateRRConfig *c2)
+cafe_rr_config_match (CafeRRConfig *c1, CafeRRConfig *c2)
 {
     int i;
     g_return_val_if_fail (CAFE_IS_RR_CONFIG (c1), FALSE);
@@ -895,8 +895,8 @@ cafe_rr_config_match (MateRRConfig *c1, MateRRConfig *c2)
 
     for (i = 0; c1->priv->outputs[i] != NULL; ++i)
     {
-	MateRROutputInfo *output1 = c1->priv->outputs[i];
-	MateRROutputInfo *output2;
+	CafeRROutputInfo *output1 = c1->priv->outputs[i];
+	CafeRROutputInfo *output2;
 
 	output2 = find_output (c2, output1->priv->name);
 	if (!output2 || !output_match (output1, output2))
@@ -910,8 +910,8 @@ cafe_rr_config_match (MateRRConfig *c1, MateRRConfig *c2)
  * modes being set on the outputs"
  */
 gboolean
-cafe_rr_config_equal (MateRRConfig  *c1,
-		       MateRRConfig  *c2)
+cafe_rr_config_equal (CafeRRConfig  *c1,
+		       CafeRRConfig  *c2)
 {
     int i;
     g_return_val_if_fail (CAFE_IS_RR_CONFIG (c1), FALSE);
@@ -919,8 +919,8 @@ cafe_rr_config_equal (MateRRConfig  *c1,
 
     for (i = 0; c1->priv->outputs[i] != NULL; ++i)
     {
-	MateRROutputInfo *output1 = c1->priv->outputs[i];
-	MateRROutputInfo *output2;
+	CafeRROutputInfo *output1 = c1->priv->outputs[i];
+	CafeRROutputInfo *output2;
 
 	output2 = find_output (c2, output1->priv->name);
 	if (!output2 || !output_equal (output1, output2))
@@ -930,11 +930,11 @@ cafe_rr_config_equal (MateRRConfig  *c1,
     return TRUE;
 }
 
-static MateRROutputInfo **
-make_outputs (MateRRConfig *config)
+static CafeRROutputInfo **
+make_outputs (CafeRRConfig *config)
 {
     GPtrArray *outputs;
-    MateRROutputInfo *first_on;
+    CafeRROutputInfo *first_on;
     int i;
 
     outputs = g_ptr_array_new ();
@@ -943,8 +943,8 @@ make_outputs (MateRRConfig *config)
 
     for (i = 0; config->priv->outputs[i] != NULL; ++i)
     {
-	MateRROutputInfo *old = config->priv->outputs[i];
-	MateRROutputInfo *new = g_object_new (CAFE_TYPE_RR_OUTPUT_INFO, NULL);
+	CafeRROutputInfo *old = config->priv->outputs[i];
+	CafeRROutputInfo *new = g_object_new (CAFE_TYPE_RR_OUTPUT_INFO, NULL);
 	*(new->priv) = *(old->priv);
 	if (old->priv->name)
 	    new->priv->name = g_strdup (old->priv->name);
@@ -970,15 +970,15 @@ make_outputs (MateRRConfig *config)
 
     g_ptr_array_add (outputs, NULL);
 
-    return (MateRROutputInfo **)g_ptr_array_free (outputs, FALSE);
+    return (CafeRROutputInfo **)g_ptr_array_free (outputs, FALSE);
 }
 
 gboolean
-cafe_rr_config_applicable (MateRRConfig  *configuration,
-			    MateRRScreen  *screen,
+cafe_rr_config_applicable (CafeRRConfig  *configuration,
+			    CafeRRScreen  *screen,
 			    GError        **error)
 {
-    MateRROutputInfo **outputs;
+    CafeRROutputInfo **outputs;
     CrtcAssignment *assign;
     gboolean result;
     int i;
@@ -1030,7 +1030,7 @@ cafe_rr_config_get_intended_filename (void)
 }
 
 static const char *
-get_rotation_name (MateRRRotation r)
+get_rotation_name (CafeRRRotation r)
 {
     if (r & CAFE_RR_ROTATION_0)
 	return "normal";
@@ -1051,19 +1051,19 @@ yes_no (int x)
 }
 
 static const char *
-get_reflect_x (MateRRRotation r)
+get_reflect_x (CafeRRRotation r)
 {
     return yes_no (r & CAFE_RR_REFLECT_X);
 }
 
 static const char *
-get_reflect_y (MateRRRotation r)
+get_reflect_y (CafeRRRotation r)
 {
     return yes_no (r & CAFE_RR_REFLECT_Y);
 }
 
 static void
-emit_configuration (MateRRConfig *config,
+emit_configuration (CafeRRConfig *config,
 		    GString *string)
 {
     int j;
@@ -1074,7 +1074,7 @@ emit_configuration (MateRRConfig *config,
 
     for (j = 0; config->priv->outputs[j] != NULL; ++j)
     {
-	MateRROutputInfo *output = config->priv->outputs[j];
+	CafeRROutputInfo *output = config->priv->outputs[j];
 
 	g_string_append_printf (
 	    string, "      <output name=\"%s\">\n", output->priv->name);
@@ -1119,7 +1119,7 @@ emit_configuration (MateRRConfig *config,
 }
 
 void
-cafe_rr_config_sanitize (MateRRConfig *config)
+cafe_rr_config_sanitize (CafeRRConfig *config)
 {
     int i;
     int x_offset, y_offset;
@@ -1131,7 +1131,7 @@ cafe_rr_config_sanitize (MateRRConfig *config)
     x_offset = y_offset = G_MAXINT;
     for (i = 0; config->priv->outputs[i]; ++i)
     {
-	MateRROutputInfo *output = config->priv->outputs[i];
+	CafeRROutputInfo *output = config->priv->outputs[i];
 
 	if (output->priv->on)
 	{
@@ -1142,7 +1142,7 @@ cafe_rr_config_sanitize (MateRRConfig *config)
 
     for (i = 0; config->priv->outputs[i]; ++i)
     {
-	MateRROutputInfo *output = config->priv->outputs[i];
+	CafeRROutputInfo *output = config->priv->outputs[i];
 
 	if (output->priv->on)
 	{
@@ -1170,13 +1170,13 @@ cafe_rr_config_sanitize (MateRRConfig *config)
 }
 
 gboolean
-cafe_rr_config_ensure_primary (MateRRConfig *configuration)
+cafe_rr_config_ensure_primary (CafeRRConfig *configuration)
 {
         int              i;
-        MateRROutputInfo  *laptop;
-        MateRROutputInfo  *top_left;
+        CafeRROutputInfo  *laptop;
+        CafeRROutputInfo  *top_left;
         gboolean        found;
-        MateRRConfigPrivate *priv;
+        CafeRRConfigPrivate *priv;
 
         g_return_val_if_fail (CAFE_IS_RR_CONFIG (configuration), FALSE);
 
@@ -1186,7 +1186,7 @@ cafe_rr_config_ensure_primary (MateRRConfig *configuration)
         priv = configuration->priv;
 
         for (i = 0; priv->outputs[i] != NULL; ++i) {
-                MateRROutputInfo *info = priv->outputs[i];
+                CafeRROutputInfo *info = priv->outputs[i];
 
                 if (! info->priv->on) {
                         info->priv->primary = FALSE;
@@ -1226,9 +1226,9 @@ cafe_rr_config_ensure_primary (MateRRConfig *configuration)
 }
 
 gboolean
-cafe_rr_config_save (MateRRConfig *configuration, GError **error)
+cafe_rr_config_save (CafeRRConfig *configuration, GError **error)
 {
-    MateRRConfig **configurations;
+    CafeRRConfig **configurations;
     GString *output;
     int i;
     gchar *intended_filename;
@@ -1279,13 +1279,13 @@ cafe_rr_config_save (MateRRConfig *configuration, GError **error)
 }
 
 gboolean
-cafe_rr_config_apply_with_time (MateRRConfig *config,
-				 MateRRScreen *screen,
+cafe_rr_config_apply_with_time (CafeRRConfig *config,
+				 CafeRRScreen *screen,
 				 guint32        timestamp,
 				 GError       **error)
 {
     CrtcAssignment *assignment;
-    MateRROutputInfo **outputs;
+    CafeRROutputInfo **outputs;
     gboolean result = FALSE;
     int i;
     GdkDisplay *display;
@@ -1316,7 +1316,7 @@ cafe_rr_config_apply_with_time (MateRRConfig *config,
 }
 
 /* cafe_rr_config_apply_from_filename_with_time:
- * @screen: A #MateRRScreen
+ * @screen: A #CafeRRScreen
  * @filename: Path of the file to look in for stored RANDR configurations.
  * @timestamp: X server timestamp from the event that causes the screen configuration to change (a user's button press, for example)
  * @error: Location to store error, or %NULL
@@ -1348,9 +1348,9 @@ cafe_rr_config_apply_with_time (MateRRConfig *config,
  * nothing is changed.
  */
 gboolean
-cafe_rr_config_apply_from_filename_with_time (MateRRScreen *screen, const char *filename, guint32 timestamp, GError **error)
+cafe_rr_config_apply_from_filename_with_time (CafeRRScreen *screen, const char *filename, guint32 timestamp, GError **error)
 {
-    MateRRConfig *stored;
+    CafeRRConfig *stored;
     GError *my_error;
 
     g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), FALSE);
@@ -1390,10 +1390,10 @@ cafe_rr_config_apply_from_filename_with_time (MateRRScreen *screen, const char *
 /**
  * cafe_rr_config_get_outputs:
  *
- * Returns: (array zero-terminated=1) (element-type MateDesktop.RROutputInfo) (transfer none): the output configuration for this #MateRRConfig
+ * Returns: (array zero-terminated=1) (element-type CafeDesktop.RROutputInfo) (transfer none): the output configuration for this #CafeRRConfig
  */
-MateRROutputInfo **
-cafe_rr_config_get_outputs (MateRRConfig *self)
+CafeRROutputInfo **
+cafe_rr_config_get_outputs (CafeRRConfig *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_CONFIG (self), NULL);
 
@@ -1408,7 +1408,7 @@ cafe_rr_config_get_outputs (MateRRConfig *self)
  * (i.e. they have a CRTC assigned).
  */
 gboolean
-cafe_rr_config_get_clone (MateRRConfig *self)
+cafe_rr_config_get_clone (CafeRRConfig *self)
 {
     g_return_val_if_fail (CAFE_IS_RR_CONFIG (self), FALSE);
 
@@ -1416,7 +1416,7 @@ cafe_rr_config_get_clone (MateRRConfig *self)
 }
 
 void
-cafe_rr_config_set_clone (MateRRConfig *self, gboolean clone)
+cafe_rr_config_set_clone (CafeRRConfig *self, gboolean clone)
 {
     g_return_if_fail (CAFE_IS_RR_CONFIG (self));
 
@@ -1431,29 +1431,29 @@ typedef struct CrtcInfo CrtcInfo;
 
 struct CrtcInfo
 {
-    MateRRMode    *mode;
+    CafeRRMode    *mode;
     int        x;
     int        y;
-    MateRRRotation rotation;
+    CafeRRRotation rotation;
     GPtrArray *outputs;
 };
 
 struct CrtcAssignment
 {
-    MateRRScreen *screen;
+    CafeRRScreen *screen;
     GHashTable *info;
-    MateRROutput *primary;
+    CafeRROutput *primary;
 };
 
 static gboolean
 can_clone (CrtcInfo *info,
-	   MateRROutput *output)
+	   CafeRROutput *output)
 {
     int i;
 
     for (i = 0; i < info->outputs->len; ++i)
     {
-	MateRROutput *clone = info->outputs->pdata[i];
+	CafeRROutput *clone = info->outputs->pdata[i];
 
 	if (!cafe_rr_output_can_clone (clone, output))
 	    return FALSE;
@@ -1464,13 +1464,13 @@ can_clone (CrtcInfo *info,
 
 static gboolean
 crtc_assignment_assign (CrtcAssignment   *assign,
-			MateRRCrtc      *crtc,
-			MateRRMode      *mode,
+			CafeRRCrtc      *crtc,
+			CafeRRMode      *mode,
 			int               x,
 			int               y,
-			MateRRRotation   rotation,
+			CafeRRRotation   rotation,
                         gboolean          primary,
-			MateRROutput    *output,
+			CafeRROutput    *output,
 			GError          **error)
 {
     CrtcInfo *info = g_hash_table_lookup (assign->info, crtc);
@@ -1569,8 +1569,8 @@ crtc_assignment_assign (CrtcAssignment   *assign,
 
 static void
 crtc_assignment_unassign (CrtcAssignment *assign,
-			  MateRRCrtc         *crtc,
-			  MateRROutput       *output)
+			  CafeRRCrtc         *crtc,
+			  CafeRROutput       *output)
 {
     CrtcInfo *info = g_hash_table_lookup (assign->info, crtc);
 
@@ -1607,7 +1607,7 @@ configure_crtc (gpointer key,
 		gpointer value,
 		gpointer data)
 {
-    MateRRCrtc *crtc = key;
+    CafeRRCrtc *crtc = key;
     CrtcInfo *info = value;
     ConfigureCrtcState *state = data;
 
@@ -1619,7 +1619,7 @@ configure_crtc (gpointer key,
 					     info->x, info->y,
 					     info->mode,
 					     info->rotation,
-					     (MateRROutput **)info->outputs->pdata,
+					     (CafeRROutput **)info->outputs->pdata,
 					     info->outputs->len,
 					     state->error))
 	state->has_error = TRUE;
@@ -1637,9 +1637,9 @@ mode_is_rotated (CrtcInfo *info)
 }
 
 static gboolean
-crtc_is_rotated (MateRRCrtc *crtc)
+crtc_is_rotated (CafeRRCrtc *crtc)
 {
-    MateRRRotation r = cafe_rr_crtc_get_current_rotation (crtc);
+    CafeRRRotation r = cafe_rr_crtc_get_current_rotation (crtc);
 
     if ((r & CAFE_RR_ROTATION_270)		||
 	(r & CAFE_RR_ROTATION_90))
@@ -1665,13 +1665,13 @@ accumulate_error (GString *accumulated_error, GError *error)
  * enough that it doesn't matter.
  */
 static gboolean
-real_assign_crtcs (MateRRScreen *screen,
-		   MateRROutputInfo **outputs,
+real_assign_crtcs (CafeRRScreen *screen,
+		   CafeRROutputInfo **outputs,
 		   CrtcAssignment *assignment,
 		   GError **error)
 {
-    MateRRCrtc **crtcs = cafe_rr_screen_list_crtcs (screen);
-    MateRROutputInfo *output;
+    CafeRRCrtc **crtcs = cafe_rr_screen_list_crtcs (screen);
+    CafeRROutputInfo *output;
     int i;
     gboolean tried_mode;
     GError *my_error;
@@ -1694,7 +1694,7 @@ real_assign_crtcs (MateRRScreen *screen,
 
     for (i = 0; crtcs[i] != NULL; ++i)
     {
-	MateRRCrtc *crtc = crtcs[i];
+	CafeRRCrtc *crtc = crtcs[i];
 	int crtc_id = cafe_rr_crtc_get_id (crtc);
 	int pass;
 
@@ -1707,13 +1707,13 @@ real_assign_crtcs (MateRRScreen *screen,
 	 */
 	for (pass = 0; pass < 2; ++pass)
 	{
-	    MateRROutput *cafe_rr_output = cafe_rr_screen_get_output_by_name (screen, output->priv->name);
-	    MateRRMode **modes = cafe_rr_output_list_modes (cafe_rr_output);
+	    CafeRROutput *cafe_rr_output = cafe_rr_screen_get_output_by_name (screen, output->priv->name);
+	    CafeRRMode **modes = cafe_rr_output_list_modes (cafe_rr_output);
 	    int j;
 
 	    for (j = 0; modes[j] != NULL; ++j)
 	    {
-		MateRRMode *mode = modes[j];
+		CafeRRMode *mode = modes[j];
 		int mode_width;
 		int mode_height;
 		int mode_freq;
@@ -1806,7 +1806,7 @@ get_required_virtual_size (CrtcAssignment *assign, int *width, int *height)
     *width = *height = 1;
     for (list = active_crtcs; list != NULL; list = list->next)
     {
-	MateRRCrtc *crtc = list->data;
+	CafeRRCrtc *crtc = list->data;
 	CrtcInfo *info = g_hash_table_lookup (assign->info, crtc);
 	int w, h;
 
@@ -1828,7 +1828,7 @@ get_required_virtual_size (CrtcAssignment *assign, int *width, int *height)
 }
 
 static CrtcAssignment *
-crtc_assignment_new (MateRRScreen *screen, MateRROutputInfo **outputs, GError **error)
+crtc_assignment_new (CafeRRScreen *screen, CafeRROutputInfo **outputs, GError **error)
 {
     CrtcAssignment *assignment = g_new0 (CrtcAssignment, 1);
 
@@ -1878,7 +1878,7 @@ fail:
 static gboolean
 crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error)
 {
-    MateRRCrtc **all_crtcs = cafe_rr_screen_list_crtcs (assign->screen);
+    CafeRRCrtc **all_crtcs = cafe_rr_screen_list_crtcs (assign->screen);
     int width, height;
     int i;
     int min_width, max_width, min_height, max_height;
@@ -1913,8 +1913,8 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
      */
     for (i = 0; all_crtcs[i] != NULL; ++i)
     {
-	MateRRCrtc *crtc = all_crtcs[i];
-	MateRRMode *mode = cafe_rr_crtc_get_current_mode (crtc);
+	CafeRRCrtc *crtc = all_crtcs[i];
+	CafeRRMode *mode = cafe_rr_crtc_get_current_mode (crtc);
 	int x, y;
 
 	if (mode)

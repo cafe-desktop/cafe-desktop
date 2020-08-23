@@ -108,7 +108,7 @@ msgid ""
 msgstr ""
 "De Naam »CAFE« kummt vun Yerba maté, eener Steekpalm-Aard, wat im "
 "subtropisken Süüdamerika wasst. Siene Bladden enthollen Koffein un man maakt"
-" daar Tee un een Drank mit de Naam Mate ut."
+" daar Tee un een Drank mit de Naam Cafe ut."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the

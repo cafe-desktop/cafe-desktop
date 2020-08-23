@@ -12,7 +12,7 @@
 # ogalho Carlos Dias Martins <ogalho@gmail.com>, 2020
 # Rui <xymarior@yandex.com>, 2020
 # Luis Filipe Teixeira <lufilte@gmail.com>, 2020
-# Mateus Pinho <cafeusleitepinho@gmail.com>, 2020
+# Cafeus Pinho <cafeusleitepinho@gmail.com>, 2020
 # Manuela Silva <manuelarodsilva@gmail.com>, 2020
 # Manel Tinoco <maneltinoco@gmail.com>, 2020
 # José Vieira <jvieira33@sapo.pt>, 2020

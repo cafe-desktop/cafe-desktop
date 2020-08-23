@@ -33,18 +33,18 @@
 G_BEGIN_DECLS
 
 #define CAFE_TYPE_COLOR_SELECTION_DIALOG            (cafe_color_selection_dialog_get_type ())
-#define CAFE_COLOR_SELECTION_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialog))
-#define CAFE_COLOR_SELECTION_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
+#define CAFE_COLOR_SELECTION_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG, CafeColorSelectionDialog))
+#define CAFE_COLOR_SELECTION_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFE_TYPE_COLOR_SELECTION_DIALOG, CafeColorSelectionDialogClass))
 #define CAFE_IS_COLOR_SELECTION_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG))
 #define CAFE_IS_COLOR_SELECTION_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFE_TYPE_COLOR_SELECTION_DIALOG))
-#define CAFE_COLOR_SELECTION_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
+#define CAFE_COLOR_SELECTION_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFE_TYPE_COLOR_SELECTION_DIALOG, CafeColorSelectionDialogClass))
 
 
-typedef struct _MateColorSelectionDialog       MateColorSelectionDialog;
-typedef struct _MateColorSelectionDialogClass  MateColorSelectionDialogClass;
+typedef struct _CafeColorSelectionDialog       CafeColorSelectionDialog;
+typedef struct _CafeColorSelectionDialogClass  CafeColorSelectionDialogClass;
 
 
-struct _MateColorSelectionDialog
+struct _CafeColorSelectionDialog
 {
   GtkDialog parent_instance;
 
@@ -54,7 +54,7 @@ struct _MateColorSelectionDialog
   GtkWidget *help_button;
 };
 
-struct _MateColorSelectionDialogClass
+struct _CafeColorSelectionDialogClass
 {
   GtkDialogClass parent_class;
 
@@ -69,7 +69,7 @@ struct _MateColorSelectionDialogClass
 /* ColorSelectionDialog */
 GType      cafe_color_selection_dialog_get_type            (void) G_GNUC_CONST;
 GtkWidget* cafe_color_selection_dialog_new                 (const gchar *title);
-GtkWidget* cafe_color_selection_dialog_get_color_selection (MateColorSelectionDialog *colorsel);
+GtkWidget* cafe_color_selection_dialog_get_color_selection (CafeColorSelectionDialog *colorsel);
 
 
 G_END_DECLS
