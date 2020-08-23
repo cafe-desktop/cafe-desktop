@@ -53,6 +53,7 @@ requires:
     - dconf-devel
     - desktop-file-utils
     - gcc
+    - gettext-devel
     - git
     - gtk-doc
     - gobject-introspection-devel
