@@ -63,6 +63,7 @@ requires:
     - meson
     - redhat-rpm-config
     - startup-notification-devel
+    - which
 
   ubuntu:
     - autoconf-archive
