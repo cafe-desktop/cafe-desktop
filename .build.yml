@@ -16,6 +16,7 @@ requires:
     - libtool
     - meson
     - make
+    - pkgconf
     - startup-notification
     - which
 
