@@ -711,8 +711,6 @@ refresh_cache_file (CafeBG     *bg,
 {
 	gchar           *cache_filename;
 	gchar           *cache_dir;
-	GdkPixbufFormat *format;
-	gchar           *format_name;
 
 	if ((num_monitor == -1) || (width <= 300) || (height <= 300))
 		return;
@@ -723,9 +721,13 @@ refresh_cache_file (CafeBG     *bg,
 
 	/* Only refresh scaled file on disk if useful (and don't cache slideshow) */
 	if (!cache_file_is_valid (bg->filename, cache_filename)) {
+		GdkPixbufFormat *format;
+
 		format = gdk_pixbuf_get_file_info (bg->filename, NULL, NULL);
 
 		if (format != NULL) {
+			gchar *format_name;
+
 			if (!g_file_test (cache_dir, G_FILE_TEST_IS_DIR)) {
 				g_mkdir_with_parents (cache_dir, 0700);
 			} else {
@@ -1404,7 +1406,6 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
 			   int                    dest_height)
 {
 	GdkPixbuf *result;
-	GdkPixbuf *thumb;
 
 	g_return_val_if_fail (bg != NULL, NULL);
 
@@ -1413,6 +1414,8 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
 	draw_color (bg, result);
 
 	if (bg->filename) {
+		GdkPixbuf *thumb;
+
 		thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, -1);
 
 		if (thumb) {
@@ -1449,9 +1452,7 @@ cafe_bg_get_surface_from_root (GdkScreen *screen)
 	int screen_num;
 	cairo_surface_t *surface;
 	cairo_surface_t *source_pixmap;
-	GdkDisplay *gdkdisplay;
 	int width, height;
-	cairo_t *cr;
 
 	display = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
 	screen_num = gdk_x11_screen_get_screen_number (screen);
@@ -1472,6 +1473,8 @@ cafe_bg_get_surface_from_root (GdkScreen *screen)
 	}
 
 	if (data != NULL) {
+		GdkDisplay *gdkdisplay;
+
 		gdkdisplay = gdk_screen_get_display (screen);
 		gdk_x11_display_error_trap_push (gdkdisplay);
 
@@ -1498,6 +1501,8 @@ cafe_bg_get_surface_from_root (GdkScreen *screen)
 	height = HeightOfScreen (gdk_x11_screen_get_xscreen (screen));
 
 	if (source_pixmap) {
+		cairo_t *cr;
+
 		surface = cairo_surface_create_similar (source_pixmap,
 							CAIRO_CONTENT_COLOR,
 							width, height);
@@ -1541,16 +1546,17 @@ cafe_bg_set_root_pixmap_id (GdkScreen       *screen,
 	Atom     atoms[G_N_ELEMENTS(atom_names)] = {0};
 
 	Atom     type;
-	int      format, result;
+	int      format;
 	unsigned long nitems, after;
 	unsigned char *data_root, *data_esetroot;
-	GdkDisplay *gdkdisplay;
 
 	/* Get atoms for both properties in an array, only if they exist.
 	 * This method is to avoid multiple round-trips to Xserver
 	 */
 	if (XInternAtoms (display, atom_names, G_N_ELEMENTS(atom_names), True, atoms) &&
 	    atoms[0] != None && atoms[1] != None) {
+		int result;
+
 		result = XGetWindowProperty (display, xroot, atoms[0], 0L, 1L,
 		                             False, AnyPropertyType,
 		                             &type, &format, &nitems, &after,
@@ -1566,6 +1572,8 @@ cafe_bg_set_root_pixmap_id (GdkScreen       *screen,
 
 			if (data_esetroot != NULL && result == Success &&
 			    type == XA_PIXMAP && format == 32 && nitems == 1) {
+				GdkDisplay *gdkdisplay;
+
 				Pixmap xrootpmap = *((Pixmap *) data_root);
 				Pixmap esetrootpmap = *((Pixmap *) data_esetroot);
 
@@ -1939,7 +1947,6 @@ get_as_pixbuf_for_size (CafeBG    *bg,
 	if ((ent = file_cache_lookup (bg, PIXBUF, filename))) {
 		return g_object_ref (ent->u.pixbuf);
 	} else {
-		GdkPixbufFormat *format;
 		GdkPixbuf *pixbuf = NULL;
 		gchar *tmp = NULL;
 		GdkPixbuf *tmp_pixbuf;
@@ -1950,6 +1957,8 @@ get_as_pixbuf_for_size (CafeBG    *bg,
 							best_width, best_height);
 
 		if (!pixbuf) {
+			GdkPixbufFormat *format;
+
 			/* If scalable choose maximum size */
 			format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
 			if (format != NULL)
@@ -2112,13 +2121,14 @@ ensure_timeout (CafeBG *bg,
 static time_t
 get_mtime (const char *filename)
 {
-	GFile     *file;
-	GFileInfo *info;
 	time_t     mtime;
 
 	mtime = (time_t)-1;
 
 	if (filename) {
+		GFile     *file;
+		GFileInfo *info;
+
 		file = g_file_new_for_path (filename);
 		info = g_file_query_info (file, G_FILE_ATTRIBUTE_TIME_MODIFIED,
 					  G_FILE_QUERY_INFO_NONE, NULL, NULL);
@@ -2491,7 +2501,7 @@ pixbuf_average_value (GdkPixbuf *pixbuf,
 	guint row, column;
 	int row_stride;
 	const guchar *pixels, *p;
-	int r, g, b, a;
+	int r, g, b;
 	guint64 dividend;
 	guint width, height;
 	gdouble dd;
@@ -2511,6 +2521,8 @@ pixbuf_average_value (GdkPixbuf *pixbuf,
 		for (row = 0; row < height; row++) {
 			p = pixels + (row * row_stride);
 			for (column = 0; column < width; column++) {
+				int a;
+
 				r = *p++;
 				g = *p++;
 				b = *p++;
@@ -3042,7 +3054,6 @@ read_slideshow_file (const char *filename,
 	gsize len;
 	SlideShow *show = NULL;
 	GMarkupParseContext *context = NULL;
-	time_t t;
 
 	if (!filename)
 		return NULL;
@@ -3078,6 +3089,7 @@ read_slideshow_file (const char *filename,
 	g_markup_parse_context_free (context);
 
 	if (show) {
+		time_t t;
 		int len;
 
 		t = mktime (&show->start_tm);
@@ -3111,7 +3123,7 @@ create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 {
 	char *thumb;
 	time_t mtime;
-	GdkPixbuf *orig, *result = NULL;
+	GdkPixbuf *result = NULL;
 	char *uri;
 
 	mtime = get_mtime (filename);
@@ -3131,6 +3143,8 @@ create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 		g_free (thumb);
 	}
 	else {
+		GdkPixbuf *orig;
+
 		orig = gdk_pixbuf_new_from_file (filename, NULL);
 		if (orig) {
 			int orig_width = gdk_pixbuf_get_width (orig);
@@ -3230,7 +3244,6 @@ cafe_bg_create_frame_thumbnail (CafeBG			*bg,
 {
 	SlideShow *show;
 	GdkPixbuf *result;
-	GdkPixbuf *thumb;
         GList *l;
         int i, skipped;
         gboolean found;
@@ -3270,6 +3283,8 @@ cafe_bg_create_frame_thumbnail (CafeBG			*bg,
 	draw_color (bg, result);
 
 	if (bg->filename) {
+		GdkPixbuf *thumb;
+
 		thumb = create_img_thumbnail (bg, factory, screen,
 					      dest_width, dest_height,
 					      frame_num + skipped);

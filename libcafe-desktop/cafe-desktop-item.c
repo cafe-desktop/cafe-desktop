@@ -1770,17 +1770,15 @@ ditem_execute (const CafeDesktopItem *item,
 	       GError **error)
 {
 	char **free_me = NULL;
-	char **real_argv;
 	int i, ret;
 	char **term_argv = NULL;
 	int term_argc = 0;
-	GSList *vector_list;
 	GSList *args, *arg_ptr;
 	AddedStatus added_status;
 	const char *working_dir = NULL;
 	char **temp_argv = NULL;
 	int temp_argc = 0;
-	char *new_exec, *uris, *temp;
+	char *uris, *temp;
 	char *exec_locale;
 	int launched = 0;
 	GPid pid;
@@ -1897,6 +1895,10 @@ ditem_execute (const CafeDesktopItem *item,
 	}
 
 	do {
+		char **real_argv;
+		char *new_exec;
+		GSList *vector_list;
+
 		added_status = ADDED_NONE;
 		new_exec = expand_string (item,
 					  exec_locale,
@@ -2343,7 +2345,6 @@ gboolean
 cafe_desktop_item_exists (const CafeDesktopItem *item)
 {
 	const char *try_exec;
-	const char *exec;
 
 	g_return_val_if_fail (item != NULL, FALSE);
 
@@ -2358,6 +2359,7 @@ cafe_desktop_item_exists (const CafeDesktopItem *item)
 		int argc;
 		char **argv;
 		const char *exe;
+		const char *exec;
 
 		exec = lookup (item, CAFE_DESKTOP_ITEM_EXEC);
 		if (exec == NULL)
@@ -3165,10 +3167,11 @@ static void
 insert_locales (GHashTable *encodings, char *enc, ...)
 {
 	va_list args;
-	char *s;
 
 	va_start (args, enc);
 	for (;;) {
+		char *s;
+
 		s = va_arg (args, char *);
 		if (s == NULL)
 			break;

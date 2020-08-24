@@ -1838,12 +1838,14 @@ get_screen_color (GtkWidget *button)
   GdkScreen *screen = gtk_widget_get_screen (GTK_WIDGET (button));
   GdkCursor *picker_cursor;
   GdkGrabStatus grab_status;
-  GtkWidget *grab_widget, *toplevel;
+  GtkWidget *grab_widget;
 
   guint32 time = gtk_get_current_event_time ();
 
   if (priv->dropper_grab_widget == NULL)
     {
+      GtkWidget *toplevel;
+
       grab_widget = gtk_window_new (GTK_WINDOW_POPUP);
       gtk_window_set_screen (GTK_WINDOW (grab_widget), screen);
       gtk_window_resize (GTK_WINDOW (grab_widget), 1, 1);

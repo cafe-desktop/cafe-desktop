@@ -193,7 +193,6 @@ static void read_pnp_ids(void)
 	gchar* contents;
 	gchar** lines;
 	gchar* line;
-	gchar* code, *name;
 	gint i;
 
 	if (pnp_ids)
@@ -207,15 +206,17 @@ static void read_pnp_ids(void)
 
 		for (i = 0; lines[i]; i++)
 		{
-			 line = lines[i];
+			line = lines[i];
 
-			 if (line[0] && line[1] && line[2] && line[3] == '\t' && line[4])
-			 {
-				 code = line;
-				 line[3] = '\0';
-				 name = line + 4;
-				 g_hash_table_insert(pnp_ids, code, name);
-			 }
+			if (line[0] && line[1] && line[2] && line[3] == '\t' && line[4])
+			{
+				gchar* code, *name;
+
+				code = line;
+				line[3] = '\0';
+				name = line + 4;
+				g_hash_table_insert(pnp_ids, code, name);
+			}
 		}
 
 		g_free(lines);

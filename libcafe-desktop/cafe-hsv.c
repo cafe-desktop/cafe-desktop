@@ -775,7 +775,7 @@ paint_ring (CafeHSV *hsv,
   gdouble center_x;
   gdouble center_y;
   gdouble inner, outer;
-  guint32 *buf, *p;
+  guint32 *buf;
   gdouble angle;
   gdouble hue;
   gdouble r, g, b;
@@ -799,6 +799,8 @@ paint_ring (CafeHSV *hsv,
 
   for (yy = 0; yy < height; yy++)
     {
+      guint32 *p;
+
       p = buf + yy * width;
 
       dy = -(yy - center_y);
@@ -917,7 +919,7 @@ paint_triangle (CafeHSV  *hsv,
   gint x2, y2, r2, g2, b2; /* Second vertex */
   gint x3, y3, r3, g3, b3; /* Third vertex */
   gint t;
-  guint32 *buf, *p, c;
+  guint32 *buf, c;
   gint xl, xr, rl, rr, gl, gr, bl, br; /* Scanline data */
   gint xx, yy;
   gint x_interp, y_interp;
@@ -980,6 +982,8 @@ paint_triangle (CafeHSV  *hsv,
 
   for (yy = 0; yy < height; yy++)
     {
+      guint32 *p;
+
       p = buf + yy * width;
 
       if (yy >= y1 - PAD && yy < y3 + PAD) {
