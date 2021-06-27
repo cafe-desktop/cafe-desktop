@@ -143,7 +143,7 @@ build_scripts:
 after_scripts:
   - if [ ${BUILD_TYPE} == "scripts" ];then
   -     make distcheck
-  -     ./gen-index -l 20
+  -     if [ -f "gen-index" ]; then ./gen-index -l 20; fi
   - fi
 
 releases:
