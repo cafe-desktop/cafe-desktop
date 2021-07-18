@@ -2,26 +2,6 @@
 # THE FOLLOWING LINES IS USED BY docker-build
 ##########################################################
 requires:
-  archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/cafe-desktop
-    - autoconf-archive
-    - automake
-    - clang
-    - gcc
-    - gettext
-    - git
-    - gtk-doc
-    - gobject-introspection
-    - gtk3
-    - intltool
-    - iso-codes
-    - libtool
-    - meson
-    - make
-    - pkgconf
-    - startup-notification
-    - which
-
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-cafe-team/cafe-desktop
@@ -30,52 +10,6 @@ requires:
     - clang
     - clang-tools
     - cppcheck
-    - git
-    - gobject-introspection
-    - gtk-doc-tools
-    - intltool
-    - iso-codes
-    - libdconf-dev
-    - libgirepository1.0-dev
-    - libglib2.0-dev
-    - libglib2.0-doc
-    - libgtk-3-dev
-    - libgtk-3-doc
-    - libstartup-notification0-dev
-    - libtool
-    - libx11-dev
-    - libxml2-dev
-    - libxrandr-dev
-    - meson
-
-  fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/cafe-desktop.git
-    - autoconf-archive
-    - cairo-gobject-devel
-    - clang-analyzer
-    - clang
-    - dconf-devel
-    - desktop-file-utils
-    - gcc
-    - gettext-devel
-    - git
-    - gtk-doc
-    - gobject-introspection-devel
-    - gtk3-devel
-    - iso-codes-devel
-    - itstool
-    - libtool
-    - make
-    - meson
-    - redhat-rpm-config
-    - startup-notification-devel
-    - which
-
-  ubuntu:
-    - autoconf-archive
-    - autopoint
-    - clang
-    - clang-tools
     - git
     - gobject-introspection
     - gtk-doc-tools
@@ -113,6 +47,10 @@ variables:
     -enable-checker security.insecureAPI.strcpy"'
 
 before_scripts:
+  - export TITLECPPCHECK="${REPO_NAME} (cppcheck `dpkg -s cppcheck|grep -i version|cut -d " " -f 2`)"
+  - cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude .
+  - cppcheck-htmlreport --title="$TITLECPPCHECK" --file=cppcheck.xml --report-dir=cppcheck-htmlreport
+
   # Install cafe-common from master branch
   - if [ ! -e cafe-common-master ]; then
   -     cd ${START_DIR}
@@ -129,16 +67,20 @@ before_scripts:
   - fi
 
 build_scripts:
+  - export TITLESCANBUILD="${REPO_NAME} (clang-tools `dpkg -s clang-tools|grep -i version|cut -d " " -f 2`) - scan-build results"
+  - mkdir html-report
+  - cppcheck --enable=warning,style,performance,portability,information,missingInclude . 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
+
   - NOCONFIGURE=1 ./autogen.sh
   - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc
   - if [ $CPU_COUNT -gt 1 ]; then
-  -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
+  -     scan-build $CHECKERS --html-title="$TITLESCANBUILD" --keep-cc -o html-report make -j $CPU_COUNT 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
   - else
-  -     scan-build $CHECKERS --keep-cc -o html-report make
+  -     scan-build $CHECKERS --html-title="$TITLESCANBUILD" --keep-cc -o html-report make 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
   - fi
-  - if [ ${DISTRO_NAME} == "debian" ];then
-  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude .
-  - fi
+  - make check 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
+  - echo Warnings detected in the logs `cat ./html-report/output_${TRAVIS_COMMIT} | grep -i warning | wc -l` 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
+  - make install
 
 after_scripts:
   - if [ ${BUILD_TYPE} == "scripts" ];then
