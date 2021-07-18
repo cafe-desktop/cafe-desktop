@@ -136,6 +136,8 @@ cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 			term_argv[1] = g_strdup ("-x");
 		} else {
 			if (check == NULL)
+				check = g_find_program_in_path ("x-terminal-emulator");
+			if (check == NULL)
 				check = g_find_program_in_path ("nxterm");
 			if (check == NULL)
 				check = g_find_program_in_path ("color-xterm");
