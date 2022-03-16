@@ -39,7 +39,7 @@ build_scripts:
 
   - ./make-scanbuild '--prefix=/usr --enable-gtk-doc --enable-compile-warnings=maximum'
 
-  - echo Warnings detected in the logs `cat ./html-report/output_${TRAVIS_COMMIT} | grep -i warning | wc -l` 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
+  - ./after-build
 
 after_scripts:
   - if [ ${BUILD_TYPE} == "scripts" ];then
