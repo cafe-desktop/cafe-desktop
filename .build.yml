@@ -10,6 +10,7 @@ requires:
     - clang
     - clang-tools
     - cppcheck
+    - expect #required for unbuffer
     - git
     - gobject-introspection
     - gtk-doc-tools
