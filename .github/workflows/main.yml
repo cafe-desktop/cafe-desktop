@@ -41,18 +41,16 @@ jobs:
 
       - name: install docker-build
         run: |
-          curl -Ls -o docker-build https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/docker-build
-          curl -Ls -o gen-index https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/gen-index.sh
-          chmod +x docker-build gen-index
+          curl -Ls -o install-dockerbuild https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/build/install-dockerbuild.sh
+          curl -Ls -o build-push https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/build/build-push.sh
+          chmod +x install-dockerbuild build-push
+          ./install-dockerbuild
 
       - name: Build and push
         env:
           TRAVIS_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          export TRAVIS_COMMIT=$GITHUB_SHA
-          export TRAVIS_BRANCH=$(echo $GITHUB_REF |cut -d "/" -f3)
-          ./docker-build --name "debian" --config .build.yml --install
-          ./docker-build --name "debian" --verbose --config .build.yml --build scripts
+          ./build-push
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
