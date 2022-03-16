@@ -40,5 +40,5 @@ build_scripts:
 
 after_scripts:
   - if [ ${BUILD_TYPE} == "scripts" ];then
-  -     if [ -f "gen-index" ]; then ./gen-index -l 20; fi
+  -     if [ -f "gen-index" ]; then ./gen-index -l 20 -i https://github.com/cafe-desktop/cafe-desktop/raw/master/icons/16x16/apps/cafe-desktop.png; fi
   - fi
