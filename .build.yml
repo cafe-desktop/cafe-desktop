@@ -51,20 +51,7 @@ before_scripts:
   - cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude .
   - cppcheck-htmlreport --title="$TITLECPPCHECK" --file=cppcheck.xml --report-dir=cppcheck-htmlreport
 
-  # Install cafe-common from master branch
-  - if [ ! -e cafe-common-master ]; then
-  -     cd ${START_DIR}
-  -     git clone --depth 1  https://github.com/cafe-desktop/cafe-common.git -b master cafe-common-master
-  -     cd cafe-common-master
-  -     ./autogen.sh
-  -     if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
-  -         ./configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
-  -     else
-  -         ./configure --prefix=/usr
-  -     fi
-  -     make
-  -     make install
-  - fi
+  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
 
 build_scripts:
   - export TITLESCANBUILD="${REPO_NAME} (clang-tools `dpkg -s clang-tools|grep -i version|cut -d " " -f 2`) - scan-build results"
