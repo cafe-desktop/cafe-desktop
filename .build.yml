@@ -34,11 +34,8 @@ before_scripts:
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
 
 build_scripts:
-  - mkdir html-report
-  - cppcheck $ARGS_CPPCHECK . 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
-
+  - ./before-build
   - ./make-scanbuild '--prefix=/usr --enable-gtk-doc --enable-compile-warnings=maximum'
-
   - ./after-build
 
 after_scripts:
