@@ -29,47 +29,20 @@ requires:
     - libxrandr-dev
     - meson
 
-variables:
-  - 'CHECKERS="
-    -enable-checker deadcode.DeadStores
-    -enable-checker alpha.deadcode.UnreachableCode
-    -enable-checker alpha.core.CastSize
-    -enable-checker alpha.core.CastToStruct
-    -enable-checker alpha.core.IdenticalExpr
-    -enable-checker alpha.core.SizeofPtr
-    -enable-checker alpha.security.ArrayBoundV2
-    -enable-checker alpha.security.MallocOverflow
-    -enable-checker alpha.security.ReturnPtrRange
-    -enable-checker alpha.unix.SimpleStream
-    -enable-checker alpha.unix.cstring.BufferOverlap
-    -enable-checker alpha.unix.cstring.NotNullTerminated
-    -enable-checker alpha.unix.cstring.OutOfBounds
-    -enable-checker alpha.core.FixedAddr
-    -enable-checker security.insecureAPI.strcpy"'
-
 before_scripts:
   - ./html-cppcheck
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
 
 build_scripts:
-  - export TITLESCANBUILD="${REPO_NAME} (clang-tools `dpkg -s clang-tools|grep -i version|cut -d " " -f 2`) - scan-build results"
   - mkdir html-report
   - cppcheck $ARGS_CPPCHECK . 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
 
-  - NOCONFIGURE=1 ./autogen.sh
-  - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc
-  - if [ $CPU_COUNT -gt 1 ]; then
-  -     scan-build $CHECKERS --html-title="$TITLESCANBUILD" --keep-cc -o html-report make -j $CPU_COUNT 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
-  - else
-  -     scan-build $CHECKERS --html-title="$TITLESCANBUILD" --keep-cc -o html-report make 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
-  - fi
-  - make check 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
+  - ./make-scanbuild '--prefix=/usr --enable-gtk-doc --enable-compile-warnings=maximum'
+
   - echo Warnings detected in the logs `cat ./html-report/output_${TRAVIS_COMMIT} | grep -i warning | wc -l` 2>&1 | tee -a ./html-report/output_${TRAVIS_COMMIT}
-  - make install
 
 after_scripts:
   - if [ ${BUILD_TYPE} == "scripts" ];then
-  -     make distcheck
   -     if [ -f "gen-index" ]; then ./gen-index -l 20; fi
   - fi
 
