@@ -27,7 +27,7 @@
 
 int main (int argc, char **argv)
 {
-    CdkPixbuf *pixbuf;
+    GdkPixbuf *pixbuf;
     CafeDesktopThumbnailFactory *factory;
     CtkWidget *window, *image;
     char *content_type;

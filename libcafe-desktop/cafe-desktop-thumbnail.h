@@ -76,11 +76,11 @@ gboolean   cafe_desktop_thumbnail_factory_can_thumbnail (CafeDesktopThumbnailFac
                                                          const char                  *uri,
                                                          const char                  *mime_type,
                                                          time_t                       mtime);
-CdkPixbuf *  cafe_desktop_thumbnail_factory_generate_thumbnail (CafeDesktopThumbnailFactory *factory,
+GdkPixbuf *  cafe_desktop_thumbnail_factory_generate_thumbnail (CafeDesktopThumbnailFactory *factory,
                                                                 const char                  *uri,
                                                                 const char                  *mime_type);
 void       cafe_desktop_thumbnail_factory_save_thumbnail (CafeDesktopThumbnailFactory *factory,
-                                                          CdkPixbuf                   *thumbnail,
+                                                          GdkPixbuf                   *thumbnail,
                                                           const char                  *uri,
                                                           time_t                       original_mtime);
 void       cafe_desktop_thumbnail_factory_create_failed_thumbnail (CafeDesktopThumbnailFactory *factory,
@@ -89,9 +89,9 @@ void       cafe_desktop_thumbnail_factory_create_failed_thumbnail (CafeDesktopTh
 
 
 /* Thumbnailing utils: */
-gboolean   cafe_desktop_thumbnail_has_uri           (CdkPixbuf          *pixbuf,
+gboolean   cafe_desktop_thumbnail_has_uri           (GdkPixbuf          *pixbuf,
                                                      const char         *uri);
-gboolean   cafe_desktop_thumbnail_is_valid          (CdkPixbuf          *pixbuf,
+gboolean   cafe_desktop_thumbnail_is_valid          (GdkPixbuf          *pixbuf,
                                                      const char         *uri,
                                                      time_t              mtime);
 char *     cafe_desktop_thumbnail_path_for_uri      (const char         *uri,
