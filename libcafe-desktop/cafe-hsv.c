@@ -263,9 +263,9 @@ cafe_hsv_realize (CtkWidget *widget)
   ctk_widget_set_window (widget, parent_window);
   g_object_ref (parent_window);
 
-  priv->window = gdk_window_new (parent_window, &attr, attr_mask);
-  gdk_window_set_user_data (priv->window, hsv);
-  gdk_window_show (priv->window);
+  priv->window = cdk_window_new (parent_window, &attr, attr_mask);
+  cdk_window_set_user_data (priv->window, hsv);
+  cdk_window_show (priv->window);
 }
 
 static void
@@ -274,8 +274,8 @@ cafe_hsv_unrealize (CtkWidget *widget)
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
 
-  gdk_window_set_user_data (priv->window, NULL);
-  gdk_window_destroy (priv->window);
+  cdk_window_set_user_data (priv->window, NULL);
+  cdk_window_destroy (priv->window);
   priv->window = NULL;
 
   CTK_WIDGET_CLASS (cafe_hsv_parent_class)->unrealize (widget);
@@ -329,7 +329,7 @@ cafe_hsv_size_allocate (CtkWidget     *widget,
   ctk_widget_set_allocation (widget, allocation);
 
   if (ctk_widget_get_realized (widget))
-    gdk_window_move_resize (priv->window,
+    cdk_window_move_resize (priv->window,
                             allocation->x,
                             allocation->y,
                             allocation->width,
@@ -610,9 +610,9 @@ set_cross_grab (CafeHSV   *hsv,
   CafeHSVPrivate *priv = hsv->priv;
   GdkCursor *cursor;
 
-  cursor = gdk_cursor_new_for_display (ctk_widget_get_display (CTK_WIDGET (hsv)),
+  cursor = cdk_cursor_new_for_display (ctk_widget_get_display (CTK_WIDGET (hsv)),
                                        GDK_CROSSHAIR);
-  gdk_seat_grab (gdk_device_get_seat (device),
+  cdk_seat_grab (cdk_device_get_seat (device),
                  priv->window,
                  GDK_SEAT_CAPABILITY_ALL_POINTING,
                  FALSE,
@@ -652,7 +652,7 @@ cafe_hsv_button_press (CtkWidget      *widget,
   if (is_in_ring (hsv, x, y))
     {
       priv->mode = DRAG_H;
-      set_cross_grab (hsv, gdk_event_get_device ((GdkEvent *) event), event->time);
+      set_cross_grab (hsv, cdk_event_get_device ((GdkEvent *) event), event->time);
 
       cafe_hsv_set_color (hsv,
                          compute_v (hsv, x, y),
@@ -670,7 +670,7 @@ cafe_hsv_button_press (CtkWidget      *widget,
       gdouble s, v;
 
       priv->mode = DRAG_SV;
-      set_cross_grab (hsv, gdk_event_get_device ((GdkEvent *) event), event->time);
+      set_cross_grab (hsv, cdk_event_get_device ((GdkEvent *) event), event->time);
 
       compute_sv (hsv, x, y, &s, &v);
       cafe_hsv_set_color (hsv, priv->h, s, v);
@@ -721,7 +721,7 @@ cafe_hsv_button_release (CtkWidget      *widget,
       g_assert_not_reached ();
     }
 
-  gdk_seat_ungrab (gdk_device_get_seat (gdk_event_get_device ((GdkEvent *) event)));
+  cdk_seat_ungrab (cdk_device_get_seat (cdk_event_get_device ((GdkEvent *) event)));
 
   return TRUE;
 }
@@ -737,7 +737,7 @@ cafe_hsv_motion (CtkWidget      *widget,
   if (priv->mode == DRAG_NONE)
     return FALSE;
 
-  gdk_event_request_motions (event);
+  cdk_event_request_motions (event);
   x = event->x;
   y = event->y;
 

@@ -33,7 +33,7 @@
 #include <glib.h>
 #include <glib-object.h>
 #include <time.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 
 G_BEGIN_DECLS
 

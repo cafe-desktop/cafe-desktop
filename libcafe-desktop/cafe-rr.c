@@ -34,7 +34,7 @@
 #endif
 
 #include <ctk/ctk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 #include <X11/Xatom.h>
 
 #undef CAFE_DISABLE_DEPRECATED
@@ -470,15 +470,15 @@ fill_out_screen_info (Display *xdisplay,
     if (needs_reprobe) {
 	gboolean success;
 
-	display = gdk_display_get_default ();
-    gdk_x11_display_error_trap_push (display);
+	display = cdk_display_get_default ();
+    cdk_x11_display_error_trap_push (display);
 	success = XRRGetScreenSizeRange (xdisplay, xroot,
 					 &(info->min_width),
 					 &(info->min_height),
 					 &(info->max_width),
 					 &(info->max_height));
-	gdk_display_flush (display);
-	if (gdk_x11_display_error_trap_pop (display)) {
+	cdk_display_flush (display);
+	if (cdk_x11_display_error_trap_pop (display)) {
 	    g_set_error (error, CAFE_RR_ERROR, CAFE_RR_ERROR_UNKNOWN,
 			 _("unhandled X error while getting the range of screen sizes"));
 	    return FALSE;
@@ -500,10 +500,10 @@ fill_out_screen_info (Display *xdisplay,
     }
 
     info->primary = None;
-	display = gdk_display_get_default ();
-    gdk_x11_display_error_trap_push (display);
+	display = cdk_display_get_default ();
+    cdk_x11_display_error_trap_push (display);
     info->primary = XRRGetOutputPrimary (xdisplay, xroot);
-    gdk_x11_display_error_trap_pop_ignored (display);
+    cdk_x11_display_error_trap_pop_ignored (display);
 
     return TRUE;
 #else
@@ -667,7 +667,7 @@ cafe_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
 {
     CafeRRScreen *self = CAFE_RR_SCREEN (initable);
     CafeRRScreenPrivate *priv = self->priv;
-    Display *dpy = GDK_SCREEN_XDISPLAY (self->priv->gdk_screen);
+    Display *dpy = GDK_SCREEN_XDISPLAY (self->priv->cdk_screen);
     int event_base;
     int ignore;
 
@@ -694,10 +694,10 @@ cafe_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
         XRRSelectInput (priv->xdisplay,
             priv->xroot,
             RRScreenChangeNotifyMask);
-        gdk_x11_register_standard_event_type (gdk_screen_get_display (priv->gdk_screen),
+        cdk_x11_register_standard_event_type (cdk_screen_get_display (priv->cdk_screen),
                           event_base,
                           RRNotify + 1);
-        gdk_window_add_filter (priv->gdk_root, screen_on_event, self);
+        cdk_window_add_filter (priv->cdk_root, screen_on_event, self);
 
         return TRUE;
     }
@@ -725,7 +725,7 @@ void
 {
     CafeRRScreen *screen = CAFE_RR_SCREEN (gobject);
 
-    gdk_window_remove_filter (screen->priv->gdk_root, screen_on_event, screen);
+    cdk_window_remove_filter (screen->priv->cdk_root, screen_on_event, screen);
 
     if (screen->priv->info)
       screen_info_free (screen->priv->info);
@@ -742,11 +742,11 @@ cafe_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *
     switch (property_id)
     {
     case SCREEN_PROP_GDK_SCREEN:
-        priv->gdk_screen = g_value_get_object (value);
-        priv->gdk_root = gdk_screen_get_root_window (priv->gdk_screen);
-        priv->xroot = GDK_WINDOW_XID (priv->gdk_root);
-        priv->xdisplay = GDK_SCREEN_XDISPLAY (priv->gdk_screen);
-        priv->xscreen = gdk_x11_screen_get_xscreen (priv->gdk_screen);
+        priv->cdk_screen = g_value_get_object (value);
+        priv->cdk_root = cdk_screen_get_root_window (priv->cdk_screen);
+        priv->xroot = GDK_WINDOW_XID (priv->cdk_root);
+        priv->xdisplay = GDK_SCREEN_XDISPLAY (priv->cdk_screen);
+        priv->xscreen = cdk_x11_screen_get_xscreen (priv->cdk_screen);
         return;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (gobject, property_id, property);
@@ -763,7 +763,7 @@ cafe_rr_screen_get_property (GObject *gobject, guint property_id, GValue *value,
     switch (property_id)
     {
     case SCREEN_PROP_GDK_SCREEN:
-        g_value_set_object (value, priv->gdk_screen);
+        g_value_set_object (value, priv->cdk_screen);
         return;
      default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (gobject, property_id, property);
@@ -784,7 +784,7 @@ cafe_rr_screen_class_init (CafeRRScreenClass *klass)
         gobject_class,
         SCREEN_PROP_GDK_SCREEN,
         g_param_spec_object (
-            "gdk-screen",
+            "cdk-screen",
             "GDK Screen",
             "The GDK Screen represented by this CafeRRScreen",
             GDK_TYPE_SCREEN,
@@ -808,8 +808,8 @@ cafe_rr_screen_init (CafeRRScreen *self)
     CafeRRScreenPrivate *priv = cafe_rr_screen_get_instance_private (self);
     self->priv = priv;
 
-    priv->gdk_screen = NULL;
-    priv->gdk_root = NULL;
+    priv->cdk_screen = NULL;
+    priv->cdk_root = NULL;
     priv->xdisplay = NULL;
     priv->xroot = None;
     priv->xscreen = NULL;
@@ -833,7 +833,7 @@ cafe_rr_screen_new (GdkScreen *screen,
                     GError **error)
 {
     _cafe_desktop_init_i18n ();
-    return g_initable_new (CAFE_TYPE_RR_SCREEN, NULL, error, "gdk-screen", screen, NULL);
+    return g_initable_new (CAFE_TYPE_RR_SCREEN, NULL, error, "cdk-screen", screen, NULL);
 }
 
 void
@@ -848,11 +848,11 @@ cafe_rr_screen_set_size (CafeRRScreen *screen,
 #ifdef HAVE_RANDR
 	GdkDisplay *display;
 
-	display = gdk_display_get_default ();
-    gdk_x11_display_error_trap_push (display);
+	display = cdk_display_get_default ();
+    cdk_x11_display_error_trap_push (display);
     XRRSetScreenSize (screen->priv->xdisplay, screen->priv->xroot,
 		      width, height, mm_width, mm_height);
-    gdk_x11_display_error_trap_pop_ignored (display);
+    cdk_x11_display_error_trap_pop_ignored (display);
 #endif
 }
 
@@ -949,8 +949,8 @@ force_timestamp_update (CafeRRScreen *screen)
     if (current_info == NULL)
 	  goto out;
 
-	display = gdk_display_get_default ();
-    gdk_x11_display_error_trap_push (display);
+	display = cdk_display_get_default ();
+    cdk_x11_display_error_trap_push (display);
     status = XRRSetCrtcConfig (priv->xdisplay,
 			       priv->info->resources,
 			       crtc->id,
@@ -964,8 +964,8 @@ force_timestamp_update (CafeRRScreen *screen)
 
     XRRFreeCrtcInfo (current_info);
 
-    gdk_display_flush (display);
-    if (gdk_x11_display_error_trap_pop (display))
+    cdk_display_flush (display);
+    if (cdk_x11_display_error_trap_pop (display))
 	goto out;
 
     if (status == RRSetConfigSuccess)
@@ -998,12 +998,12 @@ cafe_rr_screen_refresh (CafeRRScreen *screen,
 
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
-    gdk_x11_display_grab (gdk_screen_get_display (screen->priv->gdk_screen));
+    cdk_x11_display_grab (cdk_screen_get_display (screen->priv->cdk_screen));
 
     refreshed = screen_update (screen, FALSE, TRUE, error);
     force_timestamp_update (screen); /* this is to keep other clients from thinking that the X server re-detected things by itself - bgo#621046 */
 
-    gdk_x11_display_ungrab (gdk_screen_get_display (screen->priv->gdk_screen));
+    cdk_x11_display_ungrab (cdk_screen_get_display (screen->priv->cdk_screen));
 
     return refreshed;
 }
@@ -1762,8 +1762,8 @@ cafe_rr_crtc_set_config_with_time (CafeRRCrtc      *crtc,
 	    g_array_append_val (output_ids, outputs[i]->id);
     }
 
-	display = gdk_display_get_default ();
-    gdk_x11_display_error_trap_push (display);
+	display = cdk_display_get_default ();
+    cdk_x11_display_error_trap_push (display);
     status = XRRSetCrtcConfig (DISPLAY (crtc), info->resources, crtc->id,
 			       timestamp,
 			       x, y,
@@ -1774,7 +1774,7 @@ cafe_rr_crtc_set_config_with_time (CafeRRCrtc      *crtc,
 
     g_array_free (output_ids, TRUE);
 
-    if (gdk_x11_display_error_trap_pop (display) || status != RRSetConfigSuccess) {
+    if (cdk_x11_display_error_trap_pop (display) || status != RRSetConfigSuccess) {
         /* Translators: CRTC is a CRT Controller (this is X terminology).
          * It is *very* unlikely that you'll ever get this error, so it is
          * only listed for completeness. */

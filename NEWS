@@ -32,7 +32,7 @@
   * thumbnail: some code-styling fixes
   * Deprecate cafe_desktop_thumbnail_scale_down_pixbuf()
   * thumbnailer: Always prefer the backend provided preview
-  * thumbnail: Always use external gdk-pixbuf thumbnailer
+  * thumbnail: Always use external cdk-pixbuf thumbnailer
   * thumbnail: Demote a log message from WARNING to DEBUG
   * thumbnail factory: Disconnect signal handlers in finalize
   * thumbnail: Move thumbnail generation/saving to a few helper functions
@@ -95,7 +95,7 @@
   * [Security] test-ditem: Use 'g_strlcat' instead of 'strcat'
   * cafe-hsv: avoid duplicate initialization in variable
   * [ci] Enable Clang Static Analyzer
-  * cafe-hsv: avoid deprecated 'gdk_device_grab/ungrab'
+  * cafe-hsv: avoid deprecated 'cdk_device_grab/ungrab'
   * cafe-colorsel: avoid deprecated 'CtkHSV', use 'CafeHSV' instead
   * CafeHSV implementation (CtkHSV fork)
 
@@ -124,11 +124,11 @@
 
   * Translations update
   * interface: add key to enable/disable primary paste from middlemouse
-  * cafe-desktop-item: replace deprecated gdk_error_trap_push/pop
-  * cafe-rr-config: replace deprecated gdk_flush
+  * cafe-desktop-item: replace deprecated cdk_error_trap_push/pop
+  * cafe-rr-config: replace deprecated cdk_flush
   * cafe-rr: replace deprecated Gdk functions
-  * cafe-bg-crossfade: replace deprecated gdk_error_trap_push/pop
-  * cafe-bg: replace deprecated gdk_error_trap_push/pop
+  * cafe-bg-crossfade: replace deprecated cdk_error_trap_push/pop
+  * cafe-bg: replace deprecated cdk_error_trap_push/pop
   * fix distcheck
   * add cafe-language apis
 
@@ -165,17 +165,17 @@
   * drop CafeAboutDialog
   * cafe-about: remove remains of libunique references
   * cafe-about: switch to CtkAboutDialog
-  * ctk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * ctk 3.22: avoid deprecated cdk_screen_get_monitor... functions:
 
 ### cafe-desktop 1.19.0
 
   * Translations update
-  * avoid deprecated gdk_screen_get_width/height
+  * avoid deprecated cdk_screen_get_width/height
   * cafe-desktop-item: cafe-about: avoid deprecated ctk_show_uri
   * cafe-about: avoid deprecated ctk_show_uri
-  * avoid deprecated gdk_screen_get_n_monitors
-  * avoid deprecated gdk_screen_make_display_name
-  * avoid deprecated gdk_screen_get_number
+  * avoid deprecated cdk_screen_get_n_monitors
+  * avoid deprecated cdk_screen_make_display_name
+  * avoid deprecated cdk_screen_get_number
   * Correct little imprecision in man cafe-about
   * Restore Polish translation credits from GNOME
   * Fix broken fallback cursor in cafe-colorsel.c
@@ -288,7 +288,7 @@
   * Added CAFE user guide
   * Added CAFE_DESKTOP_CHECK_VERSION function
   * Added mpaste tool
-  * Added replacement for gdk_spawn_command_line_on_screen in CTK3
+  * Added replacement for cdk_spawn_command_line_on_screen in CTK3
 
 ### cafe-desktop 1.6.1
 

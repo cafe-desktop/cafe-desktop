@@ -47,8 +47,8 @@
 #ifdef HAVE_STARTUP_NOTIFICATION
 #define SN_API_NOT_YET_FROZEN
 #include <libsn/sn.h>
-#include <gdk/gdk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdk.h>
+#include <cdk/cdkx.h>
 #include <ctk/ctk.h>
 #endif
 
@@ -1473,20 +1473,20 @@ static void
 sn_error_trap_push (SnDisplay *display,
 		    Display   *xdisplay)
 {
-	GdkDisplay *gdkdisplay;
+	GdkDisplay *cdkdisplay;
 
-	gdkdisplay = gdk_display_get_default ();
-	gdk_x11_display_error_trap_push (gdkdisplay);
+	cdkdisplay = cdk_display_get_default ();
+	cdk_x11_display_error_trap_push (cdkdisplay);
 }
 
 static void
 sn_error_trap_pop (SnDisplay *display,
 		   Display   *xdisplay)
 {
-	GdkDisplay *gdkdisplay;
+	GdkDisplay *cdkdisplay;
 
-	gdkdisplay = gdk_display_get_default ();
-	gdk_x11_display_error_trap_pop_ignored (gdkdisplay);
+	cdkdisplay = cdk_display_get_default ();
+	cdk_x11_display_error_trap_pop_ignored (cdkdisplay);
 }
 
 static char **
@@ -1727,8 +1727,8 @@ make_environment_for_screen (GdkScreen  *screen,
 	retval = g_new (char *, env_len + 1);
 	retval [env_len] = NULL;
 
-	display = gdk_screen_get_display (screen);
-	display_name = g_strdup (gdk_display_get_name (display));
+	display = cdk_screen_get_display (screen);
+	display_name = g_strdup (cdk_display_get_name (display));
 
 	for (i = 0; i < env_len; i++)
 		if (i == display_index)
@@ -1783,7 +1783,7 @@ ditem_execute (const CafeDesktopItem *item,
 	int launched = 0;
 	GPid pid;
 #ifdef HAVE_STARTUP_NOTIFICATION
-	GdkDisplay *gdkdisplay;
+	GdkDisplay *cdkdisplay;
 	SnLauncherContext *sn_context;
 	SnDisplay *sn_display;
 	const char *startup_class;
@@ -1821,11 +1821,11 @@ ditem_execute (const CafeDesktopItem *item,
 
 #ifdef HAVE_STARTUP_NOTIFICATION
 	if (screen)
-		gdkdisplay = gdk_screen_get_display (screen);
+		cdkdisplay = cdk_screen_get_display (screen);
 	else
-		gdkdisplay = gdk_display_get_default ();
+		cdkdisplay = cdk_display_get_default ();
 
-	sn_display = sn_display_new (GDK_DISPLAY_XDISPLAY (gdkdisplay),
+	sn_display = sn_display_new (GDK_DISPLAY_XDISPLAY (cdkdisplay),
 				     sn_error_trap_push,
 				     sn_error_trap_pop);
 
@@ -1843,8 +1843,8 @@ ditem_execute (const CafeDesktopItem *item,
 		const char *icon;
 
 		sn_context = sn_launcher_context_new (sn_display,
-						      screen ? gdk_x11_screen_get_screen_number (screen) :
-						      DefaultScreen (GDK_DISPLAY_XDISPLAY (gdkdisplay)));
+						      screen ? cdk_x11_screen_get_screen_number (screen) :
+						      DefaultScreen (GDK_DISPLAY_XDISPLAY (cdkdisplay)));
 
 		name = cafe_desktop_item_get_localestring (item,
 							    CAFE_DESKTOP_ITEM_NAME);
@@ -1970,7 +1970,7 @@ ditem_execute (const CafeDesktopItem *item,
 			if (item->launch_time > 0)
 				launch_time = item->launch_time;
 			else
-				launch_time = gdk_x11_display_get_user_time (gdkdisplay);
+				launch_time = cdk_x11_display_get_user_time (cdkdisplay);
 
 			sn_launcher_context_initiate (sn_context,
 						      g_get_prgname () ? g_get_prgname () : "unknown",
@@ -2025,7 +2025,7 @@ ditem_execute (const CafeDesktopItem *item,
 			sn_launcher_context_complete (sn_context); /* end sequence */
 		else
 			add_startup_timeout (screen ? screen :
-					     gdk_display_get_default_screen (gdk_display_get_default ()),
+					     cdk_display_get_default_screen (cdk_display_get_default ()),
 					     sn_context);
 		sn_launcher_context_unref (sn_context);
 	}

@@ -29,7 +29,7 @@
 #endif
 
 #include <glib.h>
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 
 typedef struct CafeRRScreenPrivate CafeRRScreenPrivate;
 typedef struct CafeRROutput CafeRROutput;

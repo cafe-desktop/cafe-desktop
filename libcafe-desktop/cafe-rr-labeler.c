@@ -35,7 +35,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 
 #include "cafe-rr-labeler.h"
 
@@ -74,7 +74,7 @@ get_current_desktop (GdkScreen *screen)
         unsigned char *data_return = NULL;
         int workspace = 0;
 
-        display = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
+        display = GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen));
         win = XRootWindow (display, GDK_SCREEN_XNUMBER (screen));
 
         current_desktop = XInternAtom (display, "_NET_CURRENT_DESKTOP", True);
@@ -113,7 +113,7 @@ get_work_area (CafeRRLabeler *labeler,
 	int             desktop;
 	Display        *display;
 
-	display = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (labeler->priv->screen));
+	display = GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (labeler->priv->screen));
 	workarea = XInternAtom (display, "_NET_WORKAREA", True);
 
 	disp_screen = GDK_SCREEN_XNUMBER (labeler->priv->screen);
@@ -121,8 +121,8 @@ get_work_area (CafeRRLabeler *labeler,
 	/* Defaults in case of error */
 	rect->x = 0;
 	rect->y = 0;
-	rect->width = WidthOfScreen (gdk_x11_screen_get_xscreen (labeler->priv->screen));
-	rect->height = HeightOfScreen (gdk_x11_screen_get_xscreen (labeler->priv->screen));
+	rect->width = WidthOfScreen (cdk_x11_screen_get_xscreen (labeler->priv->screen));
+	rect->height = HeightOfScreen (cdk_x11_screen_get_xscreen (labeler->priv->screen));
 
 	if (workarea == None)
 		return FALSE;
@@ -184,19 +184,19 @@ screen_xevent_filter (GdkXEvent      *xevent,
 static void
 cafe_rr_labeler_init (CafeRRLabeler *labeler)
 {
-	GdkWindow *gdkwindow;
+	GdkWindow *cdkwindow;
 
 	labeler->priv = cafe_rr_labeler_get_instance_private (labeler);
 
-	labeler->priv->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+	labeler->priv->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()),
 						    "_NET_WORKAREA",
 						    True);
 
-	labeler->priv->screen = gdk_screen_get_default ();
+	labeler->priv->screen = cdk_screen_get_default ();
 	/* code is not really designed to handle multiple screens so *shrug* */
-	gdkwindow = gdk_screen_get_root_window (labeler->priv->screen);
-	gdk_window_add_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
-	gdk_window_set_events (gdkwindow, gdk_window_get_events (gdkwindow) | GDK_PROPERTY_CHANGE_MASK);
+	cdkwindow = cdk_screen_get_root_window (labeler->priv->screen);
+	cdk_window_add_filter (cdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
+	cdk_window_set_events (cdkwindow, cdk_window_get_events (cdkwindow) | GDK_PROPERTY_CHANGE_MASK);
 }
 
 static void
@@ -246,12 +246,12 @@ static void
 cafe_rr_labeler_finalize (GObject *object)
 {
 	CafeRRLabeler *labeler;
-	GdkWindow      *gdkwindow;
+	GdkWindow      *cdkwindow;
 
 	labeler = CAFE_RR_LABELER (object);
 
-	gdkwindow = gdk_screen_get_root_window (labeler->priv->screen);
-	gdk_window_remove_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
+	cdkwindow = cdk_screen_get_root_window (labeler->priv->screen);
+	cdk_window_remove_filter (cdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
 
 	if (labeler->priv->config != NULL) {
 		g_object_unref (labeler->priv->config);
@@ -342,7 +342,7 @@ label_window_draw_event_cb (CtkWidget *widget, cairo_t *cr, gpointer data)
 	cairo_stroke (cr);
 
 	/* fill */
-	gdk_cairo_set_source_rgba (cr, color);
+	cdk_cairo_set_source_rgba (cr, color);
 	cairo_rectangle (cr,
 			 LABEL_WINDOW_EDGE_THICKNESS,
 			 LABEL_WINDOW_EDGE_THICKNESS,
@@ -364,9 +364,9 @@ position_window (CafeRRLabeler  *labeler,
 	GdkMonitor     *monitor_num;
 
 	get_work_area (labeler, &workarea);
-	monitor_num = gdk_display_get_monitor_at_point (gdk_screen_get_display (labeler->priv->screen), x, y);
-	gdk_monitor_get_geometry (monitor_num, &monitor);
-	gdk_rectangle_intersect (&monitor, &workarea, &workarea);
+	monitor_num = cdk_display_get_monitor_at_point (cdk_screen_get_display (labeler->priv->screen), x, y);
+	cdk_monitor_get_geometry (monitor_num, &monitor);
+	cdk_rectangle_intersect (&monitor, &workarea, &workarea);
 
 	ctk_window_move (CTK_WINDOW (window), workarea.x, workarea.y);
 }

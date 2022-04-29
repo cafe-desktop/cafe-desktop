@@ -31,7 +31,7 @@
 #include <glib.h>
 #include <glib-object.h>
 
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 #include <ctk/ctk.h>
 
 G_BEGIN_DECLS
