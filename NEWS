@@ -26,7 +26,7 @@
   * thumbnail: Simplify system includes
   * thumbnail: Fix typo in optional
   * thumbnail: Remove unused constant SECONDS_BETWEEN_STATS
-  * thumbnail: Remove unused #define GDK_PIXBUF_ENABLE_BACKEND
+  * thumbnail: Remove unused #define CDK_PIXBUF_ENABLE_BACKEND
   * thumbnail: Remove reference to CafeIconFactory
   * thumbnail: Simplify init_thumbnailers_dirs()
   * thumbnail: some code-styling fixes
@@ -136,7 +136,7 @@
 
   * Translations update
   * drop ancient and unused acinclude.m4
-  * Add toggle for synchronizing QT_SCALE_FACTOR to GDK_SCALE_FACTOR
+  * Add toggle for synchronizing QT_SCALE_FACTOR to CDK_SCALE_FACTOR
   * Change default cursor-size to 24px
   * Support background fallback on HiDPI
   * cafe-rr-labeler: fix font-color for dark themes
@@ -270,7 +270,7 @@
   * Add gobject introspection
   * Many RANDR fixes
   * interface: add automatic-mnemonics key for Ctk xsetting
-  * use GDK_WINDOW_XID for inter-CTK compatibility
+  * use CDK_WINDOW_XID for inter-CTK compatibility
   * Updated mpaste for website change
   * Added org.cafe.debug GSettings schema
   * Added CafeColorButton class to have traditional color selection

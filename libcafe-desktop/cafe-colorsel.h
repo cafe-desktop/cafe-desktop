@@ -110,7 +110,7 @@ gchar*   cafe_color_selection_palette_to_string   (const CdkColor    *colors,
                                                   gint               n_colors);
 
 #ifndef CTK_DISABLE_DEPRECATED
-#ifndef GDK_MULTIHEAD_SAFE
+#ifndef CDK_MULTIHEAD_SAFE
 CafeColorSelectionChangePaletteFunc           cafe_color_selection_set_change_palette_hook             (CafeColorSelectionChangePaletteFunc           func);
 #endif
 #endif

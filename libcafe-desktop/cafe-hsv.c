@@ -179,28 +179,28 @@ cafe_hsv_class_init (CafeHSVClass *class)
 
   binding_set = ctk_binding_set_by_class (class);
 
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Up, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_Up, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_UP);
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Up, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_KP_Up, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_UP);
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Down, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_Down, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_DOWN);
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Down, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_KP_Down, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_DOWN);
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Right, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_Right, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_RIGHT);
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Right, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_KP_Right, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_RIGHT);
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Left, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_Left, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_LEFT);
-  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Left, 0,
+  ctk_binding_entry_add_signal (binding_set, CDK_KEY_KP_Left, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, CTK_DIR_LEFT);
 }
@@ -244,20 +244,20 @@ cafe_hsv_realize (CtkWidget *widget)
 
   ctk_widget_get_allocation (widget, &allocation);
 
-  attr.window_type = GDK_WINDOW_CHILD;
+  attr.window_type = CDK_WINDOW_CHILD;
   attr.x = allocation.x;
   attr.y = allocation.y;
   attr.width = allocation.width;
   attr.height = allocation.height;
-  attr.wclass = GDK_INPUT_ONLY;
+  attr.wclass = CDK_INPUT_ONLY;
   attr.event_mask = ctk_widget_get_events (widget);
-  attr.event_mask |= (GDK_KEY_PRESS_MASK
-                      | GDK_BUTTON_PRESS_MASK
-                      | GDK_BUTTON_RELEASE_MASK
-                      | GDK_POINTER_MOTION_MASK
-                      | GDK_ENTER_NOTIFY_MASK
-                      | GDK_LEAVE_NOTIFY_MASK);
-  attr_mask = GDK_WA_X | GDK_WA_Y;
+  attr.event_mask |= (CDK_KEY_PRESS_MASK
+                      | CDK_BUTTON_PRESS_MASK
+                      | CDK_BUTTON_RELEASE_MASK
+                      | CDK_POINTER_MOTION_MASK
+                      | CDK_ENTER_NOTIFY_MASK
+                      | CDK_LEAVE_NOTIFY_MASK);
+  attr_mask = CDK_WA_X | CDK_WA_Y;
 
   parent_window = ctk_widget_get_parent_window (widget);
   ctk_widget_set_window (widget, parent_window);
@@ -611,10 +611,10 @@ set_cross_grab (CafeHSV   *hsv,
   CdkCursor *cursor;
 
   cursor = cdk_cursor_new_for_display (ctk_widget_get_display (CTK_WIDGET (hsv)),
-                                       GDK_CROSSHAIR);
+                                       CDK_CROSSHAIR);
   cdk_seat_grab (cdk_device_get_seat (device),
                  priv->window,
-                 GDK_SEAT_CAPABILITY_ALL_POINTING,
+                 CDK_SEAT_CAPABILITY_ALL_POINTING,
                  FALSE,
                  cursor,
                  NULL,
@@ -643,7 +643,7 @@ cafe_hsv_button_press (CtkWidget      *widget,
   CafeHSVPrivate *priv = hsv->priv;
   double x, y;
 
-  if (priv->mode != DRAG_NONE || event->button != GDK_BUTTON_PRIMARY)
+  if (priv->mode != DRAG_NONE || event->button != CDK_BUTTON_PRIMARY)
     return FALSE;
 
   x = event->x;
@@ -693,7 +693,7 @@ cafe_hsv_button_release (CtkWidget      *widget,
   DragMode mode;
   gdouble x, y;
 
-  if (priv->mode == DRAG_NONE || event->button != GDK_BUTTON_PRIMARY)
+  if (priv->mode == DRAG_NONE || event->button != CDK_BUTTON_PRIMARY)
     return FALSE;
 
   /* Set the drag mode to DRAG_NONE so that signal handlers for "catched"
