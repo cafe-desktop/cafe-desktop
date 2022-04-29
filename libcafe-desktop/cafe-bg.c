@@ -723,7 +723,7 @@ refresh_cache_file (CafeBG     *bg,
 	if (!cache_file_is_valid (bg->filename, cache_filename)) {
 		GdkPixbufFormat *format;
 
-		format = cdk_pixbuf_get_file_info (bg->filename, NULL, NULL);
+		format = gdk_pixbuf_get_file_info (bg->filename, NULL, NULL);
 
 		if (format != NULL) {
 			gchar *format_name;
@@ -734,13 +734,13 @@ refresh_cache_file (CafeBG     *bg,
 				cleanup_cache_for_monitor (cache_dir, num_monitor);
 			}
 
-			format_name = cdk_pixbuf_format_get_name (format);
+			format_name = gdk_pixbuf_format_get_name (format);
 
 			if (strcmp (format_name, "jpeg") == 0)
-				cdk_pixbuf_save (new_pixbuf, cache_filename, format_name,
+				gdk_pixbuf_save (new_pixbuf, cache_filename, format_name,
 						 NULL, "quality", "100", NULL);
 			else
-				cdk_pixbuf_save (new_pixbuf, cache_filename, format_name,
+				gdk_pixbuf_save (new_pixbuf, cache_filename, format_name,
 						 NULL, NULL);
 
 			g_free (format_name);
@@ -807,8 +807,8 @@ draw_color_area (CafeBG       *bg,
 
         extent.x = 0;
         extent.y = 0;
-        extent.width = cdk_pixbuf_get_width (dest);
-        extent.height = cdk_pixbuf_get_height (dest);
+        extent.width = gdk_pixbuf_get_width (dest);
+        extent.height = gdk_pixbuf_get_height (dest);
 
 	cdk_rectangle_intersect (rect, &extent, rect);
 
@@ -820,7 +820,7 @@ draw_color_area (CafeBG       *bg,
 			((guint) (bg->primary.blue * 0xff) << 8)   |
 			(0xff);
 
-		cdk_pixbuf_fill (dest, pixel);
+		gdk_pixbuf_fill (dest, pixel);
 		break;
 
 	case CAFE_BG_COLOR_H_GRADIENT:
@@ -844,8 +844,8 @@ draw_color (CafeBG    *bg,
 
 	rect.x = 0;
 	rect.y = 0;
-	rect.width = cdk_pixbuf_get_width (dest);
-	rect.height = cdk_pixbuf_get_height (dest);
+	rect.width = gdk_pixbuf_get_width (dest);
+	rect.height = gdk_pixbuf_get_height (dest);
 	draw_color_area (bg, dest, &rect);
 }
 
@@ -877,8 +877,8 @@ pixbuf_clip_to_fit (GdkPixbuf *src,
 	int src_x, src_y;
 	GdkPixbuf *pixbuf;
 
-	src_width = cdk_pixbuf_get_width (src);
-	src_height = cdk_pixbuf_get_height (src);
+	src_width = gdk_pixbuf_get_width (src);
+	src_height = gdk_pixbuf_get_height (src);
 
 	if (src_width < max_width && src_height < max_height)
 		return g_object_ref (src);
@@ -886,13 +886,13 @@ pixbuf_clip_to_fit (GdkPixbuf *src,
 	w = MIN(src_width, max_width);
 	h = MIN(src_height, max_height);
 
-	pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
-				 cdk_pixbuf_get_has_alpha (src),
+	pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB,
+				 gdk_pixbuf_get_has_alpha (src),
 				 8, w, h);
 
 	src_x = (src_width - w) / 2;
 	src_y = (src_height - h) / 2;
-	cdk_pixbuf_copy_area (src,
+	gdk_pixbuf_copy_area (src,
 			      src_x, src_y,
 			      w, h,
 			      pixbuf,
@@ -911,8 +911,8 @@ get_scaled_pixbuf (CafeBGPlacement  placement,
 
 #if 0
 	g_print ("original_width: %d %d\n",
-		 cdk_pixbuf_get_width (pixbuf),
-		 cdk_pixbuf_get_height (pixbuf));
+		 gdk_pixbuf_get_width (pixbuf),
+		 gdk_pixbuf_get_height (pixbuf));
 #endif
 
 	switch (placement) {
@@ -924,7 +924,7 @@ get_scaled_pixbuf (CafeBGPlacement  placement,
 		break;
 
 	case CAFE_BG_PLACEMENT_FILL_SCREEN:
-		new = cdk_pixbuf_scale_simple (pixbuf, width, height,
+		new = gdk_pixbuf_scale_simple (pixbuf, width, height,
 					       CDK_INTERP_BILINEAR);
 		break;
 
@@ -939,8 +939,8 @@ get_scaled_pixbuf (CafeBGPlacement  placement,
 		break;
 	}
 
-	*w = cdk_pixbuf_get_width (new);
-	*h = cdk_pixbuf_get_height (new);
+	*w = gdk_pixbuf_get_width (new);
+	*h = gdk_pixbuf_get_height (new);
 	*x = (width - *w) / 2;
 	*y = (height - *h) / 2;
 
@@ -997,8 +997,8 @@ draw_image_for_thumb (CafeBG     *bg,
 
 	rect.x = 0;
 	rect.y = 0;
-	rect.width = cdk_pixbuf_get_width (dest);
-	rect.height = cdk_pixbuf_get_height (dest);
+	rect.width = gdk_pixbuf_get_width (dest);
+	rect.height = gdk_pixbuf_get_height (dest);
 
 	draw_image_area (bg, -1, pixbuf, dest, &rect);
 }
@@ -1017,8 +1017,8 @@ draw_once (CafeBG    *bg,
 
 	rect.x = 0;
 	rect.y = 0;
-	rect.width = cdk_pixbuf_get_width (dest);
-	rect.height = cdk_pixbuf_get_height (dest);
+	rect.width = gdk_pixbuf_get_width (dest);
+	rect.height = gdk_pixbuf_get_height (dest);
 
 	pixbuf = get_pixbuf_for_size (bg, monitor, rect.width, rect.height);
 	if (pixbuf) {
@@ -1187,8 +1187,8 @@ cafe_bg_create_surface_scale (CafeBG      *bg,
 	g_return_val_if_fail (window != NULL, NULL);
 
 	if (bg->pixbuf_cache &&
-	    (cdk_pixbuf_get_width (bg->pixbuf_cache) != width ||
-	     cdk_pixbuf_get_height (bg->pixbuf_cache) != height))
+	    (gdk_pixbuf_get_width (bg->pixbuf_cache) != width ||
+	     gdk_pixbuf_get_height (bg->pixbuf_cache) != height))
 	{
 		g_object_unref (bg->pixbuf_cache);
 		bg->pixbuf_cache = NULL;
@@ -1216,7 +1216,7 @@ cafe_bg_create_surface_scale (CafeBG      *bg,
 	{
 		GdkPixbuf *pixbuf;
 
-		pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8,
+		pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8,
 					 width, height);
 		cafe_bg_draw (bg, pixbuf, cdk_window_get_screen (window), root);
 		cdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
@@ -1322,7 +1322,7 @@ get_original_size (const char *filename,
 {
 	gboolean result;
 
-        if (cdk_pixbuf_get_file_info (filename, orig_width, orig_height))
+        if (gdk_pixbuf_get_file_info (filename, orig_width, orig_height))
 		result = TRUE;
 	else
 		result = FALSE;
@@ -1409,7 +1409,7 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
 
 	g_return_val_if_fail (bg != NULL, NULL);
 
-	result = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
+	result = gdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
 	draw_color (bg, result);
 
@@ -1781,14 +1781,14 @@ blend (GdkPixbuf *p1,
        GdkPixbuf *p2,
        double alpha)
 {
-	GdkPixbuf *result = cdk_pixbuf_copy (p1);
+	GdkPixbuf *result = gdk_pixbuf_copy (p1);
 	GdkPixbuf *tmp;
 
-	if (cdk_pixbuf_get_width (p2) != cdk_pixbuf_get_width (p1) ||
-            cdk_pixbuf_get_height (p2) != cdk_pixbuf_get_height (p1)) {
-		tmp = cdk_pixbuf_scale_simple (p2,
-					       cdk_pixbuf_get_width (p1),
-					       cdk_pixbuf_get_height (p1),
+	if (gdk_pixbuf_get_width (p2) != gdk_pixbuf_get_width (p1) ||
+            gdk_pixbuf_get_height (p2) != gdk_pixbuf_get_height (p1)) {
+		tmp = gdk_pixbuf_scale_simple (p2,
+					       gdk_pixbuf_get_width (p1),
+					       gdk_pixbuf_get_height (p1),
 					       CDK_INTERP_BILINEAR);
 	}
         else {
@@ -1929,7 +1929,7 @@ load_from_cache_file (CafeBG     *bg,
 							best_width, best_height);
 
 	if (cache_file_is_valid (filename, cache_filename))
-		pixbuf = cdk_pixbuf_new_from_file (cache_filename, NULL);
+		pixbuf = gdk_pixbuf_new_from_file (cache_filename, NULL);
 
 	g_free (cache_filename);
 
@@ -1960,9 +1960,9 @@ get_as_pixbuf_for_size (CafeBG    *bg,
 			GdkPixbufFormat *format;
 
 			/* If scalable choose maximum size */
-			format = cdk_pixbuf_get_file_info (filename, NULL, NULL);
+			format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
 			if (format != NULL)
-				tmp = cdk_pixbuf_format_get_name (format);
+				tmp = gdk_pixbuf_format_get_name (format);
 
 			if (g_strcmp0 (tmp, "svg") == 0 &&
 			    (best_width > 0 && best_height > 0) &&
@@ -1970,11 +1970,11 @@ get_as_pixbuf_for_size (CafeBG    *bg,
 			     bg->placement == CAFE_BG_PLACEMENT_SCALED ||
 			     bg->placement == CAFE_BG_PLACEMENT_ZOOMED))
 			{
-				pixbuf = cdk_pixbuf_new_from_file_at_size (filename,
+				pixbuf = gdk_pixbuf_new_from_file_at_size (filename,
 									   best_width,
 									   best_height, NULL);
 			} else {
-				pixbuf = cdk_pixbuf_new_from_file (filename, NULL);
+				pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
 			}
 
 			if (tmp != NULL)
@@ -1982,7 +1982,7 @@ get_as_pixbuf_for_size (CafeBG    *bg,
 		}
 
 		if (pixbuf) {
-			tmp_pixbuf = cdk_pixbuf_apply_embedded_orientation (pixbuf);
+			tmp_pixbuf = gdk_pixbuf_apply_embedded_orientation (pixbuf);
 			g_object_unref (pixbuf);
 			pixbuf = tmp_pixbuf;
 			file_cache_add_pixbuf (bg, filename, pixbuf);
@@ -2168,8 +2168,8 @@ scale_thumbnail (CafeBGPlacement placement,
 
 		int scr_height = HeightOfScreen (cdk_x11_screen_get_xscreen (screen));
 		int scr_width = WidthOfScreen (cdk_x11_screen_get_xscreen (screen));
-		int thumb_width = cdk_pixbuf_get_width (thumb);
-		int thumb_height = cdk_pixbuf_get_height (thumb);
+		int thumb_width = gdk_pixbuf_get_width (thumb);
+		int thumb_height = gdk_pixbuf_get_height (thumb);
 		double screen_to_dest = fit_factor (scr_width, scr_height,
 						    dest_width, dest_height);
 		double thumb_to_orig  = fit_factor (thumb_width, thumb_height,
@@ -2196,7 +2196,7 @@ scale_thumbnail (CafeBGPlacement placement,
 			}
 		}
 
-		thumb = cdk_pixbuf_scale_simple (thumb, new_width, new_height,
+		thumb = gdk_pixbuf_scale_simple (thumb, new_width, new_height,
 						 CDK_INTERP_BILINEAR);
 	}
 	else
@@ -2365,8 +2365,8 @@ get_pixbuf_for_size (CafeBG *bg,
 	/* only hit the cache if the aspect ratio matches */
 	if (bg->pixbuf_cache) {
 		int width, height;
-		width = cdk_pixbuf_get_width (bg->pixbuf_cache);
-		height = cdk_pixbuf_get_height (bg->pixbuf_cache);
+		width = gdk_pixbuf_get_width (bg->pixbuf_cache);
+		height = gdk_pixbuf_get_height (bg->pixbuf_cache);
 		hit_cache = 0.2 > fabs ((best_width / (double)best_height) - (width / (double)height));
 		if (!hit_cache) {
 			g_object_unref (bg->pixbuf_cache);
@@ -2506,10 +2506,10 @@ pixbuf_average_value (GdkPixbuf *pixbuf,
 	guint width, height;
 	gdouble dd;
 
-	width = cdk_pixbuf_get_width (pixbuf);
-	height = cdk_pixbuf_get_height (pixbuf);
-	row_stride = cdk_pixbuf_get_rowstride (pixbuf);
-	pixels = cdk_pixbuf_get_pixels (pixbuf);
+	width = gdk_pixbuf_get_width (pixbuf);
+	height = gdk_pixbuf_get_height (pixbuf);
+	row_stride = gdk_pixbuf_get_rowstride (pixbuf);
+	pixels = gdk_pixbuf_get_pixels (pixbuf);
 
 	/* iterate through the pixbuf, counting up each component */
 	a_total = 0;
@@ -2517,7 +2517,7 @@ pixbuf_average_value (GdkPixbuf *pixbuf,
 	g_total = 0;
 	b_total = 0;
 
-	if (cdk_pixbuf_get_has_alpha (pixbuf)) {
+	if (gdk_pixbuf_get_has_alpha (pixbuf)) {
 		for (row = 0; row < height; row++) {
 			p = pixels + (row * row_stride);
 			for (column = 0; column < width; column++) {
@@ -2567,15 +2567,15 @@ pixbuf_scale_to_fit (GdkPixbuf *src, int max_width, int max_height)
 	int src_width, src_height;
 	int new_width, new_height;
 
-	src_width = cdk_pixbuf_get_width (src);
-	src_height = cdk_pixbuf_get_height (src);
+	src_width = gdk_pixbuf_get_width (src);
+	src_height = gdk_pixbuf_get_height (src);
 
 	factor = MIN (max_width  / (double) src_width, max_height / (double) src_height);
 
 	new_width  = floor (src_width * factor + 0.5);
 	new_height = floor (src_height * factor + 0.5);
 
-	return cdk_pixbuf_scale_simple (src, new_width, new_height, CDK_INTERP_BILINEAR);
+	return gdk_pixbuf_scale_simple (src, new_width, new_height, CDK_INTERP_BILINEAR);
 }
 
 static GdkPixbuf *
@@ -2586,22 +2586,22 @@ pixbuf_scale_to_min (GdkPixbuf *src, int min_width, int min_height)
 	int new_width, new_height;
 	GdkPixbuf *dest;
 
-	src_width = cdk_pixbuf_get_width (src);
-	src_height = cdk_pixbuf_get_height (src);
+	src_width = gdk_pixbuf_get_width (src);
+	src_height = gdk_pixbuf_get_height (src);
 
 	factor = MAX (min_width / (double) src_width, min_height / (double) src_height);
 
 	new_width = floor (src_width * factor + 0.5);
 	new_height = floor (src_height * factor + 0.5);
 
-	dest = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
-			       cdk_pixbuf_get_has_alpha (src),
+	dest = gdk_pixbuf_new (CDK_COLORSPACE_RGB,
+			       gdk_pixbuf_get_has_alpha (src),
 			       8, min_width, min_height);
 	if (!dest)
 		return NULL;
 
 	/* crop the result */
-	cdk_pixbuf_scale (src, dest,
+	gdk_pixbuf_scale (src, dest,
 			  0, 0,
 			  min_width, min_height,
 			  (new_width - min_width) / -2,
@@ -2644,10 +2644,10 @@ pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 	guchar *dst;
 	int n_channels = 3;
 
-	rowstride = cdk_pixbuf_get_rowstride (pixbuf);
+	rowstride = gdk_pixbuf_get_rowstride (pixbuf);
 	width = rect->width;
 	height = rect->height;
-	dst = cdk_pixbuf_get_pixels (pixbuf) + rect->x * n_channels + rowstride * rect->y;
+	dst = gdk_pixbuf_get_pixels (pixbuf) + rect->x * n_channels + rowstride * rect->y;
 
 	if (horizontal) {
 		guchar *gradient = create_gradient (primary, secondary, width);
@@ -2695,16 +2695,16 @@ pixbuf_blend (GdkPixbuf *src,
 	      int	 dest_y,
 	      double	 alpha)
 {
-	int dest_width = cdk_pixbuf_get_width (dest);
-	int dest_height = cdk_pixbuf_get_height (dest);
+	int dest_width = gdk_pixbuf_get_width (dest);
+	int dest_height = gdk_pixbuf_get_height (dest);
 	int offset_x = dest_x - src_x;
 	int offset_y = dest_y - src_y;
 
 	if (src_width < 0)
-		src_width = cdk_pixbuf_get_width (src);
+		src_width = gdk_pixbuf_get_width (src);
 
 	if (src_height < 0)
-		src_height = cdk_pixbuf_get_height (src);
+		src_height = gdk_pixbuf_get_height (src);
 
 	if (dest_x < 0)
 		dest_x = 0;
@@ -2720,7 +2720,7 @@ pixbuf_blend (GdkPixbuf *src,
 		src_height = dest_height - dest_y;
 	}
 
-	cdk_pixbuf_composite (src, dest,
+	gdk_pixbuf_composite (src, dest,
 			      dest_x, dest_y,
 			      src_width, src_height,
 			      offset_x, offset_y,
@@ -2733,11 +2733,11 @@ pixbuf_tile (GdkPixbuf *src, GdkPixbuf *dest)
 {
 	int x, y;
 	int tile_width, tile_height;
-	int dest_width = cdk_pixbuf_get_width (dest);
-	int dest_height = cdk_pixbuf_get_height (dest);
+	int dest_width = gdk_pixbuf_get_width (dest);
+	int dest_height = gdk_pixbuf_get_height (dest);
 
-	tile_width = cdk_pixbuf_get_width (src);
-	tile_height = cdk_pixbuf_get_height (src);
+	tile_width = gdk_pixbuf_get_width (src);
+	tile_height = gdk_pixbuf_get_height (src);
 
 	for (y = 0; y < dest_height; y += tile_height) {
 		for (x = 0; x < dest_width; x += tile_width) {
@@ -3139,16 +3139,16 @@ create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 	thumb = cafe_desktop_thumbnail_factory_lookup (factory, uri, mtime);
 
 	if (thumb) {
-		result = cdk_pixbuf_new_from_file (thumb, NULL);
+		result = gdk_pixbuf_new_from_file (thumb, NULL);
 		g_free (thumb);
 	}
 	else {
 		GdkPixbuf *orig;
 
-		orig = cdk_pixbuf_new_from_file (filename, NULL);
+		orig = gdk_pixbuf_new_from_file (filename, NULL);
 		if (orig) {
-			int orig_width = cdk_pixbuf_get_width (orig);
-			int orig_height = cdk_pixbuf_get_height (orig);
+			int orig_width = gdk_pixbuf_get_width (orig);
+			int orig_height = gdk_pixbuf_get_height (orig);
 
 			result = pixbuf_scale_to_fit (orig, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
 
@@ -3180,8 +3180,8 @@ get_thumb_annotations (GdkPixbuf *thumb,
 	char *end;
 	const char *wstr, *hstr;
 
-	wstr = cdk_pixbuf_get_option (thumb, "tEXt::Thumb::Image::Width");
-	hstr = cdk_pixbuf_get_option (thumb, "tEXt::Thumb::Image::Height");
+	wstr = gdk_pixbuf_get_option (thumb, "tEXt::Thumb::Image::Width");
+	hstr = gdk_pixbuf_get_option (thumb, "tEXt::Thumb::Image::Height");
 
 	if (hstr && wstr) {
 		*orig_width = strtol (wstr, &end, 10);
@@ -3278,7 +3278,7 @@ cafe_bg_create_frame_thumbnail (CafeBG			*bg,
 		return NULL;
 
 
-	result = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
+	result = gdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
 	draw_color (bg, result);
 

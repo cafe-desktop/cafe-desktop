@@ -719,7 +719,7 @@ validate_thumbnail_path (char                     *path,
 {
   GdkPixbuf *pixbuf;
 
-  pixbuf = cdk_pixbuf_new_from_file (path, NULL);
+  pixbuf = gdk_pixbuf_new_from_file (path, NULL);
   if (pixbuf == NULL ||
       !cafe_desktop_thumbnail_is_valid (pixbuf, uri, mtime)) {
       g_free (path);
@@ -1027,7 +1027,7 @@ get_preview_thumbnail (const char *uri,
     if (!input_stream)
       return NULL;
 
-    pixbuf = cdk_pixbuf_new_from_stream_at_scale (input_stream,
+    pixbuf = gdk_pixbuf_new_from_stream_at_scale (input_stream,
                                                   size, size,
                                                   TRUE, NULL, NULL);
     g_object_unref (input_stream);
@@ -1114,7 +1114,7 @@ cafe_desktop_thumbnail_factory_generate_thumbnail (CafeDesktopThumbnailFactory *
           ret = g_spawn_sync (NULL, expanded_script, NULL, G_SPAWN_SEARCH_PATH,
                               NULL, NULL, NULL, NULL, &exit_status, NULL);
           if (ret && exit_status == 0)
-            pixbuf = cdk_pixbuf_new_from_file (tmpname, NULL);
+            pixbuf = gdk_pixbuf_new_from_file (tmpname, NULL);
 
           g_strfreev (expanded_script);
         }
@@ -1160,12 +1160,12 @@ save_thumbnail (GdkPixbuf  *pixbuf,
   close (tmp_fd);
 
   mtime_str = g_strdup_printf ("%" G_GINT64_FORMAT,  (gint64) mtime);
-  width = cdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Width");
-  height = cdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Height");
+  width = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Width");
+  height = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Height");
 
   error = NULL;
   if (width != NULL && height != NULL)
-    ret = cdk_pixbuf_save (pixbuf,
+    ret = gdk_pixbuf_save (pixbuf,
                            tmp_path,
                            "png", &error,
                            "tEXt::Thumb::Image::Width", width,
@@ -1175,7 +1175,7 @@ save_thumbnail (GdkPixbuf  *pixbuf,
                            "tEXt::Software", "CAFE::ThumbnailFactory",
                            NULL);
   else
-    ret = cdk_pixbuf_save (pixbuf,
+    ret = gdk_pixbuf_save (pixbuf,
                            tmp_path,
                            "png", &error,
                            "tEXt::Thumb::URI", uri,
@@ -1207,8 +1207,8 @@ make_failed_thumbnail (void)
 {
   GdkPixbuf *pixbuf;
 
-  pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
-  cdk_pixbuf_fill (pixbuf, 0x00000000);
+  pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
+  gdk_pixbuf_fill (pixbuf, 0x00000000);
   return pixbuf;
 }
 
@@ -1311,7 +1311,7 @@ cafe_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
 {
   const char *thumb_uri;
 
-  thumb_uri = cdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
+  thumb_uri = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
   return (g_strcmp0 (uri, thumb_uri) == 0);
 }
 
@@ -1336,11 +1336,11 @@ cafe_desktop_thumbnail_is_valid (GdkPixbuf          *pixbuf,
   const char *thumb_uri, *thumb_mtime_str;
   time_t thumb_mtime;
 
-  thumb_uri = cdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
+  thumb_uri = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
   if (g_strcmp0 (uri, thumb_uri) != 0)
     return FALSE;
 
-  thumb_mtime_str = cdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
+  thumb_mtime_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
   if (!thumb_mtime_str)
     return FALSE;
   thumb_mtime = (time_t)g_ascii_strtoll (thumb_mtime_str, (gchar**)NULL, 10);

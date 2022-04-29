@@ -358,14 +358,14 @@ set_color_icon (CdkDragContext *context,
   GdkPixbuf *pixbuf;
   guint32 pixel;
 
-  pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE,
+  pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE,
 			   8, 48, 32);
 
   pixel = ((color->red & 0xff00) << 16) |
           ((color->green & 0xff00) << 8) |
            (color->blue & 0xff00);
 
-  cdk_pixbuf_fill (pixbuf, pixel);
+  gdk_pixbuf_fill (pixbuf, pixel);
 
   ctk_drag_set_icon_pixbuf (context, pixbuf, -2, -2);
   g_object_unref (pixbuf);
