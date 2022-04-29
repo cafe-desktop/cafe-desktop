@@ -1057,56 +1057,56 @@ msgid "Name of the default font used by ctk+."
 msgstr "Naam van het standaardlettertype van ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK IM Preedit Style"
+msgid "CTK IM Preedit Style"
+msgstr "CTK IM Preedit Style"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Naam de van GTK+ invoermethode Preedit-stijl van ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Naam de van CTK+ invoermethode Preedit-stijl van ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK IM Status Stijl"
+msgid "CTK IM Status Style"
+msgstr "CTK IM Status Stijl"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Naam de van GTK+ invoermethode Status-stijl van ctk+."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Naam de van CTK+ invoermethode Status-stijl van ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK IM Module"
+msgid "CTK IM Module"
+msgstr "CTK IM Module"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Naam de van GTK+ invoermethode."
+msgid "Name of the input method module used by CTK+."
+msgstr "Naam de van CTK+ invoermethode."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Gebruik GTK3-kopbalk"
+msgid "Use CTK3 header bar"
+msgstr "Gebruik CTK3-kopbalk"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Of de ingebouwde GTK+ dialoogvensters zoals de bestandkiezer, de kleurkiezer"
+"Of de ingebouwde CTK+ dialoogvensters zoals de bestandkiezer, de kleurkiezer"
 " of de lettertypekiezer een kopbalk zullen gebruiken aan de bovenkant om "
 "actiewidgets te tonen, of een actiegebied aan de onderkant. Deze instelling "
 "heeft geen invloed op dialoogvensters die CtkDialog direct gebruiken, of "
 "berichtdialogen."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Gebruik GTK3-overlapschuiven"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Gebruik CTK3-overlapschuiven"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Of ingebouwde GTK+ schuifbare vensters overlapschuiven gebruiken. "
+"Of ingebouwde CTK+ schuifbare vensters overlapschuiven gebruiken. "
 "Overlapschuiven verbergt en vermindert de grootte van de schuifbalk totdat "
 "hij scherpstelling krijgt."
 
@@ -1198,8 +1198,8 @@ msgstr ""
 "controletekens in te voegen."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Titelbalkvormgeving van de GTK3 client-side gedecoreerde vensters"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "Titelbalkvormgeving van de CTK3 client-side gedecoreerde vensters"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1267,12 +1267,12 @@ msgstr "Factor voor schalen van vensters"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"Dit beheerst de GTK-schaalfactor die venstercoördinaten doorsluist naar de "
+"Dit beheerst de CTK-schaalfactor die venstercoördinaten doorsluist naar de "
 "daadwerkelijke beeldpunten van het apparaat. Op traditionele systemen is dit"
 " 1, maar op schermen met zeer hoge dichtheid (bijv. HiDPI, Retina) kan dit "
 "een hogere waarde zijn (vaak 1,5 of 2). Stel in op 0 voor automatische "
@@ -1285,12 +1285,12 @@ msgstr "Schaalfactor voor QT-toepassingen"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Deze instelling bepaalt of CAFE de schaalfactor beheerst voor QT-"
-"toepassingen. Schakel dit in om te synchroniseren met de GTK-schaalfactor "
+"toepassingen. Schakel dit in om te synchroniseren met de CTK-schaalfactor "
 "bij het initialiseren van de sessie; schakel dit uit om deze waarde elders "
 "te beheersen. Vereist een herstart van uw sessie."
 

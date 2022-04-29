@@ -945,12 +945,12 @@ msgstr "パネルやCajaなどのアイコンテーマ"
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Ctk+ Theme"
-msgstr "GTK+ テーマ"
+msgstr "CTK+ テーマ"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
 msgid "Basename of the default theme used by ctk+."
-msgstr "GTK+ が使用するデフォルトのテーマの名前です。"
+msgstr "CTK+ が使用するデフォルトのテーマの名前です。"
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -968,62 +968,62 @@ msgstr "デフォルトのフォント"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "GTK+ が使用するデフォルトのフォント名です。"
+msgstr "CTK+ が使用するデフォルトのフォント名です。"
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK IM プレエディット形式"
+msgid "CTK IM Preedit Style"
+msgstr "CTK IM プレエディット形式"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "GTK+ が使用する GTK+ IM プレエディット形式の名前です。"
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "CTK+ が使用する CTK+ IM プレエディット形式の名前です。"
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK IM ステータス形式"
+msgid "CTK IM Status Style"
+msgstr "CTK IM ステータス形式"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "GTK+ が使用する GTK+ IM ステータス形式の名前です。"
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "CTK+ が使用する CTK+ IM ステータス形式の名前です。"
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK IM モジュール"
+msgid "CTK IM Module"
+msgstr "CTK IM モジュール"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "GTK+ が使用する GTK+ 入力メソッドのモジュール名です。"
+msgid "Name of the input method module used by CTK+."
+msgstr "CTK+ が使用する CTK+ 入力メソッドのモジュール名です。"
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "GTK3 のヘッダーバーを使用する"
+msgid "Use CTK3 header bar"
+msgstr "CTK3 のヘッダーバーを使用する"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"ファイル選択、色選択、フォント選択などの GTK+ "
+"ファイル選択、色選択、フォント選択などの CTK+ "
 "組み込みダイアログが、アクションウィジェットを表示するために、上部のヘッダーバーや下部のアクションエリアを使用するかどうかを設定します。この設定は "
 "CtkDialog を直接使用するカスタムダイアログやメッセージダイアログには効果がありません。"
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "GTK3 オーバーレイスクロールを使用する"
+msgid "Use CTK3 overlay scrolling"
+msgstr "CTK3 オーバーレイスクロールを使用する"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"GTK+ "
+"CTK+ "
 "のスクロールウィンドウでオーバーレイスクロールを使用するかどうかを設定します。オーバーレイスクロールを使用すると、フォーカスが当たるまでスクロールバーを隠して表示領域を節約します。"
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "GTK ツールキット全体でアニメーションを有効にする"
+msgstr "CTK ツールキット全体でアニメーションを有効にする"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1052,7 +1052,7 @@ msgstr "カスタムフォントを使用する"
 
 #: schemas/org.cafe.interface.gschema.xml:126
 msgid "Whether to use a custom font in ctk+ applications."
-msgstr "GTK+ アプリケーションでカスタムフォントを使用するかどうかを設定します。"
+msgstr "CTK+ アプリケーションでカスタムフォントを使用するかどうかを設定します。"
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1101,8 +1101,8 @@ msgid ""
 msgstr "入力エントリーとテキストビューのコンテキストメニューに制御文字を挿入するメニュー項目を追加するかどうかを指定します。"
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "GTK3 クライアントで装飾されたウィンドウのタイトルバーのレイアウト"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "CTK3 クライアントで装飾されたウィンドウのタイトルバーのレイアウト"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1155,7 +1155,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
@@ -1168,7 +1168,7 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""

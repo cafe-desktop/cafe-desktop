@@ -947,7 +947,7 @@ msgstr "用于面板、Caja 等的图标主题。"
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Ctk+ Theme"
-msgstr "GTK+ 主题"
+msgstr "CTK+ 主题"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -973,56 +973,56 @@ msgid "Name of the default font used by ctk+."
 msgstr "ctk+ 使用的默认字体的名称。"
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK 输入法预编辑模式"
+msgid "CTK IM Preedit Style"
+msgstr "CTK 输入法预编辑模式"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "用于 ctk+ 的 GTK+ 输入法预处理样式的名称。"
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "用于 ctk+ 的 CTK+ 输入法预处理样式的名称。"
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK 输入法状态样式"
+msgid "CTK IM Status Style"
+msgstr "CTK 输入法状态样式"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "用于 ctk+ 的 GTK+ 输入法状态样式的名称。"
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "用于 ctk+ 的 CTK+ 输入法状态样式的名称。"
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK 输入法模块"
+msgid "CTK IM Module"
+msgstr "CTK 输入法模块"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "GTK+ 所使用的输入法模块名称"
+msgid "Name of the input method module used by CTK+."
+msgstr "CTK+ 所使用的输入法模块名称"
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "使用 GTK3 顶栏"
+msgid "Use CTK3 header bar"
+msgstr "使用 CTK3 顶栏"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"是否在 GTK+ 内置对话框，如文件选择器、颜色选择器以及字体选择器中使用带有各类操作的顶栏以及底栏按钮。该设置不影响任何使用 CtkDialog "
+"是否在 CTK+ 内置对话框，如文件选择器、颜色选择器以及字体选择器中使用带有各类操作的顶栏以及底栏按钮。该设置不影响任何使用 CtkDialog "
 "的自定义对话框或消息框。"
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "使用 GTK3 复合式滚动条"
+msgid "Use CTK3 overlay scrolling"
+msgstr "使用 CTK3 复合式滚动条"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
-msgstr "嵌入式 GTK+ 滚动窗口是否使用复合滚动。复合滚动可以在失去焦点时缩小或隐藏滚动条。"
+msgstr "嵌入式 CTK+ 滚动窗口是否使用复合滚动。复合滚动可以在失去焦点时缩小或隐藏滚动条。"
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "使用 GTK 全局动画"
+msgstr "使用 CTK 全局动画"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1100,8 +1100,8 @@ msgid ""
 msgstr "输入框和文本视图中的快捷菜单是否应提供插入控制字符的选项。"
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "GTK3 客户侧窗口装饰的标题栏布局"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "CTK3 客户侧窗口装饰的标题栏布局"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1161,12 +1161,12 @@ msgstr "窗口缩放因子"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"从窗口坐标映射到实际设备像素的 GTK 缩放因子。 "
+"从窗口坐标映射到实际设备像素的 CTK 缩放因子。 "
 "在传统系统中的值是1，但在高分屏上（例如HiDPI，Retina）的值可能更高（通常为2）。设置为0以自动检测。"
 
 #: schemas/org.cafe.interface.gschema.xml:181
@@ -1176,11 +1176,11 @@ msgstr "QT 应用的比例缩放因子"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"此设置决定是否要 CAFE 控制 QT 应用程序的缩放比例因子。在初始化会话时会与 GTK "
+"此设置决定是否要 CAFE 控制 QT 应用程序的缩放比例因子。在初始化会话时会与 CTK "
 "缩放因子同步，禁止在其他位置控制此值。需要重新启动会话应用更改。"
 
 #: schemas/org.cafe.interface.gschema.xml:186
@@ -1191,7 +1191,7 @@ msgstr "启用首要粘贴选择。"
 msgid ""
 "If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
-msgstr "如果为 True，GTK+ 将使用首要粘贴选择，一般由鼠标中键单击触发。"
+msgstr "如果为 True，CTK+ 将使用首要粘贴选择，一般由鼠标中键单击触发。"
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
 msgid "Disable command line"

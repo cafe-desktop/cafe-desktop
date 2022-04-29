@@ -1003,12 +1003,12 @@ msgstr "Ikondrakt som skal brukes for panelet, Caja osv."
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Ctk+ Theme"
-msgstr "GTK+-drakt"
+msgstr "CTK+-drakt"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
 msgid "Basename of the default theme used by ctk+."
-msgstr "Basisnavn på forvalgt tema som brukes av GTK+."
+msgstr "Basisnavn på forvalgt tema som brukes av CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1028,70 +1028,70 @@ msgstr "Forvalgt stilskrift"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "Navn på forvalgt skrift som brukes av GTK+."
+msgstr "Navn på forvalgt skrift som brukes av CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK IM forhåndsredigeringsstil"
+msgid "CTK IM Preedit Style"
+msgstr "CTK IM forhåndsredigeringsstil"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Navn på forhåndsredigeringsstil for inndatametode som brukes av GTK+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Navn på forhåndsredigeringsstil for inndatametode som brukes av CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK IM statusstil"
+msgid "CTK IM Status Style"
+msgstr "CTK IM statusstil"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Navn på statusstil for inndatametode som brukes av GTK+."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Navn på statusstil for inndatametode som brukes av CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK IM-modul"
+msgid "CTK IM Module"
+msgstr "CTK IM-modul"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Navn på modul for inndatametode som brukes av GTK+."
+msgid "Name of the input method module used by CTK+."
+msgstr "Navn på modul for inndatametode som brukes av CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Gruk GTK3+teksthovedbjelke"
+msgid "Use CTK3 header bar"
+msgstr "Gruk CTK3+teksthovedbjelke"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Om innebygde GTK+dialoger som filvelgeren, fargevelgeren eller "
+"Om innebygde CTK+dialoger som filvelgeren, fargevelgeren eller "
 "skriftvelgeren skal bruke teksthovedbjelken øverst for å vise "
 "handlingskontroller, eller et handlingsområde i bunnen. Denne innstillingen "
 "påvirker ikke tilpassede dialogvinduer, som bruker CtkDialog direkte eller "
 "meldingsdialogvinduer."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Bruk GTK3-overlagsrulling"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Bruk CTK3-overlagsrulling"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Hvorvidt innebygde GTK+vinduer som rulles bruker overlagsrulling. "
+"Hvorvidt innebygde CTK+vinduer som rulles bruker overlagsrulling. "
 "Overlagsrulling skjuler og reduserer størrelsen for rullebjelken til den "
 "kommer i fokus."
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "Aktiver animasjoner som spenner hele GTK-verktøyskassen"
+msgstr "Aktiver animasjoner som spenner hele CTK-verktøyskassen"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
 msgstr ""
-"Hvorvidt animasjoner som spenner hele GTK+verktøyskassen skal aktiveres."
+"Hvorvidt animasjoner som spenner hele CTK+verktøyskassen skal aktiveres."
 
 #: schemas/org.cafe.interface.gschema.xml:115
 msgid "Document font"
@@ -1171,8 +1171,8 @@ msgstr ""
 " å sette inn Unicode kontrolltegn."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Tittelbjelkeoppsett for GTK3+dekorerte vinduer på klientsiden"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "Tittelbjelkeoppsett for CTK3+dekorerte vinduer på klientsiden"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1238,12 +1238,12 @@ msgstr "Vinduskaleringsfaktor"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"Dette styrer skaleringsfaktoren for GTK som avbilder fra vinduskoordinater "
+"Dette styrer skaleringsfaktoren for CTK som avbilder fra vinduskoordinater "
 "til enhetspiksler. Velg 1 for tradisjonelle systemer, men kan økes for "
 "skjermer med veldig høy oppløsning (f.eks. HiDPI og Retina), ofte til "
 "verdien 2. Velg 0 for å gjenkjenne automatisk."
@@ -1255,12 +1255,12 @@ msgstr "Skaleringsfaktor for QT-programmer"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Dette valget avgjør om CAFE styrer skaleringsfaktoren for QT-programmer. Slå"
-" på for å synkronisere med skaleringsfaktoren for GTK når økten startes, "
+" på for å synkronisere med skaleringsfaktoren for CTK når økten startes, "
 "eller slå av for å velge denne verdien et annet sted. Dette krever omstart "
 "av økten. "
 
@@ -1273,7 +1273,7 @@ msgid ""
 "If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Hvorvidt GTK+ limer inn fra primær-utklippstavlen, som vanligvis utløses med"
+"Hvorvidt CTK+ limer inn fra primær-utklippstavlen, som vanligvis utløses med"
 " midtre museknapp."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5

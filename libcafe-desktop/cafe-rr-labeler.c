@@ -368,7 +368,7 @@ position_window (CafeRRLabeler  *labeler,
 	gdk_monitor_get_geometry (monitor_num, &monitor);
 	gdk_rectangle_intersect (&monitor, &workarea, &workarea);
 
-	ctk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
+	ctk_window_move (CTK_WINDOW (window), workarea.x, workarea.y);
 }
 
 static CtkWidget *
@@ -381,10 +381,10 @@ create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *
 	GdkRGBA black = { 0, 0, 0, 1.0 };
 	int x,y;
 
-	window = ctk_window_new (GTK_WINDOW_POPUP);
+	window = ctk_window_new (CTK_WINDOW_POPUP);
 	ctk_widget_set_app_paintable (window, TRUE);
 
-	ctk_container_set_border_width (GTK_CONTAINER (window), LABEL_WINDOW_PADDING + LABEL_WINDOW_EDGE_THICKNESS);
+	ctk_container_set_border_width (CTK_CONTAINER (window), LABEL_WINDOW_PADDING + LABEL_WINDOW_EDGE_THICKNESS);
 
 	/* This is semi-dangerous.  The color is part of the labeler->palette
 	 * array.  Note that in cafe_rr_labeler_finalize(), we are careful to
@@ -412,7 +412,7 @@ create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *
 	g_free (display_name);
 
 	widget = ctk_label_new (NULL);
-	ctk_label_set_markup (GTK_LABEL (widget), str);
+	ctk_label_set_markup (CTK_LABEL (widget), str);
 	g_free (str);
 
 	/* Make the label explicitly black.  We don't want it to follow the
@@ -421,7 +421,7 @@ create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *
 	 */
 	ctk_widget_override_color (widget, ctk_widget_get_state_flags (widget), &black);
 
-	ctk_container_add (GTK_CONTAINER (window), widget);
+	ctk_container_add (CTK_CONTAINER (window), widget);
 
 	/* Should we center this at the top edge of the monitor, instead of using the upper-left corner? */
 	cafe_rr_output_info_get_geometry (output, &x, &y, NULL, NULL);

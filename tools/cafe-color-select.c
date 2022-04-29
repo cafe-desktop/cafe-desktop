@@ -57,7 +57,7 @@ main (int argc, char **argv)
 
     cafe_gettext (GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
-    /* initialize GTK+ */
+    /* initialize CTK+ */
     ctk_init (&argc, &argv);
     ctk_window_set_default_icon_name ("ctk-select-color");
 
@@ -68,12 +68,12 @@ main (int argc, char **argv)
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", ctk_main_quit, NULL);
 
-    widget = ctk_button_new_from_stock (GTK_STOCK_COPY);
-    ctk_container_add (GTK_CONTAINER (ctk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
+    widget = ctk_button_new_from_stock (CTK_STOCK_COPY);
+    ctk_container_add (CTK_CONTAINER (ctk_dialog_get_action_area (CTK_DIALOG (color_dialog))), widget);
     g_signal_connect (widget, "button-release-event", G_CALLBACK (copy_color), color_dialog);
 
-    widget = ctk_button_new_from_stock (GTK_STOCK_CLOSE);
-    ctk_container_add (GTK_CONTAINER (ctk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
+    widget = ctk_button_new_from_stock (CTK_STOCK_CLOSE);
+    ctk_container_add (CTK_CONTAINER (ctk_dialog_get_action_area (CTK_DIALOG (color_dialog))), widget);
     g_signal_connect (widget, "button-release-event", ctk_main_quit, NULL);
 
     ctk_widget_show_all (color_dialog);

@@ -2510,7 +2510,7 @@ cafe_desktop_item_find_icon (CtkIconTheme *icon_theme,
 	char *full = NULL;
 
 	g_return_val_if_fail (icon_theme == NULL ||
-			      GTK_IS_ICON_THEME (icon_theme), NULL);
+			      CTK_IS_ICON_THEME (icon_theme), NULL);
 
 	if (icon == NULL || strcmp(icon,"") == 0) {
 		return NULL;

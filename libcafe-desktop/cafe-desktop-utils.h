@@ -40,7 +40,7 @@ G_BEGIN_DECLS
 /* prepend the terminal command to a vector */
 void cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
 
-/* replace gdk_spawn_command_line_on_screen, not available in GTK3 */
+/* replace gdk_spawn_command_line_on_screen, not available in CTK3 */
 gboolean cafe_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
 
 void

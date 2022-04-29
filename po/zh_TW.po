@@ -956,53 +956,53 @@ msgid "Name of the default font used by ctk+."
 msgstr "ctk+ 使用的預設字型名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK 輸入法預編輯區樣式"
+msgid "CTK IM Preedit Style"
+msgstr "CTK 輸入法預編輯區樣式"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "GTK+ 輸入法所使用的預編輯區樣式的名稱。"
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "CTK+ 輸入法所使用的預編輯區樣式的名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK 輸入法狀態樣式"
+msgid "CTK IM Status Style"
+msgstr "CTK 輸入法狀態樣式"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "GTK+ 輸入法所使用的「狀態區域」樣式的名稱。"
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "CTK+ 輸入法所使用的「狀態區域」樣式的名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
+msgid "CTK IM Module"
 msgstr "GTM 輸入法模組"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "GTK+ 輸入法模組所使用的名稱。"
+msgid "Name of the input method module used by CTK+."
+msgstr "CTK+ 輸入法模組所使用的名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "使用 GTK3 標題列"
+msgid "Use CTK3 header bar"
+msgstr "使用 CTK3 標題列"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"無論是內建的 GTK+ "
+"無論是內建的 CTK+ "
 "對話框像是檔案選擇器、顏色選擇器或是字型選擇器都將會使用在頂部的標題列來顯示動作小組件，或是一個在底部的動作區域。這個設定不會影響直接使用 "
 "CtkDialog 自訂的對話框，或是訊息對話框。"
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "使用 GTK3 覆蓋捲動"
+msgid "Use CTK3 overlay scrolling"
+msgstr "使用 CTK3 覆蓋捲動"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
-msgstr "是否內建的 GTK+ 捲動視窗將要使用覆蓋捲動。覆蓋捲動會在捲動列取得焦點前隱藏並減少其體積。"
+msgstr "是否內建的 CTK+ 捲動視窗將要使用覆蓋捲動。覆蓋捲動會在捲動列取得焦點前隱藏並減少其體積。"
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
@@ -1084,8 +1084,8 @@ msgid ""
 msgstr "項目和文字檢視的快顯選單中應否提供插入萬國碼控制字元的選擇。"
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "GTK3 客戶端裝飾視窗的標題列佈局"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "CTK3 客戶端裝飾視窗的標題列佈局"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1145,12 +1145,12 @@ msgstr "視窗縮放係數"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"這會控制 GTK 的縮放係數，其會將視窗座標定位至正確的裝置像素。在傳統的系統上為 1，但在非常高密度的顯示器上（如 "
+"這會控制 CTK 的縮放係數，其會將視窗座標定位至正確的裝置像素。在傳統的系統上為 1，但在非常高密度的顯示器上（如 "
 "HiDPI、Retina）可以設定為較高的值（通常為 2）。設定為 0 以自動偵測。"
 
 #: schemas/org.cafe.interface.gschema.xml:181
@@ -1160,11 +1160,11 @@ msgstr "Qt 應用程式的縮放係數"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"此設定決定了 CAFE 是否要控制 Qt 應用程式的縮放係數。啟用以在初始化工作階段時與 GTK "
+"此設定決定了 CAFE 是否要控制 Qt 應用程式的縮放係數。啟用以在初始化工作階段時與 CTK "
 "的縮放係數同步，停用以在其他地方控制此值。必須重新啟動您的工作階段。"
 
 #: schemas/org.cafe.interface.gschema.xml:186

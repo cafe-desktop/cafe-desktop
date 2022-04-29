@@ -963,52 +963,52 @@ msgstr "Ög-belgilengen urufat"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "GTK+ tarafından qullanılacaq ög-belgilengen urufatnıñ ismi."
+msgstr "CTK+ tarafından qullanılacaq ög-belgilengen urufatnıñ ismi."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK Kirdi Usulı Ög-tarir Uslûbı"
+msgid "CTK IM Preedit Style"
+msgstr "CTK Kirdi Usulı Ög-tarir Uslûbı"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
 msgstr ""
-"GTK+ tarafından qullanılacaq GTK+ Kirdi Usulı Ög-tarir Uslûbınıñ ismi."
+"CTK+ tarafından qullanılacaq CTK+ Kirdi Usulı Ög-tarir Uslûbınıñ ismi."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK Kirdi Usulı Durum Uslûbı"
+msgid "CTK IM Status Style"
+msgstr "CTK Kirdi Usulı Durum Uslûbı"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "GTK+ tarafından qullanılacaq GTK+ Kirdi Usulı Durum Uslûbınıñ ismi."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "CTK+ tarafından qullanılacaq CTK+ Kirdi Usulı Durum Uslûbınıñ ismi."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK Kirdi Usulı (IM) Modüli"
+msgid "CTK IM Module"
+msgstr "CTK Kirdi Usulı (IM) Modüli"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "GTK+ tarafından qullanılacaq kirdi usulı modüli."
+msgid "Name of the input method module used by CTK+."
+msgstr "CTK+ tarafından qullanılacaq kirdi usulı modüli."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
+msgid "Use CTK3 header bar"
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
+msgid "Use CTK3 overlay scrolling"
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
 
@@ -1099,7 +1099,7 @@ msgstr ""
 "remizlerini qıstıruvnı teklif etip etmeycegi."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:156
@@ -1151,7 +1151,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
@@ -1164,7 +1164,7 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""

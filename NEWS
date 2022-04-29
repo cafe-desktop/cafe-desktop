@@ -152,7 +152,7 @@
 
   * Translations update
   * update copyright year to 2018
-  * schema: drop can-change-accels key, won't work with GTK+3
+  * schema: drop can-change-accels key, won't work with CTK+3
 
 ### cafe-desktop 1.19.2
 
@@ -179,21 +179,21 @@
   * Correct little imprecision in man cafe-about
   * Restore Polish translation credits from GNOME
   * Fix broken fallback cursor in cafe-colorsel.c
-  * cafe-colorsel: don't use deprecated GTK_STOCK_COLOR_PICKER
+  * cafe-colorsel: don't use deprecated CTK_STOCK_COLOR_PICKER
   * Add Global Menu support
 
 ### cafe-desktop 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting to make
     generating release announcements easier
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-ctk
+  * Move to CTK+3 (require CTK+ >= 3.14), drop CTK+2 code and --with-ctk
     build option
   * Drop mpaste tool (won't work without the website anyway)
-  * Background: fix crossfade issues with recent GTK+ versions
+  * Background: fix crossfade issues with recent CTK+ versions
   * Background: fix more graphics issues to allow Caja to use background
     for directory windows
   * Background: fix memleaks and other misc issues
-  * Color select: fix some GTK+ deprecations
+  * Color select: fix some CTK+ deprecations
   * Schemas: some fixes and cleanups
   * cafe-about: update copyright year
   * cafe-about: fix URL centering
@@ -209,8 +209,8 @@
 
   * cafe-bg: remove unneeded ignore-pending-change property
     (not needed anymore since font color fix in Caja 1.14)
-  * GTK+3: fix various deprecations
-  * distcheck: explicitly use currently selected GTK+ version
+  * CTK+3: fix various deprecations
+  * distcheck: explicitly use currently selected CTK+ version
   * Some minor cleanups
   * Translations update
 
@@ -223,22 +223,22 @@
 ### cafe-desktop 1.14.0
 
   * Drop CafeConf migration script and ancient cafe-conf-import tool
-  * Fix deprecated usage of CtkHBox and CtkVBox in GTK+3 build
+  * Fix deprecated usage of CtkHBox and CtkVBox in CTK+3 build
   * Translations update
   * Fix Changelog generation
 
 ### cafe-desktop 1.12.1
 
   * RR: fix crash
-  * Fix color select in GTK+3
+  * Fix color select in CTK+3
   * Translations update
 
 ### cafe-desktop 1.12.0
 
   * Require dconf 0.13.4
   * Require xrandr 1.3
-  * Add gsettings key to toggle overlay scrolling in GTK+3
-  * Add some icons to fix missing icons in GTK+3 with custom icon theme
+  * Add gsettings key to toggle overlay scrolling in CTK+3
+  * Add some icons to fix missing icons in CTK+3 with custom icon theme
   * Mouse schema: enable middle-click emulation by default
   * RR: implement missing cafe_rr_output_get_possible_crtcs function
   * RR: fix laptop identification by output name
@@ -270,25 +270,25 @@
   * Add gobject introspection
   * Many RANDR fixes
   * interface: add automatic-mnemonics key for Ctk xsetting
-  * use GDK_WINDOW_XID for inter-GTK compatibility
+  * use GDK_WINDOW_XID for inter-CTK compatibility
   * Updated mpaste for website change
   * Added org.cafe.debug GSettings schema
   * Added CafeColorButton class to have traditional color selection
-    dialog with GTK3
+    dialog with CTK3
   * Removed desktop-docs
   * Removed user guide
   * Removed libunique optional dependency
   * Added CafeAboutDialog class to have traditional about dialog with
-    GTK3 too
+    CTK3 too
 
 ### cafe-desktop 1.8.0
 
   * Added helpers for dconf and GSettings
-  * Fix build with GTK3
+  * Fix build with CTK3
   * Added CAFE user guide
   * Added CAFE_DESKTOP_CHECK_VERSION function
   * Added mpaste tool
-  * Added replacement for gdk_spawn_command_line_on_screen in GTK3
+  * Added replacement for gdk_spawn_command_line_on_screen in CTK3
 
 ### cafe-desktop 1.6.1
 

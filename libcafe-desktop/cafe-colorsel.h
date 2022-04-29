@@ -1,4 +1,4 @@
-/* GTK - The GIMP Toolkit
+/* CTK - The GIMP Toolkit
  * Copyright (C) 2000 Red Hat, Inc.
  * Copyright (C) 1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald
  *
@@ -19,10 +19,10 @@
  */
 
 /*
- * Modified by the GTK+ Team and others 1997-2000.  See the AUTHORS
- * file for a list of people on the GTK+ Team.  See the ChangeLog
+ * Modified by the CTK+ Team and others 1997-2000.  See the AUTHORS
+ * file for a list of people on the CTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
+ * CTK+ at ftp://ftp.ctk.org/pub/ctk/.
  */
 
 #ifndef __CAFE_COLOR_SELECTION_H__
@@ -109,7 +109,7 @@ gboolean cafe_color_selection_palette_from_string (const gchar       *str,
 gchar*   cafe_color_selection_palette_to_string   (const GdkColor    *colors,
                                                   gint               n_colors);
 
-#ifndef GTK_DISABLE_DEPRECATED
+#ifndef CTK_DISABLE_DEPRECATED
 #ifndef GDK_MULTIHEAD_SAFE
 CafeColorSelectionChangePaletteFunc           cafe_color_selection_set_change_palette_hook             (CafeColorSelectionChangePaletteFunc           func);
 #endif
@@ -117,13 +117,13 @@ CafeColorSelectionChangePaletteFunc           cafe_color_selection_set_change_pa
 
 CafeColorSelectionChangePaletteWithScreenFunc cafe_color_selection_set_change_palette_with_screen_hook (CafeColorSelectionChangePaletteWithScreenFunc func);
 
-#ifndef GTK_DISABLE_DEPRECATED
+#ifndef CTK_DISABLE_DEPRECATED
 /* Deprecated calls: */
 void cafe_color_selection_set_color         (CafeColorSelection *colorsel,
 					    gdouble           *color);
 void cafe_color_selection_get_color         (CafeColorSelection *colorsel,
 					    gdouble           *color);
-#endif /* GTK_DISABLE_DEPRECATED */
+#endif /* CTK_DISABLE_DEPRECATED */
 
 G_END_DECLS
 

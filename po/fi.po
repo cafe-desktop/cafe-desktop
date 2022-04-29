@@ -1023,55 +1023,55 @@ msgid "Name of the default font used by ctk+."
 msgstr "Ctk+:n käyttämän oletuskirjasimen nimi."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK-IM esimuokkaustyyli"
+msgid "CTK IM Preedit Style"
+msgstr "CTK-IM esimuokkaustyyli"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "GTK+:n syöttötavan esimuokkaustyylin nimi"
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "CTK+:n syöttötavan esimuokkaustyylin nimi"
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK-IM tilatyyli"
+msgid "CTK IM Status Style"
+msgstr "CTK-IM tilatyyli"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "GTK+:n syöttötavan tilatyylin nimi."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "CTK+:n syöttötavan tilatyylin nimi."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK-IM-moduuli "
+msgid "CTK IM Module"
+msgstr "CTK-IM-moduuli "
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "GTK+:n oletus-syöttötapamoduulin nimi."
+msgid "Name of the input method module used by CTK+."
+msgstr "CTK+:n oletus-syöttötapamoduulin nimi."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Käytä GTK3-otsikkopalkkia"
+msgid "Use CTK3 header bar"
+msgstr "Käytä CTK3-otsikkopalkkia"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Sisäänrakennettu GTK+-valintaikkunoissa, kuten tiedosto-, väri- tai fontti- "
+"Sisäänrakennettu CTK+-valintaikkunoissa, kuten tiedosto-, väri- tai fontti- "
 "valitsimessa, näyttää toimintosovelmat yläpalkin yläreunassa tai toiminta-"
 "alueen alareunassa. Tämä asetus ei vaikuta mukautettuihin ikkunoihin suoraan"
 " CtkDialogiin tai ilmoituksiin."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Käytä GTK3 peittävää kuvavieritystä"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Käytä CTK3 peittävää kuvavieritystä"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Käyttävätkö sisäänrakennetut GTK+-vieritysikkunat pittävää vierimistä. "
+"Käyttävätkö sisäänrakennetut CTK+-vieritysikkunat pittävää vierimistä. "
 "Peittävä vieritys piilottaa ja pienentää vierityspalkin kokoa, kunnes se "
 "saavuttaa tarkennuksen."
 
@@ -1161,8 +1161,8 @@ msgstr ""
 "ohjausmerkkien syöttöä varten."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Sisustettu ikkunoiden otsikkopalkki GTK3 asiakaspuolella"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "Sisustettu ikkunoiden otsikkopalkki CTK3 asiakaspuolella"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1228,12 +1228,12 @@ msgstr "Ikkunoiden skaalauskerroin"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"Tämä ohjaa GTK-skaalauskerrointa, joka yhdistää ikkunan koordinaateista "
+"Tämä ohjaa CTK-skaalauskerrointa, joka yhdistää ikkunan koordinaateista "
 "todellisiin laitteen kuvapisteisiin. Perinteisissä järjestelmissä tämä on 1,"
 " mutta erittäin suuren tiheyden näytöissä (esim. HiDPI, Retina) tämä voi "
 "olla arvoltaan suurempi (usein 2). Aseta arvoksi 0, jos haluat tunnistaa "
@@ -1246,12 +1246,12 @@ msgstr "QT-sovellusten skaalauskerroin"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Tämä asetus määrittää, ohjaako CAFE QT-sovellusten skaalauskerrointa. Ota "
-"synkronointi käyttöön GTK:n alla, kun istunto alustetaan, poista tämä arvo "
+"synkronointi käyttöön CTK:n alla, kun istunto alustetaan, poista tämä arvo "
 "käytöstä muualla. Edellyttää istunnon käynnistämistä uudelleen."
 
 #: schemas/org.cafe.interface.gschema.xml:186

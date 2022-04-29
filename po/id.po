@@ -1038,55 +1038,55 @@ msgid "Name of the default font used by ctk+."
 msgstr "Nama fonta standar yang digunakan ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "Gaya preedit metode input GTK"
+msgid "CTK IM Preedit Style"
+msgstr "Gaya preedit metode input CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Nama gaya preedit metode input GTK+ yang digunakan oleh ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Nama gaya preedit metode input CTK+ yang digunakan oleh ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Gaya status metode input GTK"
+msgid "CTK IM Status Style"
+msgstr "Gaya status metode input CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Nama gaya status metode input GTK+ yang digunakan oleh ctk+"
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Nama gaya status metode input CTK+ yang digunakan oleh ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Modul GTK IM"
+msgid "CTK IM Module"
+msgstr "Modul CTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Nama modul metode masukan yang digunakan oleh GTK+."
+msgid "Name of the input method module used by CTK+."
+msgstr "Nama modul metode masukan yang digunakan oleh CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Gunakan bilah header GTK3"
+msgid "Use CTK3 header bar"
+msgstr "Gunakan bilah header CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Apakah dialog internal GTK+ seperti pemilih berkas, pemilih warna, atau "
+"Apakah dialog internal CTK+ seperti pemilih berkas, pemilih warna, atau "
 "pemilih fonta akan menggunakan bilah header di atas untuk menampilkan widget"
 " aksi, atau area aksi di bawah. Pengaturan ini tidak berpengaruh pada dialog"
 " custom yang menggunakan CtkDialog secara langsung, atau dialog pesan."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Gunakan guliran berlapis GTK3"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Gunakan guliran berlapis CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Apabila jendela bergulir bawaan GTK+ menggunakan guliran berlapis. Guliran "
+"Apabila jendela bergulir bawaan CTK+ menggunakan guliran berlapis. Guliran "
 "berlapis disembunyikan dan memperkecil ukuran bilah guliran sampai "
 "difokuskan."
 
@@ -1178,8 +1178,8 @@ msgstr ""
 "menyisipkan karakter kendali. "
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Tata letak baris judul dari dekorasi jendela sisi-klien GTK3 "
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "Tata letak baris judul dari dekorasi jendela sisi-klien CTK3 "
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1245,12 +1245,12 @@ msgstr "Faktor Skala Jendela"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"Ini mengendalikan faktor skala GTK yang memetakan dari koordinat jendela ke "
+"Ini mengendalikan faktor skala CTK yang memetakan dari koordinat jendela ke "
 "piksel perangkat sebenarnya. Pada sistem tradisional ini adalah 1, tapi pada"
 " tampilan densitas sangat tinggi (mis. HiDPI, Retina) ini bisa berupa nilai "
 "yang lebih tinggi (seringkali 2). Atur ke 0 untuk deteksi otomatis."
@@ -1262,12 +1262,12 @@ msgstr "Faktor Penskalaan untuk aplikasi QT"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Pengaturan ini menentukan apakah CAFE mengendalikan faktor skala bagi "
-"aplikasi QT. Fungsikan untuk menyelaraskan dengan faktor skala GTK ketika "
+"aplikasi QT. Fungsikan untuk menyelaraskan dengan faktor skala CTK ketika "
 "menginisiasi sesi, nonatkfikan untuk mengendalikan nilai ini di tempat lain."
 " Perlu memulai ulang sesi."
 

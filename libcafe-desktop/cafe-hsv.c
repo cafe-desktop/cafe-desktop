@@ -1,10 +1,10 @@
-/* HSV color selector for GTK+
+/* HSV color selector for CTK+
  *
  * Copyright (C) 1999 The Free Software Foundation
  *
  * Authors: Simon Budig <Simon.Budig@unix-ag.org> (original code)
- *          Federico Mena-Quintero <federico@gimp.org> (cleanup for GTK+)
- *          Jonathan Blandford <jrb@redhat.com> (cleanup for GTK+)
+ *          Federico Mena-Quintero <federico@gimp.org> (cleanup for CTK+)
+ *          Jonathan Blandford <jrb@redhat.com> (cleanup for CTK+)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,10 +21,10 @@
  */
 
 /*
- * Modified by the GTK+ Team and others 1997-2000.  See the AUTHORS
- * file for a list of people on the GTK+ Team.  See the ChangeLog
+ * Modified by the CTK+ Team and others 1997-2000.  See the AUTHORS
+ * file for a list of people on the CTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
+ * CTK+ at ftp://ftp.ctk.org/pub/ctk/.
  *
  * Modified to work internally in cafe-desktop by Pablo Barciela 2019
  */
@@ -126,7 +126,7 @@ static void     cafe_hsv_move                 (CafeHSV            *hsv,
 
 static guint hsv_signals[LAST_SIGNAL];
 
-G_DEFINE_TYPE_WITH_PRIVATE (CafeHSV, cafe_hsv, GTK_TYPE_WIDGET)
+G_DEFINE_TYPE_WITH_PRIVATE (CafeHSV, cafe_hsv, CTK_TYPE_WIDGET)
 
 /* Class initialization function for the HSV color selector */
 static void
@@ -175,34 +175,34 @@ cafe_hsv_class_init (CafeHSVClass *class)
                   NULL, NULL,
                   NULL,
                   G_TYPE_NONE, 1,
-                  GTK_TYPE_DIRECTION_TYPE);
+                  CTK_TYPE_DIRECTION_TYPE);
 
   binding_set = ctk_binding_set_by_class (class);
 
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_Up, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_UP);
+                                G_TYPE_ENUM, CTK_DIR_UP);
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Up, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_UP);
+                                G_TYPE_ENUM, CTK_DIR_UP);
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_Down, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_DOWN);
+                                G_TYPE_ENUM, CTK_DIR_DOWN);
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Down, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_DOWN);
+                                G_TYPE_ENUM, CTK_DIR_DOWN);
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_Right, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_RIGHT);
+                                G_TYPE_ENUM, CTK_DIR_RIGHT);
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Right, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_RIGHT);
+                                G_TYPE_ENUM, CTK_DIR_RIGHT);
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_Left, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_LEFT);
+                                G_TYPE_ENUM, CTK_DIR_LEFT);
   ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Left, 0,
                                 "move", 1,
-                                G_TYPE_ENUM, GTK_DIR_LEFT);
+                                G_TYPE_ENUM, CTK_DIR_LEFT);
 }
 
 static void
@@ -213,8 +213,8 @@ cafe_hsv_init (CafeHSV *hsv)
   priv = cafe_hsv_get_instance_private (hsv);
   hsv->priv = priv;
 
-  ctk_widget_set_has_window (GTK_WIDGET (hsv), FALSE);
-  ctk_widget_set_can_focus (GTK_WIDGET (hsv), TRUE);
+  ctk_widget_set_has_window (CTK_WIDGET (hsv), FALSE);
+  ctk_widget_set_can_focus (CTK_WIDGET (hsv), TRUE);
 
   priv->h = 0.0;
   priv->s = 0.0;
@@ -227,7 +227,7 @@ cafe_hsv_init (CafeHSV *hsv)
 static void
 cafe_hsv_destroy (CtkWidget *widget)
 {
-  GTK_WIDGET_CLASS (cafe_hsv_parent_class)->destroy (widget);
+  CTK_WIDGET_CLASS (cafe_hsv_parent_class)->destroy (widget);
 }
 
 static void
@@ -278,7 +278,7 @@ cafe_hsv_unrealize (CtkWidget *widget)
   gdk_window_destroy (priv->window);
   priv->window = NULL;
 
-  GTK_WIDGET_CLASS (cafe_hsv_parent_class)->unrealize (widget);
+  CTK_WIDGET_CLASS (cafe_hsv_parent_class)->unrealize (widget);
 }
 
 static void
@@ -425,7 +425,7 @@ compute_triangle (CafeHSV *hsv,
                   gint    *vy)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  CtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = CTK_WIDGET (hsv);
   gdouble center_x;
   gdouble center_y;
   gdouble inner, outer;
@@ -452,7 +452,7 @@ is_in_ring (CafeHSV *hsv,
             gdouble  y)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  CtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = CTK_WIDGET (hsv);
   gdouble dx, dy, dist;
   gdouble center_x;
   gdouble center_y;
@@ -478,7 +478,7 @@ compute_sv (CafeHSV  *hsv,
             gdouble  *s,
             gdouble  *v)
 {
-  CtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = CTK_WIDGET (hsv);
   int ihx, ihy, isx, isy, ivx, ivy;
   double hx, hy, sx, sy, vx, vy;
   double center_x;
@@ -582,7 +582,7 @@ compute_v (CafeHSV *hsv,
            gdouble  x,
            gdouble  y)
 {
-  CtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = CTK_WIDGET (hsv);
   double center_x;
   double center_y;
   double dx, dy;
@@ -610,7 +610,7 @@ set_cross_grab (CafeHSV   *hsv,
   CafeHSVPrivate *priv = hsv->priv;
   GdkCursor *cursor;
 
-  cursor = gdk_cursor_new_for_display (ctk_widget_get_display (GTK_WIDGET (hsv)),
+  cursor = gdk_cursor_new_for_display (ctk_widget_get_display (CTK_WIDGET (hsv)),
                                        GDK_CROSSHAIR);
   gdk_seat_grab (gdk_device_get_seat (device),
                  priv->window,
@@ -769,7 +769,7 @@ paint_ring (CafeHSV *hsv,
             cairo_t *cr)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  CtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = CTK_WIDGET (hsv);
   int xx, yy, width, height;
   gdouble dx, dy, dist;
   gdouble center_x;
@@ -913,7 +913,7 @@ paint_triangle (CafeHSV  *hsv,
                 gboolean  draw_focus)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  CtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = CTK_WIDGET (hsv);
   gint hx, hy, sx, sy, vx, vy; /* HSV vertices */
   gint x1, y1, r1, g1, b1; /* First vertex in scanline order */
   gint x2, y2, r2, g2, b2; /* Second vertex */
@@ -1154,41 +1154,41 @@ cafe_hsv_focus (CtkWidget       *widget,
 
   if (!ctk_widget_has_focus (widget))
     {
-      if (dir == GTK_DIR_TAB_BACKWARD)
+      if (dir == CTK_DIR_TAB_BACKWARD)
         priv->focus_on_ring = FALSE;
       else
         priv->focus_on_ring = TRUE;
 
-      ctk_widget_grab_focus (GTK_WIDGET (hsv));
+      ctk_widget_grab_focus (CTK_WIDGET (hsv));
       return TRUE;
     }
 
   switch (dir)
     {
-    case GTK_DIR_UP:
+    case CTK_DIR_UP:
       if (priv->focus_on_ring)
         return FALSE;
       else
         priv->focus_on_ring = TRUE;
       break;
 
-    case GTK_DIR_DOWN:
+    case CTK_DIR_DOWN:
       if (priv->focus_on_ring)
         priv->focus_on_ring = FALSE;
       else
         return FALSE;
       break;
 
-    case GTK_DIR_LEFT:
-    case GTK_DIR_TAB_BACKWARD:
+    case CTK_DIR_LEFT:
+    case CTK_DIR_TAB_BACKWARD:
       if (priv->focus_on_ring)
         return FALSE;
       else
         priv->focus_on_ring = TRUE;
       break;
 
-    case GTK_DIR_RIGHT:
-    case GTK_DIR_TAB_FORWARD:
+    case CTK_DIR_RIGHT:
+    case CTK_DIR_TAB_FORWARD:
       if (priv->focus_on_ring)
         priv->focus_on_ring = FALSE;
       else
@@ -1196,7 +1196,7 @@ cafe_hsv_focus (CtkWidget       *widget,
       break;
     }
 
-  ctk_widget_queue_draw (GTK_WIDGET (hsv));
+  ctk_widget_queue_draw (CTK_WIDGET (hsv));
 
   return TRUE;
 }
@@ -1245,7 +1245,7 @@ cafe_hsv_set_color (CafeHSV *hsv,
 
   g_signal_emit (hsv, hsv_signals[CHANGED], 0);
 
-  ctk_widget_queue_draw (GTK_WIDGET (hsv));
+  ctk_widget_queue_draw (CTK_WIDGET (hsv));
 }
 
 /**
@@ -1309,9 +1309,9 @@ cafe_hsv_set_metrics (CafeHSV *hsv,
   priv->ring_width = ring_width;
 
   if (same_size)
-    ctk_widget_queue_draw (GTK_WIDGET (hsv));
+    ctk_widget_queue_draw (CTK_WIDGET (hsv));
   else
-    ctk_widget_queue_resize (GTK_WIDGET (hsv));
+    ctk_widget_queue_resize (CTK_WIDGET (hsv));
 }
 
 /**
@@ -1386,7 +1386,7 @@ cafe_hsv_move (CafeHSV         *hsv,
 #define HUE_DELTA 0.002
   switch (dir)
     {
-    case GTK_DIR_UP:
+    case CTK_DIR_UP:
       if (priv->focus_on_ring)
         hue += HUE_DELTA;
       else
@@ -1396,7 +1396,7 @@ cafe_hsv_move (CafeHSV         *hsv,
         }
       break;
 
-    case GTK_DIR_DOWN:
+    case CTK_DIR_DOWN:
       if (priv->focus_on_ring)
         hue -= HUE_DELTA;
       else
@@ -1406,7 +1406,7 @@ cafe_hsv_move (CafeHSV         *hsv,
         }
       break;
 
-    case GTK_DIR_LEFT:
+    case CTK_DIR_LEFT:
       if (priv->focus_on_ring)
         hue += HUE_DELTA;
       else
@@ -1416,7 +1416,7 @@ cafe_hsv_move (CafeHSV         *hsv,
         }
       break;
 
-    case GTK_DIR_RIGHT:
+    case CTK_DIR_RIGHT:
       if (priv->focus_on_ring)
         hue -= HUE_DELTA
           ;

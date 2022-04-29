@@ -963,51 +963,51 @@ msgstr "Phông chữ mặc định"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "Tên phông chữ mặc định dùng bởi GTK+."
+msgstr "Tên phông chữ mặc định dùng bởi CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
+msgid "CTK IM Preedit Style"
 msgstr "Kiểu hiệu chỉnh trước Ctk IM"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Tên phương pháp gõ hiệu chỉnh trước GTK được dùng bởi GTK+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Tên phương pháp gõ hiệu chỉnh trước CTK được dùng bởi CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Kiểu Trạng thái GTK IM"
+msgid "CTK IM Status Style"
+msgstr "Kiểu Trạng thái CTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Tên kiểu dáng trạng thái phương pháp gõ GTK+ dùng bởi Ctk+."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Tên kiểu dáng trạng thái phương pháp gõ CTK+ dùng bởi Ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Mô-đun Tin Nhắn GTK"
+msgid "CTK IM Module"
+msgstr "Mô-đun Tin Nhắn CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Tên của mô-đun nhập vào được GTK+ dùng."
+msgid "Name of the input method module used by CTK+."
+msgstr "Tên của mô-đun nhập vào được CTK+ dùng."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
+msgid "Use CTK3 header bar"
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
+msgid "Use CTK3 overlay scrolling"
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
 
@@ -1044,7 +1044,7 @@ msgstr "Dùng phông chữ tự chọn"
 
 #: schemas/org.cafe.interface.gschema.xml:126
 msgid "Whether to use a custom font in ctk+ applications."
-msgstr "Có dùng phông chữ tự chọn trong ứng dụng GTK+ không."
+msgstr "Có dùng phông chữ tự chọn trong ứng dụng CTK+ không."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1097,7 +1097,7 @@ msgstr ""
 " ký tự điều khiển hay không."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:156
@@ -1149,7 +1149,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
@@ -1162,7 +1162,7 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""

@@ -1032,12 +1032,12 @@ msgstr "Tema de iconos para usar en el panel, Caja, etc."
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Ctk+ Theme"
-msgstr "Tema de GTK"
+msgstr "Tema de CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
 msgid "Basename of the default theme used by ctk+."
-msgstr "Nombre base del tema predeterminado que usa GTK."
+msgstr "Nombre base del tema predeterminado que usa CTK."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1057,66 +1057,66 @@ msgstr "Tipografía predeterminada"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "Nombre de la tipografía predeterminada que usa GTK."
+msgstr "Nombre de la tipografía predeterminada que usa CTK."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "Estilo de preedición del método de entrada de GTK"
+msgid "CTK IM Preedit Style"
+msgstr "Estilo de preedición del método de entrada de CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
 msgstr ""
-"Nombre del estilo de preedición del método de entrada de GTK que usa GTK."
+"Nombre del estilo de preedición del método de entrada de CTK que usa CTK."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Estilo de preedición del método de entrada de GTK"
+msgid "CTK IM Status Style"
+msgstr "Estilo de preedición del método de entrada de CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Nombre del estilo de estado del método de entrada de GTK que usa GTK."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Nombre del estilo de estado del método de entrada de CTK que usa CTK."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Módulo del método de entrada de GTK"
+msgid "CTK IM Module"
+msgstr "Módulo del método de entrada de CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Nombre del módulo del método de entrada que usa GTK."
+msgid "Name of the input method module used by CTK+."
+msgstr "Nombre del módulo del método de entrada que usa CTK."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Usar una barra de cabecera de GTK3"
+msgid "Use CTK3 header bar"
+msgstr "Usar una barra de cabecera de CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Si los diálogos integrados de GTK, como el selector de archivos, el selector"
+"Si los diálogos integrados de CTK, como el selector de archivos, el selector"
 " de color o el selector de tipografías, usarán una barra de cabecera en la "
 "parte superior para mostrar componentes de acción o un área de acción en la "
 "parte inferior.  Este ajuste no afecta a los diálogos personalizados que "
 "utilizan directamente CtkDialog o a los diálogos de mensaje."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Usar barras de desplazamiento superpuestas de GTK3"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Usar barras de desplazamiento superpuestas de CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Si las ventanas usarán barras de desplazamiento superpuestas de GTK3. Las "
+"Si las ventanas usarán barras de desplazamiento superpuestas de CTK3. Las "
 "barras de desplazamiento superpuestas son de reducido tamaño y permanecen "
 "ocultas hasta que obtienen el foco."
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "Activar las animaciones para todos los componentes de GTK"
+msgstr "Activar las animaciones para todos los componentes de CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1151,7 +1151,7 @@ msgstr "Usar tipografía personalizada"
 #: schemas/org.cafe.interface.gschema.xml:126
 msgid "Whether to use a custom font in ctk+ applications."
 msgstr ""
-"Si se va que usar una tipografía personalizada en las aplicaciones de GTK."
+"Si se va que usar una tipografía personalizada en las aplicaciones de CTK."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1163,7 +1163,7 @@ msgstr "Si se muestra un medidor de la barra de estado en la derecha."
 
 #: schemas/org.cafe.interface.gschema.xml:135
 msgid "Module for CtkFileChooser"
-msgstr "Módulo para el selector de archivo de GTK"
+msgstr "Módulo para el selector de archivo de CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
@@ -1206,10 +1206,10 @@ msgstr ""
 "ofrecer la posibilidad de insertar caracteres de control."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr ""
 "Distribución de la barra de título de las ventanas con decoración del lado "
-"del cliente de GTK3"
+"del cliente de CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1275,12 +1275,12 @@ msgstr "Factor de Escala de Ventana"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"Esta opción controla el factor de escala GTK que asigna las coordenadas de "
+"Esta opción controla el factor de escala CTK que asigna las coordenadas de "
 "la ventana a los píxeles del dispositivo real. En los sistemas tradicionales"
 " es 1, pero en pantallas de muy alta densidad (por ejemplo, HiDPI o Retina),"
 " puede ser un valor más alto (a menudo 2). Configúrelo en 0 para la "
@@ -1293,12 +1293,12 @@ msgstr "Factor de escala para aplicaciones QT"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Este ajuste determina si CAFE controla el factor de escala para las "
-"aplicaciones QT. Activar para sincronizar con el factor de escala GTK al "
+"aplicaciones QT. Activar para sincronizar con el factor de escala CTK al "
 "iniciar sesión, desactivar para controlar este valor en otra parte. Requiere"
 " el reinicio de la sesión."
 
@@ -1311,7 +1311,7 @@ msgid ""
 "If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Si se activa, GTK usará el pegado directo de la selección, que se ejecuta "
+"Si se activa, CTK usará el pegado directo de la selección, que se ejecuta "
 "generalmente con un clic central del ratón."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
