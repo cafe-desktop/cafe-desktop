@@ -675,14 +675,14 @@ set_color_icon (CdkDragContext *context,
   GdkPixbuf *pixbuf;
   guint32 pixel;
 
-  pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE,
+  pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE,
 			   8, 48, 32);
 
   pixel = (((UNSCALE (colors[COLORSEL_RED])   & 0xff00) << 16) |
 	   ((UNSCALE (colors[COLORSEL_GREEN]) & 0xff00) << 8) |
 	   ((UNSCALE (colors[COLORSEL_BLUE])  & 0xff00)));
 
-  cdk_pixbuf_fill (pixbuf, pixel);
+  gdk_pixbuf_fill (pixbuf, pixel);
 
   ctk_drag_set_icon_pixbuf (context, pixbuf, -2, -2);
   g_object_unref (pixbuf);
@@ -1609,7 +1609,7 @@ make_picker_cursor (CdkScreen *screen)
     {
       GdkPixbuf *pixbuf;
 
-      pixbuf = cdk_pixbuf_new_from_data (dropper_bits,
+      pixbuf = gdk_pixbuf_new_from_data (dropper_bits,
                                          CDK_COLORSPACE_RGB, TRUE, 8,
                                          DROPPER_WIDTH, DROPPER_HEIGHT,
                                          DROPPER_STRIDE,
@@ -1639,7 +1639,7 @@ grab_color_at_mouse (CdkScreen *screen,
 
   priv = colorsel->private_data;
 
-  pixbuf = cdk_pixbuf_get_from_window (root_window,
+  pixbuf = gdk_pixbuf_get_from_window (root_window,
                                        x_root, y_root,
                                        1, 1);
   if (!pixbuf)
@@ -1649,13 +1649,13 @@ grab_color_at_mouse (CdkScreen *screen,
       CdkWindow *window = cdk_display_get_window_at_pointer (display, &x, &y);
       if (!window)
 	return;
-      pixbuf = cdk_pixbuf_get_from_window (window,
+      pixbuf = gdk_pixbuf_get_from_window (window,
                                            x, y,
                                            1, 1);
       if (!pixbuf)
 	return;
     }
-  pixels = cdk_pixbuf_get_pixels (pixbuf);
+  pixels = gdk_pixbuf_get_pixels (pixbuf);
   color.red = pixels[0] * 0x101;
   color.green = pixels[1] * 0x101;
   color.blue = pixels[2] * 0x101;
