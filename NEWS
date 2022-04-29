@@ -26,7 +26,7 @@
   * thumbnail: Simplify system includes
   * thumbnail: Fix typo in optional
   * thumbnail: Remove unused constant SECONDS_BETWEEN_STATS
-  * thumbnail: Remove unused #define CDK_PIXBUF_ENABLE_BACKEND
+  * thumbnail: Remove unused #define GDK_PIXBUF_ENABLE_BACKEND
   * thumbnail: Remove reference to CafeIconFactory
   * thumbnail: Simplify init_thumbnailers_dirs()
   * thumbnail: some code-styling fixes
