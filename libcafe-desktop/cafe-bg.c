@@ -2724,7 +2724,7 @@ pixbuf_blend (GdkPixbuf *src,
 			      dest_x, dest_y,
 			      src_width, src_height,
 			      offset_x, offset_y,
-			      1, 1, CDK_INTERP_NEAREST,
+			      1, 1, GDK_INTERP_NEAREST,
 			      alpha * 0xFF + 0.5);
 }
 
