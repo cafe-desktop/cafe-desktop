@@ -233,7 +233,7 @@ AC_SUBST(REBUILD)
 
 AC_SEARCH_LIBS([sqrt], [m])
 
-# check for ctk-doc
+# check for gtk-doc
 CTK_DOC_CHECK([1.4])
 
 dnl ICONS: convert svg to png
@@ -289,5 +289,5 @@ cafe-desktop $VERSION
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
     Build introspection support:  ${found_introspection}
-    Build ctk-doc documentation:  ${enable_ctk_doc}
+    Build gtk-doc documentation:  ${enable_ctk_doc}
 "

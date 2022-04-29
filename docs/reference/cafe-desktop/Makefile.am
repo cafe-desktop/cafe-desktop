@@ -3,7 +3,7 @@
 # We require automake 1.6 at least.
 AUTOMAKE_OPTIONS = 1.6
 
-# This is a blank Makefile.am for using ctk-doc.
+# This is a blank Makefile.am for using gtk-doc.
 # Copy this to your project's API docs directory and modify the variables to
 # suit your project. See the CTK+ Makefiles in ctk+/docs/reference for examples
 # of using the various options.
@@ -15,7 +15,7 @@ DOC_MODULE=cafe-desktop
 DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sgml
 
 # The directory containing the source code. Relative to $(srcdir).
-# ctk-doc will search all .c & .h files beneath here for inline comments
+# gtk-doc will search all .c & .h files beneath here for inline comments
 # documenting the functions and macros.
 # e.g. DOC_SOURCE_DIR=../../../ctk
 DOC_SOURCE_DIR=../../../libcafe-desktop
@@ -57,7 +57,7 @@ HTML_IMAGES=
 # e.g. content_files=running.sgml building.sgml changes-2.0.sgml
 content_files=
 
-# SGML files where ctk-doc abbreviations (#CtkWidget) are expanded
+# SGML files where gtk-doc abbreviations (#CtkWidget) are expanded
 # These files must be listed here *and* in content_files
 # e.g. expand_content_files=running.sgml
 expand_content_files=
@@ -70,8 +70,8 @@ expand_content_files=
 AM_CPPFLAGS=$(CAFE_DESKTOP_CFLAGS) -I$(top_srcdir)/libcafe-desktop -DCAFE_DESKTOP_USE_UNSTABLE_API
 CTKDOC_LIBS=$(CAFE_DESKTOP_LIBS) $(top_builddir)/libcafe-desktop/libcafe-desktop-2.la
 
-# This includes the standard ctk-doc make rules, copied by ctkdocize.
-include $(top_srcdir)/ctk-doc.make
+# This includes the standard gtk-doc make rules, copied by ctkdocize.
+include $(top_srcdir)/gtk-doc.make
 
 # Other files to distribute
 # e.g. EXTRA_DIST += version.xml.in

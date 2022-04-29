@@ -14,7 +14,7 @@ requires:
     - expect #required for unbuffer
     - git
     - gobject-introspection
-    - ctk-doc-tools
+    - gtk-doc-tools
     - intltool
     - iso-codes
     - libdconf-dev
@@ -65,7 +65,7 @@ before_scripts:
 
 build_scripts:
   - ./before-build
-  - ./make-scanbuild '--prefix=/usr --enable-ctk-doc --enable-compile-warnings=maximum'
+  - ./make-scanbuild '--prefix=/usr --enable-gtk-doc --enable-compile-warnings=maximum'
   - ./after-build
 
 after_scripts:
