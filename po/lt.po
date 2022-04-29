@@ -320,8 +320,8 @@ msgid "The color you've chosen."
 msgstr "Jūsų pasirinkta spalva."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1003,7 +1003,7 @@ msgstr "Gtk+ tema"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
+msgid "Basename of the default theme used by ctk+."
 msgstr "Gtk+ naudojamos numatytosios temos bazinis pavadinimas."
 
 #: schemas/org.cafe.interface.gschema.xml:75
@@ -1012,36 +1012,36 @@ msgstr "Simbolinių pavadinimų ir jų spalvų atitikmenų sąrašas"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
-"\\n atskirtas „name:color“ sąrašas, apibūdintas „gtk-color-scheme“ nustatyme"
+"\\n atskirtas „name:color“ sąrašas, apibūdintas „ctk-color-scheme“ nustatyme"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Numatytasis šriftas"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "Numatytojo gtk+ naudojamo šrifto pavadinimas."
+msgid "Name of the default font used by ctk+."
+msgstr "Numatytojo ctk+ naudojamo šrifto pavadinimas."
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "GTK IM Preedit stilius"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr ""
-"GTK+ įvedimo metodo, kurį naudos gtk+ su Preedit Stiliumi, pavadinimas."
+"GTK+ įvedimo metodo, kurį naudos ctk+ su Preedit Stiliumi, pavadinimas."
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "GTK IM būsenos stilius"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr ""
-"GTK+ įvedimo metodo, kurį naudos gtk+ su Būsenos Stiliumi, pavadinimas."
+"GTK+ įvedimo metodo, kurį naudos ctk+ su Būsenos Stiliumi, pavadinimas."
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1112,8 +1112,8 @@ msgid "Use Custom Font"
 msgstr "Naudoti naudotojo parinktą šriftą"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Ar su gtk+ programomis naudoti naudotojo parinktą šriftą."
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "Ar su ctk+ programomis naudoti naudotojo parinktą šriftą."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1130,10 +1130,10 @@ msgstr "GtkFileChooser modulis"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Modulis naudojamas kaip failų sistemos modelis GtkFileChooser valdymo "
-"elementui. Galimos reikšmės yra „gio“ ir „gtk+“."
+"elementui. Galimos reikšmės yra „gio“ ir „ctk+“."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1176,12 +1176,12 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Čia numatoma, kokie mygtukai turėtų būti rodomi kliento dekoruojamiems "
 "langams, ir ar jie turėtų būti kairėje, ar dešinėje, Daugiau informacijos "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1192,12 +1192,12 @@ msgstr "Naudoti visuotinę meniu juostą, skirtą rodyti programos meniu"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Šis nustatymas apibrėžia kur bus rodomas programos meniu - lange ar "
 "skydelyje su MenuModel protokolu. Žiūrėkite "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1208,12 +1208,12 @@ msgstr "Naudoti visuotinę meniu juostą, skirtą rodyti lango meniu juostas"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Šis nustatymas apibrėžia kur bus rodomos lango meniu juostos - lange ar "
 "skydelyje su MenuModel protokolu. Žiūrėkite "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1266,10 +1266,10 @@ msgstr "Įjungti pirminį įdėjimą"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Jei įjungta, gtk+ naudoja pirminį įdėjimą, įprastai paspaudus vidurinį pelės"
+"Jei įjungta, ctk+ naudoja pirminį įdėjimą, įprastai paspaudus vidurinį pelės"
 " mygtuką."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
@@ -1505,8 +1505,8 @@ msgstr "Pasirinkti spalvas iš paletės, arba iš ekrano"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!

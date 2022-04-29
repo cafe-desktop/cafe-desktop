@@ -324,8 +324,8 @@ msgid "The color you've chosen."
 msgstr "Fargen du har valgt"
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1007,7 +1007,7 @@ msgstr "GTK+-drakt"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
+msgid "Basename of the default theme used by ctk+."
 msgstr "Basisnavn på forvalgt tema som brukes av GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
@@ -1016,10 +1016,10 @@ msgstr "Liste over symbolske navn og motsvarende"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
-"En '\\n'-inndelt liste av \"name:color\" som definert av 'gtk-color-"
+"En '\\n'-inndelt liste av \"name:color\" som definert av 'ctk-color-"
 "scheme'-innstillingen"
 
 #: schemas/org.cafe.interface.gschema.xml:80
@@ -1027,7 +1027,7 @@ msgid "Default font"
 msgstr "Forvalgt stilskrift"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
+msgid "Name of the default font used by ctk+."
 msgstr "Navn på forvalgt skrift som brukes av GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
@@ -1035,7 +1035,7 @@ msgid "GTK IM Preedit Style"
 msgstr "GTK IM forhåndsredigeringsstil"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr "Navn på forhåndsredigeringsstil for inndatametode som brukes av GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
@@ -1043,7 +1043,7 @@ msgid "GTK IM Status Style"
 msgstr "GTK IM statusstil"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr "Navn på statusstil for inndatametode som brukes av GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
@@ -1115,8 +1115,8 @@ msgid "Use Custom Font"
 msgstr "Benytt brukerdefinert skrifttype"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Om det skal benyttes en brukerdefinert skrifttype i gtk+programmer."
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "Om det skal benyttes en brukerdefinert skrifttype i ctk+programmer."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1133,10 +1133,10 @@ msgstr "Modul for GtkFileChooser"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Modul som skal brukes som filsystemmodell for GtkFileChooser-kontrollen. "
-"Mulige verdier er «gio» og «gtk+»."
+"Mulige verdier er «gio» og «ctk+»."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1179,13 +1179,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Denne innstillingen bestemmer hvilke knapper som skal plasseres i "
 "tittelbjelken for vinduer dekorert på klientsiden, og hvorvidt de skal "
 "plasseres til venstre eller høyre. Se "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout ."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1196,12 +1196,12 @@ msgstr "Vis en global menylinje for visning av programmenyer"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Denne innstillingen bestemmer hvor programmenyen vil bli vist - i et vindu "
 "eller på et panel med MenuModel-protokollen. Sjekk "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1212,12 +1212,12 @@ msgstr "Vis en global menylinje for visning av vindusmenylinjer"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Denne innstillingen bestemmer hvor vindusmenylinjer vil bli vist - i et "
 "vindu eller på et panel med MenuModel-protokollen. Sjekk "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1270,7 +1270,7 @@ msgstr "Slå på innliming fra X11s primær-utklippstavle"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
 "Hvorvidt GTK+ limer inn fra primær-utklippstavlen, som vanligvis utløses med"
@@ -1506,8 +1506,8 @@ msgstr "Velg farger fra paletten på skjermen"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!

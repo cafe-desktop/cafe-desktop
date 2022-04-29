@@ -51,10 +51,10 @@
   * Translations update
   * Move remaining peripheral schemas to cafe-settings-daemon
   * schema: Move mouse schemas to cafe-settings-daemon
-  * Replace deprecated gtk_css_provider_get_default
+  * Replace deprecated ctk_css_provider_get_default
   * cafe-bg-crossfade: replace tabs with spaces
   * make 'rsvg-convert' optional
-  * cafe-colorsel: avoid deprecated 'gtk_hscale_new'
+  * cafe-colorsel: avoid deprecated 'ctk_hscale_new'
   * gettext needs .gmo files to install .mo locale
   * Remove trailing whitespaces
   * CI: fix make distcheck to remove .gmo files
@@ -104,7 +104,7 @@
 
   * Translations update
   * Fixed make distcheck fail on debian.
-  * cafe-colorsel: avoid deprecated 'gtk_widget_modify_bg'
+  * cafe-colorsel: avoid deprecated 'ctk_widget_modify_bg'
   * Initialize travis support
   * [cafe-rr] Avoid deprecated g_type_class_add_private
   * Avoid deprecated g_type_class_add_private
@@ -146,7 +146,7 @@
   * Add gsettings for window scaling factor
   * drop additional checks for min GLib version
   * building: bump required glib version to 2.50.0
-  * remove < gtk+-3.22 bits and bump required gtk+ version
+  * remove < ctk+-3.22 bits and bump required ctk+ version
 
 ### cafe-desktop 1.19.3
 
@@ -165,14 +165,14 @@
   * drop CafeAboutDialog
   * cafe-about: remove remains of libunique references
   * cafe-about: switch to GtkAboutDialog
-  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * ctk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
 
 ### cafe-desktop 1.19.0
 
   * Translations update
   * avoid deprecated gdk_screen_get_width/height
-  * cafe-desktop-item: cafe-about: avoid deprecated gtk_show_uri
-  * cafe-about: avoid deprecated gtk_show_uri
+  * cafe-desktop-item: cafe-about: avoid deprecated ctk_show_uri
+  * cafe-about: avoid deprecated ctk_show_uri
   * avoid deprecated gdk_screen_get_n_monitors
   * avoid deprecated gdk_screen_make_display_name
   * avoid deprecated gdk_screen_get_number
@@ -186,7 +186,7 @@
 
   * NEWS: use consistent, project wide, markdown-like formatting to make
     generating release announcements easier
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-gtk
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-ctk
     build option
   * Drop mpaste tool (won't work without the website anyway)
   * Background: fix crossfade issues with recent GTK+ versions

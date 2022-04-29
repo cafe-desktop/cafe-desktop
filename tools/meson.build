@@ -3,7 +3,7 @@ executable('cafe-color-select',
   c_args: [
     '-DLOCALE_DIR="@0@"'.format(join_paths(get_option('prefix'), get_option('localedir'))),
   ],
-  dependencies: [ gtk_dep, libcafe_desktop_dep, ],
+  dependencies: [ ctk_dep, libcafe_desktop_dep, ],
   include_directories: top_inc,
   install: true,
 )

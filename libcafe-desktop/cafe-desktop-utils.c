@@ -29,7 +29,7 @@
 #include <gio/gio.h>
 #include <glib/gi18n-lib.h>
 #include <gdk/gdk.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
 #include <cafe-desktop-utils.h>
@@ -37,7 +37,7 @@
 #include "private.h"
 
 static void
-gtk_style_shade (GdkRGBA *a,
+ctk_style_shade (GdkRGBA *a,
                  GdkRGBA *b,
                  gdouble  k);
 
@@ -231,17 +231,17 @@ _cafe_desktop_init_i18n (void) {
 }
 
 /**
- * gtk_style_shade:
+ * ctk_style_shade:
  * @a:  the starting colour
  * @b:  [out] the resulting colour
  * @k:  amount to scale lightness and saturation by
  *
  * Takes a colour "a", scales the lightness and saturation by a certain amount,
  * and sets "b" to the resulting colour.
- * gtkstyle.c cut-and-pastage.
+ * ctkstyle.c cut-and-pastage.
  */
 static void
-gtk_style_shade (GdkRGBA *a,
+ctk_style_shade (GdkRGBA *a,
                  GdkRGBA *b,
                  gdouble  k)
 {
@@ -440,23 +440,23 @@ hls_to_rgb (gdouble *h,
 	}
 }
 
-/* Based on set_color() in gtkstyle.c */
+/* Based on set_color() in ctkstyle.c */
 #define LIGHTNESS_MULT 1.3
 #define DARKNESS_MULT  0.7
 void
-cafe_desktop_gtk_style_get_light_color (GtkStyleContext *style,
+cafe_desktop_ctk_style_get_light_color (GtkStyleContext *style,
                                         GtkStateFlags    state,
                                         GdkRGBA         *color)
 {
-	gtk_style_context_get_background_color (style, state, color);
-	gtk_style_shade (color, color, LIGHTNESS_MULT);
+	ctk_style_context_get_background_color (style, state, color);
+	ctk_style_shade (color, color, LIGHTNESS_MULT);
 }
 
 void
-cafe_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
+cafe_desktop_ctk_style_get_dark_color (GtkStyleContext *style,
                                        GtkStateFlags    state,
                                        GdkRGBA         *color)
 {
-	gtk_style_context_get_background_color (style, state, color);
-	gtk_style_shade (color, color, DARKNESS_MULT);
+	ctk_style_context_get_background_color (style, state, color);
+	ctk_style_shade (color, color, DARKNESS_MULT);
 }

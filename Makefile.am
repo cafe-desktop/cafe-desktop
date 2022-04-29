@@ -7,7 +7,7 @@ endif
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = \
-	--enable-gtk-doc \
+	--enable-ctk-doc \
 	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'
 
@@ -33,8 +33,8 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/build-aux/missing \
 	$(srcdir)/config.h.in \
 	$(srcdir)/configure \
-	$(srcdir)/gtk-doc.make \
-	$(srcdir)/m4/gtk-doc.m4 \
+	$(srcdir)/ctk-doc.make \
+	$(srcdir)/m4/ctk-doc.m4 \
 	$(srcdir)/m4/intltool.m4 \
 	$(srcdir)/m4/libtool.m4 \
 	$(srcdir)/m4/lt~obsolete.m4 \

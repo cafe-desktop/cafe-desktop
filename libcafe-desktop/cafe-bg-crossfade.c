@@ -29,7 +29,7 @@
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <cairo.h>
 #include <cairo-xlib.h>
@@ -272,13 +272,13 @@ tile_surface (cairo_surface_t *surface,
         GdkRGBA bg;
 
         if (provider == NULL)
-              provider = gtk_css_provider_new ();
+              provider = ctk_css_provider_new ();
 
-        context = gtk_style_context_new ();
-        gtk_style_context_add_provider (context,
+        context = ctk_style_context_new ();
+        ctk_style_context_add_provider (context,
                                         GTK_STYLE_PROVIDER (provider),
                                         GTK_STYLE_PROVIDER_PRIORITY_THEME);
-        gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
+        ctk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
         gdk_cairo_set_source_rgba(cr, &bg);
         g_object_unref (G_OBJECT (context));
     }
@@ -397,9 +397,9 @@ animations_are_disabled (CafeBGCrossfade *fade)
 
     screen = gdk_window_get_screen(fade->priv->window);
 
-    settings = gtk_settings_get_for_screen (screen);
+    settings = ctk_settings_get_for_screen (screen);
 
-    g_object_get (settings, "gtk-enable-animations", &are_enabled, NULL);
+    g_object_get (settings, "ctk-enable-animations", &are_enabled, NULL);
 
     return !are_enabled;
 }
@@ -422,7 +422,7 @@ static void
 draw_background (CafeBGCrossfade *fade)
 {
     if (fade->priv->widget != NULL) {
-        gtk_widget_queue_draw (fade->priv->widget);
+        ctk_widget_queue_draw (fade->priv->widget);
     } else if (gdk_window_get_window_type (fade->priv->window) != GDK_WINDOW_ROOT) {
         cairo_t           *cr;
         cairo_region_t    *region;
@@ -720,8 +720,8 @@ cafe_bg_crossfade_start_widget (CafeBGCrossfade *fade,
     g_return_if_fail (widget != NULL);
 
     fade->priv->widget = widget;
-    gtk_widget_realize (fade->priv->widget);
-    window = gtk_widget_get_window (fade->priv->widget);
+    ctk_widget_realize (fade->priv->widget);
+    window = ctk_widget_get_window (fade->priv->widget);
 
     cafe_bg_crossfade_start (fade, window);
 }

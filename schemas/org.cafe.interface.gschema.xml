@@ -60,52 +60,52 @@
       <summary>Icon Theme</summary>
       <description>Icon theme to use for the panel, Caja etc.</description>
     </key>
-    <key name="gtk-theme" type="s">
+    <key name="ctk-theme" type="s">
       <default>'Menta'</default>
       <summary>Gtk+ Theme</summary>
-      <description>Basename of the default theme used by gtk+.</description>
+      <description>Basename of the default theme used by ctk+.</description>
     </key>
-    <key name="gtk-key-theme" type="s">
+    <key name="ctk-key-theme" type="s">
       <default>'Default'</default>
       <summary>Gtk+ Theme</summary>
-      <description>Basename of the default theme used by gtk+.</description>
+      <description>Basename of the default theme used by ctk+.</description>
     </key>
-    <key name="gtk-color-scheme" type="s">
+    <key name="ctk-color-scheme" type="s">
       <default>''</default>
       <summary>List of symbolic names and color equivalents</summary>
-      <description>A '\n' separated list of "name:color" as defined by the 'gtk-color-scheme' setting</description>
+      <description>A '\n' separated list of "name:color" as defined by the 'ctk-color-scheme' setting</description>
     </key>
     <key name="font-name" type="s">
       <default>'Sans 10'</default>
       <summary>Default font</summary>
-      <description>Name of the default font used by gtk+.</description>
+      <description>Name of the default font used by ctk+.</description>
     </key>
-    <key name="gtk-im-preedit-style" type="s">
+    <key name="ctk-im-preedit-style" type="s">
       <default>'callback'</default>
       <summary>GTK IM Preedit Style</summary>
-      <description>Name of the GTK+ input method Preedit Style used by gtk+.</description>
+      <description>Name of the GTK+ input method Preedit Style used by ctk+.</description>
     </key>
-    <key name="gtk-im-status-style" type="s">
+    <key name="ctk-im-status-style" type="s">
       <default>'callback'</default>
       <summary>GTK IM Status Style</summary>
-      <description>Name of the GTK+ input method Status Style used by gtk+.</description>
+      <description>Name of the GTK+ input method Status Style used by ctk+.</description>
     </key>
-    <key name="gtk-im-module" type="s">
+    <key name="ctk-im-module" type="s">
       <default>''</default>
       <summary>GTK IM Module</summary>
       <description>Name of the input method module used by GTK+.</description>
     </key>
-    <key name="gtk-dialogs-use-header" type="b">
+    <key name="ctk-dialogs-use-header" type="b">
       <default>false</default>
       <summary>Use GTK3 header bar</summary>
       <description>Whether builtin GTK+ dialogs such as the file chooser, the color chooser or the font chooser will use a header bar at the top to show action widgets, or an action area at the bottom. This setting does not affect custom dialogs using GtkDialog directly, or message dialogs.</description>
     </key>
-    <key name="gtk-overlay-scrolling" type="b">
+    <key name="ctk-overlay-scrolling" type="b">
       <default>false</default>
       <summary>Use GTK3 overlay scrolling</summary>
       <description>Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay scrolling hides and reduces the size of the scrollbar until it gets focus.</description>
     </key>
-    <key name="gtk-enable-animations" type="b">
+    <key name="ctk-enable-animations" type="b">
       <default>true</default>
       <summary>Enable Gtk toolkit-wide animations</summary>
       <description>Whether to enable toolkit-wide animations.</description>
@@ -123,7 +123,7 @@
     <key name="use-custom-font" type="b">
       <default>false</default>
       <summary>Use Custom Font</summary>
-      <description>Whether to use a custom font in gtk+ applications.</description>
+      <description>Whether to use a custom font in ctk+ applications.</description>
     </key>
     <key name="status-bar-meter-on-right" type="b">
       <default>false</default>
@@ -133,7 +133,7 @@
     <key name="file-chooser-backend" type="s">
       <default>'gio'</default>
       <summary>Module for GtkFileChooser</summary>
-      <description>Module to use as the filesystem model for the GtkFileChooser widget.  Possible values are "gio" and "gtk+".</description>
+      <description>Module to use as the filesystem model for the GtkFileChooser widget.  Possible values are "gio" and "ctk+".</description>
     </key>
     <key name="menubar-accel" type="s">
       <default>'F10'</default>
@@ -150,20 +150,20 @@
       <summary>Show the 'Unicode Control Character' menu</summary>
       <description>Whether the context menus of entries and text views  should offer to insert control characters.</description>
     </key>
-    <key name="gtk-decoration-layout" type="s">
+    <key name="ctk-decoration-layout" type="s">
       <default>'menu:minimize,maximize,close'</default>
       <summary>Titlebar layout of GTK3 client-side decorated windows</summary>
-      <description>This setting determines which buttons should be put in the titlebar of client-side decorated windows, and whether they should be placed at the left of right. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout.</description>
+      <description>This setting determines which buttons should be put in the titlebar of client-side decorated windows, and whether they should be placed at the left of right. See https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-decoration-layout.</description>
     </key>
-    <key name="gtk-shell-shows-app-menu" type="b">
+    <key name="ctk-shell-shows-app-menu" type="b">
       <default>false</default>
       <summary>Use a global menubar for displaying application menus</summary>
-      <description> This setting determines where application menu will be displayed - in a window or on a panel with MenuModel protocol. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu.</description>
+      <description> This setting determines where application menu will be displayed - in a window or on a panel with MenuModel protocol. See https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-shell-shows-app-menu.</description>
     </key>
-    <key name="gtk-shell-shows-menubar" type="b">
+    <key name="ctk-shell-shows-menubar" type="b">
       <default>false</default>
       <summary>Use a global menubar for displaying window menubars</summary>
-      <description> This setting determines where window menubars will be displayed - in a window or on a panel with MenuModel protocol. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar.</description>
+      <description> This setting determines where window menubars will be displayed - in a window or on a panel with MenuModel protocol. See https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-shell-shows-menubar.</description>
     </key>
     <key name="automatic-mnemonics" type="b">
       <default>true</default>
@@ -181,11 +181,11 @@
       <summary>Scaling Factor for QT appllications</summary>
       <description>This setting determines whether CAFE controls the scale factor for QT applications. Enable to synchronize with the GTK scale factor when initializing the session, disable to control this value elsewhere. Requires restarting your session.</description>
     </key>
-    <key name="gtk-enable-primary-paste" type="b">
+    <key name="ctk-enable-primary-paste" type="b">
       <default>true</default>
       <summary>Enable the primary paste selection</summary>
       <description>
-        If true, gtk+ uses the primary paste selection, usually triggered by a middle mouse button click.
+        If true, ctk+ uses the primary paste selection, usually triggered by a middle mouse button click.
       </description>
     </key>
   </schema>

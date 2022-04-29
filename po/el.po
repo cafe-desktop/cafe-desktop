@@ -329,8 +329,8 @@ msgid "The color you've chosen."
 msgstr "Το χρώμα που επιλέξατε."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1031,8 +1031,8 @@ msgstr "Θέμα Gtk+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "Όνομα βάσης του εξ ορισμού θέματος που χρησιμοποιείται από το gtk+."
+msgid "Basename of the default theme used by ctk+."
+msgstr "Όνομα βάσης του εξ ορισμού θέματος που χρησιμοποιείται από το ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1040,39 +1040,39 @@ msgstr "Λίστα με συμβολικά ονόματα και ισοδύνα�
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 "Μια '\\n' λίστα χωρισμένη σε \"name:color' όπως καθορίστηκε από τη ρύθμιση "
-"'gtk-color-scheme'"
+"'ctk-color-scheme'"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Προεπιλεγμένη γραμματοσειρά"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "Όνομα της προεπιλεγμένης γραμματοσειράς για χρήση από το gtk+."
+msgid "Name of the default font used by ctk+."
+msgstr "Όνομα της προεπιλεγμένης γραμματοσειράς για χρήση από το ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "Στυλ Preedit GTK IM "
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr ""
 "Όνομα της μεθόδου εισαγωγής GTK+ Preedit Style που χρησιμοποιείται από το "
-"gtk+."
+"ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "Στυλ κατάστασης GTK IM "
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr ""
 "Όνομα της μεθόδου εισαγωγής GTK+ Status Style που χρησιμοποείται από το "
-"gtk+."
+"ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1147,9 +1147,9 @@ msgid "Use Custom Font"
 msgstr "Χρήση προσαρμοσμένης γραμματοσειράς"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
+msgid "Whether to use a custom font in ctk+ applications."
 msgstr ""
-"Αν θα χρησιμοποιείται προσαρμοσμένη γραμματοσειρά από τις εφαρμογές gtk+."
+"Αν θα χρησιμοποιείται προσαρμοσμένη γραμματοσειρά από τις εφαρμογές ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1166,10 +1166,10 @@ msgstr "Λειτουργικό στοιχείο για GtkFileChooser"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Άρθρωμα για χρήση ως μοντέλο αρχείου συστήματος για το γραφικό συστατικό "
-"GtkFileChooser . Οι πιθανές τιμές είναι \"gio\" και \"gtk+\"."
+"GtkFileChooser . Οι πιθανές τιμές είναι \"gio\" και \"ctk+\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1212,13 +1212,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Με αυτή την επιλογή διαπιστώνεται ποια κουμπιά θα πρέπει να τοποθετηθούν στη"
 " γραμμή τίτλου, από την πλευρά της διακόσμησης παραθύρων του πελάτη, και εάν"
 " θα πρέπει να τοποθετηθούν αριστερά ή δεξιά. Επισκεφθείτε την ιστοσελίδα: "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1229,12 +1229,12 @@ msgstr "Χρησιμοποιήστε ένα παγκόσμιο μενού για
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Αυτή η ρύθμιση καθορίζει από πού εμφανίζεται το μενού εφαρμογών - σε ένα "
 "παράθυρο ή σε ένα πίνακα με το πρωτόκολλο του MenuModel. Δείτε το "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1246,12 +1246,12 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Αυτή η ρύθμιση καθορίζει το πού θα εμφανίζονται τα μενού παραθύρων - σε ένα "
 "παράθυρο ή σε ένα πλαίσιο με το πρωτόκολλο του MenuModel. Δείτε το "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1296,7 +1296,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
 
@@ -1538,7 +1538,7 @@ msgstr "Επιλογή χρωμάτων από παλέτα ή την οθόνη
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
+msgid "ctk-select-color"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or

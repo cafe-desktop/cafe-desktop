@@ -21,13 +21,13 @@
  * Modified by the GTK+ Team and others 1997-2000.  See the AUTHORS
  * file for a list of people on the GTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
+ * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
  */
 #include "config.h"
 #include "private.h"
 #include <string.h>
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib/gi18n-lib.h>
 #include "cafe-colorsel.h"
 #include "cafe-colorseldialog.h"
@@ -130,38 +130,38 @@ cafe_color_selection_dialog_init (CafeColorSelectionDialog *colorseldiag)
 
   _cafe_desktop_init_i18n ();
 
-  gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (dialog)), 2); /* 2 * 5 + 2 = 12 */
-  gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (dialog)), 5);
-  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_action_area (dialog)), 6);
+  ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+  ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (dialog)), 2); /* 2 * 5 + 2 = 12 */
+  ctk_container_set_border_width (GTK_CONTAINER (ctk_dialog_get_action_area (dialog)), 5);
+  ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_action_area (dialog)), 6);
 
   colorseldiag->colorsel = cafe_color_selection_new ();
-  gtk_container_set_border_width (GTK_CONTAINER (colorseldiag->colorsel), 5);
+  ctk_container_set_border_width (GTK_CONTAINER (colorseldiag->colorsel), 5);
   cafe_color_selection_set_has_palette (CAFE_COLOR_SELECTION(colorseldiag->colorsel), FALSE);
   cafe_color_selection_set_has_opacity_control (CAFE_COLOR_SELECTION(colorseldiag->colorsel), FALSE);
-  gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (colorseldiag))), colorseldiag->colorsel);
-  gtk_widget_show (colorseldiag->colorsel);
+  ctk_container_add (GTK_CONTAINER (ctk_dialog_get_content_area (GTK_DIALOG (colorseldiag))), colorseldiag->colorsel);
+  ctk_widget_show (colorseldiag->colorsel);
 
-  colorseldiag->cancel_button = gtk_dialog_add_button (GTK_DIALOG (colorseldiag),
+  colorseldiag->cancel_button = ctk_dialog_add_button (GTK_DIALOG (colorseldiag),
                                                        GTK_STOCK_CANCEL,
                                                        GTK_RESPONSE_CANCEL);
 
-  colorseldiag->ok_button = gtk_dialog_add_button (GTK_DIALOG (colorseldiag),
+  colorseldiag->ok_button = ctk_dialog_add_button (GTK_DIALOG (colorseldiag),
                                                    GTK_STOCK_OK,
                                                    GTK_RESPONSE_OK);
 
-  gtk_widget_grab_default (colorseldiag->ok_button);
+  ctk_widget_grab_default (colorseldiag->ok_button);
 
-  colorseldiag->help_button = gtk_dialog_add_button (GTK_DIALOG (colorseldiag),
+  colorseldiag->help_button = ctk_dialog_add_button (GTK_DIALOG (colorseldiag),
                                                      GTK_STOCK_HELP,
                                                      GTK_RESPONSE_HELP);
 
-  gtk_widget_hide (colorseldiag->help_button);
+  ctk_widget_hide (colorseldiag->help_button);
 
-  gtk_window_set_title (GTK_WINDOW (colorseldiag),
+  ctk_window_set_title (GTK_WINDOW (colorseldiag),
                         _("Color Selection"));
 
-  //_gtk_dialog_set_ignore_separator (dialog, TRUE);
+  //_ctk_dialog_set_ignore_separator (dialog, TRUE);
 }
 
 GtkWidget*
@@ -172,9 +172,9 @@ cafe_color_selection_dialog_new (const gchar *title)
   colorseldiag = g_object_new (CAFE_TYPE_COLOR_SELECTION_DIALOG, NULL);
 
   if (title)
-    gtk_window_set_title (GTK_WINDOW (colorseldiag), title);
+    ctk_window_set_title (GTK_WINDOW (colorseldiag), title);
 
-  gtk_window_set_resizable (GTK_WINDOW (colorseldiag), FALSE);
+  ctk_window_set_resizable (GTK_WINDOW (colorseldiag), FALSE);
 
   return GTK_WIDGET (colorseldiag);
 }

@@ -195,12 +195,12 @@ AC_SUBST(RANDR_PACKAGE)
 
 dnl pkg-config dependency checks
 
-PKG_CHECK_MODULES(CAFE_DESKTOP, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED gtk+-3.0 >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GIO_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE iso-codes)
+PKG_CHECK_MODULES(CAFE_DESKTOP, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED ctk+-3.0 >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GIO_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE iso-codes)
 
 ISO_CODES_PREFIX=$($PKG_CONFIG --variable prefix iso-codes)
 AC_SUBST(ISO_CODES_PREFIX)
 
-PKG_CHECK_MODULES(CAFE_ABOUT, gtk+-3.0 >= $GTK_REQUIRED)
+PKG_CHECK_MODULES(CAFE_ABOUT, ctk+-3.0 >= $GTK_REQUIRED)
 AC_SUBST(CAFE_ABOUT_CFLAGS)
 AC_SUBST(CAFE_ABOUT_LIBS)
 
@@ -233,7 +233,7 @@ AC_SUBST(REBUILD)
 
 AC_SEARCH_LIBS([sqrt], [m])
 
-# check for gtk-doc
+# check for ctk-doc
 GTK_DOC_CHECK([1.4])
 
 dnl ICONS: convert svg to png
@@ -289,5 +289,5 @@ cafe-desktop $VERSION
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
     Build introspection support:  ${found_introspection}
-    Build gtk-doc documentation:  ${enable_gtk_doc}
+    Build ctk-doc documentation:  ${enable_ctk_doc}
 "

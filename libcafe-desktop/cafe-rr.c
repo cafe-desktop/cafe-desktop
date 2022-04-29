@@ -33,7 +33,7 @@
 #include <X11/extensions/Xrandr.h>
 #endif
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkx.h>
 #include <X11/Xatom.h>
 
@@ -595,7 +595,7 @@ screen_on_event (GdkXEvent *xevent,
 
 	    rr_event = (XRRScreenChangeNotifyEvent *) e;
 
-	    dialog = gtk_message_dialog_new (NULL,
+	    dialog = ctk_message_dialog_new (NULL,
 					     0,
 					     GTK_MESSAGE_INFO,
 					     GTK_BUTTONS_CLOSE,
@@ -613,8 +613,8 @@ screen_on_event (GdkXEvent *xevent,
 					     (guint32) priv->info->resources->timestamp,
 					     (guint32) priv->info->resources->configTimestamp);
 	    g_signal_connect (dialog, "response",
-			      G_CALLBACK (gtk_widget_destroy), NULL);
-	    gtk_widget_show (dialog);
+			      G_CALLBACK (ctk_widget_destroy), NULL);
+	    ctk_widget_show (dialog);
 	}
 #endif
     }

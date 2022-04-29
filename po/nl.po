@@ -334,8 +334,8 @@ msgid "The color you've chosen."
 msgstr "De door u gekozen kleur."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1033,8 +1033,8 @@ msgstr "Gtk+ Thema"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "Basisnaam voor standaardthema van gtk+."
+msgid "Basename of the default theme used by ctk+."
+msgstr "Basisnaam voor standaardthema van ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1042,35 +1042,35 @@ msgstr "Lijst van symbolische namen en kleurequivalenten"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 "Een door '\\n' gescheiden lijst van \"naam:kleur\" zoals gedefinieerd door "
-"de instelling in 'gtk-color-scheme'"
+"de instelling in 'ctk-color-scheme'"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Standaardlettertype"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "Naam van het standaardlettertype van gtk+."
+msgid "Name of the default font used by ctk+."
+msgstr "Naam van het standaardlettertype van ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "GTK IM Preedit Style"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "Naam de van GTK+ invoermethode Preedit-stijl van gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgstr "Naam de van GTK+ invoermethode Preedit-stijl van ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "GTK IM Status Stijl"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "Naam de van GTK+ invoermethode Status-stijl van gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
+msgstr "Naam de van GTK+ invoermethode Status-stijl van ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1142,8 +1142,8 @@ msgid "Use Custom Font"
 msgstr "Aangepast lettertype gebruiken"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Of gtk+-toepassingen een aangepast lettertype moeten gebruiken."
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "Of ctk+-toepassingen een aangepast lettertype moeten gebruiken."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1160,10 +1160,10 @@ msgstr "Module voor GtkFileChooser"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Te gebruiken modelmodule voor bestandssysteemweergave voor het "
-"GtkFileChooser-element. Mogelijke waardes zijn ‘gio’, ‘gnome-vfs’ en ‘gtk+’."
+"GtkFileChooser-element. Mogelijke waardes zijn ‘gio’, ‘gnome-vfs’ en ‘ctk+’."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1206,13 +1206,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Deze instelling bepaalt welke knoppen in de titelbalk van client-side "
 "gedecoreerde vensters moeten worden gezet, en of deze links dan wel rechts "
 "moeten worden geplaatst. Zie "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1224,12 +1224,12 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Deze instelling bepaalt waar er een toepassingenmenu wordt getoond - in een "
 "venster of op een paneel met het protocol MenuModel. Zie "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1241,12 +1241,12 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Deze instelling bepaalt waar er venstermenubalken worden getoond - in een "
 "venster of op een paneel met het protocol MenuModel. Zie "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1300,10 +1300,10 @@ msgstr "Primaire plakselectie inschakelen"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Indien waar, dan gebruikt gtk+ de primaire plakselectie, gewoonlijk "
+"Indien waar, dan gebruikt ctk+ de primaire plakselectie, gewoonlijk "
 "opgeroepen door een klik met de middelste muisknop."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
@@ -1545,8 +1545,8 @@ msgstr "Kies kleuren in het palet of op het scherm"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!

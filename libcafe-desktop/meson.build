@@ -47,7 +47,7 @@ sources = files(
 
 deps = [
   x11_dep,
-  gtk_dep,
+  ctk_dep,
   m_dep,
   libmdt_dep,
   dconf_dep,
@@ -103,7 +103,7 @@ pkg.generate(
   filebase: cafedt_api_name,
   subdirs: cafedt_api_name,
   requires: [
-    'gtk+-3.0',
+    'ctk+-3.0',
   ],
   requires_private: 'dconf',
   variables: 'exec_prefix=' + cafedt_libexecdir,

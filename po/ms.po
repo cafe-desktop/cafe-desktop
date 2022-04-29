@@ -316,8 +316,8 @@ msgid "The color you've chosen."
 msgstr "Warna yang anda telah pilih."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1000,8 +1000,8 @@ msgstr "Tema GTK+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "Nama dasar bagi tema lalai digunakan oleh gtk+."
+msgid "Basename of the default theme used by ctk+."
+msgstr "Nama dasar bagi tema lalai digunakan oleh ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1009,10 +1009,10 @@ msgstr "Senarai nama simbolik dan warna setara"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
-"Senarai terpisah '\\n' bagi \"name:color\" ditakrif oleh tetapan 'gtk-color-"
+"Senarai terpisah '\\n' bagi \"name:color\" ditakrif oleh tetapan 'ctk-color-"
 "scheme'"
 
 #: schemas/org.cafe.interface.gschema.xml:80
@@ -1020,24 +1020,24 @@ msgid "Default font"
 msgstr "Font lalai"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "Nama fon lalai digunakan oleh gtk+."
+msgid "Name of the default font used by ctk+."
+msgstr "Nama fon lalai digunakan oleh ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "Gaya Prasunting IM GTK"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "Nama Gaya Prasunting kaedah input GTK+ digunakan oleh gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgstr "Nama Gaya Prasunting kaedah input GTK+ digunakan oleh ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "Gaya Status IM GTK"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "Nama bagi Gaya Status kaedah input GTK+ digunakan oleh gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
+msgstr "Nama bagi Gaya Status kaedah input GTK+ digunakan oleh ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1109,8 +1109,8 @@ msgid "Use Custom Font"
 msgstr "Guna Fon Suai"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Sama ada hendak guna fon suai pada aplikasi gtk+"
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "Sama ada hendak guna fon suai pada aplikasi ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1127,10 +1127,10 @@ msgstr "Modul untuk GtkFileChooser"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Modul yang digunakan sebagai model sistem fail untuk widget GtkFileChooser. "
-"Nilai yang mungkin adalah \"gio\"  dan \"gtk+\"."
+"Nilai yang mungkin adalah \"gio\"  dan \"ctk+\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1173,13 +1173,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Tetapan ini tentukan butang yang manakah seharusnya diletak dalam palang "
 "tajuk tetingkap hiasan sisi-klien, dan sama ada ia seharusnya diletak di "
 "sebelah kiri atau kanan. Sila rujuk "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1190,12 +1190,12 @@ msgstr "Guna palang menu sejagat untuk paparkan menu aplikasi"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Tetapan ini tentukan menu aplikasi yang manakah akan dipaparkan - di dalam "
 "tetingkap atau di atas panel dengan protokol MenuModel. Sila rujuk "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1206,12 +1206,12 @@ msgstr "Guna palang menu sejagat untuk paparkan palang menu tetingkap"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Tetapan ini tentukan palang menu tetingkap yang manakah akan dipaparkan - di"
 " dalam tetingkap atau di atas panel dengan protokol MenuModel. Sila rujuk "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1264,10 +1264,10 @@ msgstr "Benarkan pemilihan tampal utama"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Jika benar, gtk+ menggunakan pemilihan tampal utama, kebiasaannya dipicu "
+"Jika benar, ctk+ menggunakan pemilihan tampal utama, kebiasaannya dipicu "
 "dengan klik butang tengah tetikus."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
@@ -1500,8 +1500,8 @@ msgstr "Pilih warna dari palet atau skrin"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!

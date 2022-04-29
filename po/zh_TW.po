@@ -296,8 +296,8 @@ msgid "The color you've chosen."
 msgstr "您已選取的顏色。"
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -934,8 +934,8 @@ msgstr "Gtk+ 主題"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "gtk+ 預設使用主題的名稱。"
+msgid "Basename of the default theme used by ctk+."
+msgstr "ctk+ 預設使用主題的名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -943,24 +943,24 @@ msgstr "代表名稱與相應顏色的列表"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
-msgstr "一份『\\n』分隔的「名稱：顏色」列表是由『gtk-color-scheme』設定所定義的"
+msgstr "一份『\\n』分隔的「名稱：顏色」列表是由『ctk-color-scheme』設定所定義的"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "預設字型"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "gtk+ 使用的預設字型名稱。"
+msgid "Name of the default font used by ctk+."
+msgstr "ctk+ 使用的預設字型名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "GTK 輸入法預編輯區樣式"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr "GTK+ 輸入法所使用的預編輯區樣式的名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:90
@@ -968,7 +968,7 @@ msgid "GTK IM Status Style"
 msgstr "GTK 輸入法狀態樣式"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr "GTK+ 輸入法所使用的「狀態區域」樣式的名稱。"
 
 #: schemas/org.cafe.interface.gschema.xml:95
@@ -1034,8 +1034,8 @@ msgid "Use Custom Font"
 msgstr "使用自訂字型"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "gtk+ 程式會否使用自訂字型。"
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "ctk+ 程式會否使用自訂字型。"
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1052,8 +1052,8 @@ msgstr "GtkFileChooser 所使用的模組"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
-msgstr "用於 GtkFileChooser 視窗元件做為檔案系統模型的模組。可能的值是「gio」和「gtk+」。"
+"Possible values are \"gio\" and \"ctk+\"."
+msgstr "用於 GtkFileChooser 視窗元件做為檔案系統模型的模組。可能的值是「gio」和「ctk+」。"
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1092,11 +1092,11 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "這個設定決定了哪些按鈕應該要被放置在客戶端的標題列，以及它們應該要被放置在左或右。見 "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout 。"
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1107,11 +1107,11 @@ msgstr "使用全域選單列來顯示應用程式選單"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "這個設定會決定應用程式選單要顯示在哪裡 ── 在視窗中，或是在有 MenuGlobal 協定的面板中。詳細資訊請見 "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu 。"
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1122,11 +1122,11 @@ msgstr "使用全域選單列顯示視窗選單列"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "這個設定會決定視窗選單列要顯示在哪裡 ── 在視窗中，或是在有 MenuModel 協定的面板中。詳細資訊請見 "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar 。"
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1173,9 +1173,9 @@ msgstr "啟用主要貼上選取"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
-msgstr "若設定為 true，gtk+ 會使用主要貼上選取，通常會被滑鼠中鍵點擊觸發。"
+msgstr "若設定為 true，ctk+ 會使用主要貼上選取，通常會被滑鼠中鍵點擊觸發。"
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1388,8 +1388,8 @@ msgstr "從調色板或螢幕上選擇顏色"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
