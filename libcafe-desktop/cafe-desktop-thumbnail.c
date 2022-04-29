@@ -1207,7 +1207,7 @@ make_failed_thumbnail (void)
 {
   GdkPixbuf *pixbuf;
 
-  pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
+  pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
   gdk_pixbuf_fill (pixbuf, 0x00000000);
   return pixbuf;
 }
