@@ -74,7 +74,7 @@ struct _FileSize {
 	char* file;
 };
 
-/* This is the size of the GdkRGB dither matrix, in order to avoid
+/* This is the size of the CdkRGB dither matrix, in order to avoid
  * bad dithering when tiling the gradient
  */
 #define GRADIENT_PIXMAP_TILE_SIZE 128
@@ -91,8 +91,8 @@ struct _CafeBG {
 	char		*filename;
 	CafeBGPlacement	 placement;
 	CafeBGColorType	 color_type;
-	GdkRGBA	 	 primary;
-	GdkRGBA	 	 secondary;
+	CdkRGBA	 	 primary;
+	CdkRGBA	 	 secondary;
 	gboolean	 is_enabled;
 
 	GFileMonitor* file_monitor;
@@ -104,7 +104,7 @@ struct _CafeBG {
 	/* Cached information, only access through cache accessor functions */
 	SlideShow* slideshow;
 	time_t file_mtime;
-	GdkPixbuf* pixbuf_cache;
+	CdkPixbuf* pixbuf_cache;
 	int timeout_id;
 
 	GList* file_cache;
@@ -124,30 +124,30 @@ static guint signals[N_SIGNALS] = {0};
 
 G_DEFINE_TYPE(CafeBG, cafe_bg, G_TYPE_OBJECT)
 
-static cairo_surface_t *make_root_pixmap     (GdkWindow  *window,
+static cairo_surface_t *make_root_pixmap     (CdkWindow  *window,
                                               gint        width,
                                               gint        height);
 
 /* Pixbuf utils */
-static void       pixbuf_average_value (GdkPixbuf  *pixbuf,
-                                        GdkRGBA    *result);
-static GdkPixbuf *pixbuf_scale_to_fit  (GdkPixbuf  *src,
+static void       pixbuf_average_value (CdkPixbuf  *pixbuf,
+                                        CdkRGBA    *result);
+static CdkPixbuf *pixbuf_scale_to_fit  (CdkPixbuf  *src,
 					int         max_width,
 					int         max_height);
-static GdkPixbuf *pixbuf_scale_to_min  (GdkPixbuf  *src,
+static CdkPixbuf *pixbuf_scale_to_min  (CdkPixbuf  *src,
 					int         min_width,
 					int         min_height);
 
-static void       pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
+static void       pixbuf_draw_gradient (CdkPixbuf    *pixbuf,
 					gboolean      horizontal,
-					GdkRGBA     *c1,
-					GdkRGBA     *c2,
-					GdkRectangle *rect);
+					CdkRGBA     *c1,
+					CdkRGBA     *c2,
+					CdkRectangle *rect);
 
-static void       pixbuf_tile          (GdkPixbuf  *src,
-					GdkPixbuf  *dest);
-static void       pixbuf_blend         (GdkPixbuf  *src,
-					GdkPixbuf  *dest,
+static void       pixbuf_tile          (CdkPixbuf  *src,
+					CdkPixbuf  *dest);
+static void       pixbuf_blend         (CdkPixbuf  *src,
+					CdkPixbuf  *dest,
 					int         src_x,
 					int         src_y,
 					int         width,
@@ -157,14 +157,14 @@ static void       pixbuf_blend         (GdkPixbuf  *src,
 					double      alpha);
 
 /* Thumbnail utilities */
-static GdkPixbuf *create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
+static CdkPixbuf *create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 						 const char            *filename);
-static gboolean   get_thumb_annotations (GdkPixbuf             *thumb,
+static gboolean   get_thumb_annotations (CdkPixbuf             *thumb,
 					 int                   *orig_width,
 					 int                   *orig_height);
 
 /* Cache */
-static GdkPixbuf *get_pixbuf_for_size  (CafeBG               *bg,
+static CdkPixbuf *get_pixbuf_for_size  (CafeBG               *bg,
 					gint                  num_monitor,
 					int                   width,
 					int                   height);
@@ -172,9 +172,9 @@ static void       clear_cache          (CafeBG               *bg);
 static gboolean   is_different         (CafeBG               *bg,
 					const char            *filename);
 static time_t     get_mtime            (const char            *filename);
-static GdkPixbuf *create_img_thumbnail (CafeBG               *bg,
+static CdkPixbuf *create_img_thumbnail (CafeBG               *bg,
 					CafeDesktopThumbnailFactory *factory,
-					GdkScreen             *screen,
+					CdkScreen             *screen,
 					int                    dest_width,
 					int                    dest_height,
 					int		       frame_num);
@@ -195,7 +195,7 @@ static FileSize   *find_best_size      (GSList                *sizes,
 
 static void
 color_from_string (const char *string,
-		   GdkRGBA   *colorp)
+		   CdkRGBA   *colorp)
 {
 	/* If all else fails use black */
 	cdk_rgba_parse (colorp, "#000000");
@@ -207,7 +207,7 @@ color_from_string (const char *string,
 }
 
 static char *
-color_to_string (const GdkRGBA *color)
+color_to_string (const CdkRGBA *color)
 {
 	return g_strdup_printf ("#%02x%02x%02x",
 				((guint) (color->red * 65535)) >> 8,
@@ -339,7 +339,7 @@ cafe_bg_load_from_gsettings (CafeBG    *bg,
 	char    *tmp;
 	char    *filename;
 	CafeBGColorType ctype;
-	GdkRGBA c1, c2;
+	CdkRGBA c1, c2;
 	CafeBGPlacement placement;
 
 	g_return_if_fail (CAFE_IS_BG (bg));
@@ -527,8 +527,8 @@ cafe_bg_new (void)
 void
 cafe_bg_set_color (CafeBG *bg,
 		    CafeBGColorType type,
-		    GdkRGBA *primary,
-		    GdkRGBA *secondary)
+		    CdkRGBA *primary,
+		    CdkRGBA *secondary)
 {
 	g_return_if_fail (bg != NULL);
 	g_return_if_fail (primary != NULL);
@@ -570,8 +570,8 @@ cafe_bg_get_placement (CafeBG *bg)
 void
 cafe_bg_get_color (CafeBG		*bg,
 		   CafeBGColorType	*type,
-		   GdkRGBA		*primary,
-		   GdkRGBA		*secondary)
+		   CdkRGBA		*primary,
+		   CdkRGBA		*secondary)
 {
 	g_return_if_fail (bg != NULL);
 
@@ -704,7 +704,7 @@ cache_file_is_valid (const char *filename,
 
 static void
 refresh_cache_file (CafeBG     *bg,
-		    GdkPixbuf  *new_pixbuf,
+		    CdkPixbuf  *new_pixbuf,
 		    gint        num_monitor,
 		    gint        width,
 		    gint        height)
@@ -721,7 +721,7 @@ refresh_cache_file (CafeBG     *bg,
 
 	/* Only refresh scaled file on disk if useful (and don't cache slideshow) */
 	if (!cache_file_is_valid (bg->filename, cache_filename)) {
-		GdkPixbufFormat *format;
+		CdkPixbufFormat *format;
 
 		format = cdk_pixbuf_get_file_info (bg->filename, NULL, NULL);
 
@@ -799,11 +799,11 @@ cafe_bg_set_filename (CafeBG	 *bg,
 
 static void
 draw_color_area (CafeBG       *bg,
-		 GdkPixbuf    *dest,
-		 GdkRectangle *rect)
+		 CdkPixbuf    *dest,
+		 CdkRectangle *rect)
 {
 	guint32 pixel;
-	GdkRectangle extent;
+	CdkRectangle extent;
 
         extent.x = 0;
         extent.y = 0;
@@ -838,9 +838,9 @@ draw_color_area (CafeBG       *bg,
 
 static void
 draw_color (CafeBG    *bg,
-	    GdkPixbuf *dest)
+	    CdkPixbuf *dest)
 {
-	GdkRectangle rect;
+	CdkRectangle rect;
 
 	rect.x = 0;
 	rect.y = 0;
@@ -851,11 +851,11 @@ draw_color (CafeBG    *bg,
 
 static void
 draw_color_each_monitor (CafeBG    *bg,
-			 GdkPixbuf *dest,
-			 GdkScreen *screen)
+			 CdkPixbuf *dest,
+			 CdkScreen *screen)
 {
-	GdkDisplay *display;
-	GdkRectangle rect;
+	CdkDisplay *display;
+	CdkRectangle rect;
 	gint num_monitors;
 	int monitor;
 
@@ -867,15 +867,15 @@ draw_color_each_monitor (CafeBG    *bg,
 	}
 }
 
-static GdkPixbuf *
-pixbuf_clip_to_fit (GdkPixbuf *src,
+static CdkPixbuf *
+pixbuf_clip_to_fit (CdkPixbuf *src,
 		    int        max_width,
 		    int        max_height)
 {
 	int src_width, src_height;
 	int w, h;
 	int src_x, src_y;
-	GdkPixbuf *pixbuf;
+	CdkPixbuf *pixbuf;
 
 	src_width = cdk_pixbuf_get_width (src);
 	src_height = cdk_pixbuf_get_height (src);
@@ -900,14 +900,14 @@ pixbuf_clip_to_fit (GdkPixbuf *src,
 	return pixbuf;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_scaled_pixbuf (CafeBGPlacement  placement,
-		   GdkPixbuf       *pixbuf,
+		   CdkPixbuf       *pixbuf,
 		   int width, int height,
 		   int *x, int *y,
 		   int *w, int *h)
 {
-	GdkPixbuf *new;
+	CdkPixbuf *new;
 
 #if 0
 	g_print ("original_width: %d %d\n",
@@ -951,14 +951,14 @@ get_scaled_pixbuf (CafeBGPlacement  placement,
 static void
 draw_image_area (CafeBG        *bg,
 		 gint           num_monitor,
-		 GdkPixbuf     *pixbuf,
-		 GdkPixbuf     *dest,
-		 GdkRectangle  *area)
+		 CdkPixbuf     *pixbuf,
+		 CdkPixbuf     *dest,
+		 CdkRectangle  *area)
 {
 	int dest_width = area->width;
 	int dest_height = area->height;
 	int x, y, w, h;
-	GdkPixbuf *scaled;
+	CdkPixbuf *scaled;
 
 	if (!pixbuf)
 		return;
@@ -990,10 +990,10 @@ draw_image_area (CafeBG        *bg,
 
 static void
 draw_image_for_thumb (CafeBG     *bg,
-		      GdkPixbuf  *pixbuf,
-		      GdkPixbuf  *dest)
+		      CdkPixbuf  *pixbuf,
+		      CdkPixbuf  *dest)
 {
-	GdkRectangle rect;
+	CdkRectangle rect;
 
 	rect.x = 0;
 	rect.y = 0;
@@ -1005,11 +1005,11 @@ draw_image_for_thumb (CafeBG     *bg,
 
 static void
 draw_once (CafeBG    *bg,
-	   GdkPixbuf *dest,
+	   CdkPixbuf *dest,
 	   gboolean   is_root)
 {
-	GdkRectangle rect;
-	GdkPixbuf   *pixbuf;
+	CdkRectangle rect;
+	CdkPixbuf   *pixbuf;
 	gint         monitor;
 
 	/* whether we're drawing on root window or normal (Caja) window */
@@ -1030,18 +1030,18 @@ draw_once (CafeBG    *bg,
 
 static void
 draw_each_monitor (CafeBG    *bg,
-		   GdkPixbuf *dest,
-		   GdkScreen *screen)
+		   CdkPixbuf *dest,
+		   CdkScreen *screen)
 {
-	GdkDisplay *display;
+	CdkDisplay *display;
 
 	display = cdk_screen_get_display (screen);
 	gint num_monitors = cdk_display_get_n_monitors (display);
 	gint monitor = 0;
 
 	for (; monitor < num_monitors; monitor++) {
-		GdkRectangle rect;
-		GdkPixbuf *pixbuf;
+		CdkRectangle rect;
+		CdkPixbuf *pixbuf;
 
 		cdk_monitor_get_geometry (cdk_display_get_monitor (display, monitor), &rect);
 
@@ -1056,8 +1056,8 @@ draw_each_monitor (CafeBG    *bg,
 
 void
 cafe_bg_draw (CafeBG     *bg,
-	       GdkPixbuf *dest,
-	       GdkScreen *screen,
+	       CdkPixbuf *dest,
+	       CdkScreen *screen,
 	       gboolean   is_root)
 {
 	if (!bg)
@@ -1143,7 +1143,7 @@ cafe_bg_get_pixmap_size (CafeBG   *bg,
  **/
 cairo_surface_t *
 cafe_bg_create_surface (CafeBG      *bg,
-		 	GdkWindow   *window,
+		 	CdkWindow   *window,
 			int	     width,
 			int	     height,
 			gboolean     root)
@@ -1172,7 +1172,7 @@ cafe_bg_create_surface (CafeBG      *bg,
  **/
 cairo_surface_t *
 cafe_bg_create_surface_scale (CafeBG      *bg,
-			      GdkWindow   *window,
+			      CdkWindow   *window,
 			      int          width,
 			      int          height,
 			      int          scale,
@@ -1214,7 +1214,7 @@ cafe_bg_create_surface_scale (CafeBG      *bg,
 	}
 	else
 	{
-		GdkPixbuf *pixbuf;
+		CdkPixbuf *pixbuf;
 
 		pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
 					 width, height);
@@ -1239,9 +1239,9 @@ cafe_bg_is_dark (CafeBG *bg,
 		  int      width,
 		  int      height)
 {
-	GdkRGBA color;
+	CdkRGBA color;
 	int intensity;
-	GdkPixbuf *pixbuf;
+	CdkPixbuf *pixbuf;
 
 	g_return_val_if_fail (bg != NULL, FALSE);
 
@@ -1254,7 +1254,7 @@ cafe_bg_is_dark (CafeBG *bg,
 	}
 	pixbuf = get_pixbuf_for_size (bg, -1, width, height);
 	if (pixbuf) {
-		GdkRGBA argb;
+		CdkRGBA argb;
 		guchar a, r, g, b;
 
 		pixbuf_average_value (pixbuf, &argb);
@@ -1281,9 +1281,9 @@ cafe_bg_is_dark (CafeBG *bg,
  * and set the closedown mode on it to RetainPermanent.
  */
 static cairo_surface_t *
-make_root_pixmap (GdkWindow *window, gint width, gint height)
+make_root_pixmap (CdkWindow *window, gint width, gint height)
 {
-	GdkScreen *screen = cdk_window_get_screen(window);
+	CdkScreen *screen = cdk_window_get_screen(window);
 	char *disp_name = DisplayString (GDK_WINDOW_XDISPLAY (window));
 	Display *display;
 	Pixmap xpixmap;
@@ -1359,7 +1359,7 @@ cafe_bg_get_image_size (CafeBG	       *bg,
 			 int		       *width,
 			 int		       *height)
 {
-	GdkPixbuf *thumb;
+	CdkPixbuf *thumb;
 	gboolean result = FALSE;
 	const gchar *filename;
 
@@ -1396,16 +1396,16 @@ fit_factor (int from_width, int from_height,
 /**
  * cafe_bg_create_thumbnail:
  *
- * Returns: (transfer full): a #GdkPixbuf showing the background as a thumbnail
+ * Returns: (transfer full): a #CdkPixbuf showing the background as a thumbnail
  */
-GdkPixbuf *
+CdkPixbuf *
 cafe_bg_create_thumbnail (CafeBG               *bg,
 		           CafeDesktopThumbnailFactory *factory,
-			   GdkScreen             *screen,
+			   CdkScreen             *screen,
 			   int                    dest_width,
 			   int                    dest_height)
 {
-	GdkPixbuf *result;
+	CdkPixbuf *result;
 
 	g_return_val_if_fail (bg != NULL, NULL);
 
@@ -1414,7 +1414,7 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
 	draw_color (bg, result);
 
 	if (bg->filename) {
-		GdkPixbuf *thumb;
+		CdkPixbuf *thumb;
 
 		thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, -1);
 
@@ -1429,7 +1429,7 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
 
 /**
  * cafe_bg_get_surface_from_root:
- * @screen: a #GdkScreen
+ * @screen: a #CdkScreen
  *
  * This function queries the _XROOTPMAP_ID property from
  * the root window associated with @screen to determine
@@ -1440,7 +1440,7 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
  * Return value: a #cairo_surface_t if successful or %NULL
  **/
 cairo_surface_t *
-cafe_bg_get_surface_from_root (GdkScreen *screen)
+cafe_bg_get_surface_from_root (CdkScreen *screen)
 {
 	int result;
 	gint format;
@@ -1473,7 +1473,7 @@ cafe_bg_get_surface_from_root (GdkScreen *screen)
 	}
 
 	if (data != NULL) {
-		GdkDisplay *cdkdisplay;
+		CdkDisplay *cdkdisplay;
 
 		cdkdisplay = cdk_screen_get_display (screen);
 		cdk_x11_display_error_trap_push (cdkdisplay);
@@ -1537,7 +1537,7 @@ cafe_bg_get_surface_from_root (GdkScreen *screen)
 /* Sets the "ESETROOT_PMAP_ID" property to later be used to free the pixmap,
  */
 static void
-cafe_bg_set_root_pixmap_id (GdkScreen       *screen,
+cafe_bg_set_root_pixmap_id (CdkScreen       *screen,
 			    Display         *display,
 			    Pixmap           xpixmap)
 {
@@ -1572,7 +1572,7 @@ cafe_bg_set_root_pixmap_id (GdkScreen       *screen,
 
 			if (data_esetroot != NULL && result == Success &&
 			    type == XA_PIXMAP && format == 32 && nitems == 1) {
-				GdkDisplay *cdkdisplay;
+				CdkDisplay *cdkdisplay;
 
 				Pixmap xrootpmap = *((Pixmap *) data_root);
 				Pixmap esetrootpmap = *((Pixmap *) data_esetroot);
@@ -1615,7 +1615,7 @@ cafe_bg_set_root_pixmap_id (GdkScreen       *screen,
 
 /**
  * cafe_bg_set_surface_as_root:
- * @screen: the #GdkScreen to change root background on
+ * @screen: the #CdkScreen to change root background on
  * @surface: the #cairo_surface_t to set root background from.
  *   Must be an xlib surface backing a pixmap.
  *
@@ -1627,7 +1627,7 @@ cafe_bg_set_root_pixmap_id (GdkScreen       *screen,
  * to cafe_bg_create_surface().
  **/
 void
-cafe_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
+cafe_bg_set_surface_as_root (CdkScreen *screen, cairo_surface_t *surface)
 {
 	g_return_if_fail (screen != NULL);
 	g_return_if_fail (cairo_surface_get_type (surface) == CAIRO_SURFACE_TYPE_XLIB);
@@ -1651,7 +1651,7 @@ cafe_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
 
 /**
  * cafe_bg_set_surface_as_root_with_crossfade:
- * @screen: the #GdkScreen to change root background on
+ * @screen: the #CdkScreen to change root background on
  * @surface: the cairo xlib surface to set root background from
  *
  * Set the root pixmap, and properties pointing to it.
@@ -1662,10 +1662,10 @@ cafe_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
  * Return value: (transfer full): a #CafeBGCrossfade object
  **/
 CafeBGCrossfade *
-cafe_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
+cafe_bg_set_surface_as_root_with_crossfade (CdkScreen       *screen,
 		 			    cairo_surface_t *surface)
 {
-	GdkWindow       *root_window;
+	CdkWindow       *root_window;
 	int              width, height;
 	CafeBGCrossfade *fade;
 	cairo_t         *cr;
@@ -1776,13 +1776,13 @@ get_current_slide (SlideShow *show,
 	return NULL;
 }
 
-static GdkPixbuf *
-blend (GdkPixbuf *p1,
-       GdkPixbuf *p2,
+static CdkPixbuf *
+blend (CdkPixbuf *p1,
+       CdkPixbuf *p2,
        double alpha)
 {
-	GdkPixbuf *result = cdk_pixbuf_copy (p1);
-	GdkPixbuf *tmp;
+	CdkPixbuf *result = cdk_pixbuf_copy (p1);
+	CdkPixbuf *tmp;
 
 	if (cdk_pixbuf_get_width (p2) != cdk_pixbuf_get_width (p1) ||
             cdk_pixbuf_get_height (p2) != cdk_pixbuf_get_height (p1)) {
@@ -1813,9 +1813,9 @@ struct FileCacheEntry
 	FileType type;
 	char *filename;
 	union {
-		GdkPixbuf *pixbuf;
+		CdkPixbuf *pixbuf;
 		SlideShow *slideshow;
-		GdkPixbuf *thumbnail;
+		CdkPixbuf *thumbnail;
 	} u;
 };
 
@@ -1891,7 +1891,7 @@ file_cache_entry_new (CafeBG *bg,
 static void
 file_cache_add_pixbuf (CafeBG *bg,
 		       const char *filename,
-		       GdkPixbuf *pixbuf)
+		       CdkPixbuf *pixbuf)
 {
 	FileCacheEntry *ent = file_cache_entry_new (bg, PIXBUF, filename);
 	ent->u.pixbuf = g_object_ref (pixbuf);
@@ -1900,7 +1900,7 @@ file_cache_add_pixbuf (CafeBG *bg,
 static void
 file_cache_add_thumbnail (CafeBG *bg,
 			  const char *filename,
-			  GdkPixbuf *pixbuf)
+			  CdkPixbuf *pixbuf)
 {
 	FileCacheEntry *ent = file_cache_entry_new (bg, THUMBNAIL, filename);
 	ent->u.thumbnail = g_object_ref (pixbuf);
@@ -1915,14 +1915,14 @@ file_cache_add_slide_show (CafeBG *bg,
 	ent->u.slideshow = slideshow_ref (show);
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 load_from_cache_file (CafeBG     *bg,
 		      const char *filename,
 		      gint        num_monitor,
 		      gint        best_width,
 		      gint        best_height)
 {
-	GdkPixbuf *pixbuf = NULL;
+	CdkPixbuf *pixbuf = NULL;
 	gchar *cache_filename;
 
 	cache_filename = get_wallpaper_cache_filename (filename, num_monitor, bg->placement,
@@ -1936,7 +1936,7 @@ load_from_cache_file (CafeBG     *bg,
 	return pixbuf;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_as_pixbuf_for_size (CafeBG    *bg,
 			const char *filename,
 			gint         monitor,
@@ -1947,9 +1947,9 @@ get_as_pixbuf_for_size (CafeBG    *bg,
 	if ((ent = file_cache_lookup (bg, PIXBUF, filename))) {
 		return g_object_ref (ent->u.pixbuf);
 	} else {
-		GdkPixbuf *pixbuf = NULL;
+		CdkPixbuf *pixbuf = NULL;
 		gchar *tmp = NULL;
-		GdkPixbuf *tmp_pixbuf;
+		CdkPixbuf *tmp_pixbuf;
 
 		/* Try to hit local cache first if relevant */
 		if (monitor != -1)
@@ -1957,7 +1957,7 @@ get_as_pixbuf_for_size (CafeBG    *bg,
 							best_width, best_height);
 
 		if (!pixbuf) {
-			GdkPixbufFormat *format;
+			CdkPixbufFormat *format;
 
 			/* If scalable choose maximum size */
 			format = cdk_pixbuf_get_file_info (filename, NULL, NULL);
@@ -2009,7 +2009,7 @@ get_as_slideshow (CafeBG *bg, const char *filename)
 	}
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_as_thumbnail (CafeBG *bg, CafeDesktopThumbnailFactory *factory, const char *filename)
 {
 	const FileCacheEntry *ent;
@@ -2017,7 +2017,7 @@ get_as_thumbnail (CafeBG *bg, CafeDesktopThumbnailFactory *factory, const char *
 		return g_object_ref (ent->u.thumbnail);
 	}
 	else {
-		GdkPixbuf *thumb = create_thumbnail_for_filename (factory, filename);
+		CdkPixbuf *thumb = create_thumbnail_for_filename (factory, filename);
 
 		if (thumb)
 			file_cache_add_thumbnail (bg, filename, thumb);
@@ -2143,11 +2143,11 @@ get_mtime (const char *filename)
 	return mtime;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 scale_thumbnail (CafeBGPlacement placement,
 		 const char *filename,
-		 GdkPixbuf *thumb,
-		 GdkScreen *screen,
+		 CdkPixbuf *thumb,
+		 CdkScreen *screen,
 		 int	    dest_width,
 		 int	    dest_height)
 {
@@ -2208,21 +2208,21 @@ scale_thumbnail (CafeBGPlacement placement,
 /* frame_num determines which slide to thumbnail.
  * -1 means 'current slide'.
  */
-static GdkPixbuf *
+static CdkPixbuf *
 create_img_thumbnail (CafeBG                      *bg,
 		      CafeDesktopThumbnailFactory *factory,
-		      GdkScreen                    *screen,
+		      CdkScreen                    *screen,
 		      int                           dest_width,
 		      int                           dest_height,
 		      int                           frame_num)
 {
 	if (bg->filename) {
-		GdkPixbuf *thumb;
+		CdkPixbuf *thumb;
 
 		thumb = get_as_thumbnail (bg, factory, bg->filename);
 
 		if (thumb) {
-			GdkPixbuf *result;
+			CdkPixbuf *result;
 			result = scale_thumbnail (bg->placement,
 						  bg->filename,
 						  thumb,
@@ -2245,7 +2245,7 @@ create_img_thumbnail (CafeBG                      *bg,
 					slide = g_queue_peek_nth (show->slides, frame_num);
 
 				if (slide->fixed) {
-					GdkPixbuf *tmp;
+					CdkPixbuf *tmp;
 					FileSize *fs;
 					fs = find_best_size (slide->file1, dest_width, dest_height);
 					tmp = get_as_thumbnail (bg, factory, fs->file);
@@ -2261,7 +2261,7 @@ create_img_thumbnail (CafeBG                      *bg,
 				}
 				else {
 					FileSize *fs1, *fs2;
-					GdkPixbuf *p1, *p2;
+					CdkPixbuf *p1, *p2;
 					fs1 = find_best_size (slide->file1, dest_width, dest_height);
 					p1 = get_as_thumbnail (bg, factory, fs1->file);
 
@@ -2269,7 +2269,7 @@ create_img_thumbnail (CafeBG                      *bg,
 					p2 = get_as_thumbnail (bg, factory, fs2->file);
 
 					if (p1 && p2) {
-						GdkPixbuf *thumb1, *thumb2;
+						CdkPixbuf *thumb1, *thumb2;
 
 						thumb1 = scale_thumbnail (bg->placement,
 									  fs1->file,
@@ -2353,7 +2353,7 @@ find_best_size (GSList *sizes, gint width, gint height)
 	return best;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_pixbuf_for_size (CafeBG *bg,
 		     gint monitor,
 		     gint best_width,
@@ -2399,7 +2399,7 @@ get_pixbuf_for_size (CafeBG *bg,
 									best_width, best_height);
 				} else {
 					FileSize *size;
-					GdkPixbuf *p1, *p2;
+					CdkPixbuf *p1, *p2;
 
 					size = find_best_size (slide->file1,
 								best_width, best_height);
@@ -2494,8 +2494,8 @@ clear_cache (CafeBG *bg)
 
 /* Pixbuf utilities */
 static void
-pixbuf_average_value (GdkPixbuf *pixbuf,
-                      GdkRGBA   *result)
+pixbuf_average_value (CdkPixbuf *pixbuf,
+                      CdkRGBA   *result)
 {
 	guint64 a_total, r_total, g_total, b_total;
 	guint row, column;
@@ -2560,8 +2560,8 @@ pixbuf_average_value (GdkPixbuf *pixbuf,
 	result->blue = b_total / dd;
 }
 
-static GdkPixbuf *
-pixbuf_scale_to_fit (GdkPixbuf *src, int max_width, int max_height)
+static CdkPixbuf *
+pixbuf_scale_to_fit (CdkPixbuf *src, int max_width, int max_height)
 {
 	double factor;
 	int src_width, src_height;
@@ -2578,13 +2578,13 @@ pixbuf_scale_to_fit (GdkPixbuf *src, int max_width, int max_height)
 	return cdk_pixbuf_scale_simple (src, new_width, new_height, GDK_INTERP_BILINEAR);
 }
 
-static GdkPixbuf *
-pixbuf_scale_to_min (GdkPixbuf *src, int min_width, int min_height)
+static CdkPixbuf *
+pixbuf_scale_to_min (CdkPixbuf *src, int min_width, int min_height)
 {
 	double factor;
 	int src_width, src_height;
 	int new_width, new_height;
-	GdkPixbuf *dest;
+	CdkPixbuf *dest;
 
 	src_width = cdk_pixbuf_get_width (src);
 	src_height = cdk_pixbuf_get_height (src);
@@ -2613,8 +2613,8 @@ pixbuf_scale_to_min (GdkPixbuf *src, int min_width, int min_height)
 }
 
 static guchar *
-create_gradient (const GdkRGBA *primary,
-		 const GdkRGBA *secondary,
+create_gradient (const CdkRGBA *primary,
+		 const CdkRGBA *secondary,
 		 int	         n_pixels)
 {
 	guchar *result = g_malloc (n_pixels * 3);
@@ -2632,11 +2632,11 @@ create_gradient (const GdkRGBA *primary,
 }
 
 static void
-pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
+pixbuf_draw_gradient (CdkPixbuf    *pixbuf,
 		      gboolean      horizontal,
-		      GdkRGBA      *primary,
-		      GdkRGBA      *secondary,
-		      GdkRectangle *rect)
+		      CdkRGBA      *primary,
+		      CdkRGBA      *secondary,
+		      CdkRectangle *rect)
 {
 	int width;
 	int height;
@@ -2685,8 +2685,8 @@ pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 }
 
 static void
-pixbuf_blend (GdkPixbuf *src,
-	      GdkPixbuf *dest,
+pixbuf_blend (CdkPixbuf *src,
+	      CdkPixbuf *dest,
 	      int	 src_x,
 	      int	 src_y,
 	      int	 src_width,
@@ -2729,7 +2729,7 @@ pixbuf_blend (GdkPixbuf *src,
 }
 
 static void
-pixbuf_tile (GdkPixbuf *src, GdkPixbuf *dest)
+pixbuf_tile (CdkPixbuf *src, CdkPixbuf *dest)
 {
 	int x, y;
 	int tile_width, tile_height;
@@ -3117,13 +3117,13 @@ read_slideshow_file (const char *filename,
 }
 
 /* Thumbnail utilities */
-static GdkPixbuf *
+static CdkPixbuf *
 create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 			       const char            *filename)
 {
 	char *thumb;
 	time_t mtime;
-	GdkPixbuf *result = NULL;
+	CdkPixbuf *result = NULL;
 	char *uri;
 
 	mtime = get_mtime (filename);
@@ -3143,7 +3143,7 @@ create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 		g_free (thumb);
 	}
 	else {
-		GdkPixbuf *orig;
+		CdkPixbuf *orig;
 
 		orig = cdk_pixbuf_new_from_file (filename, NULL);
 		if (orig) {
@@ -3173,7 +3173,7 @@ create_thumbnail_for_filename (CafeDesktopThumbnailFactory *factory,
 }
 
 static gboolean
-get_thumb_annotations (GdkPixbuf *thumb,
+get_thumb_annotations (CdkPixbuf *thumb,
 		       int	 *orig_width,
 		       int	 *orig_height)
 {
@@ -3234,16 +3234,16 @@ cafe_bg_changes_with_time (CafeBG *bg)
  * Returns: (transfer full): the newly created thumbnail or
  * or NULL if frame_num is out of bounds.
  */
-GdkPixbuf *
+CdkPixbuf *
 cafe_bg_create_frame_thumbnail (CafeBG			*bg,
 				 CafeDesktopThumbnailFactory	*factory,
-				 GdkScreen			*screen,
+				 CdkScreen			*screen,
 				 int				 dest_width,
 				 int				 dest_height,
 				 int				 frame_num)
 {
 	SlideShow *show;
-	GdkPixbuf *result;
+	CdkPixbuf *result;
         GList *l;
         int i, skipped;
         gboolean found;
@@ -3283,7 +3283,7 @@ cafe_bg_create_frame_thumbnail (CafeBG			*bg,
 	draw_color (bg, result);
 
 	if (bg->filename) {
-		GdkPixbuf *thumb;
+		CdkPixbuf *thumb;
 
 		thumb = create_img_thumbnail (bg, factory, screen,
 					      dest_width, dest_height,

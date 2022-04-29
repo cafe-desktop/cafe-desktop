@@ -51,7 +51,7 @@ struct _CafeColorButtonPrivate
 
   gchar *title;         /* Title for the color selection window */
 
-  GdkColor color;
+  CdkColor color;
   guint16 alpha;
 
   guint use_alpha : 1;  /* Use alpha or not */
@@ -94,10 +94,10 @@ static void cafe_color_button_clicked       (CtkButton           *button);
 
 /* source side drag signals */
 static void cafe_color_button_drag_begin (CtkWidget        *widget,
-					 GdkDragContext   *context,
+					 CdkDragContext   *context,
 					 gpointer          data);
 static void cafe_color_button_drag_data_get (CtkWidget        *widget,
-                                            GdkDragContext   *context,
+                                            CdkDragContext   *context,
                                             CtkSelectionData *selection_data,
                                             guint             info,
                                             guint             time,
@@ -105,7 +105,7 @@ static void cafe_color_button_drag_data_get (CtkWidget        *widget,
 
 /* target side drag signals */
 static void cafe_color_button_drag_data_received (CtkWidget        *widget,
-						 GdkDragContext   *context,
+						 CdkDragContext   *context,
 						 gint              x,
 						 gint              y,
 						 CtkSelectionData *selection_data,
@@ -311,7 +311,7 @@ cafe_color_button_state_changed (CtkWidget   *widget,
 
 static void
 cafe_color_button_drag_data_received (CtkWidget        *widget,
-				     GdkDragContext   *context,
+				     CdkDragContext   *context,
 				     gint              x,
 				     gint              y,
 				     CtkSelectionData *selection_data,
@@ -352,10 +352,10 @@ cafe_color_button_drag_data_received (CtkWidget        *widget,
 }
 
 static void
-set_color_icon (GdkDragContext *context,
-		GdkColor       *color)
+set_color_icon (CdkDragContext *context,
+		CdkColor       *color)
 {
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
   guint32 pixel;
 
   pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE,
@@ -373,7 +373,7 @@ set_color_icon (GdkDragContext *context,
 
 static void
 cafe_color_button_drag_begin (CtkWidget      *widget,
-			     GdkDragContext *context,
+			     CdkDragContext *context,
 			     gpointer        data)
 {
   CafeColorButton *color_button = data;
@@ -383,7 +383,7 @@ cafe_color_button_drag_begin (CtkWidget      *widget,
 
 static void
 cafe_color_button_drag_data_get (CtkWidget        *widget,
-				GdkDragContext   *context,
+				CdkDragContext   *context,
 				CtkSelectionData *selection_data,
 				guint             info,
 				guint             time,
@@ -500,7 +500,7 @@ cafe_color_button_new (void)
 
 /**
  * cafe_color_button_new_with_color:
- * @color: A #GdkColor to set the current color with.
+ * @color: A #CdkColor to set the current color with.
  *
  * Creates a new color button.
  *
@@ -509,7 +509,7 @@ cafe_color_button_new (void)
  * Since: 1.9.1
  */
 CtkWidget *
-cafe_color_button_new_with_color (const GdkColor *color)
+cafe_color_button_new_with_color (const CdkColor *color)
 {
   return g_object_new (CAFE_TYPE_COLOR_BUTTON, "color", color, NULL);
 }
@@ -616,7 +616,7 @@ cafe_color_button_clicked (CtkButton *button)
 /**
  * cafe_color_button_set_color:
  * @color_button: a #CafeColorButton.
- * @color: A #GdkColor to set the current color with.
+ * @color: A #CdkColor to set the current color with.
  *
  * Sets the current color to be @color.
  *
@@ -624,7 +624,7 @@ cafe_color_button_clicked (CtkButton *button)
  **/
 void
 cafe_color_button_set_color (CafeColorButton *color_button,
-			    const GdkColor *color)
+			    const CdkColor *color)
 {
   g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
   g_return_if_fail (color != NULL);
@@ -641,7 +641,7 @@ cafe_color_button_set_color (CafeColorButton *color_button,
 /**
  * cafe_color_button_set_rgba:
  * @color_button: a #CafeColorButton.
- * @color: A #GdkRGBA to set the current color with.
+ * @color: A #CdkRGBA to set the current color with.
  *
  * Sets the current color to be @color.
  *
@@ -649,7 +649,7 @@ cafe_color_button_set_color (CafeColorButton *color_button,
  **/
 void
 cafe_color_button_set_rgba (CafeColorButton *color_button,
-			    const GdkRGBA *color)
+			    const CdkRGBA *color)
 {
   g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
   g_return_if_fail (color != NULL);
@@ -689,7 +689,7 @@ cafe_color_button_set_alpha (CafeColorButton *color_button,
 /**
  * cafe_color_button_get_color:
  * @color_button: a #CafeColorButton.
- * @color: a #GdkColor to fill in with the current color.
+ * @color: a #CdkColor to fill in with the current color.
  *
  * Sets @color to be the current color in the #CafeColorButton widget.
  *
@@ -697,7 +697,7 @@ cafe_color_button_set_alpha (CafeColorButton *color_button,
  **/
 void
 cafe_color_button_get_color (CafeColorButton *color_button,
-			    GdkColor       *color)
+			    CdkColor       *color)
 {
   g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
 
@@ -709,7 +709,7 @@ cafe_color_button_get_color (CafeColorButton *color_button,
 /**
  * cafe_color_button_get_rgba:
  * @color_button: a #CafeColorButton.
- * @color: a #GdkRGBA to fill in with the current color.
+ * @color: a #CdkRGBA to fill in with the current color.
  *
  * Sets @color to be the current color in the #CafeColorButton widget.
  *
@@ -717,7 +717,7 @@ cafe_color_button_get_color (CafeColorButton *color_button,
  **/
 void
 cafe_color_button_get_rgba (CafeColorButton *color_button,
-			                      GdkRGBA         *color)
+			                      CdkRGBA         *color)
 {
   g_return_if_fail (CAFE_IS_COLOR_BUTTON (color_button));
 
@@ -872,7 +872,7 @@ cafe_color_button_get_property (GObject    *object,
 			       GParamSpec *pspec)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (object);
-  GdkColor color;
+  CdkColor color;
 
   switch (param_id)
     {

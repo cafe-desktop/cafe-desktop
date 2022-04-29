@@ -1288,7 +1288,7 @@ cafe_rr_config_apply_with_time (CafeRRConfig *config,
     CafeRROutputInfo **outputs;
     gboolean result = FALSE;
     int i;
-    GdkDisplay *display;
+    CdkDisplay *display;
 
     g_return_val_if_fail (CAFE_IS_RR_CONFIG (config), FALSE);
     g_return_val_if_fail (CAFE_IS_RR_SCREEN (screen), FALSE);

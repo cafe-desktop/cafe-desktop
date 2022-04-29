@@ -34,9 +34,9 @@
     textdomain(package);
 
 gboolean
-copy_color (CtkWidget *widget, GdkEvent  *event, CafeColorSelectionDialog *color_dialog)
+copy_color (CtkWidget *widget, CdkEvent  *event, CafeColorSelectionDialog *color_dialog)
 {
-    GdkColor color;
+    CdkColor color;
     gchar *color_string;
 
     cafe_color_selection_get_current_color (CAFE_COLOR_SELECTION (color_dialog->colorsel), &color);

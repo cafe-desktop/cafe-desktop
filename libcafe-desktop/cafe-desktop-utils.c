@@ -37,8 +37,8 @@
 #include "private.h"
 
 static void
-ctk_style_shade (GdkRGBA *a,
-                 GdkRGBA *b,
+ctk_style_shade (CdkRGBA *a,
+                 CdkRGBA *b,
                  gdouble  k);
 
 static void
@@ -179,7 +179,7 @@ cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 
 /**
  * cafe_cdk_spawn_command_line_on_screen:
- * @screen: a GdkScreen
+ * @screen: a CdkScreen
  * @command: a command line
  * @error: return location for errors
  *
@@ -188,7 +188,7 @@ cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
  *
  * cdk_spawn_command_line_on_screen is like g_spawn_command_line_async(),
  * except the child process is spawned in such an environment that on
- * calling cdk_display_open() it would be returned a GdkDisplay with
+ * calling cdk_display_open() it would be returned a CdkDisplay with
  * screen as the default screen.
  *
  * This is useful for applications which wish to launch an application
@@ -199,10 +199,10 @@ cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
  * Since: 1.7.1
  **/
 gboolean
-cafe_cdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error)
+cafe_cdk_spawn_command_line_on_screen (CdkScreen *screen, const gchar *command, GError **error)
 {
 	GAppInfo *appinfo = NULL;
-	GdkAppLaunchContext *context = NULL;
+	CdkAppLaunchContext *context = NULL;
 	gboolean res = FALSE;
 
 	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, error);
@@ -241,8 +241,8 @@ _cafe_desktop_init_i18n (void) {
  * ctkstyle.c cut-and-pastage.
  */
 static void
-ctk_style_shade (GdkRGBA *a,
-                 GdkRGBA *b,
+ctk_style_shade (CdkRGBA *a,
+                 CdkRGBA *b,
                  gdouble  k)
 {
 	gdouble red;
@@ -446,7 +446,7 @@ hls_to_rgb (gdouble *h,
 void
 cafe_desktop_ctk_style_get_light_color (CtkStyleContext *style,
                                         CtkStateFlags    state,
-                                        GdkRGBA         *color)
+                                        CdkRGBA         *color)
 {
 	ctk_style_context_get_background_color (style, state, color);
 	ctk_style_shade (color, color, LIGHTNESS_MULT);
@@ -455,7 +455,7 @@ cafe_desktop_ctk_style_get_light_color (CtkStyleContext *style,
 void
 cafe_desktop_ctk_style_get_dark_color (CtkStyleContext *style,
                                        CtkStateFlags    state,
-                                       GdkRGBA         *color)
+                                       CdkRGBA         *color)
 {
 	ctk_style_context_get_background_color (style, state, color);
 	ctk_style_shade (color, color, DARKNESS_MULT);

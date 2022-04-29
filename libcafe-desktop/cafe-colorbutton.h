@@ -78,17 +78,17 @@ struct _CafeColorButtonClass {
 
 GType      cafe_color_button_get_type       (void) G_GNUC_CONST;
 CtkWidget *cafe_color_button_new            (void);
-CtkWidget *cafe_color_button_new_with_color (const GdkColor *color);
+CtkWidget *cafe_color_button_new_with_color (const CdkColor *color);
 void       cafe_color_button_set_color      (CafeColorButton *color_button,
-					    const GdkColor *color);
+					    const CdkColor *color);
 void       cafe_color_button_set_rgba       (CafeColorButton *color_button,
-					     const GdkRGBA   *color);
+					     const CdkRGBA   *color);
 void       cafe_color_button_set_alpha      (CafeColorButton *color_button,
 					    guint16         alpha);
 void       cafe_color_button_get_color      (CafeColorButton *color_button,
-					    GdkColor       *color);
+					    CdkColor       *color);
 void       cafe_color_button_get_rgba       (CafeColorButton *color_button,
-					     GdkRGBA         *color);
+					     CdkRGBA         *color);
 guint16    cafe_color_button_get_alpha      (CafeColorButton *color_button);
 void       cafe_color_button_set_use_alpha  (CafeColorButton *color_button,
 					    gboolean        use_alpha);

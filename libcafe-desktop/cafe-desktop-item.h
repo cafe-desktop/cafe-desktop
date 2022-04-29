@@ -181,7 +181,7 @@ int			cafe_desktop_item_launch_with_env   (const CafeDesktopItem     *item,
 int                     cafe_desktop_item_launch_on_screen  (const CafeDesktopItem       *item,
 							      GList                        *file_list,
 							      CafeDesktopItemLaunchFlags   flags,
-							      GdkScreen                    *screen,
+							      CdkScreen                    *screen,
 							      int                           workspace,
 							      GError                      **error);
 

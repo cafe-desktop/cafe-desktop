@@ -44,10 +44,10 @@ struct _CafeRRLabelerPrivate {
 
 	int num_outputs;
 
-	GdkRGBA *palette;
+	CdkRGBA *palette;
 	CtkWidget **windows;
 
-	GdkScreen  *screen;
+	CdkScreen  *screen;
 	Atom        workarea_atom;
 };
 
@@ -64,7 +64,7 @@ static void create_label_windows (CafeRRLabeler *labeler);
 static void setup_from_config (CafeRRLabeler *labeler);
 
 static int
-get_current_desktop (GdkScreen *screen)
+get_current_desktop (CdkScreen *screen)
 {
         Display *display;
         Window win;
@@ -97,7 +97,7 @@ get_current_desktop (GdkScreen *screen)
 
 static gboolean
 get_work_area (CafeRRLabeler *labeler,
-	       GdkRectangle   *rect)
+	       CdkRectangle   *rect)
 {
 	Atom            workarea;
 	Atom            type;
@@ -162,9 +162,9 @@ get_work_area (CafeRRLabeler *labeler,
 	return TRUE;
 }
 
-static GdkFilterReturn
-screen_xevent_filter (GdkXEvent      *xevent,
-		      GdkEvent       *event,
+static CdkFilterReturn
+screen_xevent_filter (CdkXEvent      *xevent,
+		      CdkEvent       *event,
 		      CafeRRLabeler *labeler)
 {
 	XEvent *xev;
@@ -184,7 +184,7 @@ screen_xevent_filter (GdkXEvent      *xevent,
 static void
 cafe_rr_labeler_init (CafeRRLabeler *labeler)
 {
-	GdkWindow *cdkwindow;
+	CdkWindow *cdkwindow;
 
 	labeler->priv = cafe_rr_labeler_get_instance_private (labeler);
 
@@ -195,7 +195,7 @@ cafe_rr_labeler_init (CafeRRLabeler *labeler)
 	labeler->priv->screen = cdk_screen_get_default ();
 	/* code is not really designed to handle multiple screens so *shrug* */
 	cdkwindow = cdk_screen_get_root_window (labeler->priv->screen);
-	cdk_window_add_filter (cdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
+	cdk_window_add_filter (cdkwindow, (CdkFilterFunc) screen_xevent_filter, labeler);
 	cdk_window_set_events (cdkwindow, cdk_window_get_events (cdkwindow) | GDK_PROPERTY_CHANGE_MASK);
 }
 
@@ -246,12 +246,12 @@ static void
 cafe_rr_labeler_finalize (GObject *object)
 {
 	CafeRRLabeler *labeler;
-	GdkWindow      *cdkwindow;
+	CdkWindow      *cdkwindow;
 
 	labeler = CAFE_RR_LABELER (object);
 
 	cdkwindow = cdk_screen_get_root_window (labeler->priv->screen);
-	cdk_window_remove_filter (cdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
+	cdk_window_remove_filter (cdkwindow, (CdkFilterFunc) screen_xevent_filter, labeler);
 
 	if (labeler->priv->config != NULL) {
 		g_object_unref (labeler->priv->config);
@@ -296,7 +296,7 @@ make_palette (CafeRRLabeler *labeler)
 
 	g_assert (labeler->priv->num_outputs > 0);
 
-	labeler->priv->palette = g_new (GdkRGBA, labeler->priv->num_outputs);
+	labeler->priv->palette = g_new (CdkRGBA, labeler->priv->num_outputs);
 
 	start_hue = 0.0; /* red */
 	end_hue   = 2.0/3; /* blue */
@@ -324,7 +324,7 @@ make_palette (CafeRRLabeler *labeler)
 static gboolean
 label_window_draw_event_cb (CtkWidget *widget, cairo_t *cr, gpointer data)
 {
-	GdkRGBA *color;
+	CdkRGBA *color;
 	CtkAllocation allocation;
 
 	color = g_object_get_data (G_OBJECT (widget), "color");
@@ -359,9 +359,9 @@ position_window (CafeRRLabeler  *labeler,
 		 int              x,
 		 int              y)
 {
-	GdkRectangle    workarea;
-	GdkRectangle    monitor;
-	GdkMonitor     *monitor_num;
+	CdkRectangle    workarea;
+	CdkRectangle    monitor;
+	CdkMonitor     *monitor_num;
 
 	get_work_area (labeler, &workarea);
 	monitor_num = cdk_display_get_monitor_at_point (cdk_screen_get_display (labeler->priv->screen), x, y);
@@ -372,13 +372,13 @@ position_window (CafeRRLabeler  *labeler,
 }
 
 static CtkWidget *
-create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *color)
+create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, CdkRGBA *color)
 {
 	CtkWidget *window;
 	CtkWidget *widget;
 	char *str;
 	char *display_name;
-	GdkRGBA black = { 0, 0, 0, 1.0 };
+	CdkRGBA black = { 0, 0, 0, 1.0 };
 	int x,y;
 
 	window = ctk_window_new (CTK_WINDOW_POPUP);
@@ -522,7 +522,7 @@ cafe_rr_labeler_hide (CafeRRLabeler *labeler)
  * Get the color used for the label on a given output (monitor).
  */
 void
-cafe_rr_labeler_get_rgba_for_output (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *color_out)
+cafe_rr_labeler_get_rgba_for_output (CafeRRLabeler *labeler, CafeRROutputInfo *output, CdkRGBA *color_out)
 {
 	int i;
 	CafeRROutputInfo **outputs;

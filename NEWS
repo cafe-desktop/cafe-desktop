@@ -126,7 +126,7 @@
   * interface: add key to enable/disable primary paste from middlemouse
   * cafe-desktop-item: replace deprecated cdk_error_trap_push/pop
   * cafe-rr-config: replace deprecated cdk_flush
-  * cafe-rr: replace deprecated Gdk functions
+  * cafe-rr: replace deprecated Cdk functions
   * cafe-bg-crossfade: replace deprecated cdk_error_trap_push/pop
   * cafe-bg: replace deprecated cdk_error_trap_push/pop
   * fix distcheck

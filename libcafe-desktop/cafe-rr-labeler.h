@@ -60,6 +60,6 @@ CafeRRLabeler *cafe_rr_labeler_new (CafeRRConfig *config);
 
 void cafe_rr_labeler_hide (CafeRRLabeler *labeler);
 
-void cafe_rr_labeler_get_rgba_for_output (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *color_out);
+void cafe_rr_labeler_get_rgba_for_output (CafeRRLabeler *labeler, CafeRROutputInfo *output, CdkRGBA *color_out);
 
 #endif

@@ -92,7 +92,7 @@ GType cafe_rr_crtc_get_type (void);
 GType cafe_rr_mode_get_type (void);
 
 /* CafeRRScreen */
-CafeRRScreen * cafe_rr_screen_new                (GdkScreen             *screen,
+CafeRRScreen * cafe_rr_screen_new                (CdkScreen             *screen,
 						    GError               **error);
 CafeRROutput **cafe_rr_screen_list_outputs       (CafeRRScreen         *screen);
 CafeRRCrtc **  cafe_rr_screen_list_crtcs         (CafeRRScreen         *screen);

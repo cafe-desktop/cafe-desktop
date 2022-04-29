@@ -46,10 +46,10 @@ typedef struct _CafeColorSelectionClass  CafeColorSelectionClass;
 typedef struct _CafeColorSelectionPrivate    CafeColorSelectionPrivate;
 
 
-typedef void (* CafeColorSelectionChangePaletteFunc) (const GdkColor    *colors,
+typedef void (* CafeColorSelectionChangePaletteFunc) (const CdkColor    *colors,
                                                      gint               n_colors);
-typedef void (* CafeColorSelectionChangePaletteWithScreenFunc) (GdkScreen         *screen,
-							       const GdkColor    *colors,
+typedef void (* CafeColorSelectionChangePaletteWithScreenFunc) (CdkScreen         *screen,
+							       const CdkColor    *colors,
 							       gint               n_colors);
 
 struct _CafeColorSelection
@@ -87,26 +87,26 @@ void       cafe_color_selection_set_has_palette         (CafeColorSelection *col
 
 
 void     cafe_color_selection_set_current_color   (CafeColorSelection *colorsel,
-						  const GdkColor    *color);
+						  const CdkColor    *color);
 void     cafe_color_selection_set_current_alpha   (CafeColorSelection *colorsel,
 						  guint16            alpha);
 void     cafe_color_selection_get_current_color   (CafeColorSelection *colorsel,
-						  GdkColor          *color);
+						  CdkColor          *color);
 guint16  cafe_color_selection_get_current_alpha   (CafeColorSelection *colorsel);
 void     cafe_color_selection_set_previous_color  (CafeColorSelection *colorsel,
-						  const GdkColor    *color);
+						  const CdkColor    *color);
 void     cafe_color_selection_set_previous_alpha  (CafeColorSelection *colorsel,
 						  guint16            alpha);
 void     cafe_color_selection_get_previous_color  (CafeColorSelection *colorsel,
-						  GdkColor          *color);
+						  CdkColor          *color);
 guint16  cafe_color_selection_get_previous_alpha  (CafeColorSelection *colorsel);
 
 gboolean cafe_color_selection_is_adjusting        (CafeColorSelection *colorsel);
 
 gboolean cafe_color_selection_palette_from_string (const gchar       *str,
-                                                  GdkColor         **colors,
+                                                  CdkColor         **colors,
                                                   gint              *n_colors);
-gchar*   cafe_color_selection_palette_to_string   (const GdkColor    *colors,
+gchar*   cafe_color_selection_palette_to_string   (const CdkColor    *colors,
                                                   gint               n_colors);
 
 #ifndef CTK_DISABLE_DEPRECATED
