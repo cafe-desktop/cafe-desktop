@@ -36,7 +36,7 @@
 #include "cafe-colorseldialog.h"
 #include <ctk/ctk.h>
 #include <cdk/cdkkeysyms.h>
-#include <cdk-pixbuf/cdk-pixbuf.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
 #include <glib/gi18n-lib.h>
 
 /* Size of checks and gray levels for alpha compositing checkerboard */

@@ -21,7 +21,7 @@ License along with this program; if not, write to the
 Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
 Boston, MA 02110-1301, USA.
 
-Derived from eel-background.c and eel-cdk-pixbuf-extensions.c by
+Derived from eel-background.c and eel-gdk-pixbuf-extensions.c by
 Darin Adler <darin@eazel.com> and Ramiro Estrugo <ramiro@eazel.com>
 
 Authors: Soren Sandmann <sandmann@redhat.com>
