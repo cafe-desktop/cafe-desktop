@@ -1010,7 +1010,7 @@ msgstr "Panel, caja vs. için kullanılacak simge teması."
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Ctk+ Theme"
-msgstr "GTK+ Teması"
+msgstr "CTK+ Teması"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -1038,63 +1038,63 @@ msgid "Name of the default font used by ctk+."
 msgstr "Ctk+ tarafından öntanımlı olarak kullanılan yazıtipinin adı."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK IM Öndüzenli Tarzı"
+msgid "CTK IM Preedit Style"
+msgstr "CTK IM Öndüzenli Tarzı"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
 msgstr ""
-"ctk+ tarafından kullanılan GTK+ Girdi Yöntemi Öndüzenli Tarzının ismi."
+"ctk+ tarafından kullanılan CTK+ Girdi Yöntemi Öndüzenli Tarzının ismi."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK GY Durum Tarzı"
+msgid "CTK IM Status Style"
+msgstr "CTK GY Durum Tarzı"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "ctk+ tarafından kullanılan GTK+ Girdi Yöntemi Durum Tarzının ismi."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "ctk+ tarafından kullanılan CTK+ Girdi Yöntemi Durum Tarzının ismi."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK GY Modülü"
+msgid "CTK IM Module"
+msgstr "CTK GY Modülü"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "GTK+ tarafından kullanılan girdi yöntemi modülünün ismi."
+msgid "Name of the input method module used by CTK+."
+msgstr "CTK+ tarafından kullanılan girdi yöntemi modülünün ismi."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "GTK3 başlık çubuğunu kullan"
+msgid "Use CTK3 header bar"
+msgstr "CTK3 başlık çubuğunu kullan"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Dosya, renk ya da yazıtipi seçicileri gibi yerleşik GTK+ diyaloglarının "
+"Dosya, renk ya da yazıtipi seçicileri gibi yerleşik CTK+ diyaloglarının "
 "etkinlik widget'lerini göstermek için üstte başlık çubuğu mu yoksa altta "
 "etkinlik bölgesi mi kullanacaklarını ayarlar. Bu ayarın, CtkDialog'u "
 "doğrudan kullanan özel diyaloglara ya da mesaj diyaloglarına bir etkisi "
 "yoktur."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "GTK3 üstkatman kaydırmayı kullan"
+msgid "Use CTK3 overlay scrolling"
+msgstr "CTK3 üstkatman kaydırmayı kullan"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Yerleşik GTK+ kaydırılan pencerelerin kaplama kaydırmayı kullanıp "
+"Yerleşik CTK+ kaydırılan pencerelerin kaplama kaydırmayı kullanıp "
 "kullanmayacağı. Kaplama kaydırma odaklama üstüne gelene kadar asansörlerin "
 "boyutunu küçültüp onları saklar."
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "GTK araç takımı genelinde canlandırmaları etkinleştir"
+msgstr "CTK araç takımı genelinde canlandırmaları etkinleştir"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1180,8 +1180,8 @@ msgstr ""
 " sunup sunmayacaklarını belirler."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "GTK3 istemci tarafından süslenen pencerelerin başlık çubuğu düzeni"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "CTK3 istemci tarafından süslenen pencerelerin başlık çubuğu düzeni"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1248,12 +1248,12 @@ msgstr "Pencere Ölçeklendirme Faktörü"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"Bu, pencere koordinatlarından gerçek cihaz piksellerine eşlenen GTK ölçek "
+"Bu, pencere koordinatlarından gerçek cihaz piksellerine eşlenen CTK ölçek "
 "faktörünü kontrol eder. Geleneksel sistemlerde bu 1'dir, ancak çok yüksek "
 "yoğunluklu ekranlarda (örneğin, HiDPI, Retina) bu daha yüksek bir değer "
 "olabilir (genellikle 2). Otomatik algılamak için 0'a ayarlayın."
@@ -1265,12 +1265,12 @@ msgstr "QT uygulamaları için Ölçeklendirme Faktörü"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Bu ayar, CAFE'nin QT uygulamaları için ölçek faktörünü kontrol edip "
-"etmediğini belirler. Oturumu başlatırken GTK ölçek faktörü ile senkronize "
+"etmediğini belirler. Oturumu başlatırken CTK ölçek faktörü ile senkronize "
 "etmeyi etkinleştir, bu değeri başka bir yerde kontrol etmek için devre dışı "
 "bırakın. Oturumunuzu yeniden başlatmayı gerektirir."
 

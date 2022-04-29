@@ -37,7 +37,7 @@ static void cafe_about_on_activate(CtkApplication* app)
 
     if (list)
     {
-        ctk_window_present(GTK_WINDOW(list->data));
+        ctk_window_present(CTK_WINDOW(list->data));
     }
     else
     {
@@ -75,7 +75,7 @@ void cafe_about_run(void)
      * displayed in the about box to give credit to the translator(s). */
     ctk_about_dialog_set_translator_credits(cafe_about_dialog, _("translator-credits"));
 
-    ctk_window_set_application(GTK_WINDOW(cafe_about_dialog), cafe_about_application);
+    ctk_window_set_application(CTK_WINDOW(cafe_about_dialog), cafe_about_application);
 
     // start and destroy
     ctk_dialog_run((CtkDialog*) cafe_about_dialog);

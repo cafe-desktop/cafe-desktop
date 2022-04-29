@@ -1040,60 +1040,60 @@ msgid "Name of the default font used by ctk+."
 msgstr "Име на стандартния шрифт, който се ползва от ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "Стил на предварителна редакция на метода за въвеждане на GTK"
+msgid "CTK IM Preedit Style"
+msgstr "Стил на предварителна редакция на метода за въвеждане на CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
 msgstr ""
-"Име на метода за въвеждане на GTK+ с предварителна редакция, който се ползва"
+"Име на метода за въвеждане на CTK+ с предварителна редакция, който се ползва"
 " от ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Стил на състоянието на методите за въвеждане на GTK"
+msgid "CTK IM Status Style"
+msgstr "Стил на състоянието на методите за въвеждане на CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
 msgstr ""
-"Име на стила за състоянието на метода за въвеждане на GTK+, който се ползва "
+"Име на стила за състоянието на метода за въвеждане на CTK+, който се ползва "
 "от ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Модул за въвеждане на GTK"
+msgid "CTK IM Module"
+msgstr "Модул за въвеждане на CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Име на модула за метода на въвеждане, използван от GTK+."
+msgid "Name of the input method module used by CTK+."
+msgstr "Име на модула за метода на въвеждане, използван от CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Заглавна лента в стила на GTK3"
+msgid "Use CTK3 header bar"
+msgstr "Заглавна лента в стила на CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Дали вградените прозорци, използващи GTK+, като тези за избор на файл, цвят "
+"Дали вградените прозорци, използващи CTK+, като тези за избор на файл, цвят "
 "или шрифт, да имат заглавна лента с елементи за управление в горната си част"
 " или област за действия в долната си част. Тази настройка не се взема "
 "предвид от прозорците, които използват „CtkDialog“ директно, както и от "
 "прозорците за съобщения."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Прикрито превъртане в стила на GTK3"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Прикрито превъртане в стила на CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Дали лентите за превъртане на вградените прозорци, използващи GTK+, да бъдат"
+"Дали лентите за превъртане на вградените прозорци, използващи CTK+, да бъдат"
 " прикрити. Това означава, че лентите за превъртане ще бъдат скрити и с "
 "намален размер, докато не бъдат посочени."
 
@@ -1185,10 +1185,10 @@ msgstr ""
 " за въвеждане на контролни знаци на Уникод."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr ""
 "Подредба на заглавната лента на украсяваните от страната на клиента прозорци"
-" чрез GTK3"
+" чрез CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1259,7 +1259,7 @@ msgstr "Коефициент за мащабиране на прозорците
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
@@ -1272,7 +1272,7 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""

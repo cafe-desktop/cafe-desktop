@@ -597,8 +597,8 @@ screen_on_event (GdkXEvent *xevent,
 
 	    dialog = ctk_message_dialog_new (NULL,
 					     0,
-					     GTK_MESSAGE_INFO,
-					     GTK_BUTTONS_CLOSE,
+					     CTK_MESSAGE_INFO,
+					     CTK_BUTTONS_CLOSE,
 					     "RRScreenChangeNotify timestamps (%d):\n"
 					     "event change: %u\n"
 					     "event config: %u\n"
@@ -657,7 +657,7 @@ screen_on_event (GdkXEvent *xevent,
 
 #endif /* HAVE_RANDR */
 
-    /* Pass the event on to GTK+ */
+    /* Pass the event on to CTK+ */
     return GDK_FILTER_CONTINUE;
 }
 

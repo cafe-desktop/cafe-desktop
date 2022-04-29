@@ -82,28 +82,28 @@
     </key>
     <key name="ctk-im-preedit-style" type="s">
       <default>'callback'</default>
-      <summary>GTK IM Preedit Style</summary>
-      <description>Name of the GTK+ input method Preedit Style used by ctk+.</description>
+      <summary>CTK IM Preedit Style</summary>
+      <description>Name of the CTK+ input method Preedit Style used by ctk+.</description>
     </key>
     <key name="ctk-im-status-style" type="s">
       <default>'callback'</default>
-      <summary>GTK IM Status Style</summary>
-      <description>Name of the GTK+ input method Status Style used by ctk+.</description>
+      <summary>CTK IM Status Style</summary>
+      <description>Name of the CTK+ input method Status Style used by ctk+.</description>
     </key>
     <key name="ctk-im-module" type="s">
       <default>''</default>
-      <summary>GTK IM Module</summary>
-      <description>Name of the input method module used by GTK+.</description>
+      <summary>CTK IM Module</summary>
+      <description>Name of the input method module used by CTK+.</description>
     </key>
     <key name="ctk-dialogs-use-header" type="b">
       <default>false</default>
-      <summary>Use GTK3 header bar</summary>
-      <description>Whether builtin GTK+ dialogs such as the file chooser, the color chooser or the font chooser will use a header bar at the top to show action widgets, or an action area at the bottom. This setting does not affect custom dialogs using CtkDialog directly, or message dialogs.</description>
+      <summary>Use CTK3 header bar</summary>
+      <description>Whether builtin CTK+ dialogs such as the file chooser, the color chooser or the font chooser will use a header bar at the top to show action widgets, or an action area at the bottom. This setting does not affect custom dialogs using CtkDialog directly, or message dialogs.</description>
     </key>
     <key name="ctk-overlay-scrolling" type="b">
       <default>false</default>
-      <summary>Use GTK3 overlay scrolling</summary>
-      <description>Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay scrolling hides and reduces the size of the scrollbar until it gets focus.</description>
+      <summary>Use CTK3 overlay scrolling</summary>
+      <description>Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay scrolling hides and reduces the size of the scrollbar until it gets focus.</description>
     </key>
     <key name="ctk-enable-animations" type="b">
       <default>true</default>
@@ -152,7 +152,7 @@
     </key>
     <key name="ctk-decoration-layout" type="s">
       <default>'menu:minimize,maximize,close'</default>
-      <summary>Titlebar layout of GTK3 client-side decorated windows</summary>
+      <summary>Titlebar layout of CTK3 client-side decorated windows</summary>
       <description>This setting determines which buttons should be put in the titlebar of client-side decorated windows, and whether they should be placed at the left of right. See https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-decoration-layout.</description>
     </key>
     <key name="ctk-shell-shows-app-menu" type="b">
@@ -174,12 +174,12 @@
       <default>0</default>
       <range min="0" max="2"/>
       <summary>Window Scaling Factor</summary>
-      <description>This controls the GTK scale factor that maps from window coordinates to the actual device pixels. On traditional systems this is 1, but on very high density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to auto-detect.</description>
+      <description>This controls the CTK scale factor that maps from window coordinates to the actual device pixels. On traditional systems this is 1, but on very high density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to auto-detect.</description>
     </key>
     <key name="window-scaling-factor-qt-sync" type="b">
       <default>true</default>
       <summary>Scaling Factor for QT appllications</summary>
-      <description>This setting determines whether CAFE controls the scale factor for QT applications. Enable to synchronize with the GTK scale factor when initializing the session, disable to control this value elsewhere. Requires restarting your session.</description>
+      <description>This setting determines whether CAFE controls the scale factor for QT applications. Enable to synchronize with the CTK scale factor when initializing the session, disable to control this value elsewhere. Requires restarting your session.</description>
     </key>
     <key name="ctk-enable-primary-paste" type="b">
       <default>true</default>

@@ -1,5 +1,5 @@
 /*
- * GTK - The GIMP Toolkit
+ * CTK - The GIMP Toolkit
  * Copyright (C) 1998, 1999 Red Hat, Inc.
  * All rights reserved.
  *
@@ -22,10 +22,10 @@
  *
  * Author: Federico Mena <federico@nuclecu.unam.mx>
  *
- * Modified by the GTK+ Team and others 2003.  See the AUTHORS
- * file for a list of people on the GTK+ Team.  See the ChangeLog
+ * Modified by the CTK+ Team and others 2003.  See the AUTHORS
+ * file for a list of people on the CTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
+ * CTK+ at ftp://ftp.ctk.org/pub/ctk/.
  */
 
 #include "config.h"
@@ -118,7 +118,7 @@ static guint color_button_signals[LAST_SIGNAL] = { 0 };
 
 static const CtkTargetEntry drop_types[] = { { "application/x-color", 0, 0 } };
 
-G_DEFINE_TYPE_WITH_PRIVATE (CafeColorButton, cafe_color_button, GTK_TYPE_BUTTON)
+G_DEFINE_TYPE_WITH_PRIVATE (CafeColorButton, cafe_color_button, CTK_TYPE_BUTTON)
 
 static void
 cafe_color_button_class_init (CafeColorButtonClass *klass)
@@ -128,8 +128,8 @@ cafe_color_button_class_init (CafeColorButtonClass *klass)
   CtkButtonClass *button_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  widget_class = GTK_WIDGET_CLASS (klass);
-  button_class = GTK_BUTTON_CLASS (klass);
+  widget_class = CTK_WIDGET_CLASS (klass);
+  button_class = CTK_BUTTON_CLASS (klass);
 
   gobject_class->get_property = cafe_color_button_get_property;
   gobject_class->set_property = cafe_color_button_set_property;
@@ -291,9 +291,9 @@ draw (CtkWidget      *widget,
 
   cairo_paint (cr);
 
-  if (!ctk_widget_is_sensitive (GTK_WIDGET (color_button)))
+  if (!ctk_widget_is_sensitive (CTK_WIDGET (color_button)))
     {
-      gdk_cairo_set_source_color (cr, &ctk_widget_get_style (GTK_WIDGET(color_button))->bg[GTK_STATE_INSENSITIVE]);
+      gdk_cairo_set_source_color (cr, &ctk_widget_get_style (CTK_WIDGET(color_button))->bg[CTK_STATE_INSENSITIVE]);
       checkered = cafe_color_button_get_checkered ();
       cairo_mask (cr, checkered);
       cairo_pattern_destroy (checkered);
@@ -414,26 +414,26 @@ cafe_color_button_init (CafeColorButton *color_button)
   color_button->priv = cafe_color_button_get_instance_private (color_button);
 
   alignment = ctk_alignment_new (0.5, 0.5, 0.5, 1.0);
-  ctk_container_set_border_width (GTK_CONTAINER (alignment), 1);
-  ctk_container_add (GTK_CONTAINER (color_button), alignment);
+  ctk_container_set_border_width (CTK_CONTAINER (alignment), 1);
+  ctk_container_add (CTK_CONTAINER (color_button), alignment);
   ctk_widget_show (alignment);
 
   frame = ctk_frame_new (NULL);
-  ctk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_ETCHED_OUT);
-  ctk_container_add (GTK_CONTAINER (alignment), frame);
+  ctk_frame_set_shadow_type (CTK_FRAME (frame), CTK_SHADOW_ETCHED_OUT);
+  ctk_container_add (CTK_CONTAINER (alignment), frame);
   ctk_widget_show (frame);
 
   /* Just some widget we can hook to expose-event on */
   color_button->priv->draw_area = ctk_alignment_new (0.5, 0.5, 0.0, 0.0);
 
-  layout = ctk_widget_create_pango_layout (GTK_WIDGET (color_button), "Black");
+  layout = ctk_widget_create_pango_layout (CTK_WIDGET (color_button), "Black");
   pango_layout_get_pixel_extents (layout, NULL, &rect);
   g_object_unref (layout);
 
   ctk_widget_set_size_request (color_button->priv->draw_area, rect.width - 2, rect.height - 2);
   g_signal_connect (color_button->priv->draw_area, "draw",
                     G_CALLBACK (draw), color_button);
-  ctk_container_add (GTK_CONTAINER (frame), color_button->priv->draw_area);
+  ctk_container_add (CTK_CONTAINER (frame), color_button->priv->draw_area);
   ctk_widget_show (color_button->priv->draw_area);
 
   color_button->priv->title = g_strdup (_("Pick a Color")); /* default title */
@@ -446,12 +446,12 @@ cafe_color_button_init (CafeColorButton *color_button)
   color_button->priv->alpha = 65535;
   color_button->priv->use_alpha = FALSE;
 
-  ctk_drag_dest_set (GTK_WIDGET (color_button),
-                     GTK_DEST_DEFAULT_MOTION |
-                     GTK_DEST_DEFAULT_HIGHLIGHT |
-                     GTK_DEST_DEFAULT_DROP,
+  ctk_drag_dest_set (CTK_WIDGET (color_button),
+                     CTK_DEST_DEFAULT_MOTION |
+                     CTK_DEST_DEFAULT_HIGHLIGHT |
+                     CTK_DEST_DEFAULT_DROP,
                      drop_types, 1, GDK_ACTION_COPY);
-  ctk_drag_source_set (GTK_WIDGET(color_button),
+  ctk_drag_source_set (CTK_WIDGET(color_button),
                        GDK_BUTTON1_MASK|GDK_BUTTON3_MASK,
                        drop_types, 1,
                        GDK_ACTION_COPY);
@@ -570,19 +570,19 @@ cafe_color_button_clicked (CtkButton *button)
       /* Create the dialog and connects its buttons */
       CtkWidget *parent;
 
-      parent = ctk_widget_get_toplevel (GTK_WIDGET (color_button));
+      parent = ctk_widget_get_toplevel (CTK_WIDGET (color_button));
 
       color_button->priv->cs_dialog = cafe_color_selection_dialog_new (color_button->priv->title);
 
       color_dialog = CAFE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog);
 
-      if (ctk_widget_is_toplevel (parent) && GTK_IS_WINDOW (parent))
+      if (ctk_widget_is_toplevel (parent) && CTK_IS_WINDOW (parent))
         {
-          if (GTK_WINDOW (parent) != ctk_window_get_transient_for (GTK_WINDOW (color_dialog)))
- 	    ctk_window_set_transient_for (GTK_WINDOW (color_dialog), GTK_WINDOW (parent));
+          if (CTK_WINDOW (parent) != ctk_window_get_transient_for (CTK_WINDOW (color_dialog)))
+ 	    ctk_window_set_transient_for (CTK_WINDOW (color_dialog), CTK_WINDOW (parent));
 
-	  ctk_window_set_modal (GTK_WINDOW (color_dialog),
-				ctk_window_get_modal (GTK_WINDOW (parent)));
+	  ctk_window_set_modal (CTK_WINDOW (color_dialog),
+				ctk_window_get_modal (CTK_WINDOW (parent)));
 	}
 
       g_signal_connect (color_dialog->ok_button, "clicked",
@@ -610,7 +610,7 @@ cafe_color_button_clicked (CtkButton *button)
   cafe_color_selection_set_current_alpha (CAFE_COLOR_SELECTION (color_dialog->colorsel),
 					 color_button->priv->alpha);
 
-  ctk_window_present (GTK_WINDOW (color_button->priv->cs_dialog));
+  ctk_window_present (CTK_WINDOW (color_button->priv->cs_dialog));
 }
 
 /**
@@ -813,7 +813,7 @@ cafe_color_button_set_title (CafeColorButton *color_button,
   g_free (old_title);
 
   if (color_button->priv->cs_dialog)
-    ctk_window_set_title (GTK_WINDOW (color_button->priv->cs_dialog),
+    ctk_window_set_title (CTK_WINDOW (color_button->priv->cs_dialog),
 			  color_button->priv->title);
 
   g_object_notify (G_OBJECT (color_button), "title");

@@ -1023,61 +1023,61 @@ msgid "Name of the default font used by ctk+."
 msgstr "Názov predvoleného písma používaného ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "Prededitovací štýl GTK IM"
+msgid "CTK IM Preedit Style"
+msgstr "Prededitovací štýl CTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Názov Prededitovacieho štýlu vstupnej metódy GTK+ použitého ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Názov Prededitovacieho štýlu vstupnej metódy CTK+ použitého ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Štýl GTK IM Status"
+msgid "CTK IM Status Style"
+msgstr "Štýl CTK IM Status"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Názov Stavového štýlu vstupnej metódy GTK+ použitého ctk+."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Názov Stavového štýlu vstupnej metódy CTK+ použitého ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Modul GTK IM"
+msgid "CTK IM Module"
+msgstr "Modul CTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Názov modulu vstupnej metódy používaného GTK+."
+msgid "Name of the input method module used by CTK+."
+msgstr "Názov modulu vstupnej metódy používaného CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Použiť panel záhlavia GTK3"
+msgid "Use CTK3 header bar"
+msgstr "Použiť panel záhlavia CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Určuje, či zabudované GTK+ dialógy, ako je výber súborov, farieb nebo písma,"
+"Určuje, či zabudované CTK+ dialógy, ako je výber súborov, farieb nebo písma,"
 " budú používať záhlavie navrchu, na zobrazenie akčných prvkov alebo akčného "
 "priestoru naspodku. Toto nastavení nemá priamo vplyv na vlastné dialógy "
 "pomocou CtkDialog nebo dialógy správ."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Používať GTK3 prekrývajúce skrolovanie"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Používať CTK3 prekrývajúce skrolovanie"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Určuje, či vstavané GTK+ skrolovacie okná budú používať prekryté "
+"Určuje, či vstavané CTK+ skrolovacie okná budú používať prekryté "
 "skrolovanie. Prekrývajúce skrolovanie schováva a znižuje veľkosť posuvníka, "
 "ak nie je zameraný."
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "Povoliť GTK toolkit-wide animácie"
+msgstr "Povoliť CTK toolkit-wide animácie"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1161,8 +1161,8 @@ msgstr ""
 "vloženie riadiacich znakov."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Rozloženie záhlavia okien zdobených štýlom GTK3 stranou klienta."
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "Rozloženie záhlavia okien zdobených štýlom CTK3 stranou klienta."
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1227,12 +1227,12 @@ msgstr "Škálovací faktor okien"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"Toto upravuje zväčšovací faktor GTK, ktorým sa prepočítavajú súradnice "
+"Toto upravuje zväčšovací faktor CTK, ktorým sa prepočítavajú súradnice "
 "položiek na obrazovke na skutočné fyzické pixely zariadenia. Zvyčajne je "
 "táto hodnota nastavená na 1, ale na obrazovkách s veľmi vysokým rozlíšením "
 "(HiDPI, Retina) je možné použiť vyššiu hodnotu (napr. 2). Nastavte na 0 pre "
@@ -1245,12 +1245,12 @@ msgstr "Škálovací faktor QT programov"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Toto nastavenie určuje, či CAFE ovláda škálovací faktor QT programov. "
-"Povoľte pre synchronizáciu s GTK škálovacím faktorom pri načítaní relácie, "
+"Povoľte pre synchronizáciu s CTK škálovacím faktorom pri načítaní relácie, "
 "zakážte pre úpravu tejto hodnoty niekde inde. Je potrebný reštart vašej "
 "relácie."
 
@@ -1263,7 +1263,7 @@ msgid ""
 "If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Ak je povolené, GTK+ vloží obsah hlavného výberu, zvyčajne stlačením "
+"Ak je povolené, CTK+ vloží obsah hlavného výberu, zvyčajne stlačením "
 "stredného tlačidla myši."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5

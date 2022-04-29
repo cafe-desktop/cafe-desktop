@@ -963,36 +963,36 @@ msgid "Name of the default font used by ctk+."
 msgstr "ctk+에서 사용하는 기본 글꼴 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK 입력기 입력 사전 모양새"
+msgid "CTK IM Preedit Style"
+msgstr "CTK 입력기 입력 사전 모양새"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "ctk+에서 사용하는 GTK+ 입력기 입력 사전 모양새의 이름입니다."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "ctk+에서 사용하는 CTK+ 입력기 입력 사전 모양새의 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK 입력기 상태 모양새"
+msgid "CTK IM Status Style"
+msgstr "CTK 입력기 상태 모양새"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "ctk+에서 사용할 GTK+ 입력기 상태 모양새의 이름입니다."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "ctk+에서 사용할 CTK+ 입력기 상태 모양새의 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK 입력기 모듈"
+msgid "CTK IM Module"
+msgstr "CTK 입력기 모듈"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
+msgid "Name of the input method module used by CTK+."
 msgstr "ctk+에서 사용하는 입력기 모듈의 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
+msgid "Use CTK3 header bar"
 msgstr "ctk3 헤더 표시줄 사용"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
@@ -1002,12 +1002,12 @@ msgstr ""
 "또는 메시지 대화상자에 영향을 주지 않습니다."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
+msgid "Use CTK3 overlay scrolling"
 msgstr "ctk3 오버레이 스크롤 사용"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
 "내장 ctk+ 스크롤 창에 오버레이 스크롤을 사용할 지 여부입니다. 오버레이 스크롤은 마우스 커서를 가져다 올려놓기 전에는 숨기고 크기를"
@@ -1093,7 +1093,7 @@ msgid ""
 msgstr "항목의 단축 메뉴 또는 텍스트 뷰에서 제어 문자 삽입 기능을 제공할 지 여부입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr "ctk3 클라이언트 장식 창의 제목 표시줄 배치"
 
 #: schemas/org.cafe.interface.gschema.xml:156
@@ -1154,12 +1154,12 @@ msgstr "창 배율 상수"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"이것은 GTK 스케일 팩터를 조절해서 창의 위치를 실제 장치의 픽셀에 맞춥니다. 일반적인 시스템에선 1이지만, 고밀도 디스플레이 (예: "
+"이것은 CTK 스케일 팩터를 조절해서 창의 위치를 실제 장치의 픽셀에 맞춥니다. 일반적인 시스템에선 1이지만, 고밀도 디스플레이 (예: "
 "HiDPI, 레티나)에서는 더 높은 값일 수 있습니다 (대부분 2). 0으로 맞추면 자동으로 감지합니다."
 
 #: schemas/org.cafe.interface.gschema.xml:181
@@ -1169,11 +1169,11 @@ msgstr "QT 애플리케이션용 스케일링 팩터"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"이 설정은 마테가 QT 애플리케이션용 스케일 팩터를 조절할지를 결정합니다. 세션을 시작할 때 GTK 스케일 팩터와 동기화할 수 있게 "
+"이 설정은 마테가 QT 애플리케이션용 스케일 팩터를 조절할지를 결정합니다. 세션을 시작할 때 CTK 스케일 팩터와 동기화할 수 있게 "
 "하고, 다른 곳에서는 조절할 수 없도록 하세요. 세션을 다시 시작해야 합니다."
 
 #: schemas/org.cafe.interface.gschema.xml:186

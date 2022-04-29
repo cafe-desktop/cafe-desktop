@@ -1035,7 +1035,7 @@ msgstr "Tema Ctk+"
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
 msgid "Basename of the default theme used by ctk+."
-msgstr "Nome di base del tema predefinito usato dalle GTK+."
+msgstr "Nome di base del tema predefinito usato dalle CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1055,44 +1055,44 @@ msgstr "Carattere predefinito"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "Nome del tipo di carattere usato in modo predefinito dalle GTK+."
+msgstr "Nome del tipo di carattere usato in modo predefinito dalle CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "Stile GTK+ IM Preedit"
+msgid "CTK IM Preedit Style"
+msgstr "Stile CTK+ IM Preedit"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Nome del metodo di input delle GTK+ Preedit Style usato da GTK+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Nome del metodo di input delle CTK+ Preedit Style usato da CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Stile GTK+ IM Status"
+msgid "CTK IM Status Style"
+msgstr "Stile CTK+ IM Status"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Nome del metodo di input delle GTK+ Status Style usato."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Nome del metodo di input delle CTK+ Status Style usato."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Modulo IM GTK+"
+msgid "CTK IM Module"
+msgstr "Modulo IM CTK+"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Nome del modulo del metodo di input usato dalle GTK+."
+msgid "Name of the input method module used by CTK+."
+msgstr "Nome del modulo del metodo di input usato dalle CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Usa la barra di intestazione GTK3"
+msgid "Use CTK3 header bar"
+msgstr "Usa la barra di intestazione CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Indica se le finestre di dialogo GTK+ integrate come il selettore dei file, "
+"Indica se le finestre di dialogo CTK+ integrate come il selettore dei file, "
 "il selettore dei colori o il selettore dei font useranno una barra di "
 "intestazione superiore per mostrare gli action widgets o un'action area in "
 "basso. Questa impostazione non coinvolge le finestre di dialogo "
@@ -1100,15 +1100,15 @@ msgstr ""
 "dialogo dei messaggi."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Usa lo scorrimento in sovrapposizione GTK3"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Usa lo scorrimento in sovrapposizione CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Indica se le finestre a scorrimento GTK+ integrate useranno lo scorrimento "
+"Indica se le finestre a scorrimento CTK+ integrate useranno lo scorrimento "
 "in sovrapposizione. Lo scorrimento in sovrapposizione nasconde e riduce la "
 "dimensione della barra di scorrimento fino a quando non riceve il focus."
 
@@ -1148,7 +1148,7 @@ msgstr "Usa carattere personalizzato"
 #: schemas/org.cafe.interface.gschema.xml:126
 msgid "Whether to use a custom font in ctk+ applications."
 msgstr ""
-"Indica se usare un tipo di carattere personalizzato nelle applicazioni GTK+."
+"Indica se usare un tipo di carattere personalizzato nelle applicazioni CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1203,10 +1203,10 @@ msgstr ""
 "offrire di inserire caratteri di controllo."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr ""
 "La disposizione della barra del titolo delle finestre decorate lato client "
-"in GTK3."
+"in CTK3."
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1272,7 +1272,7 @@ msgstr "Fattore di scala della finestra"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
@@ -1289,13 +1289,13 @@ msgstr "Fattore di scala per applicazioni QT"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Questa impostazione stabilisce se CAFE debba controllare il fattore di scala"
 " per le applicazioni QT. Attiva per sincronizzare con il fattore di scala "
-"GTK quando si avvia la sessione, disattiva per controllare questo valore "
+"CTK quando si avvia la sessione, disattiva per controllare questo valore "
 "altrove. Richiede il riavvio della sessione."
 
 #: schemas/org.cafe.interface.gschema.xml:186

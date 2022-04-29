@@ -1023,66 +1023,66 @@ msgid "Name of the default font used by ctk+."
 msgstr "Anv an nodrezh dre ziouer arveret gant ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "Stil ragembann HE GTK"
+msgid "CTK IM Preedit Style"
+msgstr "Stil ragembann HE CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Anv stil ragembann hentenn enankañ GTK+ arveret gant ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Anv stil ragembann hentenn enankañ CTK+ arveret gant ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Stil stad HE GTK"
+msgid "CTK IM Status Style"
+msgstr "Stil stad HE CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Anv stil stad hentenn enankañ GTK+ arveret gant ctk+."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Anv stil stad hentenn enankañ CTK+ arveret gant ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Mollad HE GTK"
+msgid "CTK IM Module"
+msgstr "Mollad HE CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Anv mollad hentenn enankañ GTK+ arveret gant GTK+."
+msgid "Name of the input method module used by CTK+."
+msgstr "Anv mollad hentenn enankañ CTK+ arveret gant CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "Arverañ barrenn ditl GTK3"
+msgid "Use CTK3 header bar"
+msgstr "Arverañ barrenn ditl CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 "Hag-eñ e vo arveret ur varrenn ditl el lein da ziskouez gwered ar widjed pe "
-"ur maez gwered en traoñ gant boestadoù emziviz GTK+ evel an dibaber restroù,"
+"ur maez gwered en traoñ gant boestadoù emziviz CTK+ evel an dibaber restroù,"
 " an dibaber livioù pe an dibaber nodrezhoù. Ne dizho ket an arventennoù-mañ "
 "ar boestadoù emziviz personelaet oc'h ober gant CtkDialog end-eeun pe "
 "voestad emziviz ar c'hemennadennoù."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Arverañ dibunañ dre ziguzhat GTK3"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Arverañ dibunañ dre ziguzhat CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Hag-eñ e vo arveret prenestroù dibunet GTK+ enframmet an dibunañ dre "
+"Hag-eñ e vo arveret prenestroù dibunet CTK+ enframmet an dibunañ dre "
 "ziguzhat. Gantañ e vez kuzhet ha bihanaet ment ar varrenn dibunañ betek ma "
 "vo lakaet evezh warni."
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "Gweredekaat bliverezhioù mod toolkit-wide GTK"
+msgstr "Gweredekaat bliverezhioù mod toolkit-wide CTK"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
-msgstr "Hag-eñ e vo gweredekaet bliverezhioù mod toolkit-wide GTK."
+msgstr "Hag-eñ e vo gweredekaet bliverezhioù mod toolkit-wide CTK."
 
 #: schemas/org.cafe.interface.gschema.xml:115
 msgid "Document font"
@@ -1164,7 +1164,7 @@ msgstr ""
 "kemperzhel an enankadoù ha gweloù an testennoù."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr "Aozadur barrenn ditl prenestroù kinklet diouzh tu an arveriaded"
 
 #: schemas/org.cafe.interface.gschema.xml:156
@@ -1224,7 +1224,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
@@ -1237,7 +1237,7 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""

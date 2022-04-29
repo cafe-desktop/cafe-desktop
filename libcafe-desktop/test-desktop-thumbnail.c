@@ -50,11 +50,11 @@ int main (int argc, char **argv)
         return 1;
     }
 
-    window = ctk_window_new (GTK_WINDOW_TOPLEVEL);
+    window = ctk_window_new (CTK_WINDOW_TOPLEVEL);
     g_signal_connect (window, "destroy", G_CALLBACK (ctk_main_quit), NULL);
     image = ctk_image_new_from_pixbuf (pixbuf);
     g_object_unref (pixbuf);
-    ctk_container_add (GTK_CONTAINER (window), image);
+    ctk_container_add (CTK_CONTAINER (window), image);
     ctk_widget_show_all (window);
 
     ctk_main ();

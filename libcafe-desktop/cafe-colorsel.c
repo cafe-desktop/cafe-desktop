@@ -1,4 +1,4 @@
-/* GTK - The GIMP Toolkit
+/* CTK - The GIMP Toolkit
  * Copyright (C) 2000 Red Hat, Inc.
  * Copyright (C) 1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald
  *
@@ -19,10 +19,10 @@
  */
 
 /*
- * Modified by the GTK+ Team and others 1997-2001.  See the AUTHORS
- * file for a list of people on the GTK+ Team.  See the ChangeLog
+ * Modified by the CTK+ Team and others 1997-2001.  See the AUTHORS
+ * file for a list of people on the CTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
+ * CTK+ at ftp://ftp.ctk.org/pub/ctk/.
  */
 
 #include "config.h"
@@ -40,8 +40,8 @@
 #define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
 
 /* Number of elements in the custom palatte */
-#define GTK_CUSTOM_PALETTE_WIDTH 9
-#define GTK_CUSTOM_PALETTE_HEIGHT 4
+#define CTK_CUSTOM_PALETTE_WIDTH 9
+#define CTK_CUSTOM_PALETTE_HEIGHT 4
 
 #define CUSTOM_PALETTE_ENTRY_WIDTH   20
 #define CUSTOM_PALETTE_ENTRY_HEIGHT  20
@@ -116,7 +116,7 @@ struct _CafeColorSelectionPrivate
   CtkWidget *hex_entry;
 
   /* The Palette code */
-  CtkWidget *custom_palette [GTK_CUSTOM_PALETTE_WIDTH][GTK_CUSTOM_PALETTE_HEIGHT];
+  CtkWidget *custom_palette [CTK_CUSTOM_PALETTE_WIDTH][CTK_CUSTOM_PALETTE_HEIGHT];
 
   /* The color_sample stuff */
   CtkWidget *sample_area;
@@ -243,7 +243,7 @@ static const guchar dropper_bits[] = {
   "\0\0\0\0\0\0\0\0\0\3\0\0\0\2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
   "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"};
 
-G_DEFINE_TYPE_WITH_PRIVATE (CafeColorSelection, cafe_color_selection, GTK_TYPE_BOX)
+G_DEFINE_TYPE_WITH_PRIVATE (CafeColorSelection, cafe_color_selection, CTK_TYPE_BOX)
 
 static void
 cafe_color_selection_class_init (CafeColorSelectionClass *klass)
@@ -258,7 +258,7 @@ cafe_color_selection_class_init (CafeColorSelectionClass *klass)
 
   gobject_class->dispose = cafe_color_selection_dispose;
 
-  widget_class = GTK_WIDGET_CLASS (klass);
+  widget_class = CTK_WIDGET_CLASS (klass);
   widget_class->realize = cafe_color_selection_realize;
   widget_class->unrealize = cafe_color_selection_unrealize;
   widget_class->show_all = cafe_color_selection_show_all;
@@ -331,28 +331,28 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
   priv->default_set = FALSE;
   priv->default_alpha_set = FALSE;
 
-  top_hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  ctk_box_pack_start (GTK_BOX (colorsel), top_hbox, FALSE, FALSE, 0);
+  top_hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_box_pack_start (CTK_BOX (colorsel), top_hbox, FALSE, FALSE, 0);
 
-  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
   priv->triangle_colorsel = cafe_hsv_new ();
   g_signal_connect (priv->triangle_colorsel, "changed",
                     G_CALLBACK (hsv_changed), colorsel);
   cafe_hsv_set_metrics (CAFE_HSV (priv->triangle_colorsel), 174, 15);
-  ctk_box_pack_start (GTK_BOX (top_hbox), vbox, FALSE, FALSE, 0);
-  ctk_box_pack_start (GTK_BOX (vbox), priv->triangle_colorsel, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (top_hbox), vbox, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), priv->triangle_colorsel, FALSE, FALSE, 0);
   ctk_widget_set_tooltip_text (priv->triangle_colorsel,
                         _("Select the color you want from the outer ring. Select the darkness or lightness of that color using the inner triangle."));
 
-  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-  ctk_box_pack_end (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
+  hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 6);
+  ctk_box_pack_end (CTK_BOX (vbox), hbox, FALSE, FALSE, 0);
 
   frame = ctk_frame_new (NULL);
   ctk_widget_set_size_request (frame, -1, 30);
-  ctk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
+  ctk_frame_set_shadow_type (CTK_FRAME (frame), CTK_SHADOW_IN);
   color_sample_new (colorsel);
-  ctk_container_add (GTK_CONTAINER (frame), priv->sample_area);
-  ctk_box_pack_start (GTK_BOX (hbox), frame, TRUE, TRUE, 0);
+  ctk_container_add (CTK_CONTAINER (frame), priv->sample_area);
+  ctk_box_pack_start (CTK_BOX (hbox), frame, TRUE, TRUE, 0);
 
   button = ctk_button_new ();
 
@@ -360,24 +360,24 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
   g_object_set_data (G_OBJECT (button), "COLORSEL", colorsel);
   g_signal_connect (button, "clicked",
                     G_CALLBACK (get_screen_color), NULL);
-  picker_image = ctk_image_new_from_icon_name ("ctk-color-picker", GTK_ICON_SIZE_BUTTON);
-  ctk_container_add (GTK_CONTAINER (button), picker_image);
-  ctk_widget_show (GTK_WIDGET (picker_image));
-  ctk_box_pack_end (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  picker_image = ctk_image_new_from_icon_name ("ctk-color-picker", CTK_ICON_SIZE_BUTTON);
+  ctk_container_add (CTK_CONTAINER (button), picker_image);
+  ctk_widget_show (CTK_WIDGET (picker_image));
+  ctk_box_pack_end (CTK_BOX (hbox), button, FALSE, FALSE, 0);
 
   ctk_widget_set_tooltip_text (button,
                         _("Click the eyedropper, then click a color anywhere on your screen to select that color."));
 
-  top_right_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  ctk_box_pack_start (GTK_BOX (top_hbox), top_right_vbox, FALSE, FALSE, 0);
+  top_right_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
+  ctk_box_pack_start (CTK_BOX (top_hbox), top_right_vbox, FALSE, FALSE, 0);
   grid = ctk_grid_new ();
-  ctk_box_pack_start (GTK_BOX (top_right_vbox), grid, FALSE, FALSE, 0);
-  ctk_grid_set_row_spacing (GTK_GRID (grid), 6);
-  ctk_grid_set_column_spacing (GTK_GRID (grid), 12);
+  ctk_box_pack_start (CTK_BOX (top_right_vbox), grid, FALSE, FALSE, 0);
+  ctk_grid_set_row_spacing (CTK_GRID (grid), 6);
+  ctk_grid_set_column_spacing (CTK_GRID (grid), 12);
 
   make_label_spinbutton (colorsel, &priv->hue_spinbutton, _("_Hue:"), grid, 0, 0, COLORSEL_HUE,
                          _("Position on the color wheel."));
-  ctk_spin_button_set_wrap (GTK_SPIN_BUTTON (priv->hue_spinbutton), TRUE);
+  ctk_spin_button_set_wrap (CTK_SPIN_BUTTON (priv->hue_spinbutton), TRUE);
   make_label_spinbutton (colorsel, &priv->sat_spinbutton, _("_Saturation:"), grid, 0, 1, COLORSEL_SATURATION,
                          _("\"Deepness\" of the color."));
   make_label_spinbutton (colorsel, &priv->val_spinbutton, _("_Value:"), grid, 0, 2, COLORSEL_VALUE,
@@ -388,23 +388,23 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
                          _("Amount of green light in the color."));
   make_label_spinbutton (colorsel, &priv->blue_spinbutton, _("_Blue:"), grid, 6, 2, COLORSEL_BLUE,
                          _("Amount of blue light in the color."));
-  ctk_grid_attach (GTK_GRID (grid), ctk_separator_new (GTK_ORIENTATION_HORIZONTAL), 0, 3, 8, 1);
+  ctk_grid_attach (CTK_GRID (grid), ctk_separator_new (CTK_ORIENTATION_HORIZONTAL), 0, 3, 8, 1);
 
   priv->opacity_label = ctk_label_new_with_mnemonic (_("Op_acity:"));
-  ctk_label_set_xalign (GTK_LABEL (priv->opacity_label), 0.0);
-  ctk_grid_attach (GTK_GRID (grid), priv->opacity_label, 0, 4, 1, 1);
-  adjust = GTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 255.0, 1.0, 1.0, 0.0));
+  ctk_label_set_xalign (CTK_LABEL (priv->opacity_label), 0.0);
+  ctk_grid_attach (CTK_GRID (grid), priv->opacity_label, 0, 4, 1, 1);
+  adjust = CTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 255.0, 1.0, 1.0, 0.0));
   g_object_set_data (G_OBJECT (adjust), "COLORSEL", colorsel);
-  priv->opacity_slider = ctk_scale_new (GTK_ORIENTATION_HORIZONTAL, adjust);
+  priv->opacity_slider = ctk_scale_new (CTK_ORIENTATION_HORIZONTAL, adjust);
   ctk_widget_set_tooltip_text (priv->opacity_slider,
                         _("Transparency of the color."));
-  ctk_label_set_mnemonic_widget (GTK_LABEL (priv->opacity_label),
+  ctk_label_set_mnemonic_widget (CTK_LABEL (priv->opacity_label),
                                  priv->opacity_slider);
-  ctk_scale_set_draw_value (GTK_SCALE (priv->opacity_slider), FALSE);
+  ctk_scale_set_draw_value (CTK_SCALE (priv->opacity_slider), FALSE);
   g_signal_connect (adjust, "value-changed",
                     G_CALLBACK (adjustment_changed),
                     GINT_TO_POINTER (COLORSEL_OPACITY));
-  ctk_grid_attach (GTK_GRID (grid), priv->opacity_slider, 1, 4, 6, 1);
+  ctk_grid_attach (CTK_GRID (grid), priv->opacity_slider, 1, 4, 6, 1);
   priv->opacity_entry = ctk_entry_new ();
   ctk_widget_set_tooltip_text (priv->opacity_entry,
                         _("Transparency of the color."));
@@ -412,14 +412,14 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
 
   g_signal_connect (priv->opacity_entry, "activate",
                     G_CALLBACK (opacity_entry_changed), colorsel);
-  ctk_grid_attach (GTK_GRID (grid), priv->opacity_entry, 7, 4, 1, 1);
+  ctk_grid_attach (CTK_GRID (grid), priv->opacity_entry, 7, 4, 1, 1);
 
   label = ctk_label_new_with_mnemonic (_("Color _name:"));
-  ctk_grid_attach (GTK_GRID (grid), label, 0, 5, 1, 1);
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+  ctk_grid_attach (CTK_GRID (grid), label, 0, 5, 1, 1);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
   priv->hex_entry = ctk_entry_new ();
 
-  ctk_label_set_mnemonic_widget (GTK_LABEL (label), priv->hex_entry);
+  ctk_label_set_mnemonic_widget (CTK_LABEL (label), priv->hex_entry);
 
   g_signal_connect (priv->hex_entry, "activate",
                     G_CALLBACK (hex_changed), colorsel);
@@ -430,8 +430,8 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
   ctk_widget_set_tooltip_text (priv->hex_entry,
                         _("You can enter an HTML-style hexadecimal color value, or simply a color name such as 'orange' in this entry."));
 
-  ctk_entry_set_width_chars (GTK_ENTRY (priv->hex_entry), 7);
-  ctk_grid_attach (GTK_GRID (grid), priv->hex_entry, 1, 5, 4, 1);
+  ctk_entry_set_width_chars (CTK_ENTRY (priv->hex_entry), 7);
+  ctk_grid_attach (CTK_GRID (grid), priv->hex_entry, 1, 5, 4, 1);
 
   focus_chain = g_list_append (focus_chain, priv->hue_spinbutton);
   focus_chain = g_list_append (focus_chain, priv->sat_spinbutton);
@@ -442,32 +442,32 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
   focus_chain = g_list_append (focus_chain, priv->opacity_slider);
   focus_chain = g_list_append (focus_chain, priv->opacity_entry);
   focus_chain = g_list_append (focus_chain, priv->hex_entry);
-  ctk_container_set_focus_chain (GTK_CONTAINER (grid), focus_chain);
+  ctk_container_set_focus_chain (CTK_CONTAINER (grid), focus_chain);
   g_list_free (focus_chain);
 
   /* Set up the palette */
   grid = ctk_grid_new ();
-  ctk_grid_set_row_spacing (GTK_GRID (grid), 1);
-  ctk_grid_set_column_spacing (GTK_GRID (grid), 1);
-  for (i = 0; i < GTK_CUSTOM_PALETTE_WIDTH; i++)
+  ctk_grid_set_row_spacing (CTK_GRID (grid), 1);
+  ctk_grid_set_column_spacing (CTK_GRID (grid), 1);
+  for (i = 0; i < CTK_CUSTOM_PALETTE_WIDTH; i++)
     {
-      for (j = 0; j < GTK_CUSTOM_PALETTE_HEIGHT; j++)
+      for (j = 0; j < CTK_CUSTOM_PALETTE_HEIGHT; j++)
 	{
 	  make_palette_frame (colorsel, grid, i, j);
 	}
     }
   set_selected_palette (colorsel, 0, 0);
-  priv->palette_frame = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  priv->palette_frame = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
   label = ctk_label_new_with_mnemonic (_("_Palette:"));
 
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
-  ctk_box_pack_start (GTK_BOX (priv->palette_frame), label, FALSE, FALSE, 0);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
+  ctk_box_pack_start (CTK_BOX (priv->palette_frame), label, FALSE, FALSE, 0);
 
-  ctk_label_set_mnemonic_widget (GTK_LABEL (label),
+  ctk_label_set_mnemonic_widget (CTK_LABEL (label),
                                  priv->custom_palette[0][0]);
 
-  ctk_box_pack_end (GTK_BOX (top_right_vbox), priv->palette_frame, FALSE, FALSE, 0);
-  ctk_box_pack_start (GTK_BOX (priv->palette_frame), grid, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (top_right_vbox), priv->palette_frame, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (priv->palette_frame), grid, FALSE, FALSE, 0);
 
   ctk_widget_show_all (top_hbox);
 
@@ -486,10 +486,10 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
     }
 
   atk_obj = ctk_widget_get_accessible (priv->triangle_colorsel);
-  if (GTK_IS_ACCESSIBLE (atk_obj))
+  if (CTK_IS_ACCESSIBLE (atk_obj))
     {
       atk_object_set_name (atk_obj, _("Color Wheel"));
-      atk_object_set_role (ctk_widget_get_accessible (GTK_WIDGET (colorsel)), ATK_ROLE_COLOR_CHOOSER);
+      atk_object_set_role (ctk_widget_get_accessible (CTK_WIDGET (colorsel)), ATK_ROLE_COLOR_CHOOSER);
       make_all_relations (atk_obj, priv);
     }
 }
@@ -558,7 +558,7 @@ cafe_color_selection_get_property (GObject     *object,
       g_value_set_uint (value, cafe_color_selection_get_current_alpha (colorsel));
       break;
     case PROP_HEX_STRING:
-      g_value_set_string (value, ctk_editable_get_chars (GTK_EDITABLE (priv->hex_entry), 0, -1));
+      g_value_set_string (value, ctk_editable_get_chars (CTK_EDITABLE (priv->hex_entry), 0, -1));
       break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -596,7 +596,7 @@ cafe_color_selection_realize (CtkWidget *widget)
 						 widget);
   update_palette (colorsel);
 
-  GTK_WIDGET_CLASS (cafe_color_selection_parent_class)->realize (widget);
+  CTK_WIDGET_CLASS (cafe_color_selection_parent_class)->realize (widget);
 }
 
 static void
@@ -608,7 +608,7 @@ cafe_color_selection_unrealize (CtkWidget *widget)
 
   g_signal_handler_disconnect (settings, priv->settings_connection);
 
-  GTK_WIDGET_CLASS (cafe_color_selection_parent_class)->unrealize (widget);
+  CTK_WIDGET_CLASS (cafe_color_selection_parent_class)->unrealize (widget);
 }
 
 /* We override show-all since we have internal widgets that
@@ -915,9 +915,9 @@ color_sample_setup_dnd (CafeColorSelection *colorsel, CtkWidget *sample)
     {
 
       ctk_drag_dest_set (sample,
-			 GTK_DEST_DEFAULT_HIGHLIGHT |
-			 GTK_DEST_DEFAULT_MOTION |
-			 GTK_DEST_DEFAULT_DROP,
+			 CTK_DEST_DEFAULT_HIGHLIGHT |
+			 CTK_DEST_DEFAULT_MOTION |
+			 CTK_DEST_DEFAULT_DROP,
 			 targets, 1,
 			 GDK_ACTION_COPY);
 
@@ -967,13 +967,13 @@ color_sample_new (CafeColorSelection *colorsel)
 
   priv = colorsel->private_data;
 
-  priv->sample_area = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  priv->sample_area = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 0);
   priv->old_sample = ctk_drawing_area_new ();
   priv->cur_sample = ctk_drawing_area_new ();
 
-  ctk_box_pack_start (GTK_BOX (priv->sample_area), priv->old_sample,
+  ctk_box_pack_start (CTK_BOX (priv->sample_area), priv->old_sample,
 		      TRUE, TRUE, 0);
-  ctk_box_pack_start (GTK_BOX (priv->sample_area), priv->cur_sample,
+  ctk_box_pack_start (CTK_BOX (priv->sample_area), priv->cur_sample,
 		      TRUE, TRUE, 0);
 
   g_signal_connect (priv->old_sample, "draw",
@@ -1035,7 +1035,7 @@ palette_paint (CtkWidget    *drawing_area,
 
   ctk_widget_get_allocation (drawing_area, &allocation);
 
-  gdk_cairo_set_source_color (cr, &ctk_widget_get_style (drawing_area)->bg[GTK_STATE_NORMAL]);
+  gdk_cairo_set_source_color (cr, &ctk_widget_get_style (drawing_area)->bg[CTK_STATE_NORMAL]);
   cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
   cairo_fill (cr);
 
@@ -1156,7 +1156,7 @@ get_current_colors (CafeColorSelection *colorsel)
                                             &n_colors);
 
   /* make sure that we fill every slot */
-  g_assert (n_colors == GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
+  g_assert (n_colors == CTK_CUSTOM_PALETTE_WIDTH * CTK_CUSTOM_PALETTE_HEIGHT);
 
   return colors;
 }
@@ -1174,7 +1174,7 @@ palette_change_color (CtkWidget         *drawing_area,
   GdkScreen *screen;
 
   g_return_if_fail (CAFE_IS_COLOR_SELECTION (colorsel));
-  g_return_if_fail (GTK_IS_DRAWING_AREA (drawing_area));
+  g_return_if_fail (CTK_IS_DRAWING_AREA (drawing_area));
 
   priv = colorsel->private_data;
 
@@ -1185,10 +1185,10 @@ palette_change_color (CtkWidget         *drawing_area,
 
   x = 0;
   y = 0;			/* Quiet GCC */
-  while (x < GTK_CUSTOM_PALETTE_WIDTH)
+  while (x < CTK_CUSTOM_PALETTE_WIDTH)
     {
       y = 0;
-      while (y < GTK_CUSTOM_PALETTE_HEIGHT)
+      while (y < CTK_CUSTOM_PALETTE_HEIGHT)
         {
           if (priv->custom_palette[x][y] == drawing_area)
             goto out;
@@ -1201,25 +1201,25 @@ palette_change_color (CtkWidget         *drawing_area,
 
  out:
 
-  g_assert (x < GTK_CUSTOM_PALETTE_WIDTH || y < GTK_CUSTOM_PALETTE_HEIGHT);
+  g_assert (x < CTK_CUSTOM_PALETTE_WIDTH || y < CTK_CUSTOM_PALETTE_HEIGHT);
 
   current_colors = get_current_colors (colorsel);
-  current_colors[y * GTK_CUSTOM_PALETTE_WIDTH + x] = gdk_color;
+  current_colors[y * CTK_CUSTOM_PALETTE_WIDTH + x] = gdk_color;
 
-  screen = ctk_widget_get_screen (GTK_WIDGET (colorsel));
+  screen = ctk_widget_get_screen (CTK_WIDGET (colorsel));
   if (change_palette_hook != default_change_palette_func)
     (* change_palette_hook) (screen, current_colors,
-			     GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
+			     CTK_CUSTOM_PALETTE_WIDTH * CTK_CUSTOM_PALETTE_HEIGHT);
   else if (noscreen_change_palette_hook != default_noscreen_change_palette_func)
     {
       if (screen != gdk_screen_get_default ())
 	g_warning ("cafe_color_selection_set_change_palette_hook used by widget is not on the default screen.");
       (* noscreen_change_palette_hook) (current_colors,
-					GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
+					CTK_CUSTOM_PALETTE_WIDTH * CTK_CUSTOM_PALETTE_HEIGHT);
     }
   else
     (* change_palette_hook) (screen, current_colors,
-			     GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
+			     CTK_CUSTOM_PALETTE_WIDTH * CTK_CUSTOM_PALETTE_HEIGHT);
 
   g_free (current_colors);
 }
@@ -1239,8 +1239,8 @@ override_background_color (CtkWidget *widget,
   g_free (css);
 
   ctk_style_context_add_provider (ctk_widget_get_style_context (widget),
-                                  GTK_STYLE_PROVIDER (provider),
-                                  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+                                  CTK_STYLE_PROVIDER (provider),
+                                  CTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
   g_object_unref (provider);
 }
 
@@ -1315,13 +1315,13 @@ popup_position_func (CtkMenu   *menu,
   GdkScreen *screen;
   CtkAllocation allocation;
 
-  widget = GTK_WIDGET (user_data);
+  widget = CTK_WIDGET (user_data);
 
   g_return_if_fail (ctk_widget_get_realized (widget));
 
   gdk_window_get_origin (ctk_widget_get_window (widget), &root_x, &root_y);
 
-  ctk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
+  ctk_widget_get_preferred_size (CTK_WIDGET (menu), &req, NULL);
 
   /* Put corner of menu centered on color cell */
   ctk_widget_get_allocation (widget, &allocation);
@@ -1342,7 +1342,7 @@ save_color_selected (CtkWidget *menuitem,
   CtkWidget *drawing_area;
   CafeColorSelectionPrivate *priv;
 
-  drawing_area = GTK_WIDGET (data);
+  drawing_area = CTK_WIDGET (data);
 
   colorsel = CAFE_COLOR_SELECTION (g_object_get_data (G_OBJECT (drawing_area),
                                                      "ctk-color-sel"));
@@ -1372,11 +1372,11 @@ do_popup (CafeColorSelection *colorsel,
                     G_CALLBACK (save_color_selected),
                     drawing_area);
 
-  ctk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+  ctk_menu_shell_append (CTK_MENU_SHELL (menu), mi);
 
   ctk_widget_show_all (mi);
 
-  ctk_menu_popup (GTK_MENU (menu), NULL, NULL,
+  ctk_menu_popup (CTK_MENU (menu), NULL, NULL,
                   popup_position_func, drawing_area,
                   3, timestamp);
 }
@@ -1574,9 +1574,9 @@ palette_new (CafeColorSelection *colorsel)
 		    G_CALLBACK (palette_popup), colorsel);
 
   ctk_drag_dest_set (retval,
-		     GTK_DEST_DEFAULT_HIGHLIGHT |
-		     GTK_DEST_DEFAULT_MOTION |
-		     GTK_DEST_DEFAULT_DROP,
+		     CTK_DEST_DEFAULT_HIGHLIGHT |
+		     CTK_DEST_DEFAULT_MOTION |
+		     CTK_DEST_DEFAULT_DROP,
 		     targets, 1,
 		     GDK_ACTION_COPY);
 
@@ -1717,7 +1717,7 @@ mouse_release (CtkWidget      *invisible,
   grab_color_at_mouse (gdk_event_get_screen ((GdkEvent *)event),
 		       event->x_root, event->y_root, data);
 
-  shutdown_eyedropper (GTK_WIDGET (data));
+  shutdown_eyedropper (CTK_WIDGET (data));
 
   g_signal_handlers_disconnect_by_func (invisible,
 					mouse_motion,
@@ -1835,7 +1835,7 @@ get_screen_color (CtkWidget *button)
 {
   CafeColorSelection *colorsel = g_object_get_data (G_OBJECT (button), "COLORSEL");
   CafeColorSelectionPrivate *priv = colorsel->private_data;
-  GdkScreen *screen = ctk_widget_get_screen (GTK_WIDGET (button));
+  GdkScreen *screen = ctk_widget_get_screen (CTK_WIDGET (button));
   GdkCursor *picker_cursor;
   GdkGrabStatus grab_status;
   CtkWidget *grab_widget;
@@ -1846,22 +1846,22 @@ get_screen_color (CtkWidget *button)
     {
       CtkWidget *toplevel;
 
-      grab_widget = ctk_window_new (GTK_WINDOW_POPUP);
-      ctk_window_set_screen (GTK_WINDOW (grab_widget), screen);
-      ctk_window_resize (GTK_WINDOW (grab_widget), 1, 1);
-      ctk_window_move (GTK_WINDOW (grab_widget), -100, -100);
+      grab_widget = ctk_window_new (CTK_WINDOW_POPUP);
+      ctk_window_set_screen (CTK_WINDOW (grab_widget), screen);
+      ctk_window_resize (CTK_WINDOW (grab_widget), 1, 1);
+      ctk_window_move (CTK_WINDOW (grab_widget), -100, -100);
       ctk_widget_show (grab_widget);
 
       ctk_widget_add_events (grab_widget,
                              GDK_BUTTON_RELEASE_MASK | GDK_BUTTON_PRESS_MASK | GDK_POINTER_MOTION_MASK);
 
-      toplevel = ctk_widget_get_toplevel (GTK_WIDGET (colorsel));
+      toplevel = ctk_widget_get_toplevel (CTK_WIDGET (colorsel));
 
-      if (GTK_IS_WINDOW (toplevel))
+      if (CTK_IS_WINDOW (toplevel))
 	{
-	  if (ctk_window_get_group (GTK_WINDOW (toplevel)))
-	    ctk_window_group_add_window (ctk_window_get_group (GTK_WINDOW (toplevel)),
-					 GTK_WINDOW (grab_widget));
+	  if (ctk_window_get_group (CTK_WINDOW (toplevel)))
+	    ctk_window_group_add_window (ctk_window_get_group (CTK_WINDOW (toplevel)),
+					 CTK_WINDOW (grab_widget));
 	}
 
       priv->dropper_grab_widget = grab_widget;
@@ -1911,7 +1911,7 @@ hex_changed (CtkWidget *hex_entry,
   if (priv->changing)
     return;
 
-  text = ctk_editable_get_chars (GTK_EDITABLE (priv->hex_entry), 0, -1);
+  text = ctk_editable_get_chars (CTK_EDITABLE (priv->hex_entry), 0, -1);
   if (gdk_color_parse (text, &color))
     {
       priv->color[COLORSEL_RED] = CLAMP (color.red/65535.0, 0.0, 1.0);
@@ -2034,8 +2034,8 @@ opacity_entry_changed (CtkWidget *opacity_entry,
   if (priv->changing)
     return;
 
-  text = ctk_editable_get_chars (GTK_EDITABLE (priv->opacity_entry), 0, -1);
-  adj = ctk_range_get_adjustment (GTK_RANGE (priv->opacity_slider));
+  text = ctk_editable_get_chars (CTK_EDITABLE (priv->opacity_entry), 0, -1);
+  adj = ctk_range_get_adjustment (CTK_RANGE (priv->opacity_slider));
   ctk_adjustment_set_value (adj, g_strtod (text, NULL));
 
   update_color (colorsel);
@@ -2058,16 +2058,16 @@ make_label_spinbutton (CafeColorSelection *colorsel,
 
   if (channel_type == COLORSEL_HUE)
     {
-      adjust = GTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 360.0, 1.0, 1.0, 0.0));
+      adjust = CTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 360.0, 1.0, 1.0, 0.0));
     }
   else if (channel_type == COLORSEL_SATURATION ||
 	   channel_type == COLORSEL_VALUE)
     {
-      adjust = GTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 100.0, 1.0, 1.0, 0.0));
+      adjust = CTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 100.0, 1.0, 1.0, 0.0));
     }
   else
     {
-      adjust = GTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 255.0, 1.0, 1.0, 0.0));
+      adjust = CTK_ADJUSTMENT (ctk_adjustment_new (0.0, 0.0, 255.0, 1.0, 1.0, 0.0));
     }
   g_object_set_data (G_OBJECT (adjust), "COLORSEL", colorsel);
   *spinbutton = ctk_spin_button_new (adjust, 10.0, 0);
@@ -2078,11 +2078,11 @@ make_label_spinbutton (CafeColorSelection *colorsel,
                     G_CALLBACK (adjustment_changed),
                     GINT_TO_POINTER (channel_type));
   label = ctk_label_new_with_mnemonic (text);
-  ctk_label_set_mnemonic_widget (GTK_LABEL (label), *spinbutton);
+  ctk_label_set_mnemonic_widget (CTK_LABEL (label), *spinbutton);
 
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
-  ctk_grid_attach (GTK_GRID (grid), label, i, j, 1, 1);
-  ctk_grid_attach (GTK_GRID (grid), *spinbutton, i+1, j, 1, 1);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
+  ctk_grid_attach (CTK_GRID (grid), label, i, j, 1, 1);
+  ctk_grid_attach (CTK_GRID (grid), *spinbutton, i+1, j, 1, 1);
 }
 
 static void
@@ -2096,12 +2096,12 @@ make_palette_frame (CafeColorSelection *colorsel,
 
   priv = colorsel->private_data;
   frame = ctk_frame_new (NULL);
-  ctk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
+  ctk_frame_set_shadow_type (CTK_FRAME (frame), CTK_SHADOW_IN);
   priv->custom_palette[i][j] = palette_new (colorsel);
   ctk_widget_set_size_request (priv->custom_palette[i][j], CUSTOM_PALETTE_ENTRY_WIDTH, CUSTOM_PALETTE_ENTRY_HEIGHT);
-  ctk_container_add (GTK_CONTAINER (frame), priv->custom_palette[i][j]);
+  ctk_container_add (CTK_CONTAINER (frame), priv->custom_palette[i][j]);
   ctk_widget_set_hexpand (frame, TRUE);
-  ctk_grid_attach (GTK_GRID (grid), frame, i, j, 1, 1);
+  ctk_grid_attach (CTK_GRID (grid), frame, i, j, 1, 1);
 }
 
 /* Set the palette entry [x][y] to be the currently selected one. */
@@ -2138,29 +2138,29 @@ update_color (CafeColorSelection *colorsel)
 		      priv->color[COLORSEL_SATURATION],
 		      priv->color[COLORSEL_VALUE]);
   ctk_adjustment_set_value (ctk_spin_button_get_adjustment
-			    (GTK_SPIN_BUTTON (priv->hue_spinbutton)),
+			    (CTK_SPIN_BUTTON (priv->hue_spinbutton)),
 			    scale_round (priv->color[COLORSEL_HUE], 360));
   ctk_adjustment_set_value (ctk_spin_button_get_adjustment
-			    (GTK_SPIN_BUTTON (priv->sat_spinbutton)),
+			    (CTK_SPIN_BUTTON (priv->sat_spinbutton)),
 			    scale_round (priv->color[COLORSEL_SATURATION], 100));
   ctk_adjustment_set_value (ctk_spin_button_get_adjustment
-			    (GTK_SPIN_BUTTON (priv->val_spinbutton)),
+			    (CTK_SPIN_BUTTON (priv->val_spinbutton)),
 			    scale_round (priv->color[COLORSEL_VALUE], 100));
   ctk_adjustment_set_value (ctk_spin_button_get_adjustment
-			    (GTK_SPIN_BUTTON (priv->red_spinbutton)),
+			    (CTK_SPIN_BUTTON (priv->red_spinbutton)),
 			    scale_round (priv->color[COLORSEL_RED], 255));
   ctk_adjustment_set_value (ctk_spin_button_get_adjustment
-			    (GTK_SPIN_BUTTON (priv->green_spinbutton)),
+			    (CTK_SPIN_BUTTON (priv->green_spinbutton)),
 			    scale_round (priv->color[COLORSEL_GREEN], 255));
   ctk_adjustment_set_value (ctk_spin_button_get_adjustment
-			    (GTK_SPIN_BUTTON (priv->blue_spinbutton)),
+			    (CTK_SPIN_BUTTON (priv->blue_spinbutton)),
 			    scale_round (priv->color[COLORSEL_BLUE], 255));
   ctk_adjustment_set_value (ctk_range_get_adjustment
-			    (GTK_RANGE (priv->opacity_slider)),
+			    (CTK_RANGE (priv->opacity_slider)),
 			    scale_round (priv->color[COLORSEL_OPACITY], 255));
 
   g_snprintf (opacity_text, 32, "%.0f", scale_round (priv->color[COLORSEL_OPACITY], 255));
-  ctk_entry_set_text (GTK_ENTRY (priv->opacity_entry), opacity_text);
+  ctk_entry_set_text (CTK_ENTRY (priv->opacity_entry), opacity_text);
 
   g_snprintf (entryval, 11, "#%2X%2X%2X",
 	      (guint) (scale_round (priv->color[COLORSEL_RED], 255)),
@@ -2170,7 +2170,7 @@ update_color (CafeColorSelection *colorsel)
   for (ptr = entryval; *ptr; ptr++)
     if (*ptr == ' ')
       *ptr = '0';
-  ctk_entry_set_text (GTK_ENTRY (priv->hex_entry), entryval);
+  ctk_entry_set_text (CTK_ENTRY (priv->hex_entry), entryval);
   priv->changing = FALSE;
 
   g_object_ref (colorsel);
@@ -2193,13 +2193,13 @@ update_palette (CafeColorSelection *colorsel)
 
   current_colors = get_current_colors (colorsel);
 
-  for (i = 0; i < GTK_CUSTOM_PALETTE_HEIGHT; i++)
+  for (i = 0; i < CTK_CUSTOM_PALETTE_HEIGHT; i++)
     {
-      for (j = 0; j < GTK_CUSTOM_PALETTE_WIDTH; j++)
+      for (j = 0; j < CTK_CUSTOM_PALETTE_WIDTH; j++)
 	{
           gint index;
 
-          index = i * GTK_CUSTOM_PALETTE_WIDTH + j;
+          index = i * CTK_CUSTOM_PALETTE_WIDTH + j;
 
           cafe_color_selection_set_palette_color (colorsel,
                                                  index,
@@ -2260,7 +2260,7 @@ cafe_color_selection_new (void)
   color[2] = 1.0;
   color[3] = 1.0;
 
-  colorsel = g_object_new (CAFE_TYPE_COLOR_SELECTION, "orientation", GTK_ORIENTATION_VERTICAL, NULL);
+  colorsel = g_object_new (CAFE_TYPE_COLOR_SELECTION, "orientation", CTK_ORIENTATION_VERTICAL, NULL);
   priv = colorsel->private_data;
   set_color_internal (colorsel, color);
   cafe_color_selection_set_has_opacity_control (colorsel, TRUE);
@@ -2270,7 +2270,7 @@ cafe_color_selection_new (void)
   priv->default_set = FALSE;
   priv->default_alpha_set = FALSE;
 
-  return GTK_WIDGET (colorsel);
+  return CTK_WIDGET (colorsel);
 }
 
 /**
@@ -2657,10 +2657,10 @@ cafe_color_selection_set_palette_color (CafeColorSelection   *colorsel,
   gdouble col[3];
 
   g_return_if_fail (CAFE_IS_COLOR_SELECTION (colorsel));
-  g_return_if_fail (index >= 0  && index < GTK_CUSTOM_PALETTE_WIDTH*GTK_CUSTOM_PALETTE_HEIGHT);
+  g_return_if_fail (index >= 0  && index < CTK_CUSTOM_PALETTE_WIDTH*CTK_CUSTOM_PALETTE_HEIGHT);
 
-  x = index % GTK_CUSTOM_PALETTE_WIDTH;
-  y = index / GTK_CUSTOM_PALETTE_WIDTH;
+  x = index % CTK_CUSTOM_PALETTE_WIDTH;
+  y = index / CTK_CUSTOM_PALETTE_WIDTH;
 
   priv = colorsel->private_data;
   col[0] = SCALE (color->red);

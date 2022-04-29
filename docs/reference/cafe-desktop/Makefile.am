@@ -5,7 +5,7 @@ AUTOMAKE_OPTIONS = 1.6
 
 # This is a blank Makefile.am for using ctk-doc.
 # Copy this to your project's API docs directory and modify the variables to
-# suit your project. See the GTK+ Makefiles in ctk+/docs/reference for examples
+# suit your project. See the CTK+ Makefiles in ctk+/docs/reference for examples
 # of using the various options.
 
 # The name of the module, e.g. 'glib'.
@@ -24,7 +24,7 @@ DOC_SOURCE_DIR=../../../libcafe-desktop
 SCANGOBJ_OPTIONS=
 
 # Extra options to supply to ctkdoc-scan.
-# e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED" 
+# e.g. SCAN_OPTIONS=--deprecated-guards="CTK_DISABLE_DEPRECATED" 
 SCAN_OPTIONS=--deprecated-guards="CAFE_DISABLE_DEPRECATED"
 
 # Extra options to supply to ctkdoc-mkdb.
@@ -65,10 +65,10 @@ expand_content_files=
 # CFLAGS and LDFLAGS for compiling ctkdoc-scangobj with your library.
 # Only needed if you are using ctkdoc-scangobj to dynamically query widget
 # signals and properties.
-# e.g. AM_CPPFLAGS=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
-# e.g. GTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
+# e.g. AM_CPPFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
+# e.g. CTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
 AM_CPPFLAGS=$(CAFE_DESKTOP_CFLAGS) -I$(top_srcdir)/libcafe-desktop -DCAFE_DESKTOP_USE_UNSTABLE_API
-GTKDOC_LIBS=$(CAFE_DESKTOP_LIBS) $(top_builddir)/libcafe-desktop/libcafe-desktop-2.la
+CTKDOC_LIBS=$(CAFE_DESKTOP_LIBS) $(top_builddir)/libcafe-desktop/libcafe-desktop-2.la
 
 # This includes the standard ctk-doc make rules, copied by ctkdocize.
 include $(top_srcdir)/ctk-doc.make

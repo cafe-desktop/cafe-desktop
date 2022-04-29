@@ -1020,12 +1020,12 @@ msgstr "A panel, caja, stb által használandó ikontéma."
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Ctk+ Theme"
-msgstr "GTK+ téma"
+msgstr "CTK+ téma"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
 msgid "Basename of the default theme used by ctk+."
-msgstr "A GTK+ által használt alapértelmezett téma neve."
+msgstr "A CTK+ által használt alapértelmezett téma neve."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1045,65 +1045,65 @@ msgstr "Alapértelmezett betűtípus"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "A GTK+ által használt alapértelmezett betűkészlet neve."
+msgstr "A CTK+ által használt alapértelmezett betűkészlet neve."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "GTK beviteli mód előszerkesztési stílusa"
+msgid "CTK IM Preedit Style"
+msgstr "CTK beviteli mód előszerkesztési stílusa"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
 msgstr ""
-"A GTK+ által használt GTK+ beviteli mód előszerkesztési stílusának neve."
+"A CTK+ által használt CTK+ beviteli mód előszerkesztési stílusának neve."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "GTK bevitelimód-állapot stílusa"
+msgid "CTK IM Status Style"
+msgstr "CTK bevitelimód-állapot stílusa"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "A GTK+ által használt GTK+ bevitelimód-állapot stílus neve."
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "A CTK+ által használt CTK+ bevitelimód-állapot stílus neve."
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "GTK beviteli mód modul"
+msgid "CTK IM Module"
+msgstr "CTK beviteli mód modul"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "A GTK+ által használt beviteli mód modul neve."
+msgid "Name of the input method module used by CTK+."
+msgstr "A CTK+ által használt beviteli mód modul neve."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
-msgstr "GTK3 fejléc használata"
+msgid "Use CTK3 header bar"
+msgstr "CTK3 fejléc használata"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"A beépített GTK+ párbeszédablakok, mint a fájlválasztó, a színválasztó vagy "
+"A beépített CTK+ párbeszédablakok, mint a fájlválasztó, a színválasztó vagy "
 "betűkészlet-választó a fenti címsort használják-e a műveleti ablakelemekhez "
 "vagy a lenti műveleti területet. A beállítás nem érinti az egyedi "
 "párbeszédablakokat, amelyek a CtkDialog-ot vagy üzenetablakokat használnak."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "GTK3 átfedő görgetés használata"
+msgid "Use CTK3 overlay scrolling"
+msgstr "CTK3 átfedő görgetés használata"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Hogy a beépített GTK+ görgetős ablakok fedett görgetést használna-e. A "
+"Hogy a beépített CTK+ görgetős ablakok fedett görgetést használna-e. A "
 "fedett görgetés erejti és csökkenti a görgetősáv méretét addig amíg nincs "
 "rajta a fókusz."
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Ctk toolkit-wide animations"
-msgstr "GTK eszközkészlet szintű animációk engedélyezése"
+msgstr "CTK eszközkészlet szintű animációk engedélyezése"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1134,7 +1134,7 @@ msgstr "Egyéni betűkészlet használata"
 
 #: schemas/org.cafe.interface.gschema.xml:126
 msgid "Whether to use a custom font in ctk+ applications."
-msgstr "Használjon-e egyéni betűkészletet a GTK+ alkalmazásokban."
+msgstr "Használjon-e egyéni betűkészletet a CTK+ alkalmazásokban."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1189,8 +1189,8 @@ msgstr ""
 "beszúrását."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Címsor elrendezés a GTK3 kliensoldalon díszített ablakokon"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
+msgstr "Címsor elrendezés a CTK3 kliensoldalon díszített ablakokon"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
@@ -1256,12 +1256,12 @@ msgstr "Ablakméretezési tényező"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
-"GTK méretezési tényező, amely leképezi az ablak koordinátáit a tényleges "
+"CTK méretezési tényező, amely leképezi az ablak koordinátáit a tényleges "
 "eszköz képpontjaira. Hagyományos rendszereken az értéke 1, de nagy "
 "felbontású kijelzőkön (példáu:l HiDPI, Retina) ez magasabb érték is lehet "
 "(gyakran 2). Állítsa 0-ra az automatikus észleléshez."
@@ -1273,12 +1273,12 @@ msgstr "QT alkalmazások méretezési tényezője"
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Ez a beállítás meghatározza, hogy a CAFE vezérli-e a QT alkalmazások "
-"méretezési tényezőjét. Kapcsolja be a GTK méretezési aránnyal történő "
+"méretezési tényezőjét. Kapcsolja be a CTK méretezési aránnyal történő "
 "szinkronizációhoz a munkamenet indításakor, kapcsolja ki, ha máshol állítja "
 "ezt az értéket. A munkamenet újraindítását igényli."
 

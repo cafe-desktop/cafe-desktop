@@ -1006,12 +1006,12 @@ msgstr "Тема піктограм, для використання в пане
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Ctk+ Theme"
-msgstr "Тема GTK+"
+msgstr "Тема CTK+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
 msgid "Basename of the default theme used by ctk+."
-msgstr "Базова назва усталеної теми для GTK+"
+msgstr "Базова назва усталеної теми для CTK+"
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1031,58 +1031,58 @@ msgstr "Типовий шрифт"
 
 #: schemas/org.cafe.interface.gschema.xml:81
 msgid "Name of the default font used by ctk+."
-msgstr "Назва типового шрифту GTK+."
+msgstr "Назва типового шрифту CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
-msgid "GTK IM Preedit Style"
-msgstr "Стиль методу уведення GTK IM"
+msgid "CTK IM Preedit Style"
+msgstr "Стиль методу уведення CTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by ctk+."
-msgstr "Ім’я стилю стану методу уведення GTK+, що використовується ctk+."
+msgid "Name of the CTK+ input method Preedit Style used by ctk+."
+msgstr "Ім’я стилю стану методу уведення CTK+, що використовується ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
-msgid "GTK IM Status Style"
-msgstr "Стиль статусу GTK IM"
+msgid "CTK IM Status Style"
+msgstr "Стиль статусу CTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by ctk+."
-msgstr "Назва методу уведення стилю стану GTK+, що використовується ctk+"
+msgid "Name of the CTK+ input method Status Style used by ctk+."
+msgstr "Назва методу уведення стилю стану CTK+, що використовується ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:95
-msgid "GTK IM Module"
-msgstr "Модуль GTK IM"
+msgid "CTK IM Module"
+msgstr "Модуль CTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:96
-msgid "Name of the input method module used by GTK+."
-msgstr "Назва модулю методу уведення, що використовується GTK+."
+msgid "Name of the input method module used by CTK+."
+msgstr "Назва модулю методу уведення, що використовується CTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:100
-msgid "Use GTK3 header bar"
+msgid "Use CTK3 header bar"
 msgstr "Використовувати панель заголовку Ctk3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
-"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 "Чи використовувати заголовок вікна згори для відображення віджетів дій таких"
-" діялоґів GTK+ як вибір файлів, вибір кольору або вибір шрифту, або область "
+" діялоґів CTK+ як вибір файлів, вибір кольору або вибір шрифту, або область "
 "дій знизу. Ці налаштування не стосуються довільних діялоґів з використанням "
 "CtkDialog напряму або діялоґів повідомлень."
 
 #: schemas/org.cafe.interface.gschema.xml:105
-msgid "Use GTK3 overlay scrolling"
-msgstr "Використовувати накладене гортання GTK3"
+msgid "Use CTK3 overlay scrolling"
+msgstr "Використовувати накладене гортання CTK3"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
-"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"Whether built-in CTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Чи використовувати вбудованим GTK+ прогортуваним вікнам накладене гортання. "
+"Чи використовувати вбудованим CTK+ прогортуваним вікнам накладене гортання. "
 "Накладене гортання ховає і зменшує розмір смуги гортання коли не в фокусі."
 
 #: schemas/org.cafe.interface.gschema.xml:110
@@ -1173,9 +1173,9 @@ msgstr ""
 "керувальні символи."
 
 #: schemas/org.cafe.interface.gschema.xml:155
-msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgid "Titlebar layout of CTK3 client-side decorated windows"
 msgstr ""
-"Компонування заголовку в GTK3 вікнах, що використовують оздоблення на "
+"Компонування заголовку в CTK3 вікнах, що використовують оздоблення на "
 "стороні клієнта."
 
 #: schemas/org.cafe.interface.gschema.xml:156
@@ -1242,7 +1242,7 @@ msgstr "Коефіцієнт масштабування вікна"
 
 #: schemas/org.cafe.interface.gschema.xml:177
 msgid ""
-"This controls the GTK scale factor that maps from window coordinates to the "
+"This controls the CTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
@@ -1259,12 +1259,12 @@ msgstr "Коефіцієнт масштабування для QT додаткі
 #: schemas/org.cafe.interface.gschema.xml:182
 msgid ""
 "This setting determines whether CAFE controls the scale factor for QT "
-"applications. Enable to synchronize with the GTK scale factor when "
+"applications. Enable to synchronize with the CTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
 "Це налаштування визначає, чи контролює CAFE масштабовний коефіцієнт для "
-"додатків QT. Увімкніть для синхронізування з масштабовним коефіцієнтом GTK "
+"додатків QT. Увімкніть для синхронізування з масштабовним коефіцієнтом CTK "
 "при ініціалізації сеансу, відімкніть для керування цим значенням в іншому "
 "місці. Потребує перезапуску сеансу."
 

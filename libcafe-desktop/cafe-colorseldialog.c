@@ -1,4 +1,4 @@
-/* GTK - The GIMP Toolkit
+/* CTK - The GIMP Toolkit
  * Copyright (C) 1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald
  *
  * This library is free software; you can redistribute it and/or
@@ -18,10 +18,10 @@
  */
 
 /*
- * Modified by the GTK+ Team and others 1997-2000.  See the AUTHORS
- * file for a list of people on the GTK+ Team.  See the ChangeLog
+ * Modified by the CTK+ Team and others 1997-2000.  See the AUTHORS
+ * file for a list of people on the CTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
+ * CTK+ at ftp://ftp.ctk.org/pub/ctk/.
  */
 #include "config.h"
 #include "private.h"
@@ -51,8 +51,8 @@ static GObject * cafe_color_selection_dialog_buildable_get_internal_child (CtkBu
 									  const gchar  *childname);
 
 G_DEFINE_TYPE_WITH_CODE (CafeColorSelectionDialog, cafe_color_selection_dialog,
-           GTK_TYPE_DIALOG,
-           G_IMPLEMENT_INTERFACE (GTK_TYPE_BUILDABLE,
+           CTK_TYPE_DIALOG,
+           G_IMPLEMENT_INTERFACE (CTK_TYPE_BUILDABLE,
                       cafe_color_selection_dialog_buildable_interface_init))
 
 static CtkBuildableIface *parent_buildable_iface;
@@ -98,67 +98,67 @@ cafe_color_selection_dialog_class_init (CafeColorSelectionDialogClass *klass)
 				   g_param_spec_object ("color-selection",
 						     _("Color Selection"),
 						     _("The color selection embedded in the dialog."),
-						     GTK_TYPE_WIDGET,
+						     CTK_TYPE_WIDGET,
 						     G_PARAM_READABLE));
   g_object_class_install_property (gobject_class,
 				   PROP_OK_BUTTON,
 				   g_param_spec_object ("ok-button",
 						     _("OK Button"),
 						     _("The OK button of the dialog."),
-						     GTK_TYPE_WIDGET,
+						     CTK_TYPE_WIDGET,
 						     G_PARAM_READABLE));
   g_object_class_install_property (gobject_class,
 				   PROP_CANCEL_BUTTON,
 				   g_param_spec_object ("cancel-button",
 						     _("Cancel Button"),
 						     _("The cancel button of the dialog."),
-						     GTK_TYPE_WIDGET,
+						     CTK_TYPE_WIDGET,
 						     G_PARAM_READABLE));
   g_object_class_install_property (gobject_class,
 				   PROP_HELP_BUTTON,
 				   g_param_spec_object ("help-button",
 						     _("Help Button"),
 						     _("The help button of the dialog."),
-						     GTK_TYPE_WIDGET,
+						     CTK_TYPE_WIDGET,
 						     G_PARAM_READABLE));
 }
 
 static void
 cafe_color_selection_dialog_init (CafeColorSelectionDialog *colorseldiag)
 {
-  CtkDialog *dialog = GTK_DIALOG (colorseldiag);
+  CtkDialog *dialog = CTK_DIALOG (colorseldiag);
 
   _cafe_desktop_init_i18n ();
 
-  ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-  ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (dialog)), 2); /* 2 * 5 + 2 = 12 */
-  ctk_container_set_border_width (GTK_CONTAINER (ctk_dialog_get_action_area (dialog)), 5);
-  ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_action_area (dialog)), 6);
+  ctk_container_set_border_width (CTK_CONTAINER (dialog), 5);
+  ctk_box_set_spacing (CTK_BOX (ctk_dialog_get_content_area (dialog)), 2); /* 2 * 5 + 2 = 12 */
+  ctk_container_set_border_width (CTK_CONTAINER (ctk_dialog_get_action_area (dialog)), 5);
+  ctk_box_set_spacing (CTK_BOX (ctk_dialog_get_action_area (dialog)), 6);
 
   colorseldiag->colorsel = cafe_color_selection_new ();
-  ctk_container_set_border_width (GTK_CONTAINER (colorseldiag->colorsel), 5);
+  ctk_container_set_border_width (CTK_CONTAINER (colorseldiag->colorsel), 5);
   cafe_color_selection_set_has_palette (CAFE_COLOR_SELECTION(colorseldiag->colorsel), FALSE);
   cafe_color_selection_set_has_opacity_control (CAFE_COLOR_SELECTION(colorseldiag->colorsel), FALSE);
-  ctk_container_add (GTK_CONTAINER (ctk_dialog_get_content_area (GTK_DIALOG (colorseldiag))), colorseldiag->colorsel);
+  ctk_container_add (CTK_CONTAINER (ctk_dialog_get_content_area (CTK_DIALOG (colorseldiag))), colorseldiag->colorsel);
   ctk_widget_show (colorseldiag->colorsel);
 
-  colorseldiag->cancel_button = ctk_dialog_add_button (GTK_DIALOG (colorseldiag),
-                                                       GTK_STOCK_CANCEL,
-                                                       GTK_RESPONSE_CANCEL);
+  colorseldiag->cancel_button = ctk_dialog_add_button (CTK_DIALOG (colorseldiag),
+                                                       CTK_STOCK_CANCEL,
+                                                       CTK_RESPONSE_CANCEL);
 
-  colorseldiag->ok_button = ctk_dialog_add_button (GTK_DIALOG (colorseldiag),
-                                                   GTK_STOCK_OK,
-                                                   GTK_RESPONSE_OK);
+  colorseldiag->ok_button = ctk_dialog_add_button (CTK_DIALOG (colorseldiag),
+                                                   CTK_STOCK_OK,
+                                                   CTK_RESPONSE_OK);
 
   ctk_widget_grab_default (colorseldiag->ok_button);
 
-  colorseldiag->help_button = ctk_dialog_add_button (GTK_DIALOG (colorseldiag),
-                                                     GTK_STOCK_HELP,
-                                                     GTK_RESPONSE_HELP);
+  colorseldiag->help_button = ctk_dialog_add_button (CTK_DIALOG (colorseldiag),
+                                                     CTK_STOCK_HELP,
+                                                     CTK_RESPONSE_HELP);
 
   ctk_widget_hide (colorseldiag->help_button);
 
-  ctk_window_set_title (GTK_WINDOW (colorseldiag),
+  ctk_window_set_title (CTK_WINDOW (colorseldiag),
                         _("Color Selection"));
 
   //_ctk_dialog_set_ignore_separator (dialog, TRUE);
@@ -172,11 +172,11 @@ cafe_color_selection_dialog_new (const gchar *title)
   colorseldiag = g_object_new (CAFE_TYPE_COLOR_SELECTION_DIALOG, NULL);
 
   if (title)
-    ctk_window_set_title (GTK_WINDOW (colorseldiag), title);
+    ctk_window_set_title (CTK_WINDOW (colorseldiag), title);
 
-  ctk_window_set_resizable (GTK_WINDOW (colorseldiag), FALSE);
+  ctk_window_set_resizable (CTK_WINDOW (colorseldiag), FALSE);
 
-  return GTK_WIDGET (colorseldiag);
+  return CTK_WIDGET (colorseldiag);
 }
 
 /**
