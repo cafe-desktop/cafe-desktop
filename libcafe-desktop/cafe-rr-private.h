@@ -35,8 +35,8 @@ struct ScreenInfo
 
 struct CafeRRScreenPrivate
 {
-    GdkScreen *			gdk_screen;
-    GdkWindow *			gdk_root;
+    GdkScreen *			cdk_screen;
+    GdkWindow *			cdk_root;
     Display *			xdisplay;
     Screen *			xscreen;
     Window			xroot;

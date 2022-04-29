@@ -28,7 +28,7 @@
 #include <glib.h>
 #include <gio/gio.h>
 #include <glib/gi18n-lib.h>
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 #include <ctk/ctk.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
@@ -178,17 +178,17 @@ cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 }
 
 /**
- * cafe_gdk_spawn_command_line_on_screen:
+ * cafe_cdk_spawn_command_line_on_screen:
  * @screen: a GdkScreen
  * @command: a command line
  * @error: return location for errors
  *
- * This is a replacement for gdk_spawn_command_line_on_screen, deprecated
+ * This is a replacement for cdk_spawn_command_line_on_screen, deprecated
  * in GDK 2.24 and removed in GDK 3.0.
  *
- * gdk_spawn_command_line_on_screen is like g_spawn_command_line_async(),
+ * cdk_spawn_command_line_on_screen is like g_spawn_command_line_async(),
  * except the child process is spawned in such an environment that on
- * calling gdk_display_open() it would be returned a GdkDisplay with
+ * calling cdk_display_open() it would be returned a GdkDisplay with
  * screen as the default screen.
  *
  * This is useful for applications which wish to launch an application
@@ -199,7 +199,7 @@ cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
  * Since: 1.7.1
  **/
 gboolean
-cafe_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error)
+cafe_cdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error)
 {
 	GAppInfo *appinfo = NULL;
 	GdkAppLaunchContext *context = NULL;
@@ -208,7 +208,7 @@ cafe_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, error);
 
 	if (appinfo) {
-		context = gdk_display_get_app_launch_context (gdk_screen_get_display (screen));
+		context = cdk_display_get_app_launch_context (cdk_screen_get_display (screen));
 		res = g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), error);
 		g_object_unref (context);
 		g_object_unref (appinfo);

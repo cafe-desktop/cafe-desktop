@@ -34,7 +34,7 @@
 #include <glib/gstdio.h>
 
 #include <X11/Xlib.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 
 #include "cafe-rr-config.h"
 
@@ -1308,8 +1308,8 @@ cafe_rr_config_apply_with_time (CafeRRConfig *config,
 
 	crtc_assignment_free (assignment);
 
-	display = gdk_display_get_default ();
-	gdk_display_flush (display);
+	display = cdk_display_get_default ();
+	cdk_display_flush (display);
     }
 
     return result;
@@ -1906,7 +1906,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
      * status.
      */
 
-    gdk_x11_display_grab (gdk_screen_get_display (assign->screen->priv->gdk_screen));
+    cdk_x11_display_grab (cdk_screen_get_display (assign->screen->priv->cdk_screen));
 
     /* Turn off all crtcs that are currently displaying outside the new screen,
      * or are not used in the new setup
@@ -1970,7 +1970,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
 
     cafe_rr_screen_set_primary_output (assign->screen, assign->primary);
 
-    gdk_x11_display_ungrab (gdk_screen_get_display (assign->screen->priv->gdk_screen));
+    cdk_x11_display_ungrab (cdk_screen_get_display (assign->screen->priv->cdk_screen));
 
     return success;
 }

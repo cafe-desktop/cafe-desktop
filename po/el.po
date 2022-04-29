@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Chris Taklis <ctaklis@gmail.com>, 2020
-# George Kasimis <gdkparos@gmail.com>, 2020
+# George Kasimis <cdkparos@gmail.com>, 2020
 # Le Pa <lepa.22@hotmail.com>, 2020
 # Achillefs Zogias <achillefs76@hotmail.com>, 2020
 # geost <george.stefanakis@gmail.com>, 2020

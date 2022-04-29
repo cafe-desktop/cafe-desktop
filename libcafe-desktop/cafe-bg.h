@@ -32,7 +32,7 @@
 #endif
 
 #include <glib.h>
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 #include <gio/gio.h>
 #include "cafe-desktop-thumbnail.h"
 #include "cafe-bg-crossfade.h"

@@ -30,8 +30,8 @@
 #include <math.h>
 #include <string.h>
 
-#include <gdk/gdkx.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkx.h>
+#include <cdk/cdkkeysyms.h>
 #include <ctk/ctk.h>
 #include <glib/gi18n-lib.h>
 #include "cafe-colorsel.h"
@@ -675,14 +675,14 @@ set_color_icon (GdkDragContext *context,
   GdkPixbuf *pixbuf;
   guint32 pixel;
 
-  pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE,
+  pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE,
 			   8, 48, 32);
 
   pixel = (((UNSCALE (colors[COLORSEL_RED])   & 0xff00) << 16) |
 	   ((UNSCALE (colors[COLORSEL_GREEN]) & 0xff00) << 8) |
 	   ((UNSCALE (colors[COLORSEL_BLUE])  & 0xff00)));
 
-  gdk_pixbuf_fill (pixbuf, pixel);
+  cdk_pixbuf_fill (pixbuf, pixel);
 
   ctk_drag_set_icon_pixbuf (context, pixbuf, -2, -2);
   g_object_unref (pixbuf);
@@ -789,7 +789,7 @@ color_sample_drag_handle (CtkWidget        *widget,
   vals[3] = priv->has_opacity ? colsrc[COLORSEL_OPACITY] * 0xffff : 0xffff;
 
   ctk_selection_data_set (selection_data,
-			  gdk_atom_intern_static_string ("application/x-color"),
+			  cdk_atom_intern_static_string ("application/x-color"),
 			  16, (guchar *)vals, 8);
 }
 
@@ -1035,7 +1035,7 @@ palette_paint (CtkWidget    *drawing_area,
 
   ctk_widget_get_allocation (drawing_area, &allocation);
 
-  gdk_cairo_set_source_color (cr, &ctk_widget_get_style (drawing_area)->bg[CTK_STATE_NORMAL]);
+  cdk_cairo_set_source_color (cr, &ctk_widget_get_style (drawing_area)->bg[CTK_STATE_NORMAL]);
   cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
   cairo_fill (cr);
 
@@ -1133,7 +1133,7 @@ palette_drag_handle (CtkWidget        *widget,
   vals[3] = 0xffff;
 
   ctk_selection_data_set (selection_data,
-			  gdk_atom_intern_static_string ("application/x-color"),
+			  cdk_atom_intern_static_string ("application/x-color"),
 			  16, (guchar *)vals, 8);
 }
 
@@ -1169,7 +1169,7 @@ palette_change_color (CtkWidget         *drawing_area,
 {
   gint x, y;
   CafeColorSelectionPrivate *priv;
-  GdkColor gdk_color;
+  GdkColor cdk_color;
   GdkColor *current_colors;
   GdkScreen *screen;
 
@@ -1178,10 +1178,10 @@ palette_change_color (CtkWidget         *drawing_area,
 
   priv = colorsel->private_data;
 
-  gdk_color.red = UNSCALE (color[0]);
-  gdk_color.green = UNSCALE (color[1]);
-  gdk_color.blue = UNSCALE (color[2]);
-  gdk_color.pixel = 0;
+  cdk_color.red = UNSCALE (color[0]);
+  cdk_color.green = UNSCALE (color[1]);
+  cdk_color.blue = UNSCALE (color[2]);
+  cdk_color.pixel = 0;
 
   x = 0;
   y = 0;			/* Quiet GCC */
@@ -1204,7 +1204,7 @@ palette_change_color (CtkWidget         *drawing_area,
   g_assert (x < CTK_CUSTOM_PALETTE_WIDTH || y < CTK_CUSTOM_PALETTE_HEIGHT);
 
   current_colors = get_current_colors (colorsel);
-  current_colors[y * CTK_CUSTOM_PALETTE_WIDTH + x] = gdk_color;
+  current_colors[y * CTK_CUSTOM_PALETTE_WIDTH + x] = cdk_color;
 
   screen = ctk_widget_get_screen (CTK_WIDGET (colorsel));
   if (change_palette_hook != default_change_palette_func)
@@ -1212,7 +1212,7 @@ palette_change_color (CtkWidget         *drawing_area,
 			     CTK_CUSTOM_PALETTE_WIDTH * CTK_CUSTOM_PALETTE_HEIGHT);
   else if (noscreen_change_palette_hook != default_noscreen_change_palette_func)
     {
-      if (screen != gdk_screen_get_default ())
+      if (screen != cdk_screen_get_default ())
 	g_warning ("cafe_color_selection_set_change_palette_hook used by widget is not on the default screen.");
       (* noscreen_change_palette_hook) (current_colors,
 					CTK_CUSTOM_PALETTE_WIDTH * CTK_CUSTOM_PALETTE_HEIGHT);
@@ -1234,7 +1234,7 @@ override_background_color (CtkWidget *widget,
   provider = ctk_css_provider_new ();
 
   css = g_strdup_printf ("* { background-color: %s;}",
-                         gdk_rgba_to_string (rgba));
+                         cdk_rgba_to_string (rgba));
   ctk_css_provider_load_from_data (provider, css, -1, NULL);
   g_free (css);
 
@@ -1319,7 +1319,7 @@ popup_position_func (CtkMenu   *menu,
 
   g_return_if_fail (ctk_widget_get_realized (widget));
 
-  gdk_window_get_origin (ctk_widget_get_window (widget), &root_x, &root_y);
+  cdk_window_get_origin (ctk_widget_get_window (widget), &root_x, &root_y);
 
   ctk_widget_get_preferred_size (CTK_WIDGET (menu), &req, NULL);
 
@@ -1330,8 +1330,8 @@ popup_position_func (CtkMenu   *menu,
 
   /* Ensure sanity */
   screen = ctk_widget_get_screen (widget);
-  *x = CLAMP (*x, 0, MAX (0, WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) - req.width));
-  *y = CLAMP (*y, 0, MAX (0, HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) - req.height));
+  *x = CLAMP (*x, 0, MAX (0, WidthOfScreen (cdk_x11_screen_get_xscreen (screen)) - req.width));
+  *y = CLAMP (*y, 0, MAX (0, HeightOfScreen (cdk_x11_screen_get_xscreen (screen)) - req.height));
 }
 
 static void
@@ -1602,20 +1602,20 @@ make_picker_cursor (GdkScreen *screen)
 {
   GdkCursor *cursor;
 
-  cursor = gdk_cursor_new_from_name (gdk_screen_get_display (screen),
+  cursor = cdk_cursor_new_from_name (cdk_screen_get_display (screen),
 				     "color-picker");
 
   if (!cursor)
     {
       GdkPixbuf *pixbuf;
 
-      pixbuf = gdk_pixbuf_new_from_data (dropper_bits,
+      pixbuf = cdk_pixbuf_new_from_data (dropper_bits,
                                          GDK_COLORSPACE_RGB, TRUE, 8,
                                          DROPPER_WIDTH, DROPPER_HEIGHT,
                                          DROPPER_STRIDE,
                                          NULL, NULL);
 
-      cursor = gdk_cursor_new_from_pixbuf (gdk_screen_get_display (screen),
+      cursor = cdk_cursor_new_from_pixbuf (cdk_screen_get_display (screen),
                                            pixbuf,
                                            DROPPER_X_HOT, DROPPER_Y_HOT);
       g_object_unref (pixbuf);
@@ -1635,27 +1635,27 @@ grab_color_at_mouse (GdkScreen *screen,
   CafeColorSelection *colorsel = data;
   CafeColorSelectionPrivate *priv;
   GdkColor color;
-  GdkWindow *root_window = gdk_screen_get_root_window (screen);
+  GdkWindow *root_window = cdk_screen_get_root_window (screen);
 
   priv = colorsel->private_data;
 
-  pixbuf = gdk_pixbuf_get_from_window (root_window,
+  pixbuf = cdk_pixbuf_get_from_window (root_window,
                                        x_root, y_root,
                                        1, 1);
   if (!pixbuf)
     {
       gint x, y;
-      GdkDisplay *display = gdk_screen_get_display (screen);
-      GdkWindow *window = gdk_display_get_window_at_pointer (display, &x, &y);
+      GdkDisplay *display = cdk_screen_get_display (screen);
+      GdkWindow *window = cdk_display_get_window_at_pointer (display, &x, &y);
       if (!window)
 	return;
-      pixbuf = gdk_pixbuf_get_from_window (window,
+      pixbuf = cdk_pixbuf_get_from_window (window,
                                            x, y,
                                            1, 1);
       if (!pixbuf)
 	return;
     }
-  pixels = gdk_pixbuf_get_pixels (pixbuf);
+  pixels = cdk_pixbuf_get_pixels (pixbuf);
   color.red = pixels[0] * 0x101;
   color.green = pixels[1] * 0x101;
   color.blue = pixels[2] * 0x101;
@@ -1687,8 +1687,8 @@ shutdown_eyedropper (CtkWidget *widget)
 
   if (priv->has_grab)
     {
-      gdk_display_keyboard_ungrab (display, priv->grab_time);
-      gdk_display_pointer_ungrab (display, priv->grab_time);
+      cdk_display_keyboard_ungrab (display, priv->grab_time);
+      cdk_display_pointer_ungrab (display, priv->grab_time);
       ctk_grab_remove (priv->dropper_grab_widget);
 
       priv->has_grab = FALSE;
@@ -1700,7 +1700,7 @@ mouse_motion (CtkWidget      *invisible,
 	      GdkEventMotion *event,
 	      gpointer        data)
 {
-  grab_color_at_mouse (gdk_event_get_screen ((GdkEvent *)event),
+  grab_color_at_mouse (cdk_event_get_screen ((GdkEvent *)event),
 		       event->x_root, event->y_root, data);
 }
 
@@ -1714,7 +1714,7 @@ mouse_release (CtkWidget      *invisible,
   if (event->button != 1)
     return FALSE;
 
-  grab_color_at_mouse (gdk_event_get_screen ((GdkEvent *)event),
+  grab_color_at_mouse (cdk_event_get_screen ((GdkEvent *)event),
 		       event->x_root, event->y_root, data);
 
   shutdown_eyedropper (CTK_WIDGET (data));
@@ -1737,12 +1737,12 @@ key_press (CtkWidget   *invisible,
            gpointer     data)
 {
   GdkDisplay *display = ctk_widget_get_display (invisible);
-  GdkScreen *screen = gdk_event_get_screen ((GdkEvent *)event);
+  GdkScreen *screen = cdk_event_get_screen ((GdkEvent *)event);
   guint state = event->state & ctk_accelerator_get_default_mod_mask ();
   gint x, y;
   gint dx, dy;
 
-  gdk_display_get_pointer (display, NULL, &x, &y, NULL);
+  cdk_display_get_pointer (display, NULL, &x, &y, NULL);
 
   dx = 0;
   dy = 0;
@@ -1795,7 +1795,7 @@ key_press (CtkWidget   *invisible,
       return FALSE;
     }
 
-  gdk_display_warp_pointer (display, screen, x + dx, y + dy);
+  cdk_display_warp_pointer (display, screen, x + dx, y + dy);
 
   return TRUE;
 
@@ -1867,12 +1867,12 @@ get_screen_color (CtkWidget *button)
       priv->dropper_grab_widget = grab_widget;
     }
 
-  if (gdk_keyboard_grab (ctk_widget_get_window (priv->dropper_grab_widget),
+  if (cdk_keyboard_grab (ctk_widget_get_window (priv->dropper_grab_widget),
                          FALSE, time) != GDK_GRAB_SUCCESS)
     return;
 
   picker_cursor = make_picker_cursor (screen);
-  grab_status = gdk_pointer_grab (ctk_widget_get_window (priv->dropper_grab_widget),
+  grab_status = cdk_pointer_grab (ctk_widget_get_window (priv->dropper_grab_widget),
 				  FALSE,
 				  GDK_BUTTON_RELEASE_MASK | GDK_BUTTON_PRESS_MASK | GDK_POINTER_MOTION_MASK,
 				  NULL,
@@ -1882,7 +1882,7 @@ get_screen_color (CtkWidget *button)
 
   if (grab_status != GDK_GRAB_SUCCESS)
     {
-      gdk_display_keyboard_ungrab (ctk_widget_get_display (button), time);
+      cdk_display_keyboard_ungrab (ctk_widget_get_display (button), time);
       return;
     }
 
@@ -1912,7 +1912,7 @@ hex_changed (CtkWidget *hex_entry,
     return;
 
   text = ctk_editable_get_chars (CTK_EDITABLE (priv->hex_entry), 0, -1);
-  if (gdk_color_parse (text, &color))
+  if (cdk_color_parse (text, &color))
     {
       priv->color[COLORSEL_RED] = CLAMP (color.red/65535.0, 0.0, 1.0);
       priv->color[COLORSEL_GREEN] = CLAMP (color.green/65535.0, 0.0, 1.0);
@@ -2222,7 +2222,7 @@ static void
 default_noscreen_change_palette_func (const GdkColor *colors,
 				      gint            n_colors)
 {
-  default_change_palette_func (gdk_screen_get_default (), colors, n_colors);
+  default_change_palette_func (cdk_screen_get_default (), colors, n_colors);
 }
 
 static void
@@ -2700,7 +2700,7 @@ cafe_color_selection_is_adjusting (CafeColorSelection *colorsel)
  * @n_colors: return location for length of array.
  *
  * Parses a color palette string; the string is a colon-separated
- * list of color names readable by gdk_color_parse().
+ * list of color names readable by cdk_color_parse().
  *
  * Return value: %TRUE if a palette was successfully parsed.
  **/
@@ -2739,7 +2739,7 @@ cafe_color_selection_palette_from_string (const gchar *str,
             }
 
           retval = g_renew (GdkColor, retval, count + 1);
-          if (!gdk_color_parse (start, retval + count))
+          if (!cdk_color_parse (start, retval + count))
             {
               goto failed;
             }

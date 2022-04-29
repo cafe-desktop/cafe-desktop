@@ -77,7 +77,7 @@ config_h.set('HAVE_RANDR', randr_dep.found())
 iso_codes = dependency('iso-codes')
 iso_codes_prefix = iso_codes.get_pkgconfig_variable('prefix')
 libmdt_dep = [
-  dependency('gdk-pixbuf-2.0'),
+  dependency('cdk-pixbuf-2.0'),
   dependency('gobject-2.0'),
   dependency('glib-2.0', version: '>= 2.50.0'),
   dependency('gio-2.0', version: '>= 2.26.0'),
