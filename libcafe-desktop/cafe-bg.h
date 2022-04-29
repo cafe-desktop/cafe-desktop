@@ -117,7 +117,7 @@ const gchar *    cafe_bg_get_filename          (CafeBG               *bg);
 
 /* Drawing and thumbnailing */
 void             cafe_bg_draw                  (CafeBG               *bg,
-						 CdkPixbuf             *dest,
+						 GdkPixbuf             *dest,
 						 CdkScreen	       *screen,
                                                  gboolean               is_root);
 
@@ -140,7 +140,7 @@ gboolean         cafe_bg_get_image_size        (CafeBG               *bg,
                                                  int                    best_height,
 						 int                   *width,
 						 int                   *height);
-CdkPixbuf *      cafe_bg_create_thumbnail      (CafeBG               *bg,
+GdkPixbuf *      cafe_bg_create_thumbnail      (CafeBG               *bg,
 						 CafeDesktopThumbnailFactory *factory,
 						 CdkScreen             *screen,
 						 int                    dest_width,
@@ -150,7 +150,7 @@ gboolean         cafe_bg_is_dark               (CafeBG               *bg,
 						 int                    dest_height);
 gboolean         cafe_bg_has_multiple_sizes    (CafeBG               *bg);
 gboolean         cafe_bg_changes_with_time     (CafeBG               *bg);
-CdkPixbuf *      cafe_bg_create_frame_thumbnail (CafeBG              *bg,
+GdkPixbuf *      cafe_bg_create_frame_thumbnail (CafeBG              *bg,
 						 CafeDesktopThumbnailFactory *factory,
 						 CdkScreen             *screen,
 						 int                    dest_width,
