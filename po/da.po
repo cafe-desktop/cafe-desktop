@@ -1009,8 +1009,8 @@ msgstr "Ikontema der skal benyttes til panelet, Caja etc."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Gtk+-tema"
+msgid "Ctk+ Theme"
+msgstr "Ctk+-tema"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -1073,12 +1073,12 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Om indbyggede GTK+-dialoger såsom filvælgeren, farvevælgeren eller "
 "skriftvælgeren vil anvende en teksthovedbjælke øverst for at vise "
 "handlingskontroller, eller et handlingsområde i bunden. Denne indstilling "
-"påvirker ikke tilpassede dialoger, der bruger GtkDialog direkte eller "
+"påvirker ikke tilpassede dialoger, der bruger CtkDialog direkte eller "
 "beskeddialoger."
 
 #: schemas/org.cafe.interface.gschema.xml:105
@@ -1095,8 +1095,8 @@ msgstr ""
 "kommer i fokus."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
-msgstr "Aktiver generelle Gtk-værkøjsanimationer"
+msgid "Enable Ctk toolkit-wide animations"
+msgstr "Aktiver generelle Ctk-værkøjsanimationer"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1136,15 +1136,15 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Om der skal vises en statusbjælkemåler til højre."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Modul for GtkFileChooser"
+msgid "Module for CtkFileChooser"
+msgstr "Modul for CtkFileChooser"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
-"Modul der skal bruges som filsystemmodul for GtkFileChooser-kontrollen. "
+"Modul der skal bruges som filsystemmodul for CtkFileChooser-kontrollen. "
 "Mulige værdier er »gio« og »ctk+«."
 
 #: schemas/org.cafe.interface.gschema.xml:140
@@ -1188,13 +1188,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Denne indstilling bestemmer hvilke knapper, der skal placeres i titelbjælken"
 " for klientside dekorerede vinduer, og hvorvidt de skal placeres til venstre"
 " eller til højre. Se "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1205,12 +1205,12 @@ msgstr "Brug en global menulinje til at vise programmenuer"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Denne indstilling bestemmer hvor programmenu vil blive vist - i et vindue "
 "eller i et panel med MenuModel-protokollen. Se "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1221,12 +1221,12 @@ msgstr "Brug en global menulinje til at vise vinduesmenulinjer"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Denne indstilling bestemmer hvor vinduesmenulinjer vil blive vist - i et "
 "vindue eller på et panel med MenuModel-protokollen. Se "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170

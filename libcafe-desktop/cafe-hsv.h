@@ -50,7 +50,7 @@ typedef struct _CafeHSVClass         CafeHSVClass;
 
 struct _CafeHSV
 {
-  GtkWidget parent_instance;
+  CtkWidget parent_instance;
 
   /*< private >*/
   CafeHSVPrivate *priv;
@@ -58,14 +58,14 @@ struct _CafeHSV
 
 struct _CafeHSVClass
 {
-  GtkWidgetClass parent_class;
+  CtkWidgetClass parent_class;
 
   /* Notification signals */
   void (* changed) (CafeHSV         *hsv);
 
   /* Keybindings */
   void (* move)    (CafeHSV         *hsv,
-                    GtkDirectionType type);
+                    CtkDirectionType type);
 
   /* Padding for future expansion */
   void (*_ctk_reserved1) (void);
@@ -76,7 +76,7 @@ struct _CafeHSVClass
 
 
 GType      cafe_hsv_get_type     (void) G_GNUC_CONST;
-GtkWidget* cafe_hsv_new          (void);
+CtkWidget* cafe_hsv_new          (void);
 void       cafe_hsv_set_color    (CafeHSV    *hsv,
 				  double      h,
 				  double      s,

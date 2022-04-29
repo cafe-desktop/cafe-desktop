@@ -29,8 +29,8 @@
 int
 main (int argc, char **argv)
 {
-    GtkWindow *window = NULL;
-    GtkWidget *widget = NULL;
+    CtkWindow *window = NULL;
+    CtkWidget *widget = NULL;
 
     /* initialize GTK+ */
     ctk_init (&argc, &argv);

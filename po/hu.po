@@ -1019,7 +1019,7 @@ msgstr "A panel, caja, stb által használandó ikontéma."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
+msgid "Ctk+ Theme"
 msgstr "GTK+ téma"
 
 #: schemas/org.cafe.interface.gschema.xml:66
@@ -1081,12 +1081,12 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "A beépített GTK+ párbeszédablakok, mint a fájlválasztó, a színválasztó vagy "
 "betűkészlet-választó a fenti címsort használják-e a műveleti ablakelemekhez "
 "vagy a lenti műveleti területet. A beállítás nem érinti az egyedi "
-"párbeszédablakokat, amelyek a GtkDialog-ot vagy üzenetablakokat használnak."
+"párbeszédablakokat, amelyek a CtkDialog-ot vagy üzenetablakokat használnak."
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1102,7 +1102,7 @@ msgstr ""
 "rajta a fókusz."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr "GTK eszközkészlet szintű animációk engedélyezése"
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1145,15 +1145,15 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Megjelenjen-e egy állapotsor a jobb oldalon."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Modul a GtkFileChooser elemhez"
+msgid "Module for CtkFileChooser"
+msgstr "Modul a CtkFileChooser elemhez"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
-"A GtkFileChooser elemhez fájlrendszermodellként használandó modul. "
+"A CtkFileChooser elemhez fájlrendszermodellként használandó modul. "
 "Lehetséges értékek: „gio” és „ctk+”."
 
 #: schemas/org.cafe.interface.gschema.xml:140
@@ -1197,12 +1197,12 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Ez a beállítás határozza meg, hogy mely gombok kerüljenek a kliens oldali "
 "díszített ablakokra és hogy az ablak bal- vagy jobboldalára. Lásd "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1213,12 +1213,12 @@ msgstr "Globális menüsáv használata az alkalmazásmenük megjelenítéséhez
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "A beállítás meghatározza, hogy hol jelenjen meg az alkalmazásmenü – az "
 "ablakon, vagy a panelen a MenuModel protokoll használatával. Lásd: "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1230,12 +1230,12 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Ez a beállítás határozza meg, hogy hol jelenjenek meg a menüsávok – az "
 "ablakon, vagy a panelen a MenuModel protokoll használatával. Lásd: "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:170

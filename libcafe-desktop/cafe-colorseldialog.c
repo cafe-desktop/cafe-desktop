@@ -45,9 +45,9 @@ enum {
 /* CafeColorSelectionDialog */
 /***************************/
 
-static void cafe_color_selection_dialog_buildable_interface_init     (GtkBuildableIface *iface);
-static GObject * cafe_color_selection_dialog_buildable_get_internal_child (GtkBuildable *buildable,
-									  GtkBuilder   *builder,
+static void cafe_color_selection_dialog_buildable_interface_init     (CtkBuildableIface *iface);
+static GObject * cafe_color_selection_dialog_buildable_get_internal_child (CtkBuildable *buildable,
+									  CtkBuilder   *builder,
 									  const gchar  *childname);
 
 G_DEFINE_TYPE_WITH_CODE (CafeColorSelectionDialog, cafe_color_selection_dialog,
@@ -55,7 +55,7 @@ G_DEFINE_TYPE_WITH_CODE (CafeColorSelectionDialog, cafe_color_selection_dialog,
            G_IMPLEMENT_INTERFACE (GTK_TYPE_BUILDABLE,
                       cafe_color_selection_dialog_buildable_interface_init))
 
-static GtkBuildableIface *parent_buildable_iface;
+static CtkBuildableIface *parent_buildable_iface;
 
 static void
 cafe_color_selection_dialog_get_property (GObject         *object,
@@ -126,7 +126,7 @@ cafe_color_selection_dialog_class_init (CafeColorSelectionDialogClass *klass)
 static void
 cafe_color_selection_dialog_init (CafeColorSelectionDialog *colorseldiag)
 {
-  GtkDialog *dialog = GTK_DIALOG (colorseldiag);
+  CtkDialog *dialog = GTK_DIALOG (colorseldiag);
 
   _cafe_desktop_init_i18n ();
 
@@ -164,7 +164,7 @@ cafe_color_selection_dialog_init (CafeColorSelectionDialog *colorseldiag)
   //_ctk_dialog_set_ignore_separator (dialog, TRUE);
 }
 
-GtkWidget*
+CtkWidget*
 cafe_color_selection_dialog_new (const gchar *title)
 {
   CafeColorSelectionDialog *colorseldiag;
@@ -189,7 +189,7 @@ cafe_color_selection_dialog_new (const gchar *title)
  *
  * Since: 1.9.1
  **/
-GtkWidget*
+CtkWidget*
 cafe_color_selection_dialog_get_color_selection (CafeColorSelectionDialog *colorsel)
 {
   g_return_val_if_fail (CAFE_IS_COLOR_SELECTION_DIALOG (colorsel), NULL);
@@ -198,15 +198,15 @@ cafe_color_selection_dialog_get_color_selection (CafeColorSelectionDialog *color
 }
 
 static void
-cafe_color_selection_dialog_buildable_interface_init (GtkBuildableIface *iface)
+cafe_color_selection_dialog_buildable_interface_init (CtkBuildableIface *iface)
 {
   parent_buildable_iface = g_type_interface_peek_parent (iface);
   iface->get_internal_child = cafe_color_selection_dialog_buildable_get_internal_child;
 }
 
 static GObject *
-cafe_color_selection_dialog_buildable_get_internal_child (GtkBuildable *buildable,
-							 GtkBuilder   *builder,
+cafe_color_selection_dialog_buildable_get_internal_child (CtkBuildable *buildable,
+							 CtkBuilder   *builder,
 							 const gchar  *childname)
 {
     if (strcmp(childname, "ok_button") == 0)

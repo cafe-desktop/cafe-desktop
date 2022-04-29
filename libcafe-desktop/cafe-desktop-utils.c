@@ -444,8 +444,8 @@ hls_to_rgb (gdouble *h,
 #define LIGHTNESS_MULT 1.3
 #define DARKNESS_MULT  0.7
 void
-cafe_desktop_ctk_style_get_light_color (GtkStyleContext *style,
-                                        GtkStateFlags    state,
+cafe_desktop_ctk_style_get_light_color (CtkStyleContext *style,
+                                        CtkStateFlags    state,
                                         GdkRGBA         *color)
 {
 	ctk_style_context_get_background_color (style, state, color);
@@ -453,8 +453,8 @@ cafe_desktop_ctk_style_get_light_color (GtkStyleContext *style,
 }
 
 void
-cafe_desktop_ctk_style_get_dark_color (GtkStyleContext *style,
-                                       GtkStateFlags    state,
+cafe_desktop_ctk_style_get_dark_color (CtkStyleContext *style,
+                                       CtkStateFlags    state,
                                        GdkRGBA         *color)
 {
 	ctk_style_context_get_background_color (style, state, color);

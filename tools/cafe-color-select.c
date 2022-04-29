@@ -34,7 +34,7 @@
     textdomain(package);
 
 gboolean
-copy_color (GtkWidget *widget, GdkEvent  *event, CafeColorSelectionDialog *color_dialog)
+copy_color (CtkWidget *widget, GdkEvent  *event, CafeColorSelectionDialog *color_dialog)
 {
     GdkColor color;
     gchar *color_string;
@@ -51,9 +51,9 @@ copy_color (GtkWidget *widget, GdkEvent  *event, CafeColorSelectionDialog *color
 int
 main (int argc, char **argv)
 {
-    GtkWidget *color_dialog = NULL;
-    GtkWidget *color_selection;
-    GtkWidget *widget;
+    CtkWidget *color_dialog = NULL;
+    CtkWidget *color_selection;
+    CtkWidget *widget;
 
     cafe_gettext (GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 

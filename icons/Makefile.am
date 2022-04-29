@@ -25,7 +25,7 @@ install-data-hook: update-icon-cache
 uninstall-hook: update-icon-cache
 update-icon-cache:
 	@-if test -z "$(DESTDIR)"; then \
-		echo "Updating Gtk icon cache."; \
+		echo "Updating Ctk icon cache."; \
 		$(ctk_update_icon_cache); \
 	else \
 		echo "*** Icon cache not updated.  After (un)install, run this:"; \

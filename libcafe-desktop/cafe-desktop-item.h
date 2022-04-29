@@ -217,9 +217,9 @@ CafeDesktopItemStatus  cafe_desktop_item_get_file_status   (const CafeDesktopIte
  * it and returns %NULL if it can't
  */
 char *                  cafe_desktop_item_get_icon          (const CafeDesktopItem     *item,
-							      GtkIconTheme               *icon_theme);
+							      CtkIconTheme               *icon_theme);
 
-char *                  cafe_desktop_item_find_icon         (GtkIconTheme               *icon_theme,
+char *                  cafe_desktop_item_find_icon         (CtkIconTheme               *icon_theme,
 							      const char                 *icon,
 							      /* size is only a suggestion */
 							      int                         desired_size,

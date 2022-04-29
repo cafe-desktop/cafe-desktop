@@ -57,7 +57,7 @@ HTML_IMAGES=
 # e.g. content_files=running.sgml building.sgml changes-2.0.sgml
 content_files=
 
-# SGML files where ctk-doc abbreviations (#GtkWidget) are expanded
+# SGML files where ctk-doc abbreviations (#CtkWidget) are expanded
 # These files must be listed here *and* in content_files
 # e.g. expand_content_files=running.sgml
 expand_content_files=

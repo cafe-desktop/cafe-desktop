@@ -46,17 +46,17 @@ typedef struct _CafeColorSelectionDialogClass  CafeColorSelectionDialogClass;
 
 struct _CafeColorSelectionDialog
 {
-  GtkDialog parent_instance;
+  CtkDialog parent_instance;
 
-  GtkWidget *colorsel;
-  GtkWidget *ok_button;
-  GtkWidget *cancel_button;
-  GtkWidget *help_button;
+  CtkWidget *colorsel;
+  CtkWidget *ok_button;
+  CtkWidget *cancel_button;
+  CtkWidget *help_button;
 };
 
 struct _CafeColorSelectionDialogClass
 {
-  GtkDialogClass parent_class;
+  CtkDialogClass parent_class;
 
   /* Padding for future expansion */
   void (*_ctk_reserved1) (void);
@@ -68,8 +68,8 @@ struct _CafeColorSelectionDialogClass
 
 /* ColorSelectionDialog */
 GType      cafe_color_selection_dialog_get_type            (void) G_GNUC_CONST;
-GtkWidget* cafe_color_selection_dialog_new                 (const gchar *title);
-GtkWidget* cafe_color_selection_dialog_get_color_selection (CafeColorSelectionDialog *colorsel);
+CtkWidget* cafe_color_selection_dialog_new                 (const gchar *title);
+CtkWidget* cafe_color_selection_dialog_get_color_selection (CafeColorSelectionDialog *colorsel);
 
 
 G_END_DECLS

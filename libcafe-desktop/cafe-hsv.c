@@ -98,31 +98,31 @@ enum {
   LAST_SIGNAL
 };
 
-static void     cafe_hsv_destroy              (GtkWidget          *widget);
-static void     cafe_hsv_realize              (GtkWidget          *widget);
-static void     cafe_hsv_unrealize            (GtkWidget          *widget);
-static void     cafe_hsv_get_preferred_width  (GtkWidget          *widget,
+static void     cafe_hsv_destroy              (CtkWidget          *widget);
+static void     cafe_hsv_realize              (CtkWidget          *widget);
+static void     cafe_hsv_unrealize            (CtkWidget          *widget);
+static void     cafe_hsv_get_preferred_width  (CtkWidget          *widget,
                                                gint               *minimum,
                                                gint               *natural);
-static void     cafe_hsv_get_preferred_height (GtkWidget          *widget,
+static void     cafe_hsv_get_preferred_height (CtkWidget          *widget,
                                                gint               *minimum,
                                                gint               *natural);
-static void     cafe_hsv_size_allocate        (GtkWidget          *widget,
-                                               GtkAllocation      *allocation);
-static gboolean cafe_hsv_button_press         (GtkWidget          *widget,
+static void     cafe_hsv_size_allocate        (CtkWidget          *widget,
+                                               CtkAllocation      *allocation);
+static gboolean cafe_hsv_button_press         (CtkWidget          *widget,
                                                GdkEventButton     *event);
-static gboolean cafe_hsv_button_release       (GtkWidget          *widget,
+static gboolean cafe_hsv_button_release       (CtkWidget          *widget,
                                                GdkEventButton     *event);
-static gboolean cafe_hsv_motion               (GtkWidget          *widget,
+static gboolean cafe_hsv_motion               (CtkWidget          *widget,
                                                GdkEventMotion     *event);
-static gboolean cafe_hsv_draw                 (GtkWidget          *widget,
+static gboolean cafe_hsv_draw                 (CtkWidget          *widget,
                                                cairo_t            *cr);
-static gboolean cafe_hsv_grab_broken          (GtkWidget          *widget,
+static gboolean cafe_hsv_grab_broken          (CtkWidget          *widget,
                                                GdkEventGrabBroken *event);
-static gboolean cafe_hsv_focus                (GtkWidget          *widget,
-                                               GtkDirectionType    direction);
+static gboolean cafe_hsv_focus                (CtkWidget          *widget,
+                                               CtkDirectionType    direction);
 static void     cafe_hsv_move                 (CafeHSV            *hsv,
-                                               GtkDirectionType    dir);
+                                               CtkDirectionType    dir);
 
 static guint hsv_signals[LAST_SIGNAL];
 
@@ -133,12 +133,12 @@ static void
 cafe_hsv_class_init (CafeHSVClass *class)
 {
   GObjectClass    *gobject_class;
-  GtkWidgetClass  *widget_class;
+  CtkWidgetClass  *widget_class;
   CafeHSVClass    *hsv_class;
-  GtkBindingSet   *binding_set;
+  CtkBindingSet   *binding_set;
 
   gobject_class = (GObjectClass *) class;
-  widget_class = (GtkWidgetClass *) class;
+  widget_class = (CtkWidgetClass *) class;
   hsv_class = CAFE_HSV_CLASS (class);
 
   widget_class->destroy = cafe_hsv_destroy;
@@ -225,17 +225,17 @@ cafe_hsv_init (CafeHSV *hsv)
 }
 
 static void
-cafe_hsv_destroy (GtkWidget *widget)
+cafe_hsv_destroy (CtkWidget *widget)
 {
   GTK_WIDGET_CLASS (cafe_hsv_parent_class)->destroy (widget);
 }
 
 static void
-cafe_hsv_realize (GtkWidget *widget)
+cafe_hsv_realize (CtkWidget *widget)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
   GdkWindow *parent_window;
   GdkWindowAttr attr;
   int attr_mask;
@@ -269,7 +269,7 @@ cafe_hsv_realize (GtkWidget *widget)
 }
 
 static void
-cafe_hsv_unrealize (GtkWidget *widget)
+cafe_hsv_unrealize (CtkWidget *widget)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
@@ -282,7 +282,7 @@ cafe_hsv_unrealize (GtkWidget *widget)
 }
 
 static void
-cafe_hsv_get_preferred_width (GtkWidget *widget,
+cafe_hsv_get_preferred_width (CtkWidget *widget,
                               gint      *minimum,
                               gint      *natural)
 {
@@ -301,7 +301,7 @@ cafe_hsv_get_preferred_width (GtkWidget *widget,
 }
 
 static void
-cafe_hsv_get_preferred_height (GtkWidget *widget,
+cafe_hsv_get_preferred_height (CtkWidget *widget,
                                gint      *minimum,
                                gint      *natural)
 {
@@ -320,8 +320,8 @@ cafe_hsv_get_preferred_height (GtkWidget *widget,
 }
 
 static void
-cafe_hsv_size_allocate (GtkWidget     *widget,
-                        GtkAllocation *allocation)
+cafe_hsv_size_allocate (CtkWidget     *widget,
+                        CtkAllocation *allocation)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
@@ -425,7 +425,7 @@ compute_triangle (CafeHSV *hsv,
                   gint    *vy)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  GtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = GTK_WIDGET (hsv);
   gdouble center_x;
   gdouble center_y;
   gdouble inner, outer;
@@ -452,7 +452,7 @@ is_in_ring (CafeHSV *hsv,
             gdouble  y)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  GtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = GTK_WIDGET (hsv);
   gdouble dx, dy, dist;
   gdouble center_x;
   gdouble center_y;
@@ -478,7 +478,7 @@ compute_sv (CafeHSV  *hsv,
             gdouble  *s,
             gdouble  *v)
 {
-  GtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = GTK_WIDGET (hsv);
   int ihx, ihy, isx, isy, ivx, ivy;
   double hx, hy, sx, sy, vx, vy;
   double center_x;
@@ -582,7 +582,7 @@ compute_v (CafeHSV *hsv,
            gdouble  x,
            gdouble  y)
 {
-  GtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = GTK_WIDGET (hsv);
   double center_x;
   double center_y;
   double dx, dy;
@@ -624,7 +624,7 @@ set_cross_grab (CafeHSV   *hsv,
 }
 
 static gboolean
-cafe_hsv_grab_broken (GtkWidget          *widget,
+cafe_hsv_grab_broken (CtkWidget          *widget,
                       GdkEventGrabBroken *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
@@ -636,7 +636,7 @@ cafe_hsv_grab_broken (GtkWidget          *widget,
 }
 
 static gint
-cafe_hsv_button_press (GtkWidget      *widget,
+cafe_hsv_button_press (CtkWidget      *widget,
                        GdkEventButton *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
@@ -685,7 +685,7 @@ cafe_hsv_button_press (GtkWidget      *widget,
 }
 
 static gint
-cafe_hsv_button_release (GtkWidget      *widget,
+cafe_hsv_button_release (CtkWidget      *widget,
                          GdkEventButton *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
@@ -727,7 +727,7 @@ cafe_hsv_button_release (GtkWidget      *widget,
 }
 
 static gint
-cafe_hsv_motion (GtkWidget      *widget,
+cafe_hsv_motion (CtkWidget      *widget,
                  GdkEventMotion *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
@@ -769,7 +769,7 @@ paint_ring (CafeHSV *hsv,
             cairo_t *cr)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  GtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = GTK_WIDGET (hsv);
   int xx, yy, width, height;
   gdouble dx, dy, dist;
   gdouble center_x;
@@ -913,7 +913,7 @@ paint_triangle (CafeHSV  *hsv,
                 gboolean  draw_focus)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  GtkWidget *widget = GTK_WIDGET (hsv);
+  CtkWidget *widget = GTK_WIDGET (hsv);
   gint hx, hy, sx, sy, vx, vy; /* HSV vertices */
   gint x1, y1, r1, g1, b1; /* First vertex in scanline order */
   gint x2, y2, r2, g2, b2; /* Second vertex */
@@ -928,7 +928,7 @@ paint_triangle (CafeHSV  *hsv,
   gdouble r, g, b;
   gint stride;
   int width, height;
-  GtkStyleContext *context;
+  CtkStyleContext *context;
 
   width = ctk_widget_get_allocated_width (widget);
   height = ctk_widget_get_allocated_height (widget);
@@ -1118,7 +1118,7 @@ paint_triangle (CafeHSV  *hsv,
 
 /* Paints the contents of the HSV color selector */
 static gboolean
-cafe_hsv_draw (GtkWidget *widget,
+cafe_hsv_draw (CtkWidget *widget,
                cairo_t   *cr)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
@@ -1133,7 +1133,7 @@ cafe_hsv_draw (GtkWidget *widget,
 
   if (draw_focus && priv->focus_on_ring)
     {
-      GtkStyleContext *context;
+      CtkStyleContext *context;
 
       context = ctk_widget_get_style_context (widget);
 
@@ -1146,8 +1146,8 @@ cafe_hsv_draw (GtkWidget *widget,
 }
 
 static gboolean
-cafe_hsv_focus (GtkWidget       *widget,
-                GtkDirectionType dir)
+cafe_hsv_focus (CtkWidget       *widget,
+                CtkDirectionType dir)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
@@ -1208,7 +1208,7 @@ cafe_hsv_focus (GtkWidget       *widget,
  *
  * Returns: A newly-created HSV color selector.
  */
-GtkWidget*
+CtkWidget*
 cafe_hsv_new (void)
 {
   return g_object_new (CAFE_TYPE_HSV, NULL);
@@ -1367,7 +1367,7 @@ cafe_hsv_is_adjusting (CafeHSV *hsv)
 
 static void
 cafe_hsv_move (CafeHSV         *hsv,
-               GtkDirectionType dir)
+               CtkDirectionType dir)
 {
   CafeHSVPrivate *priv = hsv->priv;
   gdouble hue, sat, val;

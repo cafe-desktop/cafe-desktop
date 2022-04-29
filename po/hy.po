@@ -992,8 +992,8 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Gtk+ Թեմա"
+msgid "Ctk+ Theme"
+msgstr "Ctk+ Թեմա"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -1056,12 +1056,12 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Արդյոք կառուցվել է GTK+ երկխոսությունները, ինչպիսիք են ֆայլ ընտրողը, գույն "
 "ընտրողը կամ տառատեսակը ընտրողը, կօգտագործի գլխավոր բարը վերևում գործողության"
 " դաշտերը ցույց տալու համար, կամ գործողությունների տարածքը ներքևի մասում։ Այս"
-" պարամետրը չի ազդում սովորական երկխոսություններում օգտագործելով GtkDialog "
+" պարամետրը չի ազդում սովորական երկխոսություններում օգտագործելով CtkDialog "
 "անմիջականորեն կամ հաղորդագրության երկխոսություններում։"
 
 #: schemas/org.cafe.interface.gschema.xml:105
@@ -1078,8 +1078,8 @@ msgstr ""
 "կենտրոնացվում է։"
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
-msgstr "Միացնել Gtk ծրագրային գործիքի լայն անիմացիաները։"
+msgid "Enable Ctk toolkit-wide animations"
+msgstr "Միացնել Ctk ծրագրային գործիքի լայն անիմացիաները։"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1121,15 +1121,15 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Արդյոք ցուցադրել կարգավիճակների բարը աջ կողմում"
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Մոդուլ Gtk Ֆայլերի Ընտրողի համար"
+msgid "Module for CtkFileChooser"
+msgstr "Մոդուլ Ctk Ֆայլերի Ընտրողի համար"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
-"Մոդուլը օգտագործել որպես ֆայլային համակարգի մոդուլ GtkFileChooser դաշտի "
+"Մոդուլը օգտագործել որպես ֆայլային համակարգի մոդուլ CtkFileChooser դաշտի "
 "համար։ Հնարավոր արժեքներն են՝ \"gio\" և \"ctk+\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
@@ -1173,13 +1173,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Այս պարամետրը սահմանում է, որը կոճակները պետք է տեղադրել հաճախորդների կողմից"
 " դեկորացված պատուհանների  titlebar մեջ և արդյոք դրանք պետք է տեղադրված լինեն"
 " ձախից աջ։ Տես "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1190,7 +1190,7 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 
@@ -1202,7 +1202,7 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 

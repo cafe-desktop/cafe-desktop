@@ -56,7 +56,7 @@ typedef struct _CafeColorButtonClass     CafeColorButtonClass;
 typedef struct _CafeColorButtonPrivate   CafeColorButtonPrivate;
 
 struct _CafeColorButton {
-  GtkButton button;
+  CtkButton button;
 
   /*< private >*/
 
@@ -64,7 +64,7 @@ struct _CafeColorButton {
 };
 
 struct _CafeColorButtonClass {
-  GtkButtonClass parent_class;
+  CtkButtonClass parent_class;
 
   void (* color_set) (CafeColorButton *cp);
 
@@ -77,8 +77,8 @@ struct _CafeColorButtonClass {
 
 
 GType      cafe_color_button_get_type       (void) G_GNUC_CONST;
-GtkWidget *cafe_color_button_new            (void);
-GtkWidget *cafe_color_button_new_with_color (const GdkColor *color);
+CtkWidget *cafe_color_button_new            (void);
+CtkWidget *cafe_color_button_new_with_color (const GdkColor *color);
 void       cafe_color_button_set_color      (CafeColorButton *color_button,
 					    const GdkColor *color);
 void       cafe_color_button_set_rgba       (CafeColorButton *color_button,

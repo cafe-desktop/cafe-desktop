@@ -946,7 +946,7 @@ msgstr "用于面板、Caja 等的图标主题。"
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
+msgid "Ctk+ Theme"
 msgstr "GTK+ 主题"
 
 #: schemas/org.cafe.interface.gschema.xml:66
@@ -1005,9 +1005,9 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
-"是否在 GTK+ 内置对话框，如文件选择器、颜色选择器以及字体选择器中使用带有各类操作的顶栏以及底栏按钮。该设置不影响任何使用 GtkDialog "
+"是否在 GTK+ 内置对话框，如文件选择器、颜色选择器以及字体选择器中使用带有各类操作的顶栏以及底栏按钮。该设置不影响任何使用 CtkDialog "
 "的自定义对话框或消息框。"
 
 #: schemas/org.cafe.interface.gschema.xml:105
@@ -1021,7 +1021,7 @@ msgid ""
 msgstr "嵌入式 GTK+ 滚动窗口是否使用复合滚动。复合滚动可以在失去焦点时缩小或隐藏滚动条。"
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr "使用 GTK 全局动画"
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1062,14 +1062,14 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "是否在右边显示状态栏指示。"
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "用于 GtkFileChooser 的模块"
+msgid "Module for CtkFileChooser"
+msgstr "用于 CtkFileChooser 的模块"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
-msgstr "GtkFileChooser 部件所用的文件系统模型的模块。可供选择的值是“gio”和“ctk+”。"
+msgstr "CtkFileChooser 部件所用的文件系统模型的模块。可供选择的值是“gio”和“ctk+”。"
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1108,11 +1108,11 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "此设置确定哪些按钮应放在客户端窗口标题栏, 以及它们应该放在左侧或右侧。详情: "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout ."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1123,11 +1123,11 @@ msgstr "为应用程序显示全局菜单"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "此设置确定在何处显示应用程序菜单：在窗口中，或在使用 MenuModel "
-"的面板上。详情：https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings"
+"的面板上。详情：https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings"
 "--ctk-shell-shows-app-menu。"
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1138,11 +1138,11 @@ msgstr "为窗口菜单栏显示全局菜单"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "此设置确定在何处显示窗口菜单栏：在窗口中，或在使用 MenuModel "
-"的面板上。详情：https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings"
+"的面板上。详情：https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings"
 "--ctk-shell-shows-menubar。"
 
 #: schemas/org.cafe.interface.gschema.xml:170

@@ -71,7 +71,7 @@ gboolean          cafe_bg_crossfade_set_end_surface (CafeBGCrossfade *fade,
 void              cafe_bg_crossfade_start (CafeBGCrossfade *fade,
                                            GdkWindow        *window);
 void              cafe_bg_crossfade_start_widget (CafeBGCrossfade *fade,
-                                                  GtkWidget       *widget);
+                                                  CtkWidget       *widget);
 gboolean          cafe_bg_crossfade_is_started (CafeBGCrossfade *fade);
 void              cafe_bg_crossfade_stop (CafeBGCrossfade *fade);
 

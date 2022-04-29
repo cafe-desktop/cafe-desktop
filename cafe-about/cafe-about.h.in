@@ -646,9 +646,9 @@ const char* artists[] = {
 };
 
 // widget for cafe-about window
-GtkAboutDialog* cafe_about_dialog = FALSE;
+CtkAboutDialog* cafe_about_dialog = FALSE;
 
-GtkApplication* cafe_about_application;
+CtkApplication* cafe_about_application;
 
 /**
  * If this value is set to TRUE, then cafe_about_dialog will not be called
@@ -659,7 +659,7 @@ gboolean cafe_about_nogui = FALSE;
 void cafe_about_run(void);
 void cafe_about_release_version(void);
 
-static void cafe_about_on_activate(GtkApplication* app);
+static void cafe_about_on_activate(CtkApplication* app);
 
 // arguments definitions
 static GOptionEntry command_entries[] = {

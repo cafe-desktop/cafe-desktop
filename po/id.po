@@ -1009,8 +1009,8 @@ msgstr "Tema ikon yang digunakan pada panel, Caja, dsb."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Tema Gtk+"
+msgid "Ctk+ Theme"
+msgstr "Tema Ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -1070,12 +1070,12 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Apakah dialog internal GTK+ seperti pemilih berkas, pemilih warna, atau "
 "pemilih fonta akan menggunakan bilah header di atas untuk menampilkan widget"
 " aksi, atau area aksi di bawah. Pengaturan ini tidak berpengaruh pada dialog"
-" custom yang menggunakan GtkDialog secara langsung, atau dialog pesan."
+" custom yang menggunakan CtkDialog secara langsung, atau dialog pesan."
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1091,8 +1091,8 @@ msgstr ""
 "difokuskan."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
-msgstr "Aktifkan animasi toolkit-wide Gtk"
+msgid "Enable Ctk toolkit-wide animations"
+msgstr "Aktifkan animasi toolkit-wide Ctk"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1134,16 +1134,16 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Apakah meter bilah status ditampilkan di sebelah kanan."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Modul untuk GtkFileChooser"
+msgid "Module for CtkFileChooser"
+msgstr "Modul untuk CtkFileChooser"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Modul yang digunakan sebagai model sistem berkas untuk widget "
-"GtkFileChooser. Bisa diatur dengan \"gio\" dan \"ctk+\"."
+"CtkFileChooser. Bisa diatur dengan \"gio\" dan \"ctk+\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1186,13 +1186,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Pengaturan ini menentukan tombol mana yang harus diletakkan di baris judul "
 "dekorasi jendela sisi-klien, dan apakah harus ditempatkan di sisi kiri "
 "kanan. Lihat "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1203,12 +1203,12 @@ msgstr "Gunakan menu global untuk menampilkan menu aplikasi"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Pengaturan ini menentukan di mana menu aplikasi akan ditampilkan - di "
 "jendela atau pada panel dengan protokol MenuModel.. Lihat "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1219,12 +1219,12 @@ msgstr "Gunakan bilah menu global untuk menampilkan jendela bilah menu"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Pengaturan ini menentukan di mana jendela bilah menu akan ditampilkan - di "
 "jendela atau di panel dengan protokol MenuModel. Lihat "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170

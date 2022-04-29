@@ -96,8 +96,8 @@
   * cafe-hsv: avoid duplicate initialization in variable
   * [ci] Enable Clang Static Analyzer
   * cafe-hsv: avoid deprecated 'gdk_device_grab/ungrab'
-  * cafe-colorsel: avoid deprecated 'GtkHSV', use 'CafeHSV' instead
-  * CafeHSV implementation (GtkHSV fork)
+  * cafe-colorsel: avoid deprecated 'CtkHSV', use 'CafeHSV' instead
+  * CafeHSV implementation (CtkHSV fork)
 
 
 ### cafe-desktop 1.22.0
@@ -164,7 +164,7 @@
   * Translations update
   * drop CafeAboutDialog
   * cafe-about: remove remains of libunique references
-  * cafe-about: switch to GtkAboutDialog
+  * cafe-about: switch to CtkAboutDialog
   * ctk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
 
 ### cafe-desktop 1.19.0
@@ -223,7 +223,7 @@
 ### cafe-desktop 1.14.0
 
   * Drop CafeConf migration script and ancient cafe-conf-import tool
-  * Fix deprecated usage of GtkHBox and GtkVBox in GTK+3 build
+  * Fix deprecated usage of CtkHBox and CtkVBox in GTK+3 build
   * Translations update
   * Fix Changelog generation
 
@@ -269,7 +269,7 @@
     Thanks to monsta for helping to test this.
   * Add gobject introspection
   * Many RANDR fixes
-  * interface: add automatic-mnemonics key for Gtk xsetting
+  * interface: add automatic-mnemonics key for Ctk xsetting
   * use GDK_WINDOW_XID for inter-GTK compatibility
   * Updated mpaste for website change
   * Added org.cafe.debug GSettings schema

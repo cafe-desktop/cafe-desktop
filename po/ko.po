@@ -936,8 +936,8 @@ msgstr "패널, 카하 등에 사용할 아이콘 테마."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Gtk+ 테마"
+msgid "Ctk+ Theme"
+msgstr "Ctk+ 테마"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -995,10 +995,10 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "파일 선택 대화상자, 색상 선택 대화상자, 또는 글꼴 선택 대화상자 같은 내장 ctk+ 대화상자 상단에 동작 위젯을 보여주려 헤더 "
-"표시줄을 나타낼지, 아니면 하단의 동작영역에 나타낼지 여부입니다. 이 설정은 GtkDialog를 직접 사용하는  개별 설정 대화상자, "
+"표시줄을 나타낼지, 아니면 하단의 동작영역에 나타낼지 여부입니다. 이 설정은 CtkDialog를 직접 사용하는  개별 설정 대화상자, "
 "또는 메시지 대화상자에 영향을 주지 않습니다."
 
 #: schemas/org.cafe.interface.gschema.xml:105
@@ -1014,7 +1014,7 @@ msgstr ""
 " 줄입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr "ctk 도구 키트 애니메이션 활성화"
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1055,14 +1055,14 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "우측에 상태 표시줄을 표시할 지 여부입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "GtkFileChooser용 모듈"
+msgid "Module for CtkFileChooser"
+msgstr "CtkFileChooser용 모듈"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
-msgstr "GtkFileChooser 위젯용 파일시스템 모델로 사용할 모듈입니다. 가능한 값은 \"gio\", \"ctk+\" 입니다."
+msgstr "CtkFileChooser 위젯용 파일시스템 모델로 사용할 모듈입니다. 가능한 값은 \"gio\", \"ctk+\" 입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1101,11 +1101,11 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "이 설정은 클라이언트 장식 창의 제목 표시줄에 어떤 단추를 배치할 지 결정하며, 좌측, 우측 두 위치중 어떤 곳에 놓을지도 결정합니다. "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout 를 참고하십시오."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1116,11 +1116,11 @@ msgstr "애플리케이션 메뉴를 표시할 때 글로벌 메뉴바 사용하
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "이 설정은 창 또는 메뉴 모델 프로토콜이 있는 패널에서 애플리케이션 메뉴를 어디에 표시할지를 결정합니다. 다음 링크를 확인하세요 "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1131,11 +1131,11 @@ msgstr "애플리케이션 메뉴를 표시할 윈도우 메뉴바 사용하기"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "이 설정은 창 또는 메뉴 모델 프로토콜이 있는 패널에서 윈도우 메뉴바를 어디에 표시할지를 결정합니다. 다음 링크를 확인하세요 "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170

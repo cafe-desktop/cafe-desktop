@@ -994,8 +994,8 @@ msgstr "Téma ikon použitá pre panel, program Caja, atď."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Téma Gtk+"
+msgid "Ctk+ Theme"
+msgstr "Téma Ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -1055,12 +1055,12 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Určuje, či zabudované GTK+ dialógy, ako je výber súborov, farieb nebo písma,"
 " budú používať záhlavie navrchu, na zobrazenie akčných prvkov alebo akčného "
 "priestoru naspodku. Toto nastavení nemá priamo vplyv na vlastné dialógy "
-"pomocou GtkDialog nebo dialógy správ."
+"pomocou CtkDialog nebo dialógy správ."
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1076,7 +1076,7 @@ msgstr ""
 "ak nie je zameraný."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr "Povoliť GTK toolkit-wide animácie"
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1117,16 +1117,16 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Určuje, či zobraziť merač stavového riadku vpravo."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Modul pre GtkFileChooser"
+msgid "Module for CtkFileChooser"
+msgstr "Modul pre CtkFileChooser"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Modul, ktorý sa má používať ako model systému súborov pre widget "
-"GtkFileChooser. Možné hodnoty sú „gio“, „cafe-vfs“ a „ctk+“."
+"CtkFileChooser. Možné hodnoty sú „gio“, „cafe-vfs“ a „ctk+“."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1169,12 +1169,12 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Toto nastavenie určuje, ktoré tlačidlá by mali byť pridané do záhlavia okien"
 " na strane klienta, a či by mali byť na ľavej, alebo pravej strane. Viď "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1185,12 +1185,12 @@ msgstr "Používať globálny panel menu na zobrazovanie menu programov"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Toto nastavenie určuje, kde se zobrazí menu programu - v okne, alebo na "
 "paneli s protokolom MenuModel. Viď "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1201,12 +1201,12 @@ msgstr "Používať globálny panel menu na zobrazovanie panelu menu okien"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Toto nastavenie určuje, kde se zobrazí panel menu okna - v okne, alebo na "
 "paneli s protokolom MenuModel. Viď "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170

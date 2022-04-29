@@ -29,7 +29,7 @@ int main (int argc, char **argv)
 {
     GdkPixbuf *pixbuf;
     CafeDesktopThumbnailFactory *factory;
-    GtkWidget *window, *image;
+    CtkWidget *window, *image;
     char *content_type;
 
     ctk_init (&argc, &argv);

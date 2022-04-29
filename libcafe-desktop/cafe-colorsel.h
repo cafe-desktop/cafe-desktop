@@ -54,7 +54,7 @@ typedef void (* CafeColorSelectionChangePaletteWithScreenFunc) (GdkScreen       
 
 struct _CafeColorSelection
 {
-  GtkBox parent_instance;
+  CtkBox parent_instance;
 
   /* < private_data > */
   CafeColorSelectionPrivate *private_data;
@@ -62,7 +62,7 @@ struct _CafeColorSelection
 
 struct _CafeColorSelectionClass
 {
-  GtkBoxClass parent_class;
+  CtkBoxClass parent_class;
 
   void (*color_changed)	(CafeColorSelection *color_selection);
 
@@ -77,7 +77,7 @@ struct _CafeColorSelectionClass
 /* ColorSelection */
 
 GType      cafe_color_selection_get_type                (void) G_GNUC_CONST;
-GtkWidget *cafe_color_selection_new                     (void);
+CtkWidget *cafe_color_selection_new                     (void);
 gboolean   cafe_color_selection_get_has_opacity_control (CafeColorSelection *colorsel);
 void       cafe_color_selection_set_has_opacity_control (CafeColorSelection *colorsel,
 							gboolean           has_opacity);

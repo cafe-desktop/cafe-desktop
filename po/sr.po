@@ -1000,7 +1000,7 @@ msgstr "Тема иконице која ће се користити за па�
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
+msgid "Ctk+ Theme"
 msgstr "Гтк+ тема"
 
 #: schemas/org.cafe.interface.gschema.xml:66
@@ -1061,7 +1061,7 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Да ли ће уграђени Гтк+ прозорчићи као што је бирач датотека, бирач боје или "
 "бирач словног лика користити траку заглавља на врху да прикажу елементе за "
@@ -1082,7 +1082,7 @@ msgstr ""
 "добије фокус."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr "Укључује свеопште анимације Гтк алата"
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1125,12 +1125,12 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Да ли ће се приказивати мерач траке стања на десној страни."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
+msgid "Module for CtkFileChooser"
 msgstr "Модул за Гтк избирача датотека"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Модул који ће се користити као модел система датотека за елемент Гтк "
@@ -1177,13 +1177,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Ово подешавање одређује који дугмићи треба да буду стављени на траку наслова"
 " украшених прозора од стране клијента, и да ли треба да буду постављени на "
 "леву или десну страну. Видите "
-"„https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"„https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout“."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1194,12 +1194,12 @@ msgstr "Користи општу траку изборника за прика�
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Ово подешавање одређује где ће бити приказан изборник програма – у прозору "
 "или на панелу протоколом „Модел изборника“. Погледајте "
-"„https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"„https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu“."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1210,12 +1210,12 @@ msgstr "Користи општу траку изборника за прика�
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Ово подешавање одређује где ће бити приказане траке изборника прозора – у "
 "прозору или на панелу протоколом „Модел изборника“. Погледајте "
-"„https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"„https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar“."
 
 #: schemas/org.cafe.interface.gschema.xml:170
