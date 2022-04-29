@@ -925,7 +925,7 @@ get_scaled_pixbuf (CafeBGPlacement  placement,
 
 	case CAFE_BG_PLACEMENT_FILL_SCREEN:
 		new = gdk_pixbuf_scale_simple (pixbuf, width, height,
-					       CDK_INTERP_BILINEAR);
+					       GDK_INTERP_BILINEAR);
 		break;
 
 	case CAFE_BG_PLACEMENT_SCALED:
@@ -1789,7 +1789,7 @@ blend (GdkPixbuf *p1,
 		tmp = gdk_pixbuf_scale_simple (p2,
 					       gdk_pixbuf_get_width (p1),
 					       gdk_pixbuf_get_height (p1),
-					       CDK_INTERP_BILINEAR);
+					       GDK_INTERP_BILINEAR);
 	}
         else {
 		tmp = g_object_ref (p2);
@@ -2197,7 +2197,7 @@ scale_thumbnail (CafeBGPlacement placement,
 		}
 
 		thumb = gdk_pixbuf_scale_simple (thumb, new_width, new_height,
-						 CDK_INTERP_BILINEAR);
+						 GDK_INTERP_BILINEAR);
 	}
 	else
 		g_object_ref (thumb);
@@ -2575,7 +2575,7 @@ pixbuf_scale_to_fit (GdkPixbuf *src, int max_width, int max_height)
 	new_width  = floor (src_width * factor + 0.5);
 	new_height = floor (src_height * factor + 0.5);
 
-	return gdk_pixbuf_scale_simple (src, new_width, new_height, CDK_INTERP_BILINEAR);
+	return gdk_pixbuf_scale_simple (src, new_width, new_height, GDK_INTERP_BILINEAR);
 }
 
 static GdkPixbuf *
@@ -2608,7 +2608,7 @@ pixbuf_scale_to_min (GdkPixbuf *src, int min_width, int min_height)
 			  (new_height - min_height) / -2,
 			  factor,
 			  factor,
-			  CDK_INTERP_BILINEAR);
+			  GDK_INTERP_BILINEAR);
 	return dest;
 }
 
