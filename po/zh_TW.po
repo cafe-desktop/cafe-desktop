@@ -929,8 +929,8 @@ msgstr "在面板、Caja 等程式內使用的圖示主題"
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Gtk+ 主題"
+msgid "Ctk+ Theme"
+msgstr "Ctk+ 主題"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -988,11 +988,11 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "無論是內建的 GTK+ "
 "對話框像是檔案選擇器、顏色選擇器或是字型選擇器都將會使用在頂部的標題列來顯示動作小組件，或是一個在底部的動作區域。這個設定不會影響直接使用 "
-"GtkDialog 自訂的對話框，或是訊息對話框。"
+"CtkDialog 自訂的對話框，或是訊息對話框。"
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1005,8 +1005,8 @@ msgid ""
 msgstr "是否內建的 GTK+ 捲動視窗將要使用覆蓋捲動。覆蓋捲動會在捲動列取得焦點前隱藏並減少其體積。"
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
-msgstr "啟用 Gtk 工具包範圍的動畫"
+msgid "Enable Ctk toolkit-wide animations"
+msgstr "啟用 Ctk 工具包範圍的動畫"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1046,14 +1046,14 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "狀態列是否在右邊顯示。"
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "GtkFileChooser 所使用的模組"
+msgid "Module for CtkFileChooser"
+msgstr "CtkFileChooser 所使用的模組"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
-msgstr "用於 GtkFileChooser 視窗元件做為檔案系統模型的模組。可能的值是「gio」和「ctk+」。"
+msgstr "用於 CtkFileChooser 視窗元件做為檔案系統模型的模組。可能的值是「gio」和「ctk+」。"
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1092,11 +1092,11 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "這個設定決定了哪些按鈕應該要被放置在客戶端的標題列，以及它們應該要被放置在左或右。見 "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout 。"
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1107,11 +1107,11 @@ msgstr "使用全域選單列來顯示應用程式選單"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "這個設定會決定應用程式選單要顯示在哪裡 ── 在視窗中，或是在有 MenuGlobal 協定的面板中。詳細資訊請見 "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu 。"
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1122,11 +1122,11 @@ msgstr "使用全域選單列顯示視窗選單列"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "這個設定會決定視窗選單列要顯示在哪裡 ── 在視窗中，或是在有 MenuModel 協定的面板中。詳細資訊請見 "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar 。"
 
 #: schemas/org.cafe.interface.gschema.xml:170

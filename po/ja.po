@@ -944,7 +944,7 @@ msgstr "パネルやCajaなどのアイコンテーマ"
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
+msgid "Ctk+ Theme"
 msgstr "GTK+ テーマ"
 
 #: schemas/org.cafe.interface.gschema.xml:66
@@ -1003,11 +1003,11 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "ファイル選択、色選択、フォント選択などの GTK+ "
 "組み込みダイアログが、アクションウィジェットを表示するために、上部のヘッダーバーや下部のアクションエリアを使用するかどうかを設定します。この設定は "
-"GtkDialog を直接使用するカスタムダイアログやメッセージダイアログには効果がありません。"
+"CtkDialog を直接使用するカスタムダイアログやメッセージダイアログには効果がありません。"
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1022,7 +1022,7 @@ msgstr ""
 "のスクロールウィンドウでオーバーレイスクロールを使用するかどうかを設定します。オーバーレイスクロールを使用すると、フォーカスが当たるまでスクロールバーを隠して表示領域を節約します。"
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr "GTK ツールキット全体でアニメーションを有効にする"
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1063,14 +1063,14 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "右側にステータスバーを表示するかどうかを指定します。"
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "GtkFileChooser のモジュール"
+msgid "Module for CtkFileChooser"
+msgstr "CtkFileChooser のモジュール"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
-msgstr "GtkFileChooser ウィジェットがファイルシステムモデルとして使用するモジュールです。設定可能な値: \"gio\"、\"ctk+\""
+msgstr "CtkFileChooser ウィジェットがファイルシステムモデルとして使用するモジュールです。設定可能な値: \"gio\"、\"ctk+\""
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1109,10 +1109,10 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
-"クライアント側で装飾されたウィンドウのタイトルバーにどのボタンを表示するかの設定です。また、ボタンを左右どちらに描画するかも設定できます。https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings"
+"クライアント側で装飾されたウィンドウのタイトルバーにどのボタンを表示するかの設定です。また、ボタンを左右どちらに描画するかも設定できます。https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings"
 "--ctk-decoration-layout を確認してください。"
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1123,7 +1123,7 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 
@@ -1135,7 +1135,7 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 

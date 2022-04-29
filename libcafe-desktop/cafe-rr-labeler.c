@@ -45,7 +45,7 @@ struct _CafeRRLabelerPrivate {
 	int num_outputs;
 
 	GdkRGBA *palette;
-	GtkWidget **windows;
+	CtkWidget **windows;
 
 	GdkScreen  *screen;
 	Atom        workarea_atom;
@@ -322,10 +322,10 @@ make_palette (CafeRRLabeler *labeler)
 #define LABEL_WINDOW_PADDING 12
 
 static gboolean
-label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
+label_window_draw_event_cb (CtkWidget *widget, cairo_t *cr, gpointer data)
 {
 	GdkRGBA *color;
-	GtkAllocation allocation;
+	CtkAllocation allocation;
 
 	color = g_object_get_data (G_OBJECT (widget), "color");
 	ctk_widget_get_allocation (widget, &allocation);
@@ -355,7 +355,7 @@ label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
 
 static void
 position_window (CafeRRLabeler  *labeler,
-		 GtkWidget       *window,
+		 CtkWidget       *window,
 		 int              x,
 		 int              y)
 {
@@ -371,11 +371,11 @@ position_window (CafeRRLabeler  *labeler,
 	ctk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
 }
 
-static GtkWidget *
+static CtkWidget *
 create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *color)
 {
-	GtkWidget *window;
-	GtkWidget *widget;
+	CtkWidget *window;
+	CtkWidget *widget;
 	char *str;
 	char *display_name;
 	GdkRGBA black = { 0, 0, 0, 1.0 };
@@ -439,7 +439,7 @@ create_label_windows (CafeRRLabeler *labeler)
 	gboolean created_window_for_clone;
 	CafeRROutputInfo **outputs;
 
-	labeler->priv->windows = g_new (GtkWidget *, labeler->priv->num_outputs);
+	labeler->priv->windows = g_new (CtkWidget *, labeler->priv->num_outputs);
 
 	created_window_for_clone = FALSE;
 

@@ -46,8 +46,8 @@
 
 struct _CafeColorButtonPrivate
 {
-  GtkWidget *draw_area; /* Widget where we draw the color sample */
-  GtkWidget *cs_dialog; /* Color selection dialog */
+  CtkWidget *draw_area; /* Widget where we draw the color sample */
+  CtkWidget *cs_dialog; /* Color selection dialog */
 
   gchar *title;         /* Title for the color selection window */
 
@@ -86,29 +86,29 @@ static void cafe_color_button_get_property  (GObject        *object,
 					    GParamSpec     *pspec);
 
 /* ctkwidget signals */
-static void cafe_color_button_state_changed (GtkWidget           *widget,
-					    GtkStateType         previous_state);
+static void cafe_color_button_state_changed (CtkWidget           *widget,
+					    CtkStateType         previous_state);
 
 /* ctkbutton signals */
-static void cafe_color_button_clicked       (GtkButton           *button);
+static void cafe_color_button_clicked       (CtkButton           *button);
 
 /* source side drag signals */
-static void cafe_color_button_drag_begin (GtkWidget        *widget,
+static void cafe_color_button_drag_begin (CtkWidget        *widget,
 					 GdkDragContext   *context,
 					 gpointer          data);
-static void cafe_color_button_drag_data_get (GtkWidget        *widget,
+static void cafe_color_button_drag_data_get (CtkWidget        *widget,
                                             GdkDragContext   *context,
-                                            GtkSelectionData *selection_data,
+                                            CtkSelectionData *selection_data,
                                             guint             info,
                                             guint             time,
                                             CafeColorButton   *color_button);
 
 /* target side drag signals */
-static void cafe_color_button_drag_data_received (GtkWidget        *widget,
+static void cafe_color_button_drag_data_received (CtkWidget        *widget,
 						 GdkDragContext   *context,
 						 gint              x,
 						 gint              y,
-						 GtkSelectionData *selection_data,
+						 CtkSelectionData *selection_data,
 						 guint             info,
 						 guint32           time,
 						 CafeColorButton   *color_button);
@@ -116,7 +116,7 @@ static void cafe_color_button_drag_data_received (GtkWidget        *widget,
 
 static guint color_button_signals[LAST_SIGNAL] = { 0 };
 
-static const GtkTargetEntry drop_types[] = { { "application/x-color", 0, 0 } };
+static const CtkTargetEntry drop_types[] = { { "application/x-color", 0, 0 } };
 
 G_DEFINE_TYPE_WITH_PRIVATE (CafeColorButton, cafe_color_button, GTK_TYPE_BUTTON)
 
@@ -124,8 +124,8 @@ static void
 cafe_color_button_class_init (CafeColorButtonClass *klass)
 {
   GObjectClass *gobject_class;
-  GtkWidgetClass *widget_class;
-  GtkButtonClass *button_class;
+  CtkWidgetClass *widget_class;
+  CtkButtonClass *button_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
   widget_class = GTK_WIDGET_CLASS (klass);
@@ -255,7 +255,7 @@ cafe_color_button_get_checkered (void)
 
 /* Handle exposure events for the color picker's drawing area */
 static gboolean
-draw (GtkWidget      *widget,
+draw (CtkWidget      *widget,
       cairo_t        *cr,
       gpointer        data)
 {
@@ -303,18 +303,18 @@ draw (GtkWidget      *widget,
 }
 
 static void
-cafe_color_button_state_changed (GtkWidget   *widget,
-                                GtkStateType previous_state)
+cafe_color_button_state_changed (CtkWidget   *widget,
+                                CtkStateType previous_state)
 {
   ctk_widget_queue_draw (widget);
 }
 
 static void
-cafe_color_button_drag_data_received (GtkWidget        *widget,
+cafe_color_button_drag_data_received (CtkWidget        *widget,
 				     GdkDragContext   *context,
 				     gint              x,
 				     gint              y,
-				     GtkSelectionData *selection_data,
+				     CtkSelectionData *selection_data,
 				     guint             info,
 				     guint32           time,
 				     CafeColorButton   *color_button)
@@ -372,7 +372,7 @@ set_color_icon (GdkDragContext *context,
 }
 
 static void
-cafe_color_button_drag_begin (GtkWidget      *widget,
+cafe_color_button_drag_begin (CtkWidget      *widget,
 			     GdkDragContext *context,
 			     gpointer        data)
 {
@@ -382,9 +382,9 @@ cafe_color_button_drag_begin (GtkWidget      *widget,
 }
 
 static void
-cafe_color_button_drag_data_get (GtkWidget        *widget,
+cafe_color_button_drag_data_get (CtkWidget        *widget,
 				GdkDragContext   *context,
-				GtkSelectionData *selection_data,
+				CtkSelectionData *selection_data,
 				guint             info,
 				guint             time,
 				CafeColorButton   *color_button)
@@ -403,8 +403,8 @@ cafe_color_button_drag_data_get (GtkWidget        *widget,
 static void
 cafe_color_button_init (CafeColorButton *color_button)
 {
-  GtkWidget *alignment;
-  GtkWidget *frame;
+  CtkWidget *alignment;
+  CtkWidget *frame;
   PangoLayout *layout;
   PangoRectangle rect;
 
@@ -492,7 +492,7 @@ cafe_color_button_finalize (GObject *object)
  *
  * Since: 1.9.1
  */
-GtkWidget *
+CtkWidget *
 cafe_color_button_new (void)
 {
   return g_object_new (CAFE_TYPE_COLOR_BUTTON, NULL);
@@ -508,14 +508,14 @@ cafe_color_button_new (void)
  *
  * Since: 1.9.1
  */
-GtkWidget *
+CtkWidget *
 cafe_color_button_new_with_color (const GdkColor *color)
 {
   return g_object_new (CAFE_TYPE_COLOR_BUTTON, "color", color, NULL);
 }
 
 static void
-dialog_ok_clicked (GtkWidget *widget,
+dialog_ok_clicked (CtkWidget *widget,
 		   gpointer   data)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
@@ -539,7 +539,7 @@ dialog_ok_clicked (GtkWidget *widget,
 }
 
 static gboolean
-dialog_destroy (GtkWidget *widget,
+dialog_destroy (CtkWidget *widget,
 		gpointer   data)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
@@ -550,7 +550,7 @@ dialog_destroy (GtkWidget *widget,
 }
 
 static void
-dialog_cancel_clicked (GtkWidget *widget,
+dialog_cancel_clicked (CtkWidget *widget,
 		       gpointer   data)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
@@ -559,7 +559,7 @@ dialog_cancel_clicked (GtkWidget *widget,
 }
 
 static void
-cafe_color_button_clicked (GtkButton *button)
+cafe_color_button_clicked (CtkButton *button)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (button);
   CafeColorSelectionDialog *color_dialog;
@@ -568,7 +568,7 @@ cafe_color_button_clicked (GtkButton *button)
   if (!color_button->priv->cs_dialog)
     {
       /* Create the dialog and connects its buttons */
-      GtkWidget *parent;
+      CtkWidget *parent;
 
       parent = ctk_widget_get_toplevel (GTK_WIDGET (color_button));
 

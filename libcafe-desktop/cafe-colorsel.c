@@ -102,30 +102,30 @@ struct _CafeColorSelectionPrivate
   gdouble color[COLORSEL_NUM_CHANNELS];
   gdouble old_color[COLORSEL_NUM_CHANNELS];
 
-  GtkWidget *triangle_colorsel;
-  GtkWidget *hue_spinbutton;
-  GtkWidget *sat_spinbutton;
-  GtkWidget *val_spinbutton;
-  GtkWidget *red_spinbutton;
-  GtkWidget *green_spinbutton;
-  GtkWidget *blue_spinbutton;
-  GtkWidget *opacity_slider;
-  GtkWidget *opacity_label;
-  GtkWidget *opacity_entry;
-  GtkWidget *palette_frame;
-  GtkWidget *hex_entry;
+  CtkWidget *triangle_colorsel;
+  CtkWidget *hue_spinbutton;
+  CtkWidget *sat_spinbutton;
+  CtkWidget *val_spinbutton;
+  CtkWidget *red_spinbutton;
+  CtkWidget *green_spinbutton;
+  CtkWidget *blue_spinbutton;
+  CtkWidget *opacity_slider;
+  CtkWidget *opacity_label;
+  CtkWidget *opacity_entry;
+  CtkWidget *palette_frame;
+  CtkWidget *hex_entry;
 
   /* The Palette code */
-  GtkWidget *custom_palette [GTK_CUSTOM_PALETTE_WIDTH][GTK_CUSTOM_PALETTE_HEIGHT];
+  CtkWidget *custom_palette [GTK_CUSTOM_PALETTE_WIDTH][GTK_CUSTOM_PALETTE_HEIGHT];
 
   /* The color_sample stuff */
-  GtkWidget *sample_area;
-  GtkWidget *old_sample;
-  GtkWidget *cur_sample;
-  GtkWidget *colorsel;
+  CtkWidget *sample_area;
+  CtkWidget *old_sample;
+  CtkWidget *cur_sample;
+  CtkWidget *colorsel;
 
   /* Window for grabbing on */
-  GtkWidget *dropper_grab_widget;
+  CtkWidget *dropper_grab_widget;
   guint32    grab_time;
 
   /* Connection to settings */
@@ -145,10 +145,10 @@ static void cafe_color_selection_get_property    (GObject                 *objec
 					         GValue                  *value,
 					         GParamSpec              *pspec);
 
-static void cafe_color_selection_realize         (GtkWidget               *widget);
-static void cafe_color_selection_unrealize       (GtkWidget               *widget);
-static void cafe_color_selection_show_all        (GtkWidget               *widget);
-static gboolean cafe_color_selection_grab_broken (GtkWidget               *widget,
+static void cafe_color_selection_realize         (CtkWidget               *widget);
+static void cafe_color_selection_unrealize       (CtkWidget               *widget);
+static void cafe_color_selection_show_all        (CtkWidget               *widget);
+static gboolean cafe_color_selection_grab_broken (CtkWidget               *widget,
 						 GdkEventGrabBroken      *event);
 
 static void     cafe_color_selection_set_palette_color   (CafeColorSelection *colorsel,
@@ -160,49 +160,49 @@ static void     default_change_palette_func             (GdkScreen	   *screen,
 							 const GdkColor    *colors,
 							 gint               n_colors);
 static void     make_control_relations                  (AtkObject         *atk_obj,
-                                                         GtkWidget         *widget);
+                                                         CtkWidget         *widget);
 static void     make_all_relations                      (AtkObject         *atk_obj,
                                                          CafeColorSelectionPrivate *priv);
 
-static void 	hsv_changed                             (GtkWidget         *hsv,
+static void 	hsv_changed                             (CtkWidget         *hsv,
 							 gpointer           data);
-static void 	get_screen_color                        (GtkWidget         *button);
-static void 	adjustment_changed                      (GtkAdjustment     *adjustment,
+static void 	get_screen_color                        (CtkWidget         *button);
+static void 	adjustment_changed                      (CtkAdjustment     *adjustment,
 							 gpointer           data);
-static void 	opacity_entry_changed                   (GtkWidget 	   *opacity_entry,
+static void 	opacity_entry_changed                   (CtkWidget 	   *opacity_entry,
 							 gpointer  	    data);
-static void 	hex_changed                             (GtkWidget 	   *hex_entry,
+static void 	hex_changed                             (CtkWidget 	   *hex_entry,
 							 gpointer  	    data);
-static gboolean hex_focus_out                           (GtkWidget     	   *hex_entry,
+static gboolean hex_focus_out                           (CtkWidget     	   *hex_entry,
 							 GdkEventFocus 	   *event,
 							 gpointer      	    data);
 static void 	color_sample_new                        (CafeColorSelection *colorsel);
 static void 	make_label_spinbutton     		(CafeColorSelection *colorsel,
-	    				  		 GtkWidget        **spinbutton,
+	    				  		 CtkWidget        **spinbutton,
 	    				  		 gchar             *text,
-	    				  		 GtkWidget         *grid,
+	    				  		 CtkWidget         *grid,
 	    				  		 gint               i,
 	    				  		 gint               j,
 	    				  		 gint               channel_type,
 	    				  		 const gchar       *tooltip);
 static void 	make_palette_frame                      (CafeColorSelection *colorsel,
-							 GtkWidget         *grid,
+							 CtkWidget         *grid,
 							 gint               i,
 							 gint               j);
 static void 	set_selected_palette                    (CafeColorSelection *colorsel,
 							 int                x,
 							 int                y);
-static void 	set_focus_line_attributes               (GtkWidget 	   *drawing_area,
+static void 	set_focus_line_attributes               (CtkWidget 	   *drawing_area,
 							 cairo_t   	   *cr,
 							 gint      	   *focus_width);
-static gboolean mouse_press 		     	       	(GtkWidget         *invisible,
+static gboolean mouse_press 		     	       	(CtkWidget         *invisible,
                             		     	       	 GdkEventButton    *event,
                             		     	       	 gpointer           data);
 static void  palette_change_notify_instance (GObject    *object,
 					     GParamSpec *pspec,
 					     gpointer    data);
 static void update_palette (CafeColorSelection *colorsel);
-static void shutdown_eyedropper (GtkWidget *widget);
+static void shutdown_eyedropper (CtkWidget *widget);
 
 static guint color_selection_signals[LAST_SIGNAL] = { 0 };
 
@@ -249,7 +249,7 @@ static void
 cafe_color_selection_class_init (CafeColorSelectionClass *klass)
 {
   GObjectClass *gobject_class;
-  GtkWidgetClass *widget_class;
+  CtkWidgetClass *widget_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = cafe_color_selection_finalize;
@@ -314,11 +314,11 @@ cafe_color_selection_class_init (CafeColorSelectionClass *klass)
 static void
 cafe_color_selection_init (CafeColorSelection *colorsel)
 {
-  GtkWidget *top_hbox;
-  GtkWidget *top_right_vbox;
-  GtkWidget *grid, *label, *hbox, *frame, *vbox, *button;
-  GtkAdjustment *adjust;
-  GtkWidget *picker_image;
+  CtkWidget *top_hbox;
+  CtkWidget *top_right_vbox;
+  CtkWidget *grid, *label, *hbox, *frame, *vbox, *button;
+  CtkAdjustment *adjust;
+  CtkWidget *picker_image;
   gint i, j;
   CafeColorSelectionPrivate *priv;
   AtkObject *atk_obj;
@@ -581,14 +581,14 @@ cafe_color_selection_dispose (GObject *object)
   G_OBJECT_CLASS (cafe_color_selection_parent_class)->dispose (object);
 }
 
-/* GtkWidget methods */
+/* CtkWidget methods */
 
 static void
-cafe_color_selection_realize (GtkWidget *widget)
+cafe_color_selection_realize (CtkWidget *widget)
 {
   CafeColorSelection *colorsel = CAFE_COLOR_SELECTION (widget);
   CafeColorSelectionPrivate *priv = colorsel->private_data;
-  GtkSettings *settings = ctk_widget_get_settings (widget);
+  CtkSettings *settings = ctk_widget_get_settings (widget);
 
   priv->settings_connection =  g_signal_connect (settings,
 						 "notify::ctk-color-palette",
@@ -600,11 +600,11 @@ cafe_color_selection_realize (GtkWidget *widget)
 }
 
 static void
-cafe_color_selection_unrealize (GtkWidget *widget)
+cafe_color_selection_unrealize (CtkWidget *widget)
 {
   CafeColorSelection *colorsel = CAFE_COLOR_SELECTION (widget);
   CafeColorSelectionPrivate *priv = colorsel->private_data;
-  GtkSettings *settings = ctk_widget_get_settings (widget);
+  CtkSettings *settings = ctk_widget_get_settings (widget);
 
   g_signal_handler_disconnect (settings, priv->settings_connection);
 
@@ -616,13 +616,13 @@ cafe_color_selection_unrealize (GtkWidget *widget)
  * palette and opacity sliders.
  */
 static void
-cafe_color_selection_show_all (GtkWidget *widget)
+cafe_color_selection_show_all (CtkWidget *widget)
 {
   ctk_widget_show (widget);
 }
 
 static gboolean
-cafe_color_selection_grab_broken (GtkWidget          *widget,
+cafe_color_selection_grab_broken (CtkWidget          *widget,
 				 GdkEventGrabBroken *event)
 {
   shutdown_eyedropper (widget);
@@ -689,7 +689,7 @@ set_color_icon (GdkDragContext *context,
 }
 
 static void
-color_sample_drag_begin (GtkWidget      *widget,
+color_sample_drag_begin (CtkWidget      *widget,
 			 GdkDragContext *context,
 			 gpointer        data)
 {
@@ -708,7 +708,7 @@ color_sample_drag_begin (GtkWidget      *widget,
 }
 
 static void
-color_sample_drag_end (GtkWidget      *widget,
+color_sample_drag_end (CtkWidget      *widget,
 		       GdkDragContext *context,
 		       gpointer        data)
 {
@@ -716,11 +716,11 @@ color_sample_drag_end (GtkWidget      *widget,
 }
 
 static void
-color_sample_drop_handle (GtkWidget        *widget,
+color_sample_drop_handle (CtkWidget        *widget,
 			  GdkDragContext   *context,
 			  gint              x,
 			  gint              y,
-			  GtkSelectionData *selection_data,
+			  CtkSelectionData *selection_data,
 			  guint             info,
 			  guint             time,
 			  gpointer          data)
@@ -764,9 +764,9 @@ color_sample_drop_handle (GtkWidget        *widget,
 }
 
 static void
-color_sample_drag_handle (GtkWidget        *widget,
+color_sample_drag_handle (CtkWidget        *widget,
 			  GdkDragContext   *context,
-			  GtkSelectionData *selection_data,
+			  CtkSelectionData *selection_data,
 			  guint             info,
 			  guint             time,
 			  gpointer          data)
@@ -797,10 +797,10 @@ color_sample_drag_handle (GtkWidget        *widget,
 static void
 color_sample_draw_sample (CafeColorSelection *colorsel, cairo_t *cr, int which)
 {
-  GtkWidget *da;
+  CtkWidget *da;
   gint x, y, wid, heig, goff;
   CafeColorSelectionPrivate *priv;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   g_return_if_fail (colorsel != NULL);
   priv = colorsel->private_data;
@@ -876,7 +876,7 @@ color_sample_update_samples (CafeColorSelection *colorsel)
 }
 
 static gboolean
-color_old_sample_draw (GtkWidget          *da,
+color_old_sample_draw (CtkWidget          *da,
                        cairo_t            *cr,
                        CafeColorSelection *colorsel)
 {
@@ -886,7 +886,7 @@ color_old_sample_draw (GtkWidget          *da,
 
 
 static gboolean
-color_cur_sample_draw (GtkWidget          *da,
+color_cur_sample_draw (CtkWidget          *da,
                        cairo_t            *cr,
                        CafeColorSelection *colorsel)
 {
@@ -895,9 +895,9 @@ color_cur_sample_draw (GtkWidget          *da,
 }
 
 static void
-color_sample_setup_dnd (CafeColorSelection *colorsel, GtkWidget *sample)
+color_sample_setup_dnd (CafeColorSelection *colorsel, CtkWidget *sample)
 {
-  static const GtkTargetEntry targets[] = {
+  static const CtkTargetEntry targets[] = {
     { "application/x-color", 0 }
   };
   CafeColorSelectionPrivate *priv;
@@ -999,7 +999,7 @@ color_sample_new (CafeColorSelection *colorsel)
  */
 
 static void
-palette_get_color (GtkWidget *drawing_area, gdouble *color)
+palette_get_color (CtkWidget *drawing_area, gdouble *color)
 {
   gdouble *color_val;
 
@@ -1023,12 +1023,12 @@ palette_get_color (GtkWidget *drawing_area, gdouble *color)
 }
 
 static void
-palette_paint (GtkWidget    *drawing_area,
+palette_paint (CtkWidget    *drawing_area,
                cairo_t      *cr,
                gpointer      data)
 {
   gint focus_width;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   if (ctk_widget_get_window (drawing_area) == NULL)
     return;
@@ -1052,7 +1052,7 @@ palette_paint (GtkWidget    *drawing_area,
 }
 
 static void
-set_focus_line_attributes (GtkWidget *drawing_area,
+set_focus_line_attributes (CtkWidget *drawing_area,
 			   cairo_t   *cr,
 			   gint      *focus_width)
 {
@@ -1104,7 +1104,7 @@ set_focus_line_attributes (GtkWidget *drawing_area,
 }
 
 static void
-palette_drag_begin (GtkWidget      *widget,
+palette_drag_begin (CtkWidget      *widget,
 		    GdkDragContext *context,
 		    gpointer        data)
 {
@@ -1115,9 +1115,9 @@ palette_drag_begin (GtkWidget      *widget,
 }
 
 static void
-palette_drag_handle (GtkWidget        *widget,
+palette_drag_handle (CtkWidget        *widget,
 		     GdkDragContext   *context,
-		     GtkSelectionData *selection_data,
+		     CtkSelectionData *selection_data,
 		     guint             info,
 		     guint             time,
 		     gpointer          data)
@@ -1138,7 +1138,7 @@ palette_drag_handle (GtkWidget        *widget,
 }
 
 static void
-palette_drag_end (GtkWidget      *widget,
+palette_drag_end (CtkWidget      *widget,
 		  GdkDragContext *context,
 		  gpointer        data)
 {
@@ -1163,7 +1163,7 @@ get_current_colors (CafeColorSelection *colorsel)
 
 /* Changes the model color */
 static void
-palette_change_color (GtkWidget         *drawing_area,
+palette_change_color (CtkWidget         *drawing_area,
                       CafeColorSelection *colorsel,
                       gdouble           *color)
 {
@@ -1225,11 +1225,11 @@ palette_change_color (GtkWidget         *drawing_area,
 }
 
 static void
-override_background_color (GtkWidget *widget,
+override_background_color (CtkWidget *widget,
                            GdkRGBA   *rgba)
 {
   gchar          *css;
-  GtkCssProvider *provider;
+  CtkCssProvider *provider;
 
   provider = ctk_css_provider_new ();
 
@@ -1246,7 +1246,7 @@ override_background_color (GtkWidget *widget,
 
 /* Changes the view color */
 static void
-palette_set_color (GtkWidget         *drawing_area,
+palette_set_color (CtkWidget         *drawing_area,
 		   CafeColorSelection *colorsel,
 		   gdouble           *color)
 {
@@ -1262,7 +1262,7 @@ palette_set_color (GtkWidget         *drawing_area,
 
   if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (drawing_area), "color_set")) == 0)
     {
-      static const GtkTargetEntry targets[] = {
+      static const CtkTargetEntry targets[] = {
 	{ "application/x-color", 0 }
       };
       ctk_drag_source_set (drawing_area,
@@ -1290,7 +1290,7 @@ palette_set_color (GtkWidget         *drawing_area,
 }
 
 static gboolean
-palette_draw (GtkWidget      *drawing_area,
+palette_draw (CtkWidget      *drawing_area,
 		cairo_t        *cr,
 		gpointer        data)
 {
@@ -1303,17 +1303,17 @@ palette_draw (GtkWidget      *drawing_area,
 }
 
 static void
-popup_position_func (GtkMenu   *menu,
+popup_position_func (CtkMenu   *menu,
                      gint      *x,
                      gint      *y,
                      gboolean  *push_in,
                      gpointer	user_data)
 {
-  GtkWidget *widget;
-  GtkRequisition req;
+  CtkWidget *widget;
+  CtkRequisition req;
   gint root_x, root_y;
   GdkScreen *screen;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   widget = GTK_WIDGET (user_data);
 
@@ -1335,11 +1335,11 @@ popup_position_func (GtkMenu   *menu,
 }
 
 static void
-save_color_selected (GtkWidget *menuitem,
+save_color_selected (CtkWidget *menuitem,
                      gpointer   data)
 {
   CafeColorSelection *colorsel;
-  GtkWidget *drawing_area;
+  CtkWidget *drawing_area;
   CafeColorSelectionPrivate *priv;
 
   drawing_area = GTK_WIDGET (data);
@@ -1354,11 +1354,11 @@ save_color_selected (GtkWidget *menuitem,
 
 static void
 do_popup (CafeColorSelection *colorsel,
-          GtkWidget         *drawing_area,
+          CtkWidget         *drawing_area,
           guint32            timestamp)
 {
-  GtkWidget *menu;
-  GtkWidget *mi;
+  CtkWidget *menu;
+  CtkWidget *mi;
 
   g_object_set_data (G_OBJECT (drawing_area),
                      _("ctk-color-sel"),
@@ -1383,7 +1383,7 @@ do_popup (CafeColorSelection *colorsel,
 
 
 static gboolean
-palette_enter (GtkWidget        *drawing_area,
+palette_enter (CtkWidget        *drawing_area,
 	       GdkEventCrossing *event,
 	       gpointer        data)
 {
@@ -1395,7 +1395,7 @@ palette_enter (GtkWidget        *drawing_area,
 }
 
 static gboolean
-palette_leave (GtkWidget        *drawing_area,
+palette_leave (CtkWidget        *drawing_area,
 	       GdkEventCrossing *event,
 	       gpointer        data)
 {
@@ -1428,7 +1428,7 @@ _ctk_button_event_triggers_context_menu (GdkEventButton *event)
 }
 
 static gboolean
-palette_press (GtkWidget      *drawing_area,
+palette_press (CtkWidget      *drawing_area,
 	       GdkEventButton *event,
 	       gpointer        data)
 {
@@ -1446,7 +1446,7 @@ palette_press (GtkWidget      *drawing_area,
 }
 
 static gboolean
-palette_release (GtkWidget      *drawing_area,
+palette_release (CtkWidget      *drawing_area,
 		 GdkEventButton *event,
 		 gpointer        data)
 {
@@ -1470,11 +1470,11 @@ palette_release (GtkWidget      *drawing_area,
 }
 
 static void
-palette_drop_handle (GtkWidget        *widget,
+palette_drop_handle (CtkWidget        *widget,
 		     GdkDragContext   *context,
 		     gint              x,
 		     gint              y,
-		     GtkSelectionData *selection_data,
+		     CtkSelectionData *selection_data,
 		     guint             info,
 		     guint             time,
 		     gpointer          data)
@@ -1506,7 +1506,7 @@ palette_drop_handle (GtkWidget        *widget,
 }
 
 static gint
-palette_activate (GtkWidget   *widget,
+palette_activate (CtkWidget   *widget,
 		  GdkEventKey *event,
 		  gpointer     data)
 {
@@ -1530,7 +1530,7 @@ palette_activate (GtkWidget   *widget,
 }
 
 static gboolean
-palette_popup (GtkWidget *widget,
+palette_popup (CtkWidget *widget,
                gpointer   data)
 {
   CafeColorSelection *colorsel = CAFE_COLOR_SELECTION (data);
@@ -1540,14 +1540,14 @@ palette_popup (GtkWidget *widget,
 }
 
 
-static GtkWidget*
+static CtkWidget*
 palette_new (CafeColorSelection *colorsel)
 {
-  static const GtkTargetEntry targets[] = {
+  static const CtkTargetEntry targets[] = {
     { "application/x-color", 0 }
   };
 
-  GtkWidget *retval = ctk_drawing_area_new ();
+  CtkWidget *retval = ctk_drawing_area_new ();
 
   ctk_widget_set_can_focus (retval, TRUE);
 
@@ -1676,7 +1676,7 @@ grab_color_at_mouse (GdkScreen *screen,
 }
 
 static void
-shutdown_eyedropper (GtkWidget *widget)
+shutdown_eyedropper (CtkWidget *widget)
 {
   CafeColorSelection *colorsel;
   CafeColorSelectionPrivate *priv;
@@ -1696,7 +1696,7 @@ shutdown_eyedropper (GtkWidget *widget)
 }
 
 static void
-mouse_motion (GtkWidget      *invisible,
+mouse_motion (CtkWidget      *invisible,
 	      GdkEventMotion *event,
 	      gpointer        data)
 {
@@ -1705,7 +1705,7 @@ mouse_motion (GtkWidget      *invisible,
 }
 
 static gboolean
-mouse_release (GtkWidget      *invisible,
+mouse_release (CtkWidget      *invisible,
 	       GdkEventButton *event,
 	       gpointer        data)
 {
@@ -1732,7 +1732,7 @@ mouse_release (GtkWidget      *invisible,
 /* Helper Functions */
 
 static gboolean
-key_press (GtkWidget   *invisible,
+key_press (CtkWidget   *invisible,
            GdkEventKey *event,
            gpointer     data)
 {
@@ -1802,7 +1802,7 @@ key_press (GtkWidget   *invisible,
 }
 
 static gboolean
-mouse_press (GtkWidget      *invisible,
+mouse_press (CtkWidget      *invisible,
 	     GdkEventButton *event,
 	     gpointer        data)
 {
@@ -1831,20 +1831,20 @@ mouse_press (GtkWidget      *invisible,
 
 /* when the button is clicked */
 static void
-get_screen_color (GtkWidget *button)
+get_screen_color (CtkWidget *button)
 {
   CafeColorSelection *colorsel = g_object_get_data (G_OBJECT (button), "COLORSEL");
   CafeColorSelectionPrivate *priv = colorsel->private_data;
   GdkScreen *screen = ctk_widget_get_screen (GTK_WIDGET (button));
   GdkCursor *picker_cursor;
   GdkGrabStatus grab_status;
-  GtkWidget *grab_widget;
+  CtkWidget *grab_widget;
 
   guint32 time = ctk_get_current_event_time ();
 
   if (priv->dropper_grab_widget == NULL)
     {
-      GtkWidget *toplevel;
+      CtkWidget *toplevel;
 
       grab_widget = ctk_window_new (GTK_WINDOW_POPUP);
       ctk_window_set_screen (GTK_WINDOW (grab_widget), screen);
@@ -1897,7 +1897,7 @@ get_screen_color (GtkWidget *button)
 }
 
 static void
-hex_changed (GtkWidget *hex_entry,
+hex_changed (CtkWidget *hex_entry,
 	     gpointer   data)
 {
   CafeColorSelection *colorsel;
@@ -1929,7 +1929,7 @@ hex_changed (GtkWidget *hex_entry,
 }
 
 static gboolean
-hex_focus_out (GtkWidget     *hex_entry,
+hex_focus_out (CtkWidget     *hex_entry,
 	       GdkEventFocus *event,
 	       gpointer       data)
 {
@@ -1939,7 +1939,7 @@ hex_focus_out (GtkWidget     *hex_entry,
 }
 
 static void
-hsv_changed (GtkWidget *hsv,
+hsv_changed (CtkWidget *hsv,
 	     gpointer   data)
 {
   CafeColorSelection *colorsel;
@@ -1965,7 +1965,7 @@ hsv_changed (GtkWidget *hsv,
 }
 
 static void
-adjustment_changed (GtkAdjustment *adjustment,
+adjustment_changed (CtkAdjustment *adjustment,
 		    gpointer       data)
 {
   CafeColorSelection *colorsel;
@@ -2020,12 +2020,12 @@ adjustment_changed (GtkAdjustment *adjustment,
 }
 
 static void
-opacity_entry_changed (GtkWidget *opacity_entry,
+opacity_entry_changed (CtkWidget *opacity_entry,
 		       gpointer   data)
 {
   CafeColorSelection *colorsel;
   CafeColorSelectionPrivate *priv;
-  GtkAdjustment *adj;
+  CtkAdjustment *adj;
   gchar *text;
 
   colorsel = CAFE_COLOR_SELECTION (data);
@@ -2045,16 +2045,16 @@ opacity_entry_changed (GtkWidget *opacity_entry,
 
 static void
 make_label_spinbutton (CafeColorSelection *colorsel,
-		       GtkWidget        **spinbutton,
+		       CtkWidget        **spinbutton,
 		       gchar             *text,
-		       GtkWidget         *grid,
+		       CtkWidget         *grid,
 		       gint               i,
 		       gint               j,
 		       gint               channel_type,
                        const gchar       *tooltip)
 {
-  GtkWidget *label;
-  GtkAdjustment *adjust;
+  CtkWidget *label;
+  CtkAdjustment *adjust;
 
   if (channel_type == COLORSEL_HUE)
     {
@@ -2087,11 +2087,11 @@ make_label_spinbutton (CafeColorSelection *colorsel,
 
 static void
 make_palette_frame (CafeColorSelection *colorsel,
-		    GtkWidget         *grid,
+		    CtkWidget         *grid,
 		    gint               i,
 		    gint               j)
 {
-  GtkWidget *frame;
+  CtkWidget *frame;
   CafeColorSelectionPrivate *priv;
 
   priv = colorsel->private_data;
@@ -2249,7 +2249,7 @@ default_change_palette_func (GdkScreen	    *screen,
  *
  * Return value: a new #CafeColorSelection
  **/
-GtkWidget *
+CtkWidget *
 cafe_color_selection_new (void)
 {
   CafeColorSelection *colorsel;
@@ -2832,7 +2832,7 @@ cafe_color_selection_palette_to_string (const GdkColor *colors,
  *
  * Installs a global function to be called whenever the user tries to
  * modify the palette in a color selection. This function should save
- * the new palette contents, and update the GtkSettings property
+ * the new palette contents, and update the CtkSettings property
  * "ctk-color-palette" so all CafeColorSelection widgets will be modified.
  *
  * Return value: the previous change palette hook (that was replaced).
@@ -2859,7 +2859,7 @@ cafe_color_selection_set_change_palette_hook (CafeColorSelectionChangePaletteFun
  *
  * Installs a global function to be called whenever the user tries to
  * modify the palette in a color selection. This function should save
- * the new palette contents, and update the GtkSettings property
+ * the new palette contents, and update the CtkSettings property
  * "ctk-color-palette" so all CafeColorSelection widgets will be modified.
  *
  * Return value: the previous change palette hook (that was replaced).
@@ -2880,7 +2880,7 @@ cafe_color_selection_set_change_palette_with_screen_hook (CafeColorSelectionChan
 
 static void
 make_control_relations (AtkObject *atk_obj,
-                        GtkWidget *widget)
+                        CtkWidget *widget)
 {
   AtkObject *obj;
 

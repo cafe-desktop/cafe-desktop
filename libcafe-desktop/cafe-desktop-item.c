@@ -2489,7 +2489,7 @@ cafe_desktop_item_get_file_status (const CafeDesktopItem *item)
 
 /**
  * cafe_desktop_item_find_icon:
- * @icon_theme: a #GtkIconTheme
+ * @icon_theme: a #CtkIconTheme
  * @icon: icon name, something you'd get out of the Icon key
  * @desired_size: FIXME
  * @flags: FIXME
@@ -2501,12 +2501,12 @@ cafe_desktop_item_get_file_status (const CafeDesktopItem *item)
  * Returns: A newly allocated string
  */
 char *
-cafe_desktop_item_find_icon (GtkIconTheme *icon_theme,
+cafe_desktop_item_find_icon (CtkIconTheme *icon_theme,
 			      const char *icon,
 			      int desired_size,
 			      int flags)
 {
-	GtkIconInfo *info;
+	CtkIconInfo *info;
 	char *full = NULL;
 
 	g_return_val_if_fail (icon_theme == NULL ||
@@ -2556,7 +2556,7 @@ cafe_desktop_item_find_icon (GtkIconTheme *icon_theme,
 
 /**
  * cafe_desktop_item_get_icon:
- * @icon_theme: a #GtkIconTheme
+ * @icon_theme: a #CtkIconTheme
  * @item: A desktop item
  *
  * Description:  This function goes and looks for the icon file.  If the icon
@@ -2567,7 +2567,7 @@ cafe_desktop_item_find_icon (GtkIconTheme *icon_theme,
  */
 char *
 cafe_desktop_item_get_icon (const CafeDesktopItem *item,
-			     GtkIconTheme *icon_theme)
+			     CtkIconTheme *icon_theme)
 {
 	/* maybe this function should be deprecated in favour of find icon
 	 * -George */

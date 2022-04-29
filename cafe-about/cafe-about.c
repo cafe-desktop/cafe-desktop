@@ -29,7 +29,7 @@
     textdomain(package);
 #endif
 
-static void cafe_about_on_activate(GtkApplication* app)
+static void cafe_about_on_activate(CtkApplication* app)
 {
     GList* list;
 
@@ -47,7 +47,7 @@ static void cafe_about_on_activate(GtkApplication* app)
 
 void cafe_about_run(void)
 {
-    cafe_about_dialog = (GtkAboutDialog*) ctk_about_dialog_new();
+    cafe_about_dialog = (CtkAboutDialog*) ctk_about_dialog_new();
 
     ctk_window_set_default_icon_name(icon);
     ctk_about_dialog_set_logo_icon_name(cafe_about_dialog, icon);
@@ -78,8 +78,8 @@ void cafe_about_run(void)
     ctk_window_set_application(GTK_WINDOW(cafe_about_dialog), cafe_about_application);
 
     // start and destroy
-    ctk_dialog_run((GtkDialog*) cafe_about_dialog);
-    ctk_widget_destroy((GtkWidget*) cafe_about_dialog);
+    ctk_dialog_run((CtkDialog*) cafe_about_dialog);
+    ctk_widget_destroy((CtkWidget*) cafe_about_dialog);
 }
 
 int main(int argc, char** argv)

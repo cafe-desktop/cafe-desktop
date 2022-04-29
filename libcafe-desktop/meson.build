@@ -115,7 +115,7 @@ if enable_gir
 
   gir_incs = [
     'GObject-2.0',
-    'Gtk-3.0',
+    'Ctk-3.0',
   ]
 
   gir_extra_args = [

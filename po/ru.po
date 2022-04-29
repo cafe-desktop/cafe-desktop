@@ -1048,8 +1048,8 @@ msgstr "Тема значков, для использования в панел
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Gtk+ тема"
+msgid "Ctk+ Theme"
+msgstr "Ctk+ тема"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -1102,19 +1102,19 @@ msgstr "Название модуля метода ввода, использу�
 
 #: schemas/org.cafe.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
-msgstr "Использовать панель заголовка Gtk3"
+msgstr "Использовать панель заголовка Ctk3"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Встроенные GTK+ диалоги, такие как выбор файлов, выбор цвета или выбор "
 "шрифта будут использовать панель заголовка сверху для отображения виджетов "
 "действий или область действий снизу. Эти настройки не касаются произвольных "
-"диалогов с использованием GtkDialog напрямую или диалогов с сообщениями."
+"диалогов с использованием CtkDialog напрямую или диалогов с сообщениями."
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1130,12 +1130,12 @@ msgstr ""
 "полоса прокрутки не получит фокус."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
-msgstr "Включить анимацию в тулките Gtk"
+msgid "Enable Ctk toolkit-wide animations"
+msgstr "Включить анимацию в тулките Ctk"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
-msgstr "Включена ли анимация в тулките Gtk."
+msgstr "Включена ли анимация в тулките Ctk."
 
 #: schemas/org.cafe.interface.gschema.xml:115
 msgid "Document font"
@@ -1173,16 +1173,16 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Показывать ли значок изменения размера окна справа."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Модуль для GtkFileChooser"
+msgid "Module for CtkFileChooser"
+msgstr "Модуль для CtkFileChooser"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Модуль для использования в качестве модели файловой системы в виджете "
-"GtkFileChooser. Возможные значения: «gio» и «ctk+»."
+"CtkFileChooser. Возможные значения: «gio» и «ctk+»."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1227,13 +1227,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Эта опция определяет наличие кнопок, которые следует отобразить в заголовке "
 "окон, использующих декорации на стороне клиента, а также сторону, где их "
 "следует разместить. Для дополнительной информации см. "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1244,12 +1244,12 @@ msgstr "Использовать глобальное меню для отобр
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Данная настройка определяет способ отображения меню программ - в окне или на"
 " панели с помощью протокола MenuModel. См. "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1260,12 +1260,12 @@ msgstr "Использовать глобальное меню для отобр
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Данная настройка определяет способ отображения меню окон - в окне или на "
 "панели с помощью протокола MenuModel. См. "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170

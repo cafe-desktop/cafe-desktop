@@ -589,7 +589,7 @@ screen_on_event (GdkXEvent *xevent,
 #if 0
 	/* Enable this code to get a dialog showing the RANDR timestamps, for debugging purposes */
 	{
-	    GtkWidget *dialog;
+	    CtkWidget *dialog;
 	    XRRScreenChangeNotifyEvent *rr_event;
 	    static int dialog_num;
 

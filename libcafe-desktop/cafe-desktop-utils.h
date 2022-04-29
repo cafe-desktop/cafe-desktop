@@ -44,13 +44,13 @@ void cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
 gboolean cafe_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
 
 void
-cafe_desktop_ctk_style_get_light_color (GtkStyleContext *style,
-                                        GtkStateFlags    state,
+cafe_desktop_ctk_style_get_light_color (CtkStyleContext *style,
+                                        CtkStateFlags    state,
                                         GdkRGBA         *color);
 
 void
-cafe_desktop_ctk_style_get_dark_color (GtkStyleContext *style,
-                                       GtkStateFlags    state,
+cafe_desktop_ctk_style_get_dark_color (CtkStyleContext *style,
+                                       CtkStateFlags    state,
                                        GdkRGBA         *color);
 
 G_END_DECLS

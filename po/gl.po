@@ -1015,8 +1015,8 @@ msgstr "O tema de icona que se vai usar para o panel, o Caja etc."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Tema Gtk+"
+msgid "Ctk+ Theme"
+msgstr "Tema Ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
@@ -1077,13 +1077,13 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Indica se os diálogos integrados en GTK+ como o selector de ficheiros, o "
 "selector de cor ou o selector de tipos de letra usarán una barra de "
 "cabeceira na parte superior para amosar trebellos de acción, ou unha área de"
 " acción na parte inferior. Este axuste non afecta directamente os diálogos "
-"personalizados usando GtkDialog, ou diálogos de mensaxe."
+"personalizados usando CtkDialog, ou diálogos de mensaxe."
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1099,13 +1099,13 @@ msgstr ""
 "desprazamento ata que estea enfocada."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
-msgstr "Activar as animacións Gtk para todo o conxunto de ferramentas"
+msgid "Enable Ctk toolkit-wide animations"
+msgstr "Activar as animacións Ctk para todo o conxunto de ferramentas"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
 msgstr ""
-"Indica se se activan as animacións Gtk para todo o conxunto de ferramentas"
+"Indica se se activan as animacións Ctk para todo o conxunto de ferramentas"
 
 #: schemas/org.cafe.interface.gschema.xml:115
 msgid "Document font"
@@ -1144,16 +1144,16 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Indica se se amosa un contador da barra de estado á dereita."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Módulo para GtkFileChooser"
+msgid "Module for CtkFileChooser"
+msgstr "Módulo para CtkFileChooser"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Módulo para usar como modelo do sistema de ficheiros para o widget "
-"GtkFileChooser. Os valores posíbeis son «gio» e «ctk+»."
+"CtkFileChooser. Os valores posíbeis son «gio» e «ctk+»."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1196,13 +1196,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Este axuste determina que botóns deben ser postos na cabeceira nas xanelas "
 "decoradas do lado do cliente, e se deben ser colocados de esquerda a "
 "dereita. Vexa "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1213,12 +1213,12 @@ msgstr "Usar unha barra de menú global para amosar os menús da aplicación"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Este axuste determina onde se amosarán os menús de aplicacións: en cada "
 "xanela ou nun panel co protocolo MenuModel. Vexa "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1229,12 +1229,12 @@ msgstr "Usar unha barra de menú global para amosar as barra de menú da xanela"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Este axuste determina onde se amosarán as barras de menús das xanelas en "
 "cada xanela ou nun panel co protocolo MenuModel. Vexa "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170

@@ -994,13 +994,13 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
-msgstr "Neuz mod Gtk+"
+msgid "Ctk+ Theme"
+msgstr "Neuz mod Ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
 msgid "Basename of the default theme used by ctk+."
-msgstr "Anv an neuz dre ziouer arveret gant Gtk+."
+msgstr "Anv an neuz dre ziouer arveret gant Ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1055,12 +1055,12 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 "Hag-eñ e vo arveret ur varrenn ditl el lein da ziskouez gwered ar widjed pe "
 "ur maez gwered en traoñ gant boestadoù emziviz GTK+ evel an dibaber restroù,"
 " an dibaber livioù pe an dibaber nodrezhoù. Ne dizho ket an arventennoù-mañ "
-"ar boestadoù emziviz personelaet oc'h ober gant GtkDialog end-eeun pe "
+"ar boestadoù emziviz personelaet oc'h ober gant CtkDialog end-eeun pe "
 "voestad emziviz ar c'hemennadennoù."
 
 #: schemas/org.cafe.interface.gschema.xml:105
@@ -1077,7 +1077,7 @@ msgstr ""
 "vo lakaet evezh warni."
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr "Gweredekaat bliverezhioù mod toolkit-wide GTK"
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1120,16 +1120,16 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Mar bez skrammet ur varrennad stad war an tu dehou."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Mollad evit GtkFileChooser"
+msgid "Module for CtkFileChooser"
+msgstr "Mollad evit CtkFileChooser"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Ar mollad da arverañ evel patrom ar reizhiad restroù evit widjed "
-"GtkFileChooser. Ar gwerzhioù a vez \"gio\" ha \"ctk+\"."
+"CtkFileChooser. Ar gwerzhioù a vez \"gio\" ha \"ctk+\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1172,13 +1172,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Gant an arvetenn-mañ e tespizer peseurt afelloù a vo lakaet war war warrenn "
 "didl prenestroù kinklet diouzh tu an arveriaded ha hag-eñ e vo lakaet war an"
 " tu kleiz pe zehou. Lennit "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout"
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1189,7 +1189,7 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 
@@ -1201,7 +1201,7 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 

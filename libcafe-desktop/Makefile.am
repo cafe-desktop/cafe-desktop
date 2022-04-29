@@ -118,7 +118,7 @@ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 if HAVE_INTROSPECTION
 
 CafeDesktop-2.0.gir: libcafe-desktop-2.la
-CafeDesktop_2_0_gir_INCLUDES = GObject-2.0 Gtk-3.0
+CafeDesktop_2_0_gir_INCLUDES = GObject-2.0 Ctk-3.0
 CafeDesktop_2_0_gir_PACKAGES = gdk-pixbuf-2.0 glib-2.0 gobject-2.0 gio-2.0 ctk+-3.0
 CafeDesktop_2_0_gir_CFLAGS = -DCAFE_DESKTOP_USE_UNSTABLE_API -I$(top_srcdir)
 CafeDesktop_2_0_gir_LIBS = libcafe-desktop-2.la

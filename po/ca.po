@@ -1011,7 +1011,7 @@ msgstr "El tema de les icones que s'utilitza per al tauler, Caja, etc."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
-msgid "Gtk+ Theme"
+msgid "Ctk+ Theme"
 msgstr "Tema de GTK+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
@@ -1076,7 +1076,7 @@ msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
-"using GtkDialog directly, or message dialogs."
+"using CtkDialog directly, or message dialogs."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:105
@@ -1090,7 +1090,7 @@ msgid ""
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:110
-msgid "Enable Gtk toolkit-wide animations"
+msgid "Enable Ctk toolkit-wide animations"
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:111
@@ -1134,16 +1134,16 @@ msgid "Whether to display a status bar meter on the right."
 msgstr "Si s'hauria de mostrar un mesurador de barra d'estat a la dreta."
 
 #: schemas/org.cafe.interface.gschema.xml:135
-msgid "Module for GtkFileChooser"
-msgstr "Mòdul per a GtkFileChooser"
+msgid "Module for CtkFileChooser"
+msgstr "Mòdul per a CtkFileChooser"
 
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
-"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Module to use as the filesystem model for the CtkFileChooser widget. "
 "Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Mòdul a utilitzar com a model de sistema de fitxers per a l'estri "
-"GtkFileChooser. Els valors possibles són «gio» i «ctk+»."
+"CtkFileChooser. Els valors possibles són «gio» i «ctk+»."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1188,13 +1188,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Aquest ajust determina quins botons s'han de ficar a la barra de títol de "
 "les finestres decorades al cantó del client i si s'han de col·locar a "
 "l'esquerra o a la dreta. Vegeu "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1206,12 +1206,12 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Aquest ajust determina on es mostrarà el menú de l'aplicació - en una "
 "finestra o en un tauler amb el protocol MenuModel. Vegeu "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1224,12 +1224,12 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Aquest ajust determina on es mostraran les barres de menús de les finestres "
 "- en una finestra o en un tauler amb el protocol MenuModel. Vegeu "
-"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
+"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170

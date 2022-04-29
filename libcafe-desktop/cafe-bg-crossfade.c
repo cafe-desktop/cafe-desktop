@@ -41,7 +41,7 @@
 struct _CafeBGCrossfadePrivate
 {
     GdkWindow       *window;
-    GtkWidget       *widget;
+    CtkWidget       *widget;
     int              width;
     int              height;
     cairo_surface_t *fading_surface;
@@ -267,8 +267,8 @@ tile_surface (cairo_surface_t *surface,
     }
     else
     {
-        static GtkCssProvider *provider = NULL;
-        GtkStyleContext *context;
+        static CtkCssProvider *provider = NULL;
+        CtkStyleContext *context;
         GdkRGBA bg;
 
         if (provider == NULL)
@@ -389,7 +389,7 @@ cafe_bg_crossfade_set_end_surface (CafeBGCrossfade* fade, cairo_surface_t *surfa
 static gboolean
 animations_are_disabled (CafeBGCrossfade *fade)
 {
-    GtkSettings *settings;
+    CtkSettings *settings;
     GdkScreen *screen;
     gboolean are_enabled;
 
@@ -452,7 +452,7 @@ draw_background (CafeBGCrossfade *fade)
 }
 
 static gboolean
-on_widget_draw (GtkWidget       *widget,
+on_widget_draw (CtkWidget       *widget,
                 cairo_t         *cr,
                 CafeBGCrossfade *fade)
 {
@@ -701,7 +701,7 @@ cafe_bg_crossfade_start (CafeBGCrossfade *fade,
 /**
  * cafe_bg_crossfade_start_widget:
  * @fade: a #CafeBGCrossfade
- * @widget: The #GtkWidget to draw crossfade on
+ * @widget: The #CtkWidget to draw crossfade on
  *
  * This function initiates a quick crossfade between two surfaces on
  * the background of @widget. Before initiating the crossfade both
@@ -712,7 +712,7 @@ cafe_bg_crossfade_start (CafeBGCrossfade *fade,
  **/
 void
 cafe_bg_crossfade_start_widget (CafeBGCrossfade *fade,
-                                GtkWidget       *widget)
+                                CtkWidget       *widget)
 {
     GdkWindow *window;
 
