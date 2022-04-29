@@ -1,4 +1,4 @@
-gnome.ctkdoc(
+gnome.gtkdoc(
   'cafe-desktop',
   src_dir: 'libcafe-desktop',
   main_sgml: 'cafe-desktop-docs.sgml',
