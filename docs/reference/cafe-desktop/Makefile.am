@@ -66,9 +66,9 @@ expand_content_files=
 # Only needed if you are using gtkdoc-scangobj to dynamically query widget
 # signals and properties.
 # e.g. AM_CPPFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
-# e.g. CTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
+# e.g. GTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
 AM_CPPFLAGS=$(CAFE_DESKTOP_CFLAGS) -I$(top_srcdir)/libcafe-desktop -DCAFE_DESKTOP_USE_UNSTABLE_API
-CTKDOC_LIBS=$(CAFE_DESKTOP_LIBS) $(top_builddir)/libcafe-desktop/libcafe-desktop-2.la
+GTKDOC_LIBS=$(CAFE_DESKTOP_LIBS) $(top_builddir)/libcafe-desktop/libcafe-desktop-2.la
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make
