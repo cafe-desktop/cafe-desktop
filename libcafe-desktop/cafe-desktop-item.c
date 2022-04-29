@@ -1706,7 +1706,7 @@ make_environment_for_screen (CdkScreen  *screen,
 	int         display_index = -1;
 	int         i, env_len;
 
-	g_return_val_if_fail (GDK_IS_SCREEN (screen), NULL);
+	g_return_val_if_fail (CDK_IS_SCREEN (screen), NULL);
 
 	retval = freeme = NULL;
 
@@ -1825,7 +1825,7 @@ ditem_execute (const CafeDesktopItem *item,
 	else
 		cdkdisplay = cdk_display_get_default ();
 
-	sn_display = sn_display_new (GDK_DISPLAY_XDISPLAY (cdkdisplay),
+	sn_display = sn_display_new (CDK_DISPLAY_XDISPLAY (cdkdisplay),
 				     sn_error_trap_push,
 				     sn_error_trap_pop);
 
@@ -1844,7 +1844,7 @@ ditem_execute (const CafeDesktopItem *item,
 
 		sn_context = sn_launcher_context_new (sn_display,
 						      screen ? cdk_x11_screen_get_screen_number (screen) :
-						      DefaultScreen (GDK_DISPLAY_XDISPLAY (cdkdisplay)));
+						      DefaultScreen (CDK_DISPLAY_XDISPLAY (cdkdisplay)));
 
 		name = cafe_desktop_item_get_localestring (item,
 							    CAFE_DESKTOP_ITEM_NAME);
@@ -2105,7 +2105,7 @@ cafe_desktop_item_launch_on_screen_with_env (
 
 		retval = ctk_show_uri_on_window  (NULL,
 		                                  url,
-		                                  GDK_CURRENT_TIME,
+		                                  CDK_CURRENT_TIME,
 		                                  error);
 		return retval ? 0 : -1;
 	}

@@ -42,7 +42,7 @@ copy_color (CtkWidget *widget, CdkEvent  *event, CafeColorSelectionDialog *color
     cafe_color_selection_get_current_color (CAFE_COLOR_SELECTION (color_dialog->colorsel), &color);
     g_object_get (color_dialog->colorsel, "hex-string", &color_string, NULL);
 
-    ctk_clipboard_set_text (ctk_clipboard_get (GDK_SELECTION_CLIPBOARD), color_string, -1);
+    ctk_clipboard_set_text (ctk_clipboard_get (CDK_SELECTION_CLIPBOARD), color_string, -1);
 
     g_free (color_string);
     return 0;

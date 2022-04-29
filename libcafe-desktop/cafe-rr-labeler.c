@@ -74,8 +74,8 @@ get_current_desktop (CdkScreen *screen)
         unsigned char *data_return = NULL;
         int workspace = 0;
 
-        display = GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen));
-        win = XRootWindow (display, GDK_SCREEN_XNUMBER (screen));
+        display = CDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen));
+        win = XRootWindow (display, CDK_SCREEN_XNUMBER (screen));
 
         current_desktop = XInternAtom (display, "_NET_CURRENT_DESKTOP", True);
 
@@ -113,10 +113,10 @@ get_work_area (CafeRRLabeler *labeler,
 	int             desktop;
 	Display        *display;
 
-	display = GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (labeler->priv->screen));
+	display = CDK_DISPLAY_XDISPLAY (cdk_screen_get_display (labeler->priv->screen));
 	workarea = XInternAtom (display, "_NET_WORKAREA", True);
 
-	disp_screen = GDK_SCREEN_XNUMBER (labeler->priv->screen);
+	disp_screen = CDK_SCREEN_XNUMBER (labeler->priv->screen);
 
 	/* Defaults in case of error */
 	rect->x = 0;
@@ -178,7 +178,7 @@ screen_xevent_filter (CdkXEvent      *xevent,
 		create_label_windows (labeler);
 	}
 
-	return GDK_FILTER_CONTINUE;
+	return CDK_FILTER_CONTINUE;
 }
 
 static void
@@ -188,7 +188,7 @@ cafe_rr_labeler_init (CafeRRLabeler *labeler)
 
 	labeler->priv = cafe_rr_labeler_get_instance_private (labeler);
 
-	labeler->priv->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()),
+	labeler->priv->workarea_atom = XInternAtom (CDK_DISPLAY_XDISPLAY (cdk_display_get_default ()),
 						    "_NET_WORKAREA",
 						    True);
 
@@ -196,7 +196,7 @@ cafe_rr_labeler_init (CafeRRLabeler *labeler)
 	/* code is not really designed to handle multiple screens so *shrug* */
 	cdkwindow = cdk_screen_get_root_window (labeler->priv->screen);
 	cdk_window_add_filter (cdkwindow, (CdkFilterFunc) screen_xevent_filter, labeler);
-	cdk_window_set_events (cdkwindow, cdk_window_get_events (cdkwindow) | GDK_PROPERTY_CHANGE_MASK);
+	cdk_window_set_events (cdkwindow, cdk_window_get_events (cdkwindow) | CDK_PROPERTY_CHANGE_MASK);
 }
 
 static void

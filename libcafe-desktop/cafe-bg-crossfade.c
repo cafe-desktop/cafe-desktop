@@ -411,8 +411,8 @@ send_root_property_change_notification (CafeBGCrossfade *fade)
 
         /* We do a zero length append to force a change notification,
          * without changing the value */
-        XChangeProperty (GDK_WINDOW_XDISPLAY (fade->priv->window),
-                         GDK_WINDOW_XID (fade->priv->window),
+        XChangeProperty (CDK_WINDOW_XDISPLAY (fade->priv->window),
+                         CDK_WINDOW_XID (fade->priv->window),
                          cdk_x11_get_xatom_by_name ("_XROOTPMAP_ID"),
                          XA_PIXMAP, 32, PropModeAppend,
                          (unsigned char *) &zero_length_pixmap, 0);
@@ -423,7 +423,7 @@ draw_background (CafeBGCrossfade *fade)
 {
     if (fade->priv->widget != NULL) {
         ctk_widget_queue_draw (fade->priv->widget);
-    } else if (cdk_window_get_window_type (fade->priv->window) != GDK_WINDOW_ROOT) {
+    } else if (cdk_window_get_window_type (fade->priv->window) != CDK_WINDOW_ROOT) {
         cairo_t           *cr;
         cairo_region_t    *region;
         CdkDrawingContext *draw_context;
@@ -438,12 +438,12 @@ draw_background (CafeBGCrossfade *fade)
         cdk_window_end_draw_frame (fade->priv->window, draw_context);
         cairo_region_destroy (region);
     } else {
-        Display *xdisplay = GDK_WINDOW_XDISPLAY (fade->priv->window);
+        Display *xdisplay = CDK_WINDOW_XDISPLAY (fade->priv->window);
         CdkDisplay *display;
         display = cdk_display_get_default ();
         cdk_x11_display_error_trap_push (display);
         XGrabServer (xdisplay);
-        XClearWindow (xdisplay, GDK_WINDOW_XID (fade->priv->window));
+        XClearWindow (xdisplay, CDK_WINDOW_XID (fade->priv->window));
         send_root_property_change_notification (fade);
         XFlush (xdisplay);
         XUngrabServer (xdisplay);
@@ -581,9 +581,9 @@ get_root_pixmap_id_surface (CdkDisplay *display)
     g_return_val_if_fail (display != NULL, NULL);
 
     screen   = cdk_display_get_default_screen (display);
-    xdisplay = GDK_DISPLAY_XDISPLAY (display);
-    xvisual  = GDK_VISUAL_XVISUAL (cdk_screen_get_system_visual (screen));
-    xroot    = RootWindow (xdisplay, GDK_SCREEN_XNUMBER (screen));
+    xdisplay = CDK_DISPLAY_XDISPLAY (display);
+    xvisual  = CDK_VISUAL_XVISUAL (cdk_screen_get_system_visual (screen));
+    xroot    = RootWindow (xdisplay, CDK_SCREEN_XNUMBER (screen));
 
     result = XGetWindowProperty (xdisplay, xroot,
                                  cdk_x11_get_xatom_by_name ("_XROOTPMAP_ID"),
@@ -645,12 +645,12 @@ cafe_bg_crossfade_start (CafeBGCrossfade *fade,
     g_return_if_fail (fade->priv->start_surface != NULL);
     g_return_if_fail (fade->priv->end_surface != NULL);
     g_return_if_fail (!cafe_bg_crossfade_is_started (fade));
-    g_return_if_fail (cdk_window_get_window_type (window) != GDK_WINDOW_FOREIGN);
+    g_return_if_fail (cdk_window_get_window_type (window) != CDK_WINDOW_FOREIGN);
 
     /* If drawing is done on the root window,
      * it is essential to have the root pixmap.
      */
-    if (cdk_window_get_window_type (window) == GDK_WINDOW_ROOT) {
+    if (cdk_window_get_window_type (window) == CDK_WINDOW_ROOT) {
         CdkDisplay *display = cdk_window_get_display (window);
         cairo_surface_t *surface = get_root_pixmap_id_surface (display);
 
@@ -664,7 +664,7 @@ cafe_bg_crossfade_start (CafeBGCrossfade *fade,
     }
 
     fade->priv->window = window;
-    if (cdk_window_get_window_type (fade->priv->window) != GDK_WINDOW_ROOT) {
+    if (cdk_window_get_window_type (fade->priv->window) != CDK_WINDOW_ROOT) {
         fade->priv->fading_surface = tile_surface (fade->priv->start_surface,
                                                    fade->priv->width,
                                                    fade->priv->height);

@@ -886,7 +886,7 @@ pixbuf_clip_to_fit (CdkPixbuf *src,
 	w = MIN(src_width, max_width);
 	h = MIN(src_height, max_height);
 
-	pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB,
+	pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
 				 cdk_pixbuf_get_has_alpha (src),
 				 8, w, h);
 
@@ -925,7 +925,7 @@ get_scaled_pixbuf (CafeBGPlacement  placement,
 
 	case CAFE_BG_PLACEMENT_FILL_SCREEN:
 		new = cdk_pixbuf_scale_simple (pixbuf, width, height,
-					       GDK_INTERP_BILINEAR);
+					       CDK_INTERP_BILINEAR);
 		break;
 
 	case CAFE_BG_PLACEMENT_SCALED:
@@ -1216,7 +1216,7 @@ cafe_bg_create_surface_scale (CafeBG      *bg,
 	{
 		CdkPixbuf *pixbuf;
 
-		pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
+		pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8,
 					 width, height);
 		cafe_bg_draw (bg, pixbuf, cdk_window_get_screen (window), root);
 		cdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
@@ -1284,7 +1284,7 @@ static cairo_surface_t *
 make_root_pixmap (CdkWindow *window, gint width, gint height)
 {
 	CdkScreen *screen = cdk_window_get_screen(window);
-	char *disp_name = DisplayString (GDK_WINDOW_XDISPLAY (window));
+	char *disp_name = DisplayString (CDK_WINDOW_XDISPLAY (window));
 	Display *display;
 	Pixmap xpixmap;
 	cairo_surface_t *surface;
@@ -1302,14 +1302,14 @@ make_root_pixmap (CdkWindow *window, gint width, gint height)
 	}
 
 	depth = DefaultDepth (display, cdk_x11_screen_get_screen_number (screen));
-	xpixmap = XCreatePixmap (display, GDK_WINDOW_XID (window), width, height, depth);
+	xpixmap = XCreatePixmap (display, CDK_WINDOW_XID (window), width, height, depth);
 
 	XFlush (display);
 	XSetCloseDownMode (display, RetainPermanent);
 	XCloseDisplay (display);
 
-	surface = cairo_xlib_surface_create (GDK_SCREEN_XDISPLAY (screen), xpixmap,
-                                             GDK_VISUAL_XVISUAL (cdk_screen_get_system_visual (screen)),
+	surface = cairo_xlib_surface_create (CDK_SCREEN_XDISPLAY (screen), xpixmap,
+                                             CDK_VISUAL_XVISUAL (cdk_screen_get_system_visual (screen)),
         				     width, height);
 
 	return surface;
@@ -1409,7 +1409,7 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
 
 	g_return_val_if_fail (bg != NULL, NULL);
 
-	result = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
+	result = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
 	draw_color (bg, result);
 
@@ -1454,7 +1454,7 @@ cafe_bg_get_surface_from_root (CdkScreen *screen)
 	cairo_surface_t *source_pixmap;
 	int width, height;
 
-	display = GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen));
+	display = CDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen));
 	screen_num = cdk_x11_screen_get_screen_number (screen);
 
 	result = XGetWindowProperty (display,
@@ -1483,14 +1483,14 @@ cafe_bg_get_surface_from_root (CdkScreen *screen)
 		int x_ret, y_ret;
 		unsigned int w_ret, h_ret, bw_ret, depth_ret;
 
-		if (XGetGeometry (GDK_SCREEN_XDISPLAY (screen),
+		if (XGetGeometry (CDK_SCREEN_XDISPLAY (screen),
 				  xpixmap,
 				  &root_return,
 				  &x_ret, &y_ret, &w_ret, &h_ret, &bw_ret, &depth_ret))
 		{
-			source_pixmap = cairo_xlib_surface_create (GDK_SCREEN_XDISPLAY (screen),
+			source_pixmap = cairo_xlib_surface_create (CDK_SCREEN_XDISPLAY (screen),
 								   xpixmap,
-								   GDK_VISUAL_XVISUAL (cdk_screen_get_system_visual (screen)),
+								   CDK_VISUAL_XVISUAL (cdk_screen_get_system_visual (screen)),
 								   w_ret, h_ret);
 		}
 
@@ -1635,7 +1635,7 @@ cafe_bg_set_surface_as_root (CdkScreen *screen, cairo_surface_t *surface)
 	/* Desktop background pixmap should be created from dummy X client since most
 	 * applications will try to kill it with XKillClient later when changing pixmap
 	 */
-	Display    *display      = GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen));
+	Display    *display      = CDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen));
 	Pixmap      pixmap_id    = cairo_xlib_surface_get_drawable (surface);
 	Window      xroot        = RootWindow (display, cdk_x11_screen_get_screen_number (screen));
 
@@ -1789,7 +1789,7 @@ blend (CdkPixbuf *p1,
 		tmp = cdk_pixbuf_scale_simple (p2,
 					       cdk_pixbuf_get_width (p1),
 					       cdk_pixbuf_get_height (p1),
-					       GDK_INTERP_BILINEAR);
+					       CDK_INTERP_BILINEAR);
 	}
         else {
 		tmp = g_object_ref (p2);
@@ -2197,7 +2197,7 @@ scale_thumbnail (CafeBGPlacement placement,
 		}
 
 		thumb = cdk_pixbuf_scale_simple (thumb, new_width, new_height,
-						 GDK_INTERP_BILINEAR);
+						 CDK_INTERP_BILINEAR);
 	}
 	else
 		g_object_ref (thumb);
@@ -2575,7 +2575,7 @@ pixbuf_scale_to_fit (CdkPixbuf *src, int max_width, int max_height)
 	new_width  = floor (src_width * factor + 0.5);
 	new_height = floor (src_height * factor + 0.5);
 
-	return cdk_pixbuf_scale_simple (src, new_width, new_height, GDK_INTERP_BILINEAR);
+	return cdk_pixbuf_scale_simple (src, new_width, new_height, CDK_INTERP_BILINEAR);
 }
 
 static CdkPixbuf *
@@ -2594,7 +2594,7 @@ pixbuf_scale_to_min (CdkPixbuf *src, int min_width, int min_height)
 	new_width = floor (src_width * factor + 0.5);
 	new_height = floor (src_height * factor + 0.5);
 
-	dest = cdk_pixbuf_new (GDK_COLORSPACE_RGB,
+	dest = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
 			       cdk_pixbuf_get_has_alpha (src),
 			       8, min_width, min_height);
 	if (!dest)
@@ -2608,7 +2608,7 @@ pixbuf_scale_to_min (CdkPixbuf *src, int min_width, int min_height)
 			  (new_height - min_height) / -2,
 			  factor,
 			  factor,
-			  GDK_INTERP_BILINEAR);
+			  CDK_INTERP_BILINEAR);
 	return dest;
 }
 
@@ -2724,7 +2724,7 @@ pixbuf_blend (CdkPixbuf *src,
 			      dest_x, dest_y,
 			      src_width, src_height,
 			      offset_x, offset_y,
-			      1, 1, GDK_INTERP_NEAREST,
+			      1, 1, CDK_INTERP_NEAREST,
 			      alpha * 0xFF + 0.5);
 }
 
@@ -3278,7 +3278,7 @@ cafe_bg_create_frame_thumbnail (CafeBG			*bg,
 		return NULL;
 
 
-	result = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
+	result = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
 	draw_color (bg, result);
 

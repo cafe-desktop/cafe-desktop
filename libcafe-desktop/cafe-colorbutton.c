@@ -181,7 +181,7 @@ cafe_color_button_class_init (CafeColorButtonClass *klass)
                                    g_param_spec_boxed ("color",
                                                        _("Current Color"),
                                                        _("The selected color"),
-                                                       GDK_TYPE_COLOR,
+                                                       CDK_TYPE_COLOR,
                                                        G_PARAM_READWRITE));
 
   /**
@@ -358,7 +358,7 @@ set_color_icon (CdkDragContext *context,
   CdkPixbuf *pixbuf;
   guint32 pixel;
 
-  pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE,
+  pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE,
 			   8, 48, 32);
 
   pixel = ((color->red & 0xff00) << 16) |
@@ -450,11 +450,11 @@ cafe_color_button_init (CafeColorButton *color_button)
                      CTK_DEST_DEFAULT_MOTION |
                      CTK_DEST_DEFAULT_HIGHLIGHT |
                      CTK_DEST_DEFAULT_DROP,
-                     drop_types, 1, GDK_ACTION_COPY);
+                     drop_types, 1, CDK_ACTION_COPY);
   ctk_drag_source_set (CTK_WIDGET(color_button),
-                       GDK_BUTTON1_MASK|GDK_BUTTON3_MASK,
+                       CDK_BUTTON1_MASK|CDK_BUTTON3_MASK,
                        drop_types, 1,
-                       GDK_ACTION_COPY);
+                       CDK_ACTION_COPY);
   g_signal_connect (color_button, "drag-begin",
 		    G_CALLBACK (cafe_color_button_drag_begin), color_button);
   g_signal_connect (color_button, "drag-data-received",

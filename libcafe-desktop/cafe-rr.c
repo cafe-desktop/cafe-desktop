@@ -62,7 +62,7 @@ typedef int Rotation;
 
 enum {
     SCREEN_PROP_0,
-    SCREEN_PROP_GDK_SCREEN,
+    SCREEN_PROP_CDK_SCREEN,
     SCREEN_PROP_LAST,
 };
 
@@ -576,7 +576,7 @@ screen_on_event (CdkXEvent *xevent,
     int event_num;
 
     if (!e)
-	return GDK_FILTER_CONTINUE;
+	return CDK_FILTER_CONTINUE;
 
     event_num = e->type - priv->randr_event_base;
 
@@ -658,7 +658,7 @@ screen_on_event (CdkXEvent *xevent,
 #endif /* HAVE_RANDR */
 
     /* Pass the event on to CTK+ */
-    return GDK_FILTER_CONTINUE;
+    return CDK_FILTER_CONTINUE;
 }
 
 static gboolean
@@ -667,7 +667,7 @@ cafe_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
 {
     CafeRRScreen *self = CAFE_RR_SCREEN (initable);
     CafeRRScreenPrivate *priv = self->priv;
-    Display *dpy = GDK_SCREEN_XDISPLAY (self->priv->cdk_screen);
+    Display *dpy = CDK_SCREEN_XDISPLAY (self->priv->cdk_screen);
     int event_base;
     int ignore;
 
@@ -741,11 +741,11 @@ cafe_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *
 
     switch (property_id)
     {
-    case SCREEN_PROP_GDK_SCREEN:
+    case SCREEN_PROP_CDK_SCREEN:
         priv->cdk_screen = g_value_get_object (value);
         priv->cdk_root = cdk_screen_get_root_window (priv->cdk_screen);
-        priv->xroot = GDK_WINDOW_XID (priv->cdk_root);
-        priv->xdisplay = GDK_SCREEN_XDISPLAY (priv->cdk_screen);
+        priv->xroot = CDK_WINDOW_XID (priv->cdk_root);
+        priv->xdisplay = CDK_SCREEN_XDISPLAY (priv->cdk_screen);
         priv->xscreen = cdk_x11_screen_get_xscreen (priv->cdk_screen);
         return;
     default:
@@ -762,7 +762,7 @@ cafe_rr_screen_get_property (GObject *gobject, guint property_id, GValue *value,
 
     switch (property_id)
     {
-    case SCREEN_PROP_GDK_SCREEN:
+    case SCREEN_PROP_CDK_SCREEN:
         g_value_set_object (value, priv->cdk_screen);
         return;
      default:
@@ -782,12 +782,12 @@ cafe_rr_screen_class_init (CafeRRScreenClass *klass)
 
     g_object_class_install_property(
         gobject_class,
-        SCREEN_PROP_GDK_SCREEN,
+        SCREEN_PROP_CDK_SCREEN,
         g_param_spec_object (
             "cdk-screen",
-            "GDK Screen",
-            "The GDK Screen represented by this CafeRRScreen",
-            GDK_TYPE_SCREEN,
+            "CDK Screen",
+            "The CDK Screen represented by this CafeRRScreen",
+            CDK_TYPE_SCREEN,
 	    G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS)
         );
 
@@ -1706,7 +1706,7 @@ cafe_rr_crtc_set_config (CafeRRCrtc      *crtc,
 			  int               n_outputs,
 			  GError          **error)
 {
-    return cafe_rr_crtc_set_config_with_time (crtc, GDK_CURRENT_TIME, x, y, mode, rotation, outputs, n_outputs, error);
+    return cafe_rr_crtc_set_config_with_time (crtc, CDK_CURRENT_TIME, x, y, mode, rotation, outputs, n_outputs, error);
 }
 #endif
 

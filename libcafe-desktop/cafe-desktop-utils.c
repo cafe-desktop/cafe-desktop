@@ -184,7 +184,7 @@ cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
  * @error: return location for errors
  *
  * This is a replacement for cdk_spawn_command_line_on_screen, deprecated
- * in GDK 2.24 and removed in GDK 3.0.
+ * in CDK 2.24 and removed in CDK 3.0.
  *
  * cdk_spawn_command_line_on_screen is like g_spawn_command_line_async(),
  * except the child process is spawned in such an environment that on
