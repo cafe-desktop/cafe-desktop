@@ -57,7 +57,7 @@ struct _CafeBGCrossfadeClass
 {
     GObjectClass parent_class;
 
-    void (* finished) (CafeBGCrossfade *fade, GdkWindow *window);
+    void (* finished) (CafeBGCrossfade *fade, CdkWindow *window);
 };
 
 GType             cafe_bg_crossfade_get_type (void);
@@ -69,7 +69,7 @@ gboolean          cafe_bg_crossfade_set_end_surface (CafeBGCrossfade *fade,
                                                      cairo_surface_t *surface);
 
 void              cafe_bg_crossfade_start (CafeBGCrossfade *fade,
-                                           GdkWindow        *window);
+                                           CdkWindow        *window);
 void              cafe_bg_crossfade_start_widget (CafeBGCrossfade *fade,
                                                   CtkWidget       *widget);
 gboolean          cafe_bg_crossfade_is_started (CafeBGCrossfade *fade);

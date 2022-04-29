@@ -438,7 +438,7 @@ fill_out_screen_info (Display *xdisplay,
 {
 #ifdef HAVE_RANDR
     XRRScreenResources *resources;
-	GdkDisplay *display;
+	CdkDisplay *display;
 
     g_assert (xdisplay != NULL);
     g_assert (info != NULL);
@@ -564,9 +564,9 @@ screen_update (CafeRRScreen *screen, gboolean force_callback, gboolean needs_rep
     return changed;
 }
 
-static GdkFilterReturn
-screen_on_event (GdkXEvent *xevent,
-		 GdkEvent *event,
+static CdkFilterReturn
+screen_on_event (CdkXEvent *xevent,
+		 CdkEvent *event,
 		 gpointer data)
 {
 #ifdef HAVE_RANDR
@@ -820,7 +820,7 @@ cafe_rr_screen_init (CafeRRScreen *self)
 
 /**
  * cafe_rr_screen_new:
- * @screen: the #GdkScreen on which to operate
+ * @screen: the #CdkScreen on which to operate
  * @error: will be set if XRandR is not supported
  *
  * Creates a new #CafeRRScreen instance
@@ -829,7 +829,7 @@ cafe_rr_screen_init (CafeRRScreen *self)
  * for instance if the driver does not support Xrandr 1.2
  */
 CafeRRScreen *
-cafe_rr_screen_new (GdkScreen *screen,
+cafe_rr_screen_new (CdkScreen *screen,
                     GError **error)
 {
     _cafe_desktop_init_i18n ();
@@ -846,7 +846,7 @@ cafe_rr_screen_set_size (CafeRRScreen *screen,
     g_return_if_fail (CAFE_IS_RR_SCREEN (screen));
 
 #ifdef HAVE_RANDR
-	GdkDisplay *display;
+	CdkDisplay *display;
 
 	display = cdk_display_get_default ();
     cdk_x11_display_error_trap_push (display);
@@ -931,7 +931,7 @@ force_timestamp_update (CafeRRScreen *screen)
     CafeRRScreenPrivate *priv = screen->priv;
     CafeRRCrtc *crtc;
     XRRCrtcInfo *current_info;
-	GdkDisplay *display;
+	CdkDisplay *display;
     Status status;
     gboolean timestamp_updated;
 
@@ -1724,7 +1724,7 @@ cafe_rr_crtc_set_config_with_time (CafeRRCrtc      *crtc,
 #ifdef HAVE_RANDR
     ScreenInfo *info;
     GArray *output_ids;
-	GdkDisplay *display;
+	CdkDisplay *display;
     Status status;
     gboolean result;
     int i;

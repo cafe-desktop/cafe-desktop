@@ -41,17 +41,17 @@ G_BEGIN_DECLS
 void cafe_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
 
 /* replace cdk_spawn_command_line_on_screen, not available in CTK3 */
-gboolean cafe_cdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
+gboolean cafe_cdk_spawn_command_line_on_screen (CdkScreen *screen, const gchar *command, GError **error);
 
 void
 cafe_desktop_ctk_style_get_light_color (CtkStyleContext *style,
                                         CtkStateFlags    state,
-                                        GdkRGBA         *color);
+                                        CdkRGBA         *color);
 
 void
 cafe_desktop_ctk_style_get_dark_color (CtkStyleContext *style,
                                        CtkStateFlags    state,
-                                       GdkRGBA         *color);
+                                       CdkRGBA         *color);
 
 G_END_DECLS
 

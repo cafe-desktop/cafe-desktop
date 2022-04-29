@@ -40,7 +40,7 @@
 
 struct _CafeBGCrossfadePrivate
 {
-    GdkWindow       *window;
+    CdkWindow       *window;
     CtkWidget       *widget;
     int              width;
     int              height;
@@ -187,7 +187,7 @@ cafe_bg_crossfade_class_init (CafeBGCrossfadeClass *fade_class)
     /**
      * CafeBGCrossfade::finished:
      * @fade: the #CafeBGCrossfade that received the signal
-     * @window: the #GdkWindow the crossfade happend on.
+     * @window: the #CdkWindow the crossfade happend on.
      *
      * When a crossfade finishes, @window will have a copy
      * of the end surface as its background, and this signal will
@@ -269,7 +269,7 @@ tile_surface (cairo_surface_t *surface,
     {
         static CtkCssProvider *provider = NULL;
         CtkStyleContext *context;
-        GdkRGBA bg;
+        CdkRGBA bg;
 
         if (provider == NULL)
               provider = ctk_css_provider_new ();
@@ -390,7 +390,7 @@ static gboolean
 animations_are_disabled (CafeBGCrossfade *fade)
 {
     CtkSettings *settings;
-    GdkScreen *screen;
+    CdkScreen *screen;
     gboolean are_enabled;
 
     g_assert (fade->priv->window != NULL);
@@ -426,7 +426,7 @@ draw_background (CafeBGCrossfade *fade)
     } else if (cdk_window_get_window_type (fade->priv->window) != GDK_WINDOW_ROOT) {
         cairo_t           *cr;
         cairo_region_t    *region;
-        GdkDrawingContext *draw_context;
+        CdkDrawingContext *draw_context;
 
         region = cdk_window_get_visible_region (fade->priv->window);
         draw_context = cdk_window_begin_draw_frame (fade->priv->window,
@@ -439,7 +439,7 @@ draw_background (CafeBGCrossfade *fade)
         cairo_region_destroy (region);
     } else {
         Display *xdisplay = GDK_WINDOW_XDISPLAY (fade->priv->window);
-        GdkDisplay *display;
+        CdkDisplay *display;
         display = cdk_display_get_default ();
         cdk_x11_display_error_trap_push (display);
         XGrabServer (xdisplay);
@@ -566,9 +566,9 @@ on_finished (CafeBGCrossfade *fade)
  * If _XROOTPMAP_ID is not set, then NULL returned.
  */
 static cairo_surface_t *
-get_root_pixmap_id_surface (GdkDisplay *display)
+get_root_pixmap_id_surface (CdkDisplay *display)
 {
-    GdkScreen       *screen;
+    CdkScreen       *screen;
     Display         *xdisplay;
     Visual          *xvisual;
     Window           xroot;
@@ -624,7 +624,7 @@ get_root_pixmap_id_surface (GdkDisplay *display)
 /**
  * cafe_bg_crossfade_start:
  * @fade: a #CafeBGCrossfade
- * @window: The #GdkWindow to draw crossfade on
+ * @window: The #CdkWindow to draw crossfade on
  *
  * This function initiates a quick crossfade between two surfaces on
  * the background of @window. Before initiating the crossfade both
@@ -635,7 +635,7 @@ get_root_pixmap_id_surface (GdkDisplay *display)
  **/
 void
 cafe_bg_crossfade_start (CafeBGCrossfade *fade,
-                         GdkWindow       *window)
+                         CdkWindow       *window)
 {
     GSource *source;
     GMainContext *context;
@@ -651,7 +651,7 @@ cafe_bg_crossfade_start (CafeBGCrossfade *fade,
      * it is essential to have the root pixmap.
      */
     if (cdk_window_get_window_type (window) == GDK_WINDOW_ROOT) {
-        GdkDisplay *display = cdk_window_get_display (window);
+        CdkDisplay *display = cdk_window_get_display (window);
         cairo_surface_t *surface = get_root_pixmap_id_surface (display);
 
         g_return_if_fail (surface != NULL);
@@ -674,7 +674,7 @@ cafe_bg_crossfade_start (CafeBGCrossfade *fade,
         }
     } else {
         cairo_t   *cr;
-        GdkDisplay *display = cdk_window_get_display (fade->priv->window);
+        CdkDisplay *display = cdk_window_get_display (fade->priv->window);
 
         fade->priv->fading_surface = get_root_pixmap_id_surface (display);
         cr = cairo_create (fade->priv->fading_surface);
@@ -714,7 +714,7 @@ void
 cafe_bg_crossfade_start_widget (CafeBGCrossfade *fade,
                                 CtkWidget       *widget)
 {
-    GdkWindow *window;
+    CdkWindow *window;
 
     g_return_if_fail (CAFE_IS_BG_CROSSFADE (fade));
     g_return_if_fail (widget != NULL);

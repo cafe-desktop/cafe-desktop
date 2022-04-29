@@ -102,8 +102,8 @@ void             cafe_bg_set_placement         (CafeBG               *bg,
 						 CafeBGPlacement       placement);
 void             cafe_bg_set_color             (CafeBG               *bg,
 						 CafeBGColorType       type,
-						 GdkRGBA              *primary,
-						 GdkRGBA              *secondary);
+						 CdkRGBA              *primary,
+						 CdkRGBA              *secondary);
 void		 cafe_bg_set_draw_background   (CafeBG		     *bg,
 						gboolean	      draw_background);
 /* Getters */
@@ -111,24 +111,24 @@ gboolean	 cafe_bg_get_draw_background   (CafeBG		     *bg);
 CafeBGPlacement  cafe_bg_get_placement         (CafeBG               *bg);
 void		 cafe_bg_get_color             (CafeBG               *bg,
 						 CafeBGColorType      *type,
-						 GdkRGBA              *primary,
-						 GdkRGBA              *secondary);
+						 CdkRGBA              *primary,
+						 CdkRGBA              *secondary);
 const gchar *    cafe_bg_get_filename          (CafeBG               *bg);
 
 /* Drawing and thumbnailing */
 void             cafe_bg_draw                  (CafeBG               *bg,
-						 GdkPixbuf             *dest,
-						 GdkScreen	       *screen,
+						 CdkPixbuf             *dest,
+						 CdkScreen	       *screen,
                                                  gboolean               is_root);
 
 cairo_surface_t *cafe_bg_create_surface        (CafeBG               *bg,
-						GdkWindow            *window,
+						CdkWindow            *window,
 						int                   width,
 						int                   height,
 						gboolean              root);
 
 cairo_surface_t *cafe_bg_create_surface_scale  (CafeBG               *bg,
-						GdkWindow            *window,
+						CdkWindow            *window,
 						int                   width,
 						int                   height,
 						int                   scale,
@@ -140,9 +140,9 @@ gboolean         cafe_bg_get_image_size        (CafeBG               *bg,
                                                  int                    best_height,
 						 int                   *width,
 						 int                   *height);
-GdkPixbuf *      cafe_bg_create_thumbnail      (CafeBG               *bg,
+CdkPixbuf *      cafe_bg_create_thumbnail      (CafeBG               *bg,
 						 CafeDesktopThumbnailFactory *factory,
-						 GdkScreen             *screen,
+						 CdkScreen             *screen,
 						 int                    dest_width,
 						 int                    dest_height);
 gboolean         cafe_bg_is_dark               (CafeBG               *bg,
@@ -150,9 +150,9 @@ gboolean         cafe_bg_is_dark               (CafeBG               *bg,
 						 int                    dest_height);
 gboolean         cafe_bg_has_multiple_sizes    (CafeBG               *bg);
 gboolean         cafe_bg_changes_with_time     (CafeBG               *bg);
-GdkPixbuf *      cafe_bg_create_frame_thumbnail (CafeBG              *bg,
+CdkPixbuf *      cafe_bg_create_frame_thumbnail (CafeBG              *bg,
 						 CafeDesktopThumbnailFactory *factory,
-						 GdkScreen             *screen,
+						 CdkScreen             *screen,
 						 int                    dest_width,
 						 int                    dest_height,
 						 int                    frame_num);
@@ -161,11 +161,11 @@ GdkPixbuf *      cafe_bg_create_frame_thumbnail (CafeBG              *bg,
  * if we decide to stabilize the API then we may want to make
  * these object methods, drop cafe_bg_create_surface, etc.
  */
-void             cafe_bg_set_surface_as_root   (GdkScreen            *screen,
+void             cafe_bg_set_surface_as_root   (CdkScreen            *screen,
 						cairo_surface_t    *surface);
-CafeBGCrossfade *cafe_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
+CafeBGCrossfade *cafe_bg_set_surface_as_root_with_crossfade (CdkScreen       *screen,
 							     cairo_surface_t *surface);
-cairo_surface_t *cafe_bg_get_surface_from_root (GdkScreen *screen);
+cairo_surface_t *cafe_bg_get_surface_from_root (CdkScreen *screen);
 
 G_END_DECLS
 

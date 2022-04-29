@@ -1473,7 +1473,7 @@ static void
 sn_error_trap_push (SnDisplay *display,
 		    Display   *xdisplay)
 {
-	GdkDisplay *cdkdisplay;
+	CdkDisplay *cdkdisplay;
 
 	cdkdisplay = cdk_display_get_default ();
 	cdk_x11_display_error_trap_push (cdkdisplay);
@@ -1483,7 +1483,7 @@ static void
 sn_error_trap_pop (SnDisplay *display,
 		   Display   *xdisplay)
 {
-	GdkDisplay *cdkdisplay;
+	CdkDisplay *cdkdisplay;
 
 	cdkdisplay = cdk_display_get_default ();
 	cdk_x11_display_error_trap_pop_ignored (cdkdisplay);
@@ -1550,7 +1550,7 @@ make_spawn_environment_for_sn_context (SnLauncherContext *sn_context,
 
 typedef struct
 {
-	GdkScreen *screen;
+	CdkScreen *screen;
 	GSList *contexts;
 	guint timeout_id;
 } StartupTimeoutData;
@@ -1643,7 +1643,7 @@ startup_timeout (void *data)
 }
 
 static void
-add_startup_timeout (GdkScreen         *screen,
+add_startup_timeout (CdkScreen         *screen,
 		     SnLauncherContext *sn_context)
 {
 	StartupTimeoutData *data;
@@ -1696,10 +1696,10 @@ stringify_files (GSList *args)
 }
 
 static char **
-make_environment_for_screen (GdkScreen  *screen,
+make_environment_for_screen (CdkScreen  *screen,
 			     char      **envp)
 {
-	GdkDisplay *display;
+	CdkDisplay *display;
 	char      **retval;
 	char      **freeme;
 	char       *display_name;
@@ -1759,7 +1759,7 @@ static int
 ditem_execute (const CafeDesktopItem *item,
 	       const char *exec,
 	       GList *file_list,
-	       GdkScreen *screen,
+	       CdkScreen *screen,
 	       int workspace,
                char **envp,
 	       gboolean launch_only_one,
@@ -1783,7 +1783,7 @@ ditem_execute (const CafeDesktopItem *item,
 	int launched = 0;
 	GPid pid;
 #ifdef HAVE_STARTUP_NOTIFICATION
-	GdkDisplay *cdkdisplay;
+	CdkDisplay *cdkdisplay;
 	SnLauncherContext *sn_context;
 	SnDisplay *sn_display;
 	const char *startup_class;
@@ -2075,7 +2075,7 @@ cafe_desktop_item_launch_on_screen_with_env (
 		const CafeDesktopItem       *item,
 		GList                        *file_list,
 		CafeDesktopItemLaunchFlags   flags,
-		GdkScreen                    *screen,
+		CdkScreen                    *screen,
 		int                           workspace,
 		char                        **envp,
 		GError                      **error)
@@ -2216,7 +2216,7 @@ cafe_desktop_item_launch_with_env (const CafeDesktopItem       *item,
  * @item: A desktop item
  * @file_list:  Files/URIs to launch this item with, can be %NULL
  * @flags: FIXME
- * @screen: the %GdkScreen on which the application should be launched
+ * @screen: the %CdkScreen on which the application should be launched
  * @workspace: the workspace on which the app should be launched (-1 for current)
  * @error: FIXME
  *
@@ -2232,7 +2232,7 @@ int
 cafe_desktop_item_launch_on_screen (const CafeDesktopItem       *item,
 				     GList                        *file_list,
 				     CafeDesktopItemLaunchFlags   flags,
-				     GdkScreen                    *screen,
+				     CdkScreen                    *screen,
 				     int                           workspace,
 				     GError                      **error)
 {

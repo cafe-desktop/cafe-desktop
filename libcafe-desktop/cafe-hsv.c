@@ -81,7 +81,7 @@ struct _CafeHSVPrivate
   int ring_width;
 
   /* Window for capturing events */
-  GdkWindow *window;
+  CdkWindow *window;
 
   /* Dragging mode */
   DragMode mode;
@@ -110,15 +110,15 @@ static void     cafe_hsv_get_preferred_height (CtkWidget          *widget,
 static void     cafe_hsv_size_allocate        (CtkWidget          *widget,
                                                CtkAllocation      *allocation);
 static gboolean cafe_hsv_button_press         (CtkWidget          *widget,
-                                               GdkEventButton     *event);
+                                               CdkEventButton     *event);
 static gboolean cafe_hsv_button_release       (CtkWidget          *widget,
-                                               GdkEventButton     *event);
+                                               CdkEventButton     *event);
 static gboolean cafe_hsv_motion               (CtkWidget          *widget,
-                                               GdkEventMotion     *event);
+                                               CdkEventMotion     *event);
 static gboolean cafe_hsv_draw                 (CtkWidget          *widget,
                                                cairo_t            *cr);
 static gboolean cafe_hsv_grab_broken          (CtkWidget          *widget,
-                                               GdkEventGrabBroken *event);
+                                               CdkEventGrabBroken *event);
 static gboolean cafe_hsv_focus                (CtkWidget          *widget,
                                                CtkDirectionType    direction);
 static void     cafe_hsv_move                 (CafeHSV            *hsv,
@@ -236,8 +236,8 @@ cafe_hsv_realize (CtkWidget *widget)
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
   CtkAllocation allocation;
-  GdkWindow *parent_window;
-  GdkWindowAttr attr;
+  CdkWindow *parent_window;
+  CdkWindowAttr attr;
   int attr_mask;
 
   ctk_widget_set_realized (widget, TRUE);
@@ -604,11 +604,11 @@ compute_v (CafeHSV *hsv,
 
 static void
 set_cross_grab (CafeHSV   *hsv,
-                GdkDevice *device,
+                CdkDevice *device,
                 guint32    time)
 {
   CafeHSVPrivate *priv = hsv->priv;
-  GdkCursor *cursor;
+  CdkCursor *cursor;
 
   cursor = cdk_cursor_new_for_display (ctk_widget_get_display (CTK_WIDGET (hsv)),
                                        GDK_CROSSHAIR);
@@ -625,7 +625,7 @@ set_cross_grab (CafeHSV   *hsv,
 
 static gboolean
 cafe_hsv_grab_broken (CtkWidget          *widget,
-                      GdkEventGrabBroken *event)
+                      CdkEventGrabBroken *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
@@ -637,7 +637,7 @@ cafe_hsv_grab_broken (CtkWidget          *widget,
 
 static gint
 cafe_hsv_button_press (CtkWidget      *widget,
-                       GdkEventButton *event)
+                       CdkEventButton *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
@@ -652,7 +652,7 @@ cafe_hsv_button_press (CtkWidget      *widget,
   if (is_in_ring (hsv, x, y))
     {
       priv->mode = DRAG_H;
-      set_cross_grab (hsv, cdk_event_get_device ((GdkEvent *) event), event->time);
+      set_cross_grab (hsv, cdk_event_get_device ((CdkEvent *) event), event->time);
 
       cafe_hsv_set_color (hsv,
                          compute_v (hsv, x, y),
@@ -670,7 +670,7 @@ cafe_hsv_button_press (CtkWidget      *widget,
       gdouble s, v;
 
       priv->mode = DRAG_SV;
-      set_cross_grab (hsv, cdk_event_get_device ((GdkEvent *) event), event->time);
+      set_cross_grab (hsv, cdk_event_get_device ((CdkEvent *) event), event->time);
 
       compute_sv (hsv, x, y, &s, &v);
       cafe_hsv_set_color (hsv, priv->h, s, v);
@@ -686,7 +686,7 @@ cafe_hsv_button_press (CtkWidget      *widget,
 
 static gint
 cafe_hsv_button_release (CtkWidget      *widget,
-                         GdkEventButton *event)
+                         CdkEventButton *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
@@ -721,14 +721,14 @@ cafe_hsv_button_release (CtkWidget      *widget,
       g_assert_not_reached ();
     }
 
-  cdk_seat_ungrab (cdk_device_get_seat (cdk_event_get_device ((GdkEvent *) event)));
+  cdk_seat_ungrab (cdk_device_get_seat (cdk_event_get_device ((CdkEvent *) event)));
 
   return TRUE;
 }
 
 static gint
 cafe_hsv_motion (CtkWidget      *widget,
-                 GdkEventMotion *event)
+                 CdkEventMotion *event)
 {
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;

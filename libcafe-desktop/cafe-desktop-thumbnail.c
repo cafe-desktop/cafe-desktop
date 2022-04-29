@@ -717,7 +717,7 @@ validate_thumbnail_path (char                     *path,
                          time_t                    mtime,
                          CafeDesktopThumbnailSize  size)
 {
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
 
   pixbuf = cdk_pixbuf_new_from_file (path, NULL);
   if (pixbuf == NULL ||
@@ -977,11 +977,11 @@ bail:
   return NULL;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_preview_thumbnail (const char *uri,
                        int         size)
 {
-    GdkPixbuf *pixbuf;
+    CdkPixbuf *pixbuf;
     GFile *file;
     GFileInfo *file_info;
     GInputStream *input_stream;
@@ -1050,12 +1050,12 @@ get_preview_thumbnail (const char *uri,
  *
  * Since: 2.2
  **/
-GdkPixbuf *
+CdkPixbuf *
 cafe_desktop_thumbnail_factory_generate_thumbnail (CafeDesktopThumbnailFactory *factory,
                                                    const char                  *uri,
                                                    const char                  *mime_type)
 {
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
   char *script;
   int size;
   int exit_status;
@@ -1130,7 +1130,7 @@ cafe_desktop_thumbnail_factory_generate_thumbnail (CafeDesktopThumbnailFactory *
 }
 
 static gboolean
-save_thumbnail (GdkPixbuf  *pixbuf,
+save_thumbnail (CdkPixbuf  *pixbuf,
                 char       *path,
                 const char *uri,
                 time_t      mtime)
@@ -1202,10 +1202,10 @@ save_thumbnail (GdkPixbuf  *pixbuf,
   return ret;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 make_failed_thumbnail (void)
 {
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
 
   pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
   cdk_pixbuf_fill (pixbuf, 0x00000000);
@@ -1228,7 +1228,7 @@ make_failed_thumbnail (void)
  **/
 void
 cafe_desktop_thumbnail_factory_save_thumbnail (CafeDesktopThumbnailFactory *factory,
-                                               GdkPixbuf                   *thumbnail,
+                                               CdkPixbuf                   *thumbnail,
                                                const char                  *uri,
                                                time_t                       original_mtime)
 {
@@ -1265,7 +1265,7 @@ cafe_desktop_thumbnail_factory_create_failed_thumbnail (CafeDesktopThumbnailFact
                                                         time_t                      mtime)
 {
   char *path;
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
 
   path = thumbnail_failed_path (uri);
   pixbuf = make_failed_thumbnail ();
@@ -1306,7 +1306,7 @@ cafe_desktop_thumbnail_path_for_uri (const char               *uri,
  * Since: 2.2
  **/
 gboolean
-cafe_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
+cafe_desktop_thumbnail_has_uri (CdkPixbuf          *pixbuf,
                                 const char         *uri)
 {
   const char *thumb_uri;
@@ -1317,7 +1317,7 @@ cafe_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
 
 /**
  * cafe_desktop_thumbnail_is_valid:
- * @pixbuf: an loaded thumbnail #GdkPixbuf
+ * @pixbuf: an loaded thumbnail #CdkPixbuf
  * @uri: a uri
  * @mtime: the mtime
  *
@@ -1329,7 +1329,7 @@ cafe_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
  * Since: 2.2
  **/
 gboolean
-cafe_desktop_thumbnail_is_valid (GdkPixbuf          *pixbuf,
+cafe_desktop_thumbnail_is_valid (CdkPixbuf          *pixbuf,
                                  const char         *uri,
                                  time_t              mtime)
 {
