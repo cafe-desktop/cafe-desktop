@@ -35,7 +35,7 @@ cafedt_pkgdatadir = join_paths(cafedt_datadir, 'libcafe-desktop')
 
 # options
 enable_gir = get_option('introspection')
-enable_ctk_doc = get_option('ctk-doc')
+enable_ctk_doc = get_option('gtk-doc')
 enable_startup_notification = get_option('startup-notification')
 
 # Before making a release, the LT_VERSION string should be modified.
