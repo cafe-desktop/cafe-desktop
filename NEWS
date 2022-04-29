@@ -32,7 +32,7 @@
   * thumbnail: some code-styling fixes
   * Deprecate cafe_desktop_thumbnail_scale_down_pixbuf()
   * thumbnailer: Always prefer the backend provided preview
-  * thumbnail: Always use external cdk-pixbuf thumbnailer
+  * thumbnail: Always use external gdk-pixbuf thumbnailer
   * thumbnail: Demote a log message from WARNING to DEBUG
   * thumbnail factory: Disconnect signal handlers in finalize
   * thumbnail: Move thumbnail generation/saving to a few helper functions

@@ -42,7 +42,7 @@ requires:
     - libepoxy-dev
     - libfontconfig1-dev
     - libfribidi-dev
-    - libcdk-pixbuf2.0-dev
+    - libgdk-pixbuf2.0-dev
     - libjson-glib-1.0-0
     - libpango1.0-dev
     - librest-0.7-0
