@@ -21,8 +21,6 @@ requires:
     - libgirepository1.0-dev
     - libglib2.0-dev
     - libglib2.0-doc
-    - libgtk-3-dev
-    - libgtk-3-doc
     - libstartup-notification0-dev
     - libtool
     - libx11-dev
@@ -33,6 +31,7 @@ requires:
 before_scripts:
   - ./html-cppcheck
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
+  - ./install-from-debs https://github.com/cafe-desktop/ctk master libctk-3-dev gir1.2-ctk-3.0 libctk-3-common libctk-3-0 libctk-3-doc
 
 build_scripts:
   - ./before-build
