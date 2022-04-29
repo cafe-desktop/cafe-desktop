@@ -33,25 +33,25 @@ main (int argc, char **argv)
     GtkWidget *widget = NULL;
 
     /* initialize GTK+ */
-    gtk_init (&argc, &argv);
+    ctk_init (&argc, &argv);
 
     /* create window */
-    window = GTK_WINDOW (gtk_window_new (GTK_WINDOW_TOPLEVEL));
+    window = GTK_WINDOW (ctk_window_new (GTK_WINDOW_TOPLEVEL));
 
-    gtk_window_set_title (window, "CAFE Desktop Test");
+    ctk_window_set_title (window, "CAFE Desktop Test");
 
     /* create a CafeColorButton */
     widget = cafe_color_button_new ();
 
     /* add CafeColorButton to window */
-    gtk_container_add (GTK_CONTAINER (window), widget);
+    ctk_container_add (GTK_CONTAINER (window), widget);
 
     /* quit signal */
-    g_signal_connect (GTK_WIDGET (window), "destroy", gtk_main_quit, NULL);
+    g_signal_connect (GTK_WIDGET (window), "destroy", ctk_main_quit, NULL);
 
-    gtk_widget_show_all (GTK_WIDGET (window));
+    ctk_widget_show_all (GTK_WIDGET (window));
 
     /* start application */
-    gtk_main ();
+    ctk_main ();
     return 0;
 }

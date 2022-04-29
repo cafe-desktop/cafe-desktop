@@ -281,7 +281,7 @@ msgid "The color you've chosen."
 msgstr ""
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
+msgid "ctk-color-sel"
 msgstr ""
 
 #: libcafe-desktop/cafe-colorsel.c:1369
@@ -944,8 +944,8 @@ msgstr "Gtk+ Theme"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "gtk+'ৰ দ্বাৰা ব্যৱহৃত অবিকল্পিত থিমৰ Basename ।"
+msgid "Basename of the default theme used by ctk+."
+msgstr "ctk+'ৰ দ্বাৰা ব্যৱহৃত অবিকল্পিত থিমৰ Basename ।"
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -953,7 +953,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 
@@ -962,24 +962,24 @@ msgid "Default font"
 msgstr "অবিকল্পিতৰূপে ব্যৱহৃত ফন্ট"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "gtk+ দ্বাৰা ব্যৱহৃত অবিকল্পিত ফন্টৰ নাম ।"
+msgid "Name of the default font used by ctk+."
+msgstr "ctk+ দ্বাৰা ব্যৱহৃত অবিকল্পিত ফন্টৰ নাম ।"
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "GTK IM Preedit ধৰণ"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "gtk+ দ্বাৰা ব্যৱহৃত GTK+ নিবেশ পদ্ধতিৰ Preedit বিন্যাস ।"
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgstr "ctk+ দ্বাৰা ব্যৱহৃত GTK+ নিবেশ পদ্ধতিৰ Preedit বিন্যাস ।"
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "GTK IM অৱস্থাসূচক বিন্যাস"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "gtk+ দ্বাৰা ব্যৱহৃত GTK+ নিবেশ পদ্ধতিৰ অৱস্থাৰ বিন্যাস ।"
+msgid "Name of the GTK+ input method Status Style used by ctk+."
+msgstr "ctk+ দ্বাৰা ব্যৱহৃত GTK+ নিবেশ পদ্ধতিৰ অৱস্থাৰ বিন্যাস ।"
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1042,8 +1042,8 @@ msgid "Use Custom Font"
 msgstr "স্বনিৰ্বাচিত ফন্ট ব্যৱহাৰ কৰা হ'ব"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "gtk+ অনুপ্ৰয়োগৰ ক্ষেত্ৰত স্বনিৰ্বাচিত ফন্ট ব্যৱহৃত হ'ব নে নহয় ।"
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "ctk+ অনুপ্ৰয়োগৰ ক্ষেত্ৰত স্বনিৰ্বাচিত ফন্ট ব্যৱহৃত হ'ব নে নহয় ।"
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1060,7 +1060,7 @@ msgstr "GtkFileChooser'ৰ অংশ"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:140
@@ -1104,7 +1104,7 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 
@@ -1116,7 +1116,7 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 
@@ -1128,7 +1128,7 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 
@@ -1172,7 +1172,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
 
@@ -1404,7 +1404,7 @@ msgstr ""
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
+msgid "ctk-select-color"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or

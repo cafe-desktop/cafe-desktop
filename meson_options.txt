@@ -1,4 +1,4 @@
-option('gtk-doc',
+option('ctk-doc',
   type: 'boolean',
   value: 'false',
 )

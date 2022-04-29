@@ -321,8 +321,8 @@ msgid "The color you've chosen."
 msgstr "Barva, ki ste jo izbrali."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1004,8 +1004,8 @@ msgstr "Tema Gtk+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "Ime privzete teme, ki jo uporablja gtk+."
+msgid "Basename of the default theme used by ctk+."
+msgstr "Ime privzete teme, ki jo uporablja ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1013,10 +1013,10 @@ msgstr "Seznam simbolnih imen in enakovrednih barv"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
-"Z '\\n' ločen seznam \"name:color\", kot je določeno z nastavitvijo 'gtk-"
+"Z '\\n' ločen seznam \"name:color\", kot je določeno z nastavitvijo 'ctk-"
 "color-scheme'"
 
 #: schemas/org.cafe.interface.gschema.xml:80
@@ -1024,24 +1024,24 @@ msgid "Default font"
 msgstr "Privzeta pisava"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "Ime privzete pisave, ki jo uporablja gtk+."
+msgid "Name of the default font used by ctk+."
+msgstr "Ime privzete pisave, ki jo uporablja ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "GTK IM Preedit Style"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "Ime vhodnega načina GTK+ Preedit Style, ki ga uporablja gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgstr "Ime vhodnega načina GTK+ Preedit Style, ki ga uporablja ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "GTK IM Status Style"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "Ime vhodnega načina GTK+ Status Style, ki ga uporablja gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
+msgstr "Ime vhodnega načina GTK+ Status Style, ki ga uporablja ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1110,8 +1110,8 @@ msgid "Use Custom Font"
 msgstr "Uporabi pisavo po meri"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Ali naj se uporabi prilagojena pisava v programih gtk+."
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "Ali naj se uporabi prilagojena pisava v programih ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1128,10 +1128,10 @@ msgstr "Modul za GtkFileChooser"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Uporaba modula kot model datotečnega sistema za gradnik GtkFileChooser. "
-"Mogoče vrednosti so \"gio\" in \"gtk+\"."
+"Mogoče vrednosti so \"gio\" in \"ctk+\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1174,13 +1174,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Ta nastavitev določa, kateri gumbi naj bodo v nazivni vrstici oken, "
 "okrašenih s strani odjemalca in ali naj bodo postavljeni v levo ali desno. "
 "Oglejte si "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1191,12 +1191,12 @@ msgstr "Uporabite globalni meni za prikazovanje menijev aplikacij"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Ta nastavitev določa, kje se bodo prikazovali meniji aplikacij - ali v oknu,"
 " ali na panoju preko MenuModel protokola. Glej "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1207,12 +1207,12 @@ msgstr "Uporabite globalni meni za prikazovanje okenskih menijev"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Ta nastavitev določa, kje se bodo prikazovali meniji oken - ali v oknu, ali "
 "na panoju preko MenuModel protokola. Glej "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1265,10 +1265,10 @@ msgstr "Omogoči primarni izbor za prilepljenje"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Če je resnično, gtk+ uporablja primarni izbor za prilepljenje, ponavadi ga "
+"Če je resnično, ctk+ uporablja primarni izbor za prilepljenje, ponavadi ga "
 "sproži klik na srednji gumb miške."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
@@ -1500,7 +1500,7 @@ msgstr "Izberite barve s palete ali zaslona"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
+msgid "ctk-select-color"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or

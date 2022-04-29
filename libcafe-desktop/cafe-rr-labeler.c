@@ -29,7 +29,7 @@
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <X11/Xproto.h>
 #include <X11/Xlib.h>
@@ -309,7 +309,7 @@ make_palette (CafeRRLabeler *labeler)
 		s = 1.0 / 3;
 		v = 1.0;
 
-		gtk_hsv_to_rgb (h, s, v, &r, &g, &b);
+		ctk_hsv_to_rgb (h, s, v, &r, &g, &b);
 
 		labeler->priv->palette[i].red   = r;
 		labeler->priv->palette[i].green = g;
@@ -328,7 +328,7 @@ label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
 	GtkAllocation allocation;
 
 	color = g_object_get_data (G_OBJECT (widget), "color");
-	gtk_widget_get_allocation (widget, &allocation);
+	ctk_widget_get_allocation (widget, &allocation);
 
 	/* edge outline */
 
@@ -368,7 +368,7 @@ position_window (CafeRRLabeler  *labeler,
 	gdk_monitor_get_geometry (monitor_num, &monitor);
 	gdk_rectangle_intersect (&monitor, &workarea, &workarea);
 
-	gtk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
+	ctk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
 }
 
 static GtkWidget *
@@ -381,10 +381,10 @@ create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *
 	GdkRGBA black = { 0, 0, 0, 1.0 };
 	int x,y;
 
-	window = gtk_window_new (GTK_WINDOW_POPUP);
-	gtk_widget_set_app_paintable (window, TRUE);
+	window = ctk_window_new (GTK_WINDOW_POPUP);
+	ctk_widget_set_app_paintable (window, TRUE);
 
-	gtk_container_set_border_width (GTK_CONTAINER (window), LABEL_WINDOW_PADDING + LABEL_WINDOW_EDGE_THICKNESS);
+	ctk_container_set_border_width (GTK_CONTAINER (window), LABEL_WINDOW_PADDING + LABEL_WINDOW_EDGE_THICKNESS);
 
 	/* This is semi-dangerous.  The color is part of the labeler->palette
 	 * array.  Note that in cafe_rr_labeler_finalize(), we are careful to
@@ -411,23 +411,23 @@ create_label_window (CafeRRLabeler *labeler, CafeRROutputInfo *output, GdkRGBA *
 	}
 	g_free (display_name);
 
-	widget = gtk_label_new (NULL);
-	gtk_label_set_markup (GTK_LABEL (widget), str);
+	widget = ctk_label_new (NULL);
+	ctk_label_set_markup (GTK_LABEL (widget), str);
 	g_free (str);
 
 	/* Make the label explicitly black.  We don't want it to follow the
 	 * theme's colors, since the label is always shown against a light
 	 * pastel background.  See bgo#556050
 	 */
-	gtk_widget_override_color (widget, gtk_widget_get_state_flags (widget), &black);
+	ctk_widget_override_color (widget, ctk_widget_get_state_flags (widget), &black);
 
-	gtk_container_add (GTK_CONTAINER (window), widget);
+	ctk_container_add (GTK_CONTAINER (window), widget);
 
 	/* Should we center this at the top edge of the monitor, instead of using the upper-left corner? */
 	cafe_rr_output_info_get_geometry (output, &x, &y, NULL, NULL);
 	position_window (labeler, window, x, y);
 
-	gtk_widget_show_all (window);
+	ctk_widget_show_all (window);
 
 	return window;
 }
@@ -506,7 +506,7 @@ cafe_rr_labeler_hide (CafeRRLabeler *labeler)
 
 	for (i = 0; i < priv->num_outputs; i++)
 		if (priv->windows[i] != NULL) {
-			gtk_widget_destroy (priv->windows[i]);
+			ctk_widget_destroy (priv->windows[i]);
 			priv->windows[i] = NULL;
 	}
 	g_free (priv->windows);

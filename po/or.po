@@ -281,7 +281,7 @@ msgid "The color you've chosen."
 msgstr ""
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
+msgid "ctk-color-sel"
 msgstr ""
 
 #: libcafe-desktop/cafe-colorsel.c:1369
@@ -949,7 +949,7 @@ msgstr "ଜି.ଟି.କେ.+ ପ୍ରସଙ୍ଗ"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
+msgid "Basename of the default theme used by ctk+."
 msgstr "ଜି.ଟି.କେ.+ ଦ୍ବାରା ବ୍ଯବହୃତ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ପ୍ରସଙ୍ଗର ଆଧାର ନାମ"
 
 #: schemas/org.cafe.interface.gschema.xml:75
@@ -958,7 +958,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 
@@ -967,7 +967,7 @@ msgid "Default font"
 msgstr "ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଅକ୍ଷରରୂପ"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
+msgid "Name of the default font used by ctk+."
 msgstr "ଜି.ଟି.କେ.+ ଦ୍ବାରା ବ୍ଯବହୃତ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଅକ୍ଷରରୂପର ନାମ."
 
 #: schemas/org.cafe.interface.gschema.xml:85
@@ -975,7 +975,7 @@ msgid "GTK IM Preedit Style"
 msgstr "ଜି.ଟି.କେ. ଆଇ.ଏମ. ଉପସମ୍ପାଦନ ଶୈଳୀ"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr "ଜି.ଟି.କେ.+ ଦ୍ବାରା ବ୍ଯବହୃତ ଜି.ଟି.କେ.+ ନିବେଶ ଧାରାର ଉପସମ୍ପାଦନ ଶୈଳୀର ନାମ."
 
 #: schemas/org.cafe.interface.gschema.xml:90
@@ -983,7 +983,7 @@ msgid "GTK IM Status Style"
 msgstr "ଜି.ଟି.କେ. ଆଇ.ଏମ. ଅବସ୍ଥିତ ଶୈଳୀ"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr "ଜି.ଟି.କେ.+ ଦ୍ବାରା ବ୍ଯବହୃତ ଜି.ଟି.କେ.+ ନିବେଶ ଧାରାର ଅବସ୍ଥିତି ଶୈଳୀର ନାମ."
 
 #: schemas/org.cafe.interface.gschema.xml:95
@@ -1046,7 +1046,7 @@ msgid "Use Custom Font"
 msgstr "ଇଚ୍ଛାରୂପ ଅକ୍ଷରରୂପ ବ୍ଯବହାର କରନ୍ତୁ"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
+msgid "Whether to use a custom font in ctk+ applications."
 msgstr "ଡି.ଟି.କେ.+ ପ୍ରୟୋଗରେ ଇଚ୍ଛାପୂପ ଅକ୍ଷରରୂପ ବ୍ଯବହାର କରାଯିବ କି"
 
 #: schemas/org.cafe.interface.gschema.xml:130
@@ -1064,7 +1064,7 @@ msgstr "ଜି.ଟି.କେ ଫାଇଲ ଚୟକ ପାଇଁ ଏକକାଂ
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:140
@@ -1108,7 +1108,7 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 
@@ -1120,7 +1120,7 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 
@@ -1132,7 +1132,7 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 
@@ -1176,7 +1176,7 @@ msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
 
@@ -1409,7 +1409,7 @@ msgstr ""
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
+msgid "ctk-select-color"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or

@@ -4,7 +4,7 @@ GenericName=Color selection dialog
 Comment=Choose colors from the palette or the screen
 Exec=cafe-color-select
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=gtk-select-color
+Icon=ctk-select-color
 Terminal=false
 Type=Application
 Categories=GTK;Graphics;

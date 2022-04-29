@@ -24,7 +24,7 @@
  * Modified by the GTK+ Team and others 1997-2000.  See the AUTHORS
  * file for a list of people on the GTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
+ * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
  *
  * Modified to work internally in cafe-desktop by Pablo Barciela 2019
  */
@@ -38,7 +38,7 @@
 #include <math.h>
 #include <string.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #define I_(string) g_intern_static_string (string)
 
@@ -154,7 +154,7 @@ cafe_hsv_class_init (CafeHSVClass *class)
   widget_class->focus = cafe_hsv_focus;
   widget_class->grab_broken_event = cafe_hsv_grab_broken;
 
-  gtk_widget_class_set_accessible_role (widget_class, ATK_ROLE_COLOR_CHOOSER);
+  ctk_widget_class_set_accessible_role (widget_class, ATK_ROLE_COLOR_CHOOSER);
 
   hsv_class->move = cafe_hsv_move;
 
@@ -177,30 +177,30 @@ cafe_hsv_class_init (CafeHSVClass *class)
                   G_TYPE_NONE, 1,
                   GTK_TYPE_DIRECTION_TYPE);
 
-  binding_set = gtk_binding_set_by_class (class);
+  binding_set = ctk_binding_set_by_class (class);
 
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_Up, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Up, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_UP);
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Up, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Up, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_UP);
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_Down, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Down, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_DOWN);
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Down, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Down, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_DOWN);
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_Right, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Right, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_RIGHT);
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Right, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Right, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_RIGHT);
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_Left, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_Left, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_LEFT);
-  gtk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Left, 0,
+  ctk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Left, 0,
                                 "move", 1,
                                 G_TYPE_ENUM, GTK_DIR_LEFT);
 }
@@ -213,8 +213,8 @@ cafe_hsv_init (CafeHSV *hsv)
   priv = cafe_hsv_get_instance_private (hsv);
   hsv->priv = priv;
 
-  gtk_widget_set_has_window (GTK_WIDGET (hsv), FALSE);
-  gtk_widget_set_can_focus (GTK_WIDGET (hsv), TRUE);
+  ctk_widget_set_has_window (GTK_WIDGET (hsv), FALSE);
+  ctk_widget_set_can_focus (GTK_WIDGET (hsv), TRUE);
 
   priv->h = 0.0;
   priv->s = 0.0;
@@ -240,9 +240,9 @@ cafe_hsv_realize (GtkWidget *widget)
   GdkWindowAttr attr;
   int attr_mask;
 
-  gtk_widget_set_realized (widget, TRUE);
+  ctk_widget_set_realized (widget, TRUE);
 
-  gtk_widget_get_allocation (widget, &allocation);
+  ctk_widget_get_allocation (widget, &allocation);
 
   attr.window_type = GDK_WINDOW_CHILD;
   attr.x = allocation.x;
@@ -250,7 +250,7 @@ cafe_hsv_realize (GtkWidget *widget)
   attr.width = allocation.width;
   attr.height = allocation.height;
   attr.wclass = GDK_INPUT_ONLY;
-  attr.event_mask = gtk_widget_get_events (widget);
+  attr.event_mask = ctk_widget_get_events (widget);
   attr.event_mask |= (GDK_KEY_PRESS_MASK
                       | GDK_BUTTON_PRESS_MASK
                       | GDK_BUTTON_RELEASE_MASK
@@ -259,8 +259,8 @@ cafe_hsv_realize (GtkWidget *widget)
                       | GDK_LEAVE_NOTIFY_MASK);
   attr_mask = GDK_WA_X | GDK_WA_Y;
 
-  parent_window = gtk_widget_get_parent_window (widget);
-  gtk_widget_set_window (widget, parent_window);
+  parent_window = ctk_widget_get_parent_window (widget);
+  ctk_widget_set_window (widget, parent_window);
   g_object_ref (parent_window);
 
   priv->window = gdk_window_new (parent_window, &attr, attr_mask);
@@ -291,7 +291,7 @@ cafe_hsv_get_preferred_width (GtkWidget *widget,
   gint focus_width;
   gint focus_pad;
 
-  gtk_widget_style_get (widget,
+  ctk_widget_style_get (widget,
                         "focus-line-width", &focus_width,
                         "focus-padding", &focus_pad,
                         NULL);
@@ -310,7 +310,7 @@ cafe_hsv_get_preferred_height (GtkWidget *widget,
   gint focus_width;
   gint focus_pad;
 
-  gtk_widget_style_get (widget,
+  ctk_widget_style_get (widget,
                         "focus-line-width", &focus_width,
                         "focus-padding", &focus_pad,
                         NULL);
@@ -326,9 +326,9 @@ cafe_hsv_size_allocate (GtkWidget     *widget,
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
 
-  gtk_widget_set_allocation (widget, allocation);
+  ctk_widget_set_allocation (widget, allocation);
 
-  if (gtk_widget_get_realized (widget))
+  if (ctk_widget_get_realized (widget))
     gdk_window_move_resize (priv->window,
                             allocation->x,
                             allocation->y,
@@ -431,8 +431,8 @@ compute_triangle (CafeHSV *hsv,
   gdouble inner, outer;
   gdouble angle;
 
-  center_x = gtk_widget_get_allocated_width (widget) / 2.0;
-  center_y = gtk_widget_get_allocated_height (widget) / 2.0;
+  center_x = ctk_widget_get_allocated_width (widget) / 2.0;
+  center_y = ctk_widget_get_allocated_height (widget) / 2.0;
   outer = priv->size / 2.0;
   inner = outer - priv->ring_width;
   angle = priv->h * 2.0 * G_PI;
@@ -458,8 +458,8 @@ is_in_ring (CafeHSV *hsv,
   gdouble center_y;
   gdouble inner, outer;
 
-  center_x = gtk_widget_get_allocated_width (widget) / 2.0;
-  center_y = gtk_widget_get_allocated_height (widget) / 2.0;
+  center_x = ctk_widget_get_allocated_width (widget) / 2.0;
+  center_y = ctk_widget_get_allocated_height (widget) / 2.0;
   outer = priv->size / 2.0;
   inner = outer - priv->ring_width;
 
@@ -485,8 +485,8 @@ compute_sv (CafeHSV  *hsv,
   double center_y;
 
   compute_triangle (hsv, &ihx, &ihy, &isx, &isy, &ivx, &ivy);
-  center_x = gtk_widget_get_allocated_width (widget) / 2.0;
-  center_y = gtk_widget_get_allocated_height (widget) / 2.0;
+  center_x = ctk_widget_get_allocated_width (widget) / 2.0;
+  center_y = ctk_widget_get_allocated_height (widget) / 2.0;
   hx = ihx - center_x;
   hy = center_y - ihy;
   sx = isx - center_x;
@@ -588,8 +588,8 @@ compute_v (CafeHSV *hsv,
   double dx, dy;
   double angle;
 
-  center_x = gtk_widget_get_allocated_width (widget) / 2.0;
-  center_y = gtk_widget_get_allocated_height (widget) / 2.0;
+  center_x = ctk_widget_get_allocated_width (widget) / 2.0;
+  center_y = ctk_widget_get_allocated_height (widget) / 2.0;
   dx = x - center_x;
   dy = center_y - y;
 
@@ -610,7 +610,7 @@ set_cross_grab (CafeHSV   *hsv,
   CafeHSVPrivate *priv = hsv->priv;
   GdkCursor *cursor;
 
-  cursor = gdk_cursor_new_for_display (gtk_widget_get_display (GTK_WIDGET (hsv)),
+  cursor = gdk_cursor_new_for_display (ctk_widget_get_display (GTK_WIDGET (hsv)),
                                        GDK_CROSSHAIR);
   gdk_seat_grab (gdk_device_get_seat (device),
                  priv->window,
@@ -659,7 +659,7 @@ cafe_hsv_button_press (GtkWidget      *widget,
                          priv->s,
                          priv->v);
 
-      gtk_widget_grab_focus (widget);
+      ctk_widget_grab_focus (widget);
       priv->focus_on_ring = TRUE;
 
       return TRUE;
@@ -675,7 +675,7 @@ cafe_hsv_button_press (GtkWidget      *widget,
       compute_sv (hsv, x, y, &s, &v);
       cafe_hsv_set_color (hsv, priv->h, s, v);
 
-      gtk_widget_grab_focus (widget);
+      ctk_widget_grab_focus (widget);
       priv->focus_on_ring = FALSE;
 
       return TRUE;
@@ -783,8 +783,8 @@ paint_ring (CafeHSV *hsv,
   cairo_t *source_cr;
   gint stride;
 
-  width = gtk_widget_get_allocated_width (widget);
-  height = gtk_widget_get_allocated_height (widget);
+  width = ctk_widget_get_allocated_width (widget);
+  height = ctk_widget_get_allocated_height (widget);
 
   center_x = width / 2.0;
   center_y = height / 2.0;
@@ -930,8 +930,8 @@ paint_triangle (CafeHSV  *hsv,
   int width, height;
   GtkStyleContext *context;
 
-  width = gtk_widget_get_allocated_width (widget);
-  height = gtk_widget_get_allocated_height (widget);
+  width = ctk_widget_get_allocated_width (widget);
+  height = ctk_widget_get_allocated_height (widget);
   /* Compute triangle's vertices */
 
   compute_triangle (hsv, &hx, &hy, &sx, &sy, &vx, &vy);
@@ -1072,18 +1072,18 @@ paint_triangle (CafeHSV  *hsv,
   b = priv->v;
   hsv_to_rgb (&r, &g, &b);
 
-  context = gtk_widget_get_style_context (widget);
+  context = ctk_widget_get_style_context (widget);
 
-  gtk_style_context_save (context);
+  ctk_style_context_save (context);
 
   if (INTENSITY (r, g, b) > 0.5)
     {
-      gtk_style_context_add_class (context, "light-area-focus");
+      ctk_style_context_add_class (context, "light-area-focus");
       cairo_set_source_rgb (cr, 0., 0., 0.);
     }
   else
     {
-      gtk_style_context_add_class (context, "dark-area-focus");
+      ctk_style_context_add_class (context, "dark-area-focus");
       cairo_set_source_rgb (cr, 1., 1., 1.);
     }
 
@@ -1101,19 +1101,19 @@ paint_triangle (CafeHSV  *hsv,
       gint focus_width;
       gint focus_pad;
 
-      gtk_widget_style_get (widget,
+      ctk_widget_style_get (widget,
                             "focus-line-width", &focus_width,
                             "focus-padding", &focus_pad,
                             NULL);
 
-      gtk_render_focus (context, cr,
+      ctk_render_focus (context, cr,
                         xx - FOCUS_RADIUS - focus_width - focus_pad,
                         yy - FOCUS_RADIUS - focus_width - focus_pad,
                         2 * (FOCUS_RADIUS + focus_width + focus_pad),
                         2 * (FOCUS_RADIUS + focus_width + focus_pad));
     }
 
-  gtk_style_context_restore (context);
+  ctk_style_context_restore (context);
 }
 
 /* Paints the contents of the HSV color selector */
@@ -1125,7 +1125,7 @@ cafe_hsv_draw (GtkWidget *widget,
   CafeHSVPrivate *priv = hsv->priv;
   gboolean draw_focus;
 
-  draw_focus = gtk_widget_has_visible_focus (widget);
+  draw_focus = ctk_widget_has_visible_focus (widget);
 
   paint_ring (hsv, cr);
   paint_triangle (hsv, cr, draw_focus);
@@ -1135,11 +1135,11 @@ cafe_hsv_draw (GtkWidget *widget,
     {
       GtkStyleContext *context;
 
-      context = gtk_widget_get_style_context (widget);
+      context = ctk_widget_get_style_context (widget);
 
-      gtk_render_focus (context, cr, 0, 0,
-                        gtk_widget_get_allocated_width (widget),
-                        gtk_widget_get_allocated_height (widget));
+      ctk_render_focus (context, cr, 0, 0,
+                        ctk_widget_get_allocated_width (widget),
+                        ctk_widget_get_allocated_height (widget));
     }
 
   return FALSE;
@@ -1152,14 +1152,14 @@ cafe_hsv_focus (GtkWidget       *widget,
   CafeHSV *hsv = CAFE_HSV (widget);
   CafeHSVPrivate *priv = hsv->priv;
 
-  if (!gtk_widget_has_focus (widget))
+  if (!ctk_widget_has_focus (widget))
     {
       if (dir == GTK_DIR_TAB_BACKWARD)
         priv->focus_on_ring = FALSE;
       else
         priv->focus_on_ring = TRUE;
 
-      gtk_widget_grab_focus (GTK_WIDGET (hsv));
+      ctk_widget_grab_focus (GTK_WIDGET (hsv));
       return TRUE;
     }
 
@@ -1196,7 +1196,7 @@ cafe_hsv_focus (GtkWidget       *widget,
       break;
     }
 
-  gtk_widget_queue_draw (GTK_WIDGET (hsv));
+  ctk_widget_queue_draw (GTK_WIDGET (hsv));
 
   return TRUE;
 }
@@ -1245,7 +1245,7 @@ cafe_hsv_set_color (CafeHSV *hsv,
 
   g_signal_emit (hsv, hsv_signals[CHANGED], 0);
 
-  gtk_widget_queue_draw (GTK_WIDGET (hsv));
+  ctk_widget_queue_draw (GTK_WIDGET (hsv));
 }
 
 /**
@@ -1309,9 +1309,9 @@ cafe_hsv_set_metrics (CafeHSV *hsv,
   priv->ring_width = ring_width;
 
   if (same_size)
-    gtk_widget_queue_draw (GTK_WIDGET (hsv));
+    ctk_widget_queue_draw (GTK_WIDGET (hsv));
   else
-    gtk_widget_queue_resize (GTK_WIDGET (hsv));
+    ctk_widget_queue_resize (GTK_WIDGET (hsv));
 }
 
 /**

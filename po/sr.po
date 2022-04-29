@@ -315,8 +315,8 @@ msgid "The color you've chosen."
 msgstr "Изабрана боја."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1005,7 +1005,7 @@ msgstr "Гтк+ тема"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
+msgid "Basename of the default theme used by ctk+."
 msgstr "Основни назив основне теме коју користи гтк+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
@@ -1014,18 +1014,18 @@ msgstr "Списак симболичких назива и еквивалена
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 "Списак „name:color“ (назив:боја) раздвојен са „\\n“ као што је одређено "
-"подешавањем „gtk-color-scheme“ (гтк-шема-боје)"
+"подешавањем „ctk-color-scheme“ (гтк-шема-боје)"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Основни словолик"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
+msgid "Name of the default font used by ctk+."
 msgstr "Назив основног словолика којег користи гтк+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
@@ -1033,7 +1033,7 @@ msgid "GTK IM Preedit Style"
 msgstr "Стил предприпреме ГТК начина уноса"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr "Назив стила предприпреме ГТК+ начина уноса који користи гтк+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
@@ -1041,7 +1041,7 @@ msgid "GTK IM Status Style"
 msgstr "Стил стања ГТК начина уноса"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr "Назив стила стања ГТК+ начина уноса који користи гтк+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
@@ -1113,7 +1113,7 @@ msgid "Use Custom Font"
 msgstr "Употреба произвољног словолика"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
+msgid "Whether to use a custom font in ctk+ applications."
 msgstr "Да ли ће се користити произвољни словолик у гтк+ програмима."
 
 #: schemas/org.cafe.interface.gschema.xml:130
@@ -1131,10 +1131,10 @@ msgstr "Модул за Гтк избирача датотека"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Модул који ће се користити као модел система датотека за елемент Гтк "
-"избирача датотека. Могуће вредности су „gio“ и „gtk+“."
+"избирача датотека. Могуће вредности су „gio“ и „ctk+“."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1177,13 +1177,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Ово подешавање одређује који дугмићи треба да буду стављени на траку наслова"
 " украшених прозора од стране клијента, и да ли треба да буду постављени на "
 "леву или десну страну. Видите "
-"„https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"„https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout“."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1194,12 +1194,12 @@ msgstr "Користи општу траку изборника за прика�
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Ово подешавање одређује где ће бити приказан изборник програма – у прозору "
 "или на панелу протоколом „Модел изборника“. Погледајте "
-"„https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"„https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu“."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1210,12 +1210,12 @@ msgstr "Користи општу траку изборника за прика�
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Ово подешавање одређује где ће бити приказане траке изборника прозора – у "
 "прозору или на панелу протоколом „Модел изборника“. Погледајте "
-"„https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"„https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar“."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1268,7 +1268,7 @@ msgstr "Укључује примарни избор убацивања"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
 "Ако је изабрано, гтк+ користи примарни избор убацивања, обично покренут "
@@ -1504,8 +1504,8 @@ msgstr "Изаберите боје са палете или са екрана"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!

@@ -35,7 +35,7 @@ cafedt_pkgdatadir = join_paths(cafedt_datadir, 'libcafe-desktop')
 
 # options
 enable_gir = get_option('introspection')
-enable_gtk_doc = get_option('gtk-doc')
+enable_ctk_doc = get_option('ctk-doc')
 enable_startup_notification = get_option('startup-notification')
 
 # Before making a release, the LT_VERSION string should be modified.
@@ -68,7 +68,7 @@ common_flags = [
 
 add_project_arguments(common_flags, language: 'c')
 
-gtk_dep = dependency('gtk+-3.0', version: '>= 3.22.0')
+ctk_dep = dependency('ctk+-3.0', version: '>= 3.22.0')
 m_dep = cc.find_library('m', required: false)
 dconf_dep = dependency('dconf', version: '>= 0.13.4')
 x11_dep = dependency('x11', required: true)
@@ -98,7 +98,7 @@ top_inc = include_directories('.')
 subdir('icons')
 subdir('libcafe-desktop')
 subdir('man')
-if enable_gtk_doc
+if enable_ctk_doc
   subdir('docs/reference/cafe-desktop')
 endif
 subdir('po')

@@ -345,8 +345,8 @@ msgid "The color you've chosen."
 msgstr "La couleur que vous avez choisie."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1058,7 +1058,7 @@ msgstr "Thème GTK+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
+msgid "Basename of the default theme used by ctk+."
 msgstr "Nom de base du thème par défaut utilisé par GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
@@ -1067,18 +1067,18 @@ msgstr "Liste des noms symboliques et des équivalents couleur"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 "Une liste de « nom:couleur » séparés par des '\\n' telle que définie par le "
-"réglage 'gtk-color-scheme'"
+"réglage 'ctk-color-scheme'"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Police par défaut"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
+msgid "Name of the default font used by ctk+."
 msgstr "Nom de la police par défaut utilisée par GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
@@ -1086,7 +1086,7 @@ msgid "GTK IM Preedit Style"
 msgstr "Style de préédition de GTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr ""
 "Nom du style de prédition de la méthode de saisie GTK+ utilisé par GTK+."
 
@@ -1095,7 +1095,7 @@ msgid "GTK IM Status Style"
 msgstr "Style d'état de GTK IM"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr "Nom du style d'état de la méthode de saisie GTK+ utilisé par GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
@@ -1171,7 +1171,7 @@ msgid "Use Custom Font"
 msgstr "Utiliser une police personnalisée"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
+msgid "Whether to use a custom font in ctk+ applications."
 msgstr ""
 "Indique s'il faut utiliser une police personnalisée dans les applications "
 "GTK+."
@@ -1192,10 +1192,10 @@ msgstr "Module pour GtkFileChooser"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Module à utiliser comme modèle de système de fichiers pour le widget "
-"GtkFileChooser. Les valeurs possibles sont « gio » et « gtk+ »."
+"GtkFileChooser. Les valeurs possibles sont « gio » et « ctk+ »."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1240,13 +1240,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Ce réglage détermine quels boutons doivent être placés dans la barre de "
 "titre des décorations des fenêtres côté client, et s'ils seront placés à "
 "droite ou à gauche. Voir "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1258,13 +1258,13 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Ce paramètre détermine l'endroit où doit être affiché le menu des "
 "applications – au sein de la fenêtre de l'application ou sur un tableau de "
 "bord à l'aide du protocole MenuModel. Ce paramètre se réfère à "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1276,13 +1276,13 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Ce paramètre détermine l'endroit où doit être affiché le menu d'une fenêtre "
 "– au sein de la fenêtre de l'application ou sur un tableau de bord à l'aide "
 "du protocole MenuModel. Ce paramètre se réfère à "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1336,10 +1336,10 @@ msgstr "Activer la sélection de collage primaire"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Si vrai, gtk+ utilise la sélection de collage primaire, généralement "
+"Si vrai, ctk+ utilise la sélection de collage primaire, généralement "
 "déclenchée par un clic du bouton du milieu de la souris."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
@@ -1580,8 +1580,8 @@ msgstr "Choisir les couleurs dans la palette ou à l'écran"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!

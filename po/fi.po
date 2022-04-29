@@ -323,7 +323,7 @@ msgid "The color you've chosen."
 msgstr "Valitsemasi väri."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
+msgid "ctk-color-sel"
 msgstr ""
 
 #: libcafe-desktop/cafe-colorsel.c:1369
@@ -999,7 +999,7 @@ msgstr "Gtk+ Teema"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
+msgid "Basename of the default theme used by ctk+."
 msgstr "Gtk+:n käyttämän oletusteeman perusnimi."
 
 #: schemas/org.cafe.interface.gschema.xml:75
@@ -1008,18 +1008,18 @@ msgstr "Symbolisten nimien ja värien vastineiden luettelo"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 "'\\n' erotettu luettelo \"name:color\" sellaisena kuin se on määritelty "
-"'gtk-color-scheme' asetuksissa"
+"'ctk-color-scheme' asetuksissa"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Oletuskirjasin"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
+msgid "Name of the default font used by ctk+."
 msgstr "Gtk+:n käyttämän oletuskirjasimen nimi."
 
 #: schemas/org.cafe.interface.gschema.xml:85
@@ -1027,7 +1027,7 @@ msgid "GTK IM Preedit Style"
 msgstr "GTK-IM esimuokkaustyyli"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr "GTK+:n syöttötavan esimuokkaustyylin nimi"
 
 #: schemas/org.cafe.interface.gschema.xml:90
@@ -1035,7 +1035,7 @@ msgid "GTK IM Status Style"
 msgstr "GTK-IM tilatyyli"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr "GTK+:n syöttötavan tilatyylin nimi."
 
 #: schemas/org.cafe.interface.gschema.xml:95
@@ -1105,7 +1105,7 @@ msgid "Use Custom Font"
 msgstr "Käytä muuta kirjasinta."
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
+msgid "Whether to use a custom font in ctk+ applications."
 msgstr "Onko Gtk+-ohjelmien kirjasin käyttäjän määrittelemä."
 
 #: schemas/org.cafe.interface.gschema.xml:130
@@ -1123,10 +1123,10 @@ msgstr "GtkFileChooserin moduuli"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Tiedostojärjestelmän mallina käytettävä moduuli GtkFileChooser -sovelma. "
-"Mahdollisia arvoja ovat \"gio\" ja \"gtk +\"."
+"Mahdollisia arvoja ovat \"gio\" ja \"ctk +\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1169,13 +1169,13 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Tämä asetus määrittää, mitkä painikkeet tulisi asettaa asiakaspuolella "
 "sisustettujen ikkunoiden otsikkopalkkiin ja onko ne sijoitettava oikealle "
 "vai vasemmalle. Katso  "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1186,12 +1186,12 @@ msgstr "Käytä globaalia valikkopalkkia sovellusvalikkojen näyttämiseen"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Tämä asetus määrittää, missä sovellusvalikko näytetään - ikkunassa tai "
 "paneelissa, jossa on MenuModel-protokolla. Katso  "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1202,12 +1202,12 @@ msgstr "Käytä globaalia valikkopalkkia ikkunavalikkojen näyttämiseen"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Tämä asetus määrittää, missä ikkunan valikkopalkit näytetään - ikkunassa tai"
 " paneelissa, jossa on MenuModel-protokolla. Katso  "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1260,10 +1260,10 @@ msgstr "Ota ensisijainen liitäntä käyttöön"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Jos tosi, gtk+ käyttää ensisijaista liitäntää, joka yleensä käynnistyy "
+"Jos tosi, ctk+ käyttää ensisijaista liitäntää, joka yleensä käynnistyy "
 "hiiren keskimmäisellä napsautuksella."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
@@ -1496,7 +1496,7 @@ msgstr "Värien valitseminen paletista tai näytöstä"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
+msgid "ctk-select-color"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or

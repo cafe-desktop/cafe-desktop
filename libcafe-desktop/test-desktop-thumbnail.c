@@ -23,7 +23,7 @@
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
 #include "cafe-desktop-thumbnail.h"
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 int main (int argc, char **argv)
 {
@@ -32,7 +32,7 @@ int main (int argc, char **argv)
     GtkWidget *window, *image;
     char *content_type;
 
-    gtk_init (&argc, &argv);
+    ctk_init (&argc, &argv);
 
     if (argc < 2) {
         g_print ("Usage: %s FILE...\n", argv[0]);
@@ -50,14 +50,14 @@ int main (int argc, char **argv)
         return 1;
     }
 
-    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-    g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
-    image = gtk_image_new_from_pixbuf (pixbuf);
+    window = ctk_window_new (GTK_WINDOW_TOPLEVEL);
+    g_signal_connect (window, "destroy", G_CALLBACK (ctk_main_quit), NULL);
+    image = ctk_image_new_from_pixbuf (pixbuf);
     g_object_unref (pixbuf);
-    gtk_container_add (GTK_CONTAINER (window), image);
-    gtk_widget_show_all (window);
+    ctk_container_add (GTK_CONTAINER (window), image);
+    ctk_widget_show_all (window);
 
-    gtk_main ();
+    ctk_main ();
 
     return 0;
 }

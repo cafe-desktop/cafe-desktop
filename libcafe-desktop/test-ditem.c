@@ -145,7 +145,7 @@ main (int argc, char **argv)
 
 	file = g_strdup (argv[1]);
 
-	gtk_init (&argc, &argv);
+	ctk_init (&argc, &argv);
 
 	if (launch)
 		launch_item (file);

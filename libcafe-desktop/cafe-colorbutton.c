@@ -25,7 +25,7 @@
  * Modified by the GTK+ Team and others 2003.  See the AUTHORS
  * file for a list of people on the GTK+ Team.  See the ChangeLog
  * files for a list of changes.  These files are distributed with
- * GTK+ at ftp://ftp.gtk.org/pub/gtk/.
+ * GTK+ at ftp://ftp.ctk.org/pub/ctk/.
  */
 
 #include "config.h"
@@ -34,7 +34,7 @@
 #include "cafe-colorbutton.h"
 #include "cafe-colorsel.h"
 #include "cafe-colorseldialog.h"
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkkeysyms.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <glib/gi18n-lib.h>
@@ -85,11 +85,11 @@ static void cafe_color_button_get_property  (GObject        *object,
 					    GValue         *value,
 					    GParamSpec     *pspec);
 
-/* gtkwidget signals */
+/* ctkwidget signals */
 static void cafe_color_button_state_changed (GtkWidget           *widget,
 					    GtkStateType         previous_state);
 
-/* gtkbutton signals */
+/* ctkbutton signals */
 static void cafe_color_button_clicked       (GtkButton           *button);
 
 /* source side drag signals */
@@ -291,9 +291,9 @@ draw (GtkWidget      *widget,
 
   cairo_paint (cr);
 
-  if (!gtk_widget_is_sensitive (GTK_WIDGET (color_button)))
+  if (!ctk_widget_is_sensitive (GTK_WIDGET (color_button)))
     {
-      gdk_cairo_set_source_color (cr, &gtk_widget_get_style (GTK_WIDGET(color_button))->bg[GTK_STATE_INSENSITIVE]);
+      gdk_cairo_set_source_color (cr, &ctk_widget_get_style (GTK_WIDGET(color_button))->bg[GTK_STATE_INSENSITIVE]);
       checkered = cafe_color_button_get_checkered ();
       cairo_mask (cr, checkered);
       cairo_pattern_destroy (checkered);
@@ -306,7 +306,7 @@ static void
 cafe_color_button_state_changed (GtkWidget   *widget,
                                 GtkStateType previous_state)
 {
-  gtk_widget_queue_draw (widget);
+  ctk_widget_queue_draw (widget);
 }
 
 static void
@@ -321,27 +321,27 @@ cafe_color_button_drag_data_received (GtkWidget        *widget,
 {
   guint16 *dropped;
 
-  if (gtk_selection_data_get_length (selection_data) < 0)
+  if (ctk_selection_data_get_length (selection_data) < 0)
     return;
 
   /* We accept drops with the wrong format, since the KDE color
    * chooser incorrectly drops application/x-color with format 8.
    */
-  if (gtk_selection_data_get_length (selection_data) != 8)
+  if (ctk_selection_data_get_length (selection_data) != 8)
     {
       g_warning (_("Received invalid color data\n"));
       return;
     }
 
 
-  dropped = (guint16 *)gtk_selection_data_get_data (selection_data);
+  dropped = (guint16 *)ctk_selection_data_get_data (selection_data);
 
   color_button->priv->color.red = dropped[0];
   color_button->priv->color.green = dropped[1];
   color_button->priv->color.blue = dropped[2];
   color_button->priv->alpha = dropped[3];
 
-  gtk_widget_queue_draw (color_button->priv->draw_area);
+  ctk_widget_queue_draw (color_button->priv->draw_area);
 
   g_signal_emit (color_button, color_button_signals[COLOR_SET], 0);
 
@@ -367,7 +367,7 @@ set_color_icon (GdkDragContext *context,
 
   gdk_pixbuf_fill (pixbuf, pixel);
 
-  gtk_drag_set_icon_pixbuf (context, pixbuf, -2, -2);
+  ctk_drag_set_icon_pixbuf (context, pixbuf, -2, -2);
   g_object_unref (pixbuf);
 }
 
@@ -396,7 +396,7 @@ cafe_color_button_drag_data_get (GtkWidget        *widget,
   dropped[2] = color_button->priv->color.blue;
   dropped[3] = color_button->priv->alpha;
 
-  gtk_selection_data_set (selection_data, gtk_selection_data_get_target (selection_data),
+  ctk_selection_data_set (selection_data, ctk_selection_data_get_target (selection_data),
 			  16, (guchar *)dropped, 8);
 }
 
@@ -413,28 +413,28 @@ cafe_color_button_init (CafeColorButton *color_button)
   /* Create the widgets */
   color_button->priv = cafe_color_button_get_instance_private (color_button);
 
-  alignment = gtk_alignment_new (0.5, 0.5, 0.5, 1.0);
-  gtk_container_set_border_width (GTK_CONTAINER (alignment), 1);
-  gtk_container_add (GTK_CONTAINER (color_button), alignment);
-  gtk_widget_show (alignment);
+  alignment = ctk_alignment_new (0.5, 0.5, 0.5, 1.0);
+  ctk_container_set_border_width (GTK_CONTAINER (alignment), 1);
+  ctk_container_add (GTK_CONTAINER (color_button), alignment);
+  ctk_widget_show (alignment);
 
-  frame = gtk_frame_new (NULL);
-  gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_ETCHED_OUT);
-  gtk_container_add (GTK_CONTAINER (alignment), frame);
-  gtk_widget_show (frame);
+  frame = ctk_frame_new (NULL);
+  ctk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_ETCHED_OUT);
+  ctk_container_add (GTK_CONTAINER (alignment), frame);
+  ctk_widget_show (frame);
 
   /* Just some widget we can hook to expose-event on */
-  color_button->priv->draw_area = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
+  color_button->priv->draw_area = ctk_alignment_new (0.5, 0.5, 0.0, 0.0);
 
-  layout = gtk_widget_create_pango_layout (GTK_WIDGET (color_button), "Black");
+  layout = ctk_widget_create_pango_layout (GTK_WIDGET (color_button), "Black");
   pango_layout_get_pixel_extents (layout, NULL, &rect);
   g_object_unref (layout);
 
-  gtk_widget_set_size_request (color_button->priv->draw_area, rect.width - 2, rect.height - 2);
+  ctk_widget_set_size_request (color_button->priv->draw_area, rect.width - 2, rect.height - 2);
   g_signal_connect (color_button->priv->draw_area, "draw",
                     G_CALLBACK (draw), color_button);
-  gtk_container_add (GTK_CONTAINER (frame), color_button->priv->draw_area);
-  gtk_widget_show (color_button->priv->draw_area);
+  ctk_container_add (GTK_CONTAINER (frame), color_button->priv->draw_area);
+  ctk_widget_show (color_button->priv->draw_area);
 
   color_button->priv->title = g_strdup (_("Pick a Color")); /* default title */
 
@@ -446,12 +446,12 @@ cafe_color_button_init (CafeColorButton *color_button)
   color_button->priv->alpha = 65535;
   color_button->priv->use_alpha = FALSE;
 
-  gtk_drag_dest_set (GTK_WIDGET (color_button),
+  ctk_drag_dest_set (GTK_WIDGET (color_button),
                      GTK_DEST_DEFAULT_MOTION |
                      GTK_DEST_DEFAULT_HIGHLIGHT |
                      GTK_DEST_DEFAULT_DROP,
                      drop_types, 1, GDK_ACTION_COPY);
-  gtk_drag_source_set (GTK_WIDGET(color_button),
+  ctk_drag_source_set (GTK_WIDGET(color_button),
                        GDK_BUTTON1_MASK|GDK_BUTTON3_MASK,
                        drop_types, 1,
                        GDK_ACTION_COPY);
@@ -469,7 +469,7 @@ cafe_color_button_finalize (GObject *object)
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (object);
 
   if (color_button->priv->cs_dialog != NULL)
-    gtk_widget_destroy (color_button->priv->cs_dialog);
+    ctk_widget_destroy (color_button->priv->cs_dialog);
   color_button->priv->cs_dialog = NULL;
 
   g_free (color_button->priv->title);
@@ -526,9 +526,9 @@ dialog_ok_clicked (GtkWidget *widget,
   cafe_color_selection_get_current_color (color_selection, &color_button->priv->color);
   color_button->priv->alpha = cafe_color_selection_get_current_alpha (color_selection);
 
-  gtk_widget_hide (color_button->priv->cs_dialog);
+  ctk_widget_hide (color_button->priv->cs_dialog);
 
-  gtk_widget_queue_draw (color_button->priv->draw_area);
+  ctk_widget_queue_draw (color_button->priv->draw_area);
 
   g_signal_emit (color_button, color_button_signals[COLOR_SET], 0);
 
@@ -555,7 +555,7 @@ dialog_cancel_clicked (GtkWidget *widget,
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
 
-  gtk_widget_hide (color_button->priv->cs_dialog);
+  ctk_widget_hide (color_button->priv->cs_dialog);
 }
 
 static void
@@ -570,19 +570,19 @@ cafe_color_button_clicked (GtkButton *button)
       /* Create the dialog and connects its buttons */
       GtkWidget *parent;
 
-      parent = gtk_widget_get_toplevel (GTK_WIDGET (color_button));
+      parent = ctk_widget_get_toplevel (GTK_WIDGET (color_button));
 
       color_button->priv->cs_dialog = cafe_color_selection_dialog_new (color_button->priv->title);
 
       color_dialog = CAFE_COLOR_SELECTION_DIALOG (color_button->priv->cs_dialog);
 
-      if (gtk_widget_is_toplevel (parent) && GTK_IS_WINDOW (parent))
+      if (ctk_widget_is_toplevel (parent) && GTK_IS_WINDOW (parent))
         {
-          if (GTK_WINDOW (parent) != gtk_window_get_transient_for (GTK_WINDOW (color_dialog)))
- 	    gtk_window_set_transient_for (GTK_WINDOW (color_dialog), GTK_WINDOW (parent));
+          if (GTK_WINDOW (parent) != ctk_window_get_transient_for (GTK_WINDOW (color_dialog)))
+ 	    ctk_window_set_transient_for (GTK_WINDOW (color_dialog), GTK_WINDOW (parent));
 
-	  gtk_window_set_modal (GTK_WINDOW (color_dialog),
-				gtk_window_get_modal (GTK_WINDOW (parent)));
+	  ctk_window_set_modal (GTK_WINDOW (color_dialog),
+				ctk_window_get_modal (GTK_WINDOW (parent)));
 	}
 
       g_signal_connect (color_dialog->ok_button, "clicked",
@@ -610,7 +610,7 @@ cafe_color_button_clicked (GtkButton *button)
   cafe_color_selection_set_current_alpha (CAFE_COLOR_SELECTION (color_dialog->colorsel),
 					 color_button->priv->alpha);
 
-  gtk_window_present (GTK_WINDOW (color_button->priv->cs_dialog));
+  ctk_window_present (GTK_WINDOW (color_button->priv->cs_dialog));
 }
 
 /**
@@ -633,7 +633,7 @@ cafe_color_button_set_color (CafeColorButton *color_button,
   color_button->priv->color.green = color->green;
   color_button->priv->color.blue = color->blue;
 
-  gtk_widget_queue_draw (color_button->priv->draw_area);
+  ctk_widget_queue_draw (color_button->priv->draw_area);
 
   g_object_notify (G_OBJECT (color_button), "color");
 }
@@ -659,7 +659,7 @@ cafe_color_button_set_rgba (CafeColorButton *color_button,
   color_button->priv->color.blue = color->blue * 65535;
   color_button->priv->alpha = color->alpha * 65535;
 
-  gtk_widget_queue_draw (color_button->priv->draw_area);
+  ctk_widget_queue_draw (color_button->priv->draw_area);
 
   g_object_notify (G_OBJECT (color_button), "color");
 }
@@ -681,7 +681,7 @@ cafe_color_button_set_alpha (CafeColorButton *color_button,
 
   color_button->priv->alpha = alpha;
 
-  gtk_widget_queue_draw (color_button->priv->draw_area);
+  ctk_widget_queue_draw (color_button->priv->draw_area);
 
   g_object_notify (G_OBJECT (color_button), "alpha");
 }
@@ -766,7 +766,7 @@ cafe_color_button_set_use_alpha (CafeColorButton *color_button,
     {
       color_button->priv->use_alpha = use_alpha;
 
-      gtk_widget_queue_draw (color_button->priv->draw_area);
+      ctk_widget_queue_draw (color_button->priv->draw_area);
 
       g_object_notify (G_OBJECT (color_button), "use-alpha");
     }
@@ -813,7 +813,7 @@ cafe_color_button_set_title (CafeColorButton *color_button,
   g_free (old_title);
 
   if (color_button->priv->cs_dialog)
-    gtk_window_set_title (GTK_WINDOW (color_button->priv->cs_dialog),
+    ctk_window_set_title (GTK_WINDOW (color_button->priv->cs_dialog),
 			  color_button->priv->title);
 
   g_object_notify (G_OBJECT (color_button), "title");

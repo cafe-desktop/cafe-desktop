@@ -265,7 +265,7 @@ msgid "The color you've chosen."
 msgstr ""
 
 #: ../libcafe-desktop/cafe-colorsel.c:1358
-msgid "gtk-color-sel"
+msgid "ctk-color-sel"
 msgstr ""
 
 #: ../libcafe-desktop/cafe-colorsel.c:1363
@@ -874,7 +874,7 @@ msgid "Gtk+ Theme"
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:26
-msgid "Basename of the default theme used by gtk+."
+msgid "Basename of the default theme used by ctk+."
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:27
@@ -883,7 +883,7 @@ msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:28
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 
@@ -892,7 +892,7 @@ msgid "Default font"
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:30
-msgid "Name of the default font used by gtk+."
+msgid "Name of the default font used by ctk+."
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:31
@@ -900,7 +900,7 @@ msgid "GTK IM Preedit Style"
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:32
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:33
@@ -908,7 +908,7 @@ msgid "GTK IM Status Style"
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:34
-msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:35
@@ -971,7 +971,7 @@ msgid "Use Custom Font"
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:48
-msgid "Whether to use a custom font in gtk+ applications."
+msgid "Whether to use a custom font in ctk+ applications."
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:49
@@ -989,7 +989,7 @@ msgstr ""
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:52
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 
 #: ../schemas/org.cafe.interface.gschema.xml.in.h:53
@@ -1029,7 +1029,7 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 
@@ -1041,7 +1041,7 @@ msgstr ""
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 
@@ -1053,7 +1053,7 @@ msgstr ""
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 

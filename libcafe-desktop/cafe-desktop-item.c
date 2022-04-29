@@ -49,7 +49,7 @@
 #include <libsn/sn.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #endif
 
 #define sure_string(s) ((s)!=NULL?(s):"")
@@ -2103,7 +2103,7 @@ cafe_desktop_item_launch_on_screen_with_env (
 			return -1;
 		}
 
-		retval = gtk_show_uri_on_window  (NULL,
+		retval = ctk_show_uri_on_window  (NULL,
 		                                  url,
 		                                  GDK_CURRENT_TIME,
 		                                  error);
@@ -2525,7 +2525,7 @@ cafe_desktop_item_find_icon (GtkIconTheme *icon_theme,
 		char *p;
 
 		if (icon_theme == NULL)
-			icon_theme = gtk_icon_theme_get_default ();
+			icon_theme = ctk_icon_theme_get_default ();
 
 		icon_no_extension = g_strdup (icon);
 		p = strrchr (icon_no_extension, '.');
@@ -2537,14 +2537,14 @@ cafe_desktop_item_find_icon (GtkIconTheme *icon_theme,
 		}
 
 
-		info = gtk_icon_theme_lookup_icon (icon_theme,
+		info = ctk_icon_theme_lookup_icon (icon_theme,
 						   icon_no_extension,
 						   desired_size,
 						   0);
 
 		full = NULL;
 		if (info) {
-			full = g_strdup (gtk_icon_info_get_filename (info));
+			full = g_strdup (ctk_icon_info_get_filename (info));
 			g_object_unref (info);
 		}
 		g_free (icon_no_extension);

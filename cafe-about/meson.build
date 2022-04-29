@@ -25,7 +25,7 @@ executable('cafe-about',
     '-DLOCALE_DIR="@0@"'.format(join_paths(get_option('prefix'), get_option('localedir'))),
     '-DPIXMAPS_DIR="@0@"'.format(join_paths(get_option('prefix'), get_option('datadir'), 'pixmaps')),
   ],
-  dependencies : gtk_dep,
+  dependencies : ctk_dep,
   include_directories: top_inc,
   install: true,
 )

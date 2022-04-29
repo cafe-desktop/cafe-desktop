@@ -299,8 +299,8 @@ msgid "The color you've chosen."
 msgstr "선택한 색상입니다."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -941,8 +941,8 @@ msgstr "Gtk+ 테마"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "gtk+에서 사용할 기본 테마 이름입니다."
+msgid "Basename of the default theme used by ctk+."
+msgstr "ctk+에서 사용할 기본 테마 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -950,33 +950,33 @@ msgstr "심볼 이름 및 대응 색상 목록"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
-msgstr "'gtk-color-scheme' 에서 설정한 대로 '\\n' 개행 문자로 구분한 \"name:color\" 목록"
+msgstr "'ctk-color-scheme' 에서 설정한 대로 '\\n' 개행 문자로 구분한 \"name:color\" 목록"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "기본 글꼴"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
-msgstr "gtk+에서 사용하는 기본 글꼴 이름입니다."
+msgid "Name of the default font used by ctk+."
+msgstr "ctk+에서 사용하는 기본 글꼴 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "GTK 입력기 입력 사전 모양새"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "gtk+에서 사용하는 GTK+ 입력기 입력 사전 모양새의 이름입니다."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgstr "ctk+에서 사용하는 GTK+ 입력기 입력 사전 모양새의 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "GTK 입력기 상태 모양새"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "gtk+에서 사용할 GTK+ 입력기 상태 모양새의 이름입니다."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
+msgstr "ctk+에서 사용할 GTK+ 입력기 상태 모양새의 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -984,11 +984,11 @@ msgstr "GTK 입력기 모듈"
 
 #: schemas/org.cafe.interface.gschema.xml:96
 msgid "Name of the input method module used by GTK+."
-msgstr "gtk+에서 사용하는 입력기 모듈의 이름입니다."
+msgstr "ctk+에서 사용하는 입력기 모듈의 이름입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
-msgstr "gtk3 헤더 표시줄 사용"
+msgstr "ctk3 헤더 표시줄 사용"
 
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
@@ -997,25 +997,25 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
-"파일 선택 대화상자, 색상 선택 대화상자, 또는 글꼴 선택 대화상자 같은 내장 gtk+ 대화상자 상단에 동작 위젯을 보여주려 헤더 "
+"파일 선택 대화상자, 색상 선택 대화상자, 또는 글꼴 선택 대화상자 같은 내장 ctk+ 대화상자 상단에 동작 위젯을 보여주려 헤더 "
 "표시줄을 나타낼지, 아니면 하단의 동작영역에 나타낼지 여부입니다. 이 설정은 GtkDialog를 직접 사용하는  개별 설정 대화상자, "
 "또는 메시지 대화상자에 영향을 주지 않습니다."
 
 #: schemas/org.cafe.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
-msgstr "gtk3 오버레이 스크롤 사용"
+msgstr "ctk3 오버레이 스크롤 사용"
 
 #: schemas/org.cafe.interface.gschema.xml:106
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"내장 gtk+ 스크롤 창에 오버레이 스크롤을 사용할 지 여부입니다. 오버레이 스크롤은 마우스 커서를 가져다 올려놓기 전에는 숨기고 크기를"
+"내장 ctk+ 스크롤 창에 오버레이 스크롤을 사용할 지 여부입니다. 오버레이 스크롤은 마우스 커서를 가져다 올려놓기 전에는 숨기고 크기를"
 " 줄입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
-msgstr "gtk 도구 키트 애니메이션 활성화"
+msgstr "ctk 도구 키트 애니메이션 활성화"
 
 #: schemas/org.cafe.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1043,8 +1043,8 @@ msgid "Use Custom Font"
 msgstr "사용자 정의 글꼴"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "gtk+ 프로그램에서 사용할 사용자 정의 글꼴입니다."
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "ctk+ 프로그램에서 사용할 사용자 정의 글꼴입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1061,8 +1061,8 @@ msgstr "GtkFileChooser용 모듈"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
-msgstr "GtkFileChooser 위젯용 파일시스템 모델로 사용할 모듈입니다. 가능한 값은 \"gio\", \"gtk+\" 입니다."
+"Possible values are \"gio\" and \"ctk+\"."
+msgstr "GtkFileChooser 위젯용 파일시스템 모델로 사용할 모듈입니다. 가능한 값은 \"gio\", \"ctk+\" 입니다."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1094,18 +1094,18 @@ msgstr "항목의 단축 메뉴 또는 텍스트 뷰에서 제어 문자 삽입 
 
 #: schemas/org.cafe.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "gtk3 클라이언트 장식 창의 제목 표시줄 배치"
+msgstr "ctk3 클라이언트 장식 창의 제목 표시줄 배치"
 
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "이 설정은 클라이언트 장식 창의 제목 표시줄에 어떤 단추를 배치할 지 결정하며, 좌측, 우측 두 위치중 어떤 곳에 놓을지도 결정합니다. "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout 를 참고하십시오."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1116,11 +1116,11 @@ msgstr "애플리케이션 메뉴를 표시할 때 글로벌 메뉴바 사용하
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "이 설정은 창 또는 메뉴 모델 프로토콜이 있는 패널에서 애플리케이션 메뉴를 어디에 표시할지를 결정합니다. 다음 링크를 확인하세요 "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1131,11 +1131,11 @@ msgstr "애플리케이션 메뉴를 표시할 윈도우 메뉴바 사용하기"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "이 설정은 창 또는 메뉴 모델 프로토콜이 있는 패널에서 윈도우 메뉴바를 어디에 표시할지를 결정합니다. 다음 링크를 확인하세요 "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1182,9 +1182,9 @@ msgstr "기본 붙여 넣기 선택 사용"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
-msgstr "참이면, gtk+는 보통 마우스 가운데 버튼 클릭으로 트리거 되는 기본 붙여 넣기 선택을 사용합니다."
+msgstr "참이면, ctk+는 보통 마우스 가운데 버튼 클릭으로 트리거 되는 기본 붙여 넣기 선택을 사용합니다."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1400,7 +1400,7 @@ msgstr "팔레트 또는 화면에서 색상을 선택합니다"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
+msgid "ctk-select-color"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or

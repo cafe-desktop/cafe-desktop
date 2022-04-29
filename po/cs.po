@@ -334,8 +334,8 @@ msgid "The color you've chosen."
 msgstr "Barva, kterou jste si vybral/a."
 
 #: libcafe-desktop/cafe-colorsel.c:1364
-msgid "gtk-color-sel"
-msgstr "gtk-color-sel"
+msgid "ctk-color-sel"
+msgstr "ctk-color-sel"
 
 #: libcafe-desktop/cafe-colorsel.c:1369
 msgid "_Save color here"
@@ -1014,12 +1014,12 @@ msgstr "Motiv ikon použitý pro panely, Caja atd."
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
 msgid "Gtk+ Theme"
-msgstr "Motiv gtk+"
+msgstr "Motiv ctk+"
 
 #: schemas/org.cafe.interface.gschema.xml:66
 #: schemas/org.cafe.interface.gschema.xml:71
-msgid "Basename of the default theme used by gtk+."
-msgstr "Základní jméno výchozího motivu používaného v gtk+."
+msgid "Basename of the default theme used by ctk+."
+msgstr "Základní jméno výchozího motivu používaného v ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1027,18 +1027,18 @@ msgstr "Seznam symbolických jmen a barevných ekvivalentů"
 
 #: schemas/org.cafe.interface.gschema.xml:76
 msgid ""
-"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"A '\\n' separated list of \"name:color\" as defined by the 'ctk-color-"
 "scheme' setting"
 msgstr ""
 "Seznam hodnot „name:color“ oddělených pomocí „\\n“, jak je definováno "
-"nastavením „gtk-color-scheme“"
+"nastavením „ctk-color-scheme“"
 
 #: schemas/org.cafe.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Výchozí písmo"
 
 #: schemas/org.cafe.interface.gschema.xml:81
-msgid "Name of the default font used by gtk+."
+msgid "Name of the default font used by ctk+."
 msgstr "Jméno výchozího písma používaného v GTK+."
 
 #: schemas/org.cafe.interface.gschema.xml:85
@@ -1046,16 +1046,16 @@ msgid "GTK IM Preedit Style"
 msgstr "Styl GTK IM Preedit"
 
 #: schemas/org.cafe.interface.gschema.xml:86
-msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "Název přípravného stylu vstupní metody GTK+ použitého gtk+."
+msgid "Name of the GTK+ input method Preedit Style used by ctk+."
+msgstr "Název přípravného stylu vstupní metody GTK+ použitého ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "Styl GTK IM Status"
 
 #: schemas/org.cafe.interface.gschema.xml:91
-msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "Název stavového stylu vstupní metody GTK+ použitého gtk+."
+msgid "Name of the GTK+ input method Status Style used by ctk+."
+msgstr "Název stavového stylu vstupní metody GTK+ použitého ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1125,8 +1125,8 @@ msgid "Use Custom Font"
 msgstr "Použít vlastní písmo"
 
 #: schemas/org.cafe.interface.gschema.xml:126
-msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Jestli použít vlastní písmo v aplikacích gtk+."
+msgid "Whether to use a custom font in ctk+ applications."
+msgstr "Jestli použít vlastní písmo v aplikacích ctk+."
 
 #: schemas/org.cafe.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1143,10 +1143,10 @@ msgstr "Modul pro GtkFileChooser"
 #: schemas/org.cafe.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
-"Possible values are \"gio\" and \"gtk+\"."
+"Possible values are \"gio\" and \"ctk+\"."
 msgstr ""
 "Modul k použití jako modelu systému souborů pro nástroj GtkFileChooser. "
-"Možné hodnoty jsou \"gio\" a \"gtk+\"."
+"Možné hodnoty jsou \"gio\" a \"ctk+\"."
 
 #: schemas/org.cafe.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1189,12 +1189,12 @@ msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 msgstr ""
 "Toto nastavení určuje, která tlačítka je třeba dát do titulní lišty u "
 "client-side oken, a to, zda by měly být umístěny na levé straně vpravo. Viz "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1205,12 +1205,12 @@ msgstr "Používat globální lištu menu pro zobrazování nabídek aplikací"
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 msgstr ""
 "Toto nastavení určuje, kde se zobrazí nabídka aplikace - v okně nebo na "
 "panelu s protokolem MenuModel. Viz "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1221,12 +1221,12 @@ msgstr "Používat globální lištu menu pro zobrazování nabídek okna"
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 msgstr ""
 "Toto nastavení určuje, kde se budou zobrazovat nabídky oken - v okně nebo na"
 " panelu s protokolem MenuModel. Viz "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"https://developer.gnome.org/ctk3/stable/GtkSettings.html#GtkSettings--ctk-"
 "shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1278,10 +1278,10 @@ msgstr "Povolit vkládání z hlavního výběru"
 
 #: schemas/org.cafe.interface.gschema.xml:187
 msgid ""
-"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"If true, ctk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Když je zapnuto, používá gtk+ vkládání z hlavního výběru, obvykle spouštěné "
+"Když je zapnuto, používá ctk+ vkládání z hlavního výběru, obvykle spouštěné "
 "kliknutím prostředním tlačítkem myši."
 
 #: schemas/org.cafe.lockdown.gschema.xml:5
@@ -1518,8 +1518,8 @@ msgstr "Vyberte si barvy z palety, nebo na obrazovce"
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: tools/cafe-color-select.desktop.in:8
-msgid "gtk-select-color"
-msgstr "gtk-select-color"
+msgid "ctk-select-color"
+msgstr "ctk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
