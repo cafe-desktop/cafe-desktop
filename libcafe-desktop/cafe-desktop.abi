@@ -141,13 +141,6 @@ cafe_gsettings_is_valid_keyname
 cafe_gsettings_remove_all_from_strv
 cafe_gsettings_schema_exists
 cafe_gsettings_strv_to_gslist
-cafe_hsv_get_color
-cafe_hsv_get_metrics
-cafe_hsv_get_type
-cafe_hsv_is_adjusting
-cafe_hsv_new
-cafe_hsv_set_color
-cafe_hsv_set_metrics
 cafe_language_has_translations
 cafe_normalize_locale
 cafe_parse_locale

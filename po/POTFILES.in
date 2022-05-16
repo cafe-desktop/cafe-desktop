@@ -8,7 +8,6 @@ cafe-about/cafe-about.h
 libcafe-desktop/display-name.c
 libcafe-desktop/cafe-colorbutton.c
 libcafe-desktop/cafe-colorsel.c
-libcafe-desktop/cafe-hsv.c
 libcafe-desktop/cafe-colorseldialog.c
 libcafe-desktop/cafe-desktop-item.c
 libcafe-desktop/cafe-desktop-utils.c

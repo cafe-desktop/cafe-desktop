@@ -14,7 +14,6 @@ libcafe_desktop_HEADERS = \
 	cafe-rr-labeler.h \
 	cafe-colorbutton.h \
 	cafe-colorsel.h \
-	cafe-hsv.h \
 	cafe-colorseldialog.h
 
 lib_LTLIBRARIES = libcafe-desktop-2.la
@@ -50,7 +49,6 @@ introspection_sources = \
 	cafe-rr-labeler.c	\
 	cafe-colorbutton.c \
 	cafe-colorsel.c \
-	cafe-hsv.c \
 	cafe-colorseldialog.c \
 	edid-parse.c
 

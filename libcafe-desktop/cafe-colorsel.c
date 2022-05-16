@@ -35,7 +35,6 @@
 #include <ctk/ctk.h>
 #include <glib/gi18n-lib.h>
 #include "cafe-colorsel.h"
-#include "cafe-hsv.h"
 
 #define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
 
@@ -335,10 +334,10 @@ cafe_color_selection_init (CafeColorSelection *colorsel)
   ctk_box_pack_start (CTK_BOX (colorsel), top_hbox, FALSE, FALSE, 0);
 
   vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
-  priv->triangle_colorsel = cafe_hsv_new ();
+  priv->triangle_colorsel = ctk_hsv_new ();
   g_signal_connect (priv->triangle_colorsel, "changed",
                     G_CALLBACK (hsv_changed), colorsel);
-  cafe_hsv_set_metrics (CAFE_HSV (priv->triangle_colorsel), 174, 15);
+  ctk_hsv_set_metrics (CTK_HSV (priv->triangle_colorsel), 174, 15);
   ctk_box_pack_start (CTK_BOX (top_hbox), vbox, FALSE, FALSE, 0);
   ctk_box_pack_start (CTK_BOX (vbox), priv->triangle_colorsel, FALSE, FALSE, 0);
   ctk_widget_set_tooltip_text (priv->triangle_colorsel,
@@ -1951,10 +1950,10 @@ hsv_changed (CtkWidget *hsv,
   if (priv->changing)
     return;
 
-  cafe_hsv_get_color (CAFE_HSV (hsv),
-		      &priv->color[COLORSEL_HUE],
-		      &priv->color[COLORSEL_SATURATION],
-		      &priv->color[COLORSEL_VALUE]);
+  ctk_hsv_get_color (CTK_HSV (hsv),
+		     &priv->color[COLORSEL_HUE],
+		     &priv->color[COLORSEL_SATURATION],
+		     &priv->color[COLORSEL_VALUE]);
   ctk_hsv_to_rgb (priv->color[COLORSEL_HUE],
 		  priv->color[COLORSEL_SATURATION],
 		  priv->color[COLORSEL_VALUE],
@@ -2133,10 +2132,10 @@ update_color (CafeColorSelection *colorsel)
   priv->changing = TRUE;
   color_sample_update_samples (colorsel);
 
-  cafe_hsv_set_color (CAFE_HSV (priv->triangle_colorsel),
-		      priv->color[COLORSEL_HUE],
-		      priv->color[COLORSEL_SATURATION],
-		      priv->color[COLORSEL_VALUE]);
+  ctk_hsv_set_color (CTK_HSV (priv->triangle_colorsel),
+		     priv->color[COLORSEL_HUE],
+		     priv->color[COLORSEL_SATURATION],
+		     priv->color[COLORSEL_VALUE]);
   ctk_adjustment_set_value (ctk_spin_button_get_adjustment
 			    (CTK_SPIN_BUTTON (priv->hue_spinbutton)),
 			    scale_round (priv->color[COLORSEL_HUE], 360));
@@ -2688,7 +2687,7 @@ cafe_color_selection_is_adjusting (CafeColorSelection *colorsel)
 
   priv = colorsel->private_data;
 
-  return (cafe_hsv_is_adjusting (CAFE_HSV (priv->triangle_colorsel)));
+  return (ctk_hsv_is_adjusting (CTK_HSV (priv->triangle_colorsel)));
 }
 
 

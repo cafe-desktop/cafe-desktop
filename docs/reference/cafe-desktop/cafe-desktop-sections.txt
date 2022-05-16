@@ -286,25 +286,3 @@ cafe_language_has_translations
 cafe_desktop_prepend_terminal_to_vector
 </SECTION>
 
-<SECTION>
-<FILE>cafe-hsv</FILE>
-<TITLE>CafeHSV</TITLE>
-CafeHSV
-cafe_hsv_new
-cafe_hsv_set_color
-cafe_hsv_get_color
-cafe_hsv_set_metrics
-cafe_hsv_get_metrics
-cafe_hsv_is_adjusting
-<SUBSECTION Standard>
-CAFE_TYPE_HSV
-CAFE_HSV
-CAFE_HSV_CLASS
-CAFE_IS_HSV
-CAFE_IS_HSV_CLASS
-CAFE_HSV_GET_CLASS
-<SUBSECTION Private>
-CafeHSVPrivate
-cafe_hsv_get_type
-</SECTION>
-
