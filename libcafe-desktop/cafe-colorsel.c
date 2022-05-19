@@ -2233,10 +2233,7 @@ default_change_palette_func (CdkScreen	    *screen,
 
   str = cafe_color_selection_palette_to_string (colors, n_colors);
 
-  ctk_settings_set_string_property (ctk_settings_get_for_screen (screen),
-                                    "ctk-color-palette",
-                                    str,
-                                    "cafe_color_selection_palette_to_string");
+  g_object_set (G_OBJECT (ctk_settings_get_for_screen (screen)), "ctk-color-palette", str, NULL);
 
   g_free (str);
 }
