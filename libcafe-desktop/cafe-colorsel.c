@@ -897,7 +897,7 @@ static void
 color_sample_setup_dnd (CafeColorSelection *colorsel, CtkWidget *sample)
 {
   static const CtkTargetEntry targets[] = {
-    { "application/x-color", 0 }
+    { .target = "application/x-color", .flags = 0 }
   };
   CafeColorSelectionPrivate *priv;
   priv = colorsel->private_data;
@@ -1262,7 +1262,7 @@ palette_set_color (CtkWidget         *drawing_area,
   if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (drawing_area), "color_set")) == 0)
     {
       static const CtkTargetEntry targets[] = {
-	{ "application/x-color", 0 }
+	{ .target = "application/x-color", .flags = 0 }
       };
       ctk_drag_source_set (drawing_area,
 			   CDK_BUTTON1_MASK | CDK_BUTTON3_MASK,
@@ -1543,7 +1543,7 @@ static CtkWidget*
 palette_new (CafeColorSelection *colorsel)
 {
   static const CtkTargetEntry targets[] = {
-    { "application/x-color", 0 }
+    { .target = "application/x-color", .flags = 0 }
   };
 
   CtkWidget *retval = ctk_drawing_area_new ();
