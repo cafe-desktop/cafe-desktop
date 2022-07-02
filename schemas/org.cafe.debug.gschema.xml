@@ -3,7 +3,7 @@
     <key name="caja" type="b">
       <default>false</default>
     </key>
-    <key name="marco" type="b">
+    <key name="croma" type="b">
       <default>false</default>
     </key>
     <key name="cafe-session" type="b">

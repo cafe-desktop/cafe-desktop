@@ -1540,7 +1540,7 @@ make_spawn_environment_for_sn_context (SnLauncherContext *sn_context,
  * there are bugs and apps don't end their own startup sequence.
  *
  * This timeout is a "last resort" timeout that ignores whether the
- * startup sequence has shown activity or not.  Marco and the
+ * startup sequence has shown activity or not.  Croma and the
  * tasklist have smarter, and correspondingly able-to-be-shorter
  * timeouts. The reason our timeout is dumb is that we don't monitor
  * the sequence (don't use an SnMonitorContext)
