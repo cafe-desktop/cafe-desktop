@@ -1,6 +1,6 @@
 <schemalist gettext-domain="cafe-desktop">
   <schema id="org.cafe.debug" path="/org/cafe/debug/">
-    <key name="caja" type="b">
+    <key name="baul" type="b">
       <default>false</default>
     </key>
     <key name="croma" type="b">

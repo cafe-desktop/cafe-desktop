@@ -1005,7 +1005,7 @@ msgstr "Simge Teması"
 
 #: schemas/org.cafe.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Panel, caja vs. için kullanılacak simge teması."
+msgstr "Panel, baul vs. için kullanılacak simge teması."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

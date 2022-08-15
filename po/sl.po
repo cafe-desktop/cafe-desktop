@@ -995,7 +995,7 @@ msgstr "Tema ikon"
 
 #: schemas/org.cafe.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Tema ikon, ki naj se uporabi za pult, caja, itd."
+msgstr "Tema ikon, ki naj se uporabi za pult, baul, itd."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

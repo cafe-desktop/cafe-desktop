@@ -1307,7 +1307,7 @@ msgstr "ধ্বনিৰ থিমৰ নাম"
 
 #: schemas/org.cafe.sound.gschema.xml:26
 msgid "The XDG sound theme to use for event sounds."
-msgstr "পেনেল, caja প্ৰভৃতিৰ বাবে ব্যৱহৃত প্ৰতীকচিহ্নৰ থিম"
+msgstr "পেনেল, baul প্ৰভৃতিৰ বাবে ব্যৱহৃত প্ৰতীকচিহ্নৰ থিম"
 
 #: schemas/org.cafe.sound.gschema.xml:30
 msgid "Input feedback sounds"

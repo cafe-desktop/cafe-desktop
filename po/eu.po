@@ -993,7 +993,7 @@ msgstr "Ikonoen gaia"
 
 #: schemas/org.cafe.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Ikonoen gaia, panelean, caja-n eta beste aplikazioetan erabiltzeko."
+msgstr "Ikonoen gaia, panelean, baul-n eta beste aplikazioetan erabiltzeko."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
