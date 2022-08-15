@@ -1157,7 +1157,7 @@ get_property (Display *dpy,
 
     if (actual_type == XA_INTEGER && actual_format == 8)
     {
-	result = g_memdup (prop, nitems);
+	result = g_memdup2 (prop, nitems);
 	if (len)
 	    *len = nitems;
     }
@@ -1363,7 +1363,7 @@ output_copy (const CafeRROutput *from)
     output->modes = (CafeRRMode**) g_ptr_array_free (array, FALSE);
 
     output->edid_size = from->edid_size;
-    output->edid_data = g_memdup (from->edid_data, from->edid_size);
+    output->edid_data = g_memdup2 (from->edid_data, from->edid_size);
 
     return output;
 }
