@@ -109,21 +109,16 @@ gboolean cafe_color_selection_palette_from_string (const gchar       *str,
 gchar*   cafe_color_selection_palette_to_string   (const CdkColor    *colors,
                                                   gint               n_colors);
 
-#ifndef CTK_DISABLE_DEPRECATED
 #ifndef CDK_MULTIHEAD_SAFE
 CafeColorSelectionChangePaletteFunc           cafe_color_selection_set_change_palette_hook             (CafeColorSelectionChangePaletteFunc           func);
-#endif
 #endif
 
 CafeColorSelectionChangePaletteWithScreenFunc cafe_color_selection_set_change_palette_with_screen_hook (CafeColorSelectionChangePaletteWithScreenFunc func);
 
-#ifndef CTK_DISABLE_DEPRECATED
-/* Deprecated calls: */
 void cafe_color_selection_set_color         (CafeColorSelection *colorsel,
 					    gdouble           *color);
 void cafe_color_selection_get_color         (CafeColorSelection *colorsel,
 					    gdouble           *color);
-#endif /* CTK_DISABLE_DEPRECATED */
 
 G_END_DECLS
 

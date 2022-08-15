@@ -2456,8 +2456,6 @@ cafe_color_selection_set_current_alpha (CafeColorSelection *colorsel,
  *
  * Sets the current color to be @color.  The first time this is called, it will
  * also set the original color to be @color too.
- *
- * Deprecated: 2.0: Use cafe_color_selection_set_current_color() instead.
  **/
 void
 cafe_color_selection_set_color (CafeColorSelection    *colorsel,
@@ -2515,8 +2513,6 @@ cafe_color_selection_get_current_alpha (CafeColorSelection *colorsel)
  * @color: an array of 4 #gdouble to fill in with the current color.
  *
  * Sets @color to be the current color in the CafeColorSelection widget.
- *
- * Deprecated: 2.0: Use cafe_color_selection_get_current_color() instead.
  **/
 void
 cafe_color_selection_get_color (CafeColorSelection *colorsel,
@@ -2832,10 +2828,6 @@ cafe_color_selection_palette_to_string (const CdkColor *colors,
  * "ctk-color-palette" so all CafeColorSelection widgets will be modified.
  *
  * Return value: the previous change palette hook (that was replaced).
- *
- * Deprecated: 2.4: This function does not work in multihead environments.
- *     Use cafe_color_selection_set_change_palette_with_screen_hook() instead.
- *
  **/
 CafeColorSelectionChangePaletteFunc
 cafe_color_selection_set_change_palette_hook (CafeColorSelectionChangePaletteFunc func)
