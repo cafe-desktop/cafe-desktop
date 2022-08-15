@@ -745,7 +745,7 @@ msgid "Show Desktop Icons"
 msgstr "የ ዴስክቶፕ ምልክቶች ማሳያ"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr "የ ሜት የ ፋይል አስተዳዳሪ (ካጃ) የ ዴስክቶፕ ምልክት መሳያ ማስቻያ"
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -917,7 +917,7 @@ msgid "Icon Theme"
 msgstr "የ ምልክት ገጽታ"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr "ለ ክፍል የሚጠቀሙት የ ምልክት ገጽታ: ካጃ ወዘተ"
 
 #: schemas/org.cafe.interface.gschema.xml:65

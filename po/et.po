@@ -791,8 +791,8 @@ msgid "Show Desktop Icons"
 msgstr "Tõõlaual näidatakse ikoone"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Kas CAFE failihaldur (Caja) joonistab töölaua ikoonid."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Kas CAFE failihaldur (Baul) joonistab töölaua ikoonid."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -982,7 +982,7 @@ msgid "Icon Theme"
 msgstr "Ikoonide teema"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:65

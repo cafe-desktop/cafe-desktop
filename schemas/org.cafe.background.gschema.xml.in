@@ -21,7 +21,7 @@
     <key name="show-desktop-icons" type="b">
       <default>true</default>
       <summary>Show Desktop Icons</summary>
-      <description>Have CAFE file manager (Caja) draw the desktop icons.</description>
+      <description>Have CAFE file manager (Baul) draw the desktop icons.</description>
     </key>
     <key name="background-fade" type="b">
       <default>true</default>

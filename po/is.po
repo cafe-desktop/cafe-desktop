@@ -779,8 +779,8 @@ msgid "Show Desktop Icons"
 msgstr "Birta táknmyndir á skjáborði"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Láta CAFE skráastjórann (Caja) meðhöndla táknmyndir á skjáborði."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Láta CAFE skráastjórann (Baul) meðhöndla táknmyndir á skjáborði."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -965,7 +965,7 @@ msgid "Icon Theme"
 msgstr "Táknmyndaþema"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:65

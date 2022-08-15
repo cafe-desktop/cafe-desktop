@@ -810,9 +810,9 @@ msgid "Show Desktop Icons"
 msgstr "Prikaži ikone na radnoj površini."
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Da li CAFE-eov fajl menadžer (Caja) treba da prikazuje ikone na radnog "
+"Da li CAFE-eov fajl menadžer (Baul) treba da prikazuje ikone na radnog "
 "površini."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -1002,7 +1002,7 @@ msgid "Icon Theme"
 msgstr "Tema ikona"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:65

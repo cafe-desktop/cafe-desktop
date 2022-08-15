@@ -808,8 +808,8 @@ msgid "Show Desktop Icons"
 msgstr "Näytä Työpöydän Kuvakkeet"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Pyydä CAFE tiedostohallintaa (Caja) piirtämään työpöydän kuvakkeet."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Pyydä CAFE tiedostohallintaa (Baul) piirtämään työpöydän kuvakkeet."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -989,8 +989,8 @@ msgid "Icon Theme"
 msgstr "Kuvake Teema"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Kuvaketeema käytettäväksi paneelissa, Cajassa jne."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Kuvaketeema käytettäväksi paneelissa, Baulssa jne."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

@@ -797,9 +797,9 @@ msgid "Show Desktop Icons"
 msgstr "Diskouez arlunioù ar burev"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Lakaet eo bet ardoer restroù CAFE (Caja) da gempenn arlunioù ar burev."
+"Lakaet eo bet ardoer restroù CAFE (Baul) da gempenn arlunioù ar burev."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -989,7 +989,7 @@ msgid "Icon Theme"
 msgstr "Neuz an arlun"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:65

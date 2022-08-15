@@ -804,8 +804,8 @@ msgid "Show Desktop Icons"
 msgstr "Zobraziť ikony na ploche"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Poveriť správcu súborov CAFE (Caja) nakreslením ikoniek na ploche."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Poveriť správcu súborov CAFE (Baul) nakreslením ikoniek na ploche."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -989,8 +989,8 @@ msgid "Icon Theme"
 msgstr "Téma ikon"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Téma ikon použitá pre panel, program Caja, atď."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Téma ikon použitá pre panel, program Baul, atď."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

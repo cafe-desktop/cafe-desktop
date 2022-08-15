@@ -800,8 +800,8 @@ msgid "Show Desktop Icons"
 msgstr "Wies Schrievdisk-Tekens"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "De CAFE-Dateiuppasser (Caja) sall de Schrievdisk-Tekens teken."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "De CAFE-Dateiuppasser (Baul) sall de Schrievdisk-Tekens teken."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -985,8 +985,8 @@ msgid "Icon Theme"
 msgstr "Billthema"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Tekenthema för de Balken, Caja un so wieder."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Tekenthema för de Balken, Baul un so wieder."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

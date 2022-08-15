@@ -743,7 +743,7 @@ msgid "Show Desktop Icons"
 msgstr "Ish stoli Nishonchalarini Ko'rsatish"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -913,8 +913,8 @@ msgid "Icon Theme"
 msgstr "Nishoncha Mavzusi"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Panel, Caja va h.k. uchun Nishoncha mavzusi"
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Panel, Baul va h.k. uchun Nishoncha mavzusi"
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

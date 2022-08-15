@@ -818,9 +818,9 @@ msgid "Show Desktop Icons"
 msgstr "Masaüstü Simgelerini Göster"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"CAFE dosya yöneticisinin (Caja) masaüstü simgelerini çizmesini belirler."
+"CAFE dosya yöneticisinin (Baul) masaüstü simgelerini çizmesini belirler."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -1004,7 +1004,7 @@ msgid "Icon Theme"
 msgstr "Simge Teması"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr "Panel, baul vs. için kullanılacak simge teması."
 
 #: schemas/org.cafe.interface.gschema.xml:65

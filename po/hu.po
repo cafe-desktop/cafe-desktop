@@ -825,8 +825,8 @@ msgid "Show Desktop Icons"
 msgstr "Asztal ikonok megjelenítése"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "A CAFE fájlkezelő (Caja) megrajzolja az asztal ikonokat."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "A CAFE fájlkezelő (Baul) megrajzolja az asztal ikonokat."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -1014,7 +1014,7 @@ msgid "Icon Theme"
 msgstr "Ikon téma"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr "A panel, baul, stb által használandó ikontéma."
 
 #: schemas/org.cafe.interface.gschema.xml:65

@@ -856,9 +856,9 @@ msgid "Show Desktop Icons"
 msgstr "Показать иконки рабочего стола"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Должен ли файловый менеджер CAFE (Caja) отрисовывать значки на рабочем "
+"Должен ли файловый менеджер CAFE (Baul) отрисовывать значки на рабочем "
 "столе."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -1043,8 +1043,8 @@ msgid "Icon Theme"
 msgstr "Тема значков"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Тема значков, для использования в панели, Caja и других местах."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Тема значков, для использования в панели, Baul и других местах."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

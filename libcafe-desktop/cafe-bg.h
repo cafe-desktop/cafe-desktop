@@ -51,10 +51,10 @@ G_BEGIN_DECLS
 /* whether to draw the desktop bg */
 #define CAFE_BG_KEY_DRAW_BACKGROUND	"draw-background"
 
-/* whether Caja or cafe-settings-daemon draw the desktop */
+/* whether Baul or cafe-settings-daemon draw the desktop */
 #define CAFE_BG_KEY_SHOW_DESKTOP	"show-desktop-icons"
 
-/* whether to fade when changing background (By Caja/m-s-d) */
+/* whether to fade when changing background (By Baul/m-s-d) */
 #define CAFE_BG_KEY_BACKGROUND_FADE	"background-fade"
 
 #define CAFE_BG_KEY_PRIMARY_COLOR	"primary-color"

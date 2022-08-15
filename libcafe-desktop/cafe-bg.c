@@ -1012,7 +1012,7 @@ draw_once (CafeBG    *bg,
 	GdkPixbuf   *pixbuf;
 	gint         monitor;
 
-	/* whether we're drawing on root window or normal (Caja) window */
+	/* whether we're drawing on root window or normal (Baul) window */
 	monitor = (is_root) ? 0 : -1;
 
 	rect.x = 0;

@@ -808,8 +808,8 @@ msgid "Show Desktop Icons"
 msgstr "Visa skrivbordsikoner"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Låt CAFEs filhanterare (Caja) visa skrivbordsikonerna."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Låt CAFEs filhanterare (Baul) visa skrivbordsikonerna."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -993,8 +993,8 @@ msgid "Icon Theme"
 msgstr "Ikontema"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Ikontema för panelen, Caja, osv."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Ikontema för panelen, Baul, osv."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

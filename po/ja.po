@@ -764,8 +764,8 @@ msgid "Show Desktop Icons"
 msgstr "デスクトップアイコンを表示する"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "CAFE ファイルマネージャ (Caja) がデスクトップのアイコンを描画するかを設定します。"
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "CAFE ファイルマネージャ (Baul) がデスクトップのアイコンを描画するかを設定します。"
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -939,8 +939,8 @@ msgid "Icon Theme"
 msgstr "アイコンのテーマ"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "パネルやCajaなどのアイコンテーマ"
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "パネルやBaulなどのアイコンテーマ"
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

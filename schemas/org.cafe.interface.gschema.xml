@@ -58,7 +58,7 @@
     <key name="icon-theme" type="s">
       <default>'menta'</default>
       <summary>Icon Theme</summary>
-      <description>Icon theme to use for the panel, Caja etc.</description>
+      <description>Icon theme to use for the panel, Baul etc.</description>
     </key>
     <key name="ctk-theme" type="s">
       <default>'Menta'</default>

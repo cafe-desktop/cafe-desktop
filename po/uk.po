@@ -812,9 +812,9 @@ msgid "Show Desktop Icons"
 msgstr "Показати піктограми стільниці"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Чи повинен упорядник файлів МАТЕ (Caja) показувати піктограми на стільниці."
+"Чи повинен упорядник файлів МАТЕ (Baul) показувати піктограми на стільниці."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -1000,8 +1000,8 @@ msgid "Icon Theme"
 msgstr "Тема піктограм"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Тема піктограм, для використання в панелі, Caja й інших місцях."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Тема піктограм, для використання в панелі, Baul й інших місцях."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

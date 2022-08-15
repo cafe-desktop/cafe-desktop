@@ -807,8 +807,8 @@ msgid "Show Desktop Icons"
 msgstr "Rodyti darbalaukio piktogramas"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Ar CAFE failų tvarkytuvė (Caja) turi piešti darbalaukio piktogramas."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Ar CAFE failų tvarkytuvė (Baul) turi piešti darbalaukio piktogramas."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -992,7 +992,7 @@ msgid "Icon Theme"
 msgstr "Piktogramų tema"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr ""
 "Piktogramų tema, kuri bus naudojama skydelyje, failų tvarkytuvėje ir t.t."
 

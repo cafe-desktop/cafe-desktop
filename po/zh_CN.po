@@ -768,8 +768,8 @@ msgid "Show Desktop Icons"
 msgstr "显示桌面图标"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "让 CAFE 文件管理器(Caja) 绘制桌面图标。"
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "让 CAFE 文件管理器(Baul) 绘制桌面图标。"
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -941,8 +941,8 @@ msgid "Icon Theme"
 msgstr "图标主题"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "用于面板、Caja 等的图标主题。"
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "用于面板、Baul 等的图标主题。"
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

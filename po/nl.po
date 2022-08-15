@@ -832,9 +832,9 @@ msgid "Show Desktop Icons"
 msgstr "Toon bureaubladpictogrammen"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Laat de CAFE-bestandsbeheerder (Caja) de pictogrammen op het bureaublad "
+"Laat de CAFE-bestandsbeheerder (Baul) de pictogrammen op het bureaublad "
 "tonen."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -1023,8 +1023,8 @@ msgid "Icon Theme"
 msgstr "Pictogramthema"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Te gebruiken pictogramthema voor het paneel, Caja, enz."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Te gebruiken pictogramthema voor het paneel, Baul, enz."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

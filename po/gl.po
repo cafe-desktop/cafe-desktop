@@ -817,9 +817,9 @@ msgid "Show Desktop Icons"
 msgstr "Amosar as iconas no escritorio"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Facer que o xestor de ficheiros do CAFE (Caja) debuxe iconas no escritorio."
+"Facer que o xestor de ficheiros do CAFE (Baul) debuxe iconas no escritorio."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -1010,8 +1010,8 @@ msgid "Icon Theme"
 msgstr "Tema de iconas"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "O tema de icona que se vai usar para o panel, o Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "O tema de icona que se vai usar para o panel, o Baul etc."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

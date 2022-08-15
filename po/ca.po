@@ -814,9 +814,9 @@ msgid "Show Desktop Icons"
 msgstr "Mostra les icones de l'escriptori"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Fes que el gestor de fitxers de CAFE (Caja) dibuixi les icones de "
+"Fes que el gestor de fitxers de CAFE (Baul) dibuixi les icones de "
 "l'escriptori."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -1006,8 +1006,8 @@ msgid "Icon Theme"
 msgstr "Tema de les icones"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "El tema de les icones que s'utilitza per al tauler, Caja, etc."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "El tema de les icones que s'utilitza per al tauler, Baul, etc."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

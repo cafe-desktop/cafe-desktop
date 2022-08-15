@@ -810,9 +810,9 @@ msgid "Show Desktop Icons"
 msgstr "Arată pictograme desktop"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Permite ca administratorul de fișiere (Caja) să deseneze pictogramele de pe "
+"Permite ca administratorul de fișiere (Baul) să deseneze pictogramele de pe "
 "desktop."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -1003,8 +1003,8 @@ msgid "Icon Theme"
 msgstr "Temă pictograme"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Temă pictograme de utilizat pentru panou, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Temă pictograme de utilizat pentru panou, Baul etc."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

@@ -758,8 +758,8 @@ msgid "Show Desktop Icons"
 msgstr "डेस्कटॉप बटण दाखवा"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "मेट फ़ाइल व्यवस्थापक(Caja) ला डेस्कटॉप पार्श्वभूमी रेखाटू द्या."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "मेट फ़ाइल व्यवस्थापक(Baul) ला डेस्कटॉप पार्श्वभूमी रेखाटू द्या."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -935,7 +935,7 @@ msgid "Icon Theme"
 msgstr "चिन्ह सुत्रयोजना"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:65

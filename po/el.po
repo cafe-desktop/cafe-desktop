@@ -827,9 +827,9 @@ msgid "Show Desktop Icons"
 msgstr "Εμφάνιση εικονιδίων επιφάνειας εργασίας"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
 msgstr ""
-"Χρήση του διαχειριστή αρχείων του CAFE (Caja) για τη σχεδίαση εικονιδίων "
+"Χρήση του διαχειριστή αρχείων του CAFE (Baul) για τη σχεδίαση εικονιδίων "
 "στην επιφάνεια εργασίας"
 
 #: schemas/org.cafe.background.gschema.xml.in:28
@@ -1020,7 +1020,7 @@ msgid "Icon Theme"
 msgstr "Θέμα εικονιδίου"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
+msgid "Icon theme to use for the panel, Baul etc."
 msgstr ""
 "Θέμα εικονιδίου που χρησιμοποιείται για το πίνακα εφαρμογών, το Nαυτίλο κτλ."
 

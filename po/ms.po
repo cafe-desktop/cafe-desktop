@@ -805,8 +805,8 @@ msgid "Show Desktop Icons"
 msgstr "Tunjuk Ikon Desktop"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Biarkan pengurus fail (Caja) melukis ikon dektop."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Biarkan pengurus fail (Baul) melukis ikon dektop."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -990,8 +990,8 @@ msgid "Icon Theme"
 msgstr "Tema Ikon"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Tema ikon yang digunakan untuk panel. Caja dan lain-lain."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Tema ikon yang digunakan untuk panel. Baul dan lain-lain."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70

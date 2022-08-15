@@ -828,8 +828,8 @@ msgid "Show Desktop Icons"
 msgstr "Pokaż ikony pulpitu"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
-msgid "Have CAFE file manager (Caja) draw the desktop icons."
-msgstr "Czy menedżer plików CAFE (Caja) rysuje ikony pulpitu."
+msgid "Have CAFE file manager (Baul) draw the desktop icons."
+msgstr "Czy menedżer plików CAFE (Baul) rysuje ikony pulpitu."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -1013,8 +1013,8 @@ msgid "Icon Theme"
 msgstr "Motyw ikon"
 
 #: schemas/org.cafe.interface.gschema.xml:61
-msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Motyw ikon używanych przez panel, Caja itd."
+msgid "Icon theme to use for the panel, Baul etc."
+msgstr "Motyw ikon używanych przez panel, Baul itd."
 
 #: schemas/org.cafe.interface.gschema.xml:65
 #: schemas/org.cafe.interface.gschema.xml:70
