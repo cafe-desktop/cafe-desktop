@@ -56,12 +56,12 @@
       <description>Length of the cursor blink cycle, in milliseconds.</description>
     </key>
     <key name="icon-theme" type="s">
-      <default>'menta'</default>
+      <default>'cafe'</default>
       <summary>Icon Theme</summary>
       <description>Icon theme to use for the panel, Baul etc.</description>
     </key>
     <key name="ctk-theme" type="s">
-      <default>'Menta'</default>
+      <default>'ClassicOk'</default>
       <summary>Ctk+ Theme</summary>
       <description>Basename of the default theme used by ctk+.</description>
     </key>
