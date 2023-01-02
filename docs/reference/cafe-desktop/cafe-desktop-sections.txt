@@ -5,7 +5,6 @@
 CafeBG
 CafeBGColorType
 CafeBGPlacement
-CAFE_BG_KEY_DIR
 cafe_bg_new
 cafe_bg_load_from_preferences
 cafe_bg_save_to_preferences
@@ -16,12 +15,9 @@ cafe_bg_get_filename
 cafe_bg_get_placement
 cafe_bg_get_color
 cafe_bg_draw
-cafe_bg_create_pixmap
 cafe_bg_get_image_size
 cafe_bg_create_thumbnail
 cafe_bg_is_dark
-cafe_bg_changes_with_size
-cafe_bg_set_pixmap_as_root
 <SUBSECTION Private>
 cafe_bg_get_type
 <SUBSECTION Standard>
@@ -39,9 +35,7 @@ CafeBGClass
 <FILE>cafe-rr-screen</FILE>
 <TITLE></TITLE>
 CafeRRScreen
-CafeRRScreenChanged
 cafe_rr_screen_new
-cafe_rr_screen_destroy
 cafe_rr_screen_refresh
 cafe_rr_screen_list_outputs
 cafe_rr_screen_list_crtcs
@@ -107,17 +101,12 @@ cafe_rr_mode_get_freq
 <INCLUDE>cafe-rr-config.h</INCLUDE>
 <FILE>cafe-rr-config</FILE>
 <TITLE></TITLE>
-CafeOutputInfo
-CafeRRConfig
 cafe_rr_config_new_current
 cafe_rr_config_new_stored
-cafe_rr_config_free
 cafe_rr_config_match
 cafe_rr_config_equal
 cafe_rr_config_save
 cafe_rr_config_sanitize
-cafe_rr_config_apply
-cafe_rr_config_apply_stored
 cafe_rr_config_applicable
 </SECTION>
 
@@ -128,7 +117,6 @@ cafe_rr_config_applicable
 CafeRRLabeler
 cafe_rr_labeler_new
 cafe_rr_labeler_hide
-cafe_rr_labeler_get_color_for_output
 <SUBSECTION Private>
 cafe_rr_labeler_get_type
 <SUBSECTION Standard>
