@@ -7,17 +7,31 @@ CafeBGColorType
 CafeBGPlacement
 cafe_bg_new
 cafe_bg_load_from_preferences
+cafe_bg_load_from_system_preferences
+cafe_bg_load_from_system_gsettings
+cafe_bg_load_from_gsettings
 cafe_bg_save_to_preferences
+cafe_bg_save_to_gsettings
 cafe_bg_set_filename
 cafe_bg_set_placement
 cafe_bg_set_color
-cafe_bg_get_filename
+cafe_bg_set_draw_background
+cafe_bg_get_draw_background
 cafe_bg_get_placement
 cafe_bg_get_color
+cafe_bg_get_filename
 cafe_bg_draw
+cafe_bg_create_surface
+cafe_bg_create_surface_scale
 cafe_bg_get_image_size
 cafe_bg_create_thumbnail
 cafe_bg_is_dark
+cafe_bg_has_multiple_sizes
+cafe_bg_changes_with_time
+cafe_bg_create_frame_thumbnail
+cafe_bg_set_surface_as_root
+cafe_bg_set_surface_as_root_with_crossfade
+cafe_bg_get_surface_from_root
 <SUBSECTION Private>
 cafe_bg_get_type
 <SUBSECTION Standard>
@@ -27,6 +41,16 @@ CAFE_TYPE_BG
 CAFE_BG_CLASS
 CAFE_IS_BG_CLASS
 CAFE_BG_GET_CLASS
+CAFE_BG_SCHEMA
+CAFE_BG_KEY_DRAW_BACKGROUND
+CAFE_BG_KEY_SHOW_DESKTOP
+CAFE_BG_KEY_BACKGROUND_FADE
+CAFE_BG_KEY_PRIMARY_COLOR
+CAFE_BG_KEY_SECONDARY_COLOR
+CAFE_BG_KEY_COLOR_TYPE
+CAFE_BG_KEY_PICTURE_PLACEMENT
+CAFE_BG_KEY_PICTURE_OPACITY
+CAFE_BG_KEY_PICTURE_FILENAME
 CafeBGClass
 </SECTION>
 
