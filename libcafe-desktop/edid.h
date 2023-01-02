@@ -22,10 +22,11 @@
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
 
+#include <glib.h>
+
 #ifndef EDID_H
 #define EDID_H
 
-typedef unsigned char uchar;
 typedef struct MonitorInfo MonitorInfo;
 typedef struct Timing Timing;
 typedef struct DetailedTiming DetailedTiming;
@@ -178,7 +179,7 @@ struct MonitorInfo {
 	char dsc_string[14]; /* Unspecified ASCII data */
 };
 
-MonitorInfo* decode_edid(const uchar* data);
+MonitorInfo* decode_edid(const guchar* data);
 char* make_display_name(const MonitorInfo* info);
 
 #endif /* !EDID_H */

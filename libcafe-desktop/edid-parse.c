@@ -40,7 +40,7 @@ static int get_bits(int in, int begin, int end)
 	return (in >> begin) & mask;
 }
 
-static int decode_header(const uchar* edid)
+static int decode_header(const guchar* edid)
 {
 	if (memcmp(edid, "\x00\xff\xff\xff\xff\xff\xff\x00", 8) == 0)
 	{
@@ -50,7 +50,7 @@ static int decode_header(const uchar* edid)
 	return FALSE;
 }
 
-static int decode_vendor_and_product_identification(const uchar* edid, MonitorInfo* info)
+static int decode_vendor_and_product_identification(const guchar* edid, MonitorInfo* info)
 {
 	int is_model_year;
 
@@ -104,7 +104,7 @@ static int decode_vendor_and_product_identification(const uchar* edid, MonitorIn
 	return TRUE;
 }
 
-static int decode_edid_version(const uchar* edid, MonitorInfo* info)
+static int decode_edid_version(const guchar* edid, MonitorInfo* info)
 {
 	info->major_version = edid[0x12];
 	info->minor_version = edid[0x13];
@@ -112,7 +112,7 @@ static int decode_edid_version(const uchar* edid, MonitorInfo* info)
 	return TRUE;
 }
 
-static int decode_display_parameters(const uchar* edid, MonitorInfo* info)
+static int decode_display_parameters(const guchar* edid, MonitorInfo* info)
 {
 	/* Digital vs Analog */
 	info->is_digital = get_bit(edid[0x14], 7);
@@ -250,7 +250,7 @@ static double decode_fraction(int high, int low)
 	return result;
 }
 
-static int decode_color_characteristics(const uchar* edid, MonitorInfo* info)
+static int decode_color_characteristics(const guchar* edid, MonitorInfo* info)
 {
 	info->red_x = decode_fraction(edid[0x1b], get_bits(edid[0x19], 6, 7));
 	info->red_y = decode_fraction(edid[0x1c], get_bits(edid[0x19], 5, 4));
@@ -264,7 +264,7 @@ static int decode_color_characteristics(const uchar* edid, MonitorInfo* info)
 	return TRUE;
 }
 
-static int decode_established_timings(const uchar* edid, MonitorInfo* info)
+static int decode_established_timings(const guchar* edid, MonitorInfo* info)
 {
 	static const Timing established[][8] = {
 		{
@@ -319,7 +319,7 @@ static int decode_established_timings(const uchar* edid, MonitorInfo* info)
 	return TRUE;
 }
 
-static int decode_standard_timings(const uchar* edid, MonitorInfo* info)
+static int decode_standard_timings(const guchar* edid, MonitorInfo* info)
 {
 	int i;
 
@@ -358,7 +358,7 @@ static int decode_standard_timings(const uchar* edid, MonitorInfo* info)
 	return TRUE;
 }
 
-static void decode_lf_string(const uchar* s, int n_chars, char* result)
+static void decode_lf_string(const guchar* s, int n_chars, char* result)
 {
 	int i;
 
@@ -381,7 +381,7 @@ static void decode_lf_string(const uchar* s, int n_chars, char* result)
 	}
 }
 
-static void decode_display_descriptor(const uchar* desc, MonitorInfo* info)
+static void decode_display_descriptor(const guchar* desc, MonitorInfo* info)
 {
 	switch (desc[0x03])
 	{
@@ -417,7 +417,7 @@ static void decode_display_descriptor(const uchar* desc, MonitorInfo* info)
 	}
 }
 
-static void decode_detailed_timing(const uchar* timing, DetailedTiming* detailed)
+static void decode_detailed_timing(const guchar* timing, DetailedTiming* detailed)
 {
 	int bits;
 
@@ -479,7 +479,7 @@ static void decode_detailed_timing(const uchar* timing, DetailedTiming* detailed
 	}
 }
 
-static int decode_descriptors(const uchar* edid, MonitorInfo* info)
+static int decode_descriptors(const guchar* edid, MonitorInfo* info)
 {
 	int i;
 	int timing_idx;
@@ -505,10 +505,10 @@ static int decode_descriptors(const uchar* edid, MonitorInfo* info)
 	return TRUE;
 }
 
-static void decode_check_sum(const uchar* edid, MonitorInfo* info)
+static void decode_check_sum(const guchar* edid, MonitorInfo* info)
 {
 	int i;
-	uchar check = 0;
+	guchar check = 0;
 
 	for (i = 0; i < 128; ++i)
 	{
@@ -518,7 +518,7 @@ static void decode_check_sum(const uchar* edid, MonitorInfo* info)
 	info->checksum = check;
 }
 
-MonitorInfo* decode_edid(const uchar* edid)
+MonitorInfo* decode_edid(const guchar* edid)
 {
 	MonitorInfo* info = g_new0(MonitorInfo, 1);
 
