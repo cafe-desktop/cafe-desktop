@@ -380,6 +380,15 @@ cafe_desktop_item_error_quark
 </SECTION>
 
 <SECTION>
+<INCLUDE>cafe-rr-private.h</INCLUDE>
+<FILE>cafe-rr-private</FILE>
+ScreenInfo
+CafeRRScreenPrivate
+CafeRROutputInfoPrivate
+CafeRRConfigPrivate
+</SECTION>
+
+<SECTION>
 <INCLUDE>cafe-thumbnail.h</INCLUDE>
 <FILE>cafe-desktop-thumbnail</FILE>
 <TITLE>Miscellaneous Thumbnail Functions</TITLE>
