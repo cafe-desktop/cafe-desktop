@@ -440,6 +440,9 @@ cafe_language_has_translations
 <FILE>cafe-desktop-utils</FILE>
 <TITLE>Miscellaneous Functions</TITLE>
 cafe_desktop_prepend_terminal_to_vector
+cafe_cdk_spawn_command_line_on_screen
+cafe_desktop_ctk_style_get_light_color
+cafe_desktop_ctk_style_get_dark_color
 </SECTION>
 
 <SECTION>
