@@ -55,6 +55,30 @@ CafeBGClass
 </SECTION>
 
 <SECTION>
+<INCLUDE>cafe-bg-crossfade.h</INCLUDE>
+<FILE>cafe-bg-crossfade</FILE>
+<TITLE>CafeBGCrossfade</TITLE>
+cafe_bg_crossfade_new
+cafe_bg_crossfade_set_start_surface
+cafe_bg_crossfade_set_end_surface
+cafe_bg_crossfade_start
+cafe_bg_crossfade_start_widget
+cafe_bg_crossfade_is_started
+cafe_bg_crossfade_stop
+<SUBSECTION Standard>
+CAFE_BG_CROSSFADE
+CAFE_BG_CROSSFADE_CLASS
+CAFE_BG_CROSSFADE_GET_CLASS
+CAFE_IS_BG_CROSSFADE
+CAFE_IS_BG_CROSSFADE_CLASS
+CAFE_TYPE_BG_CROSSFADE
+CafeBGCrossfade
+CafeBGCrossfadeClass
+CafeBGCrossfadePrivate
+cafe_bg_crossfade_get_type
+</SECTION>
+
+<SECTION>
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-screen</FILE>
 <TITLE></TITLE>
