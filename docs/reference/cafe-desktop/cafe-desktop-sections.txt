@@ -79,6 +79,35 @@ cafe_bg_crossfade_get_type
 </SECTION>
 
 <SECTION>
+<INCLUDE>cafe-colorbutton.h</INCLUDE>
+<FILE>cafe-colorbutton</FILE>
+<TITLE>CafeColorButton</TITLE>
+cafe_color_button_new
+cafe_color_button_new_with_color
+cafe_color_button_set_color
+cafe_color_button_set_rgba
+cafe_color_button_set_alpha
+cafe_color_button_get_color
+cafe_color_button_get_rgba
+cafe_color_button_get_alpha
+cafe_color_button_set_use_alpha
+cafe_color_button_get_use_alpha
+cafe_color_button_set_title
+cafe_color_button_get_title
+<SUBSECTION Standard>
+CAFE_COLOR_BUTTON
+CAFE_COLOR_BUTTON_CLASS
+CAFE_COLOR_BUTTON_GET_CLASS
+CAFE_IS_COLOR_BUTTON
+CAFE_IS_COLOR_BUTTON_CLASS
+CAFE_TYPE_COLOR_BUTTON
+CafeColorButton
+CafeColorButtonClass
+CafeColorButtonPrivate
+cafe_color_button_get_type
+</SECTION>
+
+<SECTION>
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-screen</FILE>
 <TITLE></TITLE>
