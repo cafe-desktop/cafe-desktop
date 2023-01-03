@@ -147,6 +147,24 @@ cafe_color_selection_get_type
 </SECTION>
 
 <SECTION>
+<INCLUDE>cafe-colorseldialog.h</INCLUDE>
+<FILE>cafe-colorseldialog</FILE>
+<TITLE>CafeColorSelectionDialog</TITLE>
+cafe_color_selection_dialog_new
+cafe_color_selection_dialog_get_color_selection
+<SUBSECTION Standard>
+CAFE_COLOR_SELECTION_DIALOG
+CAFE_COLOR_SELECTION_DIALOG_CLASS
+CAFE_COLOR_SELECTION_DIALOG_GET_CLASS
+CAFE_IS_COLOR_SELECTION_DIALOG
+CAFE_IS_COLOR_SELECTION_DIALOG_CLASS
+CAFE_TYPE_COLOR_SELECTION_DIALOG
+CafeColorSelectionDialog
+CafeColorSelectionDialogClass
+cafe_color_selection_dialog_get_type
+</SECTION>
+
+<SECTION>
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-screen</FILE>
 <TITLE></TITLE>
