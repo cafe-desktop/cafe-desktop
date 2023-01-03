@@ -165,6 +165,15 @@ cafe_color_selection_dialog_get_type
 </SECTION>
 
 <SECTION>
+<INCLUDE>cafe-dconf.h</INCLUDE>
+<FILE>cafe-dconf</FILE>
+cafe_dconf_write_sync
+cafe_dconf_recursive_reset
+cafe_dconf_list_subdirs
+cafe_dconf_sync
+</SECTION>
+
+<SECTION>
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-screen</FILE>
 <TITLE></TITLE>
