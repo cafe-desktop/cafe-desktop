@@ -442,3 +442,16 @@ cafe_language_has_translations
 cafe_desktop_prepend_terminal_to_vector
 </SECTION>
 
+<SECTION>
+<INCLUDE>edid.h</INCLUDE>
+<FILE>edid</FILE>
+MonitorInfo
+Timing
+DetailedTiming
+Interface
+ColorType
+StereoType
+decode_edid
+make_display_name
+</SECTION>
+
