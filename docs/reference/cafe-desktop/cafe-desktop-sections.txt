@@ -180,6 +180,16 @@ CAFE_DESKTOP_CHECK_VERSION
 </SECTION>
 
 <SECTION>
+<INCLUDE>cafe-gsettings.h</INCLUDE>
+<FILE>cafe-gsettings</FILE>
+cafe_gsettings_schema_exists
+cafe_gsettings_is_valid_keyname
+cafe_gsettings_append_strv
+cafe_gsettings_remove_all_from_strv
+cafe_gsettings_strv_to_gslist
+</SECTION>
+
+<SECTION>
 <INCLUDE>cafe-rr.h</INCLUDE>
 <FILE>cafe-rr-screen</FILE>
 <TITLE></TITLE>
