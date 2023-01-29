@@ -33,7 +33,8 @@ const char* website = "https://cafe-desktop.org/";
 
 const char* copyright =  N_("Copyright © 1997-2011 GNOME developers\n"
                             "Copyright © 2011 Perberos\n"
-                            "Copyright © 2012-@RELEASE_YEAR@ CAFE developers");
+                            "Copyright © 2012-2020 MATE developers\n"
+                            "Copyright © 2020-@RELEASE_YEAR@ Pablo Barciela");
 
 /* Increment comments_count if you add other comments. This will be
  * used to choose a random comment. */
