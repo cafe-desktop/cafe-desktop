@@ -1,6 +1,6 @@
 m4_define([cafe_platform], [1])
 m4_define([cafe_minor], [25])
-m4_define([cafe_micro], [0])
+m4_define([cafe_micro], [1])
 
 m4_define(cafe_version, [cafe_platform.cafe_minor.cafe_micro]),
 

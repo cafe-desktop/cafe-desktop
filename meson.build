@@ -1,7 +1,7 @@
 project(
   'cafe-desktop',
   'c',
-  version: '1.25.0',
+  version: '1.25.1',
   license: [ 'GPL-2', 'FDL-1.1', 'LGPL-2' ],
 )
 

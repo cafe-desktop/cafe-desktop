@@ -1,3 +1,16 @@
+### cafe-desktop 1.25.1
+
+  * port from marco to croma
+  * ci: some improvements
+  * cafe-rr: avoid deprecated 'g_memdup'
+  * cafe-colorsel: don't make deprecated functions
+  * port from caja to baul
+  * interface.gschema: 'cafe' instead 'mate' (icon-theme) and 'ClassicOk' instead 'Menta' (ctk-theme)
+  * docs,sections: remove undeclared symbols
+  * edid: guchar insted uchar
+  * cafe-about: update copyright
+  * update translations
+
 ### cafe-desktop 1.25.0
 
   * initial commit: mate-desktop 1.24.1 fork
