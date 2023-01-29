@@ -2,28 +2,28 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # abuyop <abuyop@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Malay (https://www.transifex.com/cafe/teams/13566/ms/)\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr "Abuyop"
 
@@ -35,12 +35,6 @@ msgstr "Perihal CAFE"
 msgid "Learn more about CAFE"
 msgstr "Ketahui lebih lanjut mengenai CAFE"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr "cafe-desktop"
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr "Persekitaran Desktop CAFE"
@@ -49,13 +43,11 @@ msgstr "Persekitaran Desktop CAFE"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
-"Hak Cipta © 1997-2011 Pembangun GNOME\n"
-"Hak Cipta © 2011 Perberos\n"
-"Hak Cipta © 2012-2020 Pembangun CAFE"
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -63,16 +55,15 @@ msgstr ""
 "CAFE menyediakan desktop yang intuitif dan menarik pada pengguna Linux "
 "menggunakan metafor tradisional."
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 "CAFE termasuklah apa yang anda lihat pada komputer anda, termasuklah "
-"pengurus fail, pelihat dokumen, pelihat imej, menu, dan banyak aplikasi "
-"lain."
+"pengurus fail, pelihat dokumen, pelihat imej, menu, dan banyak aplikasi lain."
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -80,7 +71,7 @@ msgstr ""
 "CAFE adalah persekitaran desktop yang bebas, berguna, stabil dan boleh "
 "dicapai untuk keluarga sistem pengoperasian seakan-Unix."
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -89,10 +80,10 @@ msgid ""
 msgstr ""
 "CAFE merupakan kesinambungan GNOME 2. Beratus-ratus individu telah memberi "
 "sumbangan kod pada GNOME semenjak ia dimulakan pada tahun 1997; selain itu "
-"terdapat juga sumbangan dalam bentuk penterjemahan, dokumentasi, dan jaminan"
-" kualitit."
+"terdapat juga sumbangan dalam bentuk penterjemahan, dokumentasi, dan jaminan "
+"kualitit."
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
@@ -100,7 +91,7 @@ msgstr ""
 "GNOME 2 merupakan desktop Linux yang popular tetapi ia sudah dijumudkan... "
 "oleh itu CAFE disini menyediakan dekstop yang serupa untuk anda!"
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -113,7 +104,7 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Tidak diketahui"
@@ -135,11 +126,11 @@ msgid "The title of the color selection dialog"
 msgstr "Tajuk bagi dialog pemilihan warna"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Ambil atau Warna"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "Warna Semasa"
 
@@ -147,7 +138,7 @@ msgstr "Warna Semasa"
 msgid "The selected color"
 msgstr "Warna dipilih"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "Alfa Semasa"
 
@@ -156,44 +147,43 @@ msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Nilai kelegapan terpilih (0 sepenuhnya lutsinar, 65535 sepenuhnya legap)"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr "Data warna tidak sah diterima\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "Mempunyai Kawalan Kelegapan"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Sama ada pemilih warna seharusnya membenarkan tetapkan kelegapan"
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "Mempunyai palet"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "Sama ada palet seharusnya digunakan"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "Warna semasa"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
-"Nilai kelegapan semasa (0 sepenuhnya lutsinar, 65535 sepenuhnya legap)"
+msgstr "Nilai kelegapan semasa (0 sepenuhnya lutsinar, 65535 sepenuhnya legap)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "Rentetan HEX"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "Rentetan heksadesimal bagi warna semasa"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -201,7 +191,7 @@ msgstr ""
 "Pilih warna yang anda mahu dari gelang luar. Pilih kegelapan atau kecerahan "
 "warna tersebut menggunakan segitiga dalaman."
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -209,67 +199,67 @@ msgstr ""
 "Klik pada penitis, kemudian klik pada satu warna dimana sahaja pada skrin "
 "anda untuk memilih warna tersebut."
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "_Rona:"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "Kedudukan pada roda warna."
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "K_etepuan:"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "\"Kedalaman\" warna."
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_Nilai:"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "Kecerahan warna."
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "Merah:"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "Amaun cahaya merah dalam warna."
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_Hijau:"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "Amaun cahaya hijau dalam warna."
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "_Biru:"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "Amaun cahaya biru dalam warna."
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "Kele_gapan:"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "Kelutsinaran warna."
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "_Nama warna:"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -277,15 +267,15 @@ msgstr ""
 "Anda boleh masukkan nilai warna heksadesimal gaya-HTML, atau hanya nama "
 "warna seperti 'jingga' di dalam masukan ini."
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_Palet:"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "Roda Warna"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -295,7 +285,7 @@ msgstr ""
 "sekarang. Anda boleh seret warna ini ke masukan palet, atau pilih warna ini "
 "sebagai warna semasa dengan menyeretnya ke dalam warna lain."
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -303,7 +293,7 @@ msgstr ""
 "Warna yang anda pilih. Anda boleh seret warna ini ke masukan palet untuk "
 "menyimpannya bagi kegunaan akan datang."
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -311,25 +301,25 @@ msgstr ""
 "Warna dipilih-sebelum-inim untuk perbandingan dengan warna yang anda pilih "
 "sekarang."
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "Warna yang anda telah pilih."
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "_Simpan warna di sini"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
-"Klik masukan palet ini untuk jadikannya warna semasa. Untuk mengubah masukan"
-" ini, seret satu warna di sini atau klik kanan padanya dan pilih \"Simpan "
+"Klik masukan palet ini untuk jadikannya warna semasa. Untuk mengubah masukan "
+"ini, seret satu warna di sini atau klik kanan padanya dan pilih \"Simpan "
 "warna di sini\"."
 
 #: libcafe-desktop/cafe-colorseldialog.c:99
@@ -381,7 +371,7 @@ msgstr "Ralat mengundur semula fail '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "Tiada nama"
 
@@ -399,33 +389,33 @@ msgstr "Tidak menemui fail '%s'"
 msgid "No filename to save to"
 msgstr "Tiada nama fail untuk disimpan"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "Memulakan %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "Tiada URL untuk dilancarkan"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "Bukan item boleh lancar"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "Tiada perintah (Exec) untuk dilancarkan"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "Perintah teruk (Exec) untuk dilancarkan"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Pengekodan tidak diketahui: %s"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
 "Tidak menemui terminal, menggunakan xterm meskipun ia mungkin tidak boleh "
@@ -513,7 +503,8 @@ msgid ""
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
 msgstr ""
-"output %s tidak mempunyai parameter yang sama seperti output terklon yang lain:⏎\n"
+"output %s tidak mempunyai parameter yang sama seperti output terklon yang "
+"lain:⏎\n"
 "mod keluar = %d, mod baru = %d⏎\n"
 "koordinat keluar = (%d, %d), koordinat baru = (%d, %d)⏎\n"
 "putaran keluar = %s, putaran baru = %s"
@@ -564,12 +555,12 @@ msgstr ""
 "saiz maya diperlukan tidak muat saiz sedia ada: diminta=(%d, %d), "
 "minimum=(%d, %d), maksimum=(%d, %d)"
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "Skrin Cermin"
@@ -690,8 +681,7 @@ msgstr "Mulakan aplikasi teknologi pembantu Visual dikehendaki"
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
 "CAFE memulakan aplikasi teknologi pembantu Visual dikehendaki semasa daftar "
 "masuk."
@@ -735,8 +725,7 @@ msgstr "Aplikasi Pemesejan Segera"
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
 "Program Pemesejan yang diguna bila memulakan aplikasi yang memerlukannya."
 
@@ -778,8 +767,7 @@ msgstr "Aplikasi terminal"
 
 #: schemas/org.cafe.applications-terminal.gschema.xml:6
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
-"Program terminal yang diguna bila memulakan aplikasi yang perlukannya."
+msgstr "Program terminal yang diguna bila memulakan aplikasi yang perlukannya."
 
 #: schemas/org.cafe.applications-terminal.gschema.xml:10
 msgid "Exec Arguments"
@@ -827,11 +815,11 @@ msgstr "Pilihan Gambar"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
-"Tentukan bagaimana imej ditetap oleh nama fail kertas dinding diterap. Nilai"
-" yang mungkin adalah \"none\", \"wallpaper\", \"centered\", \"scaled\", "
+"Tentukan bagaimana imej ditetap oleh nama fail kertas dinding diterap. Nilai "
+"yang mungkin adalah \"none\", \"wallpaper\", \"centered\", \"scaled\", "
 "\"stretched\", \"zoom\", \"spanned\"."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
@@ -863,8 +851,7 @@ msgid "Secondary Color"
 msgstr "Warna Sekunder"
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
 "Warna Kanan atau Bawah bila melukis gradien, tidak digunakan untuk warna "
 "tegar."
@@ -922,10 +909,12 @@ msgid "Toolbar Style"
 msgstr "Gaya Palang Alat"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
 msgstr ""
-"Gaya Palang Alat. Nilai yang sah adalah \"both\", \"both-horiz\", \"icons\","
-" dan \"text\"."
+"Gaya Palang Alat. Nilai yang sah adalah \"both\", \"both-horiz\", \"icons\", "
+"dan \"text\"."
 
 #: schemas/org.cafe.interface.gschema.xml:25
 msgid "Menus Have Icons"
@@ -964,7 +953,8 @@ msgid "Toolbar Icon Size"
 msgstr "Saiz Ikon Palang Alat"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "Saiz ikon dalam palang alat, sama ada \"small-toolbar\" atau \"large-"
 "toolbar\"."
@@ -1054,14 +1044,14 @@ msgstr "Guna palang pengepala CTK3"
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 "Sama ada dialog CTK+ terbina-dalam seperti pemilih fail, pemilih warna atau "
-"pemilih fon akan gunakan palang pengepala di bahagian atas untuk menunjukkan"
-" widjet tindakan, atau kawasan tindakan di bahagian bawah. Tetapan ini tidak"
-" mempengaruhi dialog suai menggunakan CtkDialog secara terus, atau dialog "
+"pemilih fon akan gunakan palang pengepala di bahagian atas untuk menunjukkan "
+"widjet tindakan, atau kawasan tindakan di bahagian bawah. Tetapan ini tidak "
+"mempengaruhi dialog suai menggunakan CtkDialog secara terus, atau dialog "
 "mesej."
 
 #: schemas/org.cafe.interface.gschema.xml:105
@@ -1171,16 +1161,14 @@ msgstr "Bentangan palang tajuk tetingkap hiasan sisi-klien CTK3"
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Tetapan ini tentukan butang yang manakah seharusnya diletak dalam palang "
 "tajuk tetingkap hiasan sisi-klien, dan sama ada ia seharusnya diletak di "
-"sebelah kiri atau kanan. Sila rujuk "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"sebelah kiri atau kanan. Sila rujuk https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1189,14 +1177,13 @@ msgstr "Guna palang menu sejagat untuk paparkan menu aplikasi"
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 msgstr ""
 "Tetapan ini tentukan menu aplikasi yang manakah akan dipaparkan - di dalam "
-"tetingkap atau di atas panel dengan protokol MenuModel. Sila rujuk "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"tetingkap atau di atas panel dengan protokol MenuModel. Sila rujuk https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1205,12 +1192,11 @@ msgstr "Guna palang menu sejagat untuk paparkan palang menu tetingkap"
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 msgstr ""
-"Tetapan ini tentukan palang menu tetingkap yang manakah akan dipaparkan - di"
-" dalam tetingkap atau di atas panel dengan protokol MenuModel. Sila rujuk "
+"Tetapan ini tentukan palang menu tetingkap yang manakah akan dipaparkan - di "
+"dalam tetingkap atau di atas panel dengan protokol MenuModel. Sila rujuk "
 "https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
 
@@ -1255,8 +1241,8 @@ msgid ""
 msgstr ""
 "Tetapan ini menentukan sama ada CAFE mengawal faktor skala untuk aplikasi "
 "QT. Benarkan untuk disegerakkan dengan faktor skala CTK ketika mengawalkan "
-"sesi, lumpuhkan untuk kawal nilai ini di tempat lain. Perlu memulakan semula"
-" sesi anda."
+"sesi, lumpuhkan untuk kawal nilai ini di tempat lain. Perlu memulakan semula "
+"sesi anda."
 
 #: schemas/org.cafe.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
@@ -1276,8 +1262,8 @@ msgstr "Lumpuhkan baris perintah"
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 "Halang pengguna dari mencapai terminal atau menyatakan baris perintah yang "
@@ -1293,8 +1279,8 @@ msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
-"Halang pengguna dari menyimpan fail ke cakera. Contohnya, ia boleh lumpuhkan"
-" capaian ke dialog aplikasi \"Simpan sebagai\"."
+"Halang pengguna dari menyimpan fail ke cakera. Contohnya, ia boleh lumpuhkan "
+"capaian ke dialog aplikasi \"Simpan sebagai\"."
 
 #: schemas/org.cafe.lockdown.gschema.xml:15
 msgid "Disable printing"
@@ -1368,8 +1354,7 @@ msgstr "Peranti pengadun lalai"
 
 #: schemas/org.cafe.sound.gschema.xml:6
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
-"Peranti pengadun lalai yang diguna oleh pengikatan kekunci multimedia."
+msgstr "Peranti pengadun lalai yang diguna oleh pengikatan kekunci multimedia."
 
 #: schemas/org.cafe.sound.gschema.xml:10
 msgid "Default mixer tracks"
@@ -1447,8 +1432,8 @@ msgstr ""
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr ""
 "Lakaran kenit tidak akan dicipta untuk fail yang mana jenis-mime terkandung "
 "dalam senarai."
@@ -1497,14 +1482,22 @@ msgstr "Dialog pemilihan warna"
 msgid "Choose colors from the palette or the screen"
 msgstr "Pilih warna dari palet atau skrin"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr "ctk-select-color"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr "CAFE;warna;pemilih;pilih;palet;skrin;pemilihan;"
+
+#~ msgid "cafe-desktop"
+#~ msgstr "cafe-desktop"
+
+#~ msgid ""
+#~ "Copyright © 1997-2011 GNOME developers\n"
+#~ "Copyright © 2011 Perberos\n"
+#~ "Copyright © 2012-2020 CAFE developers"
+#~ msgstr ""
+#~ "Hak Cipta © 1997-2011 Pembangun GNOME\n"
+#~ "Hak Cipta © 2011 Perberos\n"
+#~ "Hak Cipta © 2012-2020 Pembangun CAFE"
+
+#~ msgid "ctk-select-color"
+#~ msgstr "ctk-select-color"

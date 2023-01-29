@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Marco Giannini <giannini.marco@gmail.com>, 2020
 # andrea pittaro <transifex@andreapittaro.it>, 2020
@@ -16,24 +16,24 @@
 # Marco Z. <minaz666@gmail.com>, 2020
 # l3nn4rt, 2020
 # Alessandro Volturno <alelvb@inwind.it>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/cafe/teams/13566/it/)\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr " "
 
@@ -45,12 +45,6 @@ msgstr "Informazioni su CAFE"
 msgid "Learn more about CAFE"
 msgstr "Per saperne di più su CAFE"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr "cafe-desktop"
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr "CAFE Desktop Environment"
@@ -59,13 +53,11 @@ msgstr "CAFE Desktop Environment"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
-"Copyright © 1997-2011 GNOME developers\n"
-"Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 Gli sviluppatori di CAFE"
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -73,7 +65,7 @@ msgstr ""
 "CAFE fornisce un desktop intuitivo e gradevole per gli utenti Linux, usando "
 "le metafore tradizionali."
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -81,7 +73,7 @@ msgstr ""
 "CAFE include la maggior parte di quello che è visibile sul computer, "
 "compresi il file manager, il web browser, i menù e molte applicazioni."
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -89,7 +81,7 @@ msgstr ""
 "CAFE è un ambiente desktop libero, usabile, stabile e accessibile per la "
 "famiglia di sistemi operativi tipo UNIX."
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -101,7 +93,7 @@ msgstr ""
 "hanno contribuito in altri modi importanti, come traduzioni, documentazione "
 "e controllo della qualità."
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
@@ -109,7 +101,7 @@ msgstr ""
 "GNOME 2 è stato il desktop più popolare per Linux ma non è più "
 "disponibile... CAFE è qui per fornire lo stesso desktop agli utenti!"
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -122,7 +114,7 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Sconosciuto"
@@ -144,11 +136,11 @@ msgid "The title of the color selection dialog"
 msgstr "Il titolo della finestra di dialogo per la selezione del colore"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Scegliere un colore"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "Colore attuale"
 
@@ -156,7 +148,7 @@ msgstr "Colore attuale"
 msgid "The selected color"
 msgstr "Il colore selezionato"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "Alpha corrente"
 
@@ -166,47 +158,46 @@ msgstr ""
 "Il valore di opacità selezionato (0 completamente trasparente, 65535 "
 "completamente opaco)"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr "Ricevuti dati colore non validi\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "Ha il controller dell'opacità"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr ""
-"Indica se il selettore del colore dovrebbe permettere di impostare "
-"l'opacità."
+"Indica se il selettore del colore dovrebbe permettere di impostare l'opacità."
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "Ha la tavolozza"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "Indica se la tavolozza dovrebbe essere usata"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "Il colore attuale"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Il valore di opacità attuale (0 completamente trasparente, 65535 "
 "completamente opaco)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "Stringa esadecimale"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "La stringa esadecimale del colore attuale"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -214,7 +205,7 @@ msgstr ""
 "Seleziona il colore che vuoi dall'anello esterno. Seleziona la luminosità "
 "del colore usando il triangolo interno."
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -222,67 +213,67 @@ msgstr ""
 "Clicca sul contagocce, poi clicca un colore sul tuo schermo per selezionare "
 "quello schermo."
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "_Colore:"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "Posizione nella ruota del colore."
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "_Saturazione:"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "\"Profondità\" del colore."
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_Valore:"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "Luminosità del colore."
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "_Rosso:"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "Quantità di rosso nel colore."
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_Verde:"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "Quantità di verde nel colore."
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "_Blu:"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "Quantità di blue nel colore."
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "Op_acità:"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "Trasparenza del colore."
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "_Nome colore:"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -290,15 +281,15 @@ msgstr ""
 "Puoi inserire un valore di colore esadecimale in stile HTML o il nome di un "
 "colore come 'orange' in questo campo."
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_Tavolozza:"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "Ruota dei colori"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -308,7 +299,7 @@ msgstr ""
 "selezionando ora. Puoi spostare questo colore nella tavolozza o selezionare "
 "questo colore come attuale spostandolo affianco."
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -316,7 +307,7 @@ msgstr ""
 "Il colore che hai scelto. Puoi spostare questo colore nella tavolozza per "
 "salvarlo e usarlo in futuro."
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -324,22 +315,22 @@ msgstr ""
 "Il colore precedentemente selezionato, per compararlo con i colore che stai "
 "selezionando ora."
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "Il colore scelto."
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "_Salva colore qui"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "Clicca questa questo campo della tavolozza per renderlo il colore attuale. "
 "Per modificare questo campo, sposta un colore qui o cliccalo con il tasto "
@@ -394,7 +385,7 @@ msgstr "Errore nel riavvolgere il file «%s»: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "Nessun nome"
 
@@ -412,33 +403,33 @@ msgstr "Impossibile trovare il file «%s»"
 msgid "No filename to save to"
 msgstr "Nessun nome file su cui salvare"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "Avvio di «%s»"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "Nessun URL da lanciare"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "Non è un oggetto lanciabile"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "Nessun comando (Exec) da lanciare"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "Comando da lanciare (Exec) errato"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Codifica sconosciuta per: %s"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
 "Impossibile trovare un terminale. Verrà usato xterm, anche se potrebbe non "
@@ -457,8 +448,8 @@ msgstr ""
 #: libcafe-desktop/cafe-rr.c:483
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr ""
-"errore X non gestito durante il recupero dell'intervallo delle dimensioni di"
-" schermo"
+"errore X non gestito durante il recupero dell'intervallo delle dimensioni di "
+"schermo"
 
 #: libcafe-desktop/cafe-rr.c:489
 msgid "could not get the range of screen sizes"
@@ -482,8 +473,8 @@ msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
-"la posizione/dimensione richiesta per CRTC %d è fuori dal limite consentito:"
-" posizione=(%d, %d), dimensione=(%d, %d), massimo=(%d, %d)"
+"la posizione/dimensione richiesta per CRTC %d è fuori dal limite consentito: "
+"posizione=(%d, %d), dimensione=(%d, %d), massimo=(%d, %d)"
 
 #: libcafe-desktop/cafe-rr.c:1782
 #, c-format
@@ -548,8 +539,7 @@ msgstr "Prova delle modalità per CRTC %d\n"
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
-"CRTC %d: in prova la modalità %d×%d@%dHz con uscita a %d×%d@%dHz (prova "
-"%d)\n"
+"CRTC %d: in prova la modalità %d×%d@%dHz con uscita a %d×%d@%dHz (prova %d)\n"
 
 #: libcafe-desktop/cafe-rr-config.c:1773
 #, c-format
@@ -578,15 +568,15 @@ msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
 msgstr ""
-"la dimensione virtuale richiesta non è adatta per la dimensione disponibile:"
-" richiesta=(%d, %d), minima=(%d, %d), massima=(%d, %d)"
+"la dimensione virtuale richiesta non è adatta per la dimensione disponibile: "
+"richiesta=(%d, %d), minima=(%d, %d), massima=(%d, %d)"
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "Schermi clonati"
@@ -669,8 +659,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
-"Applicazione preferita di tecnologia assistiva per disabilità motorie."
+msgstr "Applicazione preferita di tecnologia assistiva per disabilità motorie."
 
 #: schemas/org.cafe.applications-at-mobility.gschema.xml:6
 msgid ""
@@ -690,8 +679,8 @@ msgid ""
 "CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"CAFE avvierà l'applicazione preferita di tecnologia assistiva per disabilità"
-" motorie durante l'accesso."
+"CAFE avvierà l'applicazione preferita di tecnologia assistiva per disabilità "
+"motorie durante l'accesso."
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -712,11 +701,10 @@ msgstr ""
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
-"CAFE avvierà l'applicazione preferita di tecnologia assistiva per disabilità"
-" visive durante l'accesso."
+"CAFE avvierà l'applicazione preferita di tecnologia assistiva per disabilità "
+"visive durante l'accesso."
 
 #: schemas/org.cafe.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -759,8 +747,7 @@ msgstr "Applicazione Messaggistica"
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
 "Applicazione di messaggistica istantanea da usare quando un programma la "
 "richiede"
@@ -857,8 +844,8 @@ msgstr "Opzioni Immagine"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
 "Determina come è gestita l'immagine impostata in \"wallpaper_filename\". "
 "Valori ammessi sono: \"none\", \"wallpaper\", \"centered\", \"scaled\", "
@@ -895,8 +882,7 @@ msgid "Secondary Color"
 msgstr "Colore secondario"
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
 "Colore a destra o in basso quando si disegna un gradiente, non usato per la "
 "tinta unita."
@@ -956,7 +942,9 @@ msgid "Toolbar Style"
 msgstr "Stile barra degli strumenti"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
 msgstr ""
 "Stile della barra degli strumenti. Valori ammessi sono: \"both\", \"both-"
 "horiz\", \"icons\" e \"text\"."
@@ -998,7 +986,8 @@ msgid "Toolbar Icon Size"
 msgstr "Dimensione delle icone della barra strumenti"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "Dimensione delle icone nella barra degli strumenti, a scelta tra \"small-"
 "toolbar\" o \"large-toolbar\"."
@@ -1088,8 +1077,8 @@ msgstr "Usa la barra di intestazione CTK3"
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 "Indica se le finestre di dialogo CTK+ integrate come il selettore dei file, "
@@ -1127,8 +1116,7 @@ msgstr "Carattere documento"
 #: schemas/org.cafe.interface.gschema.xml:116
 msgid "Name of the default font used for reading documents."
 msgstr ""
-"Nome del tipo di carattere usato in modo predefinito per leggere i "
-"documenti."
+"Nome del tipo di carattere usato in modo predefinito per leggere i documenti."
 
 #: schemas/org.cafe.interface.gschema.xml:120
 msgid "Monospace font"
@@ -1211,16 +1199,14 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Questa impostazione definisce quali bottoni dovrebbero essere posti nella "
 "barra del titolo delle finestre decorate lato client, e se debbano essere "
-"posti a sinistra o destra. Consulta "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"posti a sinistra o destra. Consulta https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1231,12 +1217,14 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+msgstr ""
+"Questa impostazione determina dove verrà visualizzato il menu "
+"dell'applicazione - in una finestra o in un pannello con il protocollo "
+"MenuModel. Vedere\n"
 "https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-app-menu."
-msgstr ""
-"Questa impostazione determina dove verrà visualizzato il menu dell'applicazione - in una finestra o in un pannello con il protocollo MenuModel. Vedere\n"
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1247,12 +1235,14 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+msgstr ""
+"Questa impostazione determina dove vengono visualizzate le barre dei menu "
+"delle finestre - in una finestra o in un pannello con il protocollo "
+"MenuModel. Vedere\n"
 "https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
 "shell-shows-menubar."
-msgstr ""
-"Questa impostazione determina dove vengono visualizzate le barre dei menu delle finestre - in una finestra o in un pannello con il protocollo MenuModel. Vedere\n"
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1278,9 +1268,9 @@ msgid ""
 "Set to 0 to auto-detect."
 msgstr ""
 "Fattore di scala interno che mappa dalle coordinate della finestra ai pixel "
-"del dispositivo corrente. Sui sistemi tradizionali questo è 1, ma su schermi"
-" ad altissima densità di pixel (per esempio HiDPI, Retina) questo può essere"
-" un valore superiore (spesso 2). Imposta a 0 per l'auto-rilevamento."
+"del dispositivo corrente. Sui sistemi tradizionali questo è 1, ma su schermi "
+"ad altissima densità di pixel (per esempio HiDPI, Retina) questo può essere "
+"un valore superiore (spesso 2). Imposta a 0 per l'auto-rilevamento."
 
 #: schemas/org.cafe.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
@@ -1293,9 +1283,9 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Questa impostazione stabilisce se CAFE debba controllare il fattore di scala"
-" per le applicazioni QT. Attiva per sincronizzare con il fattore di scala "
-"CTK quando si avvia la sessione, disattiva per controllare questo valore "
+"Questa impostazione stabilisce se CAFE debba controllare il fattore di scala "
+"per le applicazioni QT. Attiva per sincronizzare con il fattore di scala CTK "
+"quando si avvia la sessione, disattiva per controllare questo valore "
 "altrove. Richiede il riavvio della sessione."
 
 #: schemas/org.cafe.interface.gschema.xml:186
@@ -1316,8 +1306,8 @@ msgstr "Disabilita riga di comando"
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 "Impedisce all'utente di accedere al terminale o di specificare che una riga "
@@ -1359,8 +1349,8 @@ msgid ""
 "disable access to all applications' \"Print Setup\" dialogs."
 msgstr ""
 "Impedisce all'utente di modificare le impostazioni di stampa. Per esempio "
-"questo disabiliterebbe l'accesso alle finestre di dialogo \"Imposta stampa\""
-" di tutte le applicazioni."
+"questo disabiliterebbe l'accesso alle finestre di dialogo \"Imposta stampa\" "
+"di tutte le applicazioni."
 
 #: schemas/org.cafe.lockdown.gschema.xml:25
 msgid "Disable user switching"
@@ -1389,8 +1379,7 @@ msgstr "Disabilitare i gestori degli URL e dei tipi MIME"
 #: schemas/org.cafe.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr ""
-"Impedisce l'esecuzione di qualsiasi applicazione di gestione URL o tipo "
-"MIME."
+"Impedisce l'esecuzione di qualsiasi applicazione di gestione URL o tipo MIME."
 
 #: schemas/org.cafe.lockdown.gschema.xml:40
 msgid "Disable theme settings"
@@ -1498,8 +1487,8 @@ msgstr ""
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr ""
 "Le miniature non verranno create per i mime-type contenuti nella lista."
 
@@ -1548,14 +1537,22 @@ msgstr "Dialogo di selezione colore"
 msgid "Choose colors from the palette or the screen"
 msgstr "Seleziona i colori dalla tavolozza o dallo schermo"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr "ctk-select-color"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr "CAFE;color;chooser;pick;palette;screen;selection;"
+
+#~ msgid "cafe-desktop"
+#~ msgstr "cafe-desktop"
+
+#~ msgid ""
+#~ "Copyright © 1997-2011 GNOME developers\n"
+#~ "Copyright © 2011 Perberos\n"
+#~ "Copyright © 2012-2020 CAFE developers"
+#~ msgstr ""
+#~ "Copyright © 1997-2011 GNOME developers\n"
+#~ "Copyright © 2011 Perberos\n"
+#~ "Copyright © 2012-2020 Gli sviluppatori di CAFE"
+
+#~ msgid "ctk-select-color"
+#~ msgstr "ctk-select-color"

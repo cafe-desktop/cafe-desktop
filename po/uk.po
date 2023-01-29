@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # zubr139, 2020
 # clefebvre <clement.lefebvre@linuxmint.com>, 2020
@@ -13,24 +13,27 @@
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2020
 # Yuri Chornoivan <yurchor@ukr.net>, 2020
 # Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020\n"
 "Language-Team: Ukrainian (https://www.transifex.com/cafe/teams/13566/uk/)\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
@@ -45,12 +48,6 @@ msgstr "Про CAFE"
 msgid "Learn more about CAFE"
 msgstr "Дізнайтеся більше про CAFE"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr "cafe-desktop"
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr "Стільничне середовище CAFE"
@@ -59,13 +56,11 @@ msgstr "Стільничне середовище CAFE"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
-"© Розробники GNOME, 1997–2011\n"
-"© Perberos, 2011\n"
-"© Розробники CAFE, 2012–2020"
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -73,7 +68,7 @@ msgstr ""
 "CAFE надає інтуїтивно зрозуміле та привабливе робоче оточення для Linux "
 "користувачів, що використовують традиційну концепцію."
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -82,7 +77,7 @@ msgstr ""
 "включаючи упорядник файлів, переглядачі документів та зображень, меню і "
 "багато інших додатків"
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -90,7 +85,7 @@ msgstr ""
 "CAFE - це Вільне, зручне та доступне робоче середовище для Unix-подібних "
 "операційних систем."
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -101,16 +96,16 @@ msgstr ""
 "миті його старту в 1997; а багато інших добродіїв зробили внесок у інші "
 "важливі напрямки, включаючи переклади, документацію та запоруку якості."
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
 msgstr ""
-"GNOME 2 був найпопулярнішим робочим середовищем для Linux, але більше він не"
-" розробляється... Тепер є CAFE для надання Вам того самого робочого "
+"GNOME 2 був найпопулярнішим робочим середовищем для Linux, але більше він не "
+"розробляється... Тепер є CAFE для надання Вам того самого робочого "
 "середовища!"
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -122,7 +117,7 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Невідомий"
@@ -144,11 +139,11 @@ msgid "The title of the color selection dialog"
 msgstr "Заголовок діалогу вибору кольору"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Виберіть колір"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "Поточний колір"
 
@@ -156,7 +151,7 @@ msgstr "Поточний колір"
 msgid "The selected color"
 msgstr "Обраний колір"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "Поточна прозорість кольору"
 
@@ -166,45 +161,45 @@ msgstr ""
 "Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю "
 "непрозорий)"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr "Отримано некоректні дані кольору\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "Є контроль над прозорістю"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Чи дозволяє обирач кольору встановлювати рівень непрозорости"
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "Наявність палітри"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "Чи використовувати палітру кольорів"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "Поточний колір"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю "
 "непрозорий)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "Шістнідцятковий рядок"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "Шістнадцятковий рядок поточного кольору"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -212,89 +207,90 @@ msgstr ""
 "Оберіть колір із зовнішнього кільця. Для вибору світлішого або темнішого "
 "віддтінку використовуйте внутрішній трикутник."
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
-msgstr "Натисніть на \"піпетку\" для вибору кольору з будь-якої частини екрану."
+msgstr ""
+"Натисніть на \"піпетку\" для вибору кольору з будь-якої частини екрану."
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "В_ідтінок:"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "Позиція на кільці кольорів."
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "Н_асиченість:"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "Насиченість кольору."
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_Значення"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "Яскравість кольору."
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "_Червоний:"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "Кількість червоного відтінку в кольорі."
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_Зелений:"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "Кількість зеленого відтінку в кольорі."
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "_Синій:"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "Кількість синього відтінку в кольорі."
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "Н_епрозорість:"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "Рівень прозорості кольору."
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "_Назва кольору:"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
-"Ви можете увести або шістнадцяткове значення кольору(в HTML стилі), або його"
-" ім'я, наприклад, \"orange\"."
+"Ви можете увести або шістнадцяткове значення кольору(в HTML стилі), або його "
+"ім'я, наприклад, \"orange\"."
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_Палітра:"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "Кільце кольорів"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -304,7 +300,7 @@ msgstr ""
 "перетягнути цей колір на палітру кольорів або обрати цей колір як поточний, "
 "перетягнувши його на колір збоку."
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -312,28 +308,28 @@ msgstr ""
 "Обраний колір. Ви можете перетягнути його на елемент палітри кольорів для "
 "збереження його і використання в майбутньому. "
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Обраний раніше колір для порівняння з кольором, що обраний зараз."
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "Обраний Вами колір."
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "_Зберегти колір тут"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "Натисніть на дану комірку, щоб зробити її поточним кольором. Для зміни цієї "
 "комірки, перетягніть сюди зразок кольору або натисніть ПКМ і виберіть "
@@ -388,7 +384,7 @@ msgstr "Помилка перемотування файлу \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "Без назви"
 
@@ -406,33 +402,33 @@ msgstr "Не вдається знайти файл «%s»"
 msgid "No filename to save to"
 msgstr "Немає назви файлу для збереження"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "Запускаю '%s'"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "Немає URL для запуску"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "Елемент не запускається"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "Немає команди для запуску"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "Неправильна команда для запуску"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Невідоме кодування %s"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
 "Не вдається знайти відповідний термінал, використовується програма xterm, "
@@ -570,12 +566,12 @@ msgstr ""
 "потрібний віртуальний розмір не вміщується у доступний простір: "
 "потрібно=(%d, %d), щонайменше=(%d, %d), щонайбільше=(%d, %d)"
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "Дублювати зображення"
@@ -624,8 +620,8 @@ msgstr "Щонайменший інтервал у мілісекундах"
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
-"Не приймати клавішу, як натиснену, поки вона не утримувалася впродовж @delay"
-" мілісекунд."
+"Не приймати клавішу, як натиснену, поки вона не утримувалася впродовж @delay "
+"мілісекунд."
 
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:66
 msgid ""
@@ -664,8 +660,8 @@ msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
-"Обрана програма мобільности спеціальних можливостей для використання під час"
-" входу у сеанс, роботи з меню та у командному рядку."
+"Обрана програма мобільности спеціальних можливостей для використання під час "
+"входу у сеанс, роботи з меню та у командному рядку."
 
 #: schemas/org.cafe.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
@@ -697,8 +693,7 @@ msgstr "Запускати обрану Зорову програму спеці
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
 "Чи запускати під час входу у CAFE Зорову програму спеціальних можливостей."
 
@@ -742,11 +737,10 @@ msgstr "Додаток для миттєвих повідомлень"
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
-"Програма для миттєвого обміну повідомленнями, яку слід використовувати, якщо"
-" застосунки, які ви запускаєте її потребують."
+"Програма для миттєвого обміну повідомленнями, яку слід використовувати, якщо "
+"застосунки, які ви запускаєте її потребують."
 
 #: schemas/org.cafe.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -835,8 +829,8 @@ msgstr "Параметри малюнку"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
 "Визначає метод унаочнення зображення встановленого параметром "
 "wallpaper_filename. Можливі значення \"wallpaper\" шпалери, \"centered\" у "
@@ -872,8 +866,7 @@ msgid "Secondary Color"
 msgstr "Вторинний колір"
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
 "Правий чи нижній колір для малювання градієнтів, не використовується для "
 "суцільного кольору."
@@ -932,7 +925,9 @@ msgid "Toolbar Style"
 msgstr "Стиль панелі знарядь"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
 msgstr ""
 "Стиль панелі знарядь. Правильними значеннями є \"both\", \"both-horiz\", "
 "\"icons\", та \"text\"."
@@ -974,7 +969,8 @@ msgid "Toolbar Icon Size"
 msgstr "Розмір піктограм на панелях"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "Розмір піктограм на панелях знарядь: або \"small-toolbar\", або \"large-"
 "toolbar\"."
@@ -1064,12 +1060,12 @@ msgstr "Використовувати панель заголовку Ctk3"
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
-"Чи використовувати заголовок вікна згори для відображення віджетів дій таких"
-" діялоґів CTK+ як вибір файлів, вибір кольору або вибір шрифту, або область "
+"Чи використовувати заголовок вікна згори для відображення віджетів дій таких "
+"діялоґів CTK+ як вибір файлів, вибір кольору або вибір шрифту, або область "
 "дій знизу. Ці налаштування не стосуються довільних діялоґів з використанням "
 "CtkDialog напряму або діялоґів повідомлень."
 
@@ -1181,16 +1177,14 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Ця опція визначає наявність кнопок, що слід відображати у заголовках вікон, "
 "що використовують оздоблення на стороні клієнта, а також бік, де вони "
-"знаходитимуться. Для довідки див. "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"знаходитимуться. Для довідки див. https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1199,14 +1193,12 @@ msgstr "Використовувати глобальне меню для від
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 msgstr ""
-"Дане налаштування визначає спосіб відображення меню програм - у вікні або на"
-" панелі за допомогою протоколу MenuModel. Див. "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"Дане налаштування визначає спосіб відображення меню програм - у вікні або на "
+"панелі за допомогою протоколу MenuModel. Див. https://developer.gnome.org/"
+"ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1215,14 +1207,12 @@ msgstr "Використовувати глобальне меню для від
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 msgstr ""
 "Дане налаштування визначає спосіб відображення меню вікон - у вікні або на "
-"панелі за допомогою протоколу MenuModel. Див. "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"панелі за допомогою протоколу MenuModel. Див. https://developer.gnome.org/"
+"ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1286,8 +1276,8 @@ msgstr "Вимкнути командний рядок"
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 "Забороняє користувачу доступ до терміналу або вказує командний рядок для "
@@ -1451,8 +1441,8 @@ msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
-"Позначте, для вимикання усіх зовнішніх програм створення мініатюр, незалежно"
-" від того, чи вони увімкнені іншими способами."
+"Позначте, для вимикання усіх зовнішніх програм створення мініатюр, незалежно "
+"від того, чи вони увімкнені іншими способами."
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:10
 msgid ""
@@ -1462,8 +1452,8 @@ msgstr ""
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr ""
 "Мініатюри не буде створено для файлів, чиї mime-типи вказано у переліку."
 
@@ -1511,15 +1501,24 @@ msgstr "Діалог вибору кольору"
 msgid "Choose colors from the palette or the screen"
 msgstr "Виберіть колір із палітри або з екрану"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr "ctk-select-color"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
-"CAFE;color;chooser;pick;palette;screen;selection;мате;колір;вибір;піпетка;палітра;екран;позначене;"
+"CAFE;color;chooser;pick;palette;screen;selection;мате;колір;вибір;піпетка;"
+"палітра;екран;позначене;"
+
+#~ msgid "cafe-desktop"
+#~ msgstr "cafe-desktop"
+
+#~ msgid ""
+#~ "Copyright © 1997-2011 GNOME developers\n"
+#~ "Copyright © 2011 Perberos\n"
+#~ "Copyright © 2012-2020 CAFE developers"
+#~ msgstr ""
+#~ "© Розробники GNOME, 1997–2011\n"
+#~ "© Perberos, 2011\n"
+#~ "© Розробники CAFE, 2012–2020"
+
+#~ msgid "ctk-select-color"
+#~ msgstr "ctk-select-color"

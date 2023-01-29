@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Pavel Borecki <pavel.borecki@gmail.com>, 2020
 # clefebvre <clement.lefebvre@linuxmint.com>, 2020
@@ -15,24 +15,25 @@
 # LiberteCzech <liberte.czech@gmail.com>, 2020
 # 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2020
 # Lucas Lommer <drom@kdyne.net>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/cafe/teams/13566/cs/)\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr ""
 "Stanislav Brabec <utx@penguin.cz>\n"
@@ -56,12 +57,6 @@ msgstr "O CAFE"
 msgid "Learn more about CAFE"
 msgstr "Poznejte lépe CAFE"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr "cafe-desktop"
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr "Desktopové prostředí CAFE"
@@ -70,13 +65,11 @@ msgstr "Desktopové prostředí CAFE"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
-"Copyright © 1997-2011 Vývojáři GNOME\n"
-"Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 Vývojáři CAFE"
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -84,7 +77,7 @@ msgstr ""
 "CAFE poskytuje intuitivní a atraktivní prostředí pro uživatele Linuxu za "
 "použití tradičních postupů."
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -93,7 +86,7 @@ msgstr ""
 "souborů, prohlížeče dokumentů, prohlížeče obrázků, různá menu a mnoho "
 "aplikací."
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -101,18 +94,18 @@ msgstr ""
 "CAFE je svobodné, použitelné, stabilní a přístupné prostředí pro rodinu "
 "Unixových operačních systémů."
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"CAFE je pokračováním GNOME 2. Od roku 1997 se stovky lidí podílí na kódu pro"
-" GNOME; a mnohem více přispívá v jiných důležitých oblastech, jako jsou "
+"CAFE je pokračováním GNOME 2. Od roku 1997 se stovky lidí podílí na kódu pro "
+"GNOME; a mnohem více přispívá v jiných důležitých oblastech, jako jsou "
 "překlady, dokumentace a podpora kvality."
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
@@ -120,7 +113,7 @@ msgstr ""
 "GNOME 2 bylo nejpopulárnější Linuxové prostředí, ale není již více k "
 "dispozici... CAFE je tu proto, aby vám poskytlo to stejné!"
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -133,7 +126,7 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Neznámo"
@@ -155,11 +148,11 @@ msgid "The title of the color selection dialog"
 msgstr "Nadpis dialogu výběru barvy"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Vybrat barvu"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "Aktuální barva"
 
@@ -167,7 +160,7 @@ msgstr "Aktuální barva"
 msgid "The selected color"
 msgstr "Vybraná barva"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "Aktuální alfa"
 
@@ -176,44 +169,44 @@ msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Zvolená hodnota průhlednosti (0 zcela průhledné, 65535 zcela neprůhledné)"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr "Byly zadány neplatné hodnoty pro barvu\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "Nastavení průhlednosti"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Výběr barvy by měl umožnit nastavení průhlednosti"
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "Paleta barev"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "Zda má být použita paleta barev"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "Aktuální barva"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Aktuální hodnota průhlednosti (0 zcela průhledné, 65535 zcela neprůhledné)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "Hexadecimální řetězec"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "Hexadecimální řetězec aktuální barvy"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -221,7 +214,7 @@ msgstr ""
 "Vyberte barvu, kterou chcete z vnějšího prstence. Vyberte tmavost nebo "
 "světlost této barvy pomocí vnitřního trojúhelníku."
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -229,67 +222,67 @@ msgstr ""
 "Klikněte na kapátko, k výběru barvy pak klikněte na požadovanou barvu "
 "kdekoliv na obrazovce."
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "_Odstín:"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "Pozice na barevném kruhu."
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "_Saturace:"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "\"Hloubka\" barvy."
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_Hodnota:"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "Jas barvy."
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "Če_rvená:"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "Množství červeného odstínu v barvě."
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_Zelená:"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "Množství zeleného odstínu v barvě."
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "_Modrá:"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "Množství modrého odstínu v barvě."
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "Průhl_ednost:"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "Průhlednost barvy."
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "_Název barvy:"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -297,15 +290,15 @@ msgstr ""
 "V této položce můžete zadat hexadecimální hodnotu barvy ve stylu HTML, nebo "
 "jednoduše název barvy, např. 'orange'."
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_Paleta barev:"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "Barevný kruh"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -315,7 +308,7 @@ msgstr ""
 "přetáhnout tuto barvu do palety, nebo zvolit jinou barvu jako aktuální "
 "přetažením ze vzorníku barev."
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -323,28 +316,28 @@ msgstr ""
 "Barva, kterou jste si vybrali. Pro uložení a použití této barvy v budoucnu "
 "si ji můžete přetáhnout na paletu barev."
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Dříve vybraná barva, pro srovnání s aktuálně vybranou barvou."
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "Barva, kterou jste si vybral/a."
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "_Uložit barvu zde"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "K výběru aktuální barvy klikněte na barvu v paletě. Chcete-li změnit tuto "
 "barvu, přetáhněte ji ze vzorníku barev nebo klikněte pravým tlačítkem a "
@@ -399,7 +392,7 @@ msgstr "Chyba při přetáčení souboru \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "Žádný název"
 
@@ -417,33 +410,33 @@ msgstr "Nelze najít soubor \"%s\""
 msgid "No filename to save to"
 msgstr "Žádný soubor, do kterého se má ukládat"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "Spouští se %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "Žádné URL ke spuštění"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "Nespustitelná položka"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "Žádný příkaz (Exec) ke spuštění"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "Chybný příkaz (Exec) ke spuštění"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Neznámé kódování: %s"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Nemohu najít terminál, používám xterm, i když to nemusí fungovat"
 
@@ -578,12 +571,12 @@ msgstr ""
 "požadovaná virtuální velikost přesahuje dostupnou velikost: požadováno=(%d, "
 "%d), minimum=(%d, %d), maximum=(%d, %d)"
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "Zrcadlící obrazovky"
@@ -594,8 +587,7 @@ msgstr "minimální interval v milisekundách"
 
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:21
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
-"Ignorovat více stisknutí _stejné_ klávesy v rozmezí @delay milisekund."
+msgstr "Ignorovat více stisknutí _stejné_ klávesy v rozmezí @delay milisekund."
 
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:31
 msgid "Pixels per seconds"
@@ -703,8 +695,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
 "CAFE spustí preferovanou aplikaci technologie usnadnění v oblasti "
 "zobrazování během přihlášení."
@@ -749,8 +740,7 @@ msgstr "Aplikace pro rychlé zasílání zpráv"
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
 "Program pro Instant Messaging, který se použije při spouštění aplikací, "
 "které ho vyžadují."
@@ -843,13 +833,13 @@ msgstr "Vlastnosti obrázku"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
 "Určuje, jak je vykreslen obrázek nastavený v wallpaper_filename. Možné "
-"hodnoty jsou \"none\" (žádný), \"wallpaper\" (pozadí plochy), \"centered\" "
-"(vycentrováno), \"scaled\" (změna měřítka), \"stretched\" (roztáhnuto), "
-"\"zoom\" (příblíženo), \"spanned\"."
+"hodnoty jsou \"none\" (žádný), \"wallpaper\" (pozadí plochy), "
+"\"centered\" (vycentrováno), \"scaled\" (změna měřítka), "
+"\"stretched\" (roztáhnuto), \"zoom\" (příblíženo), \"spanned\"."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -881,8 +871,7 @@ msgid "Secondary Color"
 msgstr "Sekundární barva"
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
 "Pravá nebo dolní barva při vykreslování přechodu, pro jednolitou barvu se "
 "nepoužije."
@@ -940,10 +929,12 @@ msgid "Toolbar Style"
 msgstr "Styl lišty nástrojů"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
 msgstr ""
-"Styl lišty nástrojů. Platné hodnoty jsou „both“ (ikony i text), „both-horiz“"
-" (ikony i text vodorovně), „icons“ (jen ikony) a „text“ (jen text)."
+"Styl lišty nástrojů. Platné hodnoty jsou „both“ (ikony i text), „both-"
+"horiz“ (ikony i text vodorovně), „icons“ (jen ikony) a „text“ (jen text)."
 
 #: schemas/org.cafe.interface.gschema.xml:25
 msgid "Menus Have Icons"
@@ -982,7 +973,8 @@ msgid "Toolbar Icon Size"
 msgstr "Velikost ikon v liště nástrojů"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "Velikost ikon na panelech nástrojů, buď \"small-toolbar\" nebo \"large-"
 "toolbar\"."
@@ -1072,8 +1064,8 @@ msgstr "Použít CTK3 záhlaví"
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 "CTK+ zabudované dialogy, jako je výběr souborů, barev nebo písma, budou "
@@ -1117,8 +1109,8 @@ msgstr "Písmo s pevnou šířkou"
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr ""
-"Název neproporcionálního písma (s pevnou šířkou), které se používají např. v"
-" terminálech."
+"Název neproporcionálního písma (s pevnou šířkou), které se používají např. v "
+"terminálech."
 
 #: schemas/org.cafe.interface.gschema.xml:125
 msgid "Use Custom Font"
@@ -1165,8 +1157,8 @@ msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
-"Jestli kontextové nabídky vstupních polí a textových polí mají nabízet změnu"
-" vstupní metody."
+"Jestli kontextové nabídky vstupních polí a textových polí mají nabízet změnu "
+"vstupní metody."
 
 #: schemas/org.cafe.interface.gschema.xml:150
 msgid "Show the 'Unicode Control Character' menu"
@@ -1187,15 +1179,14 @@ msgstr "Uspořádání záhlaví CTK3 client-side oken"
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
-"Toto nastavení určuje, která tlačítka je třeba dát do titulní lišty u "
-"client-side oken, a to, zda by měly být umístěny na levé straně vpravo. Viz "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"Toto nastavení určuje, která tlačítka je třeba dát do titulní lišty u client-"
+"side oken, a to, zda by měly být umístěny na levé straně vpravo. Viz https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-decoration-"
+"layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1204,14 +1195,12 @@ msgstr "Používat globální lištu menu pro zobrazování nabídek aplikací"
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 msgstr ""
 "Toto nastavení určuje, kde se zobrazí nabídka aplikace - v okně nebo na "
-"panelu s protokolem MenuModel. Viz "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"panelu s protokolem MenuModel. Viz https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1220,14 +1209,12 @@ msgstr "Používat globální lištu menu pro zobrazování nabídek okna"
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 msgstr ""
-"Toto nastavení určuje, kde se budou zobrazovat nabídky oken - v okně nebo na"
-" panelu s protokolem MenuModel. Viz "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"Toto nastavení určuje, kde se budou zobrazovat nabídky oken - v okně nebo na "
+"panelu s protokolem MenuModel. Viz https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1290,13 +1277,13 @@ msgstr "Zakázat příkazový řádek"
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 "Zabránit uživateli v přístupu k terminálu nebo zadání příkazového řádku, "
-"který se má spustit. Například by se tímto měl zakázat přístup k dialogovému"
-" oknu „Spustit aplikaci“."
+"který se má spustit. Například by se tímto měl zakázat přístup k dialogovému "
+"oknu „Spustit aplikaci“."
 
 #: schemas/org.cafe.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1331,8 +1318,8 @@ msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
 msgstr ""
-"Zabránit uživateli měnit nastavení tisku. Například by se tímto měl ve všech"
-" aplikacích zakázat přístup k dialogovému oknu „Nastavení tisku“."
+"Zabránit uživateli měnit nastavení tisku. Například by se tímto měl ve všech "
+"aplikacích zakázat přístup k dialogovému oknu „Nastavení tisku“."
 
 #: schemas/org.cafe.lockdown.gschema.xml:25
 msgid "Disable user switching"
@@ -1360,8 +1347,8 @@ msgstr "Zakázat zpracování adres URL a typů MIME"
 #: schemas/org.cafe.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr ""
-"Zabránit spuštění jakýchkoliv aplikací zpracovávajících adresy URL nebo typy"
-" MIME."
+"Zabránit spuštění jakýchkoliv aplikací zpracovávajících adresy URL nebo typy "
+"MIME."
 
 #: schemas/org.cafe.lockdown.gschema.xml:40
 msgid "Disable theme settings"
@@ -1394,8 +1381,7 @@ msgstr "Výchozí stopy směšovače"
 
 #: schemas/org.cafe.sound.gschema.xml:11
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
-"Výchozí stopy směšovače užívané multimediálními klávesovými zkratkami."
+msgstr "Výchozí stopy směšovače užívané multimediálními klávesovými zkratkami."
 
 #: schemas/org.cafe.sound.gschema.xml:15
 msgid "Enable ESD"
@@ -1465,8 +1451,8 @@ msgstr ""
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr ""
 "Náhledy nebudou vytvářeny pro soubory, jejichž typy MIME jsou uvedeny v "
 "tomto seznamu."
@@ -1515,15 +1501,23 @@ msgstr "Dialog pro výběr barev"
 msgid "Choose colors from the palette or the screen"
 msgstr "Vyberte si barvy z palety, nebo na obrazovce"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr "ctk-select-color"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
 "CAFE;barva;výběr;paleta;obrazovka;volič;vybrat;vybírat;vybírání;zvolit;"
+
+#~ msgid "cafe-desktop"
+#~ msgstr "cafe-desktop"
+
+#~ msgid ""
+#~ "Copyright © 1997-2011 GNOME developers\n"
+#~ "Copyright © 2011 Perberos\n"
+#~ "Copyright © 2012-2020 CAFE developers"
+#~ msgstr ""
+#~ "Copyright © 1997-2011 Vývojáři GNOME\n"
+#~ "Copyright © 2011 Perberos\n"
+#~ "Copyright © 2012-2020 Vývojáři CAFE"
+
+#~ msgid "ctk-select-color"
+#~ msgstr "ctk-select-color"

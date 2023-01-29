@@ -2,28 +2,29 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/cafe/teams/13566/sr/)\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sr\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
 
@@ -35,12 +36,6 @@ msgstr "О Мејту"
 msgid "Learn more about CAFE"
 msgstr "Сазнајте више о Мејту"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr "cafe-desktop"
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr "Мејт окружење радне површи"
@@ -49,13 +44,11 @@ msgstr "Мејт окружење радне површи"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
-"Ауторска права © 1997-2011 Програмери Гнома\n"
-"Ауторска права © 2011 Перберос\n"
-"Ауторска права © 2012-2020 Програмери Мејта"
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -63,7 +56,7 @@ msgstr ""
 "Мејт обезбеђује докучиву и привлачну радну површ за кориснике Линукса "
 "користећи традиционалне метафоре."
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -72,15 +65,15 @@ msgstr ""
 "датотека, прегледача докумената, прегледника слика, изборнике, и многе "
 "програме."
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"Мејт је слободно, употребљиво, стабилно окружење радне површи за Уникслолику"
-" породицу оперативних система."
+"Мејт је слободно, употребљиво, стабилно окружење радне површи за Уникслолику "
+"породицу оперативних система."
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -88,10 +81,10 @@ msgid ""
 "assurance."
 msgstr ""
 "Мејт је наставак Гнома 2. Хиљаде људи је доприносило Гномовом коду још од "
-"када је започет 1997.; а много више их је доприносило на друге важне начине,"
-" укључујући превођење, документацију, и осигуравање квалитета."
+"када је започет 1997.; а много више их је доприносило на друге важне начине, "
+"укључујући превођење, документацију, и осигуравање квалитета."
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
@@ -99,20 +92,20 @@ msgstr ""
 "Гном 2 је била најпопуларнија радна површ Линукса али сада више није "
 "доступна... Мејт је ту да вам обезбеди ту исту радну површ!"
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called cafe."
 msgstr ""
 "Назив „CAFE“ (Мејт) долази од „yerba maté“, врсте зеленике пореклом из "
-"суптропске Јужне Америке. Њено лишће садржи кафеин и користи се за справљање"
-" инфузија и напитка званог мејт."
+"суптропске Јужне Америке. Њено лишће садржи кафеин и користи се за справљање "
+"инфузија и напитка званог мејт."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Непознато"
@@ -134,11 +127,11 @@ msgid "The title of the color selection dialog"
 msgstr "Наслов прозорчета за избор боје"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Изаберите боју"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "Тренутна боја"
 
@@ -146,7 +139,7 @@ msgstr "Тренутна боја"
 msgid "The selected color"
 msgstr "Изабрана боја"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "Тренутна провидност"
 
@@ -156,45 +149,45 @@ msgstr ""
 "Тренутна вредност провидности (0 — потпуно провидно, 65535 — потпуно "
 "непровидно)"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr "Примио сам неисправне податке боје\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "Садржи управљање провидношћу"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Да ли изборник боје дозвољава постављање провидности"
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "Садржи палету"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "Да ли треба користити палету"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "Тренутна боја"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Тренутна вредност провидности (0 — потпуно провидно, 65535 — потпуно "
 "непровидно)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "ХЕКс ниска"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "Хексадецимална ниска тренутне боје"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -202,7 +195,7 @@ msgstr ""
 "Изаберите боју коју желите из спољног прстена. Изаберите осветљеност или "
 "затамњеност те боје помоћу унутрашњег прстена."
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -210,83 +203,83 @@ msgstr ""
 "Притисните на капаљку, а затим притисните на боју било где на вашем екрану "
 "да је изаберете."
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "_Нијанса:"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "Положај на точку боја."
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "_Засићеност:"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "„Дубина“ боје."
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_Вредност:"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "Осветљеност боје."
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "_Црвена:"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "Количина црвене светлости у боји."
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_Зелена:"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "Количина зелене светлости у боји."
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "_Плава:"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "Количина плаве светлости у боји."
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "_Провидност:"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "Провидност боје."
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "_Назив боје:"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
-"Овде можете унети хексадецималну вредност боје у ХТМЛ стилу, или једноставно"
-" енглески назив боје као што је „orange“."
+"Овде можете унети хексадецималну вредност боје у ХТМЛ стилу, или једноставно "
+"енглески назив боје као што је „orange“."
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_Палета:"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "Точак боја"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -296,7 +289,7 @@ msgstr ""
 "можете одвући на ставку палете, или изабрати ову боју као текућу одвлачећи "
 "је на преглед тренутно изабране боје."
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -304,32 +297,32 @@ msgstr ""
 "Боја коју сте изабрали. Можете одвући ову боју на ставку палете како би је "
 "сачували за накнадну употребу."
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Већ изабрана боја, за поређење са бојом коју сте сада изабрали."
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "Изабрана боја."
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "Овде _сачувај боју"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "Притисните ову ставку палете да је изаберете као текућу боју. Да измените "
-"ову ставку, довуците овде боју или кликните десним тастером миша и изаберите"
-" „Овде сачувај боју“."
+"ову ставку, довуците овде боју или кликните десним тастером миша и изаберите "
+"„Овде сачувај боју“."
 
 #: libcafe-desktop/cafe-colorseldialog.c:99
 #: libcafe-desktop/cafe-colorseldialog.c:162
@@ -380,7 +373,7 @@ msgstr "Грешка премотавања датотеке „%s“: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "Без назива"
 
@@ -398,33 +391,33 @@ msgstr "Не могу да нађем датотеку „%s“"
 msgid "No filename to save to"
 msgstr "Нема назива датотеке за чување"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "Покрећем „%s“"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "Нема адресе за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "Није ставка за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "Нема наредбе (Exec) за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "Лоша наредба (Exec) за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Непознато кодирање за: %s"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Не могу да нађем терминал, користим икстерм, чак и уколико не ради"
 
@@ -561,12 +554,12 @@ msgstr ""
 "захтевана виртуелна величина је ван доступне: захтевана=(%d, %d), "
 "најмања=(%d, %d), највећа=(%d, %d)"
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "Пресликај екране"
@@ -593,8 +586,7 @@ msgstr "Колико дуго да убрзава у милисекундама"
 
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:37
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
-"Колико је милисекунди потребно да би од нуле стигао до највеће брзине."
+msgstr "Колико је милисекунди потребно да би од нуле стигао до највеће брзине."
 
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:41
 msgid "Initial delay in milliseconds"
@@ -655,8 +647,8 @@ msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
-"Омиљени програм покретљивости технологија испомоћи који ће бити коришћени за"
-" пријављивање, изборник или линију наредби."
+"Омиљени програм покретљивости технологија испомоћи који ће бити коришћени за "
+"пријављивање, изборник или линију наредби."
 
 #: schemas/org.cafe.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
@@ -667,8 +659,8 @@ msgid ""
 "CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"Мејта да покрене омиљени програм покретљивости технологија испомоћи за време"
-" пријављивања."
+"Мејта да покрене омиљени програм покретљивости технологија испомоћи за време "
+"пријављивања."
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -688,8 +680,7 @@ msgstr "Покреће жељени програм визуелне технол
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
 "Мејт да покрене жељени програм визуелне технологије испомоћи за време "
 "пријављивања."
@@ -734,8 +725,7 @@ msgstr "Програм брзих порука"
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
 "Програм брзих порука који ће бити коришћен приликом покретања програма "
 "којима је потребан."
@@ -828,13 +818,13 @@ msgstr "Опције слике"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
-"Одређује како се исцртава слика постављена помоћу „wallpaper_filename“ "
-"(назив датотеке тапета). Могуће вредности су „wallpaper“ (позадина), "
-"„centered“ (усредиштено), „scaled“ (преко целог екрана), „stretched“ "
-"(развучено), „zoom“ (увећано) и „spanned“ (растегнуто)."
+"Одређује како се исцртава слика постављена помоћу "
+"„wallpaper_filename“ (назив датотеке тапета). Могуће вредности су "
+"„wallpaper“ (позадина), „centered“ (усредиштено), „scaled“ (преко целог "
+"екрана), „stretched“ (развучено), „zoom“ (увећано) и „spanned“ (растегнуто)."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -867,8 +857,7 @@ msgid "Secondary Color"
 msgstr "Додатна боја"
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
 "Боја на дну или десној страни при исцртавању претапања боја; не користи се "
 "за једнобојну позадину."
@@ -883,8 +872,8 @@ msgid ""
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
 "Како ће се претапати боје позадине. Могуће вредности су „horizontal-"
-"gradient“ (водорави-прелив), „vertical-gradient“ (усправни-прелив) и „solid“"
-" (једнобојно)."
+"gradient“ (водорави-прелив), „vertical-gradient“ (усправни-прелив) и "
+"„solid“ (једнобојно)."
 
 #: schemas/org.cafe.file-views.gschema.xml:5
 msgid "File Icon Theme"
@@ -911,8 +900,8 @@ msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
-"Да ли ће бити приказиване анимације. Напомена: ово је општи кључ, и измениће"
-" понашање управника прозора, панела, итд."
+"Да ли ће бити приказиване анимације. Напомена: ово је општи кључ, и измениће "
+"понашање управника прозора, панела, итд."
 
 #: schemas/org.cafe.interface.gschema.xml:15
 msgid "Menus Have Tearoff"
@@ -927,7 +916,9 @@ msgid "Toolbar Style"
 msgstr "Изглед траке алата"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
 msgstr ""
 "Изглед траке алата. Допуштене вредности су „both“ (текст и иконице), „both-"
 "horiz“ (текст поред иконица), „icons“ (иконице), и „text“ (текст)."
@@ -969,7 +960,8 @@ msgid "Toolbar Icon Size"
 msgstr "Величина иконица траке алата"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "Величина иконица на траци алата, или „small-toolbar“ (мала трака алата) или "
 "„large-toolbar“ (велика трака алата)."
@@ -1059,8 +1051,8 @@ msgstr "Користи траку Гтк3 заглавља"
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 "Да ли ће уграђени Гтк+ прозорчићи као што је бирач датотека, бирач боје или "
@@ -1175,16 +1167,14 @@ msgstr "Распоред траке наслова украшених прозо
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
-"Ово подешавање одређује који дугмићи треба да буду стављени на траку наслова"
-" украшених прозора од стране клијента, и да ли треба да буду постављени на "
-"леву или десну страну. Видите "
-"„https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout“."
+"Ово подешавање одређује који дугмићи треба да буду стављени на траку наслова "
+"украшених прозора од стране клијента, и да ли треба да буду постављени на "
+"леву или десну страну. Видите „https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout“."
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1193,14 +1183,13 @@ msgstr "Користи општу траку изборника за прика�
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 msgstr ""
 "Ово подешавање одређује где ће бити приказан изборник програма – у прозору "
-"или на панелу протоколом „Модел изборника“. Погледајте "
-"„https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu“."
+"или на панелу протоколом „Модел изборника“. Погледајте „https://developer."
+"gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-"
+"menu“."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1209,14 +1198,13 @@ msgstr "Користи општу траку изборника за прика�
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 msgstr ""
 "Ово подешавање одређује где ће бити приказане траке изборника прозора – у "
-"прозору или на панелу протоколом „Модел изборника“. Погледајте "
-"„https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar“."
+"прозору или на панелу протоколом „Модел изборника“. Погледајте „https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar“."
 
 #: schemas/org.cafe.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1257,8 +1245,8 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Ово подешавање одређује да ли Мејт управља чиниоцем размере за КуТ програме."
-" Укључите да синхронизујете са ГТК чиниоцем размере приликом покретања "
+"Ово подешавање одређује да ли Мејт управља чиниоцем размере за КуТ програме. "
+"Укључите да синхронизујете са ГТК чиниоцем размере приликом покретања "
 "сесије, искључите да управљате овом вредношћу на другом месту. Захтева "
 "поновно покретање сесије."
 
@@ -1280,13 +1268,13 @@ msgstr "Искључује линију наредби"
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 "Спречава корисника да приступа терминалу или да издаје наредбу за "
-"извршавање. На пример, ово ће искључити приступ прозорчету „Покрени програм“"
-" са панела."
+"извршавање. На пример, ово ће искључити приступ прозорчету „Покрени програм“ "
+"са панела."
 
 #: schemas/org.cafe.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1309,8 +1297,8 @@ msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr ""
-"Спречава корисника да штампа. На пример, ово ће искључити приступ прозорчету"
-" „Штампај“ из сваког програма."
+"Спречава корисника да штампа. На пример, ово ће искључити приступ прозорчету "
+"„Штампај“ из сваког програма."
 
 #: schemas/org.cafe.lockdown.gschema.xml:20
 msgid "Disable print setup"
@@ -1451,11 +1439,10 @@ msgstr "Списак миме врста за које ће спољни сли�
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr ""
-"Сличице неће бити направљене за датотеке чије се миме-врсте налазе на "
-"списку."
+"Сличице неће бити направљене за датотеке чије се миме-врсте налазе на списку."
 
 #: schemas/org.cafe.typing-break.gschema.xml:5
 msgid "Type time"
@@ -1501,14 +1488,22 @@ msgstr "Прозорче за избор боје"
 msgid "Choose colors from the palette or the screen"
 msgstr "Изаберите боје са палете или са екрана"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr "ctk-select-color"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr "Мејт;боја;избирач;изабери;палета;екран;избор;"
+
+#~ msgid "cafe-desktop"
+#~ msgstr "cafe-desktop"
+
+#~ msgid ""
+#~ "Copyright © 1997-2011 GNOME developers\n"
+#~ "Copyright © 2011 Perberos\n"
+#~ "Copyright © 2012-2020 CAFE developers"
+#~ msgstr ""
+#~ "Ауторска права © 1997-2011 Програмери Гнома\n"
+#~ "Ауторска права © 2011 Перберос\n"
+#~ "Ауторска права © 2012-2020 Програмери Мејта"
+
+#~ msgid "ctk-select-color"
+#~ msgstr "ctk-select-color"

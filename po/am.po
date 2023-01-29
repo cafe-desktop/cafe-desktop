@@ -2,29 +2,29 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # clefebvre <clement.lefebvre@linuxmint.com>, 2020
 # samson <sambelet@yahoo.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Amharic (https://www.transifex.com/cafe/teams/13566/am/)\n"
+"Language: am\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: am\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr "Samson-Belete-Belayineh"
 
@@ -36,12 +36,6 @@ msgstr "ስለ ሜት "
 msgid "Learn more about CAFE"
 msgstr "ስለ ሜት በበለጠ ለመማር "
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr "የ ሜት ዴስክቶፕ"
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr "የ ሜት ዴስክቶፕ አካባቢ"
@@ -50,16 +44,17 @@ msgstr "የ ሜት ዴስክቶፕ አካባቢ"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "ሜት የሚያቀርበው አስደናቂ ዴስክቶፕ ነው ለ ሊነክስ ተጠቃሚዎች "
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -67,7 +62,7 @@ msgstr ""
 "ሜት የሚያካትተው እርስዎ በ ኮምፒዩተሩ ላይ የሚያዩትን ነው: የ ፋይል አስተዳዳሪ: ሰነድ መመልከቻ: ምስል መመልከቻ: "
 "ዝርዝር እና በርካታ መተግበሪያዎች ነው"
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -75,7 +70,7 @@ msgstr ""
 "ሜት ነፃ ነው: ሊጠቀሙበት የሚችሉ: የ ተረጋጋ: ሊደረስበት የሚችል በ ዴስክቶፕ አካባቢ በ ማንኛውም የ Unix-like "
 "ቤተሰብ መስሪያ ስርአት"
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -83,13 +78,13 @@ msgid ""
 "assurance."
 msgstr ""
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
 msgstr ""
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -99,7 +94,7 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "ያልታወቀ"
@@ -121,11 +116,11 @@ msgid "The title of the color selection dialog"
 msgstr "የ ቀለም ምርጫ ንግግር አርእስት"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "ቀለም ይምረጡ"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "የ አሁኑ ቀለም"
 
@@ -133,7 +128,7 @@ msgstr "የ አሁኑ ቀለም"
 msgid "The selected color"
 msgstr "የተመረጠው ቀለም"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "የ አሁኑ አልፋ "
 
@@ -141,43 +136,43 @@ msgstr "የ አሁኑ አልፋ "
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "የ ተመረጠው  በ ውስጡ የማያሳልፍ ዋጋ (0 ሙሉ በ ውስጡ የሚያሳልፍ 65535 በ ውስጡ የማያሳልፍ )"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr "ዋጋ የሌለው የ ቀለም ዳታ ተቀብሏል\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "የ ግልጽነት መቆጣጠሪያ አለው"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr "የ ቀለም መምረጫ ያስችል እንደሆን በ ውስጡ የማያሳልፍ "
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "መደርደሪያ አለው"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "መደርደሪያ ይጠቀሙ እንደሆን መወሰኛ"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "የ አሁኑ ቀለም"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "የ አሁኑ ግልፅነት (0 ሙሉ በ ውስጡ የሚያሳልፍ: 65535 ሙሉ በ ውስጡ የማያሳልፍ)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "የ HEX ሀረግ"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "የ ሄክሳ ዴሲማል ሀረግ ለ አሁኑ ቀለም"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -185,73 +180,73 @@ msgstr ""
 "እርስዎ ይምረጡ የሚፈልጉትን ቀለም ከ ውጪ ቀለበት ውስጥ: ይምረጡ የ ማጥቆሪያ ወይንም የ ብሩህነት ቀለም በ ሶስት "
 "ማእዘን ውስጥ"
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "ይጫኑ የ አይን ጠብታ: ከዛ ይጫኑ ቀለም በ ማንኛውም ቦታ በ እርስዎ መመልከቻ ላይ ቀለም ለ መምረጥ"
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "_Hue:"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "በ ቀለም ጎማ ላይ ቦታው"
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "_Saturation:"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "የ ቀለሙ \"ጥልቀት\""
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_ዋጋ:"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "የ ቀለሙ ብሩህነት"
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "_ቀይ:"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "በ ቀለሙ ውስጥ የ ቀይ ብርሀን መጠን"
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_አረንጓዴ:"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "በ ቀለሙ ውስጥ የ አረንጓዴ ብርሀን መጠን"
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "_ሰማያዊ:"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "በ ቀለሙ ውስጥ የ ሰማያዊ ብርሀን መጠን"
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "ግል_ጽነት:"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "የ ቀለሙ ግልጽነት"
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "የ ቀለም _ስም:"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -259,49 +254,49 @@ msgstr ""
 "እርስዎ ማስገባት ይችላሉ የ HTML-ዘዴ hexadecimal የ ቀለም ዋጋ: ወይንም በ ቀላሉ የ ቀለም ስም እንደ "
 "'ብርቱካን' በ ማስገቢያው ውስጥ"
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_መደርደሪያ:"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "የ ቀለም ጎማ"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "እርስዎ የ መረጡትን ቀለም መጎተት ይችላሉ ወደ ማቅለሚያው ማስገቢያ ውስጥ ለማስቀመጥ ወደ ፊት ለ መጠቀም"
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "በቅድሚያ-የ ተመረጠው ቀለም: ለማነፃፀሪያ ነው አሁን ለሚመርጡት ቀለም"
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "እርስዎ የመረጡት ቀለም"
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "ቀለም እዚህ _ማስቀመጫ"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 
 #: libcafe-desktop/cafe-colorseldialog.c:99
@@ -353,7 +348,7 @@ msgstr "ስህተት ፋይል በማጠንጠን ላይ '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "ስም የለም "
 
@@ -371,33 +366,33 @@ msgstr "ፋይሉን ማግኘት አልተቻለም '%s'"
 msgid "No filename to save to"
 msgstr "ለማስቀመጥ ምንም የ ፋይል ስም የለም"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "በማስጀመር ላይ %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "ለማስጀመር ምንም URL የለም"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "እቃው የሚጀምር አይነት አይደለም"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "ለማስነሳት ምንም (Exec) ትእዛዝ የለም"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "ለማስነሳት ትክክል ያለሆነ (Exec) ትእዛዝ"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "ያልታወቀ encoding of: %s"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "ተርሚናልን ማግኘት አልተቻለም xterm, በመጠቀም ባይሰራም እንኳን"
 
@@ -524,12 +519,12 @@ msgid ""
 "minimum=(%d, %d), maximum=(%d, %d)"
 msgstr ""
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "መመልከቻ ማንፀባረቂያ"
@@ -637,8 +632,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
 
 #: schemas/org.cafe.applications-browser.gschema.xml:5
@@ -679,8 +673,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
 
 #: schemas/org.cafe.applications-office.gschema.xml:9
@@ -765,8 +758,8 @@ msgstr "የ ስእል ምርጫዎች"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
 
 #: schemas/org.cafe.background.gschema.xml.in:38
@@ -798,8 +791,7 @@ msgid "Secondary Color"
 msgstr "ሁለተኛ ቀለም "
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr "በ ቀኝ ወይንም የ ታች ቀለም ከፍታ በሚስሉ ጊዜ ወይንም ሙሉ ቀለም"
 
 #: schemas/org.cafe.background.gschema.xml.in:58
@@ -851,8 +843,11 @@ msgid "Toolbar Style"
 msgstr "የ እቃ መደርደሪያ ዘዴ"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr "እቃ መደርደሪያ: ዋጋ ያለው ዋጋ ነው: \"ሁለቱም\", \"ሁለቱም-በ አግድም\", \"ምልክቶች\", እና \"ጽሁፍ\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
+msgstr ""
+"እቃ መደርደሪያ: ዋጋ ያለው ዋጋ ነው: \"ሁለቱም\", \"ሁለቱም-በ አግድም\", \"ምልክቶች\", እና \"ጽሁፍ\"."
 
 #: schemas/org.cafe.interface.gschema.xml:25
 msgid "Menus Have Icons"
@@ -891,7 +886,8 @@ msgid "Toolbar Icon Size"
 msgstr "የ እቃ መደርደሪያ ምልክት መጠን"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "በ እቃ መደርደሪያ ውስጥ የ ምልክቶች መጠን \"ትንሽ-እቃ መደርደሪያ\" ወይንም \"ትልቅ-እቃ መደርደሪያ\" እንደሚሆን "
 "መወሰኛ."
@@ -979,8 +975,8 @@ msgstr "ይጠቀሙ የ CTK3 ራስጌ መደርደሪያ"
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 
@@ -1080,10 +1076,9 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1093,9 +1088,8 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1105,9 +1099,8 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1160,8 +1153,8 @@ msgstr "የ ትእዛዝ መስመር ማሰናከያ "
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 
@@ -1295,8 +1288,7 @@ msgstr "ከፍተኛ እድሜ ለ አውራ ጥፍር ልክ በ ማጠራቀ�
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr ""
-"ከፍተኛ መጠን ለ አውራ ጥፍር ልክ በ ማጠራቀሚያ ውስጥ: በ ሜጋ ባይትስ: ማሰናጃ ወደ -1 ማጽዳት ለ መከልከል"
+msgstr "ከፍተኛ መጠን ለ አውራ ጥፍር ልክ በ ማጠራቀሚያ ውስጥ: በ ሜጋ ባይትስ: ማሰናጃ ወደ -1 ማጽዳት ለ መከልከል"
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:5
 msgid "Disable all external thumbnailers"
@@ -1315,8 +1307,8 @@ msgstr ""
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr "በ አውራ ጥፍር ልክ አይፈጠርም ለ ፋይሎች የ mime-type በ ዝርዝር ውስጥ ላሉ"
 
 #: schemas/org.cafe.typing-break.gschema.xml:5
@@ -1363,14 +1355,10 @@ msgstr "የ ቀለም ምርጫ ንግግር"
 msgid "Choose colors from the palette or the screen"
 msgstr "ቀለም ይምረጡ ከ መደርደሪያው ወይንም መመልከቻው ላይ"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
+
+#~ msgid "cafe-desktop"
+#~ msgstr "የ ሜት ዴስክቶፕ"

@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # hypermit <hypermit@gmail.com>, 2020
 # Mahdi Pourghasem <mahdipourghasem@gmail.com>, 2020
@@ -10,24 +10,24 @@
 # a8421664e61380eccf98265d27b51edb, 2020
 # royaniva <royaniva@outlook.com>, 2020
 # Borderliner <psyringe@yandex.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Borderliner <psyringe@yandex.com>, 2020\n"
 "Language-Team: Persian (https://www.transifex.com/cafe/teams/13566/fa/)\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fa\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr "محمدرضا حاجیانپور <psyringe@protonmail.com>"
 
@@ -39,12 +39,6 @@ msgstr "درباره‌ی ماته"
 msgid "Learn more about CAFE"
 msgstr "درباره ماته بیشتر بدانید"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr ""
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr ""
@@ -53,10 +47,11 @@ msgstr ""
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -64,7 +59,7 @@ msgstr ""
 "ماته با استفاده از اصول سنتی، میزکاری جذاب و قابل درکی را برای کاربران "
 "لینوکس فراهم می‌کند."
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -72,7 +67,7 @@ msgstr ""
 "ماته شامل تمام چیزهایی است که شما در یک کامپیوتر می‌بینید، از جمله برنامه "
 "مدیریت فایل، نمایش اسناد، نمایش عکس‌، منو‌ها و برنامه‌های بسیار دیگر."
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -80,7 +75,7 @@ msgstr ""
 "ماته میزکاری رایگان، قابل استفاده، پایدار و در دسترس برای خانواده سیستم "
 "عاملهای شبه یونیکس می باشد."
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -88,18 +83,18 @@ msgid ""
 "assurance."
 msgstr ""
 "ماته ادامه گنوم 2 است. از زمانی که گنوم در سال 1997 شروع شد، صدها نفر به "
-"پروژه از طریق کد کمک کرده‌اند. بسیاری دیگر نیز از راه‌های دیگر کمک کرده‌اند،"
-" از جمله ترجمه، تهیه اسناد و تضمین کیفیت."
+"پروژه از طریق کد کمک کرده‌اند. بسیاری دیگر نیز از راه‌های دیگر کمک کرده‌اند، از "
+"جمله ترجمه، تهیه اسناد و تضمین کیفیت."
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
 msgstr ""
-"گنوم 2 مشهورترین میزکار برای لینوکس بود، اما دیگر وجود ندارد... ماته اینجاست"
-" تا همان میزکار را برای شما فراهم کند!"
+"گنوم 2 مشهورترین میزکار برای لینوکس بود، اما دیگر وجود ندارد... ماته اینجاست "
+"تا همان میزکار را برای شما فراهم کند!"
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -112,7 +107,7 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "ناشناخته"
@@ -134,11 +129,11 @@ msgid "The title of the color selection dialog"
 msgstr "عنوان پنجره انتخاب رنگ"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "یک رنگ انتخاب کنید"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "رنگ فعلی"
 
@@ -146,7 +141,7 @@ msgstr "رنگ فعلی"
 msgid "The selected color"
 msgstr "رنگ انتخابی"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "آلفای فعلی"
 
@@ -154,119 +149,119 @@ msgstr "آلفای فعلی"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "مقدار کدری انتخابی (0 کاملا شفاف، 65535 کاملا کدر)"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr "داده‌های رنگ نامعتبر دریافت شد\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "دارای کنترل شفافیت می‌باشد"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr "آیا انتخاب کننده رنگ اجازه تنظیم کدری را بدهد یا خیر"
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "دارای پالت می‌باشد"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "أیا باید از پالت استفاده شود یا خیر"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "رنگ فعلی"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "مقدار کدری فعلی (0 کاملا شفاف، 65535 کاملا کدر)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "رشته هگز"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "رشته هگز رنگ فعلی"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr ""
-"از حلقه بیرونی، رنگی را که میخواهید انتخاب کنید. از مثلث درونی نیز، تیرگی یا"
-" روشنی رنگ را انتخاب کنید."
+"از حلقه بیرونی، رنگی را که میخواهید انتخاب کنید. از مثلث درونی نیز، تیرگی یا "
+"روشنی رنگ را انتخاب کنید."
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr ""
-"بر روی قطره‌چکان کلیک کنید، و سپس روی هر نقطه ای در صفحه کلیک کنید تا رنگ آن"
-" نقطه انتخاب شود."
+"بر روی قطره‌چکان کلیک کنید، و سپس روی هر نقطه ای در صفحه کلیک کنید تا رنگ آن "
+"نقطه انتخاب شود."
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "_پرده رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "موقعیت برروی چرخ رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "_غلظت رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "«عمق» رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_مقدار"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "روشنایی رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "_قرمز"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "مقدار نور قرمز در رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_سبز"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "مقدار نور سبز در رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "_آبی"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "مقدار نور آبی در رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "_کدری"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "شفافیت رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "_نام رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -274,15 +269,15 @@ msgstr ""
 "در این ورودی، شما میتوانید مقدار رنگ هگز به شیوه HTML‌ بدهید، یا اینکه نام "
 "رنگ (مثلا «نارنجی») را وارد کنید."
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_‌پالت:"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "چرخ رنگ"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -292,7 +287,7 @@ msgstr ""
 "میتوانید این رنگ را بر روی ورودی پالت بکشید، یا رنگ فعلی را بکشید و آنرا با "
 "رنگ در نوار دیگر جایگزین کنید."
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -300,31 +295,31 @@ msgstr ""
 "رنگی که انتخاب کرده‌اید. شما میتوانید این رنگ را بر روی یک ورودی پالت بکشید "
 "تا آنرا ذخیره کرده و در آینده استفاده نمائید."
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "رنگی که قبلا انتخاب کرده بودید، برای مقایسه با رنگ انتخابی فعلی."
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "رنگی که انتخاب کرده‌اید."
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "_رنگ را اینجا ذخیره کن"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
-"روی این ورودی پالت کلیک کنید تا به عنوان رنگ فعلی انتخاب شود. برای تغییر این"
-" ورودی، یک نوار رنگ را به اینجا بکشید، یا بر روی آن کلیک راست کرده و گزینه "
+"روی این ورودی پالت کلیک کنید تا به عنوان رنگ فعلی انتخاب شود. برای تغییر این "
+"ورودی، یک نوار رنگ را به اینجا بکشید، یا بر روی آن کلیک راست کرده و گزینه "
 "«رنگ را اینجا ذخیره کن» را انتخاب کنید."
 
 #: libcafe-desktop/cafe-colorseldialog.c:99
@@ -376,7 +371,7 @@ msgstr "خطا در برگرداندن پرونده‌ی «%s»: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "بدون نام"
 
@@ -394,33 +389,33 @@ msgstr "پرونده‌ی «%s» پیدا نشد"
 msgid "No filename to save to"
 msgstr "نام پرونده‌ای برای ذخیره کردن موجود نیست"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "در حال آغاز %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "نشانی برای راه‌اندازی موجود نیست"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "این مورد قابل راه اندازی نیست"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "فرمان (Exec) برای راه‌اندازی موجود نیست"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "فرمان (Exec) برای راه‌اندازی اشتباه است"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "کدگذاری ناشناخته در: %s"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "پایانه‌ای پیدا نشد. از xterm استفاده می‌شود، حتی اگر کار نکند"
 
@@ -544,12 +539,12 @@ msgid ""
 "minimum=(%d, %d), maximum=(%d, %d)"
 msgstr ""
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "صفحات نمایش یکسان"
@@ -656,8 +651,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
 
 #: schemas/org.cafe.applications-browser.gschema.xml:5
@@ -698,8 +692,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
 
 #: schemas/org.cafe.applications-office.gschema.xml:9
@@ -785,8 +778,8 @@ msgstr "گزینه‌های عکس"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
 
 #: schemas/org.cafe.background.gschema.xml.in:38
@@ -818,11 +811,9 @@ msgid "Secondary Color"
 msgstr "رنگ‌ فرعی "
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
-"رنگ راست یا پایین برای وقتی شیب‌ها رسم می‌شوند، برای رنگ یکدست استفاده "
-"نمی‌شود."
+"رنگ راست یا پایین برای وقتی شیب‌ها رسم می‌شوند، برای رنگ یکدست استفاده نمی‌شود."
 
 #: schemas/org.cafe.background.gschema.xml.in:58
 msgid "Color Shading Type"
@@ -875,7 +866,9 @@ msgid "Toolbar Style"
 msgstr "سبک نوار ابزار"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:25
@@ -915,7 +908,8 @@ msgid "Toolbar Icon Size"
 msgstr "اندازه‌ی شمایل نوار ابزار"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:50
@@ -1001,8 +995,8 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 
@@ -1102,10 +1096,9 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1115,9 +1108,8 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1127,9 +1119,8 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1182,13 +1173,12 @@ msgstr "از کار انداختن خط فرمان"
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 "جلوگیری از دسترسی کاربر به پایانه یا مشخص کردن خط فرمان برای اجرا. برای "
-"مثال، ممکن است دسترسی به محاوره‌ی «اجرای برنامه» در تابلو را از کار "
-"بیاندازد."
+"مثال، ممکن است دسترسی به محاوره‌ی «اجرای برنامه» در تابلو را از کار بیاندازد."
 
 #: schemas/org.cafe.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1199,8 +1189,8 @@ msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
-"جلوگیری از ذخیره‌ی پرونده‌ها در دیسک توسط کاربر. برای مثال، ممکن است دسترسی "
-"به محاوره‌ی «ذخیره به نام» را در تمام برنامه‌ها از کار بیاندازد."
+"جلوگیری از ذخیره‌ی پرونده‌ها در دیسک توسط کاربر. برای مثال، ممکن است دسترسی به "
+"محاوره‌ی «ذخیره به نام» را در تمام برنامه‌ها از کار بیاندازد."
 
 #: schemas/org.cafe.lockdown.gschema.xml:15
 msgid "Disable printing"
@@ -1211,8 +1201,8 @@ msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr ""
-"جلوگیری از چاپ توسط کاربر. برای مثال، ممکن است دسترسی به محاوره‌ی «چاپ» را "
-"در تمام برنامه‌ها از کار بیاندازد."
+"جلوگیری از چاپ توسط کاربر. برای مثال، ممکن است دسترسی به محاوره‌ی «چاپ» را در "
+"تمام برنامه‌ها از کار بیاندازد."
 
 #: schemas/org.cafe.lockdown.gschema.xml:20
 msgid "Disable print setup"
@@ -1345,8 +1335,8 @@ msgstr ""
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr ""
 
 #: schemas/org.cafe.typing-break.gschema.xml:5
@@ -1393,14 +1383,7 @@ msgstr ""
 msgid "Choose colors from the palette or the screen"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

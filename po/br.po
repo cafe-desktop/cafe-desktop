@@ -2,29 +2,33 @@
 # Copyright (C) YEAR CAFE Developers
 # This file is distributed under the same license as the cafe-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Gwenn M <tornoz@laposte.net>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Alan Monfort <alan.monfort@free.fr>, 2020
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.23.2\n"
+"Project-Id-Version: cafe-desktop 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2020-01-19 00:40+0100\n"
+"POT-Creation-Date: 2023-01-29 13:57+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Alan Monfort <alan.monfort@free.fr>, 2020\n"
 "Language-Team: Breton (https://www.transifex.com/cafe/teams/13566/br/)\n"
+"Language: br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: br\n"
-"Plural-Forms: nplurals=5; plural=((n%10 == 1) && (n%100 != 11) && (n%100 !=71) && (n%100 !=91) ? 0 :(n%10 == 2) && (n%100 != 12) && (n%100 !=72) && (n%100 !=92) ? 1 :(n%10 ==3 || n%10==4 || n%10==9) && (n%100 < 10 || n% 100 > 19) && (n%100 < 70 || n%100 > 79) && (n%100 < 90 || n%100 > 99) ? 2 :(n != 0 && n % 1000000 == 0) ? 3 : 4);\n"
+"Plural-Forms: nplurals=5; plural=((n%10 == 1) && (n%100 != 11) && (n%100 !"
+"=71) && (n%100 !=91) ? 0 :(n%10 == 2) && (n%100 != 12) && (n%100 !=72) && "
+"(n%100 !=92) ? 1 :(n%10 ==3 || n%10==4 || n%10==9) && (n%100 < 10 || n% 100 "
+"> 19) && (n%100 < 70 || n%100 > 79) && (n%100 < 90 || n%100 > 99) ? 2 :(n != "
+"0 && n % 1000000 == 0) ? 3 : 4);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: cafe-about/cafe-about.c:77
+#: cafe-about/cafe-about.c:76
 msgid "translator-credits"
 msgstr "Troet eo bet gant"
 
@@ -36,12 +40,6 @@ msgstr "Diwar-benn CAFE"
 msgid "Learn more about CAFE"
 msgstr "Gouzout hiroc'h diwar-benn CAFE"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-about/cafe-about.desktop.in:7
-msgid "cafe-desktop"
-msgstr ""
-
 #: cafe-about/cafe-about.h:29
 msgid "CAFE Desktop Environment"
 msgstr ""
@@ -50,10 +48,11 @@ msgstr ""
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 CAFE developers"
+"Copyright © 2012-2020 MATE developers\n"
+"Copyright © 2020-2023 Pablo Barciela"
 msgstr ""
 
-#: cafe-about/cafe-about.h:42
+#: cafe-about/cafe-about.h:43
 msgid ""
 "CAFE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -61,16 +60,16 @@ msgstr ""
 "CAFE a bourchas un amva burev plijus hag nadek da arveriaded Linux en ur "
 "ober gant al leterc'hadoù boaz."
 
-#: cafe-about/cafe-about.h:45
+#: cafe-about/cafe-about.h:46
 msgid ""
 "CAFE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 "E-kreiz CAFE e kavot an darn vrasañ eus ar pezh a welot gant hoc'h "
-"urzhiataer, en o zouez un ardoer restroù, ur welerez teuliadoù hag unan evit"
-" ar skeudennoù ha kalz arloadoù."
+"urzhiataer, en o zouez un ardoer restroù, ur welerez teuliadoù hag unan evit "
+"ar skeudennoù ha kalz arloadoù."
 
-#: cafe-about/cafe-about.h:48
+#: cafe-about/cafe-about.h:49
 msgid ""
 "CAFE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -78,7 +77,7 @@ msgstr ""
 "CAFE a dalv d'un amva burev digor, stabil, digoust, aes da arverañ evit ar "
 "reizhiadoù korvoiñ heñvel ouzh Unix."
 
-#: cafe-about/cafe-about.h:51
+#: cafe-about/cafe-about.h:52
 msgid ""
 "CAFE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -86,11 +85,11 @@ msgid ""
 "assurance."
 msgstr ""
 "CAFE a zeu diouzh GNOME2. Kantadoù a dud o deus kemeret perzh e boneg GNOME "
-"abaoe ma'z eo bet lañset e 1997 ; kalz muioc'h a dud c'hoazh o deus labouret"
-" evitañ dre doareoù pouezhus all, en o zouez an treiñ, ar sevel "
-"kelennskridoù ha teurel evezh ouzh ar berzhded."
+"abaoe ma'z eo bet lañset e 1997 ; kalz muioc'h a dud c'hoazh o deus labouret "
+"evitañ dre doareoù pouezhus all, en o zouez an treiñ, ar sevel kelennskridoù "
+"ha teurel evezh ouzh ar berzhded."
 
-#: cafe-about/cafe-about.h:55
+#: cafe-about/cafe-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "CAFE is here to provide that same desktop to you!"
@@ -98,7 +97,7 @@ msgstr ""
 "Ar burev anvekañ evit Linux e oa GNOME 2, n'eo ket mui hegerz avat... CAFE "
 "zo bet krouet evit kinnig an hevelep burev deoc'h ! "
 
-#: cafe-about/cafe-about.h:58
+#: cafe-about/cafe-about.h:59
 msgid ""
 "The name “CAFE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -111,7 +110,7 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libcafe-desktop/display-name.c:264
+#: libcafe-desktop/display-name.c:265
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Dianav"
@@ -133,11 +132,11 @@ msgid "The title of the color selection dialog"
 msgstr "Titl ar voestad da zibab livioù"
 
 #: libcafe-desktop/cafe-colorbutton.c:169
-#: libcafe-desktop/cafe-colorbutton.c:438
+#: libcafe-desktop/cafe-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Tapout ul liv"
 
-#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:284
+#: libcafe-desktop/cafe-colorbutton.c:182 libcafe-desktop/cafe-colorsel.c:283
 msgid "Current Color"
 msgstr "Liv bremanel"
 
@@ -145,54 +144,53 @@ msgstr "Liv bremanel"
 msgid "The selected color"
 msgstr "Al liv diuzet"
 
-#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:291
+#: libcafe-desktop/cafe-colorbutton.c:197 libcafe-desktop/cafe-colorsel.c:290
 msgid "Current Alpha"
 msgstr "Alfa bremanel"
 
 #: libcafe-desktop/cafe-colorbutton.c:198
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
-"Gwerzh an demerez bet diuzet (0 boull penn da benn, 65535 demer penn da "
-"benn)"
+"Gwerzh an demerez bet diuzet (0 boull penn da benn, 65535 demer penn da benn)"
 
-#: libcafe-desktop/cafe-colorbutton.c:331
+#: libcafe-desktop/cafe-colorbutton.c:332
 msgid "Received invalid color data\n"
 msgstr " Roadennoù liv didlvoudek zo bet degemeret\n"
 
-#: libcafe-desktop/cafe-colorsel.c:270
+#: libcafe-desktop/cafe-colorsel.c:269
 msgid "Has Opacity Control"
 msgstr "Emañ reolerezh al liv gantañ"
 
-#: libcafe-desktop/cafe-colorsel.c:271
+#: libcafe-desktop/cafe-colorsel.c:270
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Mar dlefe bezañ aotren arventennoù an demerez gant an diuzer liv "
 
-#: libcafe-desktop/cafe-colorsel.c:277
+#: libcafe-desktop/cafe-colorsel.c:276
 msgid "Has palette"
 msgstr "Emañ al livaoueg gantañ"
 
-#: libcafe-desktop/cafe-colorsel.c:278
+#: libcafe-desktop/cafe-colorsel.c:277
 msgid "Whether a palette should be used"
 msgstr "Mar dlefe bezañ arveret ul livaoueg"
 
-#: libcafe-desktop/cafe-colorsel.c:285
+#: libcafe-desktop/cafe-colorsel.c:284
 msgid "The current color"
 msgstr "Al liv bremanel"
 
-#: libcafe-desktop/cafe-colorsel.c:292
+#: libcafe-desktop/cafe-colorsel.c:291
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Gwerzh an demerez bremanel (0 boull penn da benn, 65535 demer penn da benn)"
 
-#: libcafe-desktop/cafe-colorsel.c:298
+#: libcafe-desktop/cafe-colorsel.c:297
 msgid "HEX String"
 msgstr "Hedad mod HEX"
 
-#: libcafe-desktop/cafe-colorsel.c:299
+#: libcafe-desktop/cafe-colorsel.c:298
 msgid "The hexadecimal string of current color"
 msgstr "Hedad c'hwezekredel al liv bremanel"
 
-#: libcafe-desktop/cafe-colorsel.c:345
+#: libcafe-desktop/cafe-colorsel.c:344
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -200,91 +198,91 @@ msgstr ""
 "Diuzit al liv a fell deoc'h diwar ar walenn diavaez. Diuzit teñvalder pe "
 "sklaerder al liv-mañ gant an tric'horn diabarzh."
 
-#: libcafe-desktop/cafe-colorsel.c:369
+#: libcafe-desktop/cafe-colorsel.c:368
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr ""
-"Klikit war ar gorzennig ha klikit ne vern pelec'h war ho skramm da ziuzañ al"
-" liv-mañ."
+"Klikit war ar gorzennig ha klikit ne vern pelec'h war ho skramm da ziuzañ al "
+"liv-mañ."
 
-#: libcafe-desktop/cafe-colorsel.c:378
+#: libcafe-desktop/cafe-colorsel.c:377
 msgid "_Hue:"
 msgstr "_Arliv"
 
-#: libcafe-desktop/cafe-colorsel.c:379
+#: libcafe-desktop/cafe-colorsel.c:378
 msgid "Position on the color wheel."
 msgstr "Lec'hiadur war rodad al livioù"
 
-#: libcafe-desktop/cafe-colorsel.c:381
+#: libcafe-desktop/cafe-colorsel.c:380
 msgid "_Saturation:"
 msgstr "_Peurvec'hiañ"
 
-#: libcafe-desktop/cafe-colorsel.c:382
+#: libcafe-desktop/cafe-colorsel.c:381
 msgid "\"Deepness\" of the color."
 msgstr "Donder al liv"
 
-#: libcafe-desktop/cafe-colorsel.c:383
+#: libcafe-desktop/cafe-colorsel.c:382
 msgid "_Value:"
 msgstr "_Gwerzh"
 
-#: libcafe-desktop/cafe-colorsel.c:384
+#: libcafe-desktop/cafe-colorsel.c:383
 msgid "Brightness of the color."
 msgstr "Lintr al liv"
 
-#: libcafe-desktop/cafe-colorsel.c:385
+#: libcafe-desktop/cafe-colorsel.c:384
 msgid "_Red:"
 msgstr "_Ruz :"
 
-#: libcafe-desktop/cafe-colorsel.c:386
+#: libcafe-desktop/cafe-colorsel.c:385
 msgid "Amount of red light in the color."
 msgstr "Kementad a c'houloù ruz el liv."
 
-#: libcafe-desktop/cafe-colorsel.c:387
+#: libcafe-desktop/cafe-colorsel.c:386
 msgid "_Green:"
 msgstr "_Gwer :"
 
-#: libcafe-desktop/cafe-colorsel.c:388
+#: libcafe-desktop/cafe-colorsel.c:387
 msgid "Amount of green light in the color."
 msgstr "Kementad a c'houloù gwer el liv."
 
-#: libcafe-desktop/cafe-colorsel.c:389
+#: libcafe-desktop/cafe-colorsel.c:388
 msgid "_Blue:"
 msgstr "Gl_as :"
 
-#: libcafe-desktop/cafe-colorsel.c:390
+#: libcafe-desktop/cafe-colorsel.c:389
 msgid "Amount of blue light in the color."
 msgstr "Kementad a c'houloù glas el liv."
 
-#: libcafe-desktop/cafe-colorsel.c:393
+#: libcafe-desktop/cafe-colorsel.c:392
 msgid "Op_acity:"
 msgstr "De_merez :"
 
-#: libcafe-desktop/cafe-colorsel.c:400 libcafe-desktop/cafe-colorsel.c:410
+#: libcafe-desktop/cafe-colorsel.c:399 libcafe-desktop/cafe-colorsel.c:409
 msgid "Transparency of the color."
 msgstr "Boullder al liv."
 
-#: libcafe-desktop/cafe-colorsel.c:417
+#: libcafe-desktop/cafe-colorsel.c:416
 msgid "Color _name:"
 msgstr "A_nv al liv :"
 
-#: libcafe-desktop/cafe-colorsel.c:431
+#: libcafe-desktop/cafe-colorsel.c:430
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
-"Enanket e vez ur werzh liv gant ur stil HTML c'hwezekredel pe enankit un anv"
-" liv evel 'mouk' er vaezienn-mañ."
+"Enanket e vez ur werzh liv gant ur stil HTML c'hwezekredel pe enankit un anv "
+"liv evel 'mouk' er vaezienn-mañ."
 
-#: libcafe-desktop/cafe-colorsel.c:461
+#: libcafe-desktop/cafe-colorsel.c:460
 msgid "_Palette:"
 msgstr "_Livaoueg :"
 
-#: libcafe-desktop/cafe-colorsel.c:491
+#: libcafe-desktop/cafe-colorsel.c:490
 msgid "Color Wheel"
 msgstr "Rodad al livioù"
 
-#: libcafe-desktop/cafe-colorsel.c:948
+#: libcafe-desktop/cafe-colorsel.c:947
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -292,44 +290,43 @@ msgid ""
 msgstr ""
 "Al liv bet diuzet a-raok evit bezañ keñveriet gant al liv diuzet bremañ. Al "
 "liv mañ a c'hallit riklañ betek enankad ul livaoueg pe diuzit al liv-mañ "
-"evel al liv bremanel en ur e riklañ betek ar standilhonoù a zo war ar "
-"gostez."
+"evel al liv bremanel en ur e riklañ betek ar standilhonoù a zo war ar gostez."
 
-#: libcafe-desktop/cafe-colorsel.c:951
+#: libcafe-desktop/cafe-colorsel.c:950
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
-"Al liv dibabet ganeoc'h. Riklit al liv-mañ betek un enankad liv d'e enrollañ"
-" evit un arver diwezhatoc'h."
+"Al liv dibabet ganeoc'h. Riklit al liv-mañ betek un enankad liv d'e enrollañ "
+"evit un arver diwezhatoc'h."
 
-#: libcafe-desktop/cafe-colorsel.c:956
+#: libcafe-desktop/cafe-colorsel.c:955
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 "Al liv dibabet ganeoc'h a-raok da vezañ keñveriet gant al liv diuzet bremañ."
 
-#: libcafe-desktop/cafe-colorsel.c:959
+#: libcafe-desktop/cafe-colorsel.c:958
 msgid "The color you've chosen."
 msgstr "Al liv dibabet ganeoc'h."
 
-#: libcafe-desktop/cafe-colorsel.c:1364
+#: libcafe-desktop/cafe-colorsel.c:1363
 msgid "ctk-color-sel"
 msgstr "ctk-color-sel"
 
-#: libcafe-desktop/cafe-colorsel.c:1369
+#: libcafe-desktop/cafe-colorsel.c:1368
 msgid "_Save color here"
 msgstr "_Enrollañ al liv amañ"
 
-#: libcafe-desktop/cafe-colorsel.c:1589
+#: libcafe-desktop/cafe-colorsel.c:1588
 msgid ""
-"Click this palette entry to make it the current color. To change this entry,"
-" drag a color swatch here or right-click it and select \"Save color here.\""
+"Click this palette entry to make it the current color. To change this entry, "
+"drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
-"Klikit war an enankad-livaoueg-mañ d'e lakaat da vezañ al liv bremanel. "
-"A-benn kemmañ an enankad-mañ, riklit ur standilhon liv amañ pe klikit "
-"a-zehou warnañ ha diuzit \"Enrollañ al liv amañ.\""
+"Klikit war an enankad-livaoueg-mañ d'e lakaat da vezañ al liv bremanel. A-"
+"benn kemmañ an enankad-mañ, riklit ur standilhon liv amañ pe klikit a-zehou "
+"warnañ ha diuzit \"Enrollañ al liv amañ.\""
 
 #: libcafe-desktop/cafe-colorseldialog.c:99
 #: libcafe-desktop/cafe-colorseldialog.c:162
@@ -380,7 +377,7 @@ msgstr "Fazi e-pad ma oa oc'h adenbeniañ ar restr '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3546
+#: libcafe-desktop/cafe-desktop-item.c:3564
 msgid "No name"
 msgstr "Anv ebet"
 
@@ -398,37 +395,37 @@ msgstr "N'hall ket kavout ar restr '%s'"
 msgid "No filename to save to"
 msgstr "Anv restr ebet a-benn e enrollañ gantañ"
 
-#: libcafe-desktop/cafe-desktop-item.c:1848
+#: libcafe-desktop/cafe-desktop-item.c:1861
 #, c-format
 msgid "Starting %s"
 msgstr "O loc'hañ %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2085
+#: libcafe-desktop/cafe-desktop-item.c:2102
 msgid "No URL to launch"
 msgstr "URL ebet da loc'hañ"
 
-#: libcafe-desktop/cafe-desktop-item.c:2101
+#: libcafe-desktop/cafe-desktop-item.c:2118
 msgid "Not a launchable item"
 msgstr "N'eo ket un dra da loc'hañ"
 
-#: libcafe-desktop/cafe-desktop-item.c:2111
+#: libcafe-desktop/cafe-desktop-item.c:2128
 msgid "No command (Exec) to launch"
 msgstr "Arc'had ebet da loc'hañ (Exec)"
 
-#: libcafe-desktop/cafe-desktop-item.c:2124
+#: libcafe-desktop/cafe-desktop-item.c:2141
 msgid "Bad command (Exec) to launch"
 msgstr "Arc'had fall da loc'hañ (Exec)"
 
-#: libcafe-desktop/cafe-desktop-item.c:3603
+#: libcafe-desktop/cafe-desktop-item.c:3621
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Enbonegañ %s a zo dianav"
 
-#: libcafe-desktop/cafe-desktop-utils.c:149
+#: libcafe-desktop/cafe-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
-"N'eus ket tu da gaout un dermenell, implijet e vo xterm, Met ne c'hallfe ket"
-" labourat"
+"N'eus ket tu da gaout un dermenell, implijet e vo xterm, Met ne c'hallfe ket "
+"labourat"
 
 #: libcafe-desktop/cafe-languages.c:727
 msgid "Unspecified"
@@ -465,8 +462,8 @@ msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
-"ar vent hag al lec'hiadur goulennet evit ar CRTC %d zo er-maez eus ar vevenn"
-" aotret : lec'hiadur=(%d, %d), ment=(%d, %d), uc'hek=(%d, %d)"
+"ar vent hag al lec'hiadur goulennet evit ar CRTC %d zo er-maez eus ar vevenn "
+"aotret : lec'hiadur=(%d, %d), ment=(%d, %d), uc'hek=(%d, %d)"
 
 #: libcafe-desktop/cafe-rr.c:1782
 #, c-format
@@ -554,12 +551,12 @@ msgstr ""
 "N'eo ket mat ar ment galloudel goulennet war ar ment posubl: goulenn=(%d, "
 "%d), izek=(%d, %d), uc'hek=(%d, %d)"
 
-#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-
-#. capplet.c:get_display_name()
+#. Keep this string in sync with cafe-control-center/capplets/display/xrandr-capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
 #: libcafe-desktop/cafe-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "Efed melezouriñ war ar skrammoù"
@@ -571,8 +568,7 @@ msgstr "etremez izek e milieilennoù"
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:21
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
-"Leuskel a-gostez mar bez pouezet war the _same_ key e-korf @delay "
-"milieilenn."
+"Leuskel a-gostez mar bez pouezet war the _same_ key e-korf @delay milieilenn."
 
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:31
 msgid "Pixels per seconds"
@@ -598,8 +594,8 @@ msgstr "Dale en derou e milieilennoù"
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr ""
-"Pet milieilenn zo da c'hortoz kent ma krogo dilec'hidur al logodenn da vezañ"
-" efedus."
+"Pet milieilenn zo da c'hortoz kent ma krogo dilec'hidur al logodenn da vezañ "
+"efedus."
 
 #: schemas/org.cafe.accessibility-keyboard.gschema.xml:49
 msgid "Minimum interval in milliseconds"
@@ -654,16 +650,16 @@ msgstr ""
 #: schemas/org.cafe.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
 msgstr ""
-"Loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder plijet gwell"
-" ganeoc'h"
+"Loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder plijet gwell "
+"ganeoc'h"
 
 #: schemas/org.cafe.applications-at-mobility.gschema.xml:11
 msgid ""
 "CAFE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"CAFE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder "
-"e-pad ar c'hennaskañ."
+"CAFE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder e-"
+"pad ar c'hennaskañ."
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -684,8 +680,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-at-visual.gschema.xml:11
 msgid ""
-"CAFE to start preferred Visual assistive technology application during "
-"login."
+"CAFE to start preferred Visual assistive technology application during login."
 msgstr ""
 "CAFE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit ar gweled e-pad "
 "ar c'hennaskañ."
@@ -728,8 +723,7 @@ msgstr ""
 
 #: schemas/org.cafe.applications-messenger.gschema.xml:6
 msgid ""
-"Instant Messaging program to use when starting applications that require "
-"one."
+"Instant Messaging program to use when starting applications that require one."
 msgstr ""
 
 #: schemas/org.cafe.applications-office.gschema.xml:9
@@ -781,8 +775,8 @@ msgstr "Arguzennoù Erounit"
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
-"Arguzenn arveret da erounit goulevioù en dermenell despizet gant an alc'hwez"
-" 'exec/erounit'"
+"Arguzenn arveret da erounit goulevioù en dermenell despizet gant an alc'hwez "
+"'exec/erounit'"
 
 #: schemas/org.cafe.background.gschema.xml.in:18
 msgid "Draw Desktop Background"
@@ -798,8 +792,7 @@ msgstr "Diskouez arlunioù ar burev"
 
 #: schemas/org.cafe.background.gschema.xml.in:24
 msgid "Have CAFE file manager (Baul) draw the desktop icons."
-msgstr ""
-"Lakaet eo bet ardoer restroù CAFE (Baul) da gempenn arlunioù ar burev."
+msgstr "Lakaet eo bet ardoer restroù CAFE (Baul) da gempenn arlunioù ar burev."
 
 #: schemas/org.cafe.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -810,8 +803,8 @@ msgid ""
 "If set to true, then CAFE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Mar erspizet da wir e vo lakaet un arveuz gant CAFE pa vo kemmet drekleur ar"
-" burev."
+"Mar erspizet da wir e vo lakaet un arveuz gant CAFE pa vo kemmet drekleur ar "
+"burev."
 
 #: schemas/org.cafe.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -820,8 +813,8 @@ msgstr "Dibarzhioù ar skeudennoù"
 #: schemas/org.cafe.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
-"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
-" \"spanned\"."
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\"."
 msgstr ""
 "Despizañ a ra penaos e vo lakaet deouez war skeudennoù arventennet gant "
 "wallpaper_filename. Ar gwerzhioù a c'hall talvezout da \"papervoger\", "
@@ -856,8 +849,7 @@ msgid "Secondary Color"
 msgstr "Liv eilvedel"
 
 #: schemas/org.cafe.background.gschema.xml.in:54
-msgid ""
-"Right or Bottom color when drawing gradients, not used for solid color."
+msgid "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
 "Liv a-zehou pe en traoñ pa saver ilrezennoù, ne vez ket arveret evit ul liv "
 "unvan."
@@ -871,8 +863,8 @@ msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
-"Penaos lakaat un anneuenn d'al liv drekleur. Ar gwerzhioù a c'hall talvezout"
-" da \"ilrezenn a-blaen\", \"ilrezenn aserzh\" hag \"unvan\"."
+"Penaos lakaat un anneuenn d'al liv drekleur. Ar gwerzhioù a c'hall talvezout "
+"da \"ilrezenn a-blaen\", \"ilrezenn aserzh\" hag \"unvan\"."
 
 #: schemas/org.cafe.file-views.gschema.xml:5
 msgid "File Icon Theme"
@@ -915,7 +907,9 @@ msgid "Toolbar Style"
 msgstr "Stil ar varrennad ostilhoù"
 
 #: schemas/org.cafe.interface.gschema.xml:21
-msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgid ""
+"Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
+"\"text\"."
 msgstr ""
 "Stil ar varrennad ostilhoù. Ar gwrzhioù talvoudek a dalv da \"an eil hag "
 "egile\", \"an eil hag egile a-blaen\", \"arlunioù\" ha \"testenn\"."
@@ -945,8 +939,8 @@ msgstr "Barrennad al lañserioù a c'hall bezañ distaget"
 #: schemas/org.cafe.interface.gschema.xml:36
 msgid "Whether the user can detach menubars and move them around."
 msgstr ""
-"Mar bez distaget barrennadoù al lañserioù gant an arveriad ha dilec'hiet tro"
-" dro dezho."
+"Mar bez distaget barrennadoù al lañserioù gant an arveriad ha dilec'hiet tro "
+"dro dezho."
 
 #: schemas/org.cafe.interface.gschema.xml:40
 msgid "Toolbar Detachable"
@@ -963,7 +957,8 @@ msgid "Toolbar Icon Size"
 msgstr "Ment arlun ar varrennad ostilhoù"
 
 #: schemas/org.cafe.interface.gschema.xml:46
-msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgid ""
+"Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "Ment an arlunioù war ar varrennad ostilhoù, pe \"barrennad ostilhoù vihan\" "
 "pe \"barrennad ostilhoù vras\"."
@@ -1053,13 +1048,13 @@ msgstr "Arverañ barrenn ditl CTK3"
 #: schemas/org.cafe.interface.gschema.xml:101
 msgid ""
 "Whether builtin CTK+ dialogs such as the file chooser, the color chooser or "
-"the font chooser will use a header bar at the top to show action widgets, or"
-" an action area at the bottom. This setting does not affect custom dialogs "
+"the font chooser will use a header bar at the top to show action widgets, or "
+"an action area at the bottom. This setting does not affect custom dialogs "
 "using CtkDialog directly, or message dialogs."
 msgstr ""
 "Hag-eñ e vo arveret ur varrenn ditl el lein da ziskouez gwered ar widjed pe "
-"ur maez gwered en traoñ gant boestadoù emziviz CTK+ evel an dibaber restroù,"
-" an dibaber livioù pe an dibaber nodrezhoù. Ne dizho ket an arventennoù-mañ "
+"ur maez gwered en traoñ gant boestadoù emziviz CTK+ evel an dibaber restroù, "
+"an dibaber livioù pe an dibaber nodrezhoù. Ne dizho ket an arventennoù-mañ "
 "ar boestadoù emziviz personelaet oc'h ober gant CtkDialog end-eeun pe "
 "voestad emziviz ar c'hemennadennoù."
 
@@ -1170,16 +1165,14 @@ msgstr "Aozadur barrenn ditl prenestroù kinklet diouzh tu an arveriaded"
 #: schemas/org.cafe.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
-"client-side decorated windows, and whether they should be placed at the left"
-" of right. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout."
+"client-side decorated windows, and whether they should be placed at the left "
+"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
+"html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Gant an arvetenn-mañ e tespizer peseurt afelloù a vo lakaet war war warrenn "
-"didl prenestroù kinklet diouzh tu an arveriaded ha hag-eñ e vo lakaet war an"
-" tu kleiz pe zehou. Lennit "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"decoration-layout"
+"didl prenestroù kinklet diouzh tu an arveriaded ha hag-eñ e vo lakaet war an "
+"tu kleiz pe zehou. Lennit https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout"
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1188,9 +1181,8 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1200,9 +1192,8 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See "
-"https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
-"shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://developer.gnome."
+"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1258,8 +1249,8 @@ msgstr "Diweredekaat an arc'had"
 
 #: schemas/org.cafe.lockdown.gschema.xml:6
 msgid ""
-"Prevent the user from accessing the terminal or specifying a command line to"
-" be executed. For example, this would disable access to the panel's \"Run "
+"Prevent the user from accessing the terminal or specifying a command line to "
+"be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 "Mirout an arveriad ouzh tihout an dermenell pe ouzh erspizañ un arc'had a "
@@ -1413,8 +1404,8 @@ msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Ment uc'hek eus ar melvennoù er grubuilh, e megaeizhbitoù. Lakaat da -1 evit"
-" diweredekaat ar skarzhañ."
+"Ment uc'hek eus ar melvennoù er grubuilh, e megaeizhbitoù. Lakaat da -1 evit "
+"diweredekaat ar skarzhañ."
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:5
 msgid "Disable all external thumbnailers"
@@ -1438,8 +1429,8 @@ msgstr ""
 
 #: schemas/org.cafe.thumbnailers.gschema.xml:11
 msgid ""
-"Thumbnails will not be created for files whose mime-type is contained in the"
-" list."
+"Thumbnails will not be created for files whose mime-type is contained in the "
+"list."
 msgstr ""
 "Ar melvennoù ne vint ket krouet evit ar restroù o rizhoù MIME a zo war ar "
 "roll-mañ."
@@ -1488,14 +1479,7 @@ msgstr "Boestad emziviz diuzadur al livioù"
 msgid "Choose colors from the palette or the screen"
 msgstr "Dibab livioù diwar al livaoueg pe ar skramm"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: tools/cafe-color-select.desktop.in:8
-msgid "ctk-select-color"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
