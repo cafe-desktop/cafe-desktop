@@ -15,7 +15,6 @@ headers = files(
   'cafe-rr-labeler.h',
   'cafe-colorbutton.h',
   'cafe-colorsel.h',
-  'cafe-hsv.h',
   'cafe-colorseldialog.h',
 )
 
@@ -40,7 +39,6 @@ sources = files(
   'cafe-rr-labeler.c',
   'cafe-colorbutton.c',
   'cafe-colorsel.c',
-  'cafe-hsv.c',
   'cafe-colorseldialog.c',
   'edid-parse.c',
 )
