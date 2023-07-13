@@ -79,7 +79,7 @@ iso_codes_prefix = iso_codes.get_pkgconfig_variable('prefix')
 libmdt_dep = [
   dependency('gdk-pixbuf-2.0'),
   dependency('gobject-2.0'),
-  dependency('glib-2.0', version: '>= 2.50.0'),
+  dependency('glib-2.0', version: '>= 2.67.3'),
   dependency('gio-2.0', version: '>= 2.26.0'),
   dependency('libstartup-notification-1.0', version: '>= 0.5',
     required: enable_startup_notification ),
