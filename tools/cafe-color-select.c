@@ -81,6 +81,8 @@ main (int argc, char **argv)
     ctk_widget_hide (CAFE_COLOR_SELECTION_DIALOG (color_dialog)->cancel_button);
     ctk_widget_hide (CAFE_COLOR_SELECTION_DIALOG (color_dialog)->help_button);
 
+    g_object_set (ctk_settings_get_default (), "ctk-button-images", TRUE, NULL);
+
     /* start application */
     ctk_main ();
     return 0;
