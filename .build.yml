@@ -4,7 +4,7 @@
 requires:
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-cafe-team/cafe-desktop
+    # cafe B-D: libctk-3-dev libctk-3-doc cafe-common
     - aptitude
     - autoconf-archive
     - autopoint
