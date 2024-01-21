@@ -1,0 +1,1 @@
+ci: make-scanbuild: remove prefix already included in the script

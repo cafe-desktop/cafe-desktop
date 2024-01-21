@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>cafe-desktop (clang-tools 1:16.0-57) - scan-build results</title>
+<link type="text/css" rel="stylesheet" href="scanview.css"/>
+<script src="sorttable.js"></script>
+<script language='javascript' type="text/javascript">
+function SetDisplay(RowClass, DisplayVal)
+{
+  var Rows = document.getElementsByTagName("tr");
+  for ( var i = 0 ; i < Rows.length; ++i ) {
+    if (Rows[i].className == RowClass) {
+      Rows[i].style.display = DisplayVal;
+    }
+  }
+}
+
+function CopyCheckedStateToCheckButtons(SummaryCheckButton) {
+  var Inputs = document.getElementsByTagName("input");
+  for ( var i = 0 ; i < Inputs.length; ++i ) {
+    if (Inputs[i].type == "checkbox") {
+      if(Inputs[i] != SummaryCheckButton) {
+        Inputs[i].checked = SummaryCheckButton.checked;
+        Inputs[i].onclick();
+      }
+    }
+  }
+}
+
+function returnObjById( id ) {
+    if (document.getElementById)
+        var returnVar = document.getElementById(id);
+    else if (document.all)
+        var returnVar = document.all[id];
+    else if (document.layers)
+        var returnVar = document.layers[id];
+    return returnVar;
+}
+
+var NumUnchecked = 0;
+
+function ToggleDisplay(CheckButton, ClassName) {
+  if (CheckButton.checked) {
+    SetDisplay(ClassName, "");
+    if (--NumUnchecked == 0) {
+      returnObjById("AllBugsCheck").checked = true;
+    }
+  }
+  else {
+    SetDisplay(ClassName, "none");
+    NumUnchecked++;
+    returnObjById("AllBugsCheck").checked = false;
+  }
+}
+</script>
+<!-- SUMMARYENDHEAD -->
+</head>
+<body>
+<h1>cafe-desktop (clang-tools 1:16.0-57) - scan-build results</h1>
+
+<table>
+<tr><th>User:</th><td>root@0871ac4df122</td></tr>
+<tr><th>Working Directory:</th><td>/rootdir</td></tr>
+<tr><th>Command Line:</th><td>make -j 5</td></tr>
+<tr><th>Clang Version:</th><td>Debian clang version 16.0.6 (19)
+</td></tr>
+<tr><th>Date:</th><td>Sun Jan 21 02:28:36 2024</td></tr>
+</table>
+<h2>Bug Summary</h2><table>
+<thead><tr><td>Bug Type</td><td>Quantity</td><td class="sorttable_nosort">Display?</td></tr></thead>
+<tr style="font-weight:bold"><td class="SUMM_DESC">All Bugs</td><td class="Q">11</td><td><center><input type="checkbox" id="AllBugsCheck" onClick="CopyCheckedStateToCheckButtons(this);" checked/></center></td></tr>
+<tr><th>Logic error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dereference of null pointer</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_dereference_of_null_pointer');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Garbage return value</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_garbage_return_value');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Out-of-bound access</td><td class="Q">5</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_out-of-bound_access');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Uninitialized argument value</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_uninitialized_argument_value');" checked/></center></td></tr>
+<tr><th>Unused code</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dead nested assignment</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_dead_nested_assignment');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Unreachable code</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_unreachable_code');" checked/></center></td></tr>
+</table>
+<h2>Reports</h2>
+
+<table class="sortable" style="table-layout:automatic">
+<thead><tr>
+  <td>Bug Group</td>
+  <td class="sorttable_sorted">Bug Type<span id="sorttable_sortfwdind">&nbsp;&#x25BE;</span></td>
+  <td>File</td>
+  <td>Function/Method</td>
+  <td class="Q">Line</td>
+  <td class="Q">Path Length</td>
+  <td class="sorttable_nosort"></td>
+  <!-- REPORTBUGCOL -->
+</tr></thead>
+<tbody>
+<tr class="bt_unused_code_dead_nested_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead nested assignment</td><td>docs/reference/cafe-desktop/cafe-desktop-scan.c</td><td class="DESC">output_object_signal</td><td class="Q">188</td><td class="Q">1</td><td><a href="report-25ea44.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-25ea44.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>libcafe-desktop/cafe-bg.c</td><td class="DESC">find_best_size</td><td class="Q">2329</td><td class="Q">74</td><td><a href="report-116842.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-116842.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>libcafe-desktop/tmp-introspect70o3uyo7/CafeDesktop-2.0.c</td><td class="DESC">main</td><td class="Q">799</td><td class="Q">12</td><td><a href="report-891289.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-891289.html" -->
+</tr>
+<tr class="bt_logic_error_garbage_return_value"><td class="DESC">Logic error</td><td class="DESC">Garbage return value</td><td>libcafe-desktop/cafe-desktop-item.c</td><td class="DESC">ditem_execute</td><td class="Q">2026</td><td class="Q">48</td><td><a href="report-b449e8.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b449e8.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libcafe-desktop/cafe-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3117</td><td class="Q">27</td><td><a href="report-30e8a4.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-30e8a4.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libcafe-desktop/cafe-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3125</td><td class="Q">27</td><td><a href="report-425c9c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-425c9c.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libcafe-desktop/cafe-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3121</td><td class="Q">27</td><td><a href="report-689d47.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-689d47.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libcafe-desktop/cafe-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3116</td><td class="Q">37</td><td><a href="report-8fac16.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-8fac16.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libcafe-desktop/cafe-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3132</td><td class="Q">24</td><td><a href="report-d0e85f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d0e85f.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>libcafe-desktop/cafe-bg.c</td><td class="DESC">create_img_thumbnail</td><td class="Q">2274</td><td class="Q">76</td><td><a href="report-d63bea.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d63bea.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libcafe-desktop/tmp-introspect70o3uyo7/CafeDesktop-2.0.c</td><td class="DESC">value_to_string</td><td class="Q">239</td><td class="Q">1</td><td><a href="report-fb6164.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-fb6164.html" -->
+</tr>
+</tbody>
+</table>
+
+</body></html>

@@ -1,0 +1,3 @@
+build: GLib 2.67.3 required
+
+required for 'g_memdup2'
