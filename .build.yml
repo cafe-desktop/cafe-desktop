@@ -35,7 +35,7 @@ before_scripts:
 
 build_scripts:
   - ./before-build
-  - ./make-scanbuild '--prefix=/usr --enable-gtk-doc --enable-compile-warnings=maximum'
+  - ./make-scanbuild '--enable-gtk-doc --enable-compile-warnings=maximum'
   - ./after-build
 
 after_scripts:
