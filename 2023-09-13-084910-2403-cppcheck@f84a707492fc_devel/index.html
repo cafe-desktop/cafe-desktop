@@ -1,0 +1,256 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - cafe-desktop (cppcheck 2.11-3)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - cafe-desktop (cppcheck 2.11-3)</h1>
+      <div id="filters">
+
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="error"checked/>error</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="warning"disabled/>warning</label>
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="portability"checked/>portability</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="performance"disabled/>performance</label>
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="style"checked/>style</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="information"disabled/>information</label>
+        | 
+        <label class="checkBtn"><input type="checkbox" onclick="toggleTool(this)" id="cppcheck"checked/>cppcheck</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleTool(this)" id="clang-tidy"disabled/>clang-tidy</label>
+        | 
+        <label class="severityHeader">File: <input type="text" oninput="filterFile(this.value)"/></label>
+        <label class="severityHeader">Filter: <input type="text" oninput="filterText(this.value)"/></label>
+      </div>
+
+    </div>
+
+    <div id="menu_index">
+     <p><a href="index.html">Defect summary</a> </p>
+
+       <label><input type="checkbox" class="idToggle" onclick="toggleAll()" checked> Toggle all</label>
+       <table>
+           <tr><th>Show</th><th>#</th><th>Defect ID</th></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="varFuncNullUB" name="varFuncNullUB" checked></td><td>23</td><td>varFuncNullUB</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="unknownMacro" name="unknownMacro" checked></td><td>9</td><td>unknownMacro</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="constVariable" name="constVariable" checked></td><td>3</td><td>constVariable</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="constParameterPointer" name="constParameterPointer" checked></td><td>2</td><td>constParameterPointer</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="multiCondition" name="multiCondition" checked></td><td>1</td><td>multiCondition</td></tr>
+           <tr><td></td><td>38</td><td>total</td></tr>
+       </table>
+       <p><a href="stats.html">Statistics</a></p>
+    </div>
+    <div id="content_index">
+
+       <table class="summaryTable">
+       <tr><th>Line</th><th>Id</th><th>CWE</th><th>Severity</th><th>Message</th></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="0.html">libcafe-desktop/cafe-bg-crossfade.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="0.html#line-69">69</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="1.html">libcafe-desktop/cafe-bg.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="1.html#line-125">125</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="2.html">libcafe-desktop/cafe-colorbutton.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="2.html#line-121">121</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="3.html">libcafe-desktop/cafe-colorsel.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="3.html#line-245">245</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="4.html">libcafe-desktop/cafe-colorseldialog.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="4.html#line-53">53</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="5.html">libcafe-desktop/cafe-desktop-item.c</a></td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3172">3172</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3174">3174</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3175">3175</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3176">3176</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3178">3178</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3180">3180</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3182">3182</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3183">3183</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3185">3185</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3186">3186</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3187">3187</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3188">3188</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3189">3189</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3190">3190</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3191">3191</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3192">3192</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3193">3193</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3194">3194</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3195">3195</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3196">3196</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3198">3198</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3200">3200</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="5.html#line-3202">3202</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="constParameterPointer sev_style issue"><td><a href="5.html#line-3495">3495</a></td><td>constParameterPointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Parameter &apos;item&apos; can be declared as pointer to const</td></tr>
+         <tr class="constVariable sev_style issue"><td><a href="5.html#line-3498">3498</a></td><td>constVariable</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;locales&apos; can be declared as const array</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="6.html">libcafe-desktop/cafe-desktop-thumbnail.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="6.html#line-62">62</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="7.html">libcafe-desktop/cafe-desktop-utils.c</a></td></tr>
+         <tr class="multiCondition sev_style issue"><td><a href="7.html#line-138">138</a></td><td>multiCondition</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Expression is always true because &apos;else if&apos; condition is opposite to previous condition at line 132.</td></tr>
+         <tr class="constParameterPointer sev_style issue"><td><a href="7.html#line-244">244</a></td><td>constParameterPointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Parameter &apos;a&apos; can be declared as pointer to const</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="8.html">libcafe-desktop/cafe-rr-config.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="8.html#line-94">94</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="9.html">libcafe-desktop/cafe-rr-output-info.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="9.html#line-33">33</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="10.html">libcafe-desktop/cafe-rr.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="10.html#line-169">169</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="11.html">libcafe-desktop/edid-parse.c</a></td></tr>
+         <tr class="constVariable sev_style issue"><td><a href="11.html#line-220">220</a></td><td>constVariable</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;color_type&apos; can be declared as const array</td></tr>
+         <tr class="constVariable sev_style issue"><td><a href="11.html#line-424">424</a></td><td>constVariable</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;stereo&apos; can be declared as const array</td></tr>
+      </tbody>
+       </table>
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.11 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>
