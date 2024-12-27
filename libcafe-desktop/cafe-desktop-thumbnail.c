@@ -205,7 +205,7 @@ thumbnailer_try_exec (Thumbnailer *thumb)
 }
 
 static gpointer
-init_thumbnailers_dirs (gpointer data)
+init_thumbnailers_dirs (gpointer data G_GNUC_UNUSED)
 {
   const gchar * const *data_dirs;
   GPtrArray *thumbs_dirs;
@@ -279,7 +279,7 @@ cafe_desktop_thumbnail_factory_is_disabled (CafeDesktopThumbnailFactory *factory
 }
 
 static gboolean
-remove_thumbnailer_from_mime_type_map (gchar       *key,
+remove_thumbnailer_from_mime_type_map (gchar       *key G_GNUC_UNUSED,
                                        Thumbnailer *value,
                                        gchar       *path)
 {
@@ -440,7 +440,7 @@ cafe_desktop_thumbnail_factory_load_thumbnailers_for_dir (CafeDesktopThumbnailFa
 static void
 thumbnailers_directory_changed (GFileMonitor                *monitor,
                                 GFile                       *file,
-                                GFile                       *other_file,
+                                GFile                       *other_file G_GNUC_UNUSED,
                                 GFileMonitorEvent            event_type,
                                 CafeDesktopThumbnailFactory *factory)
 {
@@ -503,8 +503,8 @@ cafe_desktop_thumbnail_factory_load_thumbnailers (CafeDesktopThumbnailFactory *f
 }
 
 static void
-external_thumbnailers_disabled_all_changed_cb (GSettings                   *settings,
-                                               const gchar                 *key,
+external_thumbnailers_disabled_all_changed_cb (GSettings                   *settings G_GNUC_UNUSED,
+                                               const gchar                 *key G_GNUC_UNUSED,
                                                CafeDesktopThumbnailFactory *factory)
 {
   CafeDesktopThumbnailFactoryPrivate *priv = factory->priv;
@@ -527,8 +527,8 @@ external_thumbnailers_disabled_all_changed_cb (GSettings                   *sett
 }
 
 static void
-external_thumbnailers_disabled_changed_cb (GSettings                   *settings,
-                                           const gchar                 *key,
+external_thumbnailers_disabled_changed_cb (GSettings                   *settings G_GNUC_UNUSED,
+                                           const gchar                 *key G_GNUC_UNUSED,
                                            CafeDesktopThumbnailFactory *factory)
 {
   CafeDesktopThumbnailFactoryPrivate *priv = factory->priv;
@@ -715,7 +715,7 @@ static char *
 validate_thumbnail_path (char                     *path,
                          const char               *uri,
                          time_t                    mtime,
-                         CafeDesktopThumbnailSize  size)
+                         CafeDesktopThumbnailSize  size G_GNUC_UNUSED)
 {
   GdkPixbuf *pixbuf;
 
@@ -1260,9 +1260,9 @@ cafe_desktop_thumbnail_factory_save_thumbnail (CafeDesktopThumbnailFactory *fact
  * Since: 2.2
  **/
 void
-cafe_desktop_thumbnail_factory_create_failed_thumbnail (CafeDesktopThumbnailFactory *factory,
+cafe_desktop_thumbnail_factory_create_failed_thumbnail (CafeDesktopThumbnailFactory *factory G_GNUC_UNUSED,
                                                         const char                  *uri,
-                                                        time_t                      mtime)
+                                                        time_t                       mtime)
 {
   char *path;
   GdkPixbuf *pixbuf;

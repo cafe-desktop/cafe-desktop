@@ -448,7 +448,7 @@ cafe_bg_save_to_gsettings (CafeBG    *bg,
 
 
 static void
-cafe_bg_init (CafeBG *bg)
+cafe_bg_init (CafeBG *bg G_GNUC_UNUSED)
 {
 }
 
@@ -752,10 +752,10 @@ refresh_cache_file (CafeBG     *bg,
 }
 
 static void
-file_changed (GFileMonitor     *file_monitor,
-	      GFile            *child,
-	      GFile            *other_file,
-	      GFileMonitorEvent event_type,
+file_changed (GFileMonitor     *file_monitor G_GNUC_UNUSED,
+	      GFile            *child G_GNUC_UNUSED,
+	      GFile            *other_file G_GNUC_UNUSED,
+	      GFileMonitorEvent event_type G_GNUC_UNUSED,
 	      gpointer          user_data)
 {
 	CafeBG *bg = CAFE_BG (user_data);
@@ -2737,12 +2737,12 @@ static gboolean stack_is (SlideShow *parser, const char *s1, ...);
 
 /* Parser for fading background */
 static void
-handle_start_element (GMarkupParseContext *context,
+handle_start_element (GMarkupParseContext *context G_GNUC_UNUSED,
 		      const gchar         *name,
 		      const gchar        **attr_names,
 		      const gchar        **attr_values,
 		      gpointer             user_data,
-		      GError             **err)
+		      GError             **err G_GNUC_UNUSED)
 {
 	SlideShow *parser = user_data;
 	gint i;
@@ -2780,10 +2780,10 @@ handle_start_element (GMarkupParseContext *context,
 }
 
 static void
-handle_end_element (GMarkupParseContext *context,
-		    const gchar         *name,
+handle_end_element (GMarkupParseContext *context G_GNUC_UNUSED,
+		    const gchar         *name G_GNUC_UNUSED,
 		    gpointer             user_data,
-		    GError             **err)
+		    GError             **err G_GNUC_UNUSED)
 {
 	SlideShow *parser = user_data;
 
@@ -2837,11 +2837,11 @@ parse_int (const char *text)
 }
 
 static void
-handle_text (GMarkupParseContext *context,
+handle_text (GMarkupParseContext *context G_GNUC_UNUSED,
 	     const gchar         *text,
-	     gsize                text_len,
+	     gsize                text_len G_GNUC_UNUSED,
 	     gpointer             user_data,
-	     GError             **err)
+	     GError             **err G_GNUC_UNUSED)
 {
 	SlideShow *parser = user_data;
 	FileSize *fs;
@@ -2978,7 +2978,7 @@ slideshow_unref (SlideShow *show)
 }
 
 static void
-dump_bg (SlideShow *show)
+dump_bg (SlideShow *show G_GNUC_UNUSED)
 {
 #if 0
 	GList *list;

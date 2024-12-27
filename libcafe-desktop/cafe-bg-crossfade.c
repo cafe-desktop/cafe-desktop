@@ -435,7 +435,7 @@ draw_background (CafeBGCrossfade *fade)
 }
 
 static gboolean
-on_widget_draw (CtkWidget       *widget,
+on_widget_draw (CtkWidget       *widget G_GNUC_UNUSED,
                 cairo_t         *cr,
                 CafeBGCrossfade *fade)
 {

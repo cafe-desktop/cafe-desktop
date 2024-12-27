@@ -162,12 +162,12 @@ stack_is (Parser *parser,
 }
 
 static void
-handle_start_element (GMarkupParseContext *context,
+handle_start_element (GMarkupParseContext *context G_GNUC_UNUSED,
 		      const gchar         *name,
 		      const gchar        **attr_names,
 		      const gchar        **attr_values,
 		      gpointer             user_data,
-		      GError             **err)
+		      GError             **err G_GNUC_UNUSED)
 {
     Parser *parser = user_data;
 
@@ -227,10 +227,10 @@ handle_start_element (GMarkupParseContext *context,
 }
 
 static void
-handle_end_element (GMarkupParseContext *context,
+handle_end_element (GMarkupParseContext *context G_GNUC_UNUSED,
 		    const gchar         *name,
 		    gpointer             user_data,
-		    GError             **err)
+		    GError             **err G_GNUC_UNUSED)
 {
     Parser *parser = user_data;
 
@@ -260,11 +260,11 @@ handle_end_element (GMarkupParseContext *context,
 #define TOPLEVEL_ELEMENT (parser->config_file_version > 0 ? "monitors" : NULL)
 
 static void
-handle_text (GMarkupParseContext *context,
+handle_text (GMarkupParseContext *context G_GNUC_UNUSED,
 	     const gchar         *text,
-	     gsize                text_len,
+	     gsize                text_len G_GNUC_UNUSED,
 	     gpointer             user_data,
-	     GError             **err)
+	     GError             **err G_GNUC_UNUSED)
 {
     Parser *parser = user_data;
 
@@ -492,7 +492,8 @@ cafe_rr_config_finalize (GObject *gobject)
 }
 
 gboolean
-cafe_rr_config_load_current (CafeRRConfig *config, GError **error)
+cafe_rr_config_load_current (CafeRRConfig *config,
+			     GError      **error G_GNUC_UNUSED)
 {
     GPtrArray *a;
     CafeRROutput **rr_outputs;
