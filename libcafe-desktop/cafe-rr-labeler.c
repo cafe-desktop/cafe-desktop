@@ -163,8 +163,8 @@ get_work_area (CafeRRLabeler *labeler,
 }
 
 static CdkFilterReturn
-screen_xevent_filter (CdkXEvent      *xevent,
-		      CdkEvent       *event,
+screen_xevent_filter (CdkXEvent     *xevent,
+		      CdkEvent      *event G_GNUC_UNUSED,
 		      CafeRRLabeler *labeler)
 {
 	XEvent *xev;
@@ -322,7 +322,9 @@ make_palette (CafeRRLabeler *labeler)
 #define LABEL_WINDOW_PADDING 12
 
 static gboolean
-label_window_draw_event_cb (CtkWidget *widget, cairo_t *cr, gpointer data)
+label_window_draw_event_cb (CtkWidget *widget,
+			    cairo_t   *cr,
+			    gpointer   data G_GNUC_UNUSED)
 {
 	CdkRGBA *color;
 	CtkAllocation allocation;
