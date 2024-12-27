@@ -18,9 +18,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/cafe/teams/13566/cs/)\n"
@@ -66,7 +66,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -392,7 +392,7 @@ msgstr "Chyba při přetáčení souboru \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "Žádný název"
 
@@ -410,28 +410,28 @@ msgstr "Nelze najít soubor \"%s\""
 msgid "No filename to save to"
 msgstr "Žádný soubor, do kterého se má ukládat"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "Spouští se %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "Žádné URL ke spuštění"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "Nespustitelná položka"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "Žádný příkaz (Exec) ke spuštění"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Chybný příkaz (Exec) ke spuštění"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Neznámé kódování: %s"
@@ -457,11 +457,11 @@ msgstr "nezpracovaná chyba X při získávání rozsahu velikostí obrazovky"
 msgid "could not get the range of screen sizes"
 msgstr "nelze získat rozsah velikostí obrazovky"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "Rozšíření RANDR není přítomno"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "nelze získat informace o výstupu %d"
@@ -469,7 +469,7 @@ msgstr "nelze získat informace o výstupu %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -478,41 +478,41 @@ msgstr ""
 "požadovaná poloha/velikost CRTC %d je mimo povolený limit: poloha=(%d, %d), "
 "velikost=(%d, %d), maximum=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "nelze nastavit konfiguraci CRTC %d"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "nelze získat informace o CRTC %d"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "Notebook"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "žádná z uložených konfigurací displeje neodpovídá aktivní konfiguraci"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d nemůže řídit výstup %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "výstup %s nepodporuje režim %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d nepodporuje rotation=%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -525,23 +525,23 @@ msgstr ""
 "existující souřadnice = (%d, %d), nové souřadnice = (%d, %d)\n"
 "existující otočení = %s, nové otočení = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "nelze klonovat na výstup %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Zkouší se režimy CRTC %d\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d: zkouší se režim %dx%d@%dHz s výstupem na %dx%d@%dHz (průchod %d)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -550,7 +550,7 @@ msgstr ""
 "k výstupům nelze přiřadit CRTC:\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -562,7 +562,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -577,7 +577,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "Zrcadlící obrazovky"
 
@@ -837,9 +837,9 @@ msgid ""
 "\"spanned\"."
 msgstr ""
 "Určuje, jak je vykreslen obrázek nastavený v wallpaper_filename. Možné "
-"hodnoty jsou \"none\" (žádný), \"wallpaper\" (pozadí plochy), "
-"\"centered\" (vycentrováno), \"scaled\" (změna měřítka), "
-"\"stretched\" (roztáhnuto), \"zoom\" (příblíženo), \"spanned\"."
+"hodnoty jsou \"none\" (žádný), \"wallpaper\" (pozadí plochy), \"centered\" "
+"(vycentrováno), \"scaled\" (změna měřítka), \"stretched\" (roztáhnuto), "
+"\"zoom\" (příblíženo), \"spanned\"."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -933,8 +933,8 @@ msgid ""
 "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
 "\"text\"."
 msgstr ""
-"Styl lišty nástrojů. Platné hodnoty jsou „both“ (ikony i text), „both-"
-"horiz“ (ikony i text vodorovně), „icons“ (jen ikony) a „text“ (jen text)."
+"Styl lišty nástrojů. Platné hodnoty jsou „both“ (ikony i text), „both-horiz“ "
+"(ikony i text vodorovně), „icons“ (jen ikony) a „text“ (jen text)."
 
 #: schemas/org.cafe.interface.gschema.xml:25
 msgid "Menus Have Icons"
@@ -1180,8 +1180,8 @@ msgstr "Uspořádání záhlaví CTK3 client-side oken"
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Toto nastavení určuje, která tlačítka je třeba dát do titulní lišty u client-"
 "side oken, a to, zda by měly být umístěny na levé straně vpravo. Viz https://"
@@ -1195,8 +1195,9 @@ msgstr "Používat globální lištu menu pro zobrazování nabídek aplikací"
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "Toto nastavení určuje, kde se zobrazí nabídka aplikace - v okně nebo na "
 "panelu s protokolem MenuModel. Viz https://developer.gnome.org/ctk3/stable/"
@@ -1209,8 +1210,9 @@ msgstr "Používat globální lištu menu pro zobrazování nabídek okna"
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "Toto nastavení určuje, kde se budou zobrazovat nabídky oken - v okně nebo na "
 "panelu s protokolem MenuModel. Viz https://developer.gnome.org/ctk3/stable/"
@@ -1489,7 +1491,7 @@ msgstr "Zda je povoleno zamknutí klávesnice"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Zda je povoleno zamknutí klávesnice."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "CAFE výběr barev"
 
@@ -1504,8 +1506,7 @@ msgstr "Vyberte si barvy z palety, nebo na obrazovce"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
-"CAFE;barva;výběr;paleta;obrazovka;volič;vybrat;vybírat;vybírání;zvolit;"
+msgstr "CAFE;barva;výběr;paleta;obrazovka;volič;vybrat;vybírat;vybírání;zvolit;"
 
 #~ msgid "cafe-desktop"
 #~ msgstr "cafe-desktop"

@@ -16,9 +16,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: István Nagy <kisbela@gmail.com>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/cafe/teams/13566/hu/)\n"
@@ -59,7 +59,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -391,7 +391,7 @@ msgstr "Hiba a(z) „%s” fájl visszacsévélése közben: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "Névtelen"
 
@@ -409,28 +409,28 @@ msgstr "Nem található a(z) „%s” fájl"
 msgid "No filename to save to"
 msgstr "Nincs neve a mentendő fájlnak "
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "%s indítása"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "Nincs indítandó URL"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "Nem futtatható elem"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "Nincs indítandó parancs"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Rossz indítandó parancs"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Ismeretlen kódolás: %s"
@@ -458,11 +458,11 @@ msgstr "kezeletlen X hiba történt a képméretek tartományának lekérése k�
 msgid "could not get the range of screen sizes"
 msgstr "nem kérhető le a képméretek tartománya"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "a RANDR kiterjesztés nincs jelen"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "nem lehet információkat lekérni a kimenetről: %d"
@@ -470,7 +470,7 @@ msgstr "nem lehet információkat lekérni a kimenetről: %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -479,42 +479,42 @@ msgstr ""
 "A kért pozíció/méret a(z) %d. CRTC-hez kívül esik az engedélyezett korláton: "
 "pozíció=(%d, %d), méret=(%d, %d), maximum=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "nem állítható be a(z) %d. CRTC konfigurációja"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "nem kérhető információ a(z) %d. CRTC-ről"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "Laptop"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr ""
 "a mentett képernyő-beállítások egyike sem felel meg az aktív konfigurációnak"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "a(z) %d. CRTC nem képes %s kimenet meghajtására"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "a(z) %s kimenet nem támogatja ezt a módot: %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "a(z) %d. CRTC nem támogatja a(z) %s forgatásértéket"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -528,24 +528,24 @@ msgstr ""
 "létező koordináták = (%d, %d), új koordináták = (%d, %d)\n"
 "létező forgatás = %s, új forgatás = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "nem lehet klónozni a(z) %s kimenetre"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Módok kipróbálása a(z) %d. CRTC-hez\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "%d. CRTC: %dx%d@%dHz mód kipróbálása a(z) %dx%d@%dHz módú kimenettel (%d. "
 "lépés)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -554,7 +554,7 @@ msgstr ""
 "nem rendelhetők CRTC-k a kimenetekhez:\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -566,7 +566,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -581,7 +581,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr ""
 "Képernyők\n"
@@ -844,8 +844,8 @@ msgid ""
 msgstr ""
 "Meghatározza a wallpaper_filename kulcsban beállított kép megjelenését. "
 "Lehetséges értékek:  „wallpaper” (mozaik), „centered” (középre igazított), "
-"„scaled” (kifeszített), „stretched” (nyújtott), „zoom” (nagyítás), "
-"„spanned” (kiterjesztett)."
+"„scaled” (kifeszített), „stretched” (nyújtott), „zoom” (nagyítás), „spanned” "
+"(kiterjesztett)."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -941,8 +941,8 @@ msgid ""
 "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and "
 "\"text\"."
 msgstr ""
-"Eszköztár stílusa. Lehetséges értékek: „both” (mindkettő), "
-"„both_horiz” (mindkettő vízszintesen), „icon” (ikon), és „text” (szöveg)."
+"Eszköztár stílusa. Lehetséges értékek: „both” (mindkettő), „both_horiz” "
+"(mindkettő vízszintesen), „icon” (ikon), és „text” (szöveg)."
 
 #: schemas/org.cafe.interface.gschema.xml:25
 msgid "Menus Have Icons"
@@ -984,8 +984,8 @@ msgstr "Eszköztárikonok mérete"
 msgid ""
 "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
-"Az eszköztárikonok mérete, a „small-toolbar” (kicsi) vagy „large-"
-"toolbar” (nagy) egyike."
+"Az eszköztárikonok mérete, a „small-toolbar” (kicsi) vagy „large-toolbar” "
+"(nagy) egyike."
 
 #: schemas/org.cafe.interface.gschema.xml:50
 msgid "Cursor Blink"
@@ -1189,8 +1189,8 @@ msgstr "Címsor elrendezés a CTK3 kliensoldalon díszített ablakokon"
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Ez a beállítás határozza meg, hogy mely gombok kerüljenek a kliens oldali "
 "díszített ablakokra és hogy az ablak bal- vagy jobboldalára. Lásd https://"
@@ -1204,8 +1204,9 @@ msgstr "Globális menüsáv használata az alkalmazásmenük megjelenítéséhez
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "A beállítás meghatározza, hogy hol jelenjen meg az alkalmazásmenü – az "
 "ablakon, vagy a panelen a MenuModel protokoll használatával. Lásd: https://"
@@ -1219,8 +1220,9 @@ msgstr "Globális menüsáv használata az ablakok menüsávjainak megjeleníté
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "Ez a beállítás határozza meg, hogy hol jelenjenek meg a menüsávok – az "
 "ablakon, vagy a panelen a MenuModel protokoll használatával. Lásd: https://"
@@ -1505,7 +1507,7 @@ msgstr "Engedélyezve legyen-e a billentyűzetzárolás vagy sem"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Engedélyezve legyen-e a billentyűzetzárolás vagy sem."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "CAFE Színválasztás"
 
@@ -1520,9 +1522,7 @@ msgstr "Válasszon színt a palettáról, vagy a képernyőről"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
-"CAFE;color;chooser;pick;palette;screen;selection;szín;választó;kiválasztás;"
-"paletta;kijelző;képernyő;kiválasztás"
+msgstr "CAFE;color;chooser;pick;palette;screen;selection;szín;választó;kiválasztás;paletta;kijelző;képernyő;kiválasztás"
 
 #~ msgid "cafe-desktop"
 #~ msgstr "cafe-desktop"

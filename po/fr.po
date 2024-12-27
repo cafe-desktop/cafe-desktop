@@ -21,9 +21,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Rox fr <roxfr@outlook.fr>, 2020\n"
 "Language-Team: French (https://www.transifex.com/cafe/teams/13566/fr/)\n"
@@ -70,7 +70,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -402,7 +402,7 @@ msgstr "Erreur en rembobinant le fichier « %s » : %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "Sans nom"
 
@@ -420,28 +420,28 @@ msgstr "Impossible de trouver le fichier « %s »"
 msgid "No filename to save to"
 msgstr "Aucun nom de fichier pour enregistrer"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "Démarrage de %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "Aucun URL à lancer"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "L'élément ne peut pas être lancé"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "Aucune commande (exec) à lancer"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Mauvaise commande (exec) à lancer"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Codage inconnu de : %s"
@@ -471,11 +471,11 @@ msgstr ""
 msgid "could not get the range of screen sizes"
 msgstr "impossible d'obtenir la liste des tailles d'écran disponibles"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "l'extension RANDR n'est pas présente"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "impossible d'obtenir des informations sur la sortie %d"
@@ -483,7 +483,7 @@ msgstr "impossible d'obtenir des informations sur la sortie %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -492,43 +492,43 @@ msgstr ""
 "la taille et la position demandées au CRTC %d sont hors des limites "
 "autorisées : position=(%d, %d), taille=(%d, %d), maximum=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "impossible de définir la configuration pour le CRTC %d"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "impossible d'obtenir des informations sur le CRTC %d"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "Ordinateur portable"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr ""
 "aucune des configurations d'affichage enregistrées ne correspond à la "
 "configuration active"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "le CRTC %d ne peut pas piloter une sortie %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "la sortie %s ne prend pas en charge le mode %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "le CRTC %d ne prend pas en charge la rotation = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -541,23 +541,23 @@ msgstr ""
 "coordonnées actuelles = (%d, %d), nouvelles coordonnées = (%d, %d)\n"
 "rotation actuelle = %s, nouvelle rotation = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "impossible de cloner sur la sortie %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Tests des modes pour le CRTC %d\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d : test du mode %dx%d@%dHz avec une sortie à %dx%d@%dHz (passe %d)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -566,7 +566,7 @@ msgstr ""
 "impossible d'assigner des CRTC aux sorties :\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -578,7 +578,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -593,7 +593,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "Écrans clones"
 
@@ -868,8 +868,8 @@ msgid ""
 "\"spanned\"."
 msgstr ""
 "Détermine le rendu de l'image définie par wallpaper_filename. Les valeurs "
-"possibles sont « wallpaper » (mosaïque), « centered » (centré), "
-"« scaled » (redimensionné), « stretched » (étiré), « zoom », « spanned »."
+"possibles sont « wallpaper » (mosaïque), « centered » (centré), « scaled » "
+"(redimensionné), « stretched » (étiré), « zoom », « spanned »."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -1230,13 +1230,13 @@ msgstr ""
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Ce réglage détermine quels boutons doivent être placés dans la barre de "
 "titre des décorations des fenêtres côté client, et s'ils seront placés à "
-"droite ou à gauche. Voir https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"droite ou à gauche. Voir https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1246,8 +1246,9 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "Ce paramètre détermine l'endroit où doit être affiché le menu des "
 "applications – au sein de la fenêtre de l'application ou sur un tableau de "
@@ -1263,8 +1264,9 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "Ce paramètre détermine l'endroit où doit être affiché le menu d'une fenêtre "
 "– au sein de la fenêtre de l'application ou sur un tableau de bord à l'aide "
@@ -1549,7 +1551,7 @@ msgstr "Indique si le verrouillage du clavier est activé ou non"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Indique si le verrouillage du clavier est activé ou non."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "Sélection de couleur CAFE"
 

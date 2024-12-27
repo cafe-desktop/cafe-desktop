@@ -23,9 +23,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: 敏超 马 <mcjoys@163.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/cafe/teams/13566/"
@@ -70,7 +70,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -377,7 +377,7 @@ msgstr "重绕文件“%1$s”时发生错误：%2$s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "未命名"
 
@@ -395,28 +395,28 @@ msgstr "无法找到文件 '%s'"
 msgid "No filename to save to"
 msgstr "未输入保存文件名"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "正在启动 %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "没有 URL 来启动"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "非可启动项目"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "没有要执行的命令"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "无效命令（可执行文件）"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "未知的字符编码：%s"
@@ -442,11 +442,11 @@ msgstr "试图获取屏幕大小时出现无法处理的 X 错误"
 msgid "could not get the range of screen sizes"
 msgstr "无法获知屏幕大小"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "没有 RANDR 扩展"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "无法得到输出 %d 的有关信息"
@@ -454,7 +454,7 @@ msgstr "无法得到输出 %d 的有关信息"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -463,41 +463,41 @@ msgstr ""
 "CRTC %d 需要的位置/大小在限制允许之外：位置=(%d, %d)，大小=(%d, %d)，最大"
 "=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "无法为 CRTC %d 设定配置"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "无法获取CRTC %d的相关信息。"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "笔记本电脑"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "已保存的设置中没有匹配活动设置的"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d 不能驱动输出 %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "输出 %s 不支持模式 %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d 不支持旋转 =%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -510,22 +510,22 @@ msgstr ""
 "当前坐标 = (%d，%d)，新坐标 = (%d，%d)\n"
 "当前旋转 = %s，新旋转 = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "无法克隆到输出 %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "为 CRTC %d 尝试模式\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d：尝试 %dx%d@%dHz 模式输出在 %dx%d@%dHz (通过 %d)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -534,7 +534,7 @@ msgstr ""
 "无法指定 CRTC 到输出：\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -546,7 +546,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -560,7 +560,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "镜像屏幕"
 
@@ -1123,8 +1123,8 @@ msgstr "CTK3 客户侧窗口装饰的标题栏布局"
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "此设置确定哪些按钮应放在客户端窗口标题栏, 以及它们应该放在左侧或右侧。详情: "
 "https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
@@ -1137,8 +1137,9 @@ msgstr "为应用程序显示全局菜单"
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "此设置确定在何处显示应用程序菜单：在窗口中，或在使用 MenuModel 的面板上。详"
 "情：https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--"
@@ -1151,8 +1152,9 @@ msgstr "为窗口菜单栏显示全局菜单"
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "此设置确定在何处显示窗口菜单栏：在窗口中，或在使用 MenuModel 的面板上。详情："
 "https://developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-"
@@ -1406,7 +1408,7 @@ msgstr "是否已启用键盘锁定。"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "是否允许键盘锁定。"
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "CAFE 颜色选择"
 

@@ -10,9 +10,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Pere O. <gotrunks@gmail.com>, 2020\n"
 "Language-Team: Catalan (https://www.transifex.com/cafe/teams/13566/ca/)\n"
@@ -48,7 +48,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -380,7 +380,7 @@ msgstr "S'ha produït un error en rebobinar el fitxer «%s»: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "Sense nom"
 
@@ -398,28 +398,28 @@ msgstr "No es pot trobar el fitxer «%s»"
 msgid "No filename to save to"
 msgstr "Manca el nom del fitxer a desar"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "S'està iniciant %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "No hi ha cap URL per a obrir"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "No és un element executable"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "No hi ha una ordre (Exec) per a executar"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Ordre errònia (Exec) per a executar"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Codificació desconeguda de: %s"
@@ -448,11 +448,11 @@ msgstr ""
 msgid "could not get the range of screen sizes"
 msgstr "no s'ha pogut obtenir l'interval de les mides de pantalla"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "no hi ha l'extensió RANDR"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "no s'ha pogut obtenir la informació sobre la sortida %d"
@@ -460,7 +460,7 @@ msgstr "no s'ha pogut obtenir la informació sobre la sortida %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -469,43 +469,43 @@ msgstr ""
 "la posició sol·licitada o la mida sol·licitada per al CRTC %d estan fora "
 "dels límits permesos: posició=(%d, %d), mida=(%d, %d), màxim=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "no s'ha pogut establir la configuració per al CRTC %d"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "no s'ha pogut obtenir la informació sobre el CRTC %d"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "Portàtil"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr ""
 "cap de les configuracions desades de la pantalla coincideix amb la "
 "configuració activa"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "La pantalla CRTC %d no pot mostrar la sortida %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "La sortida %s no pot utilitzar el mode %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "La pantalla CRTC %d no permet la rotació = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -518,24 +518,24 @@ msgstr ""
 "les coordenades existents = (%d, %d), les coordenades noves = (%d, %d)\n"
 "la rotació existent = %s, la rotació nova = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "no es pot clonar cap a la sortida %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "S'estan provant els modes per a la pantalla CRTC %d\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d: s'està provant el mode %dx%d@%dHz amb la sortida a %dx%d@%dHz "
 "(intent %d)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -544,7 +544,7 @@ msgstr ""
 "no s'han pogut assignar les pantalles CRTC a les sortides:\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -556,7 +556,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -571,7 +571,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "Pantalles duplicades"
 
@@ -1176,8 +1176,8 @@ msgstr ""
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Aquest ajust determina quins botons s'han de ficar a la barra de títol de "
 "les finestres decorades al cantó del client i si s'han de col·locar a "
@@ -1192,12 +1192,14 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "Aquest ajust determina on es mostrarà el menú de l'aplicació - en una "
-"finestra o en un tauler amb el protocol MenuModel. Vegeu https://developer."
-"gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"finestra o en un tauler amb el protocol MenuModel. Vegeu https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1208,8 +1210,9 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "Aquest ajust determina on es mostraran les barres de menús de les finestres "
 "- en una finestra o en un tauler amb el protocol MenuModel. Vegeu https://"
@@ -1497,7 +1500,7 @@ msgstr "Si està habilitat el bloqueig de teclat"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Si està habilitat el bloqueig de teclat."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "Selecció de color de CAFE"
 

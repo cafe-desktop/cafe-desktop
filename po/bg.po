@@ -10,9 +10,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Любомир Василев, 2020\n"
 "Language-Team: Bulgarian (https://www.transifex.com/cafe/teams/13566/bg/)\n"
@@ -53,7 +53,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -387,7 +387,7 @@ msgstr "Грешка при превъртането на файла „%s“: %
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "Без име"
 
@@ -405,28 +405,28 @@ msgstr "Файлът „%s“ не е открит"
 msgid "No filename to save to"
 msgstr "Липсва име на файл за запис"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "Стартиране на %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "Липсва адрес за стартиране"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "Не е обект за стартиране"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "Липсва команда (Exec) за стартиране"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Лоша команда (Exec) за стартиране"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Неизвестно кодиране на: %s"
@@ -455,11 +455,11 @@ msgstr ""
 msgid "could not get the range of screen sizes"
 msgstr "диапазонът от размери на екрана не може да се получи"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "разширението RANDR липсва"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "информацията за изхода %d не може да бъде получена"
@@ -467,7 +467,7 @@ msgstr "информацията за изхода %d не може да бъд�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -476,41 +476,41 @@ msgstr ""
 "заявената позиция/размер към %d-ата видео карта е извън позволения диапазон: "
 "позиция=(%d, %d), размер=(%d, %d), максимум=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "настройките на %d-ата видео карта не могат да бъдат зададени"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "информацията за %d-ата видео карта не може да бъде получена"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "Преносим компютър"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "никоя от запазените конфигурации на дисплея не съвпада с действащата"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "Видеокарта %d не може да управлява изхода %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "екранът %s не поддържа режима %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "Видеокарта %d не поддържа завъртане=%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -524,22 +524,22 @@ msgstr ""
 "текущи координати = (%d, %d), нови координати = (%d, %d)\n"
 "текущо завъртане = %s, ново завъртане = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "повтаряне на изображението към изхода %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Изпробване на режимите за видеокарта %d\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "Видеокарта %d: проба на режим %dx%d@%dHz с изход %dx%d@%dHz (%d пас)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -548,7 +548,7 @@ msgstr ""
 "на следните изходи не може да се зададе видеокарта:\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -560,7 +560,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -575,7 +575,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "Еднакво изображение на екраните"
 
@@ -830,10 +830,10 @@ msgid ""
 "\"spanned\"."
 msgstr ""
 "Указване как да се изобразява изображението указано от wallpaper_filename. "
-"Възможните стойности са: „wallpaper“ (нормално изобразяване), "
-"„centered“ (центриране), „scaled“ (пропорционално мащабиране), "
-"„stretched“ (непропорционално разтегляне), „zoom“ (мащабиране), "
-"„spanned“ (пренесено по екраните)."
+"Възможните стойности са: „wallpaper“ (нормално изобразяване), „centered“ "
+"(центриране), „scaled“ (пропорционално мащабиране), „stretched“ "
+"(непропорционално разтегляне), „zoom“ (мащабиране), „spanned“ (пренесено по "
+"екраните)."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -926,8 +926,8 @@ msgid ""
 "\"text\"."
 msgstr ""
 "Стил на лентите с инструменти. Възможните стойности са: „both“ (текст под "
-"иконките), „both_horiz“ (текст до иконките), „icons“ (само иконки), и "
-"„text“ (само текст)."
+"иконките), „both_horiz“ (текст до иконките), „icons“ (само иконки), и „text“ "
+"(само текст)."
 
 #: schemas/org.cafe.interface.gschema.xml:25
 msgid "Menus Have Icons"
@@ -1185,8 +1185,8 @@ msgstr ""
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Тази настройка определя това кои бутони да се появяват в заглавната лента на "
 "украсяваните от страната на клиента прозорци, както и дали те да бъдат "
@@ -1202,12 +1202,14 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "Тази настройка определя къде да се показват менютата на приложенията – в "
-"прозорец или в панел с протокола „MenuModel“. Вижте https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"прозорец или в панел с протокола „MenuModel“. Вижте https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1217,12 +1219,14 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "Тази настройка определя къде да се показват лентите с менюта на прозорците – "
-"в прозорец или в панел с протокола „MenuModel“. Вижте https://developer."
-"gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"в прозорец или в панел с протокола „MenuModel“. Вижте https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1494,7 +1498,7 @@ msgstr "Дали заключването на клавиатурата е вк�
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Дали заключването на клавиатурата е включено."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "Избор на цвят от CAFE"
 

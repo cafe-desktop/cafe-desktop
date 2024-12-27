@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/cafe/teams/13566/sr/)\n"
@@ -45,7 +45,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -373,7 +373,7 @@ msgstr "Грешка премотавања датотеке „%s“: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "Без назива"
 
@@ -391,28 +391,28 @@ msgstr "Не могу да нађем датотеку „%s“"
 msgid "No filename to save to"
 msgstr "Нема назива датотеке за чување"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "Покрећем „%s“"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "Нема адресе за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "Није ставка за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "Нема наредбе (Exec) за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Лоша наредба (Exec) за покретање"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Непознато кодирање за: %s"
@@ -438,11 +438,11 @@ msgstr "непозната грешка Икса приликом добавља
 msgid "could not get the range of screen sizes"
 msgstr "не могу да добавим опсег величина екрана"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "РАНДР проширење није присутно"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "не могу да добавим податке о излазу „%d“"
@@ -450,7 +450,7 @@ msgstr "не могу да добавим податке о излазу „%d�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -459,42 +459,42 @@ msgstr ""
 "захтеван положај/величина за ЦРТЦ %d је ван дозвољеног ограничења: "
 "положај=(%d, %d), величина=(%d, %d), највеће=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "не могу да поставим подешавања за ЦРТЦ %d"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "не могу да добавим податке о ЦРТЦ-у %d"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "Преносни рачунар"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr ""
 "ни једно од сачуваних подешавања екрана се не поклапа са текућим подешавањем"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "ЦРТЦ „%d“ не може да добије излаз „%s“"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "излаз „%s“ не подржава режим %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "ЦРТЦ „%d“ не подржава окретање=%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -507,24 +507,24 @@ msgstr ""
 "постојеће координате = (%d, %d), нове координате = (%d, %d)\n"
 "постојећа окренутост = %s, нова окренутост = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "не могу да пресликам на излаз „%s“"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Испробавам режиме за ЦРТЦ „%d“\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "ЦРТЦ „%d“: испробавам режим %dx%d@%dHz са излазом на %dx%d@%dHz (%d. "
 "покушај)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -533,7 +533,7 @@ msgstr ""
 "не могу да придружим ЦРТЦ-е излазима:\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -545,7 +545,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -560,7 +560,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "Пресликај екране"
 
@@ -821,10 +821,10 @@ msgid ""
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
 "\"spanned\"."
 msgstr ""
-"Одређује како се исцртава слика постављена помоћу "
-"„wallpaper_filename“ (назив датотеке тапета). Могуће вредности су "
-"„wallpaper“ (позадина), „centered“ (усредиштено), „scaled“ (преко целог "
-"екрана), „stretched“ (развучено), „zoom“ (увећано) и „spanned“ (растегнуто)."
+"Одређује како се исцртава слика постављена помоћу „wallpaper_filename“ "
+"(назив датотеке тапета). Могуће вредности су „wallpaper“ (позадина), "
+"„centered“ (усредиштено), „scaled“ (преко целог екрана), „stretched“ "
+"(развучено), „zoom“ (увећано) и „spanned“ (растегнуто)."
 
 #: schemas/org.cafe.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -872,8 +872,8 @@ msgid ""
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
 "Како ће се претапати боје позадине. Могуће вредности су „horizontal-"
-"gradient“ (водорави-прелив), „vertical-gradient“ (усправни-прелив) и "
-"„solid“ (једнобојно)."
+"gradient“ (водорави-прелив), „vertical-gradient“ (усправни-прелив) и „solid“ "
+"(једнобојно)."
 
 #: schemas/org.cafe.file-views.gschema.xml:5
 msgid "File Icon Theme"
@@ -1168,8 +1168,8 @@ msgstr "Распоред траке наслова украшених прозо
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Ово подешавање одређује који дугмићи треба да буду стављени на траку наслова "
 "украшених прозора од стране клијента, и да ли треба да буду постављени на "
@@ -1183,13 +1183,14 @@ msgstr "Користи општу траку изборника за прика�
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "Ово подешавање одређује где ће бити приказан изборник програма – у прозору "
-"или на панелу протоколом „Модел изборника“. Погледајте „https://developer."
-"gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-"
-"menu“."
+"или на панелу протоколом „Модел изборника“. Погледајте „https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu“."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1198,8 +1199,9 @@ msgstr "Користи општу траку изборника за прика�
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "Ово подешавање одређује где ће бити приказане траке изборника прозора – у "
 "прозору или на панелу протоколом „Модел изборника“. Погледајте „https://"
@@ -1476,7 +1478,7 @@ msgstr "Укључивање закључавања тастатуре"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Да ли је укључено закључавање тастатуре."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "Мејтов избор боје"
 

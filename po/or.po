@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Oriya (https://www.transifex.com/cafe/teams/13566/or/)\n"
@@ -43,7 +43,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -338,7 +338,7 @@ msgstr "'%s' ଫାଇଲ ପଛକୁ ଘୂରାଇବାରେ ତ୍ରୁ�
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "କୌଣସି ନାମ ନାହିଁ"
 
@@ -356,28 +356,28 @@ msgstr "ଫାଇଲ '%s' କୁ ଖୋଜିପାରିବେ ନାହିଁ"
 msgid "No filename to save to"
 msgstr "ସଂରକ୍ଷଣ ପାଇଁ କୌଣସି ଫାଇଲ ନାମ ଦିଆଯାଇ ନାହିଁ"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "%s କୁ ଆରମ୍ଭ କରୁଅଛି"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "ଚଳାଇବା ପାଇଁ କୌଣସି URL ନାହିଁ"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "ଗୋଟିଏ ଆରମ୍ଭଯୋଗ୍ୟ ବସ୍ତୁ ନୁହଁ"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "ଚଳାଇବା ପାଇଁ କୌଣସୀ ନିର୍ଦେଶ (ନିଷ୍ପାଦନ) ନାହିଁ"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "ନିର୍ଦେଶ ଭୁଲ ନିର୍ଦେଶ (ନିଷ୍ପାଦନ)"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "ଏହାର ସଙ୍କେତ ଅଜଣା: %s"
@@ -403,11 +403,11 @@ msgstr "ପରଦା ଆକାରର ସୀମା ପାଇବା ସମୟର�
 msgid "could not get the range of screen sizes"
 msgstr "ପରଦା ଆକାରର ସୀମା ପାଇଲା ନାହିଁ"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "RANDR ଅନୁଲଗ୍ନଟି ଉପସ୍ଥିତ ନାହିଁ"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "ଫଳାଫଳ %d ବିଷୟରେ ସୂଚନା ପାଇଲା ନାହିଁ"
@@ -415,7 +415,7 @@ msgstr "ଫଳାଫଳ %d ବିଷୟରେ ସୂଚନା ପାଇଲା �
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -424,41 +424,41 @@ msgstr ""
 "CRTC %d ପାଇଁ ଅନୁରୋଧିତ ସ୍ଥାନ/ଆକାର ସୀମା ବାହାରେ ଅଛି: ସ୍ଥିତି=(%d, %d), ଆକାର=(%d, %d), "
 "ସର୍ବାଧିକ=(%d, %d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d ପାଇଁ ବିନ୍ୟାସ ସେଟ କରିପାରିଲା ନାହିଁ"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d ବିଷୟରେ ସୂଚନା ପାଇ ପାରିଲା ନାହିଁ"
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "ଲ୍ୟାପଟପ"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "ସଂରକ୍ଷିତ ପ୍ରଦର୍ଶନ ବିନ୍ୟାସଗୁଡ଼ିକ ମଧ୍ଯରୁ କୌଣସିଟି ସକ୍ରିୟ ବିନ୍ୟାସ ସହିତ ମେଳ ଖାଉନାହିଁ"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d ଫଳାଫଳ %s କୁ ଚଲାଇପାରିବ ନାହିଁ"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "ଫଳାଫଳ %s ଧାରା %dx%d@%dHz କୁ ସମର୍ଥନ କରେନାହିଁ"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d ଆବର୍ତ୍ତନ=%s କୁ ସମର୍ଥନ କରେନାହିଁ"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -471,23 +471,23 @@ msgstr ""
 "ସ୍ଥିତବାନ ନିର୍ଦ୍ଦେଶାଙ୍କ = (%d, %d), ନୂତନ ନିର୍ଦ୍ଦେଶାଙ୍କ = (%d, %d)\n"
 "ସ୍ଥିତବାନ ଆବର୍ତ୍ତନ = %s, ନୂତନ ଆବର୍ତ୍ତନ = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "ଫଳାଫଳ %s କୁ କ୍ଲୋନ କରିପାରିବେ ନାହିଁ"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "CRTC %d ପାଇଁ ଧାରାଗୁଡ଼ିକୁ ଚେଷ୍ଟାକରୁଅଛି\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d: %dx%d@%dHz ଧାରାକୁ ଫଳାଫଳ ସହିତ %dx%d@%dHz ରେ ଚେଷ୍ଟାକରୁଅଛି (%d କୁ ପାସ କରନ୍ତୁ)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -496,7 +496,7 @@ msgstr ""
 "ଫଳାଫଳରେ CRTCs କୁ ନ୍ୟସ୍ତ କରିପାରିଲା ନାହିଁ:\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -508,7 +508,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -523,7 +523,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "ପ୍ରତିଫଳକ ପରଦାଗୁଡ଼ିକ"
 
@@ -1079,8 +1079,8 @@ msgstr ""
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:160
@@ -1090,8 +1090,9 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:165
@@ -1101,8 +1102,9 @@ msgstr ""
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 
 #: schemas/org.cafe.interface.gschema.xml:170
@@ -1359,7 +1361,7 @@ msgstr "ଚାବି ପଟି ତାଲା ବନ୍ଦ କରିବା ସକ�
 msgid "Whether or not keyboard locking is enabled."
 msgstr "ଚାବି ପଟି ତାଲା ବନ୍ଦ କରିବା ସକ୍ରିୟ କି."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr ""
 

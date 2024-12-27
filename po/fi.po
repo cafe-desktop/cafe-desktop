@@ -13,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 1.25.1\n"
+"Project-Id-Version: cafe-desktop 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2023-01-29 13:57+0100\n"
+"POT-Creation-Date: 2024-12-27 19:02+0100\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2020\n"
 "Language-Team: Finnish (https://www.transifex.com/cafe/teams/13566/fi/)\n"
@@ -53,7 +53,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2023 Pablo Barciela"
+"Copyright © 2020-2024 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -88,10 +88,10 @@ msgid ""
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"CAFE on jatkoa GNOME 2:lle. Sadat ihmiset ovat lahjoittaneet koodia GNOME:"
-"lle jo sen alusta alkaen vuodesta 1997; yhä useammat ovat osallistuneet "
-"monilla muilla tärkeillä tavoilla, mukaan lukien käännökset, dokumentointi "
-"ja laadunvarmistus."
+"CAFE on jatkoa GNOME 2:lle. Sadat ihmiset ovat lahjoittaneet koodia "
+"GNOME:lle jo sen alusta alkaen vuodesta 1997; yhä useammat ovat "
+"osallistuneet monilla muilla tärkeillä tavoilla, mukaan lukien käännökset, "
+"dokumentointi ja laadunvarmistus."
 
 #: cafe-about/cafe-about.h:56
 msgid ""
@@ -380,7 +380,7 @@ msgstr "Tiedoston ”%s” kelaus epäonnistui: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: libcafe-desktop/cafe-desktop-item.c:380
-#: libcafe-desktop/cafe-desktop-item.c:3564
+#: libcafe-desktop/cafe-desktop-item.c:3547
 msgid "No name"
 msgstr "Ei nimeä"
 
@@ -398,28 +398,28 @@ msgstr "Tiedostoa ”%s” ei löytynyt"
 msgid "No filename to save to"
 msgstr "Ei tiedostonimeä, johon tallentaa"
 
-#: libcafe-desktop/cafe-desktop-item.c:1861
+#: libcafe-desktop/cafe-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "Käynnistetään %s"
 
-#: libcafe-desktop/cafe-desktop-item.c:2102
+#: libcafe-desktop/cafe-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "Ei käynnistettävää URL:ia"
 
-#: libcafe-desktop/cafe-desktop-item.c:2118
+#: libcafe-desktop/cafe-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "Ei käynnistettävä kohde"
 
-#: libcafe-desktop/cafe-desktop-item.c:2128
+#: libcafe-desktop/cafe-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "Ei käynnistettävää komentoa (exec)"
 
-#: libcafe-desktop/cafe-desktop-item.c:2141
+#: libcafe-desktop/cafe-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Virheellinen käynnistettävä komento (exec)"
 
-#: libcafe-desktop/cafe-desktop-item.c:3621
+#: libcafe-desktop/cafe-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Tuntematon merkistö: %s"
@@ -445,11 +445,11 @@ msgstr "käsittelemätön X-virhe noudettaessa kelvollisia näytön kokoja"
 msgid "could not get the range of screen sizes"
 msgstr "näytön kokoluetteloa ei saatu noudettua"
 
-#: libcafe-desktop/cafe-rr.c:708
+#: libcafe-desktop/cafe-rr.c:710
 msgid "RANDR extension is not present"
 msgstr "RANDR-laajennos ei ole saatavilla"
 
-#: libcafe-desktop/cafe-rr.c:1265
+#: libcafe-desktop/cafe-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "Tietoja ulostulosta %d ei saatu."
@@ -457,7 +457,7 @@ msgstr "Tietoja ulostulosta %d ei saatu."
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libcafe-desktop/cafe-rr.c:1747
+#: libcafe-desktop/cafe-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -466,42 +466,42 @@ msgstr ""
 "pyydetty sijainti tai koko CRTC:lle %d ei ole sallituissa rajoissa: "
 "sijainti=(%d,%d), koko=(%d,%d), maksimi=(%d,%d)"
 
-#: libcafe-desktop/cafe-rr.c:1782
+#: libcafe-desktop/cafe-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "Asetuksia CRTC:lle %d ei voitu asettaa"
 
-#: libcafe-desktop/cafe-rr.c:1946
+#: libcafe-desktop/cafe-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "Tietoja CRTC:stä %d ei saatu."
 
-#: libcafe-desktop/cafe-rr-config.c:555
+#: libcafe-desktop/cafe-rr-config.c:556
 msgid "Laptop"
 msgstr "Kannettava"
 
-#: libcafe-desktop/cafe-rr-config.c:713
+#: libcafe-desktop/cafe-rr-config.c:714
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr ""
 "yksikään tallennetuista näyttöasetuksista ei vastaa aktiivista määrittelyä"
 
-#: libcafe-desktop/cafe-rr-config.c:1486
+#: libcafe-desktop/cafe-rr-config.c:1487
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d ei voi ohjata lähtöä %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1493
+#: libcafe-desktop/cafe-rr-config.c:1494
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "ulostulo %s ei tue tilaa %dx%d@%dHz"
 
-#: libcafe-desktop/cafe-rr-config.c:1504
+#: libcafe-desktop/cafe-rr-config.c:1505
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d ei tue kiertoa=%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1518
+#: libcafe-desktop/cafe-rr-config.c:1519
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -515,23 +515,23 @@ msgstr ""
 "olemassa olevat koordinaatit = (%d, %d), uudet koordinaatit = (%d, %d)\n"
 "olemassa oleva kierto = %s, uusi kierto = %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1533
+#: libcafe-desktop/cafe-rr-config.c:1534
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "ei voi kloonata ulostuloa %s"
 
-#: libcafe-desktop/cafe-rr-config.c:1702
+#: libcafe-desktop/cafe-rr-config.c:1703
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Yritetään moodia CRTC:lle %d\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1726
+#: libcafe-desktop/cafe-rr-config.c:1727
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d: kokeilutila %dx%d@%dHz jonka lähtö on %dx%d@%dHz (siirtää %d)\n"
 
-#: libcafe-desktop/cafe-rr-config.c:1773
+#: libcafe-desktop/cafe-rr-config.c:1774
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -540,7 +540,7 @@ msgstr ""
 "ei voitu määrittää CRTC:tä lähtöille:\n"
 "%s"
 
-#: libcafe-desktop/cafe-rr-config.c:1777
+#: libcafe-desktop/cafe-rr-config.c:1778
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -553,7 +553,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libcafe-desktop/cafe-rr-config.c:1859
+#: libcafe-desktop/cafe-rr-config.c:1860
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -568,7 +568,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #.
-#: libcafe-desktop/cafe-rr-labeler.c:406
+#: libcafe-desktop/cafe-rr-labeler.c:408
 msgid "Mirror Screens"
 msgstr "Peilaa näytöt"
 
@@ -1161,13 +1161,13 @@ msgstr "Sisustettu ikkunoiden otsikkopalkki CTK3 asiakaspuolella"
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left "
-"of right. See https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"of right. See https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 msgstr ""
 "Tämä asetus määrittää, mitkä painikkeet tulisi asettaa asiakaspuolella "
 "sisustettujen ikkunoiden otsikkopalkkiin ja onko ne sijoitettava oikealle "
-"vai vasemmalle. Katso  https://developer.gnome.org/ctk3/stable/CtkSettings."
-"html#CtkSettings--ctk-decoration-layout."
+"vai vasemmalle. Katso  https://developer.gnome.org/ctk3/stable/"
+"CtkSettings.html#CtkSettings--ctk-decoration-layout."
 
 #: schemas/org.cafe.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
@@ -1176,12 +1176,14 @@ msgstr "Käytä globaalia valikkopalkkia sovellusvalikkojen näyttämiseen"
 #: schemas/org.cafe.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 msgstr ""
 "Tämä asetus määrittää, missä sovellusvalikko näytetään - ikkunassa tai "
-"paneelissa, jossa on MenuModel-protokolla. Katso  https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-app-menu."
+"paneelissa, jossa on MenuModel-protokolla. Katso  https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-app-menu."
 
 #: schemas/org.cafe.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1190,12 +1192,14 @@ msgstr "Käytä globaalia valikkopalkkia ikkunavalikkojen näyttämiseen"
 #: schemas/org.cafe.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
-"window or on a panel with MenuModel protocol. See https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"window or on a panel with MenuModel protocol. See https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 msgstr ""
 "Tämä asetus määrittää, missä ikkunan valikkopalkit näytetään - ikkunassa tai "
-"paneelissa, jossa on MenuModel-protokolla. Katso  https://developer.gnome."
-"org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-shows-menubar."
+"paneelissa, jossa on MenuModel-protokolla. Katso  https://"
+"developer.gnome.org/ctk3/stable/CtkSettings.html#CtkSettings--ctk-shell-"
+"shows-menubar."
 
 #: schemas/org.cafe.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1468,7 +1472,7 @@ msgstr "Lukkiutuuko näppäimistö"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Lukkiutuuko näppäimistö."
 
-#: tools/cafe-color-select.c:64 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
 msgid "CAFE Color Selection"
 msgstr "CAFE Värivalinta"
 
@@ -1483,9 +1487,7 @@ msgstr "Värien valitseminen paletista tai näytöstä"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: tools/cafe-color-select.desktop.in:13
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
-"CAFE;color;chooser;pick;palette;screen;selection;väri;valitsin;paletti;ruutu;"
-"valinta;"
+msgstr "CAFE;color;chooser;pick;palette;screen;selection;väri;valitsin;paletti;ruutu;valinta;"
 
 #~ msgid ""
 #~ "Copyright © 1997-2011 GNOME developers\n"
