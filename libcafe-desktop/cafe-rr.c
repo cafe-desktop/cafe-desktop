@@ -566,8 +566,8 @@ screen_update (CafeRRScreen *screen, gboolean force_callback, gboolean needs_rep
 
 static CdkFilterReturn
 screen_on_event (CdkXEvent *xevent,
-		 CdkEvent *event,
-		 gpointer data)
+		 CdkEvent  *event G_GNUC_UNUSED,
+		 gpointer   data)
 {
 #ifdef HAVE_RANDR
     CafeRRScreen *screen = data;
@@ -662,7 +662,9 @@ screen_on_event (CdkXEvent *xevent,
 }
 
 static gboolean
-cafe_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **error)
+cafe_rr_screen_initable_init (GInitable    *initable,
+			      GCancellable *canc G_GNUC_UNUSED,
+			      GError      **error)
 
 {
     CafeRRScreen *self = CAFE_RR_SCREEN (initable);
