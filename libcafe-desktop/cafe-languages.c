@@ -793,12 +793,12 @@ get_translated_territory (const char *code,
 }
 
 static void
-languages_parse_start_tag (GMarkupParseContext      *ctx,
-                           const char               *element_name,
-                           const char              **attr_names,
-                           const char              **attr_values,
-                           gpointer                  user_data,
-                           GError                  **error)
+languages_parse_start_tag (GMarkupParseContext *ctx G_GNUC_UNUSED,
+                           const char          *element_name,
+                           const char         **attr_names,
+                           const char         **attr_values,
+                           gpointer             user_data G_GNUC_UNUSED,
+                           GError             **error G_GNUC_UNUSED)
 {
         const char *ccode_longB;
         const char *ccode_longT;
@@ -886,12 +886,12 @@ languages_parse_start_tag (GMarkupParseContext      *ctx,
 }
 
 static void
-territories_parse_start_tag (GMarkupParseContext      *ctx,
-                             const char               *element_name,
-                             const char              **attr_names,
-                             const char              **attr_values,
-                             gpointer                  user_data,
-                             GError                  **error)
+territories_parse_start_tag (GMarkupParseContext *ctx G_GNUC_UNUSED,
+                             const char          *element_name,
+                             const char         **attr_names,
+                             const char         **attr_values,
+                             gpointer             user_data G_GNUC_UNUSED,
+                             GError             **error G_GNUC_UNUSED)
 {
         const char *acode_2;
         const char *acode_3;
