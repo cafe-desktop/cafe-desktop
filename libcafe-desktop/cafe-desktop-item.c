@@ -866,7 +866,8 @@ cafe_desktop_item_ref (CafeDesktopItem *item)
 }
 
 static void
-free_section (gpointer data, gpointer user_data)
+free_section (gpointer data,
+	      gpointer user_data G_GNUC_UNUSED)
 {
 	Section *section = data;
 
@@ -1227,7 +1228,7 @@ append_all_converted (GString        *str,
 		      GSList         *args,
 		      gboolean        in_single_quotes,
 		      gboolean        in_double_quotes,
-		      AddedStatus     added_status)
+		      AddedStatus     added_status G_GNUC_UNUSED)
 {
 	GSList *l;
 
@@ -1470,8 +1471,8 @@ expand_string (const CafeDesktopItem  *item,
 
 #ifdef HAVE_STARTUP_NOTIFICATION
 static void
-sn_error_trap_push (SnDisplay *display,
-		    Display   *xdisplay)
+sn_error_trap_push (SnDisplay *display G_GNUC_UNUSED,
+		    Display   *xdisplay G_GNUC_UNUSED)
 {
 	CdkDisplay *cdkdisplay;
 
@@ -1480,8 +1481,8 @@ sn_error_trap_push (SnDisplay *display,
 }
 
 static void
-sn_error_trap_pop (SnDisplay *display,
-		   Display   *xdisplay)
+sn_error_trap_pop (SnDisplay *display G_GNUC_UNUSED,
+		   Display   *xdisplay G_GNUC_UNUSED)
 {
 	CdkDisplay *cdkdisplay;
 
@@ -1727,9 +1728,9 @@ make_environment_for_screen (CdkScreen  *screen,
 }
 
 static void
-dummy_child_watch (GPid         pid,
-		   gint         status,
-		   gpointer user_data)
+dummy_child_watch (GPid     pid G_GNUC_UNUSED,
+		   gint     status G_GNUC_UNUSED,
+		   gpointer user_data G_GNUC_UNUSED)
 {
 	/* Nothing, this is just to ensure we don't double fork
 	 * and break pkexec:
@@ -2484,9 +2485,9 @@ cafe_desktop_item_get_file_status (const CafeDesktopItem *item)
  */
 char *
 cafe_desktop_item_find_icon (CtkIconTheme *icon_theme,
-			      const char *icon,
-			      int desired_size,
-			      int flags)
+			      const char  *icon,
+			      int          desired_size,
+			      int          flags G_GNUC_UNUSED)
 {
 	CtkIconInfo *info;
 	char *full = NULL;
