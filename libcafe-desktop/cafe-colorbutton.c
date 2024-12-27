@@ -255,9 +255,9 @@ cafe_color_button_get_checkered (void)
 
 /* Handle exposure events for the color picker's drawing area */
 static gboolean
-draw (CtkWidget      *widget,
-      cairo_t        *cr,
-      gpointer        data)
+draw (CtkWidget *widget G_GNUC_UNUSED,
+      cairo_t   *cr,
+      gpointer   data)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
   cairo_pattern_t *checkered;
@@ -304,19 +304,19 @@ draw (CtkWidget      *widget,
 
 static void
 cafe_color_button_state_changed (CtkWidget   *widget,
-                                CtkStateType previous_state)
+				 CtkStateType previous_state G_GNUC_UNUSED)
 {
   ctk_widget_queue_draw (widget);
 }
 
 static void
-cafe_color_button_drag_data_received (CtkWidget        *widget,
-				     CdkDragContext   *context,
-				     gint              x,
-				     gint              y,
+cafe_color_button_drag_data_received (CtkWidget        *widget G_GNUC_UNUSED,
+				     CdkDragContext   *context G_GNUC_UNUSED,
+				     gint              x G_GNUC_UNUSED,
+				     gint              y G_GNUC_UNUSED,
 				     CtkSelectionData *selection_data,
-				     guint             info,
-				     guint32           time,
+				     guint             info G_GNUC_UNUSED,
+				     guint32           time G_GNUC_UNUSED,
 				     CafeColorButton   *color_button)
 {
   guint16 *dropped;
@@ -372,9 +372,9 @@ set_color_icon (CdkDragContext *context,
 }
 
 static void
-cafe_color_button_drag_begin (CtkWidget      *widget,
-			     CdkDragContext *context,
-			     gpointer        data)
+cafe_color_button_drag_begin (CtkWidget      *widget G_GNUC_UNUSED,
+			      CdkDragContext *context,
+			      gpointer        data)
 {
   CafeColorButton *color_button = data;
 
@@ -382,11 +382,11 @@ cafe_color_button_drag_begin (CtkWidget      *widget,
 }
 
 static void
-cafe_color_button_drag_data_get (CtkWidget        *widget,
-				CdkDragContext   *context,
+cafe_color_button_drag_data_get (CtkWidget       *widget G_GNUC_UNUSED,
+				CdkDragContext   *context G_GNUC_UNUSED,
 				CtkSelectionData *selection_data,
-				guint             info,
-				guint             time,
+				guint             info G_GNUC_UNUSED,
+				guint             time G_GNUC_UNUSED,
 				CafeColorButton   *color_button)
 {
   guint16 dropped[4];
@@ -515,7 +515,7 @@ cafe_color_button_new_with_color (const CdkColor *color)
 }
 
 static void
-dialog_ok_clicked (CtkWidget *widget,
+dialog_ok_clicked (CtkWidget *widget G_GNUC_UNUSED,
 		   gpointer   data)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
@@ -539,7 +539,7 @@ dialog_ok_clicked (CtkWidget *widget,
 }
 
 static gboolean
-dialog_destroy (CtkWidget *widget,
+dialog_destroy (CtkWidget *widget G_GNUC_UNUSED,
 		gpointer   data)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
@@ -550,7 +550,7 @@ dialog_destroy (CtkWidget *widget,
 }
 
 static void
-dialog_cancel_clicked (CtkWidget *widget,
+dialog_cancel_clicked (CtkWidget *widget G_GNUC_UNUSED,
 		       gpointer   data)
 {
   CafeColorButton *color_button = CAFE_COLOR_BUTTON (data);
