@@ -1,3 +1,13 @@
+### cafe-desktop 2.0.0
+
+  * libcafe-desktop: meson: remove cafe-hsv
+  * GLib 2.67.3 required
+  * ci: some improvements
+  * cafe-color-select: show icons in buttons
+  * background gschema: update default background image
+  * add G_GNUC_UNUSED in unused parameters
+  * update translations
+
 ### cafe-desktop 1.25.1
 
   * port from marco to croma
