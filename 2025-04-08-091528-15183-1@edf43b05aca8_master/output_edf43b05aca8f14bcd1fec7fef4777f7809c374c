@@ -1,0 +1,2234 @@
+Checking cafe-about/cafe-about.c ...
+1/23 files checked 0% done
+Checking libcafe-desktop/cafe-bg-crossfade.c ...
+libcafe-desktop/cafe-bg-crossfade.c:69:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_PRIVATE (CafeBGCrossfade, cafe_bg_crossfade, G_TYPE_OBJECT)
+^
+2/23 files checked 4% done
+Checking libcafe-desktop/cafe-bg.c ...
+libcafe-desktop/cafe-bg.c:125:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE(CafeBG, cafe_bg, G_TYPE_OBJECT)
+^
+3/23 files checked 18% done
+Checking libcafe-desktop/cafe-colorbutton.c ...
+libcafe-desktop/cafe-colorbutton.c:121:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_PRIVATE (CafeColorButton, cafe_color_button, CTK_TYPE_BUTTON)
+^
+4/23 files checked 23% done
+Checking libcafe-desktop/cafe-colorsel.c ...
+libcafe-desktop/cafe-colorsel.c:245:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_PRIVATE (CafeColorSelection, cafe_color_selection, CTK_TYPE_BOX)
+^
+Checking libcafe-desktop/cafe-colorsel.c: CDK_WINDOWING_QUARTZ...
+Checking libcafe-desktop/cafe-colorsel.c: CDK_WINDOWING_X11...
+5/23 files checked 38% done
+Checking libcafe-desktop/cafe-colorseldialog.c ...
+libcafe-desktop/cafe-colorseldialog.c:53:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_CODE (CafeColorSelectionDialog, cafe_color_selection_dialog,
+^
+6/23 files checked 39% done
+Checking libcafe-desktop/cafe-dconf.c ...
+Checking libcafe-desktop/cafe-dconf.c: HAVE_CONFIG_H...
+7/23 files checked 40% done
+Checking libcafe-desktop/cafe-desktop-item.c ...
+libcafe-desktop/cafe-desktop-item.c:2492:15: style: The scope of the variable 'info' can be reduced. [variableScope]
+ CtkIconInfo *info;
+              ^
+libcafe-desktop/cafe-desktop-item.c:3173:41: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ASCII", "C", NULL);
+                                        ^
+libcafe-desktop/cafe-desktop-item.c:3175:46: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ARMSCII-8", "by", NULL);
+                                             ^
+libcafe-desktop/cafe-desktop-item.c:3176:44: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "BIG5", "zh_TW", NULL);
+                                           ^
+libcafe-desktop/cafe-desktop-item.c:3177:49: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "CP1251", "be", "bg", NULL);
+                                                ^
+libcafe-desktop/cafe-desktop-item.c:3179:47: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  insert_locales (encodings, "EUC-CN", "zh_CN", NULL);
+                                              ^
+libcafe-desktop/cafe-desktop-item.c:3181:47: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  insert_locales (encodings, "GB2312", "zh_CN", NULL);
+                                              ^
+libcafe-desktop/cafe-desktop-item.c:3183:43: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "EUC-JP", "ja", NULL);
+                                          ^
+libcafe-desktop/cafe-desktop-item.c:3184:43: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "EUC-KR", "ko", NULL);
+                                          ^
+libcafe-desktop/cafe-desktop-item.c:3186:48: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "GEORGIAN-PS", "ka", NULL);
+                                               ^
+libcafe-desktop/cafe-desktop-item.c:3187:143: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-1", "br", "ca", "da", "de", "en", "es", "eu", "fi", "fr", "gl", "it", "nl", "wa", "no", "pt", "pt", "sv", NULL);
+                                                                                                                                              ^
+libcafe-desktop/cafe-desktop-item.c:3188:95: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-2", "cs", "hr", "hu", "pl", "ro", "sk", "sl", "sq", "sr", NULL);
+                                                                                              ^
+libcafe-desktop/cafe-desktop-item.c:3189:47: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-3", "eo", NULL);
+                                              ^
+libcafe-desktop/cafe-desktop-item.c:3190:53: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-5", "mk", "sp", NULL);
+                                                    ^
+libcafe-desktop/cafe-desktop-item.c:3191:47: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-7", "el", NULL);
+                                              ^
+libcafe-desktop/cafe-desktop-item.c:3192:47: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-9", "tr", NULL);
+                                              ^
+libcafe-desktop/cafe-desktop-item.c:3193:60: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-13", "lt", "lv", "mi", NULL);
+                                                           ^
+libcafe-desktop/cafe-desktop-item.c:3194:54: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-14", "ga", "cy", NULL);
+                                                     ^
+libcafe-desktop/cafe-desktop-item.c:3195:48: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "ISO-8859-15", "et", NULL);
+                                               ^
+libcafe-desktop/cafe-desktop-item.c:3196:43: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "KOI8-R", "ru", NULL);
+                                          ^
+libcafe-desktop/cafe-desktop-item.c:3197:43: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "KOI8-U", "uk", NULL);
+                                          ^
+libcafe-desktop/cafe-desktop-item.c:3199:47: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  insert_locales (encodings, "TCVN-5712", "vi", NULL);
+                                              ^
+libcafe-desktop/cafe-desktop-item.c:3201:42: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  insert_locales (encodings, "TCVN", "vi", NULL);
+                                         ^
+libcafe-desktop/cafe-desktop-item.c:3203:44: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ insert_locales (encodings, "TIS-620", "th", NULL);
+                                           ^
+libcafe-desktop/cafe-desktop-item.c:925:9: style: Variable 'li' can be declared as pointer to const [constVariablePointer]
+ GList *li;
+        ^
+libcafe-desktop/cafe-desktop-item.c:954:8: style: Variable 'p' can be declared as pointer to const [constVariablePointer]
+ char *p;
+       ^
+libcafe-desktop/cafe-desktop-item.c:2840:9: style: Variable 'l' can be declared as pointer to const [constVariablePointer]
+ GList *l;
+        ^
+libcafe-desktop/cafe-desktop-item.c:3250:10: style: Variable 'p' can be declared as pointer to const [constVariablePointer]
+   char *p = &buf[strlen (CAFE_DESKTOP_ITEM_ENCODING)];
+         ^
+libcafe-desktop/cafe-desktop-item.c:3496:35: style: Parameter 'item' can be declared as pointer to const [constParameterPointer]
+try_english_key (CafeDesktopItem *item, const char *key)
+                                  ^
+Checking libcafe-desktop/cafe-desktop-item.c: HAVE_STARTUP_NOTIFICATION...
+8/23 files checked 56% done
+Checking libcafe-desktop/cafe-desktop-thumbnail.c ...
+libcafe-desktop/cafe-desktop-thumbnail.c:62:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_PRIVATE (CafeDesktopThumbnailFactory,
+^
+9/23 files checked 62% done
+Checking libcafe-desktop/cafe-desktop-utils.c ...
+libcafe-desktop/cafe-desktop-utils.c:138:14: style: Expression is always true because 'else if' condition is opposite to previous condition at line 132. [multiCondition]
+   if (check == NULL)
+             ^
+libcafe-desktop/cafe-desktop-utils.c:132:13: note: first condition
+  if (check != NULL) {
+            ^
+libcafe-desktop/cafe-desktop-utils.c:138:14: note: else if condition is opposite to first condition
+   if (check == NULL)
+             ^
+libcafe-desktop/cafe-desktop-utils.c:387:3: style: Variable '*l' is assigned an expression that holds the same value. [redundantAssignment]
+  *l = lightness;
+  ^
+libcafe-desktop/cafe-desktop-utils.c:375:12: note: lightness is assigned '*l' here.
+ lightness = *l;
+           ^
+libcafe-desktop/cafe-desktop-utils.c:387:3: note: Variable '*l' is assigned an expression that holds the same value.
+  *l = lightness;
+  ^
+libcafe-desktop/cafe-desktop-utils.c:244:27: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+ctk_style_shade (CdkRGBA *a,
+                          ^
+Checking libcafe-desktop/cafe-desktop-utils.c: HAVE_BIND_TEXTDOMAIN_CODESET...
+10/23 files checked 64% done
+Checking libcafe-desktop/cafe-gsettings.c ...
+11/23 files checked 65% done
+Checking libcafe-desktop/cafe-languages.c ...
+libcafe-desktop/cafe-languages.c:394:21: style: Variable 'old_locale' can be declared as pointer to const [constVariablePointer]
+        CafeLocale *old_locale;
+                    ^
+Checking libcafe-desktop/cafe-languages.c: _DIRENT_HAVE_D_TYPE...
+12/23 files checked 72% done
+Checking libcafe-desktop/cafe-rr-config.c ...
+libcafe-desktop/cafe-rr-config.c:94:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_PRIVATE (CafeRRConfig, cafe_rr_config, G_TYPE_OBJECT)
+^
+Checking libcafe-desktop/cafe-rr-config.c: HAVE_RANDR...
+13/23 files checked 81% done
+Checking libcafe-desktop/cafe-rr-labeler.c ...
+libcafe-desktop/cafe-rr-labeler.c:110:18: style: Variable 'workareas' can be declared as pointer to const [constVariablePointer]
+ long           *workareas;
+                 ^
+libcafe-desktop/cafe-rr-labeler.c:170:10: style: Variable 'xev' can be declared as pointer to const [constVariablePointer]
+ XEvent *xev;
+         ^
+14/23 files checked 84% done
+Checking libcafe-desktop/cafe-rr-output-info.c ...
+libcafe-desktop/cafe-rr-output-info.c:33:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_PRIVATE (CafeRROutputInfo, cafe_rr_output_info, G_TYPE_OBJECT)
+^
+Checking libcafe-desktop/cafe-rr-output-info.c: HAVE_RANDR...
+15/23 files checked 85% done
+Checking libcafe-desktop/cafe-rr.c ...
+libcafe-desktop/cafe-rr.c:169:1: error: There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it. [unknownMacro]
+G_DEFINE_TYPE_WITH_CODE (CafeRRScreen, cafe_rr_screen, G_TYPE_OBJECT,
+^
+Checking libcafe-desktop/cafe-rr.c: HAVE_RANDR...
+16/23 files checked 94% done
+Checking libcafe-desktop/display-name.c ...
+17/23 files checked 95% done
+Checking libcafe-desktop/edid-parse.c ...
+18/23 files checked 97% done
+Checking libcafe-desktop/test-desktop-thumbnail.c ...
+19/23 files checked 97% done
+Checking libcafe-desktop/test-ditem.c ...
+libcafe-desktop/test-ditem.c:134:8: style: Variable 'file' can be declared as pointer to const [constVariablePointer]
+ char *file;
+       ^
+20/23 files checked 98% done
+Checking libcafe-desktop/test-languages.c ...
+21/23 files checked 99% done
+Checking libcafe-desktop/test.c ...
+Checking libcafe-desktop/test.c: HAVE_CONFIG_H...
+22/23 files checked 99% done
+Checking tools/cafe-color-select.c ...
+23/23 files checked 100% done
+cafe-about/cafe-about.c:48:0: style: The function 'cafe_about_run' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+void cafe_about_run(void)
+^
+libcafe-desktop/cafe-desktop-item.c:360:0: style: The function 'cafe_desktop_item_new' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_new (void)
+^
+libcafe-desktop/cafe-desktop-item.c:428:0: style: The function 'cafe_desktop_item_copy' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_copy (const CafeDesktopItem *item)
+^
+libcafe-desktop/cafe-desktop-item.c:891:0: style: The function 'cafe_desktop_item_unref' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_unref (CafeDesktopItem *item)
+^
+libcafe-desktop/cafe-desktop-item.c:2186:0: style: The function 'cafe_desktop_item_launch_with_env' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_launch_with_env (const CafeDesktopItem       *item,
+^
+libcafe-desktop/cafe-desktop-item.c:2269:0: style: The function 'cafe_desktop_item_drop_uri_list_with_env' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_drop_uri_list_with_env (const CafeDesktopItem *item,
+^
+libcafe-desktop/cafe-desktop-item.c:2328:0: style: The function 'cafe_desktop_item_exists' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_exists (const CafeDesktopItem *item)
+^
+libcafe-desktop/cafe-desktop-item.c:2394:0: style: The function 'cafe_desktop_item_set_entry_type' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_set_entry_type (CafeDesktopItem *item,
+^
+libcafe-desktop/cafe-desktop-item.c:2487:0: style: The function 'cafe_desktop_item_find_icon' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_find_icon (CtkIconTheme *icon_theme,
+^
+libcafe-desktop/cafe-desktop-item.c:2593:0: style: The function 'cafe_desktop_item_set_location' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_set_location (CafeDesktopItem *item, const char *location)
+^
+libcafe-desktop/cafe-desktop-item.c:2706:0: style: The function 'cafe_desktop_item_set_string' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_set_string (CafeDesktopItem *item,
+^
+libcafe-desktop/cafe-desktop-item.c:2897:0: style: The function 'cafe_desktop_item_get_boolean' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_desktop_item_get_boolean (const CafeDesktopItem *item,
+^
+libcafe-desktop/cafe-rr-labeler.c:497:0: style: The function 'cafe_rr_labeler_hide' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+cafe_rr_labeler_hide (CafeRRLabeler *labeler)
+^
+libcafe-desktop/test-languages.c:26:0: style: The function 'test_one_locale' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+void test_one_locale(const gchar *locale)
+^
+libcafe-desktop/test-languages.c:66:0: style: The function 'test_locales' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+void test_locales(void)
+^
+tools/cafe-color-select.c:37:0: style: The function 'copy_color' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+copy_color (CtkWidget                *widget G_GNUC_UNUSED,
+^
+nofile:0:0: information: Active checkers: There was critical errors (use --checkers-report=<filename> to see details) [checkersReport]
+
+/usr/bin/cafe-autogen
+checking for autoreconf >= 2.53...
+(B  testing autoreconf... found 2.72
+checking for pkg-config >= 0.14.0...
+(B  testing pkg-config... found 1.8.1
+checking for gtk-doc >= 1.0...
+(B  testing gtkdocize... found 1.34.0
+checking for cafe-common >= 0.0.1...
+(B  testing cafe-doc-common... found 2.0.0
+Checking for required M4 macros...
+(BChecking for forbidden M4 macros...
+(BProcessing ./configure.ac
+(BRunning gtkdocize...
+(BRunning cafe-doc-common...
+(BRunning autoreconf...
+(Bautoreconf: export WARNINGS=no-portability
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file ABOUT-NLS
+Creating directory build-aux
+Copying file build-aux/config.rpath
+Copying file m4/codeset.m4
+Copying file m4/extern-inline.m4
+Copying file m4/fcntl-o.m4
+Copying file m4/gettext.m4
+Copying file m4/glibc2.m4
+Copying file m4/glibc21.m4
+Copying file m4/iconv.m4
+Copying file m4/intdiv0.m4
+Copying file m4/intl.m4
+Copying file m4/intldir.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/intmax.m4
+Copying file m4/inttypes-pri.m4
+Copying file m4/inttypes_h.m4
+Copying file m4/lcmessage.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/lock.m4
+Copying file m4/longlong.m4
+Copying file m4/nls.m4
+Copying file m4/po.m4
+Copying file m4/printf-posix.m4
+Copying file m4/progtest.m4
+Copying file m4/size_max.m4
+Copying file m4/stdint_h.m4
+Copying file m4/threadlib.m4
+Copying file m4/uintmax_t.m4
+Copying file m4/visibility.m4
+Copying file m4/wchar_t.m4
+Copying file m4/wint_t.m4
+Copying file m4/xsize.m4
+Copying file po/Makefile.in.in
+Copying file po/Makevars.template
+Copying file po/Rules-quot
+Copying file po/boldquot.sed
+Copying file po/en@boldquot.header
+Copying file po/en@quot.header
+Copying file po/insert-header.sin
+Copying file po/quot.sed
+Copying file po/remove-potcdate.sin
+autoreconf: running: aclocal --force -I m4 ${ACLOCAL_FLAGS}
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: running: gtkdocize --copy
+autoreconf: running: aclocal --force -I m4 ${ACLOCAL_FLAGS}
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:36: installing 'build-aux/compile'
+configure.ac:40: installing 'build-aux/config.guess'
+configure.ac:40: installing 'build-aux/config.sub'
+configure.ac:11: installing 'build-aux/install-sh'
+configure.ac:11: installing 'build-aux/missing'
+cafe-about/Makefile.am: installing 'build-aux/depcomp'
+autoreconf: Leaving directory '.'
+Skipping configure process.
+scan-build: Using '/usr/lib/llvm-19/bin/clang' for static analysis
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether to enable debugging... no
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer accepts -g... yes
+checking for /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer option to enable C11 features... none needed
+checking whether /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer understands -c and -o together... rm: cannot remove 'conftest.plist': Is a directory
+yes
+checking dependency style of /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... gcc3
+checking whether C compiler accepts -Werror=unknown-warning-option... no
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Wmissing-prototypes... yes
+checking whether C compiler accepts -Wbad-function-cast... yes
+checking whether C compiler accepts -Wcast-align... yes
+checking whether C compiler accepts -Wextra... yes
+checking whether C compiler accepts -Wformat-nonliteral... yes
+checking whether C compiler accepts -Wmissing-declarations... yes
+checking whether C compiler accepts -Wnested-externs... yes
+checking whether C compiler accepts -Wpointer-arith... yes
+checking whether C compiler accepts -Wredundant-decls... yes
+checking whether C compiler accepts -Wshadow... yes
+checking whether C compiler accepts -Wstrict-prototypes... yes
+checking whether C compiler accepts -Wunused-macros... yes
+checking whether C compiler accepts -Werror=format-security... yes
+checking whether C compiler accepts -fstrict-aliasing... yes
+checking flags to pass to the C compiler /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... -Wall -Wmissing-prototypes -Wbad-function-cast -Wcast-align -Wextra -Wformat-nonliteral -Wmissing-declarations -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wunused-macros -Werror=format-security -fstrict-aliasing
+checking for gcc... (cached) /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer
+checking whether the compiler supports GNU C... (cached) yes
+checking whether /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer accepts -g... (cached) yes
+checking for /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer option to enable C11 features... (cached) none needed
+checking whether /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer understands -c and -o together... (cached) yes
+checking dependency style of /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... (cached) gcc3
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... rm: cannot remove 'conftest.plist': Is a directory
+BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 3145728
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ranlib... ranlib
+checking for ar... ar
+checking for archiver @FILE support... rm: cannot remove 'conftest.plist': Is a directory
+@
+checking for strip... strip
+checking command to parse /usr/bin/nm -B output from /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer object... rm: cannot remove 'conftest.plist': Is a directory
+ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer supports -fno-rtti -fno-exceptions... no
+checking for /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer option to produce PIC... -fPIC -DPIC
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer PIC flag -fPIC -DPIC works... yes
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer static flag -static works... yes
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer supports -c -o file.o... yes
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer supports -c -o file.o... (cached) yes
+checking whether the /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for dconf >= 0.13.4... yes
+checking Startup notification library >= 0.5... yes
+Building with libstartup-notification
+checking for gobject-introspection... yes
+checking how to run the C preprocessor... /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer -E
+checking for X... libraries , headers 
+checking for x11... yes
+checking for xrandr... yes
+checking for gdk-pixbuf-2.0 >= 2.36.5 ctk+-3.0 >= 3.22.0 glib-2.0 >= 2.67.3 gio-2.0 >= 2.26.0 libstartup-notification-1.0 xrandr iso-codes... yes
+checking for ctk+-3.0 >= 3.22.0... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for egrep -e... (cached) /usr/bin/grep -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking pkg-config is at least version 0.16... yes
+checking for mawk... /usr/bin/mawk
+checking for perl5... no
+checking for perl... /usr/bin/perl
+checking for library containing sqrt... -lm
+checking for gtk-doc... yes
+checking for gtkdoc-check... gtkdoc-check.test
+checking for gtkdoc-check... /usr/bin/gtkdoc-check
+checking for gtkdoc-rebase... /usr/bin/gtkdoc-rebase
+checking for gtkdoc-mkpdf... /usr/bin/gtkdoc-mkpdf
+checking whether to build gtk-doc documentation... yes
+checking for glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0... yes
+checking for rsvg-convert... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating cafe-about/Makefile
+config.status: creating cafe-about/cafe-about.h
+config.status: creating cafe-about/cafe-version.xml
+config.status: creating libcafe-desktop/Makefile
+config.status: creating libcafe-desktop/cafe-desktop-2.0.pc
+config.status: creating libcafe-desktop/cafe-desktop-2.0-uninstalled.pc
+config.status: creating docs/Makefile
+config.status: creating docs/reference/Makefile
+config.status: creating docs/reference/cafe-desktop/Makefile
+config.status: creating po/Makefile.in
+config.status: creating schemas/Makefile
+config.status: creating schemas/org.cafe.background.gschema.xml
+config.status: creating man/Makefile
+config.status: creating tools/Makefile
+config.status: creating icons/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+
+cafe-desktop 2.0.0
+==================
+
+    prefix:                       /usr
+    exec_prefix:                  ${prefix}
+    libdir:                       ${exec_prefix}/lib
+    bindir:                       ${exec_prefix}/bin
+    sbindir:                      ${exec_prefix}/sbin
+    sysconfdir:                   ${prefix}/etc
+    localstatedir:                ${prefix}/var
+    datadir:                      ${datarootdir}
+    source code location:         .
+    compiler:                     /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer
+    cflags:                       -Wall -Wmissing-prototypes -Wbad-function-cast -Wcast-align -Wextra -Wformat-nonliteral -Wmissing-declarations -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wunused-macros -Werror=format-security -fstrict-aliasing
+    warning flags:                -Wall -Wmissing-prototypes -Wbad-function-cast -Wcast-align -Wextra -Wformat-nonliteral -Wmissing-declarations -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wunused-macros -Werror=format-security -fstrict-aliasing
+    Maintainer mode:              no
+    Use *_DISABLE_DEPRECATED:     no
+
+    Build cafe-about:             yes
+    Use external pnp.ids:         no (internal)
+    Startup notification support: yes
+    XRandr support:               yes
+    Build introspection support:  yes
+    Build gtk-doc documentation:  
+
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2025-04-08-091519-12364-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-19/bin/clang' for static analysis
+make  all-recursive
+make[1]: Entering directory '/rootdir'
+Making all in libcafe-desktop
+make[2]: Entering directory '/rootdir/libcafe-desktop'
+  CC       test-desktop-thumbnail.o
+  CC       cafe-desktop-utils.lo
+  CC       cafe-desktop-thumbnail.lo
+  CC       cafe-dconf.lo
+  CC       cafe-gsettings.lo
+  CC       cafe-bg.lo
+  CC       cafe-bg-crossfade.lo
+  CC       display-name.lo
+cafe-bg.c:618:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  618 | get_wallpaper_cache_dir ()
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+cafe-bg.c: In function 'get_pixbuf_for_size':
+cafe-bg.c:2379:58: warning: cast from function call of type 'double' to non-matching type 'unsigned int' [-Wbad-function-cast]
+ 2379 |                                 time_until_next_change = (guint)get_slide_timeout (slide);
+      |                                                          ^
+cafe-bg.c: In function 'slideshow_unref':
+cafe-bg.c:2974:44: warning: cast between incompatible function types from 'void (*)(void *)' to 'void (*)(void *, void *)' [-Wcast-function-type]
+ 2974 |         g_list_foreach (show->stack->head, (GFunc) g_free, NULL);
+      |                                            ^
+cafe-bg.c: In function 'read_slideshow_file':
+cafe-bg.c:3079:21: warning: declaration of 'len' shadows a previous local [-Wshadow]
+ 3079 |                 int len;
+      |                     ^~~
+cafe-bg.c:3040:15: note: shadowed declaration is here
+ 3040 |         gsize len;
+      |               ^~~
+cafe-bg.c: In function 'cafe_bg_create_frame_thumbnail':
+cafe-bg.c:3245:40: warning: comparison of integer expressions of different signedness: 'int' and 'guint' {aka 'unsigned int'} [-Wsign-compare]
+ 3245 |         if (frame_num < 0 || frame_num >= g_queue_get_length (show->slides))
+      |                                        ^~
+display-name.c: In function 'find_vendor':
+display-name.c:240:23: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+  240 |         for (i = 0; i < sizeof(vendors) / sizeof(vendors[0]); ++i)
+      |                       ^
+cafe-bg.c: At top level:
+cafe-bg.c:80:9: warning: macro "GRADIENT_PIXMAP_TILE_SIZE" is not used [-Wunused-macros]
+   80 | #define GRADIENT_PIXMAP_TILE_SIZE 128
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       cafe-rr.lo
+  CC       cafe-languages.lo
+In file included from /usr/include/glib-2.0/glib/gtypes.h:34,
+                 from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from cafe-languages.c:35:
+cafe-languages.c: In function 'count_languages_and_territories':
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:103:42: warning: cast from function call of type 'gpointer' {aka 'void *'} to non-matching type 'long int' [-Wbad-function-cast]
+  103 | #define GPOINTER_TO_INT(p)      ((gint)  (glong) (p))
+      |                                          ^
+cafe-languages.c:570:33: note: in expansion of macro 'GPOINTER_TO_INT'
+  570 |                         count = GPOINTER_TO_INT (g_hash_table_lookup (cafe_language_count_map, locale->language_code));
+      |                                 ^~~~~~~~~~~~~~~
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:103:42: warning: cast from function call of type 'gpointer' {aka 'void *'} to non-matching type 'long int' [-Wbad-function-cast]
+  103 | #define GPOINTER_TO_INT(p)      ((gint)  (glong) (p))
+      |                                          ^
+cafe-languages.c:578:33: note: in expansion of macro 'GPOINTER_TO_INT'
+  578 |                         count = GPOINTER_TO_INT (g_hash_table_lookup (cafe_territory_count_map, locale->territory_code));
+      |                                 ^~~~~~~~~~~~~~~
+cafe-languages.c: In function 'get_language_count':
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:103:42: warning: cast from function call of type 'gpointer' {aka 'void *'} to non-matching type 'long int' [-Wbad-function-cast]
+  103 | #define GPOINTER_TO_INT(p)      ((gint)  (glong) (p))
+      |                                          ^
+cafe-languages.c:615:16: note: in expansion of macro 'GPOINTER_TO_INT'
+  615 |         return GPOINTER_TO_INT (g_hash_table_lookup (cafe_language_count_map, language));
+      |                ^~~~~~~~~~~~~~~
+cafe-languages.c: In function 'get_territory_count':
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:103:42: warning: cast from function call of type 'gpointer' {aka 'void *'} to non-matching type 'long int' [-Wbad-function-cast]
+  103 | #define GPOINTER_TO_INT(p)      ((gint)  (glong) (p))
+      |                                          ^
+cafe-languages.c:631:16: note: in expansion of macro 'GPOINTER_TO_INT'
+  631 |         return GPOINTER_TO_INT (g_hash_table_lookup (cafe_territory_count_map, territory));
+      |                ^~~~~~~~~~~~~~~
+cafe-languages.c: At top level:
+cafe-languages.c:44:9: warning: macro "__LC_LAST" is not used [-Wunused-macros]
+   44 | #define __LC_LAST       13
+      |         ^~~~~~~~~
+cafe-rr.c: In function 'has_similar_mode':
+cafe-rr.c:303:40: warning: comparison of integer expressions of different signedness: 'guint' {aka 'unsigned int'} and 'int' [-Wsign-compare]
+  303 |         if (cafe_rr_mode_get_width (m) == width &&
+      |                                        ^~
+cafe-rr.c:304:41: warning: comparison of integer expressions of different signedness: 'guint' {aka 'unsigned int'} and 'int' [-Wsign-compare]
+  304 |             cafe_rr_mode_get_height (m) == height)
+      |                                         ^~
+cafe-rr.c: In function 'fill_screen_info_from_resources':
+cafe-rr.c:379:21: warning: declaration of 'crtc' shadows a previous local [-Wshadow]
+  379 |         CafeRRCrtc *crtc = crtc_new (info, resources->crtcs[i]);
+      |                     ^~~~
+cafe-rr.c:368:18: note: shadowed declaration is here
+  368 |     CafeRRCrtc **crtc;
+      |                  ^~~~
+cafe-rr.c:389:23: warning: declaration of 'output' shadows a previous local [-Wshadow]
+  389 |         CafeRROutput *output = output_new (info, resources->outputs[i]);
+      |                       ^~~~~~
+cafe-rr.c:369:20: note: shadowed declaration is here
+  369 |     CafeRROutput **output;
+      |                    ^~~~~~
+cafe-rr.c: In function 'cafe_rr_rotation_from_xrotation':
+cafe-rr.c:1676:19: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+ 1676 |     for (i = 0; i < G_N_ELEMENTS (rotation_map); ++i)
+      |                   ^
+cafe-rr.c: In function 'xrotation_from_rotation':
+cafe-rr.c:1691:19: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+ 1691 |     for (i = 0; i < G_N_ELEMENTS (rotation_map); ++i)
+      |                   ^
+cafe-languages.c:1120:3: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+ 1120 |                 goto out;
+      |                 ^~~~~~~~
+cafe-languages.c:1146:17: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+ 1146 |                 g_string_free (full_language, TRUE);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gstring.h:72:4: note: expanded from macro 'g_string_free'
+   72 |   (__builtin_constant_p (free_segment) ?        \
+      |    ^~~~~~~~~~~~~~~~~~~~
+cafe-languages.c:1201:3: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+ 1201 |                 goto out;
+      |                 ^~~~~~~~
+cafe-languages.c:1227:17: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+ 1227 |                 g_string_free (full_name, TRUE);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/glib-2.0/glib/gstring.h:72:4: note: expanded from macro 'g_string_free'
+   72 |   (__builtin_constant_p (free_segment) ?        \
+      |    ^~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+  CC       cafe-rr-config.lo
+cafe-rr-config.c: In function 'parser_free':
+cafe-rr-config.c:385:19: warning: comparison of integer expressions of different signedness: 'int' and 'guint' {aka 'unsigned int'} [-Wsign-compare]
+  385 |     for (i = 0; i < parser->outputs->len; ++i)
+      |                   ^
+cafe-rr-config.c:394:19: warning: comparison of integer expressions of different signedness: 'int' and 'guint' {aka 'unsigned int'} [-Wsign-compare]
+  394 |     for (i = 0; i < parser->configurations->len; ++i)
+      |                   ^
+cafe-rr-config.c: In function 'can_clone':
+cafe-rr-config.c:1455:19: warning: comparison of integer expressions of different signedness: 'int' and 'guint' {aka 'unsigned int'} [-Wsign-compare]
+ 1455 |     for (i = 0; i < info->outputs->len; ++i)
+      |                   ^
+cafe-rr-config.c: In function 'crtc_assignment_assign':
+cafe-rr-config.c:1550:19: warning: declaration of 'info' shadows a previous local [-Wshadow]
+ 1550 |         CrtcInfo *info = g_new0 (CrtcInfo, 1);
+      |                   ^~~~
+cafe-rr-config.c:1477:15: note: shadowed declaration is here
+ 1477 |     CrtcInfo *info = g_hash_table_lookup (assign->info, crtc);
+      |               ^~~~
+  CC       cafe-rr-output-info.lo
+  CC       cafe-rr-labeler.lo
+  CC       cafe-colorbutton.lo
+  CC       cafe-colorsel.lo
+In file included from /usr/include/glib-2.0/glib/gtypes.h:34,
+                 from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from private.h:28,
+                 from cafe-colorsel.c:29:
+cafe-colorsel.c: In function 'palette_set_color':
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:103:42: warning: cast from function call of type 'gpointer' {aka 'void *'} to non-matching type 'long int' [-Wbad-function-cast]
+  103 | #define GPOINTER_TO_INT(p)      ((gint)  (glong) (p))
+      |                                          ^
+cafe-colorsel.c:1262:7: note: in expansion of macro 'GPOINTER_TO_INT'
+ 1262 |   if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (drawing_area), "color_set")) == 0)
+      |       ^~~~~~~~~~~~~~~
+cafe-colorsel.c: In function 'palette_release':
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:103:42: warning: cast from function call of type 'gpointer' {aka 'void *'} to non-matching type 'long int' [-Wbad-function-cast]
+  103 | #define GPOINTER_TO_INT(p)      ((gint)  (glong) (p))
+      |                                          ^
+cafe-colorsel.c:1460:11: note: in expansion of macro 'GPOINTER_TO_INT'
+ 1460 |       if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (drawing_area), "color_set")) != 0)
+      |           ^~~~~~~~~~~~~~~
+cafe-colorsel.c: In function 'palette_activate':
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:103:42: warning: cast from function call of type 'gpointer' {aka 'void *'} to non-matching type 'long int' [-Wbad-function-cast]
+  103 | #define GPOINTER_TO_INT(p)      ((gint)  (glong) (p))
+      |                                          ^
+cafe-colorsel.c:1519:11: note: in expansion of macro 'GPOINTER_TO_INT'
+ 1519 |       if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "color_set")) != 0)
+      |           ^~~~~~~~~~~~~~~
+cafe-colorsel.c: In function 'update_color':
+cafe-colorsel.c:2165:15: warning: cast from function call of type 'double' to non-matching type 'unsigned int' [-Wbad-function-cast]
+ 2165 |               (guint) (scale_round (priv->color[COLORSEL_RED], 255)),
+      |               ^
+cafe-colorsel.c:2166:15: warning: cast from function call of type 'double' to non-matching type 'unsigned int' [-Wbad-function-cast]
+ 2166 |               (guint) (scale_round (priv->color[COLORSEL_GREEN], 255)),
+      |               ^
+cafe-colorsel.c:2167:15: warning: cast from function call of type 'double' to non-matching type 'unsigned int' [-Wbad-function-cast]
+ 2167 |               (guint) (scale_round (priv->color[COLORSEL_BLUE], 255)));
+      |               ^
+cafe-colorsel.c: At top level:
+cafe-colorsel.c:56:9: warning: macro "SAMPLE_HEIGHT" is not used [-Wunused-macros]
+   56 | #define SAMPLE_HEIGHT 28
+      |         ^~~~~~~~~~~~~
+cafe-colorsel.c:55:9: warning: macro "SAMPLE_WIDTH" is not used [-Wunused-macros]
+   55 | #define SAMPLE_WIDTH  64
+      |         ^~~~~~~~~~~~
+cafe-bg.c:2274:15: warning: 3rd function call argument is an uninitialized value [core.CallAndMessage]
+ 2274 |                                                 thumb = blend (thumb1, thumb2, alpha);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cafe-bg.c:2329:42: warning: Access to field 'width' results in a dereference of a null pointer (loaded from variable 'best') [core.NullDereference]
+ 2329 |                                 if (abs (size->width - width) < abs (best->width - width)) {
+      |                                                                      ^~~~~~~~~~~
+2 warnings generated.
+  CC       cafe-colorseldialog.lo
+  CC       edid-parse.lo
+  CC       cafe-desktop-item.lo
+cafe-desktop-item.c: In function 'free_section':
+cafe-desktop-item.c:877:40: warning: cast between incompatible function types from 'void (*)(void *)' to 'void (*)(void *, void *)' [-Wcast-function-type]
+  877 |         g_list_foreach (section->keys, (GFunc)g_free, NULL);
+      |                                        ^
+cafe-desktop-item.c: In function 'cafe_desktop_item_unref':
+cafe-desktop-item.c:901:42: warning: cast between incompatible function types from 'void (*)(void *)' to 'void (*)(void *, void *)' [-Wcast-function-type]
+  901 |         g_list_foreach (item->languages, (GFunc)g_free, NULL);
+      |                                          ^
+cafe-desktop-item.c:905:37: warning: cast between incompatible function types from 'void (*)(void *)' to 'void (*)(void *, void *)' [-Wcast-function-type]
+  905 |         g_list_foreach (item->keys, (GFunc)g_free, NULL);
+      |                                     ^
+cafe-desktop-item.c: In function 'free_startup_timeout':
+cafe-desktop-item.c:1565:26: warning: cast between incompatible function types from 'void (*)(SnLauncherContext *)' to 'void (*)(void *, void *)' [-Wcast-function-type]
+ 1565 |                          (GFunc) sn_launcher_context_unref,
+      |                          ^
+cafe-desktop-item.c: In function 'ditem_execute':
+cafe-desktop-item.c:1935:47: warning: cast between incompatible function types from 'void (*)(void *)' to 'void (*)(void *, void *)' [-Wcast-function-type]
+ 1935 |                 g_slist_foreach (vector_list, (GFunc)g_free, NULL);
+      |                                               ^
+cafe-desktop-item.c: In function 'cafe_desktop_item_get_file_status':
+cafe-desktop-item.c:2464:30: warning: comparison of integer expressions of different signedness: 'time_t' {aka 'long int'} and 'guint64' {aka 'long unsigned int'} [-Wsign-compare]
+ 2464 |         else if (item->mtime < g_file_info_get_attribute_uint64 (info, G_FILE_ATTRIBUTE_TIME_MODIFIED))
+      |                              ^
+cafe-desktop-item.c: At top level:
+cafe-desktop-item.c:55:9: warning: macro "sure_string" is not used [-Wunused-macros]
+   55 | #define sure_string(s) ((s)!=NULL?(s):"")
+      |         ^~~~~~~~~~~
+  CC       test-ditem.o
+  CC       test.o
+  CC       test-languages.o
+cafe-desktop-item.c:2027:2: warning: Undefined or garbage value returned to caller [core.uninitialized.UndefReturn]
+ 2027 |         return ret;
+      |         ^~~~~~~~~~
+cafe-desktop-item.c:3117:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3117 |                         *p++ = '\\';
+      |                         ^~~~
+cafe-desktop-item.c:3118:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3118 |                         *p++ = 't';
+      |                         ^~~~
+cafe-desktop-item.c:3121:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3121 |                         *p++ = '\\';
+      |                         ^~~~
+cafe-desktop-item.c:3122:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3122 |                         *p++ = 'n';
+      |                         ^~~~
+cafe-desktop-item.c:3125:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3125 |                         *p++ = '\\';
+      |                         ^~~~
+cafe-desktop-item.c:3126:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3126 |                         *p++ = 'r';
+      |                         ^~~~
+cafe-desktop-item.c:3129:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3129 |                         *p++ = '\\';
+      |                         ^~~~
+cafe-desktop-item.c:3130:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3130 |                         *p++ = '\\';
+      |                         ^~~~
+cafe-desktop-item.c:3133:4: warning: Out of bound access to memory after the end of the heap area [alpha.security.ArrayBoundV2]
+ 3133 |                         *p++ = *s;
+      |                         ^~~~
+10 warnings generated.
+  CCLD     libcafe-desktop-2.la
+  CCLD     test-desktop-thumbnail
+  CCLD     test-ditem
+  CCLD     test
+  CCLD     test-languages
+  GISCAN   CafeDesktop-2.0.gir
+/rootdir/libcafe-desktop/tmp-introspectto6ucpue/CafeDesktop-2.0.c:89:13: warning: File position of the stream might be 'indeterminate' after a failed operation. Can cause undefined behavior [unix.Stream]
+   89 |       ret = fread (&byte, 1, 1, input);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/rootdir/libcafe-desktop/tmp-introspectto6ucpue/CafeDesktop-2.0.c:89:13: warning: Read function called when stream is in EOF state. Function has no effect [unix.Stream]
+   89 |       ret = fread (&byte, 1, 1, input);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/rootdir/libcafe-desktop/tmp-introspectto6ucpue/CafeDesktop-2.0.c:239:11: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+  239 |           break;
+      |           ^~~~~
+/rootdir/libcafe-desktop/tmp-introspectto6ucpue/CafeDesktop-2.0.c:246:11: warning: This statement is never executed [alpha.deadcode.UnreachableCode]
+  246 |           break;
+      |           ^~~~~
+4 warnings generated.
+cafe-desktop-item.h:171: Warning: CafeDesktop: cafe_desktop_item_launch: argument file_list: Missing (element-type) annotation
+cafe-desktop-item.h:175: Warning: CafeDesktop: cafe_desktop_item_launch_with_env: argument file_list: Missing (element-type) annotation
+cafe-desktop-item.h:181: Warning: CafeDesktop: cafe_desktop_item_launch_on_screen: argument file_list: Missing (element-type) annotation
+cafe-desktop-item.h:257: Warning: CafeDesktop: cafe_desktop_item_get_languages: return value: Missing (element-type) annotation
+cafe-desktop-item.h:275: Warning: CafeDesktop: cafe_desktop_item_get_strings: return value: Missing (transfer) annotation
+cafe-dconf.c:99: Warning: CafeDesktop: cafe_dconf_list_subdirs: return value: Missing (transfer) annotation
+cafe-gsettings.h:46: Warning: CafeDesktop: cafe_gsettings_strv_to_gslist: return value: Missing (element-type) annotation
+cafe-colorsel.c:2821: Warning: CafeDesktop: cafe_color_selection_set_change_palette_hook: argument func: Missing (scope) annotation for callback without GDestroyNotify (valid: call, async, forever)
+cafe-colorsel.c:2830: Warning: CafeDesktop: cafe_color_selection_set_change_palette_hook: return value: Callbacks cannot be return values; use (skip)
+cafe-colorsel.c:2844: Warning: CafeDesktop: cafe_color_selection_set_change_palette_with_screen_hook: argument func: Missing (scope) annotation for callback without GDestroyNotify (valid: call, async, forever)
+cafe-colorsel.c:2853: Warning: CafeDesktop: cafe_color_selection_set_change_palette_with_screen_hook: return value: Callbacks cannot be return values; use (skip)
+  GICOMP   CafeDesktop-2.0.gir
+make[2]: Leaving directory '/rootdir/libcafe-desktop'
+Making all in man
+make[2]: Entering directory '/rootdir/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/rootdir/man'
+Making all in docs
+make[2]: Entering directory '/rootdir/docs'
+Making all in reference
+make[3]: Entering directory '/rootdir/docs/reference'
+Making all in cafe-desktop
+make[4]: Entering directory '/rootdir/docs/reference/cafe-desktop'
+  DOC   Preparing build
+  DOC   Building XML
+  DOC   Scanning header files
+  DOC   Introspecting gobjects
+cafe-desktop-scan.c: In function 'output_object_actions':
+cafe-desktop-scan.c:569:30: warning: unused parameter 'fp' [-Wunused-parameter]
+  569 | output_object_actions (FILE *fp, GType object_type)
+      |                        ~~~~~~^~
+cafe-desktop-scan.c:188:16: warning: Although the value stored to 'event_num' is used in the enclosing expression, the value is never actually read from 'event_num' [deadcode.DeadStores]
+  188 |   widget_num = event_num = callback_num = 0;
+      |                ^           ~~~~~~~~~~~~~~~~
+1 warning generated.
+  DOC   Building XML
+./cafe-desktop-decl.txt:1650: warning: CafeRROutputInfoPrivate has multiple definitions.
+./cafe-desktop-decl.txt:1659: warning: CafeRRConfigPrivate has multiple definitions.
+./cafe-desktop-decl.txt:1663: warning: CafeRRScreenPrivate has multiple definitions.
+../../../libcafe-desktop/cafe-bg.c:1160: warning: Parameter description for cafe_bg_create_surface_scale::window is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1160: warning: Parameter description for cafe_bg_create_surface_scale::width is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1160: warning: Parameter description for cafe_bg_create_surface_scale::height is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1160: warning: Parameter description for cafe_bg_create_surface_scale::scale is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1160: warning: Parameter description for cafe_bg_create_surface_scale::root is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1132: warning: Parameter description for cafe_bg_create_surface::window is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1132: warning: Parameter description for cafe_bg_create_surface::width is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1132: warning: Parameter description for cafe_bg_create_surface::height is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1132: warning: Parameter description for cafe_bg_create_surface::root is missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeBGColorType are missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeBGPlacement are missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1397: warning: Parameter description for cafe_bg_create_thumbnail::bg is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1397: warning: Parameter description for cafe_bg_create_thumbnail::factory is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1397: warning: Parameter description for cafe_bg_create_thumbnail::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1397: warning: Parameter description for cafe_bg_create_thumbnail::dest_width is missing in source code comment block.
+../../../libcafe-desktop/cafe-bg.c:1397: warning: Parameter description for cafe_bg_create_thumbnail::dest_height is missing in source code comment block.
+unknown:0: warning: Field descriptions for struct CafeRRScreen are missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1062: warning: Parameter description for cafe_rr_screen_list_outputs::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1046: warning: Parameter description for cafe_rr_screen_list_crtcs::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1014: warning: Parameter description for cafe_rr_screen_list_modes::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1030: warning: Parameter description for cafe_rr_screen_list_clone_modes::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1104: warning: Parameter description for cafe_rr_screen_get_output_by_id::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1104: warning: Parameter description for cafe_rr_screen_get_output_by_id::id is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1402: warning: Parameter description for cafe_rr_screen_get_output_by_name::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1402: warning: Parameter description for cafe_rr_screen_get_output_by_name::name is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1078: warning: Parameter description for cafe_rr_screen_get_crtc_by_id::screen is missing in source code comment block.
+../../../libcafe-desktop/cafe-rr.c:1078: warning: Parameter description for cafe_rr_screen_get_crtc_by_id::id is missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeRRRotation are missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeDesktopItemType are missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeDesktopItemStatus are missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeDesktopItemLoadFlags are missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeDesktopItemLaunchFlags are missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeDesktopItemIconFlags are missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeDesktopItemError are missing in source code comment block.
+../../../libcafe-desktop/cafe-desktop-item.c:525: warning: Parameter description for cafe_desktop_item_new_from_file::error is missing in source code comment block.
+../../../libcafe-desktop/cafe-desktop-item.c:551: warning: Parameter description for cafe_desktop_item_new_from_uri::error is missing in source code comment block.
+../../../libcafe-desktop/cafe-desktop-item.c:689: warning: Parameter description for cafe_desktop_item_new_from_string::uri is missing in source code comment block.
+../../../libcafe-desktop/cafe-desktop-item.c:768: warning: Parameter description for cafe_desktop_item_new_from_basename::error is missing in source code comment block.
+unknown:0: warning: Value descriptions for CafeDesktopThumbnailSize are missing in source code comment block.
+./cafe-desktop-unused.txt:1: warning: 201 unused declarations. They should be added to cafe-desktop-sections.txt in the appropriate place.
+  DOC   Building HTML
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (array) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (array) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (array) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (array) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (array) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (array) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (array) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (element-type) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (out) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (allow-none) no value found!
+        
+
+          In gtk-doc.xsl: For acronym (transfer full) no value found!
+        
+  DOC   Fixing cross-references
+html/CafeBG.html:162: warning: no link for: "G-SIGNAL-RUN-LAST:CAPS" -> (Run Last).
+html/CafeBG.html:277: warning: no link for: "GdkPixbuf" -> (<span class="type">GdkPixbuf</span>).
+html/CafeDesktopItem.html:562: warning: no link for: "GError" -> (<span class="type">GError</span>).
+html/CafeDesktopItem.html:781: warning: no link for: "TRUE:CAPS" -> (<code class="literal">TRUE</code>).
+html/CafeDesktopItem.html:781: warning: no link for: "FALSE:CAPS" -> (<code class="literal">FALSE</code>).
+html/CafeDesktopItem.html:838: warning: no link for: "GList" -> (<span class="type">GList</span>).
+html/CafeDesktopItem.html:865: warning: no link for: "NULL:CAPS" -> (<code class="literal">NULL</code>).
+html/CafeDesktopItem.html:1054: warning: no link for: "cafe-execute-async" -> (<code class="function"><GTKDOCLINK HREF="cafe-execute-async"><code class="function">cafe_execute_async()</code>).
+html/CafeDesktopThumbnailFactory.html:162: warning: no link for: "api-index-2.2" -> (2.2).
+html/CafeRRLabeler.html:73: warning: no link for: "CafeRRConfig" -> (<span class="type">CafeRRConfig</span>).
+html/cafe-desktop-Language-Utilities.html:127: warning: no link for: "g-strfreev" -> (<code class="function">g_strfreev()</code>).
+html/cafe-desktop-Language-Utilities.html:130: warning: no link for: "api-index-1.22" -> (1.22).
+html/cafe-desktop-Language-Utilities.html:298: warning: no link for: ".codeset" -> (_country).
+make[4]: Leaving directory '/rootdir/docs/reference/cafe-desktop'
+make[4]: Entering directory '/rootdir/docs/reference'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/rootdir/docs/reference'
+make[3]: Leaving directory '/rootdir/docs/reference'
+make[3]: Entering directory '/rootdir/docs'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/rootdir/docs'
+make[2]: Leaving directory '/rootdir/docs'
+Making all in schemas
+make[2]: Entering directory '/rootdir/schemas'
+  GEN      org.cafe.accessibility-keyboard.gschema.valid
+  GEN      org.cafe.accessibility-startup.gschema.valid
+  GEN      org.cafe.applications-at-mobility.gschema.valid
+  GEN      org.cafe.applications-at-visual.gschema.valid
+  GEN      org.cafe.applications-browser.gschema.valid
+  GEN      org.cafe.applications-calculator.gschema.valid
+  GEN      org.cafe.applications-messenger.gschema.valid
+  GEN      org.cafe.applications-office.gschema.valid
+  GEN      org.cafe.applications-terminal.gschema.valid
+  GEN      org.cafe.background.gschema.valid
+  GEN      org.cafe.debug.gschema.valid
+  GEN      org.cafe.file-views.gschema.valid
+  GEN      org.cafe.interface.gschema.valid
+  GEN      org.cafe.lockdown.gschema.valid
+  GEN      org.cafe.sound.gschema.valid
+  GEN      org.cafe.thumbnail-cache.gschema.valid
+  GEN      org.cafe.thumbnailers.gschema.valid
+  GEN      org.cafe.typing-break.gschema.valid
+make[2]: Leaving directory '/rootdir/schemas'
+Making all in tools
+make[2]: Entering directory '/rootdir/tools'
+  CC       cafe_color_select-cafe-color-select.o
+  GEN      cafe-color-select.desktop
+cafe-color-select.c:37:1: warning: no previous prototype for 'copy_color' [-Wmissing-prototypes]
+   37 | copy_color (CtkWidget                *widget G_GNUC_UNUSED,
+      | ^~~~~~~~~~
+  CCLD     cafe-color-select
+make[2]: Leaving directory '/rootdir/tools'
+Making all in icons
+make[2]: Entering directory '/rootdir/icons'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/rootdir/icons'
+Making all in po
+make[2]: Entering directory '/rootdir/po'
+make cafe-desktop.pot-update
+make[3]: Entering directory '/rootdir/po'
+sed -e '/^#/d' remove-potcdate.sin > t-remove-potcdate.sed
+mv t-remove-potcdate.sed remove-potcdate.sed
+package_gnu=""; \
+test -n "$package_gnu" || { \
+  if { if (LC_ALL=C find --version) 2>/dev/null | grep GNU >/dev/null; then \
+	 LC_ALL=C find -L .. -maxdepth 1 -type f \
+		       -size -10000000c -exec grep 'GNU cafe-desktop' \
+		       /dev/null '{}' ';' 2>/dev/null; \
+       else \
+	 LC_ALL=C grep 'GNU cafe-desktop' ../* 2>/dev/null; \
+       fi; \
+     } | grep -v 'libtool:' >/dev/null; then \
+     package_gnu=yes; \
+   else \
+     package_gnu=no; \
+   fi; \
+}; \
+if test "$package_gnu" = "yes"; then \
+  package_prefix='GNU '; \
+else \
+  package_prefix=''; \
+fi; \
+if test -n '' || test 'https://github.com/cafe-desktop/cafe-desktop/' = '@'PACKAGE_BUGREPORT'@'; then \
+  msgid_bugs_address=''; \
+else \
+  msgid_bugs_address='https://github.com/cafe-desktop/cafe-desktop/'; \
+fi; \
+case `/usr/bin/xgettext --version | sed 1q | sed -e 's,^[^0-9]*,,'` in \
+  '' | 0.[0-9] | 0.[0-9].* | 0.1[0-5] | 0.1[0-5].* | 0.16 | 0.16.[0-1]*) \
+    /usr/bin/xgettext --default-domain=cafe-desktop --directory=.. \
+      --add-comments=TRANSLATORS: --from-code=UTF-8 --keyword=_ --keyword=N_ --keyword=C_:1c,2 --keyword=NC_:1c,2 --keyword=g_dngettext:2,3 --add-comments  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='CAFE Developers' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+  *) \
+    /usr/bin/xgettext --default-domain=cafe-desktop --directory=.. \
+      --add-comments=TRANSLATORS: --from-code=UTF-8 --keyword=_ --keyword=N_ --keyword=C_:1c,2 --keyword=NC_:1c,2 --keyword=g_dngettext:2,3 --add-comments  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='CAFE Developers' \
+      --package-name="${package_prefix}cafe-desktop" \
+      --package-version='2.0.0' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+esac
+test ! -f cafe-desktop.po || { \
+  if test -f ./cafe-desktop.pot-header; then \
+    sed -e '1,/^#$/d' < cafe-desktop.po > cafe-desktop.1po && \
+    cat ./cafe-desktop.pot-header cafe-desktop.1po > cafe-desktop.po; \
+    rm -f cafe-desktop.1po; \
+  fi; \
+  if test -f ./cafe-desktop.pot; then \
+    sed -f remove-potcdate.sed < ./cafe-desktop.pot > cafe-desktop.1po && \
+    sed -f remove-potcdate.sed < cafe-desktop.po > cafe-desktop.2po && \
+    if cmp cafe-desktop.1po cafe-desktop.2po >/dev/null 2>&1; then \
+      rm -f cafe-desktop.1po cafe-desktop.2po cafe-desktop.po; \
+    else \
+      rm -f cafe-desktop.1po cafe-desktop.2po ./cafe-desktop.pot && \
+      mv cafe-desktop.po ./cafe-desktop.pot; \
+    fi; \
+  else \
+    mv cafe-desktop.po ./cafe-desktop.pot; \
+  fi; \
+}
+make[3]: Leaving directory '/rootdir/po'
+test ! -f ./cafe-desktop.pot || \
+  test -z "af.gmo am.gmo an.gmo ar.gmo as.gmo ast.gmo az.gmo be.gmo bg.gmo bn.gmo bn_IN.gmo br.gmo bs.gmo ca.gmo ca@valencia.gmo cmn.gmo crh.gmo cs.gmo cy.gmo da.gmo de.gmo de_CH.gmo dz.gmo el.gmo en_AU.gmo en_CA.gmo en_GB.gmo eo.gmo es.gmo es_AR.gmo es_CL.gmo es_CO.gmo es_MX.gmo et.gmo eu.gmo fa.gmo fi.gmo fr.gmo frp.gmo fur.gmo fy.gmo ga.gmo gl.gmo gu.gmo he.gmo hi.gmo hr.gmo hu.gmo hy.gmo ia.gmo id.gmo ie.gmo ig.gmo is.gmo it.gmo ja.gmo jv.gmo ka.gmo kab.gmo kk.gmo kn.gmo ko.gmo ku.gmo ku_IQ.gmo ky.gmo li.gmo lo.gmo lt.gmo lv.gmo mai.gmo mg.gmo mi.gmo mk.gmo ml.gmo mn.gmo mr.gmo ms.gmo nb.gmo nds.gmo ne.gmo nl.gmo nn.gmo nso.gmo oc.gmo or.gmo pa.gmo pl.gmo ps.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo sc.gmo si.gmo sk.gmo sl.gmo sq.gmo sr.gmo sr@latin.gmo sv.gmo ta.gmo te.gmo th.gmo tk.gmo tr.gmo tt.gmo ug.gmo uk.gmo ur.gmo uz.gmo vi.gmo wa.gmo xh.gmo yi.gmo yo.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo zu.gmo" || make af.gmo am.gmo an.gmo ar.gmo as.gmo ast.gmo az.gmo be.gmo bg.gmo bn.gmo bn_IN.gmo br.gmo bs.gmo ca.gmo ca@valencia.gmo cmn.gmo crh.gmo cs.gmo cy.gmo da.gmo de.gmo de_CH.gmo dz.gmo el.gmo en_AU.gmo en_CA.gmo en_GB.gmo eo.gmo es.gmo es_AR.gmo es_CL.gmo es_CO.gmo es_MX.gmo et.gmo eu.gmo fa.gmo fi.gmo fr.gmo frp.gmo fur.gmo fy.gmo ga.gmo gl.gmo gu.gmo he.gmo hi.gmo hr.gmo hu.gmo hy.gmo ia.gmo id.gmo ie.gmo ig.gmo is.gmo it.gmo ja.gmo jv.gmo ka.gmo kab.gmo kk.gmo kn.gmo ko.gmo ku.gmo ku_IQ.gmo ky.gmo li.gmo lo.gmo lt.gmo lv.gmo mai.gmo mg.gmo mi.gmo mk.gmo ml.gmo mn.gmo mr.gmo ms.gmo nb.gmo nds.gmo ne.gmo nl.gmo nn.gmo nso.gmo oc.gmo or.gmo pa.gmo pl.gmo ps.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo sc.gmo si.gmo sk.gmo sl.gmo sq.gmo sr.gmo sr@latin.gmo sv.gmo ta.gmo te.gmo th.gmo tk.gmo tr.gmo tt.gmo ug.gmo uk.gmo ur.gmo uz.gmo vi.gmo wa.gmo xh.gmo yi.gmo yo.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo zu.gmo
+make[3]: Entering directory '/rootdir/po'
+/usr/bin/msgmerge --update --quiet --lang=af af.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=am am.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=an an.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ar ar.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=as as.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ast ast.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=az az.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=be be.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=bg bg.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=bn bn.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=bn_IN bn_IN.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=br br.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=bs bs.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ca ca.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ca@valencia ca@valencia.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=cmn cmn.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=crh crh.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=cs cs.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=cy cy.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=da da.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=de_CH de_CH.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=de de.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=dz dz.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=el el.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=en_AU en_AU.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=en_CA en_CA.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=en_GB en_GB.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=eo eo.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=es es.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=es_AR es_AR.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=es_CL es_CL.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=es_CO es_CO.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=es_MX es_MX.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=eu eu.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=et et.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=fa fa.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=fi fi.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=fr fr.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=frp frp.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=fy fy.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=fur fur.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ga ga.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=gu gu.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=gl gl.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=he he.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=hi hi.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=hr hr.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=hu hu.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=hy hy.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ia ia.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=id id.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ie ie.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ig ig.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=is is.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=it it.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ja ja.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=jv jv.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ka ka.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=kab kab.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=kn kn.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=kk kk.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ko ko.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ku ku.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ku_IQ ku_IQ.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ky ky.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=li li.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=lt lt.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=lv lv.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=lo lo.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=mai mai.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=mg mg.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=mi mi.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=mk mk.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ml ml.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=mn mn.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=mr mr.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ms ms.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=nb nb.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=nds nds.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ne ne.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=nl nl.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=nn nn.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=nso nso.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=oc oc.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=or or.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=pa pa.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=pl pl.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ps ps.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=pt pt.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=pt_BR pt_BR.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ro ro.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ru ru.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=sc sc.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=si si.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=sk sk.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=sl sl.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=sq sq.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=sr@latin sr@latin.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=sv sv.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=sr sr.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ta ta.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=th th.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=te te.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=tk tk.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=tr tr.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=tt tt.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ug ug.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=uk uk.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=ur ur.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=uz uz.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=vi vi.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=wa wa.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=xh xh.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=yi yi.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=yo yo.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_CN zh_CN.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_HK zh_HK.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_TW zh_TW.po cafe-desktop.pot
+/usr/bin/msgmerge --update --quiet --lang=zu zu.po cafe-desktop.pot
+rm -f af.gmo && /usr/bin/msgfmt -c --statistics --verbose -o af.gmo af.po
+rm -f am.gmo && /usr/bin/msgfmt -c --statistics --verbose -o am.gmo am.po
+af.po: 20 translated messages, 265 untranslated messages.
+rm -f an.gmo && /usr/bin/msgfmt -c --statistics --verbose -o an.gmo an.po
+am.po: 221 translated messages, 64 untranslated messages.
+rm -f ar.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ar.gmo ar.po
+an.po: 35 translated messages, 250 untranslated messages.
+rm -f as.gmo && /usr/bin/msgfmt -c --statistics --verbose -o as.gmo as.po
+rm -f ast.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ast.gmo ast.po
+ar.po: 258 translated messages, 27 untranslated messages.
+rm -f az.gmo && /usr/bin/msgfmt -c --statistics --verbose -o az.gmo az.po
+ast.po: 195 translated messages, 90 untranslated messages.
+as.po: 176 translated messages, 109 untranslated messages.
+rm -f be.gmo && /usr/bin/msgfmt -c --statistics --verbose -o be.gmo be.po
+rm -f bg.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bg.gmo bg.po
+az.po: 86 translated messages, 199 untranslated messages.
+rm -f bn_IN.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bn_IN.gmo bn_IN.po
+rm -f bn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bn.gmo bn.po
+rm -f br.gmo && /usr/bin/msgfmt -c --statistics --verbose -o br.gmo br.po
+be.po: 230 translated messages, 55 untranslated messages.
+bg.po: 272 translated messages, 13 untranslated messages.
+bn_IN.po: 176 translated messages, 109 untranslated messages.
+bn.po: 177 translated messages, 108 untranslated messages.
+rm -f bs.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bs.gmo bs.po
+rm -f ca.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ca.gmo ca.po
+br.po: 251 translated messages, 34 untranslated messages.
+rm -f ca@valencia.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ca@valencia.gmo ca@valencia.po
+rm -f cmn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cmn.gmo cmn.po
+bs.po: 123 translated messages, 162 untranslated messages.
+ca.po: 279 translated messages, 1 fuzzy translation, 5 untranslated messages.
+rm -f crh.gmo && /usr/bin/msgfmt -c --statistics --verbose -o crh.gmo crh.po
+ca@valencia.po: 275 translated messages, 10 untranslated messages.
+rm -f cs.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cs.gmo cs.po
+rm -f cy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cy.gmo cy.po
+cmn.po: 197 translated messages, 88 untranslated messages.
+rm -f da.gmo && /usr/bin/msgfmt -c --statistics --verbose -o da.gmo da.po
+crh.po: 172 translated messages, 113 untranslated messages.
+rm -f de.gmo && /usr/bin/msgfmt -c --statistics --verbose -o de.gmo de.po
+cy.po: 190 translated messages, 95 untranslated messages.
+cs.po: 284 translated messages, 1 fuzzy translation.
+rm -f de_CH.gmo && /usr/bin/msgfmt -c --statistics --verbose -o de_CH.gmo de_CH.po
+da.po: 284 translated messages, 1 fuzzy translation.
+rm -f dz.gmo && /usr/bin/msgfmt -c --statistics --verbose -o dz.gmo dz.po
+rm -f el.gmo && /usr/bin/msgfmt -c --statistics --verbose -o el.gmo el.po
+rm -f en_AU.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_AU.gmo en_AU.po
+de.po: 280 translated messages, 5 untranslated messages.
+de_CH.po: 9 translated messages, 276 untranslated messages.
+rm -f en_GB.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_GB.gmo en_GB.po
+rm -f en_CA.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_CA.gmo en_CA.po
+dz.po: 108 translated messages, 177 untranslated messages.
+en_AU.po: 267 translated messages, 18 untranslated messages.
+el.po: 271 translated messages, 14 untranslated messages.
+rm -f eo.gmo && /usr/bin/msgfmt -c --statistics --verbose -o eo.gmo eo.po
+rm -f es_AR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_AR.gmo es_AR.po
+en_CA.po: 108 translated messages, 177 untranslated messages.
+rm -f es.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es.gmo es.po
+en_GB.po: 277 translated messages, 8 untranslated messages.
+rm -f es_CO.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_CO.gmo es_CO.po
+rm -f es_CL.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_CL.gmo es_CL.po
+es_AR.po: 18 translated messages, 267 untranslated messages.
+eo.po: 187 translated messages, 98 untranslated messages.
+rm -f es_MX.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_MX.gmo es_MX.po
+es.po: es_CO.po: 17 translated messages, 268 untranslated messages.
+284 translated messages, 1 fuzzy translation.
+rm -f et.gmo && /usr/bin/msgfmt -c --statistics --verbose -o et.gmo et.po
+es_CL.po: 12 translated messages, 273 untranslated messages.
+es_MX.po: 15 translated messages, 270 untranslated messages.
+rm -f fa.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fa.gmo fa.po
+rm -f eu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o eu.gmo eu.po
+rm -f fi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fi.gmo fi.po
+rm -f fr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fr.gmo fr.po
+fa.po: 157 translated messages, 128 untranslated messages.
+et.po: 249 translated messages, 36 untranslated messages.
+eu.po: 247 translated messages, 38 untranslated messages.
+fi.po: 283 translated messages, 1 fuzzy translation, 1 untranslated message.
+rm -f frp.gmo && /usr/bin/msgfmt -c --statistics --verbose -o frp.gmo frp.po
+rm -f fur.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fur.gmo fur.po
+fr.po: 283 translated messages, 1 fuzzy translation, 1 untranslated message.
+rm -f fy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fy.gmo fy.po
+rm -f ga.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ga.gmo ga.po
+frp.po: 11 translated messages, 274 untranslated messages.
+rm -f gl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o gl.gmo gl.po
+fur.po: 73 translated messages, 212 untranslated messages.
+rm -f gu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o gu.gmo gu.po
+ga.po: 67 translated messages, 218 untranslated messages.
+rm -f he.gmo && /usr/bin/msgfmt -c --statistics --verbose -o he.gmo he.po
+fy.po: 12 translated messages, 273 untranslated messages.
+gu.po: 179 translated messages, 106 untranslated messages.
+rm -f hr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hr.gmo hr.po
+gl.po: 284 translated messages, 1 fuzzy translation.
+rm -f hi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hi.gmo hi.po
+he.po: 208 translated messages, 1 fuzzy translation, 76 untranslated messages.
+rm -f hy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hy.gmo hy.po
+rm -f ia.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ia.gmo ia.po
+rm -f hu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hu.gmo hu.po
+hr.po: 268 translated messages, 17 untranslated messages.
+hi.po: 178 translated messages, 107 untranslated messages.
+ia.po: 6 translated messages, 279 untranslated messages.
+rm -f id.gmo && /usr/bin/msgfmt -c --statistics --verbose -o id.gmo id.po
+hy.po: 266 translated messages, 19 untranslated messages.
+rm -f ie.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ie.gmo ie.po
+hu.po: 284 translated messages, 1 untranslated message.
+rm -f ig.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ig.gmo ig.po
+id.po: 284 translated messages, 1 fuzzy translation.
+rm -f is.gmo && /usr/bin/msgfmt -c --statistics --verbose -o is.gmo is.po
+ie.po: 15 translated messages, 270 untranslated messages.
+ig.po: 15 translated messages, 270 untranslated messages.
+rm -f it.gmo && /usr/bin/msgfmt -c --statistics --verbose -o it.gmo it.po
+rm -f ja.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ja.gmo ja.po
+rm -f jv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o jv.gmo jv.po
+is.po: 234 translated messages, 51 untranslated messages.
+rm -f ka.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ka.gmo ka.po
+rm -f kab.gmo && /usr/bin/msgfmt -c --statistics --verbose -o kab.gmo kab.po
+jv.po: 46 translated messages, 239 untranslated messages.
+ja.po: 267 translated messages, 18 untranslated messages.
+it.po: 284 translated messages, 1 fuzzy translation.
+ka.po: 109 translated messages, 176 untranslated messages.
+rm -f kn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o kn.gmo kn.po
+rm -f kk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o kk.gmo kk.po
+rm -f ku.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ku.gmo ku.po
+kab.po: 6 translated messages, 279 untranslated messages.
+rm -f ko.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ko.gmo ko.po
+kk.po: 115 translated messages, 170 untranslated messages.
+kn.po: 181 translated messages, 104 untranslated messages.
+rm -f ku_IQ.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ku_IQ.gmo ku_IQ.po
+ku.po: 101 translated messages, 184 untranslated messages.
+rm -f ky.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ky.gmo ky.po
+rm -f li.gmo && /usr/bin/msgfmt -c --statistics --verbose -o li.gmo li.po
+ko.po: 279 translated messages, 6 untranslated messages.
+rm -f lo.gmo && /usr/bin/msgfmt -c --statistics --verbose -o lo.gmo lo.po
+ku_IQ.po: 27 translated messages, 258 untranslated messages.
+rm -f lt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o lt.gmo lt.po
+li.po: 15 translated messages, 270 untranslated messagesrm -f lv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o lv.gmo lv.po
+.
+lo.po: 26 translated messages, 259 untranslated messages.
+ky.po: 51 translated messages, 234 untranslated messages.
+rm -f mai.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mai.gmo mai.po
+rm -f mi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mi.gmo mi.po
+rm -f mg.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mg.gmo mg.po
+lv.po: 182 translated messages, 103 untranslated messages.
+lt.po: 284 translated messages, 1 fuzzy translation.
+mai.po: 109 translated messages, 176 untranslated messages.
+mg.po: 97 translated messages, 188 untranslated messages.
+rm -f mk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mk.gmo mk.po
+rm -f ml.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ml.gmo ml.po
+mi.po: 2 translated messages, 283 untranslated messages.
+rm -f mn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mn.gmo mn.po
+rm -f mr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o mr.gmo mr.po
+rm -f ms.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ms.gmo ms.po
+mk.po: 196 translated messages, 89 untranslated messages.
+ml.po: 176 translated messages, 109 untranslated messages.
+rm -f nb.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nb.gmo nb.po
+mr.po: 206 translated messages, 79 untranslated messages.
+mn.po: 173 translated messages, 112 untranslated messages.
+rm -f nds.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nds.gmo nds.po
+rm -f ne.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ne.gmo ne.po
+ms.po: 284 translated messages, 1 fuzzy translation.
+rm -f nl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nl.gmo nl.po
+nb.po: 284 translated messages, 1 fuzzy translation.
+rm -f nn.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nn.gmo nn.po
+rm -f nso.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nso.gmo nso.po
+ne.po: 112 translated messages, 173 untranslated messages.
+nds.po: 235 translated messages, 50 untranslated messages.
+nn.po: 167 translated messages, 118 untranslated messages.
+nl.po: 284 translated messages, 1 fuzzy translation.
+rm -f oc.gmo && /usr/bin/msgfmt -c --statistics --verbose -o oc.gmo oc.po
+rm -f or.gmo && /usr/bin/msgfmt -c --statistics --verbose -o or.gmo or.po
+nso.po: 17 translated messages, 268 untranslated messages.
+rm -f pa.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pa.gmo pa.po
+rm -f ps.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ps.gmo ps.po
+oc.po: 97 translated messages, 1 fuzzy translation, 187 untranslated messages.
+rm -f pl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pl.gmo pl.po
+or.po: 186 translated messages, 99 untranslated messages.
+rm -f pt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pt.gmo pt.po
+ps.po: 22 translated messages, 263 untranslated messages.
+pa.po: 186 translated messages, 99 untranslated messages.
+pl.po: 284 translated messages, 1 fuzzy translation.
+rm -f pt_BR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pt_BR.gmo pt_BR.po
+rm -f ro.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ro.gmo ro.po
+rm -f ru.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ru.gmo ru.po
+pt.po: 283 translated messages, 1 fuzzy translation, 1 untranslated message.
+rm -f sc.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sc.gmo sc.po
+ro.po: 263 translated messages, 22 untranslated messages.
+pt_BR.po: 281 translated messages, 4 untranslated messages.
+rm -f si.gmo && /usr/bin/msgfmt -c --statistics --verbose -o si.gmo si.po
+rm -f sk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sk.gmo sk.po
+rm -f sl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sl.gmo sl.po
+sc.po: 99 translated messages, 186 untranslated messages.
+ru.po: 284 translated messages, 1 fuzzy translation.
+si.po: 21 translated messages, 264 untranslated messages.
+rm -f sr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sr.gmo sr.po
+rm -f sr@latin.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sr@latin.gmo sr@latin.po
+rm -f sq.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sq.gmo sq.po
+sk.po: 281 translated messages, 4 untranslated messages.
+sl.po: 284 translated messages, 1 fuzzy translation.
+sr.po: 284 translated messages, 1 fuzzy translation.
+sr@latin.po: 239 translated messages, 46 untranslated messages.
+sq.po: 172 translated messages, 113 untranslated messages.
+rm -f sv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sv.gmo sv.po
+rm -f ta.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ta.gmo ta.po
+rm -f th.gmo && /usr/bin/msgfmt -c --statistics --verbose -o th.gmo th.po
+rm -f te.gmo && /usr/bin/msgfmt -c --statistics --verbose -o te.gmo te.po
+rm -f tk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o tk.gmo tk.po
+sv.po: 284 translated messages, 1 fuzzy translation.
+ta.po: 177 translated messages, 108 untranslated messages.
+th.po: 185 translated messages, 100 untranslated messages.
+rm -f tr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o tr.gmo tr.po
+te.po: 180 translated messages, 105 untranslated messages.
+tk.po: 15 translated messages, 270 untranslated messages.
+rm -f tt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o tt.gmo tt.po
+rm -f ug.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ug.gmo ug.po
+rm -f ur.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ur.gmo ur.po
+rm -f uk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o uk.gmo uk.po
+tt.po: 19 translated messages, 266 untranslated messages.
+ug.po: 24 translated messages, 261 untranslated messages.
+tr.po: 278 translated messages, 7 untranslated messages.
+rm -f uz.gmo && /usr/bin/msgfmt -c --statistics --verbose -o uz.gmo uz.po
+ur.po: 30 translated messages, 255 untranslated messages.
+rm -f vi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o vi.gmo vi.po
+rm -f wa.gmo && /usr/bin/msgfmt -c --statistics --verbose -o wa.gmo wa.po
+uk.po: uz.po: 284 translated messages, 1 fuzzy translation.
+72 translated messages, 213 untranslated messages.
+rm -f xh.gmo && /usr/bin/msgfmt -c --statistics --verbose -o xh.gmo xh.po
+vi.po: 181 translated messages, 104 untranslated messages.
+rm -f yi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o yi.gmo yi.po
+rm -f yo.gmo && /usr/bin/msgfmt -c --statistics --verbose -o yo.gmo yo.po
+wa.po: 47 translated messages, 238 untranslated messages.
+rm -f zh_CN.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_CN.gmo zh_CN.po
+xh.po: 87 translated messages, 198 untranslated messages.
+rm -f zh_TW.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_TW.gmo zh_TW.po
+yo.po: 15 translated messages, 270 untranslated messages.
+yi.po: 6 translated messages, 279 untranslated messages.
+rm -f zh_HK.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_HK.gmo zh_HK.po
+zh_CN.po: 284 translated messages, 1 fuzzy translation.
+rm -f zu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zu.gmo zu.po
+zh_HK.po: 186 translated messages, 99 untranslated messages.
+zh_TW.po: 284 translated messages, 1 fuzzy translation.
+zu.po: 17 translated messages, 268 untranslated messages.
+make[3]: Leaving directory '/rootdir/po'
+touch stamp-po
+make[2]: Leaving directory '/rootdir/po'
+Making all in cafe-about
+make[2]: Entering directory '/rootdir/cafe-about'
+  CC       cafe_about-cafe-about.o
+  GEN      cafe-about.desktop
+  CCLD     cafe-about
+make[2]: Leaving directory '/rootdir/cafe-about'
+make[2]: Entering directory '/rootdir'
+make[2]: Leaving directory '/rootdir'
+make[1]: Leaving directory '/rootdir'
+scan-build: Analysis run complete.
+scan-build: 16 bugs found.
+scan-build: Run 'scan-view /rootdir/html-report/2025-04-08-091528-15183-1' to examine bug reports.
+Making check in libcafe-desktop
+make[1]: Entering directory '/rootdir/libcafe-desktop'
+test -s ../libcafe-desktop/pnp.ids
+make[1]: Leaving directory '/rootdir/libcafe-desktop'
+Making check in man
+make[1]: Entering directory '/rootdir/man'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/man'
+Making check in docs
+make[1]: Entering directory '/rootdir/docs'
+Making check in reference
+make[2]: Entering directory '/rootdir/docs/reference'
+Making check in cafe-desktop
+make[3]: Entering directory '/rootdir/docs/reference/cafe-desktop'
+make[3]: Leaving directory '/rootdir/docs/reference/cafe-desktop'
+make[3]: Entering directory '/rootdir/docs/reference'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/rootdir/docs/reference'
+make[2]: Leaving directory '/rootdir/docs/reference'
+make[2]: Entering directory '/rootdir/docs'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/rootdir/docs'
+make[1]: Leaving directory '/rootdir/docs'
+Making check in schemas
+make[1]: Entering directory '/rootdir/schemas'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/schemas'
+Making check in tools
+make[1]: Entering directory '/rootdir/tools'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/tools'
+Making check in icons
+make[1]: Entering directory '/rootdir/icons'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/icons'
+Making check in po
+make[1]: Entering directory '/rootdir/po'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/po'
+Making check in cafe-about
+make[1]: Entering directory '/rootdir/cafe-about'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/cafe-about'
+make[1]: Entering directory '/rootdir'
+make[1]: Leaving directory '/rootdir'
+Listing... 0%Listing... 0%Listing... 0%              adduser/testing,now 3.149 all [installed,automatic]
+advaita-icon-theme/unknown,now 3.25.0-1 all [installed,automatic]
+apt/testing,now 2.9.35 amd64 [installed,automatic]
+aptitude-common/testing,now 0.8.13-7 all [installed,automatic]
+aptitude/testing,now 0.8.13-7 amd64 [installed]
+at-spi2-common/testing,now 2.56.1-2 all [installed,automatic]
+at-spi2-core/testing,now 2.56.1-2 amd64 [installed,automatic]
+autoconf-archive/testing,now 20220903-3 all [installed]
+autoconf/testing,now 2.72-3 all [installed,automatic]
+automake/testing,now 1:1.17-4 all [installed,automatic]
+autopoint/testing,now 0.23.1-1 all [installed]
+autotools-dev/testing,now 20240727.1 all [installed,automatic]
+base-files/testing,now 13.7 amd64 [installed,automatic]
+base-passwd/testing,now 3.6.7 amd64 [installed,automatic]
+bash/testing,now 5.2.37-1.1+b2 amd64 [installed,automatic]
+binfmt-support/testing,now 2.2.2-7 amd64 [installed,automatic]
+binutils-common/testing,now 2.44-3 amd64 [installed,automatic]
+binutils-x86-64-linux-gnu/testing,now 2.44-3 amd64 [installed,automatic]
+binutils/testing,now 2.44-3 amd64 [installed,automatic]
+bsdutils/testing,now 1:2.41-3 amd64 [installed,automatic]
+build-essential/testing,now 12.12 amd64 [installed,automatic]
+bzip2-doc/testing,now 1.0.8-6 all [installed,automatic]
+bzip2/testing,now 1.0.8-6 amd64 [installed,automatic]
+ca-certificates/testing,now 20241223 all [installed,automatic]
+clang-19/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+clang-tools-19/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+clang-tools/testing,now 1:19.0-63 amd64 [installed]
+clang/testing,now 1:19.0-63 amd64 [installed]
+coreutils/testing,now 9.5-1+b1 amd64 [installed,automatic]
+cpp-14-x86-64-linux-gnu/testing,now 14.2.0-19 amd64 [installed,automatic]
+cpp-14/testing,now 14.2.0-19 amd64 [installed,automatic]
+cpp-x86-64-linux-gnu/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+cpp/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+cppcheck/testing,now 2.17.1-1+b1 amd64 [installed]
+ctk-update-icon-cache/unknown,now 3.25.6-1 amd64 [installed,automatic]
+dash/testing,now 0.5.12-12 amd64 [installed,automatic]
+dbus-bin/testing,now 1.16.2-2 amd64 [installed,automatic]
+dbus-daemon/testing,now 1.16.2-2 amd64 [installed,automatic]
+dbus-session-bus-common/testing,now 1.16.2-2 all [installed,automatic]
+dbus-system-bus-common/testing,now 1.16.2-2 all [installed,automatic]
+dbus-user-session/testing,now 1.16.2-2 amd64 [installed,automatic]
+dbus/testing,now 1.16.2-2 amd64 [installed,automatic]
+dconf-gsettings-backend/testing,now 0.40.0-5 amd64 [installed,automatic]
+dconf-service/testing,now 0.40.0-5 amd64 [installed,automatic]
+debconf/testing,now 1.5.91 all [installed,automatic]
+debian-archive-keyring/testing,now 2023.4 all [installed,automatic]
+debianutils/testing,now 5.21 amd64 [installed,automatic]
+diffutils/testing,now 1:3.10-3 amd64 [installed,automatic]
+dmsetup/testing,now 2:1.02.205-1 amd64 [installed,automatic]
+docbook-to-man/testing,now 1:2.0.0-48 amd64 [installed,automatic]
+docbook-xml/testing,now 4.5-13 all [installed,automatic]
+docbook-xsl/testing,now 1.79.2+dfsg-7 all [installed,automatic]
+docbook/testing,now 4.5-11 all [installed,automatic]
+dpkg-dev/testing,now 1.22.18 all [installed,automatic]
+dpkg/testing,now 1.22.18 amd64 [installed,automatic]
+expect/testing,now 5.45.4-4 amd64 [installed]
+fakeroot/testing,now 1.37.1.1-1 amd64 [installed,automatic]
+file/testing,now 1:5.45-3+b1 amd64 [installed,automatic]
+findutils/testing,now 4.10.0-3 amd64 [installed,automatic]
+fontconfig-config/testing,now 2.15.0-2.2 amd64 [installed,automatic]
+fontconfig/testing,now 2.15.0-2.2 amd64 [installed,automatic]
+fonts-dejavu-core/testing,now 2.37-8 all [installed,automatic]
+fonts-dejavu-mono/testing,now 2.37-8 all [installed,automatic]
+g++-14-x86-64-linux-gnu/testing,now 14.2.0-19 amd64 [installed,automatic]
+g++-14/testing,now 14.2.0-19 amd64 [installed,automatic]
+g++-x86-64-linux-gnu/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+g++/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+gcc-14-base/testing,now 14.2.0-19 amd64 [installed,automatic]
+gcc-14-x86-64-linux-gnu/testing,now 14.2.0-19 amd64 [installed,automatic]
+gcc-14/testing,now 14.2.0-19 amd64 [installed,automatic]
+gcc-x86-64-linux-gnu/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+gcc/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+gettext-base/testing,now 0.23.1-1 amd64 [installed,automatic]
+gettext/testing,now 0.23.1-1 amd64 [installed,automatic]
+gir1.2-atk-1.0/testing,now 2.56.1-2 amd64 [installed,automatic]
+gir1.2-atspi-2.0/testing,now 2.56.1-2 amd64 [installed,automatic]
+gir1.2-ctk-3.0/unknown,now 3.25.6-1 amd64 [installed]
+gir1.2-freedesktop-dev/testing,now 1.84.0-1 amd64 [installed,automatic]
+gir1.2-freedesktop/testing,now 1.84.0-1 amd64 [installed,automatic]
+gir1.2-gdkpixbuf-2.0/testing,now 2.42.12+dfsg-2 amd64 [installed,automatic]
+gir1.2-girepository-2.0-dev/testing,now 1.84.0-1 amd64 [installed,automatic]
+gir1.2-girepository-2.0/testing,now 1.84.0-1 amd64 [installed,automatic]
+gir1.2-glib-2.0-dev/testing,now 2.84.0-2 amd64 [installed,automatic]
+gir1.2-glib-2.0/testing,now 2.84.0-2 amd64 [installed,automatic]
+gir1.2-harfbuzz-0.0/testing,now 10.2.0-1+b1 amd64 [installed,automatic]
+gir1.2-pango-1.0/testing,now 1.56.3-1 amd64 [installed,automatic]
+girepository-tools/testing,now 2.84.0-2 amd64 [installed,automatic]
+git-man/testing,now 1:2.47.2-0.1 all [installed,automatic]
+git/testing,now 1:2.47.2-0.1 amd64 [installed]
+gobject-introspection-bin/testing,now 1.84.0-1 amd64 [installed,automatic]
+gobject-introspection/testing,now 1.84.0-1 amd64 [installed]
+grep/testing,now 3.11-4 amd64 [installed,automatic]
+gsettings-desktop-schemas/testing,now 48.0-1 all [installed,automatic]
+gtk-doc-tools/testing,now 1.34.0-2 all [installed]
+gzip/testing,now 1.13-1 amd64 [installed,automatic]
+hicolor-icon-theme/testing,now 0.18-2 all [installed,automatic]
+hostname/testing,now 3.25 amd64 [installed,automatic]
+icu-devtools/testing,now 76.1-3 amd64 [installed,automatic]
+init-system-helpers/testing,now 1.68 all [installed,automatic]
+intltool/testing,now 0.51.0-7 all [installed]
+iso-codes/testing,now 4.17.0-1 all [installed]
+krb5-locales/testing,now 1.21.3-5 all [installed,automatic]
+less/testing,now 668-1 amd64 [installed,automatic]
+lib32gcc-s1/testing,now 14.2.0-19 amd64 [installed,automatic]
+lib32stdc++6/testing,now 14.2.0-19 amd64 [installed,automatic]
+libacl1/testing,now 2.3.2-2+b1 amd64 [installed,automatic]
+libalgorithm-diff-perl/testing,now 1.201-1 all [installed,automatic]
+libalgorithm-diff-xs-perl/testing,now 0.04-9 amd64 [installed,automatic]
+libalgorithm-merge-perl/testing,now 0.08-5 all [installed,automatic]
+libapparmor1/testing,now 4.1.0~beta5-6 amd64 [installed,automatic]
+libapt-pkg7.0/testing,now 2.9.35 amd64 [installed,automatic]
+libasan8/testing,now 14.2.0-19 amd64 [installed,automatic]
+libatk-bridge2.0-0t64/testing,now 2.56.1-2 amd64 [installed,automatic]
+libatk-bridge2.0-dev/testing,now 2.56.1-2 amd64 [installed,automatic]
+libatk1.0-0t64/testing,now 2.56.1-2 amd64 [installed,automatic]
+libatk1.0-dev/testing,now 2.56.1-2 amd64 [installed,automatic]
+libatk1.0-doc/testing,now 2.56.1-2 all [installed,automatic]
+libatomic1/testing,now 14.2.0-19 amd64 [installed,automatic]
+libatspi2.0-0t64/testing,now 2.56.1-2 amd64 [installed,automatic]
+libatspi2.0-dev/testing,now 2.56.1-2 amd64 [installed,automatic]
+libattr1/testing,now 1:2.5.2-3 amd64 [installed,automatic]
+libaudit-common/testing,now 1:4.0.2-2 all [installed,automatic]
+libaudit1/testing,now 1:4.0.2-2+b2 amd64 [installed,automatic]
+libauthen-sasl-perl/testing,now 2.1700-1 all [installed,automatic]
+libavahi-client3/testing,now 0.8-16 amd64 [installed,automatic]
+libavahi-common-data/testing,now 0.8-16 amd64 [installed,automatic]
+libavahi-common3/testing,now 0.8-16 amd64 [installed,automatic]
+libbinutils/testing,now 2.44-3 amd64 [installed,automatic]
+libblkid-dev/testing,now 2.41-3 amd64 [installed,automatic]
+libblkid1/testing,now 2.41-3 amd64 [installed,automatic]
+libboost-iostreams1.83.0/testing,now 1.83.0-4.2 amd64 [installed,automatic]
+libbrotli-dev/testing,now 1.1.0-2+b7 amd64 [installed,automatic]
+libbrotli1/testing,now 1.1.0-2+b7 amd64 [installed,automatic]
+libbsd0/testing,now 0.12.2-2 amd64 [installed,automatic]
+libbz2-1.0/testing,now 1.0.8-6 amd64 [installed,automatic]
+libbz2-dev/testing,now 1.0.8-6 amd64 [installed,automatic]
+libc-bin/testing,now 2.41-6 amd64 [installed,automatic]
+libc-dev-bin/testing,now 2.41-6 amd64 [installed,automatic]
+libc6-dev/testing,now 2.41-6 amd64 [installed,automatic]
+libc6-i386/testing,now 2.41-6 amd64 [installed,automatic]
+libc6/testing,now 2.41-6 amd64 [installed,automatic]
+libcairo-gobject2/testing,now 1.18.4-1+b1 amd64 [installed,automatic]
+libcairo-script-interpreter2/testing,now 1.18.4-1+b1 amd64 [installed,automatic]
+libcairo2-dev/testing,now 1.18.4-1+b1 amd64 [installed,automatic]
+libcairo2/testing,now 1.18.4-1+b1 amd64 [installed,automatic]
+libcap-dev/testing,now 1:2.75-4 amd64 [installed,automatic]
+libcap-ng0/testing,now 0.8.5-4+b1 amd64 [installed,automatic]
+libcap2/testing,now 1:2.75-4 amd64 [installed,automatic]
+libcbor0.10/testing,now 0.10.2-2 amd64 [installed,automatic]
+libcc1-0/testing,now 14.2.0-19 amd64 [installed,automatic]
+libclang-common-19-dev/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+libclang-cpp19/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+libclang-rt-19-dev/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+libclang1-19/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+libclone-perl/testing,now 0.47-1+b1 amd64 [installed,automatic]
+libcolord2/testing,now 1.4.7-3 amd64 [installed,automatic]
+libcom-err2/testing,now 1.47.2-1+b1 amd64 [installed,automatic]
+libcrypt-dev/testing,now 1:4.4.38-1 amd64 [installed,automatic]
+libcrypt1/testing,now 1:4.4.38-1 amd64 [installed,automatic]
+libcryptsetup12/testing,now 2:2.7.5-1 amd64 [installed,automatic]
+libctf-nobfd0/testing,now 2.44-3 amd64 [installed,automatic]
+libctf0/testing,now 2.44-3 amd64 [installed,automatic]
+libctk-3-0/unknown,now 3.25.6-1 amd64 [installed]
+libctk-3-bin/unknown,now 3.25.6-1 amd64 [installed,automatic]
+libctk-3-common/unknown,now 3.25.6-1 all [installed]
+libctk-3-dev/unknown,now 3.25.6-1 amd64 [installed]
+libctk-3-doc/unknown,now 3.25.6-1 all [installed]
+libcups2t64/testing,now 2.4.10-2+b1 amd64 [installed,automatic]
+libcurl3t64-gnutls/testing,now 8.13.0-1 amd64 [installed,automatic]
+libcurl4t64/testing,now 8.13.0-1 amd64 [installed,automatic]
+libcwidget4/testing,now 0.5.18-6+b2 amd64 [installed,automatic]
+libdata-dump-perl/testing,now 1.25-1 all [installed,automatic]
+libdatrie-dev/testing,now 0.2.13-3+b1 amd64 [installed,automatic]
+libdatrie1/testing,now 0.2.13-3+b1 amd64 [installed,automatic]
+libdav1d7/testing,now 1.5.1-1 amd64 [installed,automatic]
+libdb5.3t64/testing,now 5.3.28+dfsg2-9 amd64 [installed,automatic]
+libdbus-1-3/testing,now 1.16.2-2 amd64 [installed,automatic]
+libdbus-1-dev/testing,now 1.16.2-2 amd64 [installed,automatic]
+libdconf-dev/testing,now 0.40.0-5 amd64 [installed]
+libdconf-doc/testing,now 0.40.0-5 all [installed,automatic]
+libdconf1/testing,now 0.40.0-5 amd64 [installed,automatic]
+libdebconfclient0/testing,now 0.277 amd64 [installed,automatic]
+libdeflate-dev/testing,now 1.23-1+b1 amd64 [installed,automatic]
+libdeflate0/testing,now 1.23-1+b1 amd64 [installed,automatic]
+libdevmapper1.02.1/testing,now 2:1.02.205-1 amd64 [installed,automatic]
+libdpkg-perl/testing,now 1.22.18 all [installed,automatic]
+libdrm-amdgpu1/testing,now 2.4.124-2 amd64 [installed,automatic]
+libdrm-common/testing,now 2.4.124-2 all [installed,automatic]
+libdrm-intel1/testing,now 2.4.124-2 amd64 [installed,automatic]
+libdrm2/testing,now 2.4.124-2 amd64 [installed,automatic]
+libedit2/testing,now 3.1-20250104-1 amd64 [installed,automatic]
+libegl-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libegl-mesa0/testing,now 25.0.3-1 amd64 [installed,automatic]
+libegl1-mesa-dev/testing,now 25.0.3-1 amd64 [installed,automatic]
+libegl1/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libelf1t64/testing,now 0.192-4 amd64 [installed,automatic]
+libencode-locale-perl/testing,now 1.05-3 all [installed,automatic]
+libepoxy-dev/testing,now 1.5.10-2 amd64 [installed,automatic]
+libepoxy0/testing,now 1.5.10-2 amd64 [installed,automatic]
+liberror-perl/testing,now 0.17030-1 all [installed,automatic]
+libexpat1-dev/testing,now 2.7.1-1 amd64 [installed,automatic]
+libexpat1/testing,now 2.7.1-1 amd64 [installed,automatic]
+libfakeroot/testing,now 1.37.1.1-1 amd64 [installed,automatic]
+libffi-dev/testing,now 3.4.7-1 amd64 [installed,automatic]
+libffi8/testing,now 3.4.7-1 amd64 [installed,automatic]
+libfido2-1/testing,now 1.15.0-1+b1 amd64 [installed,automatic]
+libfile-fcntllock-perl/testing,now 0.22-4+b4 amd64 [installed,automatic]
+libfile-listing-perl/testing,now 6.16-1 all [installed,automatic]
+libfont-afm-perl/testing,now 1.20-4 all [installed,automatic]
+libfontconfig-dev/testing,now 2.15.0-2.2 amd64 [installed,automatic]
+libfontconfig1/testing,now 2.15.0-2.2 amd64 [installed,automatic]
+libfreetype-dev/testing,now 2.13.3+dfsg-1 amd64 [installed,automatic]
+libfreetype6/testing,now 2.13.3+dfsg-1 amd64 [installed,automatic]
+libfribidi-dev/testing,now 1.0.16-1 amd64 [installed,automatic]
+libfribidi0/testing,now 1.0.16-1 amd64 [installed,automatic]
+libgbm1/testing,now 25.0.3-1 amd64 [installed,automatic]
+libgc1/testing,now 1:8.2.8-1 amd64 [installed,automatic]
+libgcc-14-dev/testing,now 14.2.0-19 amd64 [installed,automatic]
+libgcc-s1/testing,now 14.2.0-19 amd64 [installed,automatic]
+libgcrypt20/testing,now 1.11.0-7 amd64 [installed,automatic]
+libgdbm-compat4t64/testing,now 1.24-2 amd64 [installed,automatic]
+libgdbm6t64/testing,now 1.24-2 amd64 [installed,automatic]
+libgdk-pixbuf-2.0-0/testing,now 2.42.12+dfsg-2 amd64 [installed,automatic]
+libgdk-pixbuf-2.0-dev/testing,now 2.42.12+dfsg-2 amd64 [installed,automatic]
+libgdk-pixbuf2.0-bin/testing,now 2.42.12+dfsg-2 amd64 [installed,automatic]
+libgdk-pixbuf2.0-common/testing,now 2.42.12+dfsg-2 all [installed,automatic]
+libgio-2.0-dev-bin/testing,now 2.84.0-2 amd64 [installed,automatic]
+libgio-2.0-dev/testing,now 2.84.0-2 amd64 [installed,automatic]
+libgirepository-1.0-1/testing,now 1.84.0-1 amd64 [installed,automatic]
+libgirepository-1.0-dev/testing,now 1.84.0-1 amd64 [installed,automatic]
+libgirepository-2.0-0/testing,now 2.84.0-2 amd64 [installed,automatic]
+libgirepository1.0-dev/testing,now 1.84.0-1 amd64 [installed]
+libgl-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgl1-mesa-dri/testing,now 25.0.3-1 amd64 [installed,automatic]
+libgl1/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgles-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgles1/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgles2/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglib2.0-0t64/testing,now 2.84.0-2 amd64 [installed,automatic]
+libglib2.0-bin/testing,now 2.84.0-2 amd64 [installed,automatic]
+libglib2.0-data/testing,now 2.84.0-2 all [installed,automatic]
+libglib2.0-dev-bin/testing,now 2.84.0-2 amd64 [installed,automatic]
+libglib2.0-dev/testing,now 2.84.0-2 amd64 [installed]
+libglib2.0-doc/testing,now 2.84.0-2 all [installed]
+libglvnd-core-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglvnd-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglvnd0/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglx-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglx-mesa0/testing,now 25.0.3-1 amd64 [installed,automatic]
+libglx0/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgmp10/testing,now 2:6.3.0+dfsg-3 amd64 [installed,automatic]
+libgnutls30t64/testing,now 3.8.9-2 amd64 [installed,automatic]
+libgomp1/testing,now 14.2.0-19 amd64 [installed,automatic]
+libgpg-error-l10n/testing,now 1.51-4 all [installed,automatic]
+libgpg-error0/testing,now 1.51-4 amd64 [installed,automatic]
+libgpm2/testing,now 1.20.7-11+b2 amd64 [installed,automatic]
+libgprofng0/testing,now 2.44-3 amd64 [installed,automatic]
+libgraphite2-3/testing,now 1.3.14-2+b1 amd64 [installed,automatic]
+libgraphite2-dev/testing,now 1.3.14-2+b1 amd64 [installed,automatic]
+libgssapi-krb5-2/testing,now 1.21.3-5 amd64 [installed,automatic]
+libharfbuzz-cairo0/testing,now 10.2.0-1+b1 amd64 [installed,automatic]
+libharfbuzz-dev/testing,now 10.2.0-1+b1 amd64 [installed,automatic]
+libharfbuzz-gobject0/testing,now 10.2.0-1+b1 amd64 [installed,automatic]
+libharfbuzz-icu0/testing,now 10.2.0-1+b1 amd64 [installed,automatic]
+libharfbuzz-subset0/testing,now 10.2.0-1+b1 amd64 [installed,automatic]
+libharfbuzz0b/testing,now 10.2.0-1+b1 amd64 [installed,automatic]
+libhogweed6t64/testing,now 3.10.1-1 amd64 [installed,automatic]
+libhtml-form-perl/testing,now 6.12-1 all [installed,automatic]
+libhtml-format-perl/testing,now 2.16-2 all [installed,automatic]
+libhtml-parser-perl/testing,now 3.83-1+b2 amd64 [installed,automatic]
+libhtml-tagset-perl/testing,now 3.24-1 all [installed,automatic]
+libhtml-tree-perl/testing,now 5.07-3 all [installed,automatic]
+libhttp-cookies-perl/testing,now 6.11-1 all [installed,automatic]
+libhttp-daemon-perl/testing,now 6.16-1 all [installed,automatic]
+libhttp-date-perl/testing,now 6.06-1 all [installed,automatic]
+libhttp-message-perl/testing,now 7.00-2 all [installed,automatic]
+libhttp-negotiate-perl/testing,now 6.01-2 all [installed,automatic]
+libhwasan0/testing,now 14.2.0-19 amd64 [installed,automatic]
+libice-dev/testing,now 2:1.1.1-1 amd64 [installed,automatic]
+libice6/testing,now 2:1.1.1-1 amd64 [installed,automatic]
+libicu-dev/testing,now 76.1-3 amd64 [installed,automatic]
+libicu76/testing,now 76.1-3 amd64 [installed,automatic]
+libidn2-0/testing,now 2.3.8-2 amd64 [installed,automatic]
+libio-compress-brotli-perl/testing,now 0.004001-2+b3 amd64 [installed,automatic]
+libio-html-perl/testing,now 1.004-3 all [installed,automatic]
+libio-socket-ssl-perl/testing,now 2.089-1 all [installed,automatic]
+libisl23/testing,now 0.27-1 amd64 [installed,automatic]
+libitm1/testing,now 14.2.0-19 amd64 [installed,automatic]
+libjansson4/testing,now 2.14-2+b3 amd64 [installed,automatic]
+libjbig-dev/testing,now 2.1-6.1+b2 amd64 [installed,automatic]
+libjbig0/testing,now 2.1-6.1+b2 amd64 [installed,automatic]
+libjpeg-dev/testing,now 1:2.1.5-3.1 amd64 [installed,automatic]
+libjpeg62-turbo-dev/testing,now 1:2.1.5-3.1 amd64 [installed,automatic]
+libjpeg62-turbo/testing,now 1:2.1.5-3.1 amd64 [installed,automatic]
+libjson-c5/testing,now 0.18+ds-1 amd64 [installed,automatic]
+libk5crypto3/testing,now 1.21.3-5 amd64 [installed,automatic]
+libkeyutils1/testing,now 1.6.3-4 amd64 [installed,automatic]
+libkmod2/testing,now 34.2-1 amd64 [installed,automatic]
+libkrb5-3/testing,now 1.21.3-5 amd64 [installed,automatic]
+libkrb5support0/testing,now 1.21.3-5 amd64 [installed,automatic]
+liblastlog2-2/testing,now 2.41-3 amd64 [installed,automatic]
+liblcms2-2/testing,now 2.16-2 amd64 [installed,automatic]
+libldap-common/testing,now 2.6.9+dfsg-2 all [installed,automatic]
+libldap2/testing,now 2.6.9+dfsg-2 amd64 [installed,automatic]
+liblerc-dev/testing,now 4.0.0+ds-5 amd64 [installed,automatic]
+liblerc4/testing,now 4.0.0+ds-5 amd64 [installed,automatic]
+libllvm19/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+liblocale-gettext-perl/testing,now 1.07-7+b1 amd64 [installed,automatic]
+liblsan0/testing,now 14.2.0-19 amd64 [installed,automatic]
+libltdl-dev/testing,now 2.5.4-4 amd64 [installed,automatic]
+libltdl7/testing,now 2.5.4-4 amd64 [installed,automatic]
+liblwp-mediatypes-perl/testing,now 6.04-2 all [installed,automatic]
+liblwp-protocol-https-perl/testing,now 6.14-1 all [installed,automatic]
+liblz4-1/testing,now 1.10.0-4 amd64 [installed,automatic]
+liblzma-dev/testing,now 5.6.4-1 amd64 [installed,automatic]
+liblzma5/testing,now 5.6.4-1 amd64 [installed,automatic]
+liblzo2-2/testing,now 2.10-3+b1 amd64 [installed,automatic]
+libmagic-mgc/testing,now 1:5.45-3+b1 amd64 [installed,automatic]
+libmagic1t64/testing,now 1:5.45-3+b1 amd64 [installed,automatic]
+libmailtools-perl/testing,now 2.22-1 all [installed,automatic]
+libmd0/testing,now 1.1.0-2+b1 amd64 [installed,automatic]
+libmount-dev/testing,now 2.41-3 amd64 [installed,automatic]
+libmount1/testing,now 2.41-3 amd64 [installed,automatic]
+libmpc3/testing,now 1.3.1-1+b3 amd64 [installed,automatic]
+libmpfr6/testing,now 4.2.2-1 amd64 [installed,automatic]
+libncurses-dev/testing,now 6.5+20250216-2 amd64 [installed,automatic]
+libncurses6/testing,now 6.5+20250216-2 amd64 [installed,automatic]
+libncursesw6/testing,now 6.5+20250216-2 amd64 [installed,automatic]
+libnet-http-perl/testing,now 6.23-1 all [installed,automatic]
+libnet-smtp-ssl-perl/testing,now 1.04-2 all [installed,automatic]
+libnet-ssleay-perl/testing,now 1.94-3 amd64 [installed,automatic]
+libnettle8t64/testing,now 3.10.1-1 amd64 [installed,automatic]
+libnghttp2-14/testing,now 1.64.0-1 amd64 [installed,automatic]
+libnghttp3-9/testing,now 1.8.0-1 amd64 [installed,automatic]
+libngtcp2-16/testing,now 1.11.0-1 amd64 [installed,automatic]
+libngtcp2-crypto-gnutls8/testing,now 1.11.0-1 amd64 [installed,automatic]
+libnss-systemd/testing,now 257.4-3 amd64 [installed,automatic]
+libobjc-14-dev/testing,now 14.2.0-19 amd64 [installed,automatic]
+libobjc4/testing,now 14.2.0-19 amd64 [installed,automatic]
+libopengl-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libopengl0/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libosp5/testing,now 1.5.2-15.2 amd64 [installed,automatic]
+libp11-kit0/testing,now 0.25.5-3 amd64 [installed,automatic]
+libpam-modules-bin/testing,now 1.7.0-3 amd64 [installed,automatic]
+libpam-modules/testing,now 1.7.0-3 amd64 [installed,automatic]
+libpam-runtime/testing,now 1.7.0-3 all [installed,automatic]
+libpam-systemd/testing,now 257.4-3 amd64 [installed,automatic]
+libpam0g/testing,now 1.7.0-3 amd64 [installed,automatic]
+libpango-1.0-0/testing,now 1.56.3-1 amd64 [installed,automatic]
+libpango1.0-dev/testing,now 1.56.3-1 amd64 [installed,automatic]
+libpango1.0-doc/testing,now 1.56.3-1 all [installed,automatic]
+libpangocairo-1.0-0/testing,now 1.56.3-1 amd64 [installed,automatic]
+libpangoft2-1.0-0/testing,now 1.56.3-1 amd64 [installed,automatic]
+libpangoxft-1.0-0/testing,now 1.56.3-1 amd64 [installed,automatic]
+libpciaccess0/testing,now 0.17-3+b3 amd64 [installed,automatic]
+libpcre2-16-0/testing,now 10.45-1 amd64 [installed,automatic]
+libpcre2-32-0/testing,now 10.45-1 amd64 [installed,automatic]
+libpcre2-8-0/testing,now 10.45-1 amd64 [installed,automatic]
+libpcre2-dev/testing,now 10.45-1 amd64 [installed,automatic]
+libpcre2-posix3/testing,now 10.45-1 amd64 [installed,automatic]
+libperl5.40/testing,now 5.40.1-2 amd64 [installed,automatic]
+libpfm4/testing,now 4.13.0+git99-gc5587f9-1 amd64 [installed,automatic]
+libpipeline1/testing,now 1.5.8-1 amd64 [installed,automatic]
+libpixman-1-0/testing,now 0.44.0-3 amd64 [installed,automatic]
+libpixman-1-dev/testing,now 0.44.0-3 amd64 [installed,automatic]
+libpkgconf3/testing,now 1.8.1-4 amd64 [installed,automatic]
+libpng-dev/testing,now 1.6.47-1.1 amd64 [installed,automatic]
+libpng-tools/testing,now 1.6.47-1.1 amd64 [installed,automatic]
+libpng16-16t64/testing,now 1.6.47-1.1 amd64 [installed,automatic]
+libproc2-0/testing,now 2:4.0.4-7 amd64 [installed,automatic]
+libpsl5t64/testing,now 0.21.2-1.1+b1 amd64 [installed,automatic]
+libpython3-stdlib/testing,now 3.13.2-2 amd64 [installed,automatic]
+libpython3.13-minimal/testing,now 3.13.2-3 amd64 [installed,automatic]
+libpython3.13-stdlib/testing,now 3.13.2-3 amd64 [installed,automatic]
+libquadmath0/testing,now 14.2.0-19 amd64 [installed,automatic]
+libreadline8t64/testing,now 8.2-6 amd64 [installed,automatic]
+librsvg2-2/testing,now 2.60.0+dfsg-1 amd64 [installed,automatic]
+librsvg2-common/testing,now 2.60.0+dfsg-1 amd64 [installed,automatic]
+librtmp1/testing,now 2.4+20151223.gitfa8646d.1-2+b5 amd64 [installed,automatic]
+libsasl2-2/testing,now 2.1.28+dfsg1-9 amd64 [installed,automatic]
+libsasl2-modules-db/testing,now 2.1.28+dfsg1-9 amd64 [installed,automatic]
+libsasl2-modules/testing,now 2.1.28+dfsg1-9 amd64 [installed,automatic]
+libseccomp2/testing,now 2.6.0-2 amd64 [installed,automatic]
+libselinux1-dev/testing,now 3.8.1-1 amd64 [installed,automatic]
+libselinux1/testing,now 3.8.1-1 amd64 [installed,automatic]
+libsemanage-common/testing,now 3.8.1-1 all [installed,automatic]
+libsemanage2/testing,now 3.8.1-1 amd64 [installed,automatic]
+libsensors-config/testing,now 1:3.6.0-10 all [installed,automatic]
+libsensors5/testing,now 1:3.6.0-10+b1 amd64 [installed,automatic]
+libsepol-dev/testing,now 3.8.1-1 amd64 [installed,automatic]
+libsepol2/testing,now 3.8.1-1 amd64 [installed,automatic]
+libsframe1/testing,now 2.44-3 amd64 [installed,automatic]
+libsharpyuv-dev/testing,now 1.5.0-0.1 amd64 [installed,automatic]
+libsharpyuv0/testing,now 1.5.0-0.1 amd64 [installed,automatic]
+libsigc++-2.0-0v5/testing,now 2.12.1-3 amd64 [installed,automatic]
+libsm-dev/testing,now 2:1.2.6-1 amd64 [installed,automatic]
+libsm6/testing,now 2:1.2.6-1 amd64 [installed,automatic]
+libsmartcols1/testing,now 2.41-3 amd64 [installed,automatic]
+libsqlite3-0/testing,now 3.46.1-2 amd64 [installed,automatic]
+libssh2-1t64/testing,now 1.11.1-1 amd64 [installed,automatic]
+libssl3t64/testing,now 3.4.1-1 amd64 [installed,automatic]
+libstartup-notification0-dev/testing,now 0.12-8 amd64 [installed]
+libstartup-notification0/testing,now 0.12-8 amd64 [installed,automatic]
+libstdc++-14-dev/testing,now 14.2.0-19 amd64 [installed,automatic]
+libstdc++6/testing,now 14.2.0-19 amd64 [installed,automatic]
+libsysprof-capture-4-dev/testing,now 48.0-2 amd64 [installed,automatic]
+libsystemd-dev/testing,now 257.4-3 amd64 [installed,automatic]
+libsystemd-shared/testing,now 257.4-3 amd64 [installed,automatic]
+libsystemd0/testing,now 257.4-3 amd64 [installed,automatic]
+libtasn1-6/testing,now 4.20.0-2 amd64 [installed,automatic]
+libtcl8.6/testing,now 8.6.16+dfsg-1 amd64 [installed,automatic]
+libthai-data/testing,now 0.1.29-2 all [installed,automatic]
+libthai-dev/testing,now 0.1.29-2+b1 amd64 [installed,automatic]
+libthai0/testing,now 0.1.29-2+b1 amd64 [installed,automatic]
+libtiff-dev/testing,now 4.7.0-2 amd64 [installed,automatic]
+libtiff6/testing,now 4.7.0-2 amd64 [installed,automatic]
+libtiffxx6/testing,now 4.7.0-2 amd64 [installed,automatic]
+libtimedate-perl/testing,now 2.3300-2 all [installed,automatic]
+libtinfo6/testing,now 6.5+20250216-2 amd64 [installed,automatic]
+libtinyxml2-11/testing,now 11.0.0+dfsg-1+b1 amd64 [installed,automatic]
+libtool/testing,now 2.5.4-4 all [installed]
+libtry-tiny-perl/testing,now 0.32-1 all [installed,automatic]
+libtsan2/testing,now 14.2.0-19 amd64 [installed,automatic]
+libubsan1/testing,now 14.2.0-19 amd64 [installed,automatic]
+libudev1/testing,now 257.4-3 amd64 [installed,automatic]
+libunistring5/testing,now 1.3-2 amd64 [installed,automatic]
+liburi-perl/testing,now 5.30-1 all [installed,automatic]
+libuuid1/testing,now 2.41-3 amd64 [installed,automatic]
+libvulkan1/testing,now 1.4.309.0-1 amd64 [installed,automatic]
+libwayland-bin/testing,now 1.23.1-3 amd64 [installed,automatic]
+libwayland-client0/testing,now 1.23.1-3 amd64 [installed,automatic]
+libwayland-cursor0/testing,now 1.23.1-3 amd64 [installed,automatic]
+libwayland-dev/testing,now 1.23.1-3 amd64 [installed,automatic]
+libwayland-egl1/testing,now 1.23.1-3 amd64 [installed,automatic]
+libwayland-server0/testing,now 1.23.1-3 amd64 [installed,automatic]
+libwebp-dev/testing,now 1.5.0-0.1 amd64 [installed,automatic]
+libwebp7/testing,now 1.5.0-0.1 amd64 [installed,automatic]
+libwebpdecoder3/testing,now 1.5.0-0.1 amd64 [installed,automatic]
+libwebpdemux2/testing,now 1.5.0-0.1 amd64 [installed,automatic]
+libwebpmux3/testing,now 1.5.0-0.1 amd64 [installed,automatic]
+libwww-perl/testing,now 6.78-1 all [installed,automatic]
+libwww-robotrules-perl/testing,now 6.02-1 all [installed,automatic]
+libx11-6/testing,now 2:1.8.12-1 amd64 [installed,automatic]
+libx11-data/testing,now 2:1.8.12-1 all [installed,automatic]
+libx11-dev/testing,now 2:1.8.12-1 amd64 [installed]
+libx11-xcb1/testing,now 2:1.8.12-1 amd64 [installed,automatic]
+libxapian30/testing,now 1.4.25-2 amd64 [installed,automatic]
+libxau-dev/testing,now 1:1.0.11-1 amd64 [installed,automatic]
+libxau6/testing,now 1:1.0.11-1 amd64 [installed,automatic]
+libxcb-dri3-0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-glx0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-present0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-randr0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-render0-dev/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-render0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-shm0-dev/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-shm0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-sync1/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-util1/testing,now 0.4.1-1 amd64 [installed,automatic]
+libxcb-xfixes0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb1-dev/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb1/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcomposite-dev/testing,now 1:0.4.6-1 amd64 [installed,automatic]
+libxcomposite1/testing,now 1:0.4.6-1 amd64 [installed,automatic]
+libxcursor-dev/testing,now 1:1.2.3-1 amd64 [installed,automatic]
+libxcursor1/testing,now 1:1.2.3-1 amd64 [installed,automatic]
+libxdamage-dev/testing,now 1:1.1.6-1+b2 amd64 [installed,automatic]
+libxdamage1/testing,now 1:1.1.6-1+b2 amd64 [installed,automatic]
+libxdmcp-dev/testing,now 1:1.1.5-1 amd64 [installed,automatic]
+libxdmcp6/testing,now 1:1.1.5-1 amd64 [installed,automatic]
+libxext-dev/testing,now 2:1.3.4-1+b3 amd64 [installed,automatic]
+libxext6/testing,now 2:1.3.4-1+b3 amd64 [installed,automatic]
+libxfixes-dev/testing,now 1:6.0.0-2+b4 amd64 [installed,automatic]
+libxfixes3/testing,now 1:6.0.0-2+b4 amd64 [installed,automatic]
+libxft-dev/testing,now 2.3.6-1+b4 amd64 [installed,automatic]
+libxft2/testing,now 2.3.6-1+b4 amd64 [installed,automatic]
+libxi-dev/testing,now 2:1.8.2-1 amd64 [installed,automatic]
+libxi6/testing,now 2:1.8.2-1 amd64 [installed,automatic]
+libxinerama-dev/testing,now 2:1.1.4-3+b4 amd64 [installed,automatic]
+libxinerama1/testing,now 2:1.1.4-3+b4 amd64 [installed,automatic]
+libxkbcommon-dev/testing,now 1.7.0-2 amd64 [installed,automatic]
+libxkbcommon0/testing,now 1.7.0-2 amd64 [installed,automatic]
+libxml-parser-perl/testing,now 2.47-1+b3 amd64 [installed,automatic]
+libxml2-dev/testing,now 2.12.7+dfsg+really2.9.14-0.4 amd64 [installed]
+libxml2/testing,now 2.12.7+dfsg+really2.9.14-0.4 amd64 [installed,automatic]
+libxmuu1/testing,now 2:1.1.3-3+b4 amd64 [installed,automatic]
+libxrandr-dev/testing,now 2:1.5.4-1+b3 amd64 [installed,automatic]
+libxrandr2/testing,now 2:1.5.4-1+b3 amd64 [installed,automatic]
+libxrender-dev/testing,now 1:0.9.12-1 amd64 [installed,automatic]
+libxrender1/testing,now 1:0.9.12-1 amd64 [installed,automatic]
+libxshmfence1/testing,now 1.3.3-1 amd64 [installed,automatic]
+libxslt1.1/testing,now 1.1.35-1.2 amd64 [installed,automatic]
+libxtst-dev/testing,now 2:1.2.5-1 amd64 [installed,automatic]
+libxtst6/testing,now 2:1.2.5-1 amd64 [installed,automatic]
+libxxf86vm1/testing,now 1:1.1.4-1+b4 amd64 [installed,automatic]
+libxxhash0/testing,now 0.8.3-2 amd64 [installed,automatic]
+libyaml-0-2/testing,now 0.2.5-2 amd64 [installed,automatic]
+libz3-4/testing,now 4.13.3-1 amd64 [installed,automatic]
+libz3-dev/testing,now 4.13.3-1 amd64 [installed,automatic]
+libzstd-dev/testing,now 1.5.7+dfsg-1 amd64 [installed,automatic]
+libzstd1/testing,now 1.5.7+dfsg-1 amd64 [installed,automatic]
+linux-libc-dev/testing,now 6.12.21-1 all [installed,automatic]
+linux-sysctl-defaults/testing,now 4.11 all [installed,automatic]
+llvm-19-dev/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+llvm-19-linker-tools/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+llvm-19-runtime/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+llvm-19-tools/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+llvm-19/testing,now 1:19.1.7-3 amd64 [installed,automatic]
+login.defs/testing,now 1:4.17.3-3 all [installed,automatic]
+login/testing,now 1:4.16.0-2+really2.41-3 amd64 [installed,automatic]
+m4/testing,now 1.4.19-7 amd64 [installed,automatic]
+make/testing,now 4.4.1-1 amd64 [installed,automatic]
+manpages-dev/testing,now 6.9.1-1 all [installed,automatic]
+manpages/testing,now 6.9.1-1 all [installed,automatic]
+mawk/testing,now 1.3.4.20250131-1 amd64 [installed,automatic]
+media-types/testing,now 13.0.0 all [installed,automatic]
+mesa-libgallium/testing,now 25.0.3-1 amd64 [installed,automatic]
+mesa-vulkan-drivers/testing,now 25.0.3-1 amd64 [installed,automatic]
+meson/testing,now 1.7.0-1 all [installed]
+mount/testing,now 2.41-3 amd64 [installed,automatic]
+native-architecture/testing,now 0.2.6 all [installed,automatic]
+ncurses-base/testing,now 6.5+20250216-2 all [installed,automatic]
+ncurses-bin/testing,now 6.5+20250216-2 amd64 [installed,automatic]
+netbase/testing,now 6.5 all [installed,automatic]
+ninja-build/testing,now 1.12.1-1 amd64 [installed,automatic]
+opensp/testing,now 1.5.2-15.2 amd64 [installed,automatic]
+openssh-client/testing,now 1:9.9p2-2 amd64 [installed,automatic]
+openssl-provider-legacy/testing,now 3.4.1-1 amd64 [installed,automatic]
+openssl/testing,now 3.4.1-1 amd64 [installed,automatic]
+pango1.0-tools/testing,now 1.56.3-1 amd64 [installed,automatic]
+passwd/testing,now 1:4.17.3-3 amd64 [installed,automatic]
+patch/testing,now 2.7.6-7 amd64 [installed,automatic]
+perl-base/testing,now 5.40.1-2 amd64 [installed,automatic]
+perl-modules-5.40/testing,now 5.40.1-2 all [installed,automatic]
+perl-openssl-defaults/testing,now 7+b2 amd64 [installed,automatic]
+perl/testing,now 5.40.1-2 amd64 [installed,automatic]
+pkgconf-bin/testing,now 1.8.1-4 amd64 [installed,automatic]
+pkgconf/testing,now 1.8.1-4 amd64 [installed,automatic]
+procps/testing,now 2:4.0.4-7 amd64 [installed,automatic]
+psmisc/testing,now 23.7-2 amd64 [installed,automatic]
+publicsuffix/testing,now 20250306.2152-0.1 all [installed,automatic]
+python3-autocommand/testing,now 2.2.2-3 all [installed,automatic]
+python3-bs4/testing,now 4.13.3-2 all [installed,automatic]
+python3-chardet/testing,now 5.2.0+dfsg-2 all [installed,automatic]
+python3-cssselect/testing,now 1.3.0-1 all [installed,automatic]
+python3-html5lib/testing,now 1.2-2 all [installed,automatic]
+python3-inflect/testing,now 7.3.1-2 all [installed,automatic]
+python3-jaraco.context/testing,now 6.0.1-1 all [installed,automatic]
+python3-jaraco.functools/testing,now 4.1.0-1 all [installed,automatic]
+python3-jaraco.text/testing,now 4.0.0-1 all [installed,automatic]
+python3-lxml/testing,now 5.3.1-1+b1 amd64 [installed,automatic]
+python3-mako/testing,now 1.3.9-1 all [installed,automatic]
+python3-markdown/testing,now 3.7-2 all [installed,automatic]
+python3-markupsafe/testing,now 2.1.5-1+b3 amd64 [installed,automatic]
+python3-minimal/testing,now 3.13.2-2 amd64 [installed,automatic]
+python3-more-itertools/testing,now 10.6.0-1 all [installed,automatic]
+python3-packaging/testing,now 24.2-1 all [installed,automatic]
+python3-pkg-resources/testing,now 75.8.0-1 all [installed,automatic]
+python3-pygments/testing,now 2.18.0+dfsg-2 all [installed,automatic]
+python3-setuptools/testing,now 75.8.0-1 all [installed,automatic]
+python3-soupsieve/testing,now 2.6-1 all [installed,automatic]
+python3-typeguard/testing,now 4.4.2-1 all [installed,automatic]
+python3-typing-extensions/testing,now 4.13.0-1 all [installed,automatic]
+python3-webencodings/testing,now 0.5.1-5 all [installed,automatic]
+python3-yaml/testing,now 6.0.2-1+b2 amd64 [installed,automatic]
+python3-zipp/testing,now 3.21.0-1 all [installed,automatic]
+python3.13-minimal/testing,now 3.13.2-3 amd64 [installed,automatic]
+python3.13/testing,now 3.13.2-3 amd64 [installed,automatic]
+python3/testing,now 3.13.2-2 amd64 [installed,automatic]
+readline-common/testing,now 8.2-6 all [installed,automatic]
+rpcsvc-proto/testing,now 1.4.3-1 amd64 [installed,automatic]
+sed/testing,now 4.9-2 amd64 [installed,automatic]
+sensible-utils/testing,now 0.0.24 all [installed,automatic]
+sgml-base/testing,now 1.31 all [installed,automatic]
+sgml-data/testing,now 2.0.11+nmu1 all [installed,automatic]
+shared-mime-info/testing,now 2.4-5+b2 amd64 [installed,automatic]
+sq/testing,now 1.3.1-1 amd64 [installed,automatic]
+sqv/testing,now 1.3.0-1 amd64 [installed,automatic]
+systemd-cryptsetup/testing,now 257.4-3 amd64 [installed,automatic]
+systemd-sysv/testing,now 257.4-3 amd64 [installed,automatic]
+systemd-timesyncd/testing,now 257.4-3 amd64 [installed,automatic]
+systemd/testing,now 257.4-3 amd64 [installed,automatic]
+sysvinit-utils/testing,now 3.14-4 amd64 [installed,automatic]
+tar/testing,now 1.35+dfsg-3.1 amd64 [installed,automatic]
+tcl-expect/testing,now 5.45.4-4 amd64 [installed,automatic]
+tcl8.6/testing,now 8.6.16+dfsg-1 amd64 [installed,automatic]
+tzdata/testing,now 2025b-1 all [installed,automatic]
+util-linux/testing,now 2.41-3 amd64 [installed,automatic]
+uuid-dev/testing,now 2.41-3 amd64 [installed,automatic]
+wayland-protocols/testing,now 1.42-2 all [installed,automatic]
+wget/testing,now 1.25.0-2 amd64 [installed]
+x11-common/testing,now 1:7.7+24 all [installed,automatic]
+x11proto-dev/testing,now 2024.1-1 all [installed,automatic]
+xauth/testing,now 1:1.1.2-1.1 amd64 [installed,automatic]
+xdg-user-dirs/testing,now 0.18-2 amd64 [installed,automatic]
+xkb-data/testing,now 2.42-1 all [installed,automatic]
+xml-core/testing,now 0.19 all [installed,automatic]
+xorg-sgml-doctools/testing,now 1:1.11-1.1 all [installed,automatic]
+xsltproc/testing,now 1.1.35-1.2 amd64 [installed,automatic]
+xtrans-dev/testing,now 1.4.0-1 all [installed,automatic]
+xz-utils/testing,now 5.6.4-1 amd64 [installed,automatic]
+zlib1g-dev/testing,now 1:1.3.dfsg+really1.3.1-1+b1 amd64 [installed,automatic]
+zlib1g/testing,now 1:1.3.dfsg+really1.3.1-1+b1 amd64 [installed,automatic]
+Errors detected in the build 0
+Warnings detected in the logs 135
+cppcheck defects detected in the logs 62
+TOTAL warnings detected in the logs 197
