@@ -886,7 +886,7 @@ pixbuf_clip_to_fit (GdkPixbuf *src,
 	w = MIN(src_width, max_width);
 	h = MIN(src_height, max_height);
 
-	pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB,
+	pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
 				 cdk_pixbuf_get_has_alpha (src),
 				 8, w, h);
 
@@ -925,7 +925,7 @@ get_scaled_pixbuf (CafeBGPlacement  placement,
 
 	case CAFE_BG_PLACEMENT_FILL_SCREEN:
 		new = cdk_pixbuf_scale_simple (pixbuf, width, height,
-					       GDK_INTERP_BILINEAR);
+					       CDK_INTERP_BILINEAR);
 		break;
 
 	case CAFE_BG_PLACEMENT_SCALED:
@@ -1216,7 +1216,7 @@ cafe_bg_create_surface_scale (CafeBG      *bg,
 	{
 		GdkPixbuf *pixbuf;
 
-		pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
+		pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8,
 					 width, height);
 		cafe_bg_draw (bg, pixbuf, cdk_window_get_screen (window), root);
 		cdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
@@ -1409,7 +1409,7 @@ cafe_bg_create_thumbnail (CafeBG               *bg,
 
 	g_return_val_if_fail (bg != NULL, NULL);
 
-	result = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
+	result = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
 	draw_color (bg, result);
 
@@ -1775,7 +1775,7 @@ blend (GdkPixbuf *p1,
 		tmp = cdk_pixbuf_scale_simple (p2,
 					       cdk_pixbuf_get_width (p1),
 					       cdk_pixbuf_get_height (p1),
-					       GDK_INTERP_BILINEAR);
+					       CDK_INTERP_BILINEAR);
 	}
         else {
 		tmp = g_object_ref (p2);
@@ -2182,7 +2182,7 @@ scale_thumbnail (CafeBGPlacement placement,
 		}
 
 		thumb = cdk_pixbuf_scale_simple (thumb, new_width, new_height,
-						 GDK_INTERP_BILINEAR);
+						 CDK_INTERP_BILINEAR);
 	}
 	else
 		g_object_ref (thumb);
@@ -2560,7 +2560,7 @@ pixbuf_scale_to_fit (GdkPixbuf *src, int max_width, int max_height)
 	new_width  = floor (src_width * factor + 0.5);
 	new_height = floor (src_height * factor + 0.5);
 
-	return cdk_pixbuf_scale_simple (src, new_width, new_height, GDK_INTERP_BILINEAR);
+	return cdk_pixbuf_scale_simple (src, new_width, new_height, CDK_INTERP_BILINEAR);
 }
 
 static GdkPixbuf *
@@ -2579,7 +2579,7 @@ pixbuf_scale_to_min (GdkPixbuf *src, int min_width, int min_height)
 	new_width = floor (src_width * factor + 0.5);
 	new_height = floor (src_height * factor + 0.5);
 
-	dest = cdk_pixbuf_new (GDK_COLORSPACE_RGB,
+	dest = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
 			       cdk_pixbuf_get_has_alpha (src),
 			       8, min_width, min_height);
 	if (!dest)
@@ -2593,7 +2593,7 @@ pixbuf_scale_to_min (GdkPixbuf *src, int min_width, int min_height)
 			  (new_height - min_height) / -2,
 			  factor,
 			  factor,
-			  GDK_INTERP_BILINEAR);
+			  CDK_INTERP_BILINEAR);
 	return dest;
 }
 
@@ -2709,7 +2709,7 @@ pixbuf_blend (GdkPixbuf *src,
 			      dest_x, dest_y,
 			      src_width, src_height,
 			      offset_x, offset_y,
-			      1, 1, GDK_INTERP_NEAREST,
+			      1, 1, CDK_INTERP_NEAREST,
 			      alpha * 0xFF + 0.5);
 }
 
@@ -3263,7 +3263,7 @@ cafe_bg_create_frame_thumbnail (CafeBG			*bg,
 		return NULL;
 
 
-	result = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
+	result = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
 	draw_color (bg, result);
 
