@@ -36,7 +36,7 @@
 #include "cafe-colorseldialog.h"
 #include <ctk/ctk.h>
 #include <cdk/cdkkeysyms.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 #include <glib/gi18n-lib.h>
 
 /* Size of checks and gray levels for alpha compositing checkerboard */
@@ -358,14 +358,14 @@ set_color_icon (CdkDragContext *context,
   GdkPixbuf *pixbuf;
   guint32 pixel;
 
-  pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE,
+  pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE,
 			   8, 48, 32);
 
   pixel = ((color->red & 0xff00) << 16) |
           ((color->green & 0xff00) << 8) |
            (color->blue & 0xff00);
 
-  gdk_pixbuf_fill (pixbuf, pixel);
+  cdk_pixbuf_fill (pixbuf, pixel);
 
   ctk_drag_set_icon_pixbuf (context, pixbuf, -2, -2);
   g_object_unref (pixbuf);
