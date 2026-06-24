@@ -355,7 +355,7 @@ static void
 set_color_icon (CdkDragContext *context,
 		CdkColor       *color)
 {
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
   guint32 pixel;
 
   pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE,
