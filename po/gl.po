@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-desktop 2.0.0\n"
+"Project-Id-Version: cafe-desktop 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/cafe-desktop/\n"
-"POT-Creation-Date: 2024-12-27 19:02+0100\n"
+"POT-Creation-Date: 2026-06-25 17:31+0200\n"
 "PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Galician (https://www.transifex.com/cafe/teams/13566/gl/)\n"
@@ -29,11 +29,11 @@ msgstr ""
 "Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Proxecto Trasno <proxecto@trasno.gal>"
 
-#: cafe-about/cafe-about.desktop.in:3
+#: cafe-about/cafe-about.desktop.in:2
 msgid "About CAFE"
 msgstr "Sobre CAFE"
 
-#: cafe-about/cafe-about.desktop.in:4
+#: cafe-about/cafe-about.desktop.in:3
 msgid "Learn more about CAFE"
 msgstr "Aprenda máis sobre CAFE"
 
@@ -46,7 +46,7 @@ msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers\n"
-"Copyright © 2020-2024 Pablo Barciela"
+"Copyright © 2020-2026 Pablo Barciela"
 msgstr ""
 
 #: cafe-about/cafe-about.h:43
@@ -1508,20 +1508,20 @@ msgstr "Indica se o bloqueo do teclado está activado ou non"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Indica se o bloqueo do teclado está activado ou non."
 
-#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:3
+#: tools/cafe-color-select.c:66 tools/cafe-color-select.desktop.in:2
 msgid "CAFE Color Selection"
 msgstr "Selección de cor do CAFE"
 
-#: tools/cafe-color-select.desktop.in:4
+#: tools/cafe-color-select.desktop.in:3
 msgid "Color selection dialog"
 msgstr "Diálogo de selección de cor"
 
-#: tools/cafe-color-select.desktop.in:5
+#: tools/cafe-color-select.desktop.in:4
 msgid "Choose colors from the palette or the screen"
 msgstr "Escolla cores da paleta ou da pantalla"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: tools/cafe-color-select.desktop.in:13
+#: tools/cafe-color-select.desktop.in:12
 msgid "CAFE;color;chooser;pick;palette;screen;selection;"
 msgstr "CAFE;cor;selector;seleccione;paleta;pantalla;selección;"
 
