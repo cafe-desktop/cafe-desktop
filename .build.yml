@@ -3,40 +3,12 @@
 ##########################################################
 requires:
   debian:
-    # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # cafe B-D: libctk-3-dev libctk-3-doc cafe-common
-    - aptitude
-    - autoconf-archive
-    - autopoint
-    - clang
-    - clang-tools
-    - cppcheck
-    - expect #required for unbuffer
-    - git
-    - gobject-introspection
-    - gtk-doc-tools
-    - intltool
-    - iso-codes
-    - libdconf-dev
-    - libgirepository1.0-dev
-    - libglib2.0-dev
-    - libglib2.0-doc
-    - libstartup-notification0-dev
-    - libtool
-    - libx11-dev
-    - libxml2-dev
-    - meson
-    - wget
 
 before_scripts:
-  - ./html-cppcheck
-  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
-  - ./debrepo-install 'libctk-3-dev gir1.2-ctk-3.0 libctk-3-common libctk-3-0 libctk-3-doc'
+  - ./debrepo-install
 
 build_scripts:
-  - ./before-build
-  - ./make-scanbuild '--enable-gtk-doc --enable-compile-warnings=maximum'
-  - ./after-build
+  - ./build-debs https://github.com/cafe-desktop/debian-packages devel cafe-desktop
 
 after_scripts:
   - if [ ${BUILD_TYPE} == "scripts" ];then
