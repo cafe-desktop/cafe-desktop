@@ -1,0 +1,6 @@
+cafe-bg: Fix: Setting desktop background to image breaks desktop
+
+based in mate-desktop commit:
+https://github.com/mate-desktop/mate-desktop/commit/7b379f54a5b09df007f7e84dabbbc5f8ce9381a9
+
+Fixes https://github.com/cafe-desktop/cafe-desktop/issues/7
